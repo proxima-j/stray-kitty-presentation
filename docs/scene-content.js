@@ -19,6 +19,13 @@
   let activeView = { id: '', visible: false };
   const manualPause = new WeakSet();
   const pendingPlay = new WeakSet();
+  // Direct entry into a later scene should not compete with the full film download.
+  const requestedPage = new URLSearchParams(location.search).get('page');
+  const openingFilm = document.getElementById('openingVideo');
+  if (requestedPage && !['01', 'opening-film'].includes(requestedPage) && openingFilm.paused) {
+    openingFilm.preload = 'none';
+    openingFilm.load();
+  }
 
   function shouldPlay(video) {
     return activeView.visible && video.closest('.scene').id === activeView.id &&
@@ -36,6 +43,7 @@
       const play = shouldPlay(video);
       video.autoplay = play;
       video.muted = true;
+      video.preload = play ? 'auto' : 'metadata';
       if (play && video.paused && !pendingPlay.has(video)) {
         pendingPlay.add(video);
         video.play().then(() => { if (!shouldPlay(video)) video.pause(); })
