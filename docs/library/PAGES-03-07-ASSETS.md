@@ -1,24 +1,24 @@
 # Pages 03–07 — collected gameplay assets
 
-Collected 2026-11-08. **10 PNGs + 3 silent H.264 MP4s.** All captured files are `CAPTURED_PENDING_APPROVAL`; READY below means technically ready for editorial review, not already approved.
+Collected 2026-11-08. **10 PNGs + 3 silent H.264 MP4s.** These assets are now approved and integrated into Current Pages 05–07. The original collection inventory below records their capture sources; the shared manifest marks the actual integration.
 
-Pages 03 and 04 need no new media. Current, Previous, the v3 engine and all review compositions remain untouched. No integration or version rotation performed.
+Pages 03 and 04 need no new media. Current now contains the approved seven-page sequence; Previous retains the outgoing verified three-page deck. No new media was captured or encoded for this integration.
 
 | Asset ID | Repository path | Source / state | Review |
 | --- | --- | --- | --- |
-| `narrative.friends.01` | `docs/assets/pages/05/friends-dialogue-01.png` | Game checkpoint finale.celebration; authored node finale_intro_7; 旁白. Full typewriter text completed before capture. | READY |
-| `narrative.friends.02` | `docs/assets/pages/05/friends-dialogue-02.png` | Game checkpoint finale.celebration; authored node finale_intro_8; 团子. Full typewriter text completed before capture. | READY |
-| `narrative.friends.03` | `docs/assets/pages/05/friends-dialogue-03.png` | Game checkpoint finale.celebration; authored node finale_intro_9; 喵喵. Full typewriter text completed before capture. | READY |
-| `home.growth.01` | `docs/assets/pages/06/greenhouse-stage-01.png` | Existing server-authored QA checkpoint greenhouse.home_1; matching default home camera, 1600×900 viewport; no manual stage/decor edits. | READY |
-| `home.growth.02` | `docs/assets/pages/06/greenhouse-stage-02.png` | Existing server-authored QA checkpoint greenhouse.home_2; matching default home camera, 1600×900 viewport; no manual stage/decor edits. | READY |
-| `home.growth.03` | `docs/assets/pages/06/greenhouse-stage-03.png` | Existing server-authored QA checkpoint greenhouse.home_3; matching default home camera, 1600×900 viewport; no manual stage/decor edits. | READY |
-| `home.growth.04` | `docs/assets/pages/06/greenhouse-stage-04.png` | Existing server-authored QA checkpoint finale.home; matching default home camera, 1600×900 viewport; no manual stage/decor edits. | NEEDS_SELECTION |
-| `home.interaction.cats` | `docs/assets/pages/06/cat-reaction.mp4` | Fresh local capture at official finale.home checkpoint. Native pointer click on Tuanzi; actual happy reaction, heart and authored pet-response bubble; petPressure 0→1 verified read-only. | READY |
-| `home.interaction.postcard` | `docs/assets/pages/06/postcard-to-parcel.mp4` | Existing project recording output/trailer-originals-2026-11-06-takes/premiere/C08_Greenhouse_Heart-Parcel-Stool-Placement_T01.mp4, source 0.5–17.0s. Real prepare/draw heart → send → parcel → seedling-stool reveal. | READY |
-| `home.interaction.furniture` | `docs/assets/pages/06/furniture-drag-save.mp4` | Existing project recording output/trailer-retakes-2026-11-06-190143/premiere/R07_Greenhouse_Seedling-Stool-Place-Save_T01.mp4, source 1.8–11.5s. Actual inventory selection, drag/place seedling stool, save and visible saved arrangement. Existing isolated owned-stool QA setup. | READY |
-| `payment.recharge` | `docs/assets/pages/07/1-recharge.png` | Same fresh guest sandbox journey: public game starry-kitty.duckdns.org, Xsolla sandbox config verified; pack_small selected, ¥6 for 60 tuna; initial balance 0. | READY |
-| `payment.checkout` | `docs/assets/pages/07/2-checkout.png` | Corresponding real sandbox-secure.xsolla.com checkout; 60-tuna item and ¥6 total visible, explicit sandbox banner; captured before entering official test-card details. | READY |
-| `payment.return` | `docs/assets/pages/07/3-confirmation.png` | Same guest returned via provider Return to Game after sandbox success. Server payment history verified exactly one confirmed Xsolla pack_small entry, amount 600 CNY minor units, same player; authenticated game state tuna balance 0→60. Screenshot shows balance 60 and successful Xsolla sandbox ledger row. | READY |
+| `narrative.friends.01` | `docs/assets/pages/05/friends-dialogue-01.png` | Game checkpoint finale.celebration; authored node finale_intro_7; 旁白. Full typewriter text completed before capture. | APPROVED |
+| `narrative.friends.02` | `docs/assets/pages/05/friends-dialogue-02.png` | Game checkpoint finale.celebration; authored node finale_intro_8; 团子. Full typewriter text completed before capture. | APPROVED |
+| `narrative.friends.03` | `docs/assets/pages/05/friends-dialogue-03.png` | Game checkpoint finale.celebration; authored node finale_intro_9; 喵喵. Full typewriter text completed before capture. | APPROVED |
+| `home.growth.01` | `docs/assets/pages/06/greenhouse-stage-01.png` | Existing server-authored QA checkpoint greenhouse.home_1; matching default home camera, 1600×900 viewport; no manual stage/decor edits. | APPROVED |
+| `home.growth.02` | `docs/assets/pages/06/greenhouse-stage-02.png` | Existing server-authored QA checkpoint greenhouse.home_2; matching default home camera, 1600×900 viewport; no manual stage/decor edits. | APPROVED |
+| `home.growth.03` | `docs/assets/pages/06/greenhouse-stage-03.png` | Existing server-authored QA checkpoint greenhouse.home_3; matching default home camera, 1600×900 viewport; no manual stage/decor edits. | APPROVED |
+| `home.growth.04` | `docs/assets/pages/06/greenhouse-stage-04.png` | Existing server-authored QA checkpoint finale.home; matching default home camera, 1600×900 viewport; no manual stage/decor edits. | APPROVED |
+| `home.interaction.cats` | `docs/assets/pages/06/cat-reaction.mp4` | Fresh local capture at official finale.home checkpoint. Native pointer click on Tuanzi; actual happy reaction, heart and authored pet-response bubble; petPressure 0→1 verified read-only. | APPROVED |
+| `home.interaction.postcard` | `docs/assets/pages/06/postcard-to-parcel.mp4` | Existing project recording output/trailer-originals-2026-11-06-takes/premiere/C08_Greenhouse_Heart-Parcel-Stool-Placement_T01.mp4, source 0.5–17.0s. Real prepare/draw heart → send → parcel → seedling-stool reveal. | APPROVED |
+| `home.interaction.furniture` | `docs/assets/pages/06/furniture-drag-save.mp4` | Existing project recording output/trailer-retakes-2026-11-06-190143/premiere/R07_Greenhouse_Seedling-Stool-Place-Save_T01.mp4, source 1.8–11.5s. Actual inventory selection, drag/place seedling stool, save and visible saved arrangement. Existing isolated owned-stool QA setup. | APPROVED |
+| `payment.recharge` | `docs/assets/pages/07/1-recharge.png` | Same fresh guest sandbox journey: public game starry-kitty.duckdns.org, Xsolla sandbox config verified; pack_small selected, ¥6 for 60 tuna; initial balance 0. | APPROVED |
+| `payment.checkout` | `docs/assets/pages/07/2-checkout.png` | Corresponding real sandbox-secure.xsolla.com checkout; 60-tuna item and ¥6 total visible, explicit sandbox banner; captured before entering official test-card details. | APPROVED |
+| `payment.return` | `docs/assets/pages/07/3-confirmation.png` | Same guest returned via provider Return to Game after sandbox success. Server payment history verified exactly one confirmed Xsolla pack_small entry, amount 600 CNY minor units, same player; authenticated game state tuna balance 0→60. Screenshot shows balance 60 and successful Xsolla sandbox ledger row. | APPROVED |
 
 ## Selection and evidence notes
 

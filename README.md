@@ -6,13 +6,13 @@ GitHub is the shared source for ChatGPT and Codex. GitHub Pages automatically pu
 
 | Version | Preview | Verified source |
 | --- | --- | --- |
-| Current | https://proxima-j.github.io/stray-kitty-presentation/ | `204390d479d0e968d9ce74d6b21c047fb80c3196` — complete Pages 01–03 with restored Page 02 illustrations |
-| Previous | https://proxima-j.github.io/stray-kitty-presentation/previous/ | `8a1b886555f79a096ce458dde5d7bfd55f2da328` — immediately preceding successful Pages build; Page 02 retains its original placeholders |
+| Current | https://proxima-j.github.io/stray-kitty-presentation/ | Seven-page integration; local candidate verified, publication evidence in `docs/versions.json` |
+| Previous | https://proxima-j.github.io/stray-kitty-presentation/previous/ | `2c1fc278732287a6607666e958622dce9a850cb6` — outgoing verified three-page deck with enlarged original illustrations |
 
-Both have direct `?page=01`, `?page=02`, and `?page=03` links. Their successful deployment records are 2026-11-08 at 11:38:46Z and 11:31:09Z respectively. [docs/versions.json](docs/versions.json) records these origins. Documentation/housekeeping commits do not create new deck versions.
+Current supports direct `?page=01` through `?page=07` links. Previous retains `?page=01` through `?page=03`. Stable Current IDs also work as direct links: `roadmap`, `game-flow`, `visual-novel`, `home-hub`, `payment`. [docs/versions.json](docs/versions.json) records verified runtime origins; documentation and asset-only commits do not rotate decks.
 
-- `docs/index.html`, `docs/engine-v3.*`, `docs/presentation.css`, `docs/library/`: Current source and reusable components.
-- `docs/previous/`: Previous's HTML, styles and script recovered from its deployed commit. Only relative asset URLs were adjusted. Its runtime remains independent of future Current code edits.
+- `docs/index.html`, `docs/engine-v3.*`, `docs/presentation.css`, `docs/scene-content.js`, `docs/library/`: Current source and reusable components.
+- `docs/previous/`: Previous's HTML, styles and script recovered from its deployed commit. Only relative asset URLs were adjusted. Its runtime and small style-library copies remain independent of future Current code edits; large media is shared.
 - `docs/assets/`: One shared copy of the full opening film, poster, character, fonts/license and approved illustrations.
 - `reference/forward-story-v3/script.js` and `style.css`: Untouched original animation source, rather than a third runnable sample deck.
 
@@ -46,3 +46,11 @@ Read the latest main and preserve unrelated changes before editing. Push without
 Page 02 D20/cat images are user-owned, publication-approved and published in Current. [ASSET-CLEARANCE.md](ASSET-CLEARANCE.md) retains that authorization record. Faculty Glyphic is self-hosted under its included SIL OFL; Classe's exact font remains unconfirmed.
 
 Notion remains the [existing decision history](https://app.notion.com/p/411e33b0423f81abaa12c4b5b6a75921). Do not create a dashboard, modify the game repo, or start Page 04 without a new instruction.
+
+## Integrated scene interactions
+
+Visual Novel (`?page=05`): click the authentic game image to cycle 1→2→3→1; focused Enter/Space also cycles. Arrows remain global presentation navigation.
+
+Home Hub (`?page=06`): starts with THE HOME GROWS. THE HOME RESPONDS plays the three existing muted looping clips together. They pause on view/scene exit and when the document is hidden, resuming when visible. Small pause/play fallbacks appear on hover/focus. The opening film retains its separate explicit Play-with-sound behavior.
+
+Payment (`?page=07`): the same verified Xsolla Sandbox 60-tuna journey, with recorded balance 0→60. Asset provenance, including the guaranteed/pity postcard draw and subtle final-home stage, remains in `docs/library/PAGES-03-07-ASSETS.md` and the manifest. Level Design, Events, Combat and UI/UX previews remain separate until their own integration.

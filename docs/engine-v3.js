@@ -20,6 +20,11 @@
   const paceSelect = document.getElementById('paceSelect');
   const scenes = [...document.querySelectorAll('.scene')];
 
+  // Integration geometry is derived from the registry; v3 pacing stays unchanged.
+  scenes.forEach((scene, index) => { scene.style.left = `${index * 100}vw`; });
+  world.style.width = routeSvg.style.width = `${scenes.length * 100}vw`;
+  space.style.height = `${100 + Math.max(0, scenes.length - 1) * 125}vh`;
+  let lastViewKey = '';
   const stops = scenes.map((_, index) => index / Math.max(1, scenes.length - 1));
   const clamp = (value, min = 0, max = 1) => Math.max(min, Math.min(max, value));
   const mix = (a, b, t) => a + (b - a) * t;
@@ -58,10 +63,15 @@
       `S ${w * 1.43} ${h * .850}, ${w * 1.86} ${h * .822}`,
       `S ${w * 2.52} ${h * .806}, ${w * 2.94} ${h * .835}`,
       `S ${w * 3.60} ${h * .815}, ${w * 4} ${h * .832}`,
-    ].join(' ');
+    ];
+    // Keep the original first four route segments and continue their dotted path.
+    for (let end = 5; end <= scenes.length; end++) {
+      d.push(`S ${w * (end - .4)} ${h * (end % 2 ? .85 : .81)}, ${w * end} ${h * .832}`);
+    }
+    const route = d.join(' ');
     routeSvg.setAttribute('viewBox', `0 0 ${scenes.length * w} ${h}`);
-    routeGhost.setAttribute('d', d);
-    routeInk.setAttribute('d', d);
+    routeGhost.setAttribute('d', route);
+    routeInk.setAttribute('d', route);
     routeReveal.setAttribute('height', String(h));
     roadPathLength = routeGhost.getTotalLength();
     // Sample this SVG only on resize; the animation loop interpolates in JS.
@@ -177,7 +187,16 @@
         url.searchParams.set('page', page);
         history.replaceState(null, '', url);
       }
-      document.title = `Stray Kitty — Page ${page} · ${page === '01' ? 'Opening Film' : page === '02' ? 'Elevator Pitch' : 'Game Flow'}`;
+      document.title = `Stray Kitty — Page ${page} · ${scenes[activeIndex].dataset.title || 'Presentation'}`;
+    }
+    // Scoped visibility signal for scene interactions; opening-film ownership remains above.
+    const visible = Math.abs(cameraDistanceNow - activeIndex) < .01 && !keyboardMotion;
+    const viewKey = `${activeIndex}:${visible}`;
+    if (viewKey !== lastViewKey) {
+      lastViewKey = viewKey;
+      window.dispatchEvent(new CustomEvent('presentation:viewchange', {
+        detail: { id: scenes[activeIndex].id, page: scenes[activeIndex].dataset.page, visible }
+      }));
     }
   }
 
@@ -313,6 +332,7 @@
   paceSelect.addEventListener('change', () => { beatDurationMs = Number(paceSelect.value); });
   document.addEventListener('keydown', event => {
     if (event.ctrlKey || event.altKey || event.metaKey || ['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement?.tagName)) return;
+    if (event.key === ' ' && document.activeElement?.closest('[data-local-space]')) return;
     if (event.key === 'Escape') {
       event.preventDefault();
       if (!helpPanel.hidden) showHelp(false);
@@ -344,7 +364,7 @@
 
   routeGeometry();
   const requestedPage = new URLSearchParams(location.search).get('page');
-  const entryIndex = Math.max(0, scenes.findIndex(scene => scene.dataset.page === requestedPage));
+  const entryIndex = Math.max(0, scenes.findIndex(scene => scene.dataset.page === requestedPage || scene.id === requestedPage));
   renderedProgress = stops[entryIndex];
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
   window.scrollTo({ top: renderedProgress * scrollRange(), behavior: 'instant' });

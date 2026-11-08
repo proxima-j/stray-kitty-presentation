@@ -31,6 +31,6 @@ html,body{font-family:var(--body);background:var(--paper);color:var(--ink)}
 .film-play-button:hover,.film-play-button:focus-visible{background:rgba(25,43,34,.95);outline:2px solid var(--gold);outline-offset:4px}
 .film-skip-button{position:absolute;right:28px;bottom:64px;z-index:3;padding:11px 19px;border:1px solid rgba(244,230,199,.65);border-radius:999px;background:rgba(15,20,17,.86);color:var(--paper);font:15px/1.3 var(--body);cursor:pointer}
 .film-skip-button:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
-.pitch-art img.artwork{display:block;width:100%;height:100%;object-fit:contain;padding:18px;position:relative;z-index:1}
+.pitch-art img.artwork{display:block;width:100%;height:100%;object-fit:contain;padding:4px;position:relative;z-index:1}
 #world[data-scene="0"] .route-svg{opacity:0}
 .stage:has(#world[data-scene="0"]) .hero-cat{opacity:0}

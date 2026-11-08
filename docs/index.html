@@ -11,10 +11,10 @@
 </head>
 <body>
 <div id="scrollSpace" class="scroll-space">
- <main id="stage" class="stage" aria-label="Stray Kitty presentation — Pages 01 through 03">
+ <main id="stage" class="stage" aria-label="Stray Kitty presentation — Pages 01 through 07">
   <div id="world" class="world">
    <svg id="roadDrawing" class="route-svg" aria-hidden="true"><defs><clipPath id="revealClip"><rect id="routeReveal" x="0" y="0" width="0" height="2000"/></clipPath></defs><path id="routeGhost" class="route-ghost" d=""/><path id="routeInk" class="route-ink" d="" clip-path="url(#revealClip)"/></svg>
-   <section class="scene scene-film" data-scene="0" data-page="01" aria-label="Page 01 — Full-screen film">
+   <section id="opening-film" class="scene scene-film" data-title="Opening Film" data-scene="0" data-page="01" aria-label="Page 01 — Full-screen film">
     <div class="scene-camera"><div class="film-fullscreen">
       <video id="openingVideo" playsinline preload="auto" poster="assets/opening-film-poster.jpg" aria-label="Stray Kitty opening film">
         <source src="assets/Stray-Kitty-Android-Final-v02-SFX.mp4" type="video/mp4">
@@ -24,7 +24,7 @@
       <button id="skipOpeningFilm" class="film-skip-button" type="button">Skip film →</button>
     </div></div>
    </section>
-   <section class="scene" data-scene="1" data-page="02" aria-label="Page 02 — Elevator Pitch">
+   <section id="elevator-pitch" class="scene" data-title="Elevator Pitch" data-scene="1" data-page="02" aria-label="Page 02 — Elevator Pitch">
     <div class="scene-camera"><div class="pitch-layout">
      <div class="pitch-text">
       <div class="section-label"><span class="number-pill">02</span> THE GAME / ELEVATOR PITCH</div>
@@ -39,7 +39,14 @@
      </div>
     </div></div>
    </section>
-   <section class="scene" data-scene="2" data-page="03" aria-label="Page 03 — Game Flow">
+   <section id="roadmap" class="scene" data-scene="2" data-page="03" data-title="Roadmap" aria-label="Page 03 — Roadmap">
+    <div class="scene-camera"><div class="roadmap-content">
+     <div class="roadmap-part" data-build="text" data-at="0.08"><span class="roadmap-partnum">PART 01</span><h2>The Game</h2></div>
+     <div class="roadmap-divider" data-build="line" data-at="0.35" aria-hidden="true"></div>
+     <div class="roadmap-part" data-build="text" data-at="0.58"><span class="roadmap-partnum">PART 02</span><h2>Technical Walkthrough</h2></div>
+    </div></div>
+   </section>
+   <section id="game-flow" class="scene" data-scene="3" data-page="04" data-title="Game Flow" aria-label="Page 04 — Game Flow">
     <div class="scene-camera"><figure class="game-flow" data-build="rise" data-at="0.1">
      <svg viewBox="0 0 1400 700" role="img" aria-labelledby="flowTitle flowDesc">
       <title id="flowTitle">Game flow</title><desc id="flowDesc">Story, Map Exploration, Narrative and Random Events, Combat, then Story. Home Hub is separate, above-left, with one optional-access arrow toward open space in the loop.</desc>
@@ -59,11 +66,61 @@
      </svg>
     </figure></div>
    </section>
+
+   <section id="visual-novel" class="scene" data-scene="4" data-page="05" data-title="Visual Novel" aria-label="Page 05 — Visual Novel">
+    <div class="scene-camera"><div class="content-page narrative-content">
+     <h2 data-build="text" data-at="0.04">Visual Novel</h2>
+     <div class="narrative-shell" data-build="rise" data-at="0.2">
+      <button id="dialogueFrame" class="dialogue-frame" type="button" data-local-space aria-label="Next dialogue screenshot" aria-describedby="dialogueState">
+       <img src="assets/pages/05/friends-dialogue-01.png" alt="Miaomiao and friends celebrate their shared home; original dialogue, state 1 of 3." data-dialogue="0" fetchpriority="high">
+       <img src="assets/pages/05/friends-dialogue-02.png" alt="Tuanzi encourages Miaomiao to return home; original dialogue, state 2 of 3." data-dialogue="1" hidden>
+       <img src="assets/pages/05/friends-dialogue-03.png" alt="Miaomiao promises to return and protect their shared kingdom; original dialogue, state 3 of 3." data-dialogue="2" hidden>
+      </button>
+      <span id="dialogueState" class="sr-only" aria-live="polite">Dialogue 1 of 3. Click or press Enter or Space for the next dialogue.</span>
+     </div>
+    </div></div>
+   </section>
+   <section id="home-hub" class="scene" data-scene="5" data-page="06" data-title="Home Hub" aria-label="Page 06 — Home Hub">
+    <div class="scene-camera"><div class="content-page home-content">
+     <h2 data-build="text" data-at="0.04">A home that grows, responds, and becomes your own.</h2>
+     <div class="home-body" data-build="rise" data-at="0.22">
+      <div class="home-tabs" role="group" aria-label="Home Hub views">
+       <button type="button" data-home-view="growth" data-local-space aria-pressed="true" aria-controls="homeGrowth">THE HOME GROWS</button>
+       <button type="button" data-home-view="responds" data-local-space aria-pressed="false" aria-controls="homeResponds">THE HOME RESPONDS</button>
+      </div>
+      <div id="homeGrowth" class="home-view" data-view="growth"><div class="home-gallery growth-gallery">
+       <figure><div class="home-media"><img src="assets/pages/06/greenhouse-stage-01.png" alt="Initial greenhouse shelter"></div><figcaption>BEGINNING</figcaption></figure>
+       <figure><div class="home-media"><img src="assets/pages/06/greenhouse-stage-02.png" alt="Early greenhouse repairs"></div><figcaption>REBUILDING</figcaption></figure>
+       <figure><div class="home-media"><img src="assets/pages/06/greenhouse-stage-03.png" alt="Developed shared greenhouse home"></div><figcaption>GROWING</figcaption></figure>
+       <figure><div class="home-media"><img src="assets/pages/06/greenhouse-stage-04.png" alt="Final shared-home state with subtle warmer lighting and string lights"></div><figcaption>CELEBRATION</figcaption></figure>
+      </div></div>
+      <div id="homeResponds" class="home-view" data-view="responds" hidden><div class="home-gallery interaction-gallery">
+       <figure><div class="home-media video-media"><video data-scene-video muted loop playsinline preload="none" src="assets/pages/06/cat-reaction.mp4" aria-label="Petting Tuanzi and the companion's response"></video><button class="clip-toggle" type="button" data-local-space aria-label="Pause cat reaction clip">Ⅱ</button></div><figcaption>INTERACTIVE</figcaption></figure>
+       <figure><div class="home-media video-media"><video data-scene-video muted loop playsinline preload="none" src="assets/pages/06/postcard-to-parcel.mp4" aria-label="Postcard preparation, sending, parcel and furniture reveal; guaranteed-reward QA example"></video><button class="clip-toggle" type="button" data-local-space aria-label="Pause postcard clip">Ⅱ</button></div><figcaption>RANDOM REWARDS</figcaption></figure>
+       <figure><div class="home-media video-media"><video data-scene-video muted loop playsinline preload="none" src="assets/pages/06/furniture-drag-save.mp4" aria-label="Dragging, placing and saving furniture"></video><button class="clip-toggle" type="button" data-local-space aria-label="Pause furniture clip">Ⅱ</button></div><figcaption>CUSTOMIZATION</figcaption></figure>
+      </div></div>
+     </div>
+    </div></div>
+   </section>
+   <section id="payment" class="scene" data-scene="6" data-page="07" data-title="Payment" aria-label="Page 07 — Payment, Xsolla Sandbox">
+    <div class="scene-camera"><div class="content-page payment-content">
+     <div class="section-label" data-build="text" data-at="0.02"><span class="number-pill">07</span> XSOLLA SANDBOX</div>
+     <h2 data-build="text" data-at="0.12">Payment</h2>
+     <div class="payment-sequence">
+      <figure class="payment-step" data-build="rise" data-at="0.22"><div class="step-frame" data-tab="01 · RECHARGE"><img src="assets/pages/07/1-recharge.png" alt="60-tuna recharge pack selected for ¥6 in the game; initial balance 0"></div><figcaption>60-tuna pack</figcaption></figure>
+      <span class="payment-arrow" data-build="text" data-at="0.38" aria-hidden="true">→</span>
+      <figure class="payment-step" data-build="rise" data-at="0.44"><div class="step-frame" data-tab="02 · XSOLLA CHECKOUT"><img src="assets/pages/07/2-checkout.png" alt="Corresponding Xsolla sandbox checkout for the same 60-tuna pack"></div><figcaption>Xsolla Sandbox</figcaption></figure>
+      <span class="payment-arrow" data-build="text" data-at="0.58" aria-hidden="true">→</span>
+      <figure class="payment-step" data-build="rise" data-at="0.65"><div class="step-frame" data-tab="03 · CONFIRMATION"><img src="assets/pages/07/3-confirmation.png" alt="Return to the game with verified balance 60 and successful sandbox payment record"></div><figcaption>Balance 0 → 60 tuna</figcaption></figure>
+     </div>
+    </div></div>
+   </section>
   </div>
   <div id="heroCat" class="hero-cat" aria-label="Miaomiao, the original Stray Kitty protagonist" role="img"><img src="assets/miaomiao.svg" alt=""></div>
   <button id="helpButton" class="help-button circle-control" type="button" aria-label="Show controls">?</button>
   <div id="helpPanel" class="help-panel" hidden role="dialog" aria-label="Presentation controls"><button id="helpClose" type="button" aria-label="Close control help">×</button><h3>Explore the story</h3><p><kbd>→</kbd> / <kbd>Space</kbd> next · <kbd>←</kbd> previous<br><kbd>Esc</kbd> finish motion · <kbd>Home</kbd> first · <kbd>End</kbd> last</p><label class="pace-control" for="paceSelect">Arrow-key pace <select id="paceSelect"><option value="3000">Brisk · 3 s</option><option value="4200" selected>Cinematic · 4.2 s</option><option value="5500">Gentle · 5.5 s</option></select></label></div>
  </main>
 </div>
+<script src="scene-content.js"></script>
 <script src="engine-v3.js"></script>
 </body></html>

@@ -1,16 +1,19 @@
 {
   "current": {
     "entry": "./",
-    "source_commit": "204390d479d0e968d9ce74d6b21c047fb80c3196",
-    "verified_pages_build": "2026-11-08T11:38:46Z",
-    "description": "Three-page deck with original Page 02 illustrations"
+    "source_commit": null,
+    "candidate_base_commit": "a6d58cca53cb52f4d674b0e9f9ef881f54ce54aa",
+    "local_verified_at": "2026-11-08T14:36:47.857605+00:00",
+    "verified_pages_build": null,
+    "description": "Seven-page deck: film, pitch, roadmap, game flow, visual novel, Home Hub and sandbox payment",
+    "publication_status": "Local candidate passed; GitHub Pages verification pending"
   },
   "previous": {
     "entry": "previous/",
-    "source_commit": "8a1b886555f79a096ce458dde5d7bfd55f2da328",
-    "verified_pages_build": "2026-11-08T11:31:09Z",
-    "description": "Immediately preceding deployed three-page deck, before illustration restoration"
+    "source_commit": "2c1fc278732287a6607666e958622dce9a850cb6",
+    "verified_pages_build": "2026-11-08T11:56:44Z",
+    "description": "Outgoing verified three-page deck, including enlarged original Page 02 illustrations"
   },
   "shared_assets": "assets/",
-  "retention": "Two usable decks only; historical commits remain unchanged. Verify candidate before rotating. Housekeeping and documentation commits do not count as deck versions."
+  "retention": "Two usable decks only. Candidate verified before rotation; normal Git history retained. Source commit and deployment evidence are finalized after publication."
 }
