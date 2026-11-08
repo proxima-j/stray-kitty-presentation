@@ -1,1 +1,24 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Stray Kitty — Page 04 Design Review</title><link rel="stylesheet" href="review.css"></head><body><main class="review-page"><div class="label"><span class="num">04</span>NARRATIVE · DESIGN PREVIEW</div><h1>Every rescue brings another story home.</h1><div class="review-body"><div class="tabframe narrative-frame" data-tab="FRIENDS · ORIGINAL IN-GAME SCENE PENDING"><div class="placeholder scene-placeholder"><strong>A scene with friends</strong><small>Replace with three matched authentic in-game dialogue frames</small></div><button type="button" class="dialogue" id="nextLine"><span class="counter" id="lineIndex">01 / 03</span><span class="line" id="lineText">Actual dialogue line 1 — capture pending</span><span class="hint">CLICK TO CONTINUE ›</span></button></div></div><div class="review-route" aria-hidden="true"></div><img class="review-cat" src="../assets/miaomiao.svg" alt=""></main><script>const labels=["Actual dialogue line 1 — capture pending","Actual dialogue line 2 — capture pending","Actual dialogue line 3 — capture pending"];let i=0;document.getElementById("nextLine").addEventListener("click",()=>{i=(i+1)%3;document.getElementById("lineIndex").textContent=String(i+1).padStart(2,"0")+" / 03";document.getElementById("lineText").textContent=labels[i]});</script></body></html>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Stray Kitty — Page 04 Design Preview</title><link rel="stylesheet" href="review.css"></head><body>
+<main class="review-page flow-review-page">
+
+
+<div class="review-body"><figure class="loop-review"><svg viewBox="0 0 1400 700" role="img" aria-labelledby="flowTitle flowDesc">
+      <title id="flowTitle">Game flow</title><desc id="flowDesc">Story, Map Exploration, Narrative and Random Events, Combat, then Story. Home Hub is separate, above-left, with one optional-access arrow toward open space in the loop.</desc>
+      <defs><marker id="flowArrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1 L10 6 L1 11" fill="none" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+      <ellipse class="flow-route" cx="760" cy="370" rx="460" ry="205"/>
+      <!-- Short tangent arcs sit directly on the continuous oval. Clockwise. -->
+      <path class="flow-direction" d="M990 192.46 A460 205 0 0 1 1085.27 225.04" marker-end="url(#flowArrow)"/>
+      <path class="flow-direction" d="M1158.37 472.5 A460 205 0 0 1 1085.27 514.96" marker-end="url(#flowArrow)"/>
+      <path class="flow-direction" d="M530 547.54 A460 205 0 0 1 434.73 514.96" marker-end="url(#flowArrow)"/>
+      <path class="flow-direction" d="M361.63 267.5 A460 205 0 0 1 434.73 225.04" marker-end="url(#flowArrow)"/>
+      <path class="flow-route" d="M350 145 C420 175 388 245 500 278" marker-end="url(#flowArrow)"/>
+      <g class="flow-node"><rect class="flow-pill flow-hub" x="130" y="69" width="240" height="76" rx="38"/><text class="flow-label" x="250" y="109">HOME HUB</text></g>
+      <g class="flow-node"><rect class="flow-pill" x="640" y="127" width="240" height="76" rx="38"/><text class="flow-label" x="760" y="167">STORY</text></g>
+      <g class="flow-node"><rect class="flow-pill" x="1060" y="332" width="320" height="76" rx="38"/><text class="flow-label" x="1220" y="372">MAP EXPLORATION</text></g>
+      <g class="flow-node"><rect class="flow-pill" x="550" y="529" width="420" height="92" rx="46"/><text class="flow-label" x="760" y="563"><tspan x="760">NARRATIVE &amp;</tspan><tspan x="760" dy="30">RANDOM EVENTS</tspan></text></g>
+      <g class="flow-node"><rect class="flow-pill" x="180" y="332" width="240" height="76" rx="38"/><text class="flow-label" x="300" y="372">COMBAT</text></g>
+     </svg></figure></div>
+<div class="review-route" aria-hidden="true"></div><img class="review-cat" src="../assets/miaomiao.svg" alt=""></main>
+
+</body></html>

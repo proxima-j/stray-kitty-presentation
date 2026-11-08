@@ -1,12 +1,17 @@
-# Temporary design-review previews — Pages 04–06
+# Temporary design review — proposed Pages 03–07
 
-These are **compositions awaiting review**, NOT Current, Previous, or a third working deck. No changes to `docs/index.html`, `docs/previous/index.html`, `docs/versions.json` or the approved v3 motion engine are part of this review directory.
+These are **five separate page previews**, not part of the Current or Previous working presentation versions.
 
-- [Page 04 — Narrative](page-04.html): click the dialogue placeholder to cycle three planned states.
-- [Page 05 — Home Hub](page-05.html): switch between four growth-stage placeholders and three interaction-clip placeholders.
-- [Page 06 — Payment](page-06.html): one three-step Xsolla sandbox screenshot composition.
-- [Asset checklist](ASSET-REQUESTS.md): exact missing evidence, filenames and capture boundaries.
+Sequence after the existing Page 02 (Elevator Pitch):
 
-**Lifecycle:** Keep all review previews until Codex begins the next approved integration phase and has copied the approved designs and asset requirements into the working Current. Delete this directory **only after that build is implemented and verified**, not during design review. The Current and Previous versions may still be adjusted; do not call them permanently locked.
+1. [Page 03 — Roadmap](page-03.html): **Part 01 · The Game** and **Part 02 · Technical Walkthrough**.
+2. [Page 04 — Game Flow](page-04.html): approved existing oval gameplay cycle, renumbered.
+3. [Page 05 — Visual Novel](page-05.html): click anywhere in the in-game image placeholder to cycle three states, no separate control bar. Original game screenshots/dialogue still required.
+4. [Page 06 — Home Hub](page-06.html): four progress states; switch to three interactions. **Random Rewards** replaces **Surprise**.
+5. [Page 07 — Payment](page-07.html): three-step screenshot composition; title **Payment**.
 
-Use the existing shared design font/colors; final captured gameplay and payment evidence are not yet inserted. These review pages do not execute the main v3 navigation.
+Read the [asset checklist](ASSET-REQUESTS.md) before the next Codex implementation phase. No actual gameplay images, recordings or payments have been captured in these previews.
+
+**Lifecycle:** Keep these review previews until Codex implements and verifies the approved pages in Current. Remove `docs/review/` as part of that next completed integration phase, not before. **Current and Previous may still be refined**; neither is permanently frozen. Do not rotate working deck versions for design previews.
+
+The full presentation still uses the original v3 navigation engine in Current. These HTML previews are isolated static compositions.
