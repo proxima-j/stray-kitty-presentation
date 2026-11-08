@@ -897,7 +897,7 @@
     {
       "id": "media.web-delivery",
       "source": "WEB-MEDIA.json",
-      "origin": "Web derivatives of existing user-approved presentation media; originals retained at their existing paths. Images are pixel-identical lossless WebP. Videos preserve complete action, frame rate, duration and audio; H.264/AAC fast-start, short clips capped at 960px wide, opening film retains 1920x1080.",
+      "origin": "Web derivatives of existing user-approved presentation media; originals retained at their existing paths. Page 02 artwork is pixel-identical lossless WebP. Gameplay screenshots use high-quality WebP previews (Home 960px, dialogue 1280px; Payment and Greybox keep full dimensions); original PNGs remain intact. Videos preserve complete action, frame rate, duration and audio; H.264/AAC fast-start, short clips capped at 960px wide, opening film retains 1920x1080.",
       "approval": "Existing public-use authorization inherited from each source; loading optimization requested by user 2026-11-09.",
       "files": [
         "../assets/illustrations/d20-dungeon-master-original.webp",

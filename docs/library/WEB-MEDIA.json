@@ -18,65 +18,92 @@
     {
       "source": "assets/level-design/graybox/chapter2-graybox.png",
       "path": "assets/level-design/graybox/chapter2-graybox.webp",
-      "kind": "lossless-image",
+      "kind": "web-image",
       "original_bytes": 1737319,
-      "bytes": 1240552
+      "bytes": 162508,
+      "quality": 90,
+      "width": 1448,
+      "height": 1086
     },
     {
       "source": "assets/pages/05/friends-dialogue-01.png",
       "path": "assets/pages/05/friends-dialogue-01.webp",
-      "kind": "lossless-image",
+      "kind": "web-image",
       "original_bytes": 1038863,
-      "bytes": 734482
+      "bytes": 225808,
+      "quality": 85,
+      "width": 1280,
+      "height": 720
     },
     {
       "source": "assets/pages/05/friends-dialogue-02.png",
       "path": "assets/pages/05/friends-dialogue-02.webp",
-      "kind": "lossless-image",
+      "kind": "web-image",
       "original_bytes": 1000008,
-      "bytes": 708924
+      "bytes": 220702,
+      "quality": 85,
+      "width": 1280,
+      "height": 720
     },
     {
       "source": "assets/pages/05/friends-dialogue-03.png",
       "path": "assets/pages/05/friends-dialogue-03.webp",
-      "kind": "lossless-image",
+      "kind": "web-image",
       "original_bytes": 1012223,
-      "bytes": 719500
+      "bytes": 224266,
+      "quality": 85,
+      "width": 1280,
+      "height": 720
     },
     {
       "source": "assets/pages/06/greenhouse-stage-01.png",
       "path": "assets/pages/06/greenhouse-stage-01.webp",
-      "kind": "lossless-image",
+      "kind": "web-image",
       "original_bytes": 861511,
-      "bytes": 589354
+      "bytes": 109028,
+      "quality": 85,
+      "width": 960,
+      "height": 540
     },
     {
       "source": "assets/pages/06/greenhouse-stage-02.png",
       "path": "assets/pages/06/greenhouse-stage-02.webp",
-      "kind": "lossless-image",
+      "kind": "web-image",
       "original_bytes": 1011792,
-      "bytes": 718974
+      "bytes": 148048,
+      "quality": 85,
+      "width": 960,
+      "height": 540
     },
     {
       "source": "assets/pages/06/greenhouse-stage-03.png",
       "path": "assets/pages/06/greenhouse-stage-03.webp",
-      "kind": "lossless-image",
+      "kind": "web-image",
       "original_bytes": 1068028,
-      "bytes": 779176
+      "bytes": 174424,
+      "quality": 85,
+      "width": 960,
+      "height": 540
     },
     {
       "source": "assets/pages/06/greenhouse-stage-04.png",
       "path": "assets/pages/06/greenhouse-stage-04.webp",
-      "kind": "lossless-image",
+      "kind": "web-image",
       "original_bytes": 1071856,
-      "bytes": 784254
+      "bytes": 174190,
+      "quality": 85,
+      "width": 960,
+      "height": 540
     },
     {
       "source": "assets/pages/07/1-recharge.png",
       "path": "assets/pages/07/1-recharge.webp",
-      "kind": "lossless-image",
+      "kind": "web-image",
       "original_bytes": 289333,
-      "bytes": 197524
+      "bytes": 44936,
+      "quality": 88,
+      "width": 1600,
+      "height": 900
     },
     {
       "source": "assets/pages/07/2-checkout.png",
@@ -88,9 +115,12 @@
     {
       "source": "assets/pages/07/3-confirmation.png",
       "path": "assets/pages/07/3-confirmation.webp",
-      "kind": "lossless-image",
+      "kind": "web-image",
       "original_bytes": 284096,
-      "bytes": 190288
+      "bytes": 50548,
+      "quality": 88,
+      "width": 1600,
+      "height": 900
     },
     {
       "source": "assets/Stray-Kitty-Android-Final-v02-SFX.mp4",
