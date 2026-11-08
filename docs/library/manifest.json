@@ -486,34 +486,67 @@
     {
       "id": "payment.recharge",
       "source": "../assets/pages/07/1-recharge.png",
-      "origin": "Public game starry-kitty.duckdns.org; actual config GET provider=xsolla, sandbox=true; fresh guest, 60-tuna/¥6 pack selected. Captured before checkout. Payment POST requests blocked during capture.",
+      "origin": "Same fresh guest sandbox journey: public game starry-kitty.duckdns.org, Xsolla sandbox config verified; pack_small selected, ¥6 for 60 tuna; initial balance 0.",
       "use": "Page 07",
       "status": "CAPTURED_PENDING_APPROVAL",
       "review_status": "READY",
-      "permission": "User authorized publication of project-owned gameplay captures in this asset-collection task, 2026-11-08.",
+      "permission": "User explicitly authorized one new 60-tuna Xsolla sandbox payment and capture in chat on 2026-11-08; existing asset-publication authorization applies.",
       "metadata": {
         "width": 1600,
-        "height": 900
+        "height": 900,
+        "provider": "xsolla",
+        "sandbox": true,
+        "same_journey": true,
+        "pack": "pack_small",
+        "price_minor": 600,
+        "currency": "CNY"
       },
-      "limitations": "Standalone pack-selection capture; not linked to the historical successful payment and not evidence of payment/credit. No new sandbox transaction initiated."
+      "limitations": "Sandbox demonstration only; no real payment credentials, personal identifiers or checkout tokens appear in published screenshots."
     },
     {
       "id": "payment.checkout",
-      "source": null,
-      "expected_source": "../assets/pages/07/2-checkout.png",
+      "source": "../assets/pages/07/2-checkout.png",
+      "origin": "Corresponding real sandbox-secure.xsolla.com checkout; 60-tuna item and ¥6 total visible, explicit sandbox banner; captured before entering official test-card details.",
       "use": "Page 07",
-      "status": "UNAVAILABLE",
-      "review_status": "UNAVAILABLE",
-      "reason": "No genuine existing Xsolla checkout screenshot found for the documented successful sandbox test. A new checkout/payment journey requires separate authorization."
+      "status": "CAPTURED_PENDING_APPROVAL",
+      "review_status": "READY",
+      "permission": "User explicitly authorized one new 60-tuna Xsolla sandbox payment and capture in chat on 2026-11-08; existing asset-publication authorization applies.",
+      "metadata": {
+        "width": 1600,
+        "height": 900,
+        "provider": "xsolla",
+        "sandbox": true,
+        "same_journey": true,
+        "pack": "pack_small",
+        "price_minor": 600,
+        "currency": "CNY"
+      },
+      "limitations": "Sandbox demonstration only; no real payment credentials, personal identifiers or checkout tokens appear in published screenshots."
     },
     {
       "id": "payment.return",
-      "source": null,
-      "expected_source": "../assets/pages/07/3-confirmation.png",
+      "source": "../assets/pages/07/3-confirmation.png",
+      "origin": "Same guest returned via provider Return to Game after sandbox success. Server payment history verified exactly one confirmed Xsolla pack_small entry, amount 600 CNY minor units, same player; authenticated game state tuna balance 0→60. Screenshot shows balance 60 and successful Xsolla sandbox ledger row.",
       "use": "Page 07",
-      "status": "UNAVAILABLE",
-      "review_status": "UNAVAILABLE",
-      "reason": "Prior successful sandbox +60-tuna credit is reported in project notes, but no matching return screenshot with verified webhook/ledger evidence was available. A redirect alone is insufficient; no success was simulated."
+      "status": "CAPTURED_PENDING_APPROVAL",
+      "review_status": "READY",
+      "permission": "User explicitly authorized one new 60-tuna Xsolla sandbox payment and capture in chat on 2026-11-08; existing asset-publication authorization applies.",
+      "metadata": {
+        "width": 1600,
+        "height": 900,
+        "provider": "xsolla",
+        "sandbox": true,
+        "same_journey": true,
+        "pack": "pack_small",
+        "price_minor": 600,
+        "currency": "CNY",
+        "balance_before": 0,
+        "balance_after": 60,
+        "credited_tuna": 60,
+        "confirmed_ledger_entries": 1,
+        "verification": "Actual confirmed provider ledger entry plus authenticated game-state balance, not redirect alone."
+      },
+      "limitations": "Sandbox demonstration only; no real payment credentials, personal identifiers or checkout tokens appear in published screenshots."
     }
   ]
 }

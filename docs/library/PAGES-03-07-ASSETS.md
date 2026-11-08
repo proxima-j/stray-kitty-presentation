@@ -1,6 +1,6 @@
 # Pages 03–07 — collected gameplay assets
 
-Collected 2026-11-08. **8 PNGs + 3 silent H.264 MP4s.** All captured files are `CAPTURED_PENDING_APPROVAL`; READY below means technically ready for editorial review, not already approved.
+Collected 2026-11-08. **10 PNGs + 3 silent H.264 MP4s.** All captured files are `CAPTURED_PENDING_APPROVAL`; READY below means technically ready for editorial review, not already approved.
 
 Pages 03 and 04 need no new media. Current, Previous, the v3 engine and all review compositions remain untouched. No integration or version rotation performed.
 
@@ -16,16 +16,16 @@ Pages 03 and 04 need no new media. Current, Previous, the v3 engine and all revi
 | `home.interaction.cats` | `docs/assets/pages/06/cat-reaction.mp4` | Fresh local capture at official finale.home checkpoint. Native pointer click on Tuanzi; actual happy reaction, heart and authored pet-response bubble; petPressure 0→1 verified read-only. | READY |
 | `home.interaction.postcard` | `docs/assets/pages/06/postcard-to-parcel.mp4` | Existing project recording output/trailer-originals-2026-11-06-takes/premiere/C08_Greenhouse_Heart-Parcel-Stool-Placement_T01.mp4, source 0.5–17.0s. Real prepare/draw heart → send → parcel → seedling-stool reveal. | READY |
 | `home.interaction.furniture` | `docs/assets/pages/06/furniture-drag-save.mp4` | Existing project recording output/trailer-retakes-2026-11-06-190143/premiere/R07_Greenhouse_Seedling-Stool-Place-Save_T01.mp4, source 1.8–11.5s. Actual inventory selection, drag/place seedling stool, save and visible saved arrangement. Existing isolated owned-stool QA setup. | READY |
-| `payment.recharge` | `docs/assets/pages/07/1-recharge.png` | Public game starry-kitty.duckdns.org; actual config GET provider=xsolla, sandbox=true; fresh guest, 60-tuna/¥6 pack selected. Captured before checkout. Payment POST requests blocked during capture. | READY |
-| `payment.checkout` | `docs/assets/pages/07/2-checkout.png (not created)` | No genuine existing Xsolla checkout screenshot found for the documented successful sandbox test. A new checkout/payment journey requires separate authorization. | UNAVAILABLE |
-| `payment.return` | `docs/assets/pages/07/3-confirmation.png (not created)` | Prior successful sandbox +60-tuna credit is reported in project notes, but no matching return screenshot with verified webhook/ledger evidence was available. A redirect alone is insufficient; no success was simulated. | UNAVAILABLE |
+| `payment.recharge` | `docs/assets/pages/07/1-recharge.png` | Same fresh guest sandbox journey: public game starry-kitty.duckdns.org, Xsolla sandbox config verified; pack_small selected, ¥6 for 60 tuna; initial balance 0. | READY |
+| `payment.checkout` | `docs/assets/pages/07/2-checkout.png` | Corresponding real sandbox-secure.xsolla.com checkout; 60-tuna item and ¥6 total visible, explicit sandbox banner; captured before entering official test-card details. | READY |
+| `payment.return` | `docs/assets/pages/07/3-confirmation.png` | Same guest returned via provider Return to Game after sandbox success. Server payment history verified exactly one confirmed Xsolla pack_small entry, amount 600 CNY minor units, same player; authenticated game state tuna balance 0→60. Screenshot shows balance 60 and successful Xsolla sandbox ledger row. | READY |
 
 ## Selection and evidence notes
 
 - Recommended friends scene: the three consecutive shared-home farewell nodes below. This is a meaningful Miaomiao-and-friends scene, but reveals the ending.
 - Four implemented home stages were captured with identical camera parameters: x=-42, y=3, scale=0.528169014084507; viewport 1600×900. Stage 4 is authentic, but visually close to stage 3. Recommend retaining it as the final shared-home state only if subtle lighting progression suits the comparison; do not add decor to manufacture a larger difference.
 - Postcard footage is an existing guaranteed/pity reward QA capture (draw 18), with a seedling stool reveal. Keep this qualification when describing randomness; this single clip does not establish reward probabilities or multiple outcomes.
-- The recharge screen is safe, genuine Xsolla-sandbox pack selection only. Existing project notes describe a successful sandbox credit, but supplied no usable matching checkout/credited-return images. Those two assets remain unavailable. No payment session or transaction was initiated.
+- Payment sequence is now complete after explicit authorization for one new sandbox transaction: select the 60-tuna/¥6 pack → actual Xsolla sandbox checkout → return with confirmed credit. Exactly one confirmed Xsolla ledger entry matched the guest and pack; authenticated game state increased from 0 to 60 tuna. The final screenshot keeps the balance and successful sandbox history row readable. Published images contain no player/account IDs, emails, card details or tokens. No production configuration changes or real-money charge.
 
 ## Exact consecutive dialogue
 
@@ -56,6 +56,8 @@ Pages 03 and 04 need no new media. Current, Previous, the v3 engine and all revi
 | `home.interaction.postcard` | 1600×900 H.264 MP4, silent | 16.5s |
 | `home.interaction.furniture` | 1600×900 H.264 MP4, silent | 9.7s |
 | `payment.recharge` | 1600×900 PNG | — |
+| `payment.checkout` | 1600×900 PNG | — |
+| `payment.return` | 1600×900 PNG | — |
 
 ## Minimum verification
 
