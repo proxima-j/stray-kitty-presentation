@@ -28,8 +28,15 @@
       document.body.append(node);
     });
   }
+  function preloadPlayer() {
+    return Promise.all(['showcase-interactions.js', '../scene-content.js', '../engine-v3.js'].map(path => new Promise((resolve, reject) => {
+      const link = document.createElement('link');
+      link.rel = 'preload'; link.as = 'script'; link.href = new URL(path, here).href;
+      link.onload = resolve; link.onerror = reject; document.head.append(link);
+    })));
+  }
   try {
-    const [deck, other] = await Promise.all([read(deckURL), read(otherURL)]);
+    const [deck, other] = await Promise.all([read(deckURL), read(otherURL), preloadPlayer()]);
     const events = isCombat ? other.querySelector('main.showcase-review') : current;
     const combat = isCombat ? current : other.querySelector('main.showcase-review');
     resolveMedia(events, isCombat ? otherURL : here);
@@ -71,6 +78,10 @@
       const link = document.createElement('link'); link.rel = 'stylesheet'; link.href = new URL(path, here).href;
       link.onload = resolve; link.onerror = reject; document.head.insertBefore(link, styleAnchor);
     })));
+    // Off-screen clips must not occupy the connection pool ahead of the player.
+    // The existing scene controller selects Home clips when their view is active;
+    // repositioning starts only when the presenter clicks its mechanic button.
+    deck.body.querySelectorAll('video').forEach(video => { video.preload = 'none'; });
     document.body.replaceChildren(...deck.body.childNodes);
     document.body.classList.add('context-preview');
     // Re-select media sources after adopting the parsed nodes into this page.
