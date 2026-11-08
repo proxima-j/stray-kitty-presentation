@@ -9,12 +9,14 @@
   <link rel="stylesheet" href="library/components.css">
   <link rel="stylesheet" href="presentation.css?v=20261108-home-alignment">
   <link rel="stylesheet" href="level-design.css?v=20261109-level-design">
-  <link rel="preload" as="script" href="scene-content.js?v=20261109-on-demand">
+  <link rel="stylesheet" href="events-combat.css?v=20261109-integrated">
+  <link rel="preload" as="script" href="events-combat.js?v=20261109-integrated">
+  <link rel="preload" as="script" href="scene-content.js?v=20261109-on-demand-events">
   <link rel="preload" as="script" href="engine-v3.js?v=20261109-level-design">
 </head>
 <body>
 <div id="scrollSpace" class="scroll-space">
- <main id="stage" class="stage" aria-label="Stray Kitty presentation — Pages 01 through 10">
+ <main id="stage" class="stage" aria-label="Stray Kitty presentation — Pages 01 through 12">
   <div id="world" class="world">
    <svg id="roadDrawing" class="route-svg" aria-hidden="true"><defs><clipPath id="revealClip"><rect id="routeReveal" x="0" y="0" width="0" height="2000"/></clipPath></defs><path id="routeGhost" class="route-ghost" d=""/><path id="routeInk" class="route-ink" d="" clip-path="url(#revealClip)"/></svg>
    <section id="opening-film" class="scene scene-film" data-title="Opening Film" data-scene="0" data-page="01" aria-label="Page 01 — Full-screen film">
@@ -176,6 +178,110 @@
 
 </div></div>
    </section>
+<section id="random-events" class="scene" data-scene="10" data-page="11" data-title="Random Events" aria-label="Page 11 — Random Events"><div class="scene-camera"><div class="events-combat events-review">
+<h2 data-at="0.04" data-build="text">Random Events</h2>
+<div class="review-body">
+<section aria-label="Trigger, choice and successful outcome screenshot sequence" class="event-sequence">
+<figure class="tabframe" data-at="0.12" data-build="rise" data-tab="01 · TRIGGER">
+<div class="event-shot">
+<button aria-label="Open original testing view" class="event-media testing-media" data-full-image="../assets/pages/08/01-testing-view.png" data-image-title="Open original testing view" data-local-space="" type="button">
+<img alt="TESTING VIEW: the configured west trigger circle on the real Rainy Alley map" data-media-src="../assets/pages/08/01-testing-view.webp"/>
+</button>
+</div>
+</figure>
+<div aria-hidden="true" class="arrow-inline">→</div>
+<figure class="tabframe" data-at="0.31" data-build="rise" data-tab="02 · CHOICE CARD">
+<div class="event-shot"><button aria-label="Open original choice card" class="event-media choice-media" data-full-image="../assets/pages/08/02-event-choice.png" data-image-title="Open original choice card" data-local-space="" type="button">
+<img alt="屋檐下的猫粮碗: original Chinese event description and two unresolved choices" data-media-src="../assets/pages/08/02-event-choice.webp"/>
+</button></div>
+</figure>
+<div aria-hidden="true" class="arrow-inline">→</div>
+<figure class="tabframe" data-at="0.5" data-build="rise" data-tab="03 · RESULT CARD">
+<div class="event-shot"><button aria-label="Open original successful result" class="event-media result-media" data-full-image="../assets/pages/08/03-event-success.png" data-image-title="Open original successful result" data-local-space="" type="button">
+<img alt="Same feeder-bowl interaction: 5 + 5 = 10, success, 鱼干 +1 and 材料 +1" data-media-src="../assets/pages/08/03-event-success.webp"/>
+</button></div>
+</figure>
+</section>
+<div class="event-footnotes" data-at="0.54" data-build="text">
+<span title="The west-zone testing view and event-card interaction are separate captures. Zone entry uses a 55% gate, subject to state and eligibility; backend 150-unit distance checks are not active across every current map.">TRIGGER ZONES + DISTANCE CHECKS</span>
+<span>CHOICE → OUTCOME</span>
+</div>
+<section aria-label="Two close-up details from the successful event result" class="event-closeups">
+<figure class="tabframe" data-at="0.65" data-build="rise" data-tab="FOCUS 01">
+<div class="event-detail">
+<button aria-label="Open genuine Fish +1 reward crop" class="event-media" data-full-image="../assets/pages/08/04-reward-fish-closeup.png" data-image-title="Open genuine Fish +1 reward crop" data-local-space="" type="button"><img alt="鱼干 +1: Fish +1 from the successful result" data-media-src="../assets/pages/08/04-reward-fish-closeup.webp"/></button><div class="reward-copy"><strong>Fish +1</strong><small>Event reward</small></div>
+</div>
+</figure>
+<figure class="tabframe" data-at="0.77" data-build="rise" data-tab="FOCUS 02">
+<div class="event-detail">
+<button aria-label="Open genuine Material +1 reward crop" class="event-media" data-full-image="../assets/pages/08/05-reward-material-closeup.png" data-image-title="Open genuine Material +1 reward crop" data-local-space="" type="button"><img alt="材料 +1: Material +1 from the same successful result" data-media-src="../assets/pages/08/05-reward-material-closeup.webp"/></button><div class="reward-copy"><strong>Material +1</strong><small>Event reward</small></div>
+</div>
+</figure>
+</section>
+<div class="event-conclusion" data-at="0.9" data-build="text">
+<span class="outcome-label primary" title="Other event outcomes can grant battle support; the two captured rewards here are resources.">Battle Support → Combat</span>
+<span class="outcome-label" title="The wider system remembers choices for later encounters; this feeder-bowl result does not itself demonstrate a later unlock.">Butterfly Effect → Future Encounters</span>
+</div>
+</div>
+</div></div></section>
+<section id="combat" class="scene" data-scene="11" data-page="12" data-title="Real-Time Tactical Tower Defense" aria-label="Page 12 — Real-Time Tactical Tower Defense"><div class="scene-camera"><div class="events-combat combat-review">
+<h2 data-at="0.04" data-build="text">Real-Time Tactical Tower Defense</h2>
+<div class="combat-bridge" data-at="0.1" data-build="text">
+<span>FROM RANDOM EVENTS</span><span class="arrow-inline">→</span><b>BATTLE PRESSURE + SUPPORT</b>
+</div>
+<div class="review-body">
+<div class="combat-board">
+<section aria-label="Battlefield and repositioning" class="combat-main" data-at="0.2" data-build="rise">
+<div class="tabframe" data-tab="BATTLEFIELD · REPOSITIONING IN ACTION">
+<div class="combat-shot">
+<img alt="Authentic Midnight Market real-time battle with companions, enemies and ability controls" class="battlefield-image" data-media-src="../assets/pages/09/battlefield-main.webp"/>
+<video aria-label="Continuous Banban repositioning demonstration, separate attempt at the same stage, normal speed" class="battle-reposition" data-demo-src="../assets/pages/09/reposition-closeup.mp4?v=web-20261109" data-media-poster="../assets/pages/09/battlefield-main.webp" hidden="" id="repositionVideo" muted="" playsinline="" preload="none"></video>
+<span aria-live="polite" class="reposition-source" hidden="" id="repositionSource" role="status"></span>
+</div>
+</div>
+<div aria-label="Combat mechanic labels" class="combat-steps">
+<button aria-controls="repositionVideo" aria-pressed="false" class="combat-step" id="repositionTrigger" title="Play the real repositioning demonstration in the battlefield frame" type="button"><b>Reposition</b><small>Move cats during battle</small></button>
+<div class="combat-step"><b>Build Energy</b><small>Abilities charge automatically</small></div>
+<button aria-controls="repositionVideo" aria-pressed="false" class="combat-step" data-demo-src="../assets/pages/09/skill-activation-closeup.mp4" id="skillsTrigger" title="Play Banban's real Shield activation in the battlefield frame" type="button"><b>Activate Skills</b><small>Trigger each cat's ability</small></button>
+</div>
+</section>
+<section aria-label="Three companions and their authentic ability effects" class="combat-profiles" data-at="0.42" data-build="rise">
+<article class="profile" data-id="FRIEND 01">
+<div class="profile-figure"><img alt="绒绒 / Rongrong original pixel-art figure" data-media-src="../assets/pages/09/caster-figure.webp" height="128" width="128"/></div>
+<div class="profile-details"><b>绒绒 / Rongrong</b><span class="ability">星绒绽放 — Star Burst</span><span class="profile-function">Cross-shaped area attack</span></div><div class="profile-vfx"><img alt="Rongrong's authentic purple star attack across cross-shaped impact cells" data-media-src="../assets/pages/09/caster-star-vfx.webp"/></div>
+</article>
+<article class="profile" data-id="FRIEND 02">
+<div class="profile-figure"><img alt="斑斑 / Banban original pixel-art figure" data-media-src="../assets/pages/09/guard-figure.webp" height="128" width="128"/></div>
+<div class="profile-details"><b>斑斑 / Banban</b><span class="ability">罐盖护盾 — Shield</span><span class="profile-function">Temporary self-shield</span></div><div class="profile-vfx"><img alt="Banban's genuine cyan shield release and original skill label" data-media-src="../assets/pages/09/guard-shield-vfx.webp"/></div>
+</article>
+<article class="profile" data-id="FRIEND 03">
+<div class="profile-figure"><img alt="点点 / Diandian original pixel-art figure" data-media-src="../assets/pages/09/diandian-figure.webp" height="128" width="128"/></div>
+<div class="profile-details"><b>点点 / Diandian</b><span class="ability">安心呼噜 — Healing Purr</span><span class="profile-function">Heals active companions</span></div><div class="profile-vfx"><img alt="Diandian's genuine green Healing Purr effect on active companions" data-media-src="../assets/pages/09/diandian-heal-vfx.webp"/></div>
+</article>
+<button aria-controls="advisorLayer" aria-expanded="false" class="advisor-trigger" id="advisorTrigger" type="button">+ And one more friend…</button>
+</section>
+</div>
+</div>
+<aside aria-label="阿策 AI advisor reveal" class="advisor-layer" hidden="" id="advisorLayer">
+<div class="advisor-header">
+<div><span class="small-label">ANOTHER FRIEND</span><br/><strong>阿策 · AI Advisor</strong></div>
+<button aria-label="Close advisor layer" class="advisor-close" id="advisorClose" type="button">×</button>
+</div>
+<div class="advisor-id">
+<div class="advisor-figure"><img alt="阿策 original pixel-art figure" data-media-src="../assets/pages/09/advisor-figure.webp" height="128" width="128"/></div>
+<p>Context-aware battle advice.<br/><span class="micro" title="Captured response source=local, reason=not_configured; no model inference is claimed.">Local Fallback</span></p>
+</div>
+<button aria-label="Original advice card before submission; click to show the captured response" class="advisor-screenshot" id="advisorBefore" type="button">
+<span class="small-label">ADVICE CARD · BEFORE</span>
+<img alt="Original Chinese question typed before submission in the same paused battle" data-media-src="../assets/pages/09/advisor-01-before.webp"/>
+</button>
+<div aria-label="Advice card after response" class="advisor-screenshot" hidden="" id="advisorAfter" role="group">
+<span class="small-label">ADVICE CARD · AFTER</span>
+<img alt="Original Chinese local-fallback response to the same question, showing actual battle context and healing advice" data-media-src="../assets/pages/09/advisor-02-after.webp"/>
+</div>
+<div class="advisor-actions"><button class="advisor-next" id="advisorNext" type="button">Show answer →</button><span class="advisor-step" id="advisorStep">1 / 2</span></div>
+</aside>
+</div></div></section>
   </div>
   <div id="heroCat" class="hero-cat" aria-label="Miaomiao, the original Stray Kitty protagonist" role="img"><img src="../assets/miaomiao.svg" alt=""></div>
   <button id="helpButton" class="help-button circle-control" type="button" aria-label="Show controls">?</button>
@@ -186,6 +292,7 @@
  <div class="screenshot-dialog-heading"><h3 id="screenshotTitle"></h3><button type="button" id="closeScreenshot" aria-label="Close enlarged screenshot">×</button></div>
  <img id="enlargedScreenshot" alt="">
 </dialog>
-<script src="scene-content.js?v=20261109-on-demand"></script>
+<script src="scene-content.js?v=20261109-on-demand-events"></script>
+<script src="events-combat.js?v=20261109-integrated"></script>
 <script src="engine-v3.js?v=20261109-level-design"></script>
 </body></html>

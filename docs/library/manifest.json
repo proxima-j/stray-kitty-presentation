@@ -946,6 +946,154 @@
         "../assets/pages/09/advisor-01-before.webp",
         "../assets/pages/09/advisor-02-after.webp"
       ]
+    },
+    {
+      "id": "uiux.dice.crit",
+      "source": "../assets/uiux/dice/dice-crit-1p5x.mp4",
+      "use": "Page 13 — Dice Roll Animations / Critical Success",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved the latest English layout, larger framing and colored labels, then explicitly requested integration/publication on 2026-11-09.",
+      "origin": "Unchanged game DiceRollOverlay and real CSS/3D dice; isolated source-component replay of a genuine unmodified server 2d6 resolution. main@1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e. No RNG/rule patch.",
+      "metadata": {
+        "width": 560,
+        "height": 400,
+        "duration": 2.866667,
+        "speed": 1.5,
+        "audio": false,
+        "source_viewport": [
+          800,
+          400
+        ],
+        "crop": [
+          120,
+          0,
+          560,
+          400
+        ],
+        "scope": "Native full toss/reveal/VFX; separate Chinese result-card hold excluded for English preview."
+      }
+    },
+    {
+      "id": "uiux.dice.success",
+      "source": "../assets/uiux/dice/dice-success-1p5x.mp4",
+      "use": "Page 13 — Dice Roll Animations / Success",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved the latest English layout, larger framing and colored labels, then explicitly requested integration/publication on 2026-11-09.",
+      "origin": "Unchanged game DiceRollOverlay and real CSS/3D dice; isolated source-component replay of a genuine unmodified server 2d6 resolution. main@1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e. No RNG/rule patch.",
+      "metadata": {
+        "width": 560,
+        "height": 400,
+        "duration": 2.866667,
+        "speed": 1.5,
+        "audio": false,
+        "source_viewport": [
+          800,
+          400
+        ],
+        "crop": [
+          120,
+          0,
+          560,
+          400
+        ],
+        "scope": "Native full toss/reveal/VFX; separate Chinese result-card hold excluded for English preview."
+      }
+    },
+    {
+      "id": "uiux.dice.partial",
+      "source": "../assets/uiux/dice/dice-partial-1p5x.mp4",
+      "use": "Page 13 — Dice Roll Animations / Success with a Cost",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved the latest English layout, larger framing and colored labels, then explicitly requested integration/publication on 2026-11-09.",
+      "origin": "Unchanged game DiceRollOverlay and real CSS/3D dice; isolated source-component replay of a genuine unmodified server 2d6 resolution. main@1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e. No RNG/rule patch.",
+      "metadata": {
+        "width": 560,
+        "height": 400,
+        "duration": 2.866667,
+        "speed": 1.5,
+        "audio": false,
+        "source_viewport": [
+          800,
+          400
+        ],
+        "crop": [
+          120,
+          0,
+          560,
+          400
+        ],
+        "scope": "Native full toss/reveal/VFX; separate Chinese result-card hold excluded for English preview."
+      }
+    },
+    {
+      "id": "uiux.dice.fail",
+      "source": "../assets/uiux/dice/dice-fail-1p5x.mp4",
+      "use": "Page 13 — Dice Roll Animations / Failure — Situation Advances",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved the latest English layout, larger framing and colored labels, then explicitly requested integration/publication on 2026-11-09.",
+      "origin": "Unchanged game DiceRollOverlay and real CSS/3D dice; isolated source-component replay of a genuine unmodified server 2d6 resolution. main@1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e. No RNG/rule patch.",
+      "metadata": {
+        "width": 560,
+        "height": 400,
+        "duration": 2.866667,
+        "speed": 1.5,
+        "audio": false,
+        "source_viewport": [
+          800,
+          400
+        ],
+        "crop": [
+          120,
+          0,
+          560,
+          400
+        ],
+        "scope": "Native full toss/reveal/VFX; separate Chinese result-card hold excluded for English preview."
+      }
+    },
+    {
+      "id": "uiux.adaptive.normal",
+      "source": "../assets/uiux/adaptive/normal-1600x900.png",
+      "web_preview": "../assets/uiux/adaptive/normal-1600x900.webp",
+      "use": "Page 14 — Normal view",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved the local UI/UX preview and explicitly requested integration/publication on 2026-11-09.",
+      "origin": "Actual Midnight Market market.explore, isolated private save, current game main@1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e. No opacity/layout injection.",
+      "metadata": {
+        "original_dimensions": [
+          1600,
+          900
+        ],
+        "viewport": [
+          1600,
+          900
+        ],
+        "dpr": 1,
+        "preview_dimensions": [
+          1280,
+          720
+        ]
+      }
+    },
+    {
+      "id": "uiux.adaptive.narrow",
+      "source": "../assets/uiux/adaptive/narrow-user-selected.png",
+      "web_preview": "../assets/uiux/adaptive/narrow-user-selected.webp",
+      "use": "Page 14 — Narrow view",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User supplied and selected this game screenshot, approved the preview, then explicitly requested integration/publication on 2026-11-09.",
+      "origin": "User-selected screenshot with the Midnight Market event result card; original capture viewport, device scale, game commit and save are unknown.",
+      "metadata": {
+        "original_dimensions": [
+          565,
+          616
+        ],
+        "preview_dimensions": [
+          565,
+          616
+        ],
+        "limitation": "Image pixel dimensions do not establish original viewport dimensions. This is not a matched same-save/same-panel resize comparison."
+      }
     }
   ]
 }

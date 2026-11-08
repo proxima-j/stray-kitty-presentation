@@ -11,12 +11,14 @@
   <link rel="stylesheet" href="level-design.css?v=20261109-level-design">
   <link rel="stylesheet" href="events-combat.css?v=20261109-integrated">
   <link rel="preload" as="script" href="events-combat.js?v=20261109-integrated">
+  <link rel="stylesheet" href="uiux.css?v=20261109-integrated">
+  <link rel="preload" as="script" href="uiux.js?v=20261109-integrated">
   <link rel="preload" as="script" href="scene-content.js?v=20261109-on-demand-events">
   <link rel="preload" as="script" href="engine-v3.js?v=20261109-level-design">
 </head>
 <body>
 <div id="scrollSpace" class="scroll-space">
- <main id="stage" class="stage" aria-label="Stray Kitty presentation — Pages 01 through 12">
+ <main id="stage" class="stage" aria-label="Stray Kitty presentation — Pages 01 through 14">
   <div id="world" class="world">
    <svg id="roadDrawing" class="route-svg" aria-hidden="true"><defs><clipPath id="revealClip"><rect id="routeReveal" x="0" y="0" width="0" height="2000"/></clipPath></defs><path id="routeGhost" class="route-ghost" d=""/><path id="routeInk" class="route-ink" d="" clip-path="url(#revealClip)"/></svg>
    <section id="opening-film" class="scene scene-film" data-title="Opening Film" data-scene="0" data-page="01" aria-label="Page 01 — Full-screen film">
@@ -282,6 +284,58 @@
 <div class="advisor-actions"><button class="advisor-next" id="advisorNext" type="button">Show answer →</button><span class="advisor-step" id="advisorStep">1 / 2</span></div>
 </aside>
 </div></div></section>
+<section id="dice-animations" class="scene" data-scene="12" data-page="13" data-title="Dice Roll Animations" aria-label="Page 13 — Dice Roll Animations"><div class="scene-camera"><div class="uiux-page dice-review">
+<h2 data-at="0.04" data-build="text">Dice Roll Animations</h2>
+<div class="review-body">
+<section aria-label="Four matched presentation frames for authentic dice outcome animations" class="dice-grid" data-at="0.2" data-build="rise">
+<figure class="dice-card" data-outcome="crit">
+<div class="dice-media"><video aria-label="Critical Success dice roll and authentic VFX, 1.5x" data-map-clip="" data-media-src="assets/uiux/dice/dice-crit-1p5x.mp4" data-scene-video="" loop="" muted="" playsinline="" preload="none"></video><button aria-label="Play or pause Critical Success dice roll and authentic VFX, 1.5x" aria-pressed="false" class="clip-toggle" data-local-space="" type="button">PLAY</button></div>
+<div class="dice-bottom"><strong>Critical Success</strong><small>1.5×</small></div>
+</figure>
+<figure class="dice-card" data-outcome="success">
+<div class="dice-media"><video aria-label="Success dice roll and authentic VFX, 1.5x" data-map-clip="" data-media-src="assets/uiux/dice/dice-success-1p5x.mp4" data-scene-video="" loop="" muted="" playsinline="" preload="none"></video><button aria-label="Play or pause Success dice roll and authentic VFX, 1.5x" aria-pressed="false" class="clip-toggle" data-local-space="" type="button">PLAY</button></div>
+<div class="dice-bottom"><strong>Success</strong><small>1.5×</small></div>
+</figure>
+<figure class="dice-card" data-outcome="partial">
+<div class="dice-media"><video aria-label="Success with a Cost dice roll and authentic VFX, 1.5x" data-map-clip="" data-media-src="assets/uiux/dice/dice-partial-1p5x.mp4" data-scene-video="" loop="" muted="" playsinline="" preload="none"></video><button aria-label="Play or pause Success with a Cost dice roll and authentic VFX, 1.5x" aria-pressed="false" class="clip-toggle" data-local-space="" type="button">PLAY</button></div>
+<div class="dice-bottom"><strong>Success with a Cost</strong><small>1.5×</small></div>
+</figure>
+<figure class="dice-card" data-outcome="fail">
+<div class="dice-media"><video aria-label="Failure — Situation Advances dice roll and authentic VFX, 1.5x" data-map-clip="" data-media-src="assets/uiux/dice/dice-fail-1p5x.mp4" data-scene-video="" loop="" muted="" playsinline="" preload="none"></video><button aria-label="Play or pause Failure — Situation Advances dice roll and authentic VFX, 1.5x" aria-pressed="false" class="clip-toggle" data-local-space="" type="button">PLAY</button></div>
+<div class="dice-bottom"><strong>Failure — Situation Advances</strong><small>1.5×</small></div>
+</figure>
+</section>
+</div>
+
+
+</div></div></section>
+<section id="adaptive-interface" class="scene" data-scene="13" data-page="14" data-title="Responsive & Translucent UI" aria-label="Page 14 — Responsive & Translucent UI"><div class="scene-camera"><div class="uiux-page adaptive-review">
+
+<h2 data-at="0.04" data-build="text">Responsive &amp; Translucent UI</h2>
+<div class="uiux-kicker" data-at="0.12" data-build="text">One interface · Changing viewport width</div>
+<div class="review-body">
+<section aria-label="Viewport adaptation and translucent interface illustration" class="adaptive-layout" data-at="0.25" data-build="rise">
+<div class="adaptive-stage">
+<div class="adaptive-controls">
+<div class="review-note">Normal view</div>
+<div aria-label="Switch between two actual captured viewport states" class="viewport-toggle" role="group">
+<button aria-pressed="true" data-state="wide" id="wide" type="button">Normal</button>
+<button aria-pressed="false" data-state="narrow" id="narrow" type="button">Narrow</button>
+</div>
+</div>
+<div class="adaptive-canvas">
+<div aria-label="Normal game capture and user-selected narrow screenshot" class="demo-browser" data-state="wide" id="demoBrowser">
+<div aria-hidden="true" class="demo-browser-bar"><span></span><span></span><span></span><small>GAME VIEW</small></div>
+<div class="demo-browser-content"><button aria-label="Enlarge current game screenshot" class="uiux-capture" data-full-image="assets/uiux/adaptive/normal-1600x900.png" data-image-title="Normal view" data-local-space="" id="uiuxCapture" type="button"><img alt="Midnight Market at normal width, with native translucent interaction labels" data-capture="wide" data-media-src="assets/uiux/adaptive/normal-1600x900.webp"/><img alt="Narrow view showing the in-game event result card" data-capture="narrow" data-media-src="assets/uiux/adaptive/narrow-user-selected.webp" hidden=""/></button></div>
+</div>
+</div>
+<div class="stage-note">Click the game view to inspect the original.</div>
+</div>
+</section>
+</div>
+
+
+</div></div></section>
   </div>
   <div id="heroCat" class="hero-cat" aria-label="Miaomiao, the original Stray Kitty protagonist" role="img"><img src="assets/miaomiao.svg" alt=""></div>
   <button id="helpButton" class="help-button circle-control" type="button" aria-label="Show controls">?</button>
@@ -294,5 +348,6 @@
 </dialog>
 <script src="scene-content.js?v=20261109-on-demand-events"></script>
 <script src="events-combat.js?v=20261109-integrated"></script>
+<script src="uiux.js?v=20261109-integrated"></script>
 <script src="engine-v3.js?v=20261109-level-design"></script>
 </body></html>

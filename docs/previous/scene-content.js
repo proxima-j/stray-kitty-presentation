@@ -17,6 +17,7 @@
       }
     });
   }
+  window.addEventListener('presentation:loadmedia', event => loadSceneImages(document.getElementById(event.detail.id)));
   const requestedPage = new URLSearchParams(location.search).get('page');
   loadSceneImages(scenes.find(scene => scene.dataset.page === requestedPage || scene.id === requestedPage) || scenes[0]);
   const frame = document.getElementById('dialogueFrame');

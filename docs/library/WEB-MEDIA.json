@@ -458,6 +458,26 @@
       "bytes": 47148,
       "width": 724,
       "height": 694
+    },
+    {
+      "source": "assets/uiux/adaptive/normal-1600x900.png",
+      "path": "assets/uiux/adaptive/normal-1600x900.webp",
+      "kind": "web-image",
+      "original_bytes": 1223617,
+      "bytes": 262264,
+      "width": 1280,
+      "height": 720,
+      "quality": 90
+    },
+    {
+      "source": "assets/uiux/adaptive/narrow-user-selected.png",
+      "path": "assets/uiux/adaptive/narrow-user-selected.webp",
+      "kind": "web-image",
+      "original_bytes": 446758,
+      "bytes": 66864,
+      "width": 565,
+      "height": 616,
+      "quality": 90
     }
   ]
 }

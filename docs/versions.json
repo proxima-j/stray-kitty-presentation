@@ -1,26 +1,20 @@
 {
   "current": {
     "entry": "./",
-    "source_commit": "cd76ba7dc5044eff4f49cadd11ae670889e7f7e8",
-    "candidate_base_commit": "e6b94ba56ce6f7d9588f67eb4859c659934517f9",
-    "description": "Twelve-page deck: existing ten pages followed by approved Random Events and Combat with companions/advisor",
-    "publication_status": "VERIFIED",
-    "local_verified_at": "2026-11-08T17:52:55.192867+00:00",
-    "verification_notes": "Chrome 1600x900 and 1366x768, settled layouts, Greybox/Events/Combat forward and reverse, measured reverse stop 4202ms; original image dialog; native 7.6s Reposition and 5.23s Shield clips to completion; advisor before/after arrows and Escape remain local. Original ten scene blocks, v3 engine and global styles byte-identical. New screenshots/figures use scoped on-demand web previews; clips download on click; advisor cards deferred until revealed. No page errors. Published default Chrome: twelve scenes, five Events previews, original-image dialog, Events-to-Combat animation, all visible Combat previews, both demo clips playing, advisor before/after cards with local arrows/Escape; off-screen media deferred; no page errors. Published Previous: ten scenes, shared Greybox and font loaded. Superseded review URLs redirect to Current after verification.",
-    "public_verified_at": "2026-11-08T17:56:06.106313+00:00",
-    "verified_pages_build": "2026-11-08T17:53:55Z",
-    "pages_workflow_run": "https://github.com/proxima-j/stray-kitty-presentation/actions/runs/42507196914"
+    "source_commit": null,
+    "candidate_base_commit": "3d6109b03032ff71ed98715dbfcebf6bf1906227",
+    "description": "Fourteen-page deck: approved UI/UX Dice and Adaptive scenes follow Combat",
+    "publication_status": "LOCAL_VERIFIED / PUBLICATION_PENDING",
+    "local_verified_at": "2026-11-08T18:52:45.795878+00:00",
+    "verification_notes": "Chrome 1600x900 and 1366x768: Combat→Dice→Adaptive and reverse; 4205ms visible-stop transition; four native 1.5x-encoded loops playing; active-scene pause, persistent manual hold; English colored badges; Normal/Narrow toggle, 565px selected original-image dialog, local Space; frames/captions clear unchanged cat/route band. Off-screen screenshots and film remain unloaded. First twelve scene blocks and all global engine/styles/shared interactions unchanged. No page errors."
   },
   "previous": {
     "entry": "previous/",
-    "source_commit": "e6b94ba56ce6f7d9588f67eb4859c659934517f9",
-    "description": "Outgoing verified ten-page deck, including Level Design and the approved on-demand/smaller-media loading fix",
-    "publication_status": "VERIFIED",
-    "snapshot_note": "Outgoing ten-page runtime copied after candidate verification. Only asset/font URLs rebased for /previous/; shared assets stored once.",
-    "public_verified_at": "2026-11-08T17:56:06.106313+00:00",
-    "verified_pages_build": "2026-11-08T17:53:55Z",
-    "pages_workflow_run": "https://github.com/proxima-j/stray-kitty-presentation/actions/runs/42507196914"
+    "source_commit": "3d6109b03032ff71ed98715dbfcebf6bf1906227",
+    "description": "Outgoing verified twelve-page optimized deck, through Random Events and Combat",
+    "publication_status": "SNAPSHOT / PUBLICATION_PENDING",
+    "snapshot_note": "Outgoing twelve-page runtime copied only after candidate verification. Asset/font URLs rebased for /previous/; shared media stored once."
   },
   "shared_assets": "assets/",
-  "retention": "Exactly two usable decks: verified twelve-page Current and outgoing optimized ten-page Previous. Candidate verified before rotation; both public decks verified before superseded context-review helpers were retired. Shared media stored once. Documentation-only commits do not rotate decks."
+  "retention": "Two usable decks: fourteen-page candidate promoted after local verification, with outgoing twelve-page Current as Previous. Public verification pending. Documentation-only commits do not rotate decks."
 }
