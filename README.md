@@ -6,8 +6,8 @@ GitHub is the shared source for ChatGPT and Codex. GitHub Pages automatically pu
 
 | Version | Preview | Verified source |
 | --- | --- | --- |
-| Current | https://proxima-j.github.io/stray-kitty-presentation/ | Twelve-page deck; locally verified, publication check pending |
-| Previous | https://proxima-j.github.io/stray-kitty-presentation/previous/ | Outgoing ten-page runtime `e6b94ba56ce6f7d9588f67eb4859c659934517f9`; publication check pending |
+| Current | https://proxima-j.github.io/stray-kitty-presentation/ | Twelve-page runtime `cd76ba7dc5044eff4f49cadd11ae670889e7f7e8`; published and verified |
+| Previous | https://proxima-j.github.io/stray-kitty-presentation/previous/ | Outgoing ten-page runtime `e6b94ba56ce6f7d9588f67eb4859c659934517f9`; published and verified |
 
 Current supports direct `?page=01` through `?page=12` links. Previous retains `?page=01` through `?page=10`. Stable Current IDs also work as direct links: `roadmap`, `game-flow`, `visual-novel`, `home-hub`, `payment`, `four-maps`, `vertical-design`, `greybox`, `random-events`, `combat`. [docs/versions.json](docs/versions.json) records verified runtime origins; documentation and asset-only commits do not rotate decks.
 
@@ -64,3 +64,5 @@ Verified locally in Chrome at 1600×900 and 1366×768, then against published Cu
 ## Integrated Random Events and Combat
 
 Greybox → [Random Events](https://proxima-j.github.io/stray-kitty-presentation/?page=random-events) → [Combat](https://proxima-j.github.io/stray-kitty-presentation/?page=combat), scenes 11–12. These use the latest approved review compositions and the unchanged v3 registry/player. Events keeps full trigger/choice/result images, genuine reward details, footer concepts and original-image enlargement. Combat keeps the battlefield/three companion profiles, click-to-play Reposition (7.6s) and Activate Skills/Shield (5.23s), and the 阿策 before/after layer. The advisor source remains Local Fallback. Native clips and all original assets stay in place; small on-demand screenshot previews preserve the loading fix. New CSS is scoped to these scenes; local controls consume their own keys and media stops on scene exit/document hiding. Previous is the outgoing optimized ten-page deck, with shared media stored once.
+
+Published [Pages build 42507196914](https://github.com/proxima-j/stray-kitty-presentation/actions/runs/42507196914) verified Current and Previous in default Chrome, including new image loading, Events image enlargement, both Combat clips and advisor state controls. The old Events/Combat review URLs now redirect to Current; their obsolete context assembler, review-only interactions and styles were retired. UI/UX, Technical and source-media collection boards remain separate and intact.

@@ -9,7 +9,7 @@ Roadmap, Game Flow, Visual Novel, Home Hub and Payment are integrated and verifi
 - [Payment — Page 07](../?page=07)
 - [Integrated asset provenance](../library/PAGES-03-07-ASSETS.md)
 
-Level Design is also integrated and verified in Current. Events, Combat, UI/UX and Technical reviews remain independent of Current and Previous. Shared review styles/scripts remain because these pages depend on them. Remove each remaining review only after its own integration is published and verified.
+Level Design, Random Events and Combat are also integrated and verified in Current. UI/UX and Technical reviews remain independent of Current and Previous. Shared review styles/scripts remain because these pages depend on them. Remove each remaining review only after its own integration is published and verified.
 
 ## Approved Level Design asset collection
 
@@ -23,19 +23,15 @@ This retained source-media collection contains the four map clips, actual Chapte
 - [Page 09 — Three Connected Levels](../?page=vertical-design)
 - [Page 10 — Greybox](../?page=greybox)
 
-The approved compositions are normal scenes in Current's unchanged v3 player, after Payment. Outgoing seven-page Current is retained as Previous. The four native-speed muted map loops, continuous 7.30-second traversal, exact paired ↔ headings, original uncropped Greybox and annotated screenshot stack were verified locally and publicly. The C/F-annotated SVG now lives in the production asset directory with its three relative screenshot links updated. Superseded map composition previews and their dedicated styles, script, review SVG and notes were removed after publication; source media and this asset board remain.
+The approved compositions are normal scenes in Current's unchanged v3 player, after Payment. Outgoing optimized ten-page Current is retained as Previous following Events/Combat integration. The four native-speed muted map loops, continuous 7.30-second traversal, exact paired ↔ headings, original uncropped Greybox and annotated screenshot stack were verified locally and publicly. The C/F-annotated SVG now lives in the production asset directory with its three relative screenshot links updated. Superseded map composition previews and their dedicated styles, script, review SVG and notes were removed after publication; source media and this asset board remain.
 
-## Events and Combat — animated context review
+## Integrated Random Events and Combat
 
-- [Start with three preceding slides](events-01-random.html?page=05): **Visual Novel → Home Hub → Payment → Random Events → Combat**. The user selected the narrative part as the temporary lead-in while the intended preceding Map section is unfinished. This is review context, not the final order.
-- [Direct Random Events review](events-01-random.html?page=random-events): full uncropped testing/choice/result screenshots and two genuine reward crops, with larger English labels. Click an image to use the deck's existing original-image dialog. The separate testing view illustrates spatial triggering, not one uninterrupted naturally drawn encounter. These are resources; the footer concepts describe the broader system. [Capture and mechanics notes](../library/RANDOM-EVENT-ASSETS.md).
-- [Direct Combat + 阿策 review](combat-02-friends-ai.html?page=combat): one battlefield and three companion profiles with separate text and uncropped VFX. **Reposition** plays the 7.6-second muted 1× clip inside the battlefield frame and returns to the still; the clip is a separate take. **+ And one more friend…** reveals 阿策; click the question, **Show answer**, or Right to show the captured response. Left returns to the question; close or Escape dismisses the layer. The source remains **Local Fallback**, not model inference. [Combat capture notes](../library/PAGE-09-COMBAT-ASSETS.md).
+- [Page 11 — Random Events](../?page=random-events): the latest approved trigger/choice/result composition, genuine reward details, footer concepts and original-image dialog. [Capture and mechanics notes](../library/RANDOM-EVENT-ASSETS.md).
+- [Page 12 — Combat + 阿策](../?page=combat): the latest approved battlefield/three-profile composition, **Reposition** (7.6s) and **Activate Skills / Shield** (5.23s) buttons, plus the 阿策 before/after reveal. Both muted native-speed clips return to the battlefield still. Advisor arrows stay local and Escape closes it; the source remains **Local Fallback**. [Capture notes](../library/PAGE-09-COMBAT-ASSETS.md).
+- [Begin with the three Level Design pages](../?page=four-maps): Four Maps → Three Connected Levels → Greybox → Random Events → Combat, with the original single cat/traced route and unchanged 4200ms reversible v3 player.
 
-**Activate Skills** is also a play button: it shows a genuine 5.23-second Banban Shield click/release close-up in the same battlefield area. Both demos stay muted and return to the still when finished. A small play marker distinguishes clickable mechanics; loading/buffering and retry feedback prevent a pending download from looking like a frozen still. Repositioning now uses the native 960×540 web derivative (~85% smaller), with its full original action and timing preserved.
-
-Both existing URLs assemble the same limited five-scene review at runtime. `showcase-context.js` reads the three lead-in scenes directly from Current's `index.html` and the two existing review templates; media is referenced in place. It loads the **unchanged** shared `engine-v3.js`, `engine-v3.css`, tokens, components, presentation styles and scene interactions. There is one original walking cat and the same progressively traced SVG route, with 4200ms reversible arrow-key pacing. No copied engine, second navigation framework, opening-film download, duplicated media or third complete deck is created. Arrow/Space advances; Left reverses; Escape finishes travel. Local image/advisor controls consume their own keys.
-
-Checked in Chrome at 1600×900 and 1366×768: three lead-in transitions (~4.2 seconds each), forward/reverse Events–Combat travel, intact screenshot/VFX fitting, original-image dialog, 1× muted clip completion and advice states without accidentally advancing the scene. Current, Previous, the approved engine and all other reviews remain unchanged. This is not final deck integration and does not rotate versions.
+Verified locally at 1600×900 and 1366×768, then on published Current and Previous in default Chrome. On-demand small previews preserve the approved composition and loading fix. Original PNGs and both native video files remain in place. The two old review URLs redirect to Current; their obsolete context-assembly script, review-only interaction script and stylesheet were removed only after published verification. UI/UX and Technical remain separate.
 
 ## UI/UX — two isolated composition previews
 
