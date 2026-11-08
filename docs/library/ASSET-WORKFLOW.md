@@ -23,7 +23,7 @@ Both originals are published in Current under `docs/assets/illustrations/` and r
 
 The selected opening movie is already present under `docs/assets/`; do not re-export or upload it on every page edit. Prefer direct static assets with compatible codecs for GitHub Pages; no Git LFS for publicly served website media. Keep the approved v3 movement engine unchanged unless a specific change is authorized.
 
-The complete opening movie remains unchanged and is shared by both retained decks. Video optimization, caching and final offline-release packaging are deferred until separately authorized; occasional preview buffering is acceptable during development.
+The original complete opening movie remains shared and unchanged. On 2026-11-09 the user authorized a minimal loading fix: Current now uses a smaller full-length 1080p web copy and lightweight short-clip derivatives; images use pixel-identical lossless WebP. Source/size/codec records are in [WEB-MEDIA.json](WEB-MEDIA.json). Preserve originals used by Previous and full-image dialogs. Attach scene image/SVG/poster URLs only on scene/view entry, attach clip sources only when active, and fetch the film only after explicit Play. Do not restore eager off-screen asset requests. Offline-release packaging remains deferred.
 
 ## Collaboration mechanics
 

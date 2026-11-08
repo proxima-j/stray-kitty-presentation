@@ -1,0 +1,298 @@
+{
+  "description": "Current web delivery derivatives; source paths are relative to docs/. Originals remain intact for Previous and full-image viewing.",
+  "assets": [
+    {
+      "source": "assets/illustrations/d20-dungeon-master-original.png",
+      "path": "assets/illustrations/d20-dungeon-master-original.webp",
+      "kind": "lossless-image",
+      "original_bytes": 107841,
+      "bytes": 65154
+    },
+    {
+      "source": "assets/illustrations/playful-cats-original.png",
+      "path": "assets/illustrations/playful-cats-original.webp",
+      "kind": "lossless-image",
+      "original_bytes": 148750,
+      "bytes": 90082
+    },
+    {
+      "source": "assets/level-design/graybox/chapter2-graybox.png",
+      "path": "assets/level-design/graybox/chapter2-graybox.webp",
+      "kind": "lossless-image",
+      "original_bytes": 1737319,
+      "bytes": 1240552
+    },
+    {
+      "source": "assets/pages/05/friends-dialogue-01.png",
+      "path": "assets/pages/05/friends-dialogue-01.webp",
+      "kind": "lossless-image",
+      "original_bytes": 1038863,
+      "bytes": 734482
+    },
+    {
+      "source": "assets/pages/05/friends-dialogue-02.png",
+      "path": "assets/pages/05/friends-dialogue-02.webp",
+      "kind": "lossless-image",
+      "original_bytes": 1000008,
+      "bytes": 708924
+    },
+    {
+      "source": "assets/pages/05/friends-dialogue-03.png",
+      "path": "assets/pages/05/friends-dialogue-03.webp",
+      "kind": "lossless-image",
+      "original_bytes": 1012223,
+      "bytes": 719500
+    },
+    {
+      "source": "assets/pages/06/greenhouse-stage-01.png",
+      "path": "assets/pages/06/greenhouse-stage-01.webp",
+      "kind": "lossless-image",
+      "original_bytes": 861511,
+      "bytes": 589354
+    },
+    {
+      "source": "assets/pages/06/greenhouse-stage-02.png",
+      "path": "assets/pages/06/greenhouse-stage-02.webp",
+      "kind": "lossless-image",
+      "original_bytes": 1011792,
+      "bytes": 718974
+    },
+    {
+      "source": "assets/pages/06/greenhouse-stage-03.png",
+      "path": "assets/pages/06/greenhouse-stage-03.webp",
+      "kind": "lossless-image",
+      "original_bytes": 1068028,
+      "bytes": 779176
+    },
+    {
+      "source": "assets/pages/06/greenhouse-stage-04.png",
+      "path": "assets/pages/06/greenhouse-stage-04.webp",
+      "kind": "lossless-image",
+      "original_bytes": 1071856,
+      "bytes": 784254
+    },
+    {
+      "source": "assets/pages/07/1-recharge.png",
+      "path": "assets/pages/07/1-recharge.webp",
+      "kind": "lossless-image",
+      "original_bytes": 289333,
+      "bytes": 197524
+    },
+    {
+      "source": "assets/pages/07/2-checkout.png",
+      "path": "assets/pages/07/2-checkout.webp",
+      "kind": "lossless-image",
+      "original_bytes": 62090,
+      "bytes": 20824
+    },
+    {
+      "source": "assets/pages/07/3-confirmation.png",
+      "path": "assets/pages/07/3-confirmation.webp",
+      "kind": "lossless-image",
+      "original_bytes": 284096,
+      "bytes": 190288
+    },
+    {
+      "source": "assets/Stray-Kitty-Android-Final-v02-SFX.mp4",
+      "path": "assets/Stray-Kitty-Android-Final-v02-SFX-web.mp4",
+      "kind": "h264-web-video",
+      "original_bytes": 65114018,
+      "bytes": 13444417,
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio"
+          }
+        ],
+        "format": {
+          "duration": "60.501000"
+        }
+      }
+    },
+    {
+      "source": "assets/level-design/chapter2/p06-market-three-level-western-spine.mp4",
+      "path": "assets/level-design/chapter2/p06-market-three-level-western-spine-web.mp4",
+      "kind": "h264-web-video",
+      "original_bytes": 3224126,
+      "bytes": 1446292,
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 960,
+            "height": 540
+          }
+        ],
+        "format": {
+          "duration": "7.300000"
+        }
+      }
+    },
+    {
+      "source": "assets/level-design/four-maps/p05-alley-old-huang.mp4",
+      "path": "assets/level-design/four-maps/p05-alley-old-huang-web.mp4",
+      "kind": "h264-web-video",
+      "original_bytes": 1065337,
+      "bytes": 275454,
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 960,
+            "height": 540
+          }
+        ],
+        "format": {
+          "duration": "5.700000"
+        }
+      }
+    },
+    {
+      "source": "assets/level-design/four-maps/p05-market-west-descent.mp4",
+      "path": "assets/level-design/four-maps/p05-market-west-descent-web.mp4",
+      "kind": "h264-web-video",
+      "original_bytes": 2405288,
+      "bytes": 504042,
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 960,
+            "height": 540
+          }
+        ],
+        "format": {
+          "duration": "6.300000"
+        }
+      }
+    },
+    {
+      "source": "assets/level-design/four-maps/p05-tunnel-space-jump.mp4",
+      "path": "assets/level-design/four-maps/p05-tunnel-space-jump-web.mp4",
+      "kind": "h264-web-video",
+      "original_bytes": 1475505,
+      "bytes": 334272,
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 960,
+            "height": 540
+          }
+        ],
+        "format": {
+          "duration": "5.533333"
+        }
+      }
+    },
+    {
+      "source": "assets/level-design/four-maps/p05-warehouse-light.mp4",
+      "path": "assets/level-design/four-maps/p05-warehouse-light-web.mp4",
+      "kind": "h264-web-video",
+      "original_bytes": 977707,
+      "bytes": 287981,
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 960,
+            "height": 540
+          }
+        ],
+        "format": {
+          "duration": "6.200000"
+        }
+      }
+    },
+    {
+      "source": "assets/pages/06/cat-reaction.mp4",
+      "path": "assets/pages/06/cat-reaction-web.mp4",
+      "kind": "h264-web-video",
+      "original_bytes": 1100055,
+      "bytes": 235018,
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 960,
+            "height": 540
+          }
+        ],
+        "format": {
+          "duration": "5.813333"
+        }
+      }
+    },
+    {
+      "source": "assets/pages/06/furniture-drag-save.mp4",
+      "path": "assets/pages/06/furniture-drag-save-web.mp4",
+      "kind": "h264-web-video",
+      "original_bytes": 2463924,
+      "bytes": 562596,
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 960,
+            "height": 540
+          }
+        ],
+        "format": {
+          "duration": "6.466667"
+        }
+      }
+    },
+    {
+      "source": "assets/pages/06/postcard-to-parcel.mp4",
+      "path": "assets/pages/06/postcard-to-parcel-web.mp4",
+      "kind": "h264-web-video",
+      "original_bytes": 2710395,
+      "bytes": 525242,
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 960,
+            "height": 540
+          }
+        ],
+        "format": {
+          "duration": "11.000000"
+        }
+      }
+    }
+  ]
+}

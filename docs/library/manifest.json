@@ -893,6 +893,36 @@
         ]
       },
       "limitations": "Illustrative stack of three full screenshots with separate original cameras, not a registered 3D reconstruction. C and F are separate connections joined by street movement."
+    },
+    {
+      "id": "media.web-delivery",
+      "source": "WEB-MEDIA.json",
+      "origin": "Web derivatives of existing user-approved presentation media; originals retained at their existing paths. Images are pixel-identical lossless WebP. Videos preserve complete action, frame rate, duration and audio; H.264/AAC fast-start, short clips capped at 960px wide, opening film retains 1920x1080.",
+      "approval": "Existing public-use authorization inherited from each source; loading optimization requested by user 2026-11-09.",
+      "files": [
+        "../assets/illustrations/d20-dungeon-master-original.webp",
+        "../assets/illustrations/playful-cats-original.webp",
+        "../assets/level-design/graybox/chapter2-graybox.webp",
+        "../assets/pages/05/friends-dialogue-01.webp",
+        "../assets/pages/05/friends-dialogue-02.webp",
+        "../assets/pages/05/friends-dialogue-03.webp",
+        "../assets/pages/06/greenhouse-stage-01.webp",
+        "../assets/pages/06/greenhouse-stage-02.webp",
+        "../assets/pages/06/greenhouse-stage-03.webp",
+        "../assets/pages/06/greenhouse-stage-04.webp",
+        "../assets/pages/07/1-recharge.webp",
+        "../assets/pages/07/2-checkout.webp",
+        "../assets/pages/07/3-confirmation.webp",
+        "../assets/Stray-Kitty-Android-Final-v02-SFX-web.mp4",
+        "../assets/level-design/chapter2/p06-market-three-level-western-spine-web.mp4",
+        "../assets/level-design/four-maps/p05-alley-old-huang-web.mp4",
+        "../assets/level-design/four-maps/p05-market-west-descent-web.mp4",
+        "../assets/level-design/four-maps/p05-tunnel-space-jump-web.mp4",
+        "../assets/level-design/four-maps/p05-warehouse-light-web.mp4",
+        "../assets/pages/06/cat-reaction-web.mp4",
+        "../assets/pages/06/furniture-drag-save-web.mp4",
+        "../assets/pages/06/postcard-to-parcel-web.mp4"
+      ]
     }
   ]
 }
