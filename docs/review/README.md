@@ -9,24 +9,21 @@ Roadmap, Game Flow, Visual Novel, Home Hub and Payment are integrated and verifi
 - [Payment — Page 07](../?page=07)
 - [Integrated asset provenance](../library/PAGES-03-07-ASSETS.md)
 
-Only those completed previews were removed. The Level Design, Events, Combat and UI/UX reviews below remain independent of Current and Previous. Shared review styles/scripts remain because these pages depend on them. Remove each remaining review only after its own integration is published and verified.
+Level Design is also integrated and verified in Current. Events, Combat, UI/UX and Technical reviews remain independent of Current and Previous. Shared review styles/scripts remain because these pages depend on them. Remove each remaining review only after its own integration is published and verified.
 
 ## Approved Level Design asset collection
 
 [Open the approved media board](level-design-assets.html) · [Asset provenance and inventory](../library/LEVEL-DESIGN-ASSETS.md).
 
-This separate section collection contains the four map clips, actual Chapter 2 screenshot stack and traversal, floor artworks and the single development graybox. It uses section-based paths under `docs/assets/level-design/` because earlier Level Design working numbers 05–07 differ from the newer narrative/Home Hub/payment drafts above. Those drafts and both working decks are unchanged. This is asset publication, not final deck-page integration.
+This retained source-media collection contains the four map clips, actual Chapter 2 screenshot stack and traversal, floor artworks and the single development graybox. It uses stable section-based paths under `docs/assets/level-design/`. The same media now appears in Current scenes 08–10.
 
-## Level Design three-page composition previews
+## Integrated Level Design
 
-- [Map 01 — Four Maps](map-01-four-maps.html)
-- [Map 02 — Three Connected Levels](map-02-vertical.html)
-- [Map 03 — Greybox](map-03-graybox.html)
-- [Selection and preview notes](MAP-COMPOSITION.md)
+- [Page 08 — Four Maps](../?page=four-maps)
+- [Page 09 — Three Connected Levels](../?page=vertical-design)
+- [Page 10 — Greybox](../?page=greybox)
 
-These are design-review layouts built directly from the user-selected **already collected** media. They are not part of Current or Previous and do not cause version rotation. Keep them until the next approved Codex integration phase is verified; delete only as part of the completed integration/cleanup step.
-
-Level Design preview revised: 4 muted autoplay map clips; 7.30-second muted autoplay traversal; C/F dashed connectors on a review-only SVG; exact paired ↔ wording; “Greybox” heading. No Current or Previous changes.
+The approved compositions are normal scenes in Current's unchanged v3 player, after Payment. Outgoing seven-page Current is retained as Previous. The four native-speed muted map loops, continuous 7.30-second traversal, exact paired ↔ headings, original uncropped Greybox and annotated screenshot stack were verified locally and publicly. The C/F-annotated SVG now lives in the production asset directory with its three relative screenshot links updated. Superseded map composition previews and their dedicated styles, script, review SVG and notes were removed after publication; source media and this asset board remain.
 
 ## Events and Combat — animated context review
 

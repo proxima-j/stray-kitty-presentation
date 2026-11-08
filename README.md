@@ -6,13 +6,13 @@ GitHub is the shared source for ChatGPT and Codex. GitHub Pages automatically pu
 
 | Version | Preview | Verified source |
 | --- | --- | --- |
-| Current | https://proxima-j.github.io/stray-kitty-presentation/ | Locally verified ten-page deck; publication verification pending |
-| Previous | https://proxima-j.github.io/stray-kitty-presentation/previous/ | Outgoing seven-page runtime; publication verification pending |
+| Current | https://proxima-j.github.io/stray-kitty-presentation/ | Ten-page runtime `8c1af6f609cde0e4d9b1d7adb2466684a4143b01`; published and verified |
+| Previous | https://proxima-j.github.io/stray-kitty-presentation/previous/ | Outgoing seven-page runtime from `c5fab9e2e9dc6d9e3b459621e369e0f0d409d1c0`; published and verified |
 
 Current supports direct `?page=01` through `?page=10` links. Previous retains `?page=01` through `?page=07`. Stable Current IDs also work as direct links: `roadmap`, `game-flow`, `visual-novel`, `home-hub`, `payment`, `four-maps`, `vertical-design`, `greybox`. [docs/versions.json](docs/versions.json) records verified runtime origins; documentation and asset-only commits do not rotate decks.
 
-- `docs/index.html`, `docs/engine-v3.*`, `docs/presentation.css`, `docs/scene-content.js`, `docs/library/`: Current source and reusable components.
-- `docs/previous/`: Previous's HTML, styles and script recovered from its deployed commit. Only relative asset URLs were adjusted. Its runtime and small style-library copies remain independent of future Current code edits; large media is shared.
+- `docs/index.html`, `docs/engine-v3.*`, `docs/presentation.css`, `docs/level-design.css`, `docs/scene-content.js`, `docs/library/`: Current source and reusable components.
+- `docs/previous/`: Outgoing seven-page HTML, styles and scripts. Asset URLs are rebased; player script preloads, deferred film source restoration and inactive-clip preload settings prevent off-screen media competing with the active scene. Its content and animation engine are preserved; small runtime files remain independent of future Current edits and large media is shared.
 - `docs/assets/`: One shared copy of the full opening film, poster, character, fonts/license and approved illustrations.
 - `reference/forward-story-v3/script.js` and `style.css`: Untouched original animation source, rather than a third runnable sample deck.
 
@@ -57,4 +57,6 @@ Payment (`?page=07`): the same verified Xsolla Sandbox 60-tuna journey, with rec
 
 ## Integrated Level Design
 
-Payment → [Four Maps](docs/index.html?page=four-maps) → [Three Connected Levels](docs/index.html?page=vertical-design) → [Greybox](docs/index.html?page=greybox). These are normal scenes 08–10 in the unchanged v3 registry/player. The approved 2×2 clips, tilted screenshot stack with separate C/F links and continuous traversal, and original uncropped greybox are retained. Map clips use the existing scene-aware media controller: only the active scene plays; manual pause survives exit/re-entry and document hiding. The annotated SVG is now a production asset with same-folder screenshot links. The other review sections are not integrated.
+Payment → [Four Maps](https://proxima-j.github.io/stray-kitty-presentation/?page=four-maps) → [Three Connected Levels](https://proxima-j.github.io/stray-kitty-presentation/?page=vertical-design) → [Greybox](https://proxima-j.github.io/stray-kitty-presentation/?page=greybox). These are normal scenes 08–10 in the unchanged v3 registry/player. The approved 2×2 clips, tilted screenshot stack with separate C/F links and continuous traversal, and original uncropped greybox are retained. Map clips use the existing scene-aware media controller: only the active scene plays; manual pause survives exit/re-entry and document hiding. The annotated SVG is now a production asset with same-folder screenshot links. The other review sections are not integrated.
+
+Verified locally in Chrome at 1600×900 and 1366×768, then against published Current and Previous from [Pages build 42504857617](https://github.com/proxima-j/stray-kitty-presentation/actions/runs/42504857617). Navigation, 4.2-second pacing, original scene interactions, looping/pause behavior, screenshot layers and uncropped greybox passed. Document-hidden handling was exercised through a visibility-event simulation. This environment's default Chrome HTTP/2 connection stalled on public media; published playback passed with HTTP/2 disabled, without changing asset bytes or presentation playback code for that transport issue. The superseded map composition HTML/CSS/JS/SVG and notes were removed only after published verification. Approved media, the asset board and other reviews remain.

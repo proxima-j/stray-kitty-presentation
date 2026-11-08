@@ -1,20 +1,26 @@
 {
   "current": {
     "entry": "./",
-    "source_commit": null,
+    "source_commit": "8c1af6f609cde0e4d9b1d7adb2466684a4143b01",
     "candidate_base_commit": "c5fab9e2e9dc6d9e3b459621e369e0f0d409d1c0",
     "local_verified_at": "2026-11-08T17:13:30.165604+00:00",
     "description": "Ten-page deck: existing seven pages followed by Four Maps, Three Connected Levels and Greybox",
-    "publication_status": "LOCAL_VERIFIED / PUBLICATION_PENDING",
-    "verification_notes": "Chrome 1600x900 and 1366x768; original seven pages, their content and the engine preserved; 4.2s forward/back, wheel, Home/End, help, film with sound/skip, dialogue, Home tabs/media, payment dialog; four simultaneous normal-speed map loops; manual pause and hidden-document simulation; traversal and all three SVG images; uncropped greybox. Public loading exposed script queuing behind existing media; preload hints prioritize the unchanged player scripts. Public off-screen media requests required deferred film source restoration and inactive clip preload=none; full film content/audio and all controls remain intact."
+    "publication_status": "VERIFIED",
+    "verification_notes": "Chrome 1600x900 and 1366x768; original seven pages, their content and the engine preserved; 4.2s forward/back, wheel, Home/End, help, film with sound/skip, dialogue, Home tabs/media, payment dialog; four simultaneous normal-speed map loops; manual pause and hidden-document simulation; traversal and all three SVG images; uncropped greybox. Public loading exposed script queuing behind existing media; preload hints prioritize the unchanged player scripts. Public off-screen media requests required deferred film source restoration and inactive clip preload=none; full film content/audio and all controls remain intact. Published Current: ten scenes, all four maps advancing, inactive media paused, 7.30s traversal advancing, all three annotated SVG images displayed, uncropped 1448x1086 greybox; Previous: seven scenes, fonts and original Payment screenshot dialog working; no page errors. Default Chrome HTTP/2 transport stalled on media in this environment; public playback passed with HTTP/2 disabled. Existing asset bytes were not changed.",
+    "public_verified_at": "2026-11-08T17:30:53.997463+00:00",
+    "verified_pages_build": "2026-11-08T17:25:36Z",
+    "pages_workflow_run": "https://github.com/proxima-j/stray-kitty-presentation/actions/runs/42504857617"
   },
   "previous": {
     "entry": "previous/",
     "source_commit": "c5fab9e2e9dc6d9e3b459621e369e0f0d409d1c0",
     "description": "Outgoing verified seven-page runtime, including full film, original illustrations, narrative interaction, Home Hub and Payment",
-    "publication_status": "SNAPSHOT / PUBLICATION_PENDING",
-    "snapshot_note": "Outgoing seven-page scene content and engine preserved. Asset URLs rebased; script preload hints, deferred film source and inactive-clip preload policy prevent off-screen media from blocking playback."
+    "publication_status": "VERIFIED",
+    "snapshot_note": "Outgoing seven-page scene content and engine preserved. Asset URLs rebased; script preload hints, deferred film source and inactive-clip preload policy prevent off-screen media from blocking playback.",
+    "public_verified_at": "2026-11-08T17:30:53.997463+00:00",
+    "verified_pages_build": "2026-11-08T17:25:36Z",
+    "pages_workflow_run": "https://github.com/proxima-j/stray-kitty-presentation/actions/runs/42504857617"
   },
   "shared_assets": "assets/",
-  "retention": "Two usable decks only. Candidate passed local checks before rotation. Runtime source commit and published-build evidence are finalized after published Current/Previous verification."
+  "retention": "Two usable decks only. Candidate passed local checks before rotation; outgoing seven-page Current is Previous. Both published runtimes verified before superseded map reviews were removed. Documentation/cleanup commits do not rotate decks."
 }

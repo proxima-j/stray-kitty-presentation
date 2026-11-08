@@ -2,7 +2,7 @@
 
 **Current integration — 2026-11-09:** The three approved compositions are now scenes `four-maps` (08), `vertical-design` (09) and `greybox` (10), following Payment. Existing media is referenced in place. The approved C/F-annotated screenshot SVG is relocated to [connected-gameplay-screenshots.svg](../assets/level-design/chapter2/connected-gameplay-screenshots.svg), with its three image references rebased to the same directory. Geometry, tilt, captions and original screenshot content are unchanged. Original collection/provenance notes below remain historical records.
 
-**Status: USER-APPROVED ASSET COLLECTION. Uploaded to the existing shared presentation repository. Final deck-page integration is deferred.**
+**Status: USER-APPROVED ASSETS, INTEGRATED AND VERIFIED in Current scenes 08–10.** The collection notes below describe the earlier asset-publication stage.
 
 Public board: [Level Design assets](https://proxima-j.github.io/stray-kitty-presentation/review/level-design-assets.html) · [Four Maps](https://proxima-j.github.io/stray-kitty-presentation/review/level-design-assets.html#four-maps) · [Screenshot stack](https://proxima-j.github.io/stray-kitty-presentation/review/level-design-assets.html#vertical) · [Graybox only](https://proxima-j.github.io/stray-kitty-presentation/review/level-design-assets.html#process).
 
