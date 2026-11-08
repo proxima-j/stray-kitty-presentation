@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Stray Kitty — Six Main Systems · Design Preview</title>
+  <link rel="stylesheet" href="../library/tokens.css">
+  <style>
+    * { box-sizing:border-box; }
+    html,body { margin:0;min-height:100%;background:var(--paper);color:var(--ink);font-family:var(--body); }
+    .technical-review {
+      position:relative;
+      width:100%;
+      min-height:100svh;
+      height:100svh;
+      padding:clamp(28px,4.7vh,60px) 7.4vw clamp(72px,11vh,118px);
+      display:flex;
+      flex-direction:column;
+      gap:clamp(18px,3vh,36px);
+      overflow:hidden;
+      isolation:isolate;
+    }
+    .technical-header { flex:0 0 auto; }
+    .section-label {
+      display:flex;align-items:center;gap:15px;
+      font:400 12px/1.4 var(--body);letter-spacing:.13em;text-transform:uppercase;
+    }
+    .number-pill {
+      min-width:54px;height:31px;display:inline-flex;align-items:center;justify-content:center;
+      border:var(--border) solid var(--ink);border-radius:var(--pill-radius);background:var(--gold);
+      font:400 14px/1 var(--display);letter-spacing:0;
+    }
+    .section-label::after{content:"";display:block;width:64px;height:1px;background:var(--gold)}
+    h1 {
+      font:400 clamp(43px,4.5vw,75px)/1.1 var(--display);
+      letter-spacing:-.052em;
+      margin:clamp(18px,2.4vh,26px) 0 0;
+    }
+    .systems-grid {
+      width:100%;min-height:0;flex:1 1 auto;
+      display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));
+      gap:clamp(15px,1.6vw,27px);
+    }
+    .system-card {
+      width:100%;min-width:0;height:100%;
+      appearance:none;text-align:left;cursor:pointer;
+      color:var(--ink);font:inherit;
+      border:var(--border) solid var(--ink);
+      border-radius:var(--frame-radius);
+      background:rgba(255,255,255,.13);
+      padding:clamp(17px,1.9vw,31px);
+      display:flex;flex-direction:column;align-items:flex-start;
+      transition:background .18s ease,opacity .18s ease,border-color .18s ease;
+    }
+    .system-card .card-number{
+      height:30px;min-width:49px;padding:5px 12px;
+      border:var(--border) solid var(--ink);border-radius:var(--pill-radius);background:var(--gold);
+      display:inline-flex;align-items:center;justify-content:center;
+      font:400 14px/1 var(--display);
+      flex-shrink:0;
+    }
+    .system-card h2{
+      font:400 clamp(21px,2.05vw,34px)/1.2 var(--display);letter-spacing:-.028em;
+      margin:clamp(11px,1.35vh,18px) 0 clamp(8px,1.25vh,16px);
+    }
+    .mechanism {
+      font:400 clamp(14px,1.25vw,20px)/1.4 var(--body);
+      margin:0;max-width:100%;
+    }
+    .boundary {
+      margin: auto 0 0;
+      padding-top:clamp(9px,1.1vh,15px);
+      width:100%;
+      border-top:1px solid var(--gold);
+      color:var(--muted);
+      font:400 clamp(12px,1vw,17px)/1.43 var(--body);
+    }
+    .system-card:hover { background:rgba(255,255,255,.25); }
+    .system-card:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+    .systems-grid:has(.system-card[aria-pressed="true"]) .system-card:not([aria-pressed="true"]){opacity:.42}
+    .system-card[aria-pressed="true"]{background:#f8edcf;border-color:var(--accent);box-shadow:0 0 0 2px var(--accent)}
+    .review-route{
+      position:absolute;bottom:clamp(26px,4.6vh,49px);left:0;right:0;
+      border-top:3px dotted var(--accent);opacity:.6;pointer-events:none;
+    }
+    .review-cat{
+      position:absolute;bottom:clamp(30px,5vh,52px);left:24%;
+      width:clamp(46px,3.5vw,65px);height:auto;
+      image-rendering:pixelated;filter:drop-shadow(1px 3px 1px rgba(30,51,40,.12));
+      pointer-events:none;
+    }
+    @media(max-height:810px){
+      .technical-review{padding-top:25px;padding-bottom:69px;gap:15px}
+      h1{margin-top:13px;font-size:clamp(36px,3.85vw,61px)}
+      .systems-grid{gap:12px}
+      .system-card{padding:15px 18px}
+      .system-card h2{margin:8px 0;font-size:clamp(20px,1.8vw,29px)}
+      .system-card .card-number{height:26px}
+      .system-card .boundary{padding-top:7px}
+    }
+    @media(max-width:850px) {
+      .technical-review{height:auto;min-height:100svh;overflow:visible}
+      .systems-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto}
+      .system-card{min-height:215px}
+    }
+    @media(max-width:580px){
+      .systems-grid{grid-template-columns:1fr}
+      .system-card{min-height:185px}
+    }
+    @media(prefers-reduced-motion:reduce){.system-card{transition:none}}
+  </style>
+</head>
+<body>
+<main class="technical-review" aria-label="Six systems in the Stray Kitty technical walkthrough">
+  <header class="technical-header">
+    <div class="section-label"><span class="number-pill">02</span>TECHNICAL WALKTHROUGH / SYSTEMS</div>
+    <h1>Six Main Systems</h1>
+  </header>
+  <section class="systems-grid" aria-label="Six technical subsystems">
+    <button class="system-card" type="button" aria-pressed="false">
+      <span class="card-number">01</span>
+      <h2>Story &amp; Progression</h2>
+      <p class="mechanism">State machine · Dialogue graph · Flags</p>
+      <p class="boundary">Go validates prerequisites and saves milestones.</p>
+    </button>
+    <button class="system-card" type="button" aria-pressed="false">
+      <span class="card-number">02</span>
+      <h2>Maps</h2>
+      <p class="mechanism">Canvas movement · Camera · Collision</p>
+      <p class="boundary">Browser navigation; Go persists interactions.</p>
+    </button>
+    <button class="system-card" type="button" aria-pressed="false">
+      <span class="card-number">03</span>
+      <h2>Battles</h2>
+      <p class="mechanism">Fixed-step engine · Canvas renderer</p>
+      <p class="boundary">Local combat simulation; Go settles results.</p>
+    </button>
+    <button class="system-card" type="button" aria-pressed="false">
+      <span class="card-number">04</span>
+      <h2>Content</h2>
+      <p class="mechanism">Authored JSON · Validation · Catalogs</p>
+      <p class="boundary">Node.js generates content shared with Go.</p>
+    </button>
+    <button class="system-card" type="button" aria-pressed="false">
+      <span class="card-number">05</span>
+      <h2>Payments</h2>
+      <p class="mechanism">Checkout · Webhooks · Ledger</p>
+      <p class="boundary">Xsolla sandbox processing; idempotent credit.</p>
+    </button>
+    <button class="system-card" type="button" aria-pressed="false">
+      <span class="card-number">06</span>
+      <h2>AI Advisor</h2>
+      <p class="mechanism">Read-only context · Model request</p>
+      <p class="boundary">Contextual guidance with a local fallback.</p>
+    </button>
+  </section>
+  <div class="review-route" aria-hidden="true"></div>
+  <img class="review-cat" src="../assets/miaomiao.svg" alt="" aria-hidden="true">
+</main>
+<script>
+(() => {
+  'use strict';
+  // Optional presenter focus only: all six modules remain visible and readable.
+  const cards=[...document.querySelectorAll('.system-card')];
+  cards.forEach(card=>card.addEventListener('click',()=>{
+    const activate=card.getAttribute('aria-pressed')!=='true';
+    cards.forEach(other=>other.setAttribute('aria-pressed',String(activate&&other===card)));
+  }));
+})();
+</script>
+</body>
+</html>
