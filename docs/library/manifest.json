@@ -518,7 +518,17 @@
         "price_minor": 600,
         "currency": "CNY"
       },
-      "limitations": "Sandbox demonstration only; no real payment credentials, personal identifiers or checkout tokens appear in published screenshots."
+      "limitations": "Sandbox demonstration only; no real payment credentials, personal identifiers or checkout tokens appear in published screenshots.",
+      "display": {
+        "view_box_xywh": [
+          240,
+          76,
+          1120,
+          748
+        ],
+        "full_original_on_click": true,
+        "note": "Presentation focuses the existing screenshot on the relevant UI; source image is unchanged."
+      }
     },
     {
       "id": "payment.checkout",
@@ -539,7 +549,17 @@
         "price_minor": 600,
         "currency": "CNY"
       },
-      "limitations": "Sandbox demonstration only; no real payment credentials, personal identifiers or checkout tokens appear in published screenshots."
+      "limitations": "Sandbox demonstration only; no real payment credentials, personal identifiers or checkout tokens appear in published screenshots.",
+      "display": {
+        "view_box_xywh": [
+          895,
+          250,
+          515,
+          485
+        ],
+        "full_original_on_click": true,
+        "note": "Presentation focuses the existing screenshot on the relevant UI; source image is unchanged."
+      }
     },
     {
       "id": "payment.return",
@@ -565,7 +585,17 @@
         "confirmed_ledger_entries": 1,
         "verification": "Actual confirmed provider ledger entry plus authenticated game-state balance, not redirect alone."
       },
-      "limitations": "Sandbox demonstration only; no real payment credentials, personal identifiers or checkout tokens appear in published screenshots."
+      "limitations": "Sandbox demonstration only; no real payment credentials, personal identifiers or checkout tokens appear in published screenshots.",
+      "display": {
+        "view_box_xywh": [
+          240,
+          43,
+          1120,
+          814
+        ],
+        "full_original_on_click": true,
+        "note": "Presentation focuses the existing screenshot on the relevant UI; source image is unchanged."
+      }
     },
     {
       "id": "combat.battlefield.main",

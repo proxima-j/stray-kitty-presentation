@@ -18,6 +18,7 @@
   const clips = [...document.querySelectorAll('video[data-scene-video]')];
   let activeView = { id: '', visible: false };
   const manualPause = new WeakSet();
+  const pendingPlay = new WeakSet();
 
   function shouldPlay(video) {
     return activeView.visible && video.closest('.scene').id === activeView.id &&
@@ -26,6 +27,7 @@
   function updateButton(video) {
     const button = video.parentElement.querySelector('.clip-toggle');
     const playing = !video.paused;
+    video.parentElement.classList.toggle('is-paused', !playing);
     button.textContent = playing ? 'Ⅱ' : '▶';
     button.setAttribute('aria-label', `${playing ? 'Pause' : 'Play'} ${video.getAttribute('aria-label')}`);
   }
@@ -34,13 +36,17 @@
       const play = shouldPlay(video);
       video.autoplay = play;
       video.muted = true;
-      if (play && video.paused) {
-        video.play().then(() => { if (!shouldPlay(video)) video.pause(); }).catch(() => updateButton(video));
+      if (play && video.paused && !pendingPlay.has(video)) {
+        pendingPlay.add(video);
+        video.play().then(() => { if (!shouldPlay(video)) video.pause(); })
+          .catch(() => {})
+          .finally(() => { pendingPlay.delete(video); updateButton(video); });
       } else if (!play && !video.paused) video.pause();
       updateButton(video);
     });
   }
   tabs.forEach(button => button.addEventListener('click', () => {
+    home.querySelector('.home-content').dataset.homeMode = button.dataset.homeView;
     tabs.forEach(tab => tab.setAttribute('aria-pressed', String(tab === button)));
     views.forEach(view => { view.hidden = view.dataset.view !== button.dataset.homeView; });
     syncClips();
@@ -53,10 +59,28 @@
     });
     video.addEventListener('play', () => updateButton(video));
     video.addEventListener('pause', () => updateButton(video));
+    video.addEventListener('loadeddata', syncClips);
+    video.addEventListener('canplay', syncClips);
   });
   window.addEventListener('presentation:viewchange', event => {
     activeView = event.detail;
     syncClips();
   });
   document.addEventListener('visibilitychange', syncClips);
+
+  const dialog = document.getElementById('screenshotDialog');
+  const enlarged = document.getElementById('enlargedScreenshot');
+  document.querySelectorAll('[data-full-image]').forEach(button => button.addEventListener('click', () => {
+    enlarged.src = button.dataset.fullImage;
+    enlarged.alt = button.dataset.imageTitle + ' — full original screenshot';
+    document.getElementById('screenshotTitle').textContent = button.dataset.imageTitle;
+    dialog.showModal();
+  }));
+  document.getElementById('closeScreenshot').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
+  document.addEventListener('keydown', event => {
+    if (!dialog.open) return;
+    event.stopImmediatePropagation();
+    if (event.key === 'Escape') { event.preventDefault(); dialog.close(); }
+  }, true);
 })();

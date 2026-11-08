@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="engine-v3.css">
   <link rel="stylesheet" href="library/tokens.css">
   <link rel="stylesheet" href="library/components.css">
-  <link rel="stylesheet" href="presentation.css">
+  <link rel="stylesheet" href="presentation.css?v=20261108-readability">
 </head>
 <body>
 <div id="scrollSpace" class="scroll-space">
@@ -81,13 +81,15 @@
     </div></div>
    </section>
    <section id="home-hub" class="scene" data-scene="5" data-page="06" data-title="Home Hub" aria-label="Page 06 — Home Hub">
-    <div class="scene-camera"><div class="content-page home-content">
-     <h2 data-build="text" data-at="0.04">A home that grows, responds, and becomes your own.</h2>
-     <div class="home-body" data-build="rise" data-at="0.22">
+    <div class="scene-camera"><div class="content-page home-content" data-home-mode="growth">
+     <header class="home-copy" data-build="text" data-at="0.04">
+      <h2>A home that grows, responds, and becomes your own.</h2>
       <div class="home-tabs" role="group" aria-label="Home Hub views">
        <button type="button" data-home-view="growth" data-local-space aria-pressed="true" aria-controls="homeGrowth">THE HOME GROWS</button>
        <button type="button" data-home-view="responds" data-local-space aria-pressed="false" aria-controls="homeResponds">THE HOME RESPONDS</button>
       </div>
+     </header>
+     <div class="home-body" data-build="rise" data-at="0.22">
       <div id="homeGrowth" class="home-view" data-view="growth"><div class="home-gallery growth-gallery">
        <figure><div class="home-media"><img src="assets/pages/06/greenhouse-stage-01.png" alt="Initial greenhouse shelter"></div><figcaption>BEGINNING</figcaption></figure>
        <figure><div class="home-media"><img src="assets/pages/06/greenhouse-stage-02.png" alt="Early greenhouse repairs"></div><figcaption>REBUILDING</figcaption></figure>
@@ -95,9 +97,9 @@
        <figure><div class="home-media"><img src="assets/pages/06/greenhouse-stage-04.png" alt="Final shared-home state with subtle warmer lighting and string lights"></div><figcaption>CELEBRATION</figcaption></figure>
       </div></div>
       <div id="homeResponds" class="home-view" data-view="responds" hidden><div class="home-gallery interaction-gallery">
-       <figure><div class="home-media video-media"><video data-scene-video muted loop playsinline preload="none" src="assets/pages/06/cat-reaction.mp4" aria-label="Petting Tuanzi and the companion's response"></video><button class="clip-toggle" type="button" data-local-space aria-label="Pause cat reaction clip">Ⅱ</button></div><figcaption>INTERACTIVE</figcaption></figure>
-       <figure><div class="home-media video-media"><video data-scene-video muted loop playsinline preload="none" src="assets/pages/06/postcard-to-parcel.mp4" aria-label="Postcard preparation, sending, parcel and furniture reveal; guaranteed-reward QA example"></video><button class="clip-toggle" type="button" data-local-space aria-label="Pause postcard clip">Ⅱ</button></div><figcaption>RANDOM REWARDS</figcaption></figure>
-       <figure><div class="home-media video-media"><video data-scene-video muted loop playsinline preload="none" src="assets/pages/06/furniture-drag-save.mp4" aria-label="Dragging, placing and saving furniture"></video><button class="clip-toggle" type="button" data-local-space aria-label="Pause furniture clip">Ⅱ</button></div><figcaption>CUSTOMIZATION</figcaption></figure>
+       <figure><div class="home-media video-media"><video data-scene-video muted loop playsinline preload="metadata" src="assets/pages/06/cat-reaction.mp4" aria-label="Petting Tuanzi and the companion's response"></video><button class="clip-toggle" type="button" data-local-space aria-label="Pause cat reaction clip">Ⅱ</button></div><figcaption>INTERACTIVE</figcaption></figure>
+       <figure><div class="home-media video-media"><video data-scene-video muted loop playsinline preload="metadata" src="assets/pages/06/postcard-to-parcel.mp4" aria-label="Postcard preparation, sending, parcel and furniture reveal; guaranteed-reward QA example"></video><button class="clip-toggle" type="button" data-local-space aria-label="Pause postcard clip">Ⅱ</button></div><figcaption>RANDOM REWARDS</figcaption></figure>
+       <figure><div class="home-media video-media"><video data-scene-video muted loop playsinline preload="metadata" src="assets/pages/06/furniture-drag-save.mp4" aria-label="Dragging, placing and saving furniture"></video><button class="clip-toggle" type="button" data-local-space aria-label="Pause furniture clip">Ⅱ</button></div><figcaption>CUSTOMIZATION</figcaption></figure>
       </div></div>
      </div>
     </div></div>
@@ -107,11 +109,11 @@
      <div class="section-label" data-build="text" data-at="0.02"><span class="number-pill">07</span> XSOLLA SANDBOX</div>
      <h2 data-build="text" data-at="0.12">Payment</h2>
      <div class="payment-sequence">
-      <figure class="payment-step" data-build="rise" data-at="0.22"><div class="step-frame" data-tab="01 · RECHARGE"><img src="assets/pages/07/1-recharge.png" alt="60-tuna recharge pack selected for ¥6 in the game; initial balance 0"></div><figcaption>60-tuna pack</figcaption></figure>
+      <figure class="payment-step" data-build="rise" data-at="0.22"><div class="step-frame"><div class="step-tab">01 · Recharge</div><button class="payment-image" type="button" data-full-image="assets/pages/07/1-recharge.png" data-image-title="01 · Recharge" data-local-space aria-label="Enlarge 01 · Recharge screenshot" title="Enlarge screenshot"><svg viewBox="240 76 1120 748" role="img" aria-label="Selected 60-tuna recharge pack and initial balance 0"><image href="assets/pages/07/1-recharge.png" width="1600" height="900"/></svg></button></div><figcaption>60-tuna pack</figcaption></figure>
       <span class="payment-arrow" data-build="text" data-at="0.38" aria-hidden="true">→</span>
-      <figure class="payment-step" data-build="rise" data-at="0.44"><div class="step-frame" data-tab="02 · XSOLLA CHECKOUT"><img src="assets/pages/07/2-checkout.png" alt="Corresponding Xsolla sandbox checkout for the same 60-tuna pack"></div><figcaption>Xsolla Sandbox</figcaption></figure>
+      <figure class="payment-step" data-build="rise" data-at="0.44"><div class="step-frame"><div class="step-tab">02 · Xsolla Checkout</div><button class="payment-image" type="button" data-full-image="assets/pages/07/2-checkout.png" data-image-title="02 · Xsolla Checkout" data-local-space aria-label="Enlarge 02 · Xsolla Checkout screenshot" title="Enlarge screenshot"><svg viewBox="895 250 515 485" role="img" aria-label="Xsolla sandbox payment form, sandbox notice and ¥6 payment"><image href="assets/pages/07/2-checkout.png" width="1600" height="900"/></svg></button></div><figcaption>Xsolla Sandbox</figcaption></figure>
       <span class="payment-arrow" data-build="text" data-at="0.58" aria-hidden="true">→</span>
-      <figure class="payment-step" data-build="rise" data-at="0.65"><div class="step-frame" data-tab="03 · CONFIRMATION"><img src="assets/pages/07/3-confirmation.png" alt="Return to the game with verified balance 60 and successful sandbox payment record"></div><figcaption>Balance 0 → 60 tuna</figcaption></figure>
+      <figure class="payment-step" data-build="rise" data-at="0.65"><div class="step-frame"><div class="step-tab">03 · Confirmation</div><button class="payment-image" type="button" data-full-image="assets/pages/07/3-confirmation.png" data-image-title="03 · Confirmation" data-local-space aria-label="Enlarge 03 · Confirmation screenshot" title="Enlarge screenshot"><svg viewBox="240 43 1120 814" role="img" aria-label="Verified balance 60 and successful sandbox payment history"><image href="assets/pages/07/3-confirmation.png" width="1600" height="900"/></svg></button></div><figcaption>Balance 0 → 60 tuna</figcaption></figure>
      </div>
     </div></div>
    </section>
@@ -121,6 +123,10 @@
   <div id="helpPanel" class="help-panel" hidden role="dialog" aria-label="Presentation controls"><button id="helpClose" type="button" aria-label="Close control help">×</button><h3>Explore the story</h3><p><kbd>→</kbd> / <kbd>Space</kbd> next · <kbd>←</kbd> previous<br><kbd>Esc</kbd> finish motion · <kbd>Home</kbd> first · <kbd>End</kbd> last</p><label class="pace-control" for="paceSelect">Arrow-key pace <select id="paceSelect"><option value="3000">Brisk · 3 s</option><option value="4200" selected>Cinematic · 4.2 s</option><option value="5500">Gentle · 5.5 s</option></select></label></div>
  </main>
 </div>
-<script src="scene-content.js"></script>
+<dialog id="screenshotDialog" class="screenshot-dialog" aria-labelledby="screenshotTitle">
+ <div class="screenshot-dialog-heading"><h3 id="screenshotTitle"></h3><button type="button" id="closeScreenshot" aria-label="Close enlarged screenshot">×</button></div>
+ <img id="enlargedScreenshot" alt="">
+</dialog>
+<script src="scene-content.js?v=20261108-readability"></script>
 <script src="engine-v3.js"></script>
 </body></html>
