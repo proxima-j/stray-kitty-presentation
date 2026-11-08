@@ -338,6 +338,182 @@
       "use": "Chapter 2 connection evidence",
       "status": "APPROVED / PUBLISHED",
       "permission": "User approved this curated Level Design collection and explicitly authorized GitHub upload on 2026-11-08"
+    },
+    {
+      "id": "narrative.friends.01",
+      "source": "../assets/pages/05/friends-dialogue-01.png",
+      "origin": "Game checkpoint finale.celebration; authored node finale_intro_7; 旁白. Full typewriter text completed before capture.",
+      "use": "Page 05",
+      "status": "CAPTURED_PENDING_APPROVAL",
+      "review_status": "READY",
+      "permission": "User authorized publication of project-owned gameplay captures in this asset-collection task, 2026-11-08.",
+      "metadata": {
+        "width": 1600,
+        "height": 900
+      },
+      "limitations": "Ending/shared-home farewell scene; contains story spoilers."
+    },
+    {
+      "id": "narrative.friends.02",
+      "source": "../assets/pages/05/friends-dialogue-02.png",
+      "origin": "Game checkpoint finale.celebration; authored node finale_intro_8; 团子. Full typewriter text completed before capture.",
+      "use": "Page 05",
+      "status": "CAPTURED_PENDING_APPROVAL",
+      "review_status": "READY",
+      "permission": "User authorized publication of project-owned gameplay captures in this asset-collection task, 2026-11-08.",
+      "metadata": {
+        "width": 1600,
+        "height": 900
+      },
+      "limitations": "Ending/shared-home farewell scene; contains story spoilers."
+    },
+    {
+      "id": "narrative.friends.03",
+      "source": "../assets/pages/05/friends-dialogue-03.png",
+      "origin": "Game checkpoint finale.celebration; authored node finale_intro_9; 喵喵. Full typewriter text completed before capture.",
+      "use": "Page 05",
+      "status": "CAPTURED_PENDING_APPROVAL",
+      "review_status": "READY",
+      "permission": "User authorized publication of project-owned gameplay captures in this asset-collection task, 2026-11-08.",
+      "metadata": {
+        "width": 1600,
+        "height": 900
+      },
+      "limitations": "Ending/shared-home farewell scene; contains story spoilers."
+    },
+    {
+      "id": "home.growth.01",
+      "source": "../assets/pages/06/greenhouse-stage-01.png",
+      "origin": "Existing server-authored QA checkpoint greenhouse.home_1; matching default home camera, 1600×900 viewport; no manual stage/decor edits.",
+      "use": "Page 06",
+      "status": "CAPTURED_PENDING_APPROVAL",
+      "review_status": "READY",
+      "permission": "User authorized publication of project-owned gameplay captures in this asset-collection task, 2026-11-08.",
+      "metadata": {
+        "width": 1600,
+        "height": 900
+      }
+    },
+    {
+      "id": "home.growth.02",
+      "source": "../assets/pages/06/greenhouse-stage-02.png",
+      "origin": "Existing server-authored QA checkpoint greenhouse.home_2; matching default home camera, 1600×900 viewport; no manual stage/decor edits.",
+      "use": "Page 06",
+      "status": "CAPTURED_PENDING_APPROVAL",
+      "review_status": "READY",
+      "permission": "User authorized publication of project-owned gameplay captures in this asset-collection task, 2026-11-08.",
+      "metadata": {
+        "width": 1600,
+        "height": 900
+      }
+    },
+    {
+      "id": "home.growth.03",
+      "source": "../assets/pages/06/greenhouse-stage-03.png",
+      "origin": "Existing server-authored QA checkpoint greenhouse.home_3; matching default home camera, 1600×900 viewport; no manual stage/decor edits.",
+      "use": "Page 06",
+      "status": "CAPTURED_PENDING_APPROVAL",
+      "review_status": "READY",
+      "permission": "User authorized publication of project-owned gameplay captures in this asset-collection task, 2026-11-08.",
+      "metadata": {
+        "width": 1600,
+        "height": 900
+      }
+    },
+    {
+      "id": "home.growth.04",
+      "source": "../assets/pages/06/greenhouse-stage-04.png",
+      "origin": "Existing server-authored QA checkpoint finale.home; matching default home camera, 1600×900 viewport; no manual stage/decor edits.",
+      "use": "Page 06",
+      "status": "CAPTURED_PENDING_APPROVAL",
+      "review_status": "NEEDS_SELECTION",
+      "permission": "User authorized publication of project-owned gameplay captures in this asset-collection task, 2026-11-08.",
+      "metadata": {
+        "width": 1600,
+        "height": 900
+      },
+      "limitations": "Genuine implemented stage 4, but shares the stage-3 furnished layout; differences are subtle warmer lighting/string lights. Do not present it as a new architectural rebuild."
+    },
+    {
+      "id": "home.interaction.cats",
+      "source": "../assets/pages/06/cat-reaction.mp4",
+      "origin": "Fresh local capture at official finale.home checkpoint. Native pointer click on Tuanzi; actual happy reaction, heart and authored pet-response bubble; petPressure 0→1 verified read-only.",
+      "use": "Page 06",
+      "status": "CAPTURED_PENDING_APPROVAL",
+      "review_status": "READY",
+      "permission": "User authorized publication of project-owned gameplay captures in this asset-collection task, 2026-11-08.",
+      "metadata": {
+        "width": 1600,
+        "height": 900,
+        "codec": "H.264",
+        "audio": false,
+        "duration_seconds": 7.267
+      }
+    },
+    {
+      "id": "home.interaction.postcard",
+      "source": "../assets/pages/06/postcard-to-parcel.mp4",
+      "origin": "Existing project recording output/trailer-originals-2026-11-06-takes/premiere/C08_Greenhouse_Heart-Parcel-Stool-Placement_T01.mp4, source 0.5–17.0s. Real prepare/draw heart → send → parcel → seedling-stool reveal.",
+      "use": "Page 06",
+      "status": "CAPTURED_PENDING_APPROVAL",
+      "review_status": "READY",
+      "permission": "User authorized publication of project-owned gameplay captures in this asset-collection task, 2026-11-08.",
+      "metadata": {
+        "width": 1600,
+        "height": 900,
+        "codec": "H.264",
+        "audio": false,
+        "duration_seconds": 16.5
+      },
+      "limitations": "Historical QA recording used a free draw fixture at guaranteed/pity draw 18. Demonstrates the genuine postcard/reveal UI, not an ordinary first-draw probability or evidence of varying outcomes."
+    },
+    {
+      "id": "home.interaction.furniture",
+      "source": "../assets/pages/06/furniture-drag-save.mp4",
+      "origin": "Existing project recording output/trailer-retakes-2026-11-06-190143/premiere/R07_Greenhouse_Seedling-Stool-Place-Save_T01.mp4, source 1.8–11.5s. Actual inventory selection, drag/place seedling stool, save and visible saved arrangement. Existing isolated owned-stool QA setup.",
+      "use": "Page 06",
+      "status": "CAPTURED_PENDING_APPROVAL",
+      "review_status": "READY",
+      "permission": "User authorized publication of project-owned gameplay captures in this asset-collection task, 2026-11-08.",
+      "metadata": {
+        "width": 1600,
+        "height": 900,
+        "codec": "H.264",
+        "audio": false,
+        "duration_seconds": 9.7
+      }
+    },
+    {
+      "id": "payment.recharge",
+      "source": "../assets/pages/07/1-recharge.png",
+      "origin": "Public game starry-kitty.duckdns.org; actual config GET provider=xsolla, sandbox=true; fresh guest, 60-tuna/¥6 pack selected. Captured before checkout. Payment POST requests blocked during capture.",
+      "use": "Page 07",
+      "status": "CAPTURED_PENDING_APPROVAL",
+      "review_status": "READY",
+      "permission": "User authorized publication of project-owned gameplay captures in this asset-collection task, 2026-11-08.",
+      "metadata": {
+        "width": 1600,
+        "height": 900
+      },
+      "limitations": "Standalone pack-selection capture; not linked to the historical successful payment and not evidence of payment/credit. No new sandbox transaction initiated."
+    },
+    {
+      "id": "payment.checkout",
+      "source": null,
+      "expected_source": "../assets/pages/07/2-checkout.png",
+      "use": "Page 07",
+      "status": "UNAVAILABLE",
+      "review_status": "UNAVAILABLE",
+      "reason": "No genuine existing Xsolla checkout screenshot found for the documented successful sandbox test. A new checkout/payment journey requires separate authorization."
+    },
+    {
+      "id": "payment.return",
+      "source": null,
+      "expected_source": "../assets/pages/07/3-confirmation.png",
+      "use": "Page 07",
+      "status": "UNAVAILABLE",
+      "review_status": "UNAVAILABLE",
+      "reason": "Prior successful sandbox +60-tuna credit is reported in project notes, but no matching return screenshot with verified webhook/ledger evidence was available. A redirect alone is insufficient; no success was simulated."
     }
   ]
 }
