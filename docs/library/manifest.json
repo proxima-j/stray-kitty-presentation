@@ -447,9 +447,9 @@
         "height": 900,
         "codec": "H.264",
         "audio": false,
-        "duration_seconds": 4.844,
-        "speed_multiplier": 1.5,
-        "frame_rate": 45
+        "duration_seconds": 5.813,
+        "speed_multiplier": 1.25,
+        "frame_rate": 37.5
       }
     },
     {

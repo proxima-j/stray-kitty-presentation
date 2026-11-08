@@ -43,7 +43,7 @@ Pages 03 and 04 need no new media. Current, Previous, the v3 engine and all revi
 
 ## Media metadata
 
-All three interaction MP4s play at 1.5× their captured speed, as requested. Full sequences and every source frame are retained at 45 fps; resolution, framing and silence are unchanged. Stable filenames are retained.
+Petting Tuanzi plays at 1.25× its original captured speed (37.5 fps). The postcard and furniture clips remain at 1.5× (45 fps). Full sequences and every source frame are retained; resolution, framing, silence and stable filenames are unchanged.
 
 | Asset | Format | Duration |
 | --- | --- | --- |
@@ -54,7 +54,7 @@ All three interaction MP4s play at 1.5× their captured speed, as requested. Ful
 | `home.growth.02` | 1600×900 PNG | — |
 | `home.growth.03` | 1600×900 PNG | — |
 | `home.growth.04` | 1600×900 PNG | — |
-| `home.interaction.cats` | 1600×900 H.264 MP4, silent | 4.844s |
+| `home.interaction.cats` | 1600×900 H.264 MP4, silent | 5.813s |
 | `home.interaction.postcard` | 1600×900 H.264 MP4, silent | 11.0s |
 | `home.interaction.furniture` | 1600×900 H.264 MP4, silent | 6.467s |
 | `payment.recharge` | 1600×900 PNG | — |
