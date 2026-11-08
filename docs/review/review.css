@@ -1,0 +1,40 @@
+@import url("../library/tokens.css");
+:root{--review-bg:#F4E6C7;--review-ink:#34453E;--review-gold:#CFA66A;--review-rust:#B56E55;--review-line:#8D917B}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--review-bg);color:var(--review-ink);font-family:Arial,Helvetica,sans-serif}
+.review-page{position:relative;min-height:100dvh;overflow:hidden;padding:clamp(30px,5vw,80px) clamp(40px,7vw,110px) 95px}
+.label{display:flex;align-items:center;gap:13px;font:12px/1.5 Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase}
+.num{display:grid;place-items:center;min-width:54px;height:33px;padding:0 14px;border:1.5px solid var(--review-ink);border-radius:99px;background:var(--review-gold);font:400 16px 'Faculty Glyphic',Georgia,serif;letter-spacing:0}
+h1{font:400 clamp(38px,4.8vw,77px)/1.12 'Faculty Glyphic',Georgia,serif;letter-spacing:-.045em;margin:26px 0 0;max-width:1250px}
+.review-body{margin:clamp(32px,5vh,54px) auto 0;max-width:1350px}
+.placeholder{background:linear-gradient(145deg,#e9e1c9,#d2d9cc);border:1.5px solid var(--review-ink);border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:13px;padding:18px;color:var(--review-ink)}
+.placeholder strong{font:400 clamp(19px,1.85vw,28px)/1.2 'Faculty Glyphic',Georgia,serif}
+.placeholder small{max-width:250px;font:12px/1.5 Arial,sans-serif;letter-spacing:.07em;color:#56675c}
+.placeholder .number{font:400 clamp(26px,3vw,44px) 'Faculty Glyphic',Georgia,serif;color:var(--review-rust)}
+.tabframe{position:relative;border:1.5px solid var(--review-ink);border-radius:0 18px 18px 18px;background:var(--review-bg)}
+.tabframe::before{content:attr(data-tab);position:absolute;top:-29px;left:-1.5px;padding:5px 17px;background:var(--review-bg);border:1.5px solid var(--review-ink);border-bottom:0;border-radius:12px 12px 0 0;font:12px/1.55 Arial,sans-serif;letter-spacing:.09em}
+.review-route{position:absolute;bottom:43px;left:7%;right:7%;height:20px;border-top:3px dotted var(--review-rust)}
+.review-cat{position:absolute;bottom:41px;left:23%;width:62px;image-rendering:pixelated;filter:drop-shadow(1px 3px 1px rgba(35,50,38,.13));background:var(--review-bg);padding:0 5px}
+.narrative-frame{max-width:1050px;margin:auto;height:min(50vh,430px);min-height:275px}
+.narrative-frame .scene-placeholder{height:100%;border:0;border-radius:inherit}
+.dialogue{position:absolute;left:7%;bottom:-43px;width:86%;min-height:112px;background:var(--review-bg);border:2px solid var(--review-ink);border-radius:18px;padding:21px 25px;display:flex;align-items:center;gap:15px;text-align:left;color:var(--review-ink);cursor:pointer;box-shadow:0 8px 16px rgba(20,35,25,.07)}
+.dialogue .counter{flex:none;background:var(--review-gold);border:1px solid var(--review-ink);padding:10px 12px;border-radius:99px;font:400 14px 'Faculty Glyphic',Georgia,serif}
+.dialogue .line{flex:1;font:400 clamp(15px,1.5vw,23px)/1.25 'Faculty Glyphic',Georgia,serif}
+.dialogue .hint{flex:none;font:12px Arial,sans-serif;letter-spacing:.04em}
+.dialogue:focus-visible,.tabs button:focus-visible{outline:3px solid var(--review-rust);outline-offset:4px}
+.tabs{display:flex;gap:14px;justify-content:center;margin:0 auto 34px}
+.tabs button{background:var(--review-bg);border:1.5px solid var(--review-ink);border-radius:99px;font:400 clamp(14px,1.25vw,19px) 'Faculty Glyphic',Georgia,serif;color:var(--review-ink);padding:14px 26px;cursor:pointer}
+.tabs button[aria-pressed=true]{background:#F0D36A}
+.gallery{display:grid;gap:17px;align-items:stretch}
+.gallery.four{grid-template-columns:repeat(4,minmax(0,1fr))}
+.gallery.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.gallery[hidden]{display:none}
+figure{margin:0;min-width:0}
+.gallery .placeholder{height:min(30vh,235px);min-height:145px}
+.gallery figcaption{margin-top:16px;text-align:center;font:12px Arial,sans-serif;letter-spacing:.13em}
+.payment-row{display:grid;grid-template-columns:minmax(0,1fr) 45px minmax(0,1fr) 45px minmax(0,1fr);align-items:center;gap:13px;margin-top:60px}
+.payment-row .placeholder{height:min(38vh,345px);min-height:220px;border-radius:0 18px 18px 18px}
+.payment-row .arrow{text-align:center;font:400 38px 'Faculty Glyphic',Georgia,serif;color:var(--review-rust)}
+.payment-row .tabframe{height:auto}
+@media(max-height:760px){.review-page{padding-top:32px}.review-body{margin-top:38px}.narrative-frame{height:45vh}.gallery .placeholder{height:24vh}.payment-row{margin-top:44px}.payment-row .placeholder{height:30vh}}
+@media(max-width:980px){.review-page{padding:32px 4% 85px}.gallery{gap:9px}.gallery .placeholder{min-height:125px}.gallery .placeholder strong{font-size:15px}.payment-row{gap:5px;grid-template-columns:minmax(0,1fr) 23px minmax(0,1fr) 23px minmax(0,1fr)}.dialogue .hint{font-size:10px}}
