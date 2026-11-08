@@ -39,3 +39,10 @@ Level Design preview revised: 4 muted autoplay map clips; 7.30-second muted auto
 - [Combat 02 — Friends + 阿策](combat-02-friends-ai.html): real-time tactical tower defense mechanisms; before/drag/after still sequence; 2–3 cat figure + ability/VFX profile placeholders; click **And one more friend…** to reveal 阿策 and toggle the advice-card before/after placeholders.
 
 These are **composition reviews only**, with working labels 08–09 that may shift when integrating the approved Roadmap/Home Hub/Payment and Level Design pages. No original footage or model output is invented. Current, Previous and existing review pages remain untouched. After approval, Codex replaces placeholders with verified genuine assets and integrates into the approved v3 deck; do not rotate versions for these reviews.
+
+## UI/UX — two isolated composition previews
+
+- [UX 01 — Four Dice Animations](uiux-01-dice.html): matched 2×2 frames for all four actual outcome animations, with shared size/crop; final game labels and clips pending.
+- [UX 02 — Responsive & Translucent UI](uiux-02-adaptive.html): click **Normal** or **Narrow** to inspect the intended size-change composition; a detail crop highlights the translucent UI. These panels are **illustrative placeholders**, not proof of responsive game behavior.
+
+Both are design-review pages only. Their working UX labels do not fix final slide numbers. They do not change Current or Previous. Replace placeholders with verified real game captures only after asset collection and approval; do not claim unverified narrow-window support.
