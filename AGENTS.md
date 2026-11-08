@@ -8,8 +8,8 @@ Publish only `docs/` through GitHub Pages. Keep relative asset URLs. Page review
 
 Read the latest main branch before edits. Keep GitHub as shared source and the existing Notion page as history. Do not create a replacement dashboard.
 
-Do not publish unlicensed reference imagery or fonts. Current D20/cat illustration frames deliberately contain labeled placeholders.
+Do not publish unrelated unlicensed imagery or fonts. The user has now confirmed ownership of the two original Page 02 D20/cat illustrations; they are approved to publish. The placeholders remain only until Codex copies the already-recovered original files to docs/assets/ and updates the two frame references.
 
 Verification: static serve, intended remote commit, successful Pages deployment, one normal-viewport visual smoke check of Pages 02/03, and one forward/backward transition. Stop when those pass. Do not run game tests, broad suites, benchmarks, repeated browser checks or extra recordings.
 
-Asset handoff: follow [docs/library/ASSET-WORKFLOW.md](docs/library/ASSET-WORKFLOW.md). For every approved, publishable image/video, commit the asset together with its consuming page and register its source/license/path in the manifest. Do not rely on local Windows paths or chat attachments as canonical dependencies. Do not publish unknown-rights third-party illustrations; see ASSET-CLEARANCE.md. The D20/cat originals are already recovered on the user's Windows computer.
+Asset handoff: follow [docs/library/ASSET-WORKFLOW.md](docs/library/ASSET-WORKFLOW.md). For every approved, publishable image/video, commit the asset together with its consuming page and register its source/license/path in the manifest. Do not rely on local Windows paths or chat attachments as canonical dependencies. Do not publish unknown-rights third-party illustrations; however Page 02 D20/cat ownership and public-use permission were confirmed by the user on 2026-11-08. See ASSET-CLEARANCE.md. Their originals are already recovered on the user's Windows computer. Routine re-hashing is not required.

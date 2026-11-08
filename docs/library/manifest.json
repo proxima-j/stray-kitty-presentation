@@ -113,19 +113,21 @@
     },
     {
       "id": "art.d20",
-      "status": "PLACEHOLDER \u2014 redistribution permission pending",
+      "status": "USER-OWNED / PUBLICATION APPROVED — upload pending",
       "recovered_filename": "d20-dungeon-master-original.png",
-      "source_status": "Recovered locally from original Page 02 HTML; kept outside public repository",
+      "source_status": "Exact original recovered on Windows; copy into public repository on next Codex media pass",
       "publication_target": "../assets/illustrations/d20-dungeon-master-original.png",
-      "clearance": "Required before publication; see repository ASSET-CLEARANCE.md"
+      "clearance": "Approved by user; see ASSET-CLEARANCE.md",
+      "permission": "User confirmed ownership and approved publication in this project on 2026-11-08"
     },
     {
       "id": "art.playful-cats",
-      "status": "PLACEHOLDER \u2014 redistribution permission pending",
+      "status": "USER-OWNED / PUBLICATION APPROVED — upload pending",
       "recovered_filename": "playful-cats-original.png",
-      "source_status": "Recovered locally from original Page 02 HTML; kept outside public repository",
+      "source_status": "Exact original recovered on Windows; copy into public repository on next Codex media pass",
       "publication_target": "../assets/illustrations/playful-cats-original.png",
-      "clearance": "Required before publication; see repository ASSET-CLEARANCE.md"
+      "clearance": "Approved by user; see ASSET-CLEARANCE.md",
+      "permission": "User confirmed ownership and approved publication in this project on 2026-11-08"
     },
     {
       "id": "film.opening",
