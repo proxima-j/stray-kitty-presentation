@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex"><title>Stray Kitty — Combat + Friends + AI · Composition Review</title>
+<link rel="stylesheet" href="review.css"><link rel="stylesheet" href="showcase-preview.css"></head>
+<body>
+<main class="review-page showcase-review combat-review">
+ <div class="label"><span class="num">09</span>COMBAT + FRIENDS + AI · COMPOSITION REVIEW · WORKING PAGE NUMBER</div>
+ <h1>Real-Time Tactical Tower Defense</h1>
+ <div class="combat-bridge">
+  <span>FROM RANDOM EVENTS</span><span class="arrow-inline">→</span><b>BATTLE PRESSURE + SUPPORT</b>
+ </div>
+ <div class="review-body">
+  <div class="combat-board">
+   <section class="combat-main" aria-label="Battlefield and repositioning">
+    <div class="tabframe" data-tab="BATTLEFIELD · ORIGINAL GAME">
+     <div class="combat-shot">
+      <div class="placeholder">
+       <span class="number">01</span><strong>MAIN BATTLEFIELD</strong>
+       <small>AUTHENTIC GAME SCREENSHOT PENDING · FRIENDS + ENEMY PRESSURE</small>
+      </div>
+     </div>
+    </div>
+    <div class="reposition-strip" aria-label="Before, drag, after from the same battle">
+     <figure><div class="placeholder"><strong>BEFORE</strong><small>SCREENSHOT 01</small></div><figcaption>ORIGINAL POSITION</figcaption></figure>
+     <figure><div class="placeholder"><strong>DRAG</strong><small>SCREENSHOT 02</small></div><figcaption>REPOSITION</figcaption></figure>
+     <figure><div class="placeholder"><strong>AFTER</strong><small>SCREENSHOT 03</small></div><figcaption>NEW POSITION</figcaption></figure>
+    </div>
+    <div class="combat-steps" aria-label="Combat mechanic labels">
+     <div class="combat-step"><b>Reposition</b><small>Move cats during battle</small></div>
+     <div class="combat-step"><b>Build Energy</b><small>Abilities charge automatically</small></div>
+     <div class="combat-step"><b>Activate Skills</b><small>Trigger each cat's ability</small></div>
+    </div>
+   </section>
+   <section class="combat-profiles" aria-label="Three illustrative companion profile slots, selection pending verified assets">
+    <article class="profile" data-id="FRIEND 01">
+     <div class="profile-figure"><small>ORIGINAL CAT FIGURE</small></div>
+     <div class="profile-details"><b>Cat name pending</b><span class="ability">Signature ability · verify from game</span><div class="profile-vfx">MATCHING ABILITY + VFX FRAME</div></div>
+    </article>
+    <article class="profile" data-id="FRIEND 02">
+     <div class="profile-figure"><small>ORIGINAL CAT FIGURE</small></div>
+     <div class="profile-details"><b>Cat name pending</b><span class="ability">Signature ability · verify from game</span><div class="profile-vfx">MATCHING ABILITY + VFX FRAME</div></div>
+    </article>
+    <article class="profile" data-id="FRIEND 03">
+     <div class="profile-figure"><small>ORIGINAL CAT FIGURE</small></div>
+     <div class="profile-details"><b>Cat name pending</b><span class="ability">Signature ability · verify from game</span><div class="profile-vfx">MATCHING ABILITY + VFX FRAME</div></div>
+    </article>
+   </section>
+  </div>
+ </div>
+ <button class="advisor-trigger" id="advisorTrigger" type="button" aria-controls="advisorLayer" aria-expanded="false">+ And one more friend…</button>
+ <aside class="advisor-layer" id="advisorLayer" aria-label="阿策 AI advisor reveal" hidden>
+  <div class="advisor-header">
+   <div><span class="small-label">ANOTHER FRIEND</span><br><strong>阿策 · AI Advisor</strong></div>
+   <button id="advisorClose" class="advisor-close" type="button" aria-label="Close advisor layer">×</button>
+  </div>
+  <div class="advisor-id">
+   <div class="advisor-figure">ORIGINAL<br>阿策 FIGURE</div>
+   <p>Context-aware battle advice.<br><span class="micro">Home Hub functionality is a spoken mention only.</span></p>
+  </div>
+  <div class="advisor-screenshot" id="advisorBefore" role="group" aria-label="Advice card before response">
+   <span class="small-label">ADVICE CARD · BEFORE</span>
+   <b>Question submitted</b>
+   <small>GENUINE IN-GAME QUESTION / PRE-RESPONSE SCREENSHOT PENDING</small>
+  </div>
+  <div class="advisor-screenshot" id="advisorAfter" role="group" aria-label="Advice card after response" hidden>
+   <span class="small-label">ADVICE CARD · AFTER</span>
+   <b>Advice received</b>
+   <small>GENUINE CONTEXTUAL AI RESPONSE SCREENSHOT PENDING · CHECK MODEL VS FALLBACK</small>
+  </div>
+  <div class="advisor-actions"><button id="advisorNext" class="advisor-next" type="button">Show answer →</button><span class="advisor-step" id="advisorStep">1 / 2</span></div>
+ </aside>
+ <div class="review-route" aria-hidden="true"></div>
+ <img class="review-cat" src="../assets/miaomiao.svg" alt="">
+</main>
+<script>
+(()=>{
+ const trigger=document.getElementById('advisorTrigger');
+ const layer=document.getElementById('advisorLayer');
+ const close=document.getElementById('advisorClose');
+ const next=document.getElementById('advisorNext');
+ const before=document.getElementById('advisorBefore');
+ const after=document.getElementById('advisorAfter');
+ const step=document.getElementById('advisorStep');
+ let state=0;
+ function render(){
+   layer.hidden=state===0;
+   trigger.setAttribute('aria-expanded',String(state>0));
+   before.hidden=state!==1;
+   after.hidden=state!==2;
+   step.textContent=state===2?'2 / 2':'1 / 2';
+   next.textContent=state===2?'Back to question':'Show answer →';
+ }
+ function open(){state=1;render();}
+ function dismiss(){state=0;render();trigger.focus();}
+ trigger.addEventListener('click',open);
+ close.addEventListener('click',dismiss);
+ next.addEventListener('click',()=>{state=state===1?2:1;render();});
+ document.addEventListener('keydown',event=>{
+   if(event.key==='Escape'&&state>0){event.preventDefault();dismiss();}
+   else if((event.key===' '||event.key==='ArrowRight')&&state>0&&!event.repeat){event.preventDefault();state=state===1?2:1;render();}
+ });
+ render();
+})();
+</script>
+</body></html>
