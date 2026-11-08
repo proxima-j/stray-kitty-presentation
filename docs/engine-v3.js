@@ -13,6 +13,7 @@
   const hero = document.getElementById('heroCat');
   const video = document.getElementById('openingVideo');
   const filmPlay = document.getElementById('playOpeningFilm');
+  const filmSkip = document.getElementById('skipOpeningFilm');
   const helpButton = document.getElementById('helpButton');
   const helpPanel = document.getElementById('helpPanel');
   const helpClose = document.getElementById('helpClose');
@@ -157,10 +158,8 @@
     lastRenderedScene = arriving;
 
     // Video stops decoding as the opening exits, reducing scroll jank.
-    if (progress > 0.16 || document.hidden) {
+    if (cameraDistanceNow > 0.02 || document.hidden) {
       if (video && !video.paused) video.pause();
-    } else if (video && video.muted && video.paused && !reducedMotion && !document.hidden && progress <= 0.005) {
-      video?.play().catch(() => {});
     }
     world.dataset.distance = cameraDistanceNow.toFixed(4);
     world.dataset.progress = progress.toFixed(4);
@@ -291,10 +290,23 @@
     filmPlay.addEventListener('click', () => {
       if (video.ended) video.currentTime = 0;
       video.muted = false;
+      video.controls = true;
       video.play().catch(() => { filmPlay.hidden = false; });
     });
     video.addEventListener('play', () => { filmPlay.hidden = true; });
-    video.addEventListener('ended', () => { filmPlay.hidden = false; filmPlay.textContent = 'Replay film'; });
+    video.addEventListener('pause', () => {
+      if (video.ended) return;
+      filmPlay.hidden = false;
+      filmPlay.textContent = 'Resume film ▶';
+      filmPlay.setAttribute('aria-label', 'Resume opening film with sound');
+    });
+    video.addEventListener('ended', () => {
+      filmPlay.hidden = false;
+      filmPlay.textContent = 'Replay film ▶';
+      filmPlay.setAttribute('aria-label', 'Replay opening film with sound');
+      filmSkip.textContent = 'Continue →';
+    });
+    filmSkip.addEventListener('click', () => { video.pause(); advance(1); });
   }
   helpButton.addEventListener('click', () => showHelp(helpPanel.hidden));
   helpClose.addEventListener('click', () => showHelp(false));
@@ -339,5 +351,4 @@
   previousDistance = cameraDistance(renderedProgress);
   updateView(renderedProgress, 0);
   requestFrame();
-  if (video?.muted) video.play().catch(() => {});
 })();

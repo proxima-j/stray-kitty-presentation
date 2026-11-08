@@ -1,6 +1,14 @@
 --- approved-v3/script.js
 +++ docs/engine-v3.js
-@@ -18,7 +18,7 @@
+@@ -12,13 +12,15 @@
+   const routeReveal = document.getElementById('routeReveal');
+   const hero = document.getElementById('heroCat');
+   const video = document.getElementById('openingVideo');
++  const filmPlay = document.getElementById('playOpeningFilm');
++  const filmSkip = document.getElementById('skipOpeningFilm');
+   const helpButton = document.getElementById('helpButton');
+   const helpPanel = document.getElementById('helpPanel');
+   const helpClose = document.getElementById('helpClose');
    const paceSelect = document.getElementById('paceSelect');
    const scenes = [...document.querySelectorAll('.scene')];
  
@@ -9,7 +17,7 @@
    const clamp = (value, min = 0, max = 1) => Math.max(min, Math.min(max, value));
    const mix = (a, b, t) => a + (b - a) * t;
    const smooth = value => { const t = clamp(value); return t * t * (3 - 2 * t); };
-@@ -57,7 +57,7 @@
+@@ -57,7 +59,7 @@
        `S ${w * 2.52} ${h * .806}, ${w * 2.94} ${h * .835}`,
        `S ${w * 3.60} ${h * .815}, ${w * 4} ${h * .832}`,
      ].join(' ');
@@ -18,7 +26,7 @@
      routeGhost.setAttribute('d', d);
      routeInk.setAttribute('d', d);
      routeReveal.setAttribute('height', String(h));
-@@ -99,7 +99,7 @@
+@@ -99,7 +101,7 @@
          return index - 1 + smooth(segment(phase, 0.015, 0.72));
        }
      }
@@ -27,16 +35,16 @@
    }
    function revealProgress(progress, index) {
      if (index === 0) return 1;
-@@ -157,13 +157,28 @@
+@@ -156,14 +158,27 @@
+     lastRenderedScene = arriving;
  
      // Video stops decoding as the opening exits, reducing scroll jank.
-     if (progress > 0.16 || document.hidden) {
+-    if (progress > 0.16 || document.hidden) {
 -      if (!video.paused) video.pause();
 -    } else if (video.paused && !reducedMotion && !document.hidden && progress <= 0.005) {
 -      video.play().catch(() => {});
++    if (cameraDistanceNow > 0.02 || document.hidden) {
 +      if (video && !video.paused) video.pause();
-+    } else if (video && video.paused && !reducedMotion && !document.hidden && progress <= 0.005) {
-+      video?.play().catch(() => {});
      }
      world.dataset.distance = cameraDistanceNow.toFixed(4);
      world.dataset.progress = progress.toFixed(4);
@@ -55,7 +63,7 @@
 +        url.searchParams.set('page', page);
 +        history.replaceState(null, '', url);
 +      }
-+      document.title = `Stray Kitty — Page ${page} · ${activeIndex ? 'Game Flow' : 'Elevator Pitch'}`;
++      document.title = `Stray Kitty — Page ${page} · ${page === '01' ? 'Opening Film' : page === '02' ? 'Elevator Pitch' : 'Game Flow'}`;
 +    }
    }
  
@@ -73,7 +81,36 @@
      }
    }
    function onWheel() {
-@@ -296,19 +311,23 @@
+@@ -271,6 +286,28 @@
+     requestFrame();
+   }
+ 
++  if (video && filmPlay) {
++    filmPlay.addEventListener('click', () => {
++      if (video.ended) video.currentTime = 0;
++      video.muted = false;
++      video.controls = true;
++      video.play().catch(() => { filmPlay.hidden = false; });
++    });
++    video.addEventListener('play', () => { filmPlay.hidden = true; });
++    video.addEventListener('pause', () => {
++      if (video.ended) return;
++      filmPlay.hidden = false;
++      filmPlay.textContent = 'Resume film ▶';
++      filmPlay.setAttribute('aria-label', 'Resume opening film with sound');
++    });
++    video.addEventListener('ended', () => {
++      filmPlay.hidden = false;
++      filmPlay.textContent = 'Replay film ▶';
++      filmPlay.setAttribute('aria-label', 'Replay opening film with sound');
++      filmSkip.textContent = 'Continue →';
++    });
++    filmSkip.addEventListener('click', () => { video.pause(); advance(1); });
++  }
+   helpButton.addEventListener('click', () => showHelp(helpPanel.hidden));
+   helpClose.addEventListener('click', () => showHelp(false));
+   paceSelect.addEventListener('change', () => { beatDurationMs = Number(paceSelect.value); });
+@@ -296,19 +333,22 @@
        event.preventDefault(); startMove(0, true);
      }
      if (event.key === 'End') {
@@ -99,5 +136,4 @@
    updateView(renderedProgress, 0);
    requestFrame();
 -  video.play().catch(() => {});
-+  video?.play().catch(() => {});
  })();

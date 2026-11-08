@@ -1,0 +1,28 @@
+{
+  "programs": [],
+  "stream_groups": [],
+  "streams": [
+    {
+      "codec_name": "h264",
+      "codec_type": "video",
+      "width": 1920,
+      "height": 1080,
+      "r_frame_rate": "30/1"
+    },
+    {
+      "codec_name": "aac",
+      "codec_type": "audio",
+      "sample_rate": "48000",
+      "channels": 2,
+      "r_frame_rate": "0/0"
+    }
+  ],
+  "format": {
+    "duration": "60.500000",
+    "size": "65114018"
+  },
+  "filename": "Stray-Kitty-Android-Final-v02-SFX.mp4",
+  "sha256": "e2053d3bc6644431ecabc3c4652f57642b5689e31bd926b873623e6026db6fca",
+  "source": "Exact copy of the user-selected local original; no transcoding or trimming.",
+  "fast_start": true
+}

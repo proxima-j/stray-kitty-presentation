@@ -13,7 +13,7 @@ Shared source for ChatGPT and Codex. Review the hosted presentation instead of d
 
 Both connected GitHub and local Git were verified as `proxima-j` during setup. Local access has admin/push permission. ChatGPT can read and update files using its connected GitHub tools; Codex can use normal Git. Read the latest `main` before changing files. Scope revisions to the page under review, commit them to this repository, and review the same direct URL after deployment. In connector updates, read the current blob SHA before replacing a file. In Git, pull before editing and push without force. GitHub Pages automatically publishes `main:/docs`.
 
-Pages 01–03 now have a navigable structure. Page 01 is a full-screen film opening with user-initiated audio playback; it currently falls back to the approved v3 eight-second preview excerpt until Codex adds the final Windows-local video `Stray-Kitty-Android-Final-v02-SFX.mp4`. Page 02–03 remain under review.
+Pages 01–03 are integrated. Page 01 plays the complete selected `Stray-Kitty-Android-Final-v02-SFX.mp4`: 60.5 seconds, 1920×1080, 30 fps, H.264 / stereo AAC, 65,114,018 bytes. It is an exact copy of the high-quality local original, already fast-start compatible. There is no excerpt fallback and no Git LFS. Click Play film to start with sound; native video controls provide pause, seek and volume. Skip film or Right advances manually; after the film ends, Continue advances. No automatic page advance occurs. The original game cat and travel route resume after the film. Page 02–03 remain under review.
 
 ## Run locally / offline
 
@@ -23,17 +23,17 @@ No package installation or build is required. All published assets, including th
 python -m http.server 8080 --directory docs
 ```
 
-Open `http://localhost:8080/?page=02` or `?page=03`. `docs/index.html` can also be opened directly offline. Controls: Right / Space forward, Left backward, wheel to scrub, Escape to finish, Home / End to jump, `?` for optional controls. Default arrow beat remains 4.2 seconds. Reduced-motion preferences retain the original immediate-transition behavior.
+Open `http://localhost:8080/?page=01`, `?page=02` or `?page=03`. `docs/index.html` can also be opened directly offline. Controls: Right / Space forward, Left backward, wheel to scrub, Escape to finish, Home / End to jump, `?` for optional controls. Default arrow beat remains 4.2 seconds. Reduced-motion preferences retain the original immediate-transition behavior.
 
 ## Preserve the foundation
 
-`reference/forward-story-v3/` is the untouched source archive extraction, including its original sample scenes. It is excluded from the Pages publication root. `reference/BASELINE.json` records each original file's SHA-256; `reference/SOURCE.sha256` identifies the downloaded archive. `reference/INTEGRATION.diff` records the narrow adaptation: two configurable stops, optional opening video, direct review URLs, and off-screen accessibility. The v3 requestAnimationFrame player, 4200ms beat, 72% camera travel, reveal primitives, damped reversible scrolling and cat/route geometry are retained. `docs/engine-v3.css` is byte-identical to the original stylesheet; visual adjustments are separate overrides.
+`reference/forward-story-v3/` is the untouched source archive extraction, including its original sample scenes. It is excluded from the Pages publication root. `reference/BASELINE.json` records each original file's SHA-256; `reference/SOURCE.sha256` identifies the downloaded archive. `reference/INTEGRATION.diff` records the narrow adaptation: three configurable stops, opening-video controls, direct review URLs, and off-screen accessibility. The v3 requestAnimationFrame player, 4200ms beat, 72% camera travel, reveal primitives, damped reversible scrolling and cat/route geometry are retained. `docs/engine-v3.css` is byte-identical to the original stylesheet; visual adjustments are separate overrides.
 
 ## Sources and publication rights
 
 - Original project character: `docs/assets/miaomiao.svg`, from approved v3.
 - Faculty Glyphic is self-hosted from the official Google Fonts repository; its SIL Open Font License is included in `docs/assets/fonts/OFL.txt`. Classe's exact computed font was not conclusively identified. Faculty Glyphic is the checkpoint's agreed display-font option, rather than a claim about Classe's proprietary typography.
-- D20/Dungeon Master and playful cat illustrations have unverified redistribution rights. Both retain their upper-right/lower-right frame positions with explicit labeled placeholders. No original third-party illustrations or Classe site code are published.
+- D20/Dungeon Master and playful cat illustrations were recovered losslessly from the original supplied Page 02 HTML. Their redistribution rights remain unverified, so both retain their upper-right/lower-right frame positions with explicit labeled placeholders. See [ASSET-CLEARANCE.md](ASSET-CLEARANCE.md) for exact recovered files, hashes and insertion instructions. No original third-party illustrations or Classe site code are published.
 - The latest ChatGPT runtime `/mnt/data/stray-kitty-classe-design-review/` sources were unavailable in this local environment. Integration uses the available approved Page 02 HTML composition and the latest checkpoint's precise four-node, upper-left-hub and Classe component directions. Typography/frame corrections are independent CSS/SVG implementations.
 - Background is warm cream. Home Hub uses a brighter gold-yellow accent within the agreed trailer-inspired palette; this is a design token, not a claim of an exact colorimetric trailer match.
 

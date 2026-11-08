@@ -113,11 +113,25 @@
     },
     {
       "id": "art.d20",
-      "status": "PLACEHOLDER \u2014 redistribution permission pending"
+      "status": "PLACEHOLDER \u2014 redistribution permission pending",
+      "recovered_filename": "d20-dungeon-master-original.png",
+      "source_status": "Recovered locally from original Page 02 HTML; kept outside public repository",
+      "publication_target": "../assets/illustrations/d20-dungeon-master-original.png",
+      "clearance": "Required before publication; see repository ASSET-CLEARANCE.md"
     },
     {
       "id": "art.playful-cats",
-      "status": "PLACEHOLDER \u2014 redistribution permission pending"
+      "status": "PLACEHOLDER \u2014 redistribution permission pending",
+      "recovered_filename": "playful-cats-original.png",
+      "source_status": "Recovered locally from original Page 02 HTML; kept outside public repository",
+      "publication_target": "../assets/illustrations/playful-cats-original.png",
+      "clearance": "Required before publication; see repository ASSET-CLEARANCE.md"
+    },
+    {
+      "id": "film.opening",
+      "source": "../assets/Stray-Kitty-Android-Final-v02-SFX.mp4",
+      "metadata": "../assets/opening-film.json",
+      "origin": "User-selected complete opening film; authorized for this public presentation"
     }
   ]
 }

@@ -4,7 +4,7 @@ Work only in this separate presentation repository. Never modify the Stray Kitty
 
 Preserve `reference/forward-story-v3/` byte-for-byte. Keep the approved v3 animation player and default 4200ms arrow beat. Avoid framework migrations or unrelated refactoring.
 
-Publish only `docs/` through GitHub Pages. Keep relative asset URLs. Page review links are `?page=02` and `?page=03`; update only the page being reviewed. Do not create additional pages without user instruction.
+Publish only `docs/` through GitHub Pages. Keep relative asset URLs. Page review links are `?page=01`, `?page=02` and `?page=03`; update only the page being reviewed. Do not create additional pages without user instruction.
 
 Read the latest main branch before edits. Keep GitHub as shared source and the existing Notion page as history. Do not create a replacement dashboard.
 
