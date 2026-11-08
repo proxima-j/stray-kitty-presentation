@@ -6,14 +6,14 @@
     "local_verified_at": "2026-11-08T17:13:30.165604+00:00",
     "description": "Ten-page deck: existing seven pages followed by Four Maps, Three Connected Levels and Greybox",
     "publication_status": "LOCAL_VERIFIED / PUBLICATION_PENDING",
-    "verification_notes": "Chrome 1600x900 and 1366x768; original seven scene blocks and engine files unchanged; 4.2s forward/back, wheel, Home/End, help, film with sound/skip, dialogue, Home tabs/media, payment dialog; four simultaneous normal-speed map loops; manual pause and hidden-document simulation; traversal and all three SVG images; uncropped greybox."
+    "verification_notes": "Chrome 1600x900 and 1366x768; original seven scene blocks and engine files unchanged; 4.2s forward/back, wheel, Home/End, help, film with sound/skip, dialogue, Home tabs/media, payment dialog; four simultaneous normal-speed map loops; manual pause and hidden-document simulation; traversal and all three SVG images; uncropped greybox. Public loading exposed script queuing behind existing media; preload hints prioritize the unchanged player scripts."
   },
   "previous": {
     "entry": "previous/",
     "source_commit": "c5fab9e2e9dc6d9e3b459621e369e0f0d409d1c0",
     "description": "Outgoing verified seven-page runtime, including full film, original illustrations, narrative interaction, Home Hub and Payment",
     "publication_status": "SNAPSHOT / PUBLICATION_PENDING",
-    "snapshot_note": "Only asset URLs were rebased for /previous/. Shared media is stored once."
+    "snapshot_note": "Asset URLs rebased for /previous/ and preload hints added for its existing scripts after a public loading stall; outgoing scene content and engine preserved."
   },
   "shared_assets": "assets/",
   "retention": "Two usable decks only. Candidate passed local checks before rotation. Runtime source commit and published-build evidence are finalized after published Current/Previous verification."
