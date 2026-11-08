@@ -6,7 +6,7 @@ GitHub is the shared source for ChatGPT and Codex. GitHub Pages automatically pu
 
 | Version | Preview | Verified source |
 | --- | --- | --- |
-| Current | https://proxima-j.github.io/stray-kitty-presentation/ | Seven-page integration; local candidate verified, publication evidence in `docs/versions.json` |
+| Current | https://proxima-j.github.io/stray-kitty-presentation/ | `93569008888d8e0c94cbb94c525739a1defb8ed2` — verified seven-page deck; deployment 2026-11-08T14:37:59Z |
 | Previous | https://proxima-j.github.io/stray-kitty-presentation/previous/ | `2c1fc278732287a6607666e958622dce9a850cb6` — outgoing verified three-page deck with enlarged original illustrations |
 
 Current supports direct `?page=01` through `?page=07` links. Previous retains `?page=01` through `?page=03`. Stable Current IDs also work as direct links: `roadmap`, `game-flow`, `visual-novel`, `home-hub`, `payment`. [docs/versions.json](docs/versions.json) records verified runtime origins; documentation and asset-only commits do not rotate decks.
@@ -45,7 +45,7 @@ Read the latest main and preserve unrelated changes before editing. Push without
 
 Page 02 D20/cat images are user-owned, publication-approved and published in Current. [ASSET-CLEARANCE.md](ASSET-CLEARANCE.md) retains that authorization record. Faculty Glyphic is self-hosted under its included SIL OFL; Classe's exact font remains unconfirmed.
 
-Notion remains the [existing decision history](https://app.notion.com/p/411e33b0423f81abaa12c4b5b6a75921). Do not create a dashboard, modify the game repo, or start Page 04 without a new instruction.
+Notion remains the [existing decision history](https://app.notion.com/p/411e33b0423f81abaa12c4b5b6a75921). Do not create a dashboard, modify the game repo, or build further pages without a new instruction.
 
 ## Integrated scene interactions
 

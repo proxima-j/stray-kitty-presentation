@@ -1,20 +1,15 @@
-# Temporary design review — proposed Pages 03–07
+# Remaining composition reviews
 
-These are **five separate page previews**, not part of the Current or Previous working presentation versions.
+Roadmap, Game Flow, Visual Novel, Home Hub and Payment are integrated and verified in Current. Their five superseded HTML previews and completed collection brief have been removed after successful publication.
 
-Sequence after the existing Page 02 (Elevator Pitch):
+- [Roadmap — Page 03](../?page=03)
+- [Game Flow — Page 04](../?page=04)
+- [Visual Novel — Page 05](../?page=05)
+- [Home Hub — Page 06](../?page=06)
+- [Payment — Page 07](../?page=07)
+- [Integrated asset provenance](../library/PAGES-03-07-ASSETS.md)
 
-1. [Page 03 — Roadmap](page-03.html): **Part 01 · The Game** and **Part 02 · Technical Walkthrough**.
-2. [Page 04 — Game Flow](page-04.html): approved existing oval gameplay cycle, renumbered.
-3. [Page 05 — Visual Novel](page-05.html): click anywhere in the in-game image placeholder to cycle three states, no separate control bar. Original game screenshots/dialogue still required.
-4. [Page 06 — Home Hub](page-06.html): four progress states; switch to three interactions. **Random Rewards** replaces **Surprise**.
-5. [Page 07 — Payment](page-07.html): three-step screenshot composition; title **Payment**.
-
-Read the [asset checklist](ASSET-REQUESTS.md) before the next Codex implementation phase. No actual gameplay images, recordings or payments have been captured in these previews.
-
-**Lifecycle:** Keep these review previews until Codex implements and verifies the approved pages in Current. Remove `docs/review/` as part of that next completed integration phase, not before. **Current and Previous may still be refined**; neither is permanently frozen. Do not rotate working deck versions for design previews.
-
-The full presentation still uses the original v3 navigation engine in Current. These HTML previews are isolated static compositions.
+Only those completed previews were removed. The Level Design, Events, Combat and UI/UX reviews below remain independent of Current and Previous. Shared review styles/scripts remain because these pages depend on them. Remove each remaining review only after its own integration is published and verified.
 
 ## Approved Level Design asset collection
 
