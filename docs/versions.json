@@ -1,27 +1,20 @@
 {
   "current": {
     "entry": "./",
-    "source_commit": "3ca023d28859b600bd738cb4d14948b1867e21ce",
-    "candidate_base_commit": "c5fab9e2e9dc6d9e3b459621e369e0f0d409d1c0",
-    "local_verified_at": "2026-11-08T17:13:30.165604+00:00",
-    "description": "Ten-page deck: existing seven pages followed by Four Maps, Three Connected Levels and Greybox",
-    "publication_status": "VERIFIED",
-    "verification_notes": "Approved ten-page content, layout, styles and v3 engine preserved. Focused local serve/browser checks: map forward/back, active media playback and exit pause, all three SVG layers, full 60.501s 1920x1080 film with sound/Skip, Page 02 artwork, deferred dialogue state, Home views/clips, Payment preview/original-image dialog. Published default Chrome, without HTTP/2 override: all four map clips started, traversal and three SVG layers displayed, all four optimized Home images loaded; off-screen scene media did not download and no page errors. Current and Previous styles/engine unchanged; no unrelated tests.",
-    "public_verified_at": "2026-11-08T17:43:31.140925+00:00",
-    "verified_pages_build": "2026-11-08T17:42:29Z",
-    "pages_workflow_run": "https://github.com/proxima-j/stray-kitty-presentation/actions/runs/42506245002",
-    "maintenance_summary": "Delivery-only loading fix; no version rotation. Scene/view-scoped image/SVG/poster loading, Play-only full-film download, smaller complete H.264/AAC video copies and high-quality screenshot previews. Originals and Previous retained unchanged."
+    "source_commit": null,
+    "candidate_base_commit": "e6b94ba56ce6f7d9588f67eb4859c659934517f9",
+    "description": "Twelve-page deck: existing ten pages followed by approved Random Events and Combat with companions/advisor",
+    "publication_status": "LOCAL_VERIFIED / PUBLICATION_PENDING",
+    "local_verified_at": "2026-11-08T17:52:55.192867+00:00",
+    "verification_notes": "Chrome 1600x900 and 1366x768, settled layouts, Greybox/Events/Combat forward and reverse, measured reverse stop 4202ms; original image dialog; native 7.6s Reposition and 5.23s Shield clips to completion; advisor before/after arrows and Escape remain local. Original ten scene blocks, v3 engine and global styles byte-identical. New screenshots/figures use scoped on-demand web previews; clips download on click; advisor cards deferred until revealed. No page errors."
   },
   "previous": {
     "entry": "previous/",
-    "source_commit": "c5fab9e2e9dc6d9e3b459621e369e0f0d409d1c0",
-    "description": "Outgoing verified seven-page runtime, including full film, original illustrations, narrative interaction, Home Hub and Payment",
-    "publication_status": "VERIFIED",
-    "snapshot_note": "Outgoing seven-page scene content and engine preserved. Asset URLs rebased; script preload hints, deferred film source and inactive-clip preload policy prevent off-screen media from blocking playback.",
-    "public_verified_at": "2026-11-08T17:30:53.997463+00:00",
-    "verified_pages_build": "2026-11-08T17:25:36Z",
-    "pages_workflow_run": "https://github.com/proxima-j/stray-kitty-presentation/actions/runs/42504857617"
+    "source_commit": "e6b94ba56ce6f7d9588f67eb4859c659934517f9",
+    "description": "Outgoing verified ten-page deck, including Level Design and the approved on-demand/smaller-media loading fix",
+    "publication_status": "SNAPSHOT / PUBLICATION_PENDING",
+    "snapshot_note": "Outgoing ten-page runtime copied after candidate verification. Only asset/font URLs rebased for /previous/; shared assets stored once."
   },
   "shared_assets": "assets/",
-  "retention": "Two usable decks only. Candidate passed local checks before rotation; outgoing seven-page Current is Previous. Both published runtimes verified before superseded map reviews were removed. Documentation/cleanup commits do not rotate decks."
+  "retention": "Two usable decks only. Twelve-page candidate passed focused local verification before outgoing ten-page Current replaced Previous. Public verification pending; documentation-only commits do not rotate decks."
 }

@@ -923,6 +923,29 @@
         "../assets/pages/06/furniture-drag-save-web.mp4",
         "../assets/pages/06/postcard-to-parcel-web.mp4"
       ]
+    },
+    {
+      "id": "media.events-combat.web",
+      "source": "WEB-MEDIA.json",
+      "origin": "Web previews of the latest approved Random Events and Combat review media, integrated as scenes 11 and 12. Same uncropped screenshot/VFX/card content; small pixel figures are lossless; originals retained. Existing native 7.6s Reposition and 5.23s Shield clips reused unchanged.",
+      "approval": "Existing user-approved public assets; integration requested 2026-11-09.",
+      "files": [
+        "../assets/pages/08/01-testing-view.webp",
+        "../assets/pages/08/02-event-choice.webp",
+        "../assets/pages/08/03-event-success.webp",
+        "../assets/pages/08/04-reward-fish-closeup.webp",
+        "../assets/pages/08/05-reward-material-closeup.webp",
+        "../assets/pages/09/battlefield-main.webp",
+        "../assets/pages/09/caster-figure.webp",
+        "../assets/pages/09/caster-star-vfx.webp",
+        "../assets/pages/09/guard-figure.webp",
+        "../assets/pages/09/guard-shield-vfx.webp",
+        "../assets/pages/09/diandian-figure.webp",
+        "../assets/pages/09/diandian-heal-vfx.webp",
+        "../assets/pages/09/advisor-figure.webp",
+        "../assets/pages/09/advisor-01-before.webp",
+        "../assets/pages/09/advisor-02-after.webp"
+      ]
     }
   ]
 }

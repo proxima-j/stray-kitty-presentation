@@ -1,5 +1,7 @@
 # Page 09 — approved combat asset collection
 
+**Integrated 2026-11-09:** Current scene 12 (`combat`) now integrates the latest approved composition, both native-speed demo buttons and the 阿策 Local Fallback before/after reveal. Original collection/review notes below are historical; source paths retain their collection-era 09 labels.
+
 **Original collection approved for GitHub publication on 2026-11-08.** The 2026-11-09 playback update below adds the requested skill clip and review controls. Combat is not integrated into Current or Previous; the approved v3 engine remains unchanged.
 
 [View approved contact sheet](../assets/pages/09/review-contact-sheet.png) · [Play repositioning close-up](../assets/pages/09/reposition-closeup.mp4)

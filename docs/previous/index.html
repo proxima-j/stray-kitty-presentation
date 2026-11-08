@@ -8,18 +8,19 @@
   <link rel="stylesheet" href="library/tokens.css">
   <link rel="stylesheet" href="library/components.css">
   <link rel="stylesheet" href="presentation.css?v=20261108-home-alignment">
-  <link rel="preload" as="script" href="scene-content.js?v=20261109-snapshot-media">
-  <link rel="preload" as="script" href="engine-v3.js?v=20261108-home-alignment">
+  <link rel="stylesheet" href="level-design.css?v=20261109-level-design">
+  <link rel="preload" as="script" href="scene-content.js?v=20261109-on-demand">
+  <link rel="preload" as="script" href="engine-v3.js?v=20261109-level-design">
 </head>
 <body>
 <div id="scrollSpace" class="scroll-space">
- <main id="stage" class="stage" aria-label="Stray Kitty presentation — Pages 01 through 07">
+ <main id="stage" class="stage" aria-label="Stray Kitty presentation — Pages 01 through 10">
   <div id="world" class="world">
    <svg id="roadDrawing" class="route-svg" aria-hidden="true"><defs><clipPath id="revealClip"><rect id="routeReveal" x="0" y="0" width="0" height="2000"/></clipPath></defs><path id="routeGhost" class="route-ghost" d=""/><path id="routeInk" class="route-ink" d="" clip-path="url(#revealClip)"/></svg>
    <section id="opening-film" class="scene scene-film" data-title="Opening Film" data-scene="0" data-page="01" aria-label="Page 01 — Full-screen film">
     <div class="scene-camera"><div class="film-fullscreen">
-      <video id="openingVideo" playsinline preload="auto" poster="../assets/opening-film-poster.jpg" aria-label="Stray Kitty opening film">
-        <source data-film-src="../assets/Stray-Kitty-Android-Final-v02-SFX.mp4" type="video/mp4">
+      <video id="openingVideo" playsinline preload="none" data-media-poster="../assets/opening-film-poster.jpg" aria-label="Stray Kitty opening film">
+        <source data-film-src="../assets/Stray-Kitty-Android-Final-v02-SFX-web.mp4" type="video/mp4">
         Your browser cannot play the opening video.
       </video>
       <button id="playOpeningFilm" class="film-play-button" type="button" aria-label="Play opening film with sound">Play film <span aria-hidden="true">▶</span></button>
@@ -36,8 +37,8 @@
       <p class="closing">For cat lovers and tabletop adventurers alike, it's a world of curiosity, chance, and unexpected friendships.</p>
      </div>
      <div class="pitch-art" aria-label="Tabletop adventure and playful cat illustrations">
-      <div class="folder-frame d20-frame" data-asset-id="art.d20"><span class="folder-tab">TABLETOP ADVENTURE</span><img class="artwork" src="../assets/illustrations/d20-dungeon-master-original.png" alt="Dungeon Master D20 illustration"></div>
-      <div class="ticket-frame cats-frame" data-asset-id="art.playful-cats"><svg class="ticket-outline" viewBox="0 0 400 250" preserveAspectRatio="none" aria-hidden="true"><path d="M20 1 H380 Q399 1 399 20 V95 Q374 95 374 125 Q374 155 399 155 V230 Q399 249 380 249 H20 Q1 249 1 230 V155 Q26 155 26 125 Q26 95 1 95 V20 Q1 1 20 1Z"/></svg><img class="artwork" src="../assets/illustrations/playful-cats-original.png" alt="Playful illustrated cats"></div>
+      <div class="folder-frame d20-frame" data-asset-id="art.d20"><span class="folder-tab">TABLETOP ADVENTURE</span><img class="artwork" data-media-src="../assets/illustrations/d20-dungeon-master-original.webp" alt="Dungeon Master D20 illustration"></div>
+      <div class="ticket-frame cats-frame" data-asset-id="art.playful-cats"><svg class="ticket-outline" viewBox="0 0 400 250" preserveAspectRatio="none" aria-hidden="true"><path d="M20 1 H380 Q399 1 399 20 V95 Q374 95 374 125 Q374 155 399 155 V230 Q399 249 380 249 H20 Q1 249 1 230 V155 Q26 155 26 125 Q26 95 1 95 V20 Q1 1 20 1Z"/></svg><img class="artwork" data-media-src="../assets/illustrations/playful-cats-original.webp" alt="Playful illustrated cats"></div>
      </div>
     </div></div>
    </section>
@@ -74,9 +75,9 @@
      <h2 data-build="text" data-at="0.04">Visual Novel</h2>
      <div class="narrative-shell" data-build="rise" data-at="0.2">
       <button id="dialogueFrame" class="dialogue-frame" type="button" data-local-space aria-label="Next dialogue screenshot" aria-describedby="dialogueState">
-       <img src="../assets/pages/05/friends-dialogue-01.png" alt="Miaomiao and friends celebrate their shared home; original dialogue, state 1 of 3." data-dialogue="0" fetchpriority="high">
-       <img src="../assets/pages/05/friends-dialogue-02.png" alt="Tuanzi encourages Miaomiao to return home; original dialogue, state 2 of 3." data-dialogue="1" hidden>
-       <img src="../assets/pages/05/friends-dialogue-03.png" alt="Miaomiao promises to return and protect their shared kingdom; original dialogue, state 3 of 3." data-dialogue="2" hidden>
+       <img data-media-src="../assets/pages/05/friends-dialogue-01.webp?v=20261109-small" alt="Miaomiao and friends celebrate their shared home; original dialogue, state 1 of 3." data-dialogue="0">
+       <img data-media-src="../assets/pages/05/friends-dialogue-02.webp?v=20261109-small" alt="Tuanzi encourages Miaomiao to return home; original dialogue, state 2 of 3." data-dialogue="1" hidden>
+       <img data-media-src="../assets/pages/05/friends-dialogue-03.webp?v=20261109-small" alt="Miaomiao promises to return and protect their shared kingdom; original dialogue, state 3 of 3." data-dialogue="2" hidden>
       </button>
       <span id="dialogueState" class="sr-only" aria-live="polite">Dialogue 1 of 3. Click or press Enter or Space for the next dialogue.</span>
      </div>
@@ -93,15 +94,15 @@
      </header>
      <div class="home-body" data-build="rise" data-at="0.22">
       <div id="homeGrowth" class="home-view" data-view="growth"><div class="home-gallery growth-gallery">
-       <figure><div class="home-media"><img src="../assets/pages/06/greenhouse-stage-01.png" alt="Initial greenhouse shelter"></div><figcaption>BEGINNING</figcaption></figure>
-       <figure><div class="home-media"><img src="../assets/pages/06/greenhouse-stage-02.png" alt="Early greenhouse repairs"></div><figcaption>REBUILDING</figcaption></figure>
-       <figure><div class="home-media"><img src="../assets/pages/06/greenhouse-stage-03.png" alt="Developed shared greenhouse home"></div><figcaption>GROWING</figcaption></figure>
-       <figure><div class="home-media"><img src="../assets/pages/06/greenhouse-stage-04.png" alt="Final shared-home state with subtle warmer lighting and string lights"></div><figcaption>CELEBRATION</figcaption></figure>
+       <figure><div class="home-media"><img data-media-src="../assets/pages/06/greenhouse-stage-01.webp?v=20261109-small" alt="Initial greenhouse shelter"></div><figcaption>BEGINNING</figcaption></figure>
+       <figure><div class="home-media"><img data-media-src="../assets/pages/06/greenhouse-stage-02.webp?v=20261109-small" alt="Early greenhouse repairs"></div><figcaption>REBUILDING</figcaption></figure>
+       <figure><div class="home-media"><img data-media-src="../assets/pages/06/greenhouse-stage-03.webp?v=20261109-small" alt="Developed shared greenhouse home"></div><figcaption>GROWING</figcaption></figure>
+       <figure><div class="home-media"><img data-media-src="../assets/pages/06/greenhouse-stage-04.webp?v=20261109-small" alt="Final shared-home state with subtle warmer lighting and string lights"></div><figcaption>CELEBRATION</figcaption></figure>
       </div></div>
       <div id="homeResponds" class="home-view" data-view="responds" hidden><div class="home-gallery interaction-gallery">
-       <figure><div class="home-media video-media"><video data-scene-video muted loop playsinline poster="../assets/pages/06/greenhouse-stage-03.png" preload="none" src="../assets/pages/06/cat-reaction.mp4?v=20261108-playback" aria-label="Petting Tuanzi and the companion's response"></video><button class="clip-toggle" type="button" data-local-space aria-label="Pause cat reaction clip">Ⅱ</button></div><figcaption>INTERACTIVE</figcaption></figure>
-       <figure><div class="home-media video-media"><video data-scene-video muted loop playsinline poster="../assets/pages/06/greenhouse-stage-03.png" preload="none" src="../assets/pages/06/postcard-to-parcel.mp4?v=20261108-playback" aria-label="Postcard preparation, sending, parcel and furniture reveal; guaranteed-reward QA example"></video><button class="clip-toggle" type="button" data-local-space aria-label="Pause postcard clip">Ⅱ</button></div><figcaption>RANDOM REWARDS</figcaption></figure>
-       <figure><div class="home-media video-media"><video data-scene-video muted loop playsinline poster="../assets/pages/06/greenhouse-stage-03.png" preload="none" src="../assets/pages/06/furniture-drag-save.mp4?v=20261108-playback" aria-label="Dragging, placing and saving furniture"></video><button class="clip-toggle" type="button" data-local-space aria-label="Pause furniture clip">Ⅱ</button></div><figcaption>CUSTOMIZATION</figcaption></figure>
+       <figure><div class="home-media video-media"><video data-scene-video muted loop playsinline data-media-poster="../assets/pages/06/greenhouse-stage-03.webp?v=20261109-small" preload="none" data-media-src="../assets/pages/06/cat-reaction-web.mp4" aria-label="Petting Tuanzi and the companion's response"></video><button class="clip-toggle" type="button" data-local-space aria-label="Pause cat reaction clip">Ⅱ</button></div><figcaption>INTERACTIVE</figcaption></figure>
+       <figure><div class="home-media video-media"><video data-scene-video muted loop playsinline data-media-poster="../assets/pages/06/greenhouse-stage-03.webp?v=20261109-small" preload="none" data-media-src="../assets/pages/06/postcard-to-parcel-web.mp4" aria-label="Postcard preparation, sending, parcel and furniture reveal; guaranteed-reward QA example"></video><button class="clip-toggle" type="button" data-local-space aria-label="Pause postcard clip">Ⅱ</button></div><figcaption>RANDOM REWARDS</figcaption></figure>
+       <figure><div class="home-media video-media"><video data-scene-video muted loop playsinline data-media-poster="../assets/pages/06/greenhouse-stage-03.webp?v=20261109-small" preload="none" data-media-src="../assets/pages/06/furniture-drag-save-web.mp4" aria-label="Dragging, placing and saving furniture"></video><button class="clip-toggle" type="button" data-local-space aria-label="Pause furniture clip">Ⅱ</button></div><figcaption>CUSTOMIZATION</figcaption></figure>
       </div></div>
      </div>
     </div></div>
@@ -111,13 +112,69 @@
      <div class="section-label" data-build="text" data-at="0.02"><span class="number-pill">07</span> XSOLLA SANDBOX</div>
      <h2 data-build="text" data-at="0.12">Payment</h2>
      <div class="payment-sequence">
-      <figure class="payment-step" data-build="rise" data-at="0.22"><div class="step-frame"><div class="step-tab">01 · Recharge</div><button class="payment-image" type="button" data-full-image="../assets/pages/07/1-recharge.png" data-image-title="01 · Recharge" data-local-space aria-label="Enlarge 01 · Recharge screenshot" title="Enlarge screenshot"><svg viewBox="240 76 1120 748" role="img" aria-label="Selected 60-tuna recharge pack and initial balance 0"><image href="../assets/pages/07/1-recharge.png" width="1600" height="900"/></svg></button></div><figcaption>60-tuna pack</figcaption></figure>
+      <figure class="payment-step" data-build="rise" data-at="0.22"><div class="step-frame"><div class="step-tab">01 · Recharge</div><button class="payment-image" type="button" data-full-image="../assets/pages/07/1-recharge.png" data-image-title="01 · Recharge" data-local-space aria-label="Enlarge 01 · Recharge screenshot" title="Enlarge screenshot"><svg viewBox="240 76 1120 748" role="img" aria-label="Selected 60-tuna recharge pack and initial balance 0"><image data-media-src="../assets/pages/07/1-recharge.webp?v=20261109-small" width="1600" height="900"/></svg></button></div><figcaption>60-tuna pack</figcaption></figure>
       <span class="payment-arrow" data-build="text" data-at="0.38" aria-hidden="true">→</span>
-      <figure class="payment-step" data-build="rise" data-at="0.44"><div class="step-frame"><div class="step-tab">02 · Xsolla Checkout</div><button class="payment-image" type="button" data-full-image="../assets/pages/07/2-checkout.png" data-image-title="02 · Xsolla Checkout" data-local-space aria-label="Enlarge 02 · Xsolla Checkout screenshot" title="Enlarge screenshot"><svg viewBox="895 250 515 485" role="img" aria-label="Xsolla sandbox payment form, sandbox notice and ¥6 payment"><image href="../assets/pages/07/2-checkout.png" width="1600" height="900"/></svg></button></div><figcaption>Xsolla Sandbox</figcaption></figure>
+      <figure class="payment-step" data-build="rise" data-at="0.44"><div class="step-frame"><div class="step-tab">02 · Xsolla Checkout</div><button class="payment-image" type="button" data-full-image="../assets/pages/07/2-checkout.png" data-image-title="02 · Xsolla Checkout" data-local-space aria-label="Enlarge 02 · Xsolla Checkout screenshot" title="Enlarge screenshot"><svg viewBox="895 250 515 485" role="img" aria-label="Xsolla sandbox payment form, sandbox notice and ¥6 payment"><image data-media-src="../assets/pages/07/2-checkout.webp?v=20261109-small" width="1600" height="900"/></svg></button></div><figcaption>Xsolla Sandbox</figcaption></figure>
       <span class="payment-arrow" data-build="text" data-at="0.58" aria-hidden="true">→</span>
-      <figure class="payment-step" data-build="rise" data-at="0.65"><div class="step-frame"><div class="step-tab">03 · Confirmation</div><button class="payment-image" type="button" data-full-image="../assets/pages/07/3-confirmation.png" data-image-title="03 · Confirmation" data-local-space aria-label="Enlarge 03 · Confirmation screenshot" title="Enlarge screenshot"><svg viewBox="240 43 1120 814" role="img" aria-label="Verified balance 60 and successful sandbox payment history"><image href="../assets/pages/07/3-confirmation.png" width="1600" height="900"/></svg></button></div><figcaption>Balance 0 → 60 tuna</figcaption></figure>
+      <figure class="payment-step" data-build="rise" data-at="0.65"><div class="step-frame"><div class="step-tab">03 · Confirmation</div><button class="payment-image" type="button" data-full-image="../assets/pages/07/3-confirmation.png" data-image-title="03 · Confirmation" data-local-space aria-label="Enlarge 03 · Confirmation screenshot" title="Enlarge screenshot"><svg viewBox="240 43 1120 814" role="img" aria-label="Verified balance 60 and successful sandbox payment history"><image data-media-src="../assets/pages/07/3-confirmation.webp?v=20261109-small" width="1600" height="900"/></svg></button></div><figcaption>Balance 0 → 60 tuna</figcaption></figure>
      </div>
     </div></div>
+   </section>
+   <section id="four-maps" class="scene" data-scene="7" data-page="08" data-title="Four Maps" aria-label="Page 08 — Level Design: Four Maps">
+    <div class="scene-camera"><div class="level-design four-maps-review">
+<h2 data-build="text" data-at="0.04">Four Maps</h2>
+<div class="review-body"><div class="map-grid" data-build="rise" data-at="0.2"><figure class="map-card"><div class="map-media">
+<video muted data-scene-video data-map-clip playsinline loop preload="none" aria-label="Rainy Alley actual gameplay clip" data-media-src="../assets/level-design/four-maps/p05-alley-old-huang-web.mp4"></video>
+<button class="clip-toggle" type="button" data-local-space aria-label="Play or pause Rainy Alley video" aria-pressed="false">PLAY</button>
+</div><figcaption><strong>Rainy Alley</strong><span>Old Huang · E interaction</span></figcaption></figure>
+<figure class="map-card"><div class="map-media">
+<video muted data-scene-video data-map-clip playsinline loop preload="none" aria-label="Midnight Market actual gameplay clip" data-media-src="../assets/level-design/four-maps/p05-market-west-descent-web.mp4"></video>
+<button class="clip-toggle" type="button" data-local-space aria-label="Play or pause Midnight Market video" aria-pressed="false">PLAY</button>
+</div><figcaption><strong>Midnight Market</strong><span>L0 → L−1 · West descent</span></figcaption></figure>
+<figure class="map-card"><div class="map-media">
+<video muted data-scene-video data-map-clip playsinline loop preload="none" aria-label="Underground Tunnel actual gameplay clip" data-media-src="../assets/level-design/four-maps/p05-tunnel-space-jump-web.mp4"></video>
+<button class="clip-toggle" type="button" data-local-space aria-label="Play or pause Underground Tunnel video" aria-pressed="false">PLAY</button>
+</div><figcaption><strong>Underground Tunnel</strong><span>Space jump across the gap</span></figcaption></figure>
+<figure class="map-card"><div class="map-media">
+<video muted data-scene-video data-map-clip playsinline loop preload="none" aria-label="Warehouse actual gameplay clip" data-media-src="../assets/level-design/four-maps/p05-warehouse-light-web.mp4"></video>
+<button class="clip-toggle" type="button" data-local-space aria-label="Play or pause Warehouse video" aria-pressed="false">PLAY</button>
+</div><figcaption><strong>Warehouse</strong><span>Switch on the central light</span></figcaption></figure></div></div>
+
+</div></div>
+   </section>
+   <section id="vertical-design" class="scene" data-scene="8" data-page="09" data-title="Three Connected Levels" aria-label="Page 09 — Level Design: Three Connected Levels">
+    <div class="scene-camera"><div class="level-design vertical-map-review">
+<div class="spatial-comparisons" data-build="text" data-at="0.04" role="heading" aria-level="1"><div class="spatial-pair primary"><span>2D View</span><span class="two-way-arrow" aria-hidden="true">↔</span><span>Three-Dimensional Perception</span></div><div class="spatial-pair secondary"><span>Horizontal Exploration</span><span class="two-way-arrow" aria-hidden="true">↔</span><span>Vertical Build</span></div></div>
+<div class="review-body"><div class="vertical-layout">
+<figure class="vertical-stack" data-build="rise" data-at="0.18">
+<object data-media-src="../assets/level-design/chapter2/connected-gameplay-screenshots.svg" type="image/svg+xml" aria-label="Three levels: actual gameplay captures stacked vertically with slight tilt">Actual Rooftop, Street and Underpass screenshots stacked vertically.</object>
+<figcaption>ACTUAL GAME VIEWS · C/F CONNECTED ROUTES</figcaption>
+</figure>
+<div class="vertical-explain" data-build="rise" data-at="0.35">
+<div class="section-kicker">ONE UNINTERRUPTED THREE-LEVEL TRAVERSAL · 7.30 S</div>
+<div class="map-card" style="margin-top:14px"><div class="map-media">
+<video muted data-scene-video data-map-clip playsinline loop preload="none" aria-label="Actual continuous L1 to L0 to L minus 1 gameplay traversal, 7.30 seconds" data-media-src="../assets/level-design/chapter2/p06-market-three-level-western-spine-web.mp4"></video>
+<button class="clip-toggle" type="button" data-local-space aria-pressed="false" aria-label="Play or pause the continuous traversal">PLAY</button>
+</div></div>
+<div class="vertical-steps" aria-label="L1 rooftop to L0 streets to L minus 1 underpass">
+<span class="step"><small>L1</small> Rooftops</span><span class="transfer">C →</span>
+<span class="step"><small>L0</small> Streets</span><span class="transfer">walk · F →</span>
+<span class="step"><small>L−1</small> Underpass</span>
+</div>
+<p class="vertical-note">Two separate floor connections, linked by actual street movement. The footage is a single continuous take.</p>
+</div></div></div>
+
+</div></div>
+   </section>
+   <section id="greybox" class="scene" data-scene="9" data-page="10" data-title="Greybox" aria-label="Page 10 — Level Design: Greybox">
+    <div class="scene-camera"><div class="level-design graybox-review">
+<h2 data-build="text" data-at="0.04">Greybox</h2>
+<div class="review-body"><figure class="graybox-figure" data-build="rise" data-at="0.2">
+<img data-media-src="../assets/level-design/graybox/chapter2-graybox.webp?v=20261109-small" alt="Original supplied Chapter 2 graybox plan with its existing route annotations, shown uncropped">
+<figcaption>CHAPTER 2 · ORIGINAL ANNOTATED GRAYBOX · 1448 × 1086</figcaption>
+</figure></div>
+
+</div></div>
    </section>
   </div>
   <div id="heroCat" class="hero-cat" aria-label="Miaomiao, the original Stray Kitty protagonist" role="img"><img src="../assets/miaomiao.svg" alt=""></div>
@@ -129,6 +186,6 @@
  <div class="screenshot-dialog-heading"><h3 id="screenshotTitle"></h3><button type="button" id="closeScreenshot" aria-label="Close enlarged screenshot">×</button></div>
  <img id="enlargedScreenshot" alt="">
 </dialog>
-<script src="scene-content.js?v=20261109-snapshot-media"></script>
-<script src="engine-v3.js?v=20261108-home-alignment"></script>
+<script src="scene-content.js?v=20261109-on-demand"></script>
+<script src="engine-v3.js?v=20261109-level-design"></script>
 </body></html>

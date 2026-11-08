@@ -1,5 +1,7 @@
 # Random Events — approved asset collection
 
+**Integrated 2026-11-09:** Current scene 11 (`random-events`) now integrates the latest approved Events composition, including original-image enlargement. Original collection notes below are historical; source paths retain their collection-era 08 labels.
+
 Approved for public GitHub upload in chat on 2026-11-08. Assets only; Current, Previous, review-page HTML and the approved v3 engine are unchanged. Page 08 is a working label.
 
 [View asset review board](../assets/pages/08/review-contact-sheet.png)

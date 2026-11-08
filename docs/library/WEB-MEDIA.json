@@ -1,5 +1,5 @@
 {
-  "description": "Current web delivery derivatives; source paths are relative to docs/. Originals remain intact for Previous and full-image viewing.",
+  "description": "Current/Previous web delivery derivatives; source paths are relative to docs/. Original images remain for full-image viewing and provenance.",
   "assets": [
     {
       "source": "assets/illustrations/d20-dungeon-master-original.png",
@@ -323,6 +323,141 @@
           "duration": "11.000000"
         }
       }
+    },
+    {
+      "source": "assets/pages/08/01-testing-view.png",
+      "path": "assets/pages/08/01-testing-view.webp",
+      "kind": "web-image",
+      "original_bytes": 369801,
+      "bytes": 196662,
+      "width": 960,
+      "height": 1139
+    },
+    {
+      "source": "assets/pages/08/02-event-choice.png",
+      "path": "assets/pages/08/02-event-choice.webp",
+      "kind": "web-image",
+      "original_bytes": 652417,
+      "bytes": 80806,
+      "width": 960,
+      "height": 1128
+    },
+    {
+      "source": "assets/pages/08/03-event-success.png",
+      "path": "assets/pages/08/03-event-success.webp",
+      "kind": "web-image",
+      "original_bytes": 568706,
+      "bytes": 65512,
+      "width": 960,
+      "height": 1016
+    },
+    {
+      "source": "assets/pages/08/04-reward-fish-closeup.png",
+      "path": "assets/pages/08/04-reward-fish-closeup.webp",
+      "kind": "web-image",
+      "original_bytes": 62633,
+      "bytes": 6168,
+      "width": 680,
+      "height": 480
+    },
+    {
+      "source": "assets/pages/08/05-reward-material-closeup.png",
+      "path": "assets/pages/08/05-reward-material-closeup.webp",
+      "kind": "web-image",
+      "original_bytes": 75498,
+      "bytes": 7020,
+      "width": 704,
+      "height": 480
+    },
+    {
+      "source": "assets/pages/09/battlefield-main.png",
+      "path": "assets/pages/09/battlefield-main.webp",
+      "kind": "web-image",
+      "original_bytes": 1783609,
+      "bytes": 196568,
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "source": "assets/pages/09/caster-figure.png",
+      "path": "assets/pages/09/caster-figure.webp",
+      "kind": "lossless-image",
+      "original_bytes": 1525,
+      "bytes": 288,
+      "width": 128,
+      "height": 128
+    },
+    {
+      "source": "assets/pages/09/caster-star-vfx.png",
+      "path": "assets/pages/09/caster-star-vfx.webp",
+      "kind": "web-image",
+      "original_bytes": 424411,
+      "bytes": 98700,
+      "width": 825,
+      "height": 470
+    },
+    {
+      "source": "assets/pages/09/guard-figure.png",
+      "path": "assets/pages/09/guard-figure.webp",
+      "kind": "lossless-image",
+      "original_bytes": 1434,
+      "bytes": 268,
+      "width": 128,
+      "height": 128
+    },
+    {
+      "source": "assets/pages/09/guard-shield-vfx.png",
+      "path": "assets/pages/09/guard-shield-vfx.webp",
+      "kind": "web-image",
+      "original_bytes": 48511,
+      "bytes": 10546,
+      "width": 191,
+      "height": 190
+    },
+    {
+      "source": "assets/pages/09/diandian-figure.png",
+      "path": "assets/pages/09/diandian-figure.webp",
+      "kind": "lossless-image",
+      "original_bytes": 1337,
+      "bytes": 240,
+      "width": 128,
+      "height": 128
+    },
+    {
+      "source": "assets/pages/09/diandian-heal-vfx.png",
+      "path": "assets/pages/09/diandian-heal-vfx.webp",
+      "kind": "web-image",
+      "original_bytes": 324763,
+      "bytes": 74056,
+      "width": 600,
+      "height": 440
+    },
+    {
+      "source": "assets/pages/09/advisor-figure.png",
+      "path": "assets/pages/09/advisor-figure.webp",
+      "kind": "lossless-image",
+      "original_bytes": 1416,
+      "bytes": 280,
+      "width": 128,
+      "height": 128
+    },
+    {
+      "source": "assets/pages/09/advisor-01-before.png",
+      "path": "assets/pages/09/advisor-01-before.webp",
+      "kind": "lossless-image",
+      "original_bytes": 60819,
+      "bytes": 34530,
+      "width": 724,
+      "height": 406
+    },
+    {
+      "source": "assets/pages/09/advisor-02-after.png",
+      "path": "assets/pages/09/advisor-02-after.webp",
+      "kind": "lossless-image",
+      "original_bytes": 93670,
+      "bytes": 47148,
+      "width": 724,
+      "height": 694
     }
   ]
 }
