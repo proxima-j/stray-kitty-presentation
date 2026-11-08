@@ -9,7 +9,7 @@ Roadmap, Game Flow, Visual Novel, Home Hub and Payment are integrated and verifi
 - [Payment — Page 07](../?page=07)
 - [Integrated asset provenance](../library/PAGES-03-07-ASSETS.md)
 
-Level Design, Random Events and Combat are also integrated and verified in Current. UI/UX and Technical reviews remain independent of Current and Previous. Shared review styles/scripts remain because these pages depend on them. Remove each remaining review only after its own integration is published and verified.
+Level Design, Random Events, Combat and UI/UX are integrated and verified in Current. Technical reviews remain independent of Current and Previous. Shared review styles/scripts remain because these pages depend on them. Remove each remaining review only after its own integration is published and verified.
 
 ## Approved Level Design asset collection
 
@@ -33,9 +33,13 @@ The approved compositions are normal scenes in Current's unchanged v3 player, af
 
 Verified locally at 1600×900 and 1366×768, then on published Current and Previous in default Chrome. On-demand small previews preserve the approved composition and loading fix. Original PNGs and both native video files remain in place. The two old review URLs redirect to Current; their obsolete context-assembly script, review-only interaction script and stylesheet were removed only after published verification. UI/UX and Technical remain separate.
 
-## UI/UX — two isolated composition previews
+## Integrated UI/UX
 
-- [UX 01 — Four Dice Animations](uiux-01-dice.html): matched 2×2 frames for all four actual outcome animations, with shared size/crop; final game labels and clips pending.
-- [UX 02 — Responsive & Translucent UI](uiux-02-adaptive.html): click **Normal** or **Narrow** to inspect the intended size-change composition; a detail crop highlights the translucent UI. These panels are **illustrative placeholders**, not proof of responsive game behavior.
+- [Page 13 — Dice Roll Animations](../?page=dice-animations): latest approved larger/spaced 2×2 composition, four muted 1.5× loops, English captions and distinct gold/green/purple/rust badges. Native game renderer and genuine QA resolutions; no invented animation. Media pauses on scene exit/document hiding, with the shared manual pause behavior.
+- [Page 14 — Responsive & Translucent UI](../?page=adaptive-interface): one centered game window and Normal/Narrow toggle. Normal uses the verified original capture; Narrow uses the user's selected screenshot, with the event result card. Both retain their own aspect ratios and click-to-enlarge originals. No separate detail panel or responsive gallery.
+- [Begin at Combat](../?page=combat): Combat → Dice → Adaptive, inside the original 4200ms v3 player with one cat/route.
+- [Public asset inventory and provenance](../library/UIUX-ASSETS.md).
 
-Both are design-review pages only. Their working UX labels do not fix final slide numbers. They do not change Current or Previous. Replace placeholders with verified real game captures only after asset collection and approval; do not claim unverified narrow-window support.
+Current contains fourteen pages; Previous retains the outgoing optimized twelve-page deck. Local checks at 1600×900 and 1366×768, followed by actual published Current/Previous checks, passed. The two old UI/UX review URLs now redirect to Current and the unused placeholder stylesheet was removed after verification. Technical reviews and shared review.css remain intact.
+
+The selected normal/narrow images show different interaction states; their pairing is not controlled same-save/same-panel proof of resize behavior. Native emoji glyphs do not render in the captured dice source build; visible genuine weather/particle effects are preserved. Capture limitations are recorded in the inventory.

@@ -6,8 +6,8 @@ GitHub is the shared source for ChatGPT and Codex. GitHub Pages automatically pu
 
 | Version | Preview | Verified source |
 | --- | --- | --- |
-| Current | https://proxima-j.github.io/stray-kitty-presentation/ | Fourteen-page deck; locally verified, public check pending |
-| Previous | https://proxima-j.github.io/stray-kitty-presentation/previous/ | Outgoing twelve-page runtime `3d6109b03032ff71ed98715dbfcebf6bf1906227`; public check pending |
+| Current | https://proxima-j.github.io/stray-kitty-presentation/ | Fourteen-page runtime `cadb3ee78a4a4f8215927af77434fb3ae6eb978d`; published and verified |
+| Previous | https://proxima-j.github.io/stray-kitty-presentation/previous/ | Outgoing twelve-page runtime `3d6109b03032ff71ed98715dbfcebf6bf1906227`; published and verified |
 
 Current supports direct `?page=01` through `?page=14` links. Previous retains `?page=01` through `?page=12`. Stable Current IDs also work as direct links: `roadmap`, `game-flow`, `visual-novel`, `home-hub`, `payment`, `four-maps`, `vertical-design`, `greybox`, `random-events`, `combat`, `dice-animations`, `adaptive-interface`. [docs/versions.json](docs/versions.json) records verified runtime origins; documentation and asset-only commits do not rotate decks.
 
@@ -70,3 +70,5 @@ Published [Pages build 42507196914](https://github.com/proxima-j/stray-kitty-pre
 ## Integrated UI/UX
 
 Combat → [Dice Roll Animations](https://proxima-j.github.io/stray-kitty-presentation/?page=dice-animations) → [Responsive & Translucent UI](https://proxima-j.github.io/stray-kitty-presentation/?page=adaptive-interface), scenes 13–14. Latest user-approved larger/spaced 2×2 dice clips, English colored badges and 1.5× timing are retained. Four clips play only while active and use the shared pause/visibility policy. The single-window Normal/Narrow view uses the original normal screenshot and the user-selected narrow image, at their own aspect ratios, with click-to-enlarge originals. Small screenshot previews load on demand. [UIUX-ASSETS.md](docs/library/UIUX-ASSETS.md) records genuine capture provenance and the selected pair’s limitations. New UI/UX styles/behavior are scoped in `docs/uiux.css` and `docs/uiux.js`; existing v3 globals and the twelve preceding scenes are preserved. Previous is the outgoing twelve-page deck. Technical integration is outside this task.
+
+UI/UX publication verified in default Chrome against [Pages build 42512332800](https://github.com/proxima-j/stray-kitty-presentation/actions/runs/42512332800): four looping clips, scene-exit pause, Normal/Narrow switching, both original-image dialogs and retained twelve-page Previous. The superseded UI/UX review URLs redirect to Current; their now-unused placeholder stylesheet was removed after verification. No further Technical pages were integrated.

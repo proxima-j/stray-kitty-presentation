@@ -1,20 +1,26 @@
 {
   "current": {
     "entry": "./",
-    "source_commit": null,
+    "source_commit": "cadb3ee78a4a4f8215927af77434fb3ae6eb978d",
     "candidate_base_commit": "3d6109b03032ff71ed98715dbfcebf6bf1906227",
     "description": "Fourteen-page deck: approved UI/UX Dice and Adaptive scenes follow Combat",
-    "publication_status": "LOCAL_VERIFIED / PUBLICATION_PENDING",
+    "publication_status": "VERIFIED",
     "local_verified_at": "2026-11-08T18:52:45.795878+00:00",
-    "verification_notes": "Chrome 1600x900 and 1366x768: Combat→Dice→Adaptive and reverse; 4205ms visible-stop transition; four native 1.5x-encoded loops playing; active-scene pause, persistent manual hold; English colored badges; Normal/Narrow toggle, 565px selected original-image dialog, local Space; frames/captions clear unchanged cat/route band. Off-screen screenshots and film remain unloaded. First twelve scene blocks and all global engine/styles/shared interactions unchanged. No page errors."
+    "verification_notes": "Chrome 1600x900 and 1366x768: Combat→Dice→Adaptive and reverse; 4205ms visible-stop transition; four native 1.5x-encoded loops playing; active-scene pause, persistent manual hold; English colored badges; Normal/Narrow toggle, 565px selected original-image dialog, local Space; frames/captions clear unchanged cat/route band. Off-screen screenshots and film remain unloaded. First twelve scene blocks and all global engine/styles/shared interactions unchanged. No page errors. Published default Chrome: fourteen scenes, four dice loops advancing, no off-screen screenshot/film downloads on Dice entry, forward Adaptive transition, loops pause on exit, selected Narrow WebP and original PNG (565px), Normal preview and original PNG (1600px), retained twelve-page Previous at Combat with its image loaded. No page errors. Superseded review URLs redirect to integrated pages after verification.",
+    "public_verified_at": "2026-11-08T18:57:26.453185+00:00",
+    "verified_pages_build": "2026-11-08T18:55:12Z",
+    "pages_workflow_run": "https://github.com/proxima-j/stray-kitty-presentation/actions/runs/42512332800"
   },
   "previous": {
     "entry": "previous/",
     "source_commit": "3d6109b03032ff71ed98715dbfcebf6bf1906227",
     "description": "Outgoing verified twelve-page optimized deck, through Random Events and Combat",
-    "publication_status": "SNAPSHOT / PUBLICATION_PENDING",
-    "snapshot_note": "Outgoing twelve-page runtime copied only after candidate verification. Asset/font URLs rebased for /previous/; shared media stored once."
+    "publication_status": "VERIFIED",
+    "snapshot_note": "Outgoing twelve-page runtime copied only after candidate verification. Asset/font URLs rebased for /previous/; shared media stored once.",
+    "public_verified_at": "2026-11-08T18:57:26.453185+00:00",
+    "verified_pages_build": "2026-11-08T18:55:12Z",
+    "pages_workflow_run": "https://github.com/proxima-j/stray-kitty-presentation/actions/runs/42512332800"
   },
   "shared_assets": "assets/",
-  "retention": "Two usable decks: fourteen-page candidate promoted after local verification, with outgoing twelve-page Current as Previous. Public verification pending. Documentation-only commits do not rotate decks."
+  "retention": "Exactly two verified usable decks: fourteen-page Current and outgoing optimized twelve-page Previous. Candidate verified before rotation; both public decks checked before retiring obsolete UI/UX placeholder previews. Shared assets stored once. Documentation-only commits do not rotate decks."
 }
