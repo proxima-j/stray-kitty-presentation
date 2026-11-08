@@ -32,3 +32,10 @@ This separate section collection contains the four map clips, actual Chapter 2 s
 These are design-review layouts built directly from the user-selected **already collected** media. They are not part of Current or Previous and do not cause version rotation. Keep them until the next approved Codex integration phase is verified; delete only as part of the completed integration/cleanup step.
 
 Level Design preview revised: 4 muted autoplay map clips; 7.30-second muted autoplay traversal; C/F dashed connectors on a review-only SVG; exact paired ↔ wording; “Greybox” heading. No Current or Previous changes.
+
+## Events and Combat — composition previews (asset placeholders)
+
+- [Events 01 — Random Events](events-01-random.html): testing-view trigger zone; event card → successful result card; only the two supplement close-ups are zoom emphasis; short event-to-combat and butterfly-effect labels. All game screenshots pending verification.
+- [Combat 02 — Friends + 阿策](combat-02-friends-ai.html): real-time tactical tower defense mechanisms; before/drag/after still sequence; 2–3 cat figure + ability/VFX profile placeholders; click **And one more friend…** to reveal 阿策 and toggle the advice-card before/after placeholders.
+
+These are **composition reviews only**, with working labels 08–09 that may shift when integrating the approved Roadmap/Home Hub/Payment and Level Design pages. No original footage or model output is invented. Current, Previous and existing review pages remain untouched. After approval, Codex replaces placeholders with verified genuine assets and integrates into the approved v3 deck; do not rotate versions for these reviews.
