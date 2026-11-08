@@ -81,7 +81,19 @@
     // Off-screen clips must not occupy the connection pool ahead of the player.
     // The existing scene controller selects Home clips when their view is active;
     // repositioning starts only when the presenter clicks its mechanic button.
-    deck.body.querySelectorAll('video').forEach(video => { video.preload = 'none'; });
+    deck.body.querySelectorAll('video').forEach(video => {
+      video.preload = 'none';
+      if (video.matches('[data-scene-video]')) {
+        video.dataset.contextSrc = video.getAttribute('src');
+        video.removeAttribute('src');
+      }
+    });
+    const entry = here.searchParams.get('page') || (isCombat ? 'combat' : '05');
+    world.querySelectorAll('.scene').forEach(scene => {
+      const visible = scene.dataset.page === entry || scene.id === entry;
+      scene.querySelectorAll('img').forEach(image => { image.loading = visible ? 'eager' : 'lazy'; });
+    });
+    deck.getElementById('heroCat').querySelector('img').fetchPriority = 'high';
     document.body.replaceChildren(...deck.body.childNodes);
     document.body.classList.add('context-preview');
     // Re-select media sources after adopting the parsed nodes into this page.
@@ -93,6 +105,21 @@
     // Register local controls before the unchanged v3 document-key handler.
     await script('showcase-interactions.js');
     await script('../scene-content.js');
+    const home = document.getElementById('home-hub');
+    let visibleScene = '';
+    function loadHomeClips() {
+      if (visibleScene !== 'home-hub' || home.querySelector('[data-view="responds"]').hidden) return;
+      home.querySelectorAll('video[data-context-src]').forEach(video => {
+        video.src = video.dataset.contextSrc;
+        delete video.dataset.contextSrc;
+        video.load();
+      });
+    }
+    home.querySelectorAll('[data-home-view]').forEach(button => button.addEventListener('click', loadHomeClips));
+    window.addEventListener('presentation:viewchange', event => {
+      visibleScene = event.detail.visible ? event.detail.id : '';
+      loadHomeClips();
+    });
     await script('../engine-v3.js');
     document.documentElement.classList.remove('context-loading');
   } catch (error) {
