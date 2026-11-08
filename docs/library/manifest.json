@@ -772,6 +772,90 @@
         "height": 4390
       },
       "limitations": "Captions describe local collection. Approval/upload subsequently recorded in PAGE-09-COMBAT-ASSETS.md; no page integration."
+    },
+    {
+      "id": "events.trigger.testing",
+      "source": "../assets/pages/08/01-testing-view.png",
+      "origin": "Actual Rainy Alley map; configured rainy_random_west circle (170,487,r23). Private browser diagnostic derived from existing G debug painter; unrelated collision overlays omitted.",
+      "source_commit": "1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e",
+      "use": "Page 08 — Random Events (working page label); asset collection only",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved the collected Random Events assets and explicitly authorized public upload to the existing shared GitHub presentation repository in chat on 2026-11-08. Project gameplay/UI captures; no third-party reference imagery or font files bundled.",
+      "metadata": {
+        "width": 1500,
+        "height": 1780
+      },
+      "limitations": "Independent testing-view capture, not proof that this circle drew the selected event."
+    },
+    {
+      "id": "events.choice.feeder-bowl",
+      "source": "../assets/pages/08/02-event-choice.png",
+      "origin": "Authentic unresolved feeder_bowl_event card, attempt 4 in isolated local QA session. Both choices visible; selected carry_back after capture.",
+      "source_commit": "1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e",
+      "use": "Page 08 — Random Events (working page label); asset collection only",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved the collected Random Events assets and explicitly authorized public upload to the existing shared GitHub presentation repository in chat on 2026-11-08. Project gameplay/UI captures; no third-party reference imagery or font files bundled.",
+      "metadata": {
+        "width": 1200,
+        "height": 1410
+      },
+      "limitations": "Official QA selected the card; normal RNG and outcome rules retained."
+    },
+    {
+      "id": "events.result.feeder-bowl",
+      "source": "../assets/pages/08/03-event-success.png",
+      "origin": "Same recorded interaction as events.choice.feeder-bowl: carry_back; normal dice 5+5=10, success; fish +1 and material +1.",
+      "source_commit": "1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e",
+      "use": "Page 08 — Random Events (working page label); asset collection only",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved the collected Random Events assets and explicitly authorized public upload to the existing shared GitHub presentation repository in chat on 2026-11-08. Project gameplay/UI captures; no third-party reference imagery or font files bundled.",
+      "metadata": {
+        "width": 1200,
+        "height": 1270
+      },
+      "limitations": "Resources only; no carried battle item or direct combat modifier granted."
+    },
+    {
+      "id": "events.reward.fish",
+      "source": "../assets/pages/08/04-reward-fish-closeup.png",
+      "origin": "Exact crop (1430,1150,1600,1270) from the genuine 3840x2160 successful-result screenshot; fish +1.",
+      "source_commit": "1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e",
+      "use": "Page 08 — Random Events (working page label); asset collection only",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved the collected Random Events assets and explicitly authorized public upload to the existing shared GitHub presentation repository in chat on 2026-11-08. Project gameplay/UI captures; no third-party reference imagery or font files bundled.",
+      "metadata": {
+        "width": 680,
+        "height": 480
+      },
+      "limitations": "Native crop 170x120, enlarged 4x for review; no new source detail or rewritten text."
+    },
+    {
+      "id": "events.reward.material",
+      "source": "../assets/pages/08/05-reward-material-closeup.png",
+      "origin": "Exact crop (1602,1150,1778,1270) from the SAME genuine successful-result screenshot; material +1.",
+      "source_commit": "1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e",
+      "use": "Page 08 — Random Events (working page label); asset collection only",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved the collected Random Events assets and explicitly authorized public upload to the existing shared GitHub presentation repository in chat on 2026-11-08. Project gameplay/UI captures; no third-party reference imagery or font files bundled.",
+      "metadata": {
+        "width": 704,
+        "height": 480
+      },
+      "limitations": "Native crop 176x120, enlarged 4x for review; no new source detail or rewritten text."
+    },
+    {
+      "id": "events.review.contact-sheet",
+      "source": "../assets/pages/08/review-contact-sheet.png",
+      "origin": "Approved local review board using the five curated assets; footer retains Battle Support → Combat and Butterfly Effect → Future Encounters.",
+      "source_commit": "1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e",
+      "use": "Page 08 — Random Events (working page label); asset collection only",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved the collected Random Events assets and explicitly authorized public upload to the existing shared GitHub presentation repository in chat on 2026-11-08. Project gameplay/UI captures; no third-party reference imagery or font files bundled.",
+      "metadata": {
+        "width": 3000,
+        "height": 2240
+      },
+      "limitations": "Asset review reference only; not a newly implemented presentation page. Footer describes broader presentation direction, not an additional reward from this result."
     }
   ]
 }
