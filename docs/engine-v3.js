@@ -19,6 +19,7 @@
   const helpClose = document.getElementById('helpClose');
   const paceSelect = document.getElementById('paceSelect');
   const scenes = [...document.querySelectorAll('.scene')];
+  const homeSceneIndex = scenes.findIndex(scene => scene.id === 'home-hub');
 
   // Integration geometry is derived from the registry; v3 pacing stays unchanged.
   scenes.forEach((scene, index) => { scene.style.left = `${index * 100}vw`; });
@@ -143,7 +144,10 @@
     world.style.transform = `translate3d(${-cameraOffset}px,0,0)`;
     const forwardX = cameraOffset + viewportW * 0.24;
     routeReveal.setAttribute('width', String(forwardX));
-    hero.style.top = `${roadY(forwardX) - catHeight + 3}px`;
+    // Give Home Hub captions space; cat and dotted route move together, easing at entry/exit.
+    const homeClearance = homeSceneIndex < 0 ? 0 : 60 * smooth(1 - Math.abs(cameraDistanceNow - homeSceneIndex) / .18);
+    routeSvg.style.translate = `0 ${homeClearance}px`;
+    hero.style.top = `${roadY(forwardX) - catHeight + 3 + homeClearance}px`;
 
     // Walk only while the camera actually moves. Pausing a manual scroll no
     // longer leaves the cat bouncing indefinitely in place.

@@ -1,6 +1,8 @@
 html,body{font-family:var(--body);background:var(--paper);color:var(--ink)}
 /* The v3 player owns scrolling; font/media layout updates must not anchor the camera elsewhere. */
 html{overflow-anchor:none}
+/* Focus stays inside the camera; native hidden-container scrolling must not pan a scene. */
+.stage,.scene{overflow:clip}
 .scroll-space{height:225vh}.world,.route-svg{width:200vw}
 .scene{font-family:var(--body)}
 .pitch-layout{position:absolute;left:7.4%;right:7.4%;top:7.5%;bottom:23%;display:grid;grid-template-columns:minmax(0,1.62fr) minmax(0,.9fr);gap:5.4vw}
@@ -73,7 +75,7 @@ html{overflow-anchor:none}
 .home-content[data-home-mode="responds"] .home-view{height:100%}
 .interaction-gallery{display:block;position:relative;height:100%}
 .interaction-gallery figure{position:absolute;width:min(39vw,58vh)}
-.interaction-gallery figure:nth-child(1){left:0;bottom:6%}
+.interaction-gallery figure:nth-child(1){left:0;bottom:0}
 .interaction-gallery figure:nth-child(2){right:0;top:0}
 .interaction-gallery figure:nth-child(3){right:0;bottom:0}
 .clip-toggle{position:absolute;right:9px;bottom:9px;width:30px;height:30px;border:1px solid var(--paper);border-radius:50%;background:var(--ink);color:var(--paper);font:14px/1 var(--body);cursor:pointer;opacity:0;transition:opacity .12s}
