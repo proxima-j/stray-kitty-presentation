@@ -43,7 +43,6 @@ h1{font:400 clamp(39px,4.3vw,70px)/1.1 var(--display);letter-spacing:-.048em;mar
 .pod-count{font:400 clamp(10px,.9vw,13px)/1.2 var(--body);color:var(--muted);text-align:right}
 .node-card h2{font:400 clamp(23px,2.05vw,35px)/1.12 var(--display);letter-spacing:-.035em;margin:0}
 .node-card p{font:400 clamp(13px,1.1vw,18px)/1.35 var(--body);color:var(--muted);margin:0}
-.service-type{margin-top:auto;padding-top:10px;border-top:1px solid var(--gold);width:100%;font:400 clamp(11px,.94vw,15px)/1.45 var(--body);color:var(--ink)}
 .connector{align-self:center;justify-self:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;color:var(--accent);font:400 27px/1 Arial,sans-serif}
 .connector small{font:400 11px/1.2 var(--body);color:var(--muted);white-space:nowrap}
 .storage{display:flex;align-items:center;justify-content:center;text-align:center;gap:10px;flex:0 0 auto;min-height:47px;margin-top:10px;padding:9px 12px;border:1px dashed var(--line);border-radius:12px;background:rgba(207,166,106,.1)}
@@ -58,9 +57,6 @@ h1{font:400 clamp(39px,4.3vw,70px)/1.1 var(--display);letter-spacing:-.048em;mar
 .evidence-head{display:flex;align-items:baseline;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:10px}
 .evidence h3{margin:0;font:400 12px/1.4 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
 .evidence-date{font:400 12px/1.35 var(--body);color:var(--muted)}
-.proof-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
-.proof{border:1px solid var(--line);border-radius:99px;display:flex;align-items:center;gap:8px;justify-content:center;min-width:0;padding:10px 7px;font:400 clamp(11px,.86vw,14px)/1.25 var(--body);white-space:nowrap}
-.proof-mark{font-size:16px;color:#51735e}
 .evidence-notes{display:flex;justify-content:space-between;gap:20px;align-items:baseline;flex-wrap:wrap;margin-top:9px;font:400 11px/1.4 var(--body);color:var(--muted)}
 .evidence-notes a{color:var(--ink);text-underline-offset:3px}
 .review-route{position:absolute;left:0;right:0;bottom:clamp(24px,4.7vh,49px);border-top:3px dotted var(--accent);opacity:.6;pointer-events:none}
@@ -75,14 +71,12 @@ h1{font-size:clamp(36px,3.8vw,59px);margin-top:10px}
 .cluster-bottom{padding-top:7px}
 .evidence{padding-top:8px}
 .evidence-head{margin-bottom:7px}
-.proof{padding:7px 5px}
 }
 @media(max-width:1100px){
 .application-grid{grid-template-columns:minmax(0,1fr) 25px minmax(0,1fr) 25px minmax(0,1fr);gap:7px}
 .connector{font-size:21px}.connector small{font-size:9px}
 .node-card{padding:13px 12px}
 .node-card h2{font-size:clamp(18px,2.25vw,28px)}
-.proof-list{grid-template-columns:repeat(2,minmax(0,1fr))}
 .cluster-bottom{align-items:flex-start}
 }
 @media(max-width:675px){
@@ -92,23 +86,11 @@ h1{font-size:clamp(36px,3.8vw,59px);margin-top:10px}
 .connector{transform:rotate(90deg)}
 .node-card{min-height:135px}
 .cluster-foot{text-align:left}
-.proof-list{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 
 /* The outer box is a Deployment; the dashed inner box is the Pod.
    Service and PVC are independent Kubernetes resources, not inside the Pod. */
 .component{gap:0}
-.service-type{
-  flex:0 0 auto;
-  border:1px solid var(--line);
-  border-radius:999px;
-  background:rgba(255,255,255,.12);
-  margin:0 0 8px;
-  padding:7px 7px;
-  width:100%;
-  text-align:center;
-  font:400 clamp(10px,.83vw,13px)/1.32 var(--body);
-}
 .deployment-shell{
   flex:1 1 auto;min-height:0;
   display:flex;flex-direction:column;
@@ -176,7 +158,6 @@ h1{font-size:clamp(36px,3.8vw,59px);margin-top:10px}
   .volume-link{flex-basis:20px}
   .volume-line{height:18px}
   .storage{min-height:38px;padding:6px 6px}
-  .service-type{margin-bottom:6px;padding:5px 5px}
 }
 @media(max-width:1100px){
   .deployment-heading{gap:5px}
@@ -206,7 +187,7 @@ h1{font-size:clamp(36px,3.8vw,59px);margin-top:10px}
  </div>
  <div class="application-grid">
   <div class="component" aria-label="Frontend application Kubernetes resources">
-    <div class="service-type">SERVICE · LoadBalancer · 80 / 443</div>
+    
     <section class="deployment-shell" aria-label="Frontend Deployment with one Pod">
       <div class="deployment-heading">
         <span class="component-number">01</span>
@@ -224,9 +205,9 @@ h1{font-size:clamp(36px,3.8vw,59px);margin-top:10px}
       <span>1Gi · RWO · certificate state</span>
     </div>
   </div>
-  <div class="connector" aria-hidden="true"><span>→</span><small>/api</small></div>
+  <div class="connector" aria-hidden="true"><span>→</span><small>game requests</small></div>
   <div class="component" aria-label="Game API application Kubernetes resources">
-    <div class="service-type">SERVICE · ClusterIP · 8080</div>
+    
     <section class="deployment-shell" aria-label="Game API Deployment with one Pod">
       <div class="deployment-heading">
         <span class="component-number">02</span>
@@ -244,9 +225,9 @@ h1{font-size:clamp(36px,3.8vw,59px);margin-top:10px}
       <span>1Gi · RWO · save data</span>
     </div>
   </div>
-  <div class="connector" aria-hidden="true"><span>→</span><small>internal</small></div>
+  <div class="connector" aria-hidden="true"><span>→</span><small>payments</small></div>
   <div class="component" aria-label="Payment application Kubernetes resources">
-    <div class="service-type">SERVICE · ClusterIP · 8082</div>
+    
     <section class="deployment-shell" aria-label="Payment Deployment with one Pod">
       <div class="deployment-heading">
         <span class="component-number">03</span>
@@ -271,15 +252,9 @@ h1{font-size:clamp(36px,3.8vw,59px);margin-top:10px}
  </div>
 </section>
 <section class="evidence" aria-label="November 7 deployment evidence">
- <div class="evidence-head"><h3>DEPLOYMENT VERIFIED</h3><span class="evidence-date">November 7, 2026 · ~23:37 China time</span></div>
- <div class="proof-list">
-   <div class="proof"><span class="proof-mark">✓</span>Three application rollouts</div>
-   <div class="proof"><span class="proof-mark">✓</span>Payment /readyz</div>
-   <div class="proof"><span class="proof-mark">✓</span>Public /healthz</div>
-   <div class="proof"><span class="proof-mark">✓</span>release.json: deployed</div>
- </div>
+ <div class="evidence-head"><h3>VERIFIED RELEASE · THREE APPLICATIONS DEPLOYED</h3><span class="evidence-date">November 7, 2026</span></div>
  <div class="evidence-notes">
-  <span>Pods are replaceable; their mounted PVCs retain data. November 7 release evidence, not a live Pod/PVC-status check.</span>
+  <span>Based on the November 7 release record; current cluster status was not independently inspected.</span>
   <span><a href="https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/pipelines/8015" target="_blank" rel="noopener">Pipeline #8015</a> · <a href="https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/jobs/29905" target="_blank" rel="noopener">Deploy job #29905</a></span>
  </div>
 </section>
