@@ -1,0 +1,4 @@
+* text=auto
+# Keep the approved baseline byte-identical across checkouts.
+reference/** -text
+docs/engine-v3.css -text
