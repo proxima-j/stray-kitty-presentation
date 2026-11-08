@@ -94,6 +94,102 @@ h1{font-size:clamp(36px,3.8vw,59px);margin-top:10px}
 .cluster-foot{text-align:left}
 .proof-list{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
+
+/* The outer box is a Deployment; the dashed inner box is the Pod.
+   Service and PVC are independent Kubernetes resources, not inside the Pod. */
+.component{gap:0}
+.service-type{
+  flex:0 0 auto;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:rgba(255,255,255,.12);
+  margin:0 0 8px;
+  padding:7px 7px;
+  width:100%;
+  text-align:center;
+  font:400 clamp(10px,.83vw,13px)/1.32 var(--body);
+}
+.deployment-shell{
+  flex:1 1 auto;min-height:0;
+  display:flex;flex-direction:column;
+  gap:clamp(9px,1.3vh,15px);
+  padding:clamp(11px,1.2vw,19px);
+  border:var(--border) solid var(--ink);
+  border-radius:var(--frame-radius);
+  background:rgba(255,255,255,.16);
+}
+.deployment-heading{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 10px;align-items:center}
+.deployment-heading h2{
+  margin:0;
+  font:400 clamp(19px,1.65vw,29px)/1.15 var(--display);
+  letter-spacing:-.03em;
+}
+.replica-label{
+  grid-column:1/-1;
+  font:400 clamp(9px,.78vw,12px)/1.3 var(--body);
+  letter-spacing:.07em;
+  color:var(--muted);
+}
+.pod-shell{
+  min-height:0;flex:1 1 auto;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:clamp(10px,1.7vh,18px);
+  padding:clamp(10px,1.1vw,17px);
+  background:rgba(244,230,199,.6);
+  border:1px dashed var(--line);
+  border-radius:12px;
+}
+.pod-tag{font:400 11px/1.2 var(--body);letter-spacing:.12em;color:var(--muted)}
+.container-list{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;width:100%}
+.container-chip{
+  flex:0 1 auto;
+  padding:clamp(8px,.8vw,13px) clamp(8px,1vw,16px);
+  border:1px solid var(--ink);
+  border-radius:10px;
+  background:#eadbb9;
+  text-align:center;
+  font:400 clamp(12px,1vw,17px)/1.25 var(--display);
+  white-space:nowrap;
+}
+.volume-link{
+  flex:0 0 27px;
+  position:relative;display:flex;align-items:center;justify-content:center;
+  margin:0 auto;width:100%;
+}
+.volume-line{height:24px;border-left:2px dashed var(--accent)}
+.volume-link small{position:absolute;left:calc(50% + 10px);font:400 10px/1.2 var(--body);color:var(--muted)}
+.storage{
+  flex:0 0 auto;
+  width:100%;min-height:45px;
+  margin:0;padding:9px 8px;
+  background:rgba(207,166,106,.13);
+  border:1.5px dashed var(--line);
+  border-radius:11px;
+  display:flex;flex-direction:column;gap:3px;align-items:center;justify-content:center;
+}
+.storage strong{font:400 clamp(14px,1.1vw,18px)/1.2 var(--display)}
+.storage span{font:400 clamp(10px,.8vw,13px)/1.3 var(--body)}
+@media(max-height:810px){
+  .deployment-shell{gap:7px;padding:10px}
+  .pod-shell{gap:7px;padding:8px}
+  .container-chip{padding:7px 10px}
+  .volume-link{flex-basis:20px}
+  .volume-line{height:18px}
+  .storage{min-height:38px;padding:6px 6px}
+  .service-type{margin-bottom:6px;padding:5px 5px}
+}
+@media(max-width:1100px){
+  .deployment-heading{gap:5px}
+  .deployment-heading h2{font-size:clamp(18px,2.1vw,26px)}
+  .container-list{gap:5px}
+  .container-chip{font-size:clamp(10px,1.1vw,14px);padding:7px 8px}
+  .storage span{font-size:10px}
+}
+@media(max-width:675px){
+  .deployment-shell{min-height:180px}
+  .pod-shell{min-height:100px}
+}
+
 </style>
 </head>
 <body>
@@ -101,7 +197,7 @@ h1{font-size:clamp(36px,3.8vw,59px);margin-top:10px}
 <header>
  <div class="section-label"><span class="number-pill">03</span>TECHNICAL WALKTHROUGH / DEPLOYMENT</div>
  <h1>Kubernetes Deployment</h1>
- <p class="subtitle">Three application services with persistent storage</p>
+ <p class="subtitle">Three Deployments · Pods, containers and persistent storage</p>
 </header>
 <section class="cluster" aria-label="Configured Stray Kitty application topology in team preview namespace">
  <div class="cluster-top">
@@ -109,39 +205,69 @@ h1{font-size:clamp(36px,3.8vw,59px);margin-top:10px}
   <span class="cluster-meta">1 replica per Deployment · Recreate strategy</span>
  </div>
  <div class="application-grid">
-  <div class="component">
-   <section class="node-card" aria-label="Frontend application Pod">
-    <div class="node-heading"><span class="component-number">01</span><span class="pod-count">POD · 2 CONTAINERS</span></div>
-    <h2>Frontend</h2>
-    <p>nginx + certificate sidecar</p>
-    <div class="service-type">LoadBalancer · public 80 / 443</div>
-   </section>
-   <div class="storage" aria-label="TLS persistent volume claim"><strong>TLS PVC</strong><span>1Gi · RWO</span></div>
+  <div class="component" aria-label="Frontend application Kubernetes resources">
+    <div class="service-type">SERVICE · LoadBalancer · 80 / 443</div>
+    <section class="deployment-shell" aria-label="Frontend Deployment with one Pod">
+      <div class="deployment-heading">
+        <span class="component-number">01</span>
+        <h2>Frontend</h2>
+        <span class="replica-label">DEPLOYMENT · 1 REPLICA</span>
+      </div>
+      <div class="pod-shell">
+        <span class="pod-tag">POD · 2 CONTAINERS</span>
+        <div class="container-list"><span class="container-chip">nginx</span><span class="container-chip">certbot sidecar</span></div>
+      </div>
+    </section>
+    <div class="volume-link" aria-hidden="true"><span class="volume-line"></span><small>mount</small></div>
+    <div class="storage" aria-label="certificate state persistent volume claim">
+      <strong>TLS PVC</strong>
+      <span>1Gi · RWO · certificate state</span>
+    </div>
   </div>
   <div class="connector" aria-hidden="true"><span>→</span><small>/api</small></div>
-  <div class="component">
-   <section class="node-card" aria-label="Game API application Pod">
-    <div class="node-heading"><span class="component-number">02</span><span class="pod-count">POD · 1 CONTAINER</span></div>
-    <h2>Game API</h2>
-    <p>Go · game rules and progress</p>
-    <div class="service-type">ClusterIP · 8080</div>
-   </section>
-   <div class="storage" aria-label="Game save persistent volume claim"><strong>Game PVC</strong><span>1Gi · RWO</span></div>
+  <div class="component" aria-label="Game API application Kubernetes resources">
+    <div class="service-type">SERVICE · ClusterIP · 8080</div>
+    <section class="deployment-shell" aria-label="Game API Deployment with one Pod">
+      <div class="deployment-heading">
+        <span class="component-number">02</span>
+        <h2>Game API</h2>
+        <span class="replica-label">DEPLOYMENT · 1 REPLICA</span>
+      </div>
+      <div class="pod-shell">
+        <span class="pod-tag">POD · 1 CONTAINER</span>
+        <div class="container-list"><span class="container-chip">Go game</span></div>
+      </div>
+    </section>
+    <div class="volume-link" aria-hidden="true"><span class="volume-line"></span><small>mount</small></div>
+    <div class="storage" aria-label="save data persistent volume claim">
+      <strong>Game PVC</strong>
+      <span>1Gi · RWO · save data</span>
+    </div>
   </div>
   <div class="connector" aria-hidden="true"><span>→</span><small>internal</small></div>
-  <div class="component">
-   <section class="node-card" aria-label="Payment application Pod">
-    <div class="node-heading"><span class="component-number">03</span><span class="pod-count">POD · 1 CONTAINER</span></div>
-    <h2>Payment</h2>
-    <p>paymentd · ledger and callbacks</p>
-    <div class="service-type">ClusterIP · 8082</div>
-   </section>
-   <div class="storage" aria-label="Payment ledger persistent volume claim"><strong>Payment PVC</strong><span>1Gi · RWO</span></div>
+  <div class="component" aria-label="Payment application Kubernetes resources">
+    <div class="service-type">SERVICE · ClusterIP · 8082</div>
+    <section class="deployment-shell" aria-label="Payment Deployment with one Pod">
+      <div class="deployment-heading">
+        <span class="component-number">03</span>
+        <h2>Payment</h2>
+        <span class="replica-label">DEPLOYMENT · 1 REPLICA</span>
+      </div>
+      <div class="pod-shell">
+        <span class="pod-tag">POD · 1 CONTAINER</span>
+        <div class="container-list"><span class="container-chip">paymentd</span></div>
+      </div>
+    </section>
+    <div class="volume-link" aria-hidden="true"><span class="volume-line"></span><small>mount</small></div>
+    <div class="storage" aria-label="payment ledger persistent volume claim">
+      <strong>Payment PVC</strong>
+      <span>1Gi · RWO · payment ledger</span>
+    </div>
   </div>
  </div>
  <div class="cluster-bottom">
    <div class="agent"><strong>Datadog Agent</strong><span>Separately managed Deployment + ClusterIP Service</span></div>
-   <div class="cluster-foot">Application target: 3 Pods · 4 containers · 3 Services · 3 PVCs</div>
+   <div class="cluster-foot">Application target: 3 Deployments · 3 Pods · 4 containers · 3 Services · 3 PVCs</div>
  </div>
 </section>
 <section class="evidence" aria-label="November 7 deployment evidence">
@@ -153,7 +279,7 @@ h1{font-size:clamp(36px,3.8vw,59px);margin-top:10px}
    <div class="proof"><span class="proof-mark">✓</span>release.json: deployed</div>
  </div>
  <div class="evidence-notes">
-  <span>Recorded release, not a live Pod or PVC-status check. Public /healthz tests frontend availability.</span>
+  <span>Pods are replaceable; their mounted PVCs retain data. November 7 release evidence, not a live Pod/PVC-status check.</span>
   <span><a href="https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/pipelines/8015" target="_blank" rel="noopener">Pipeline #8015</a> · <a href="https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/jobs/29905" target="_blank" rel="noopener">Deploy job #29905</a></span>
  </div>
 </section>
