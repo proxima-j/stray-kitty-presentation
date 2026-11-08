@@ -8,23 +8,58 @@
   const after = document.getElementById('advisorAfter');
   const step = document.getElementById('advisorStep');
   const reposition = document.getElementById('repositionTrigger');
+  const skills = document.getElementById('skillsTrigger');
   const video = document.getElementById('repositionVideo');
   const source = document.getElementById('repositionSource');
-  let state = 0, playback = 0;
-  for (const button of [trigger, close, next, before, reposition]) button.dataset.localSpace = '';
+  const demos = [
+    {button: reposition, src: video.getAttribute('src'), label: 'Reposition', caption: 'REPOSITION · SEPARATE TAKE · 1×'},
+    {button: skills, src: skills.dataset.demoSrc, label: 'Activate Skills', caption: 'BANBAN · SHIELD · SEPARATE TAKE · 1×'}
+  ];
+  let state = 0, playback = 0, activeDemo = null, bufferingTimer = 0, retryable = false;
+  for (const button of [trigger, close, next, before, reposition, skills]) button.dataset.localSpace = '';
   function stopReposition() {
-    playback++; video.pause(); video.hidden = true; source.hidden = true;
-    reposition.setAttribute('aria-pressed', 'false');
+    playback++; clearTimeout(bufferingTimer); activeDemo = null; retryable = false;
+    video.pause(); video.hidden = true; source.hidden = true;
+    demos.forEach(demo => { demo.button.setAttribute('aria-pressed', 'false'); demo.button.removeAttribute('aria-busy'); });
   }
-  reposition.addEventListener('click', async () => {
-    if (!video.hidden) { stopReposition(); return; }
-    const request = ++playback;
+  function showBuffering() {
+    if (!activeDemo) return;
+    source.hidden = false;
+    source.textContent = `${video.currentTime > 0 ? 'Buffering' : 'Loading'} ${activeDemo.label}…`;
+    activeDemo.button.setAttribute('aria-busy', 'true');
+    clearTimeout(bufferingTimer);
+    bufferingTimer = setTimeout(() => {
+      if (!activeDemo || video.readyState >= 3) return;
+      retryable = true;
+      source.textContent = `Still buffering — click ${activeDemo.label} to retry.`;
+    }, 15000);
+  }
+  function showFailure() {
+    if (!activeDemo) return;
+    clearTimeout(bufferingTimer); retryable = true;
+    video.hidden = true; source.hidden = false;
+    activeDemo.button.removeAttribute('aria-busy');
+    source.textContent = `Clip unavailable — click ${activeDemo.label} to retry.`;
+  }
+  demos.forEach(demo => demo.button.addEventListener('click', async () => {
+    if (activeDemo === demo && !retryable) { stopReposition(); return; }
+    stopReposition(); activeDemo = demo;
+    const request = playback;
+    video.src = demo.src; video.load();
     video.currentTime = 0; video.playbackRate = 1; video.muted = true;
-    video.hidden = false; source.hidden = false; reposition.setAttribute('aria-pressed', 'true');
-    try { await video.play(); } catch (error) { if (request === playback) stopReposition(); }
+    video.setAttribute('aria-label', `${demo.label}: genuine continuous clip, separate take at the same stage, normal speed`);
+    video.hidden = false; demo.button.setAttribute('aria-pressed', 'true'); showBuffering();
+    try { await video.play(); } catch (error) { if (request === playback) showFailure(); }
+  }));
+  video.addEventListener('waiting', showBuffering);
+  video.addEventListener('stalled', showBuffering);
+  video.addEventListener('playing', () => {
+    if (!activeDemo) return;
+    clearTimeout(bufferingTimer); retryable = false;
+    activeDemo.button.removeAttribute('aria-busy'); source.textContent = activeDemo.caption;
   });
   video.addEventListener('ended', stopReposition);
-  video.addEventListener('error', stopReposition);
+  video.addEventListener('error', showFailure);
   function render() {
     layer.hidden = state === 0;
     trigger.setAttribute('aria-expanded', String(state > 0));

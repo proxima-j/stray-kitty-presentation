@@ -6,6 +6,7 @@
   const deckURL = new URL('../index.html', here);
   const isCombat = here.pathname.endsWith('combat-02-friends-ai.html');
   const otherURL = new URL(isCombat ? 'events-01-random.html' : 'combat-02-friends-ai.html', here);
+  otherURL.searchParams.set('v', 'combat-playback-20261109');
   const current = document.querySelector('main.showcase-review').cloneNode(true);
   async function read(url) {
     const response = await fetch(url);
@@ -13,8 +14,8 @@
     return parser.parseFromString(await response.text(), 'text/html');
   }
   function resolveMedia(root, base) {
-    root.querySelectorAll('[src],[href],[poster],[data-full-image]').forEach(node => {
-      for (const attr of ['src', 'href', 'poster', 'data-full-image']) {
+    root.querySelectorAll('[src],[href],[poster],[data-full-image],[data-demo-src]').forEach(node => {
+      for (const attr of ['src', 'href', 'poster', 'data-full-image', 'data-demo-src']) {
         const value = node.getAttribute(attr);
         if (value && !value.startsWith('#')) node.setAttribute(attr, new URL(value, base).href);
       }
@@ -23,7 +24,9 @@
   async function script(path) {
     await new Promise((resolve, reject) => {
       const node = document.createElement('script');
-      node.src = new URL(path, here).href;
+      const url = new URL(path, here);
+      if (path === 'showcase-interactions.js') url.searchParams.set('v', 'combat-playback-20261109');
+      node.src = url.href;
       node.onload = resolve; node.onerror = reject;
       document.body.append(node);
     });
@@ -31,7 +34,9 @@
   function preloadPlayer() {
     return Promise.all(['showcase-interactions.js', '../scene-content.js', '../engine-v3.js'].map(path => new Promise((resolve, reject) => {
       const link = document.createElement('link');
-      link.rel = 'preload'; link.as = 'script'; link.href = new URL(path, here).href;
+      const url = new URL(path, here);
+      if (path === 'showcase-interactions.js') url.searchParams.set('v', 'combat-playback-20261109');
+      link.rel = 'preload'; link.as = 'script'; link.href = url.href;
       link.onload = resolve; link.onerror = reject; document.head.append(link);
     })));
   }

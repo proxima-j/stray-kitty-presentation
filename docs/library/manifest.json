@@ -614,20 +614,21 @@
     {
       "id": "combat.reposition.closeup",
       "source": "../assets/pages/09/reposition-closeup.mp4",
-      "origin": "New isolated market.battle attempt; real Banban B5→B6 native pointer drag. Source 1920×1080; crop x=600,y=300,w=960,h=540, nearest-neighbor enlargement; complete 1× sequence.",
+      "origin": "New isolated market.battle attempt; real Banban B5→B6 native pointer drag. Source 1920×1080; crop x=600,y=300,w=960,h=540, nearest-neighbor enlargement; complete 1× sequence. Web delivery export on 2026-11-09 uses the original native 960x540 crop without enlargement, with unchanged full 7.6-second action and fast-start H.264.",
       "source_commit": "1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e",
       "use": "Page 09 — Combat / Companions / 阿策",
       "status": "APPROVED / PUBLISHED",
       "permission": "User approved the revised combat asset package and explicitly authorized GitHub upload in chat on 2026-11-08.",
       "metadata": {
-        "width": 1600,
-        "height": 900,
+        "width": 960,
+        "height": 540,
         "duration_seconds": 7.6,
         "codec": "H.264",
         "audio": false,
-        "speed_multiplier": 1
+        "speed_multiplier": 1,
+        "bytes": 418587
       },
-      "limitations": "Same stage/build/layout as the stills, separate attempt. Left goal/outer HUD omitted by close-up."
+      "limitations": "Same stage/build/layout as the stills, separate attempt. Left goal/outer HUD omitted by close-up. High-quality 1600x900 master remains local; published file replaces the old enlarged derivative to reduce buffering."
     },
     {
       "id": "combat.companion.caster.figure",
@@ -856,6 +857,25 @@
         "height": 2240
       },
       "limitations": "Asset review reference only; not a newly implemented presentation page. Footer describes broader presentation direction, not an additional reward from this result."
+    },
+    {
+      "id": "combat.skill.activation.closeup",
+      "source": "../assets/pages/09/skill-activation-closeup.mp4",
+      "origin": "New isolated market.battle / market_boss capture on 2026-11-09. Native click on Banban’s charged Shield control, followed by the actual cyan Shield release. Source full frame 1920x1080, crop x900,y300,w720,h406. Energy naturally charged to 100 then consumed on release.",
+      "source_commit": "1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e",
+      "use": "Combat review: Activate Skills button; same battlefield frame",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User explicitly requested a short authentic skill-activation close-up in the shared public preview on 2026-11-09. Project-owned game capture.",
+      "metadata": {
+        "width": 720,
+        "height": 406,
+        "duration_seconds": 5.233333,
+        "codec": "H.264",
+        "audio": false,
+        "speed_multiplier": 1,
+        "bytes": 249804
+      },
+      "limitations": "Separate attempt at the same stage; not frame-perfect continuation of the battlefield still. Built-in inspection temporarily slows the simulation while its menu is open; activation returns to the normal base speed. No editorial retiming, energy patch, fake cursor, external model or source change."
     }
   ]
 }

@@ -45,7 +45,8 @@
 .combat-step{border:var(--border) solid var(--ink);border-radius:18px;padding:12px 15px;background:var(--paper);text-align:left;min-height:80px}
 .combat-step b{display:block;font:400 clamp(17px,1.4vw,23px)/1.2 var(--display)}
 .combat-step small{display:block;font:14px/1.35 var(--body);margin-top:8px;color:var(--muted)}
-button.combat-step{cursor:pointer}
+button.combat-step{position:relative;cursor:pointer;padding-right:30px}
+button.combat-step::after{content:'▶';position:absolute;top:12px;right:10px;font:11px var(--body);color:var(--accent)}
 button.combat-step:is(:hover,[aria-pressed=true]){background:var(--gold)}
 .combat-profiles{display:grid;grid-template-rows:repeat(3,minmax(0,1fr)) auto;gap:16px;min-width:0;min-height:0;height:100%}
 .profile{position:relative;display:grid;grid-template-columns:64px minmax(0,1fr) minmax(0,1.1fr);grid-template-rows:minmax(0,1fr);align-items:center;gap:12px;padding:12px;border:var(--border) solid var(--ink);border-radius:18px;min-height:0;background:var(--paper)}

@@ -1,17 +1,18 @@
 # Page 09 — approved combat asset collection
 
-**Approved for GitHub publication on 2026-11-08.** This is an asset upload only; Page 09 is not integrated into Current or Previous. The review HTML and approved v3 engine remain unchanged.
+**Original collection approved for GitHub publication on 2026-11-08.** The 2026-11-09 playback update below adds the requested skill clip and review controls. Combat is not integrated into Current or Previous; the approved v3 engine remains unchanged.
 
 [View approved contact sheet](../assets/pages/09/review-contact-sheet.png) · [Play repositioning close-up](../assets/pages/09/reposition-closeup.mp4)
 
 ## Inventory
 
-10 PNG assets + 1 silent H.264 MP4, plus one PNG contact sheet. Original source captures, full-frame recording, isolated saves and helper scripts remain outside this repository. No duplicate full-frame VFX/card screenshots or retired reposition stills uploaded.
+10 PNG assets + 2 silent H.264 MP4s, plus one historical PNG contact sheet. Original source captures, full-frame recordings, isolated saves and helper scripts remain outside this repository. No duplicate full-frame VFX/card screenshots or retired reposition stills uploaded.
 
 | Asset ID | Repository path | Resolution / duration |
 | --- | --- | --- |
 | `combat.battlefield.main` | [docs/assets/pages/09/battlefield-main.png](../assets/pages/09/battlefield-main.png) | 1920×1080 |
-| `combat.reposition.closeup` | [docs/assets/pages/09/reposition-closeup.mp4](../assets/pages/09/reposition-closeup.mp4) | 1600×900, 7.6s, 1× |
+| `combat.reposition.closeup` | [docs/assets/pages/09/reposition-closeup.mp4](../assets/pages/09/reposition-closeup.mp4) | 960×540, 7.6s, 1×; 418,587 bytes |
+| `combat.skill.activation.closeup` | [docs/assets/pages/09/skill-activation-closeup.mp4](../assets/pages/09/skill-activation-closeup.mp4) | 720×406, 5.23s, native timing |
 | `combat.companion.caster.figure` | [docs/assets/pages/09/caster-figure.png](../assets/pages/09/caster-figure.png) | 128×128 |
 | `combat.companion.caster.vfx` | [docs/assets/pages/09/caster-star-vfx.png](../assets/pages/09/caster-star-vfx.png) | 825×470 |
 | `combat.companion.guard.figure` | [docs/assets/pages/09/guard-figure.png](../assets/pages/09/guard-figure.png) | 128×128 |
@@ -24,6 +25,16 @@
 | `combat.review.contact-sheet` | [docs/assets/pages/09/review-contact-sheet.png](../assets/pages/09/review-contact-sheet.png) | 3200×4390 |
 
 ## Provenance
+
+### Playback and skill clip update — 2026-11-09
+
+The user requested diagnosis of the stationary-looking battlefield and a short clickable skill demonstration. The battlefield starts as a still; the mechanic buttons start their clips. On the tested public connection, the old video stayed at time 0 / readyState 0 with waiting/stalled events and no decoder error. Its public response was HTTP 200, `video/mp4`, with byte-range support; its MP4 already had a leading `moov` atom. This is evidence of media delivery/buffering on that connection, not evidence of an animation-engine failure. The old interaction also hid errors without feedback.
+
+The repositioning file now uses its original native 960×540 crop directly from the unchanged local full-frame WebM master. Full 7.6-second action, 1× timing, H.264/yuv420p and fast-start are retained; no crop-content or action changes. File size falls from 2,787,735 to 418,587 bytes (~85% reduction). The previous enlarged 1600×900 high-quality master remains in the local Combat collection; it is not duplicated publicly. Historical contact-sheet metadata describes that original enlarged derivative.
+
+The new **Activate Skills** clip records Banban's actual `罐盖护盾 / Shield` release in another isolated `market.battle` / `market_boss` attempt, existing game `main` at `1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e`, on 2026-11-09. Separate loopback services and a new private save; normal energy charging, no game-source, energy or rule patches. The native skill button reads energy 100/100 before the click; it falls to 3.5 by the next sampled frame, with the genuine cyan release visible. Capture starts with the real menu, records the native click, and holds the real effect. Original 1920×1080 continuous WebM → crop x=900,y=300,width=720,height=406; no editorial retiming or invented cursor. The game's own menu inspection temporarily slows simulation to ×0.5; activation returns to the normal base ×1. The outcome is the implemented self-shield (60 for 8s), not healing. Private full-frame source and evidence stay local.
+
+Both review buttons use one player inside the existing battlefield frame. Loading/buffering and retry states are visible; ended clips return to the still. Same-stage separate takes remain identified. Current, Previous, game code and the v3 engine remain unchanged.
 
 - Game: local `main` at `1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e`, captured 2026-11-08; fresh Go API/Vite build, private local save and isolated browser.
 - Main battlefield, all three VFX sources and the two advice cards belong to one authentic Midnight Market attempt. Skill energy accumulated through the normal simulation.

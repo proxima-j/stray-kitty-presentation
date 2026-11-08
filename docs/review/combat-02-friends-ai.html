@@ -3,7 +3,7 @@
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <script>document.documentElement.classList.add("context-loading")</script>
 <meta name="robots" content="noindex"><title>Stray Kitty — Combat + Friends + AI · Composition Review</title>
-<link rel="stylesheet" href="review.css"><link rel="stylesheet" href="showcase-preview.css?v=context-02"></head>
+<link rel="stylesheet" href="review.css"><link rel="stylesheet" href="showcase-preview.css?v=combat-playback-20261109"></head>
 <body>
 <main class="review-page showcase-review combat-review">
  <h1>Real-Time Tactical Tower Defense</h1>
@@ -16,14 +16,14 @@
     <div class="tabframe" data-tab="BATTLEFIELD · REPOSITIONING IN ACTION">
      <div class="combat-shot">
       <img class="battlefield-image" src="../assets/pages/09/battlefield-main.png" alt="Authentic Midnight Market real-time battle with companions, enemies and ability controls">
-      <video id="repositionVideo" class="battle-reposition" src="../assets/pages/09/reposition-closeup.mp4" muted playsinline preload="none" aria-label="Continuous 7.6-second Banban repositioning demonstration, separate attempt at the same stage, normal speed" hidden></video>
-      <span class="reposition-source" id="repositionSource" hidden>REPOSITION · SEPARATE TAKE · 1×</span>
+      <video id="repositionVideo" class="battle-reposition" src="../assets/pages/09/reposition-closeup.mp4?v=web-20261109" poster="../assets/pages/09/battlefield-main.png" muted playsinline preload="none" aria-label="Continuous Banban repositioning demonstration, separate attempt at the same stage, normal speed" hidden></video>
+      <span class="reposition-source" id="repositionSource" role="status" aria-live="polite" hidden></span>
      </div>
     </div>
     <div class="combat-steps" aria-label="Combat mechanic labels">
      <button class="combat-step" id="repositionTrigger" type="button" aria-controls="repositionVideo" aria-pressed="false" title="Play the real repositioning demonstration in the battlefield frame"><b>Reposition</b><small>Move cats during battle</small></button>
      <div class="combat-step"><b>Build Energy</b><small>Abilities charge automatically</small></div>
-     <div class="combat-step"><b>Activate Skills</b><small>Trigger each cat's ability</small></div>
+     <button class="combat-step" id="skillsTrigger" type="button" data-demo-src="../assets/pages/09/skill-activation-closeup.mp4" aria-controls="repositionVideo" aria-pressed="false" title="Play Banban's real Shield activation in the battlefield frame"><b>Activate Skills</b><small>Trigger each cat's ability</small></button>
     </div>
    </section>
    <section class="combat-profiles" aria-label="Three companions and their authentic ability effects">
@@ -63,5 +63,5 @@
   <div class="advisor-actions"><button id="advisorNext" class="advisor-next" type="button">Show answer →</button><span class="advisor-step" id="advisorStep">1 / 2</span></div>
  </aside>
 </main>
-<script src="showcase-context.js?v=media-02"></script>
+<script src="showcase-context.js?v=combat-playback-20261109"></script>
 </body></html>
