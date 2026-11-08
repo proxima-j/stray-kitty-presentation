@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="color-scheme" content="light">
-  <title>Stray Kitty — Page 02 · Elevator Pitch</title>
+  <title>Stray Kitty — Presentation</title>
   <link rel="stylesheet" href="engine-v3.css">
   <link rel="stylesheet" href="library/tokens.css">
   <link rel="stylesheet" href="library/components.css">
@@ -11,10 +11,20 @@
 </head>
 <body>
 <div id="scrollSpace" class="scroll-space">
- <main id="stage" class="stage" aria-label="Stray Kitty presentation — Pages 02 and 03">
+ <main id="stage" class="stage" aria-label="Stray Kitty presentation — Pages 01 through 03">
   <div id="world" class="world">
    <svg id="roadDrawing" class="route-svg" aria-hidden="true"><defs><clipPath id="revealClip"><rect id="routeReveal" x="0" y="0" width="0" height="2000"/></clipPath></defs><path id="routeGhost" class="route-ghost" d=""/><path id="routeInk" class="route-ink" d="" clip-path="url(#revealClip)"/></svg>
-   <section class="scene" data-scene="0" data-page="02" aria-label="Page 02 — Elevator Pitch">
+   <section class="scene scene-film" data-scene="0" data-page="01" aria-label="Page 01 — Full-screen film">
+    <div class="scene-camera"><div class="film-fullscreen">
+      <video id="openingVideo" playsinline preload="metadata" poster="assets/trailer-still.jpg" aria-label="Stray Kitty opening film">
+        <source src="assets/Stray-Kitty-Android-Final-v02-SFX.mp4" type="video/mp4">
+        <source src="assets/trailer-8s-preview.mp4" type="video/mp4">
+        Your browser cannot play the opening video.
+      </video>
+      <button id="playOpeningFilm" class="film-play-button" type="button" aria-label="Play opening film with sound">Play film <span aria-hidden="true">▶</span></button>
+    </div></div>
+   </section>
+   <section class="scene" data-scene="1" data-page="02" aria-label="Page 02 — Elevator Pitch">
     <div class="scene-camera"><div class="pitch-layout">
      <div class="pitch-text">
       <div class="section-label"><span class="number-pill">02</span> THE GAME / ELEVATOR PITCH</div>
@@ -29,7 +39,7 @@
      </div>
     </div></div>
    </section>
-   <section class="scene" data-scene="1" data-page="03" aria-label="Page 03 — Game Flow">
+   <section class="scene" data-scene="2" data-page="03" aria-label="Page 03 — Game Flow">
     <div class="scene-camera"><figure class="game-flow" data-build="rise" data-at="0.1">
      <svg viewBox="0 0 1400 700" role="img" aria-labelledby="flowTitle flowDesc">
       <title id="flowTitle">Game flow</title><desc id="flowDesc">Story, Map Exploration, Narrative and Random Events, Combat, then Story. Home Hub is separate, above-left, with one optional-access arrow toward open space in the loop.</desc>

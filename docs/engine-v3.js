@@ -12,6 +12,7 @@
   const routeReveal = document.getElementById('routeReveal');
   const hero = document.getElementById('heroCat');
   const video = document.getElementById('openingVideo');
+  const filmPlay = document.getElementById('playOpeningFilm');
   const helpButton = document.getElementById('helpButton');
   const helpPanel = document.getElementById('helpPanel');
   const helpClose = document.getElementById('helpClose');
@@ -158,7 +159,7 @@
     // Video stops decoding as the opening exits, reducing scroll jank.
     if (progress > 0.16 || document.hidden) {
       if (video && !video.paused) video.pause();
-    } else if (video && video.paused && !reducedMotion && !document.hidden && progress <= 0.005) {
+    } else if (video && video.muted && video.paused && !reducedMotion && !document.hidden && progress <= 0.005) {
       video?.play().catch(() => {});
     }
     world.dataset.distance = cameraDistanceNow.toFixed(4);
@@ -177,7 +178,7 @@
         url.searchParams.set('page', page);
         history.replaceState(null, '', url);
       }
-      document.title = `Stray Kitty — Page ${page} · ${activeIndex ? 'Game Flow' : 'Elevator Pitch'}`;
+      document.title = `Stray Kitty — Page ${page} · ${page === '01' ? 'Opening Film' : page === '02' ? 'Elevator Pitch' : 'Game Flow'}`;
     }
   }
 
@@ -286,6 +287,15 @@
     requestFrame();
   }
 
+  if (video && filmPlay) {
+    filmPlay.addEventListener('click', () => {
+      if (video.ended) video.currentTime = 0;
+      video.muted = false;
+      video.play().catch(() => { filmPlay.hidden = false; });
+    });
+    video.addEventListener('play', () => { filmPlay.hidden = true; });
+    video.addEventListener('ended', () => { filmPlay.hidden = false; filmPlay.textContent = 'Replay film'; });
+  }
   helpButton.addEventListener('click', () => showHelp(helpPanel.hidden));
   helpClose.addEventListener('click', () => showHelp(false));
   paceSelect.addEventListener('change', () => { beatDurationMs = Number(paceSelect.value); });
@@ -329,5 +339,5 @@
   previousDistance = cameraDistance(renderedProgress);
   updateView(renderedProgress, 0);
   requestFrame();
-  video?.play().catch(() => {});
+  if (video?.muted) video.play().catch(() => {});
 })();

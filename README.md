@@ -3,6 +3,7 @@
 Shared source for ChatGPT and Codex. Review the hosted presentation instead of downloading HTML or PNG revisions.
 
 - Live entry: https://proxima-j.github.io/stray-kitty-presentation/
+- Page 01: https://proxima-j.github.io/stray-kitty-presentation/?page=01
 - Page 02: https://proxima-j.github.io/stray-kitty-presentation/?page=02
 - Page 03: https://proxima-j.github.io/stray-kitty-presentation/?page=03
 - Component library: [docs/library](docs/library), with a machine-readable [manifest](docs/library/manifest.json).
@@ -12,7 +13,7 @@ Shared source for ChatGPT and Codex. Review the hosted presentation instead of d
 
 Both connected GitHub and local Git were verified as `proxima-j` during setup. Local access has admin/push permission. ChatGPT can read and update files using its connected GitHub tools; Codex can use normal Git. Read the latest `main` before changing files. Scope revisions to the page under review, commit them to this repository, and review the same direct URL after deployment. In connector updates, read the current blob SHA before replacing a file. In Git, pull before editing and push without force. GitHub Pages automatically publishes `main:/docs`.
 
-Only Pages 02–03 are implemented. The root URL starts at Page 02; arrows move between the two pages. Both remain in design review until Jenny approves the live result.
+Pages 01–03 now have a navigable structure. Page 01 is a full-screen film opening with user-initiated audio playback; it currently falls back to the approved v3 eight-second preview excerpt until Codex adds the final Windows-local video `Stray-Kitty-Android-Final-v02-SFX.mp4`. Page 02–03 remain under review.
 
 ## Run locally / offline
 

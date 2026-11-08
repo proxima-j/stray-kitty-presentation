@@ -18,3 +18,16 @@ html,body{font-family:var(--body);background:var(--paper);color:var(--ink)}
 .help-panel{background:var(--paper);border-color:var(--line);font-family:var(--body)}
 .help-button:focus-visible{opacity:1;outline:2px solid var(--ink)}
 @media(max-height:780px){.pitch-layout{top:6.5%}.pitch-text h1{margin-top:17px;margin-bottom:16px}.pitch-text .story{margin-top:18px}.pitch-text .closing{margin-top:21px}}
+
+/* Page 01: a full-viewport film. No persistent slideshow chrome. */
+.scroll-space{height:350vh}
+.world,.route-svg{width:300vw}
+.scene-film{background:#0b0b0b}
+.film-fullscreen{position:absolute;inset:0;background:#0b0b0b}
+.film-fullscreen video{display:block;width:100%;height:100%;object-fit:contain;background:#0b0b0b}
+.film-play-button{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);padding:18px 34px;border:1px solid rgba(244,230,199,.7);border-radius:999px;background:rgba(15,20,17,.86);color:#f4e6c7;font:400 clamp(19px,2vw,30px)/1.2 var(--display);cursor:pointer;white-space:nowrap;z-index:3}
+.film-play-button span{margin-left:8px}
+.film-play-button[hidden]{display:none}
+.film-play-button:hover,.film-play-button:focus-visible{background:rgba(25,43,34,.95);outline:2px solid var(--gold);outline-offset:4px}
+#world[data-scene="0"] .route-svg{opacity:0}
+.stage:has(#world[data-scene="0"]) .hero-cat{opacity:0}
