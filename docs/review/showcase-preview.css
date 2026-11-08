@@ -7,7 +7,7 @@
 .showcase-review .micro{font:12px/1.4 var(--body);color:var(--muted)}
 .showcase-review .arrow-inline{font:400 30px/1 var(--display);color:var(--accent);text-align:center}
 .showcase-review .tabframe{padding-top:29px;border:0;border-radius:0;background:transparent}
-.showcase-review .tabframe::before{top:0;left:0;height:29px;background:var(--paper);font:400 14px/1.4 var(--body);letter-spacing:.05em;padding:6px 16px;border-color:var(--ink)}
+.showcase-review .tabframe::before{box-sizing:border-box;top:0;left:0;height:29px;background:var(--paper);font:400 14px/1.3 var(--body);letter-spacing:.05em;padding:4px 16px;border-color:var(--ink)}
 .showcase-review button{font-family:inherit;color:var(--ink)}
 .showcase-review button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 /* Full, uncropped event cards; two separate, legible resource details. */
