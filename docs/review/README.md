@@ -21,3 +21,12 @@ The full presentation still uses the original v3 navigation engine in Current. T
 [Open the approved media board](level-design-assets.html) · [Asset provenance and inventory](../library/LEVEL-DESIGN-ASSETS.md).
 
 This separate section collection contains the four map clips, actual Chapter 2 screenshot stack and traversal, floor artworks and the single development graybox. It uses section-based paths under `docs/assets/level-design/` because earlier Level Design working numbers 05–07 differ from the newer narrative/Home Hub/payment drafts above. Those drafts and both working decks are unchanged. This is asset publication, not final deck-page integration.
+
+## Level Design three-page composition previews
+
+- [Map 01 — Four Maps](map-01-four-maps.html)
+- [Map 02 — Three Connected Levels](map-02-vertical.html)
+- [Map 03 — The Graybox](map-03-graybox.html)
+- [Selection and preview notes](MAP-COMPOSITION.md)
+
+These are design-review layouts built directly from the user-selected **already collected** media. They are not part of Current or Previous and do not cause version rotation. Keep them until the next approved Codex integration phase is verified; delete only as part of the completed integration/cleanup step.
