@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Stray Kitty — Presentation</title>
+  <link rel="stylesheet" href="engine-v3.css">
+  <link rel="stylesheet" href="library/tokens.css">
+  <link rel="stylesheet" href="library/components.css">
+  <link rel="stylesheet" href="presentation.css">
+</head>
+<body>
+<div id="scrollSpace" class="scroll-space">
+ <main id="stage" class="stage" aria-label="Stray Kitty presentation — Pages 01 through 03">
+  <div id="world" class="world">
+   <svg id="roadDrawing" class="route-svg" aria-hidden="true"><defs><clipPath id="revealClip"><rect id="routeReveal" x="0" y="0" width="0" height="2000"/></clipPath></defs><path id="routeGhost" class="route-ghost" d=""/><path id="routeInk" class="route-ink" d="" clip-path="url(#revealClip)"/></svg>
+   <section class="scene scene-film" data-scene="0" data-page="01" aria-label="Page 01 — Full-screen film">
+    <div class="scene-camera"><div class="film-fullscreen">
+      <video id="openingVideo" playsinline preload="auto" poster="../assets/opening-film-poster.jpg" aria-label="Stray Kitty opening film">
+        <source src="../assets/Stray-Kitty-Android-Final-v02-SFX.mp4" type="video/mp4">
+        Your browser cannot play the opening video.
+      </video>
+      <button id="playOpeningFilm" class="film-play-button" type="button" aria-label="Play opening film with sound">Play film <span aria-hidden="true">▶</span></button>
+      <button id="skipOpeningFilm" class="film-skip-button" type="button">Skip film →</button>
+    </div></div>
+   </section>
+   <section class="scene" data-scene="1" data-page="02" aria-label="Page 02 — Elevator Pitch">
+    <div class="scene-camera"><div class="pitch-layout">
+     <div class="pitch-text">
+      <div class="section-label"><span class="number-pill">02</span> THE GAME / ELEVATOR PITCH</div>
+      <h1>Stray Kitty</h1>
+      <p class="intro"><strong>Stray Kitty</strong> is a pixel-art adventure that combines tabletop RPG-inspired map exploration and dice-driven encounters with real-time tactical combat and home building.</p>
+      <p class="story">Our story begins with a very ordinary cat problem: an irresistible smell of tuna. One rainy adventure later, Miaomiao is lost. As she explores unfamiliar places and helps other cats along the way, her search for home gradually becomes a journey to build one together.</p>
+      <p class="closing">For cat lovers and tabletop adventurers alike, it's a world of curiosity, chance, and unexpected friendships.</p>
+     </div>
+     <div class="pitch-art" aria-label="Reserved illustration frames">
+      <div class="folder-frame d20-frame" data-asset-id="art.d20"><span class="folder-tab">TABLETOP ADVENTURE</span><div class="asset-placeholder" role="img" aria-label="Dungeon Master D20 illustration placeholder; publication rights pending"><strong>D20 / Dungeon Master</strong><small>Illustration placeholder<br>Publication rights pending</small></div></div>
+      <div class="ticket-frame cats-frame" data-asset-id="art.playful-cats"><svg class="ticket-outline" viewBox="0 0 400 250" preserveAspectRatio="none" aria-hidden="true"><path d="M20 1 H380 Q399 1 399 20 V95 Q374 95 374 125 Q374 155 399 155 V230 Q399 249 380 249 H20 Q1 249 1 230 V155 Q26 155 26 125 Q26 95 1 95 V20 Q1 1 20 1Z"/></svg><div class="asset-placeholder" role="img" aria-label="Playful cat illustration placeholder; publication rights pending"><strong>Playful cats</strong><small>Illustration placeholder<br>Publication rights pending</small></div></div>
+     </div>
+    </div></div>
+   </section>
+   <section class="scene" data-scene="2" data-page="03" aria-label="Page 03 — Game Flow">
+    <div class="scene-camera"><figure class="game-flow" data-build="rise" data-at="0.1">
+     <svg viewBox="0 0 1400 700" role="img" aria-labelledby="flowTitle flowDesc">
+      <title id="flowTitle">Game flow</title><desc id="flowDesc">Story, Map Exploration, Narrative and Random Events, Combat, then Story. Home Hub is separate, above-left, with one optional-access arrow toward open space in the loop.</desc>
+      <defs><marker id="flowArrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1 L10 6 L1 11" fill="none" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+      <ellipse class="flow-route" cx="760" cy="370" rx="460" ry="205"/>
+      <!-- Short tangent arcs sit directly on the continuous oval. Clockwise. -->
+      <path class="flow-direction" d="M990 192.46 A460 205 0 0 1 1085.27 225.04" marker-end="url(#flowArrow)"/>
+      <path class="flow-direction" d="M1158.37 472.5 A460 205 0 0 1 1085.27 514.96" marker-end="url(#flowArrow)"/>
+      <path class="flow-direction" d="M530 547.54 A460 205 0 0 1 434.73 514.96" marker-end="url(#flowArrow)"/>
+      <path class="flow-direction" d="M361.63 267.5 A460 205 0 0 1 434.73 225.04" marker-end="url(#flowArrow)"/>
+      <path class="flow-route" d="M350 145 C420 175 388 245 500 278" marker-end="url(#flowArrow)"/>
+      <g class="flow-node"><rect class="flow-pill flow-hub" x="130" y="69" width="240" height="76" rx="38"/><text class="flow-label" x="250" y="109">HOME HUB</text></g>
+      <g class="flow-node"><rect class="flow-pill" x="640" y="127" width="240" height="76" rx="38"/><text class="flow-label" x="760" y="167">STORY</text></g>
+      <g class="flow-node"><rect class="flow-pill" x="1060" y="332" width="320" height="76" rx="38"/><text class="flow-label" x="1220" y="372">MAP EXPLORATION</text></g>
+      <g class="flow-node"><rect class="flow-pill" x="550" y="529" width="420" height="92" rx="46"/><text class="flow-label" x="760" y="563"><tspan x="760">NARRATIVE &amp;</tspan><tspan x="760" dy="30">RANDOM EVENTS</tspan></text></g>
+      <g class="flow-node"><rect class="flow-pill" x="180" y="332" width="240" height="76" rx="38"/><text class="flow-label" x="300" y="372">COMBAT</text></g>
+     </svg>
+    </figure></div>
+   </section>
+  </div>
+  <div id="heroCat" class="hero-cat" aria-label="Miaomiao, the original Stray Kitty protagonist" role="img"><img src="../assets/miaomiao.svg" alt=""></div>
+  <button id="helpButton" class="help-button circle-control" type="button" aria-label="Show controls">?</button>
+  <div id="helpPanel" class="help-panel" hidden role="dialog" aria-label="Presentation controls"><button id="helpClose" type="button" aria-label="Close control help">×</button><h3>Explore the story</h3><p><kbd>→</kbd> / <kbd>Space</kbd> next · <kbd>←</kbd> previous<br><kbd>Esc</kbd> finish motion · <kbd>Home</kbd> first · <kbd>End</kbd> last</p><label class="pace-control" for="paceSelect">Arrow-key pace <select id="paceSelect"><option value="3000">Brisk · 3 s</option><option value="4200" selected>Cinematic · 4.2 s</option><option value="5500">Gentle · 5.5 s</option></select></label></div>
+ </main>
+</div>
+<script src="engine-v3.js"></script>
+</body></html>

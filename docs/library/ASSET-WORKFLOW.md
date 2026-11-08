@@ -15,20 +15,21 @@ The shared GitHub repository and GitHub Pages preview are the default working su
 
 This is a **public** GitHub repository and Pages site. A picture appearing in a chat, being downloaded locally, or being used for private design review does not by itself establish permission to redistribute it. If copyright/license provenance is unknown, use a clearly marked placeholder on the public site and keep the recovered original off the public repo; record exact pending files and the approval requirement. Do not upload private or unlicensed media merely to make it accessible between agents. Once permission is established, upload the exact intended image and update its manifest status.
 
-## Existing Page 02 pending illustrations
+## Existing Page 02 illustrations
 
-Codex has already recovered the original images locally in `Downloads/Stray-Kitty-Page-02-Original-Illustrations/`. See the root `ASSET-CLEARANCE.md` for exact filenames, dimensions, hashes and insertion instructions. **User confirmed ownership/public-use permission on 2026-11-08.** On the next Codex media update, upload these exact recovered originals and wire the existing two Page 02 frames. Do not search or re-download; see ASSET-CLEARANCE.md. Keep one-time historical hashes only as reference, never a required step for routine edits.
+Both originals are published in Current under `docs/assets/illustrations/` and registered in the manifest. User confirmed ownership/public-use permission on 2026-11-08. ASSET-CLEARANCE.md is the historical authorization record. Previous retains its original placeholders. Historical hashes require no routine recalculation.
 
 ## Video and file size
 
 The selected opening movie is already present under `docs/assets/`; do not re-export or upload it on every page edit. Prefer direct static assets with compatible codecs for GitHub Pages; no Git LFS for publicly served website media. Keep the approved v3 movement engine unchanged unless a specific change is authorized.
 
-**Playback reliability:** The full opening movie is about 65 MB for 60.5 seconds, and slow network throughput can cause buffering. The site now hints `preload=auto`, but this is not a guarantee of complete buffering or persistent cache. For the public preview, Codex should create a clearly good-quality, smaller full-length H.264/AAC delivery encode from the approved Windows master, preserving readable pixel art and audio, and update only its media reference. For the actual live talk, keep a verified **local/offline copy of the entire site with the full opening video stored locally** so playback does not depend on venue Wi-Fi. Optional browser caching/prefetch may help repeat web playback but must not be the sole demo-day safeguard. Do only one focused playback check; avoid a broad cache implementation unless needed.
+The complete opening movie remains unchanged and is shared by both retained decks. Video optimization, caching and final offline-release packaging are deferred until separately authorized; occasional preview buffering is acceptable during development.
 
 ## Collaboration mechanics
 
 - Always read the latest `main` before editing.
 - ChatGPT connected GitHub editing and Codex local Git pushes must use the same repository and non-force updates.
-- Preserve the unchanged v3 reference under `reference/forward-story-v3/`.
+- Preserve original v3 script.js and style.css under `reference/forward-story-v3/`; retired demo builds stay in Git history.
+- Keep only Current and Previous under the verified rolling policy in README.md. Inspect both versions before deleting shared assets. Do not duplicate media.
 - Report the public direct review link for each changed page and the commit SHA.
 - Notion is the checkpoint/history; don't create a duplicate asset catalog there.

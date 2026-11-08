@@ -1,15 +1,11 @@
 # Presentation scope
 
-Work only in this separate presentation repository. Never modify the Stray Kitty game repository as part of presentation updates.
+Work only in this presentation repository. Read the latest main and inspect the working tree first. Preserve unrelated work; use normal commits/pushes without rewriting history, force-pushing or deleting tags/releases.
 
-Preserve `reference/forward-story-v3/` byte-for-byte. Keep the approved v3 animation player and default 4200ms arrow beat. Avoid framework migrations or unrelated refactoring.
+Publish docs through GitHub Pages. Current is `docs/index.html`; Previous is `docs/previous/index.html`. Keep only these two usable decks. Follow the verification-gated rolling policy in README.md; do not rotate for every slide/documentation commit. `docs/versions.json` records verified build origins. Check both retained decks before deleting shared assets under `docs/assets/`.
 
-Publish only `docs/` through GitHub Pages. Keep relative asset URLs. Page review links are `?page=01`, `?page=02` and `?page=03`; update only the page being reviewed. Do not create additional pages without user instruction.
+Keep the approved v3 animation player, 4200ms beat, reversible scrolling, traced route and genuine cat unchanged. Original `reference/forward-story-v3/script.js` and `style.css` are immutable source references. Retired demo HTML, packer and media stay in Git history rather than a third working deck.
 
-Read the latest main branch before edits. Keep GitHub as shared source and the existing Notion page as history. Do not create a replacement dashboard.
+Follow `docs/library/ASSET-WORKFLOW.md`. Assets and consuming source belong in the same change; avoid duplicate media. Page 02 D20/cat images are user-owned, publication-approved and published. Historical clearance hashes need no routine rechecking.
 
-Do not publish unrelated unlicensed imagery or fonts. The user has now confirmed ownership of the two original Page 02 D20/cat illustrations; they are approved to publish. The placeholders remain only until Codex copies the already-recovered original files to docs/assets/ and updates the two frame references.
-
-Verification: static serve, intended remote commit, successful Pages deployment, one normal-viewport visual smoke check of Pages 02/03, and one forward/backward transition. Stop when those pass. Do not run game tests, broad suites, benchmarks, repeated browser checks or extra recordings.
-
-Asset handoff: follow [docs/library/ASSET-WORKFLOW.md](docs/library/ASSET-WORKFLOW.md). For every approved, publishable image/video, commit the asset together with its consuming page and register its source/license/path in the manifest. Do not rely on local Windows paths or chat attachments as canonical dependencies. Do not publish unknown-rights third-party illustrations; however Page 02 D20/cat ownership and public-use permission were confirmed by the user on 2026-11-08. See ASSET-CLEARANCE.md. Their originals are already recovered on the user's Windows computer. Routine re-hashing is not required.
+Verify only affected serve, assets, navigation and published Pages behavior. No broad suites, profiling or game tests. Do not redesign slides, alter approved media/content, build offline releases or create Page 04 without user instruction. Do not modify the game repo, deployments, Datadog, payment systems or Notion structure.
