@@ -78,3 +78,6 @@
 @media(max-height:780px){.showcase-review{padding-top:26px}.showcase-review h1{font-size:45px}.event-shot{height:205px}.event-detail{height:137px}.combat-shot{height:192px}.reposition-strip figure .placeholder{height:80px}.profile{height:126px}.advisor-layer{top:9%;bottom:8%}}
 @media(max-width:1000px){.combat-board{grid-template-columns:1.4fr minmax(280px,.9fr);gap:12px}.profile{grid-template-columns:76px minmax(0,1fr);padding:10px;gap:9px}.event-sequence{gap:5px;grid-template-columns:minmax(0,1fr) 18px minmax(0,1fr) 18px minmax(0,1fr)}.event-closeups{grid-template-columns:135px minmax(0,1fr) minmax(0,1fr);gap:7px}.advisor-layer{width:52vw}.profile-vfx{font-size:9px}}
 @media(max-width:730px){.showcase-review{min-height:100vh;overflow:visible}.event-sequence{grid-template-columns:1fr}.event-sequence .arrow-inline{transform:rotate(90deg)}.event-closeups,.combat-board{grid-template-columns:1fr}.event-side-note{border-left:0}.combat-profiles{display:grid;grid-template-columns:1fr}.advisor-layer{position:fixed;top:8%;bottom:8%;left:5%;right:5%;width:90%}.advisor-trigger{position:relative;right:auto;bottom:auto;display:block;margin:14px auto 30px}}
+
+/* Hidden state must override flex layout during the two-step advice reveal. */
+.advisor-screenshot[hidden]{display:none}
