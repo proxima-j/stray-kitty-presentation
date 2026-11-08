@@ -1,0 +1,42 @@
+/* Approved Level Design compositions, scoped to their three v3 scenes. */
+.level-design{position:absolute;inset:0;padding:4vh 7.4vw 22vh;color:var(--ink);font-family:var(--body)}
+.level-design h2{margin:0;font:400 clamp(39px,4.2vw,67px)/1.12 var(--display);letter-spacing:-.045em}
+.level-design .review-body{margin-top:18px}
+.level-design figure{margin:0;min-width:0}
+.level-design .map-grid{width:min(78vw,94vh,1000px);margin:0 auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(15px,2vw,30px);row-gap:clamp(12px,1.8vh,23px)}
+.level-design .map-media{position:relative;width:100%;aspect-ratio:16/9;border:var(--border) solid var(--ink);border-radius:14px;overflow:hidden;background:#18231f}
+.level-design .map-media video{display:block;width:100%;height:100%;object-fit:contain;background:#18231f}
+.level-design .map-card figcaption{margin-top:8px;display:flex;align-items:baseline;justify-content:space-between;gap:15px;min-height:24px}
+.level-design .map-card figcaption strong{white-space:nowrap;flex-shrink:0;font:400 clamp(15px,1.45vw,23px)/1.25 var(--display)}
+.level-design .map-card figcaption span{color:var(--muted);font:11px/1.4 var(--body);letter-spacing:.045em;text-align:right}
+.level-design .clip-toggle{position:absolute;right:11px;top:11px;bottom:auto;width:auto;height:auto;min-width:68px;border:1px solid #f4e6c7d9;border-radius:99px;background:#111c18d1;color:var(--paper);cursor:pointer;padding:7px 12px;font:11px/1.2 var(--body);letter-spacing:.09em;opacity:0}
+.level-design .map-media:is(:hover,:focus-within,.is-paused) .clip-toggle{opacity:1}
+.level-design.vertical-map-review .clip-toggle{opacity:1}
+.level-design .clip-toggle:hover,.level-design .clip-toggle:focus-visible{background:var(--ink);outline:2px solid var(--gold);outline-offset:2px}
+.level-design .spatial-comparisons{display:flex;flex-direction:column;gap:9px;margin:7px 0 0;white-space:nowrap}
+.level-design .spatial-pair{display:flex;align-items:center;gap:clamp(8px,1.4vw,24px)}
+.level-design .spatial-pair.primary{font:400 clamp(26px,3.05vw,49px)/1.18 var(--display);letter-spacing:-.045em}
+.level-design .spatial-pair.secondary{font:400 clamp(19px,2.04vw,31px)/1.23 var(--display)}
+.level-design .two-way-arrow{font-family:var(--body);color:var(--accent)}
+.level-design.vertical-map-review .review-body{margin-top:clamp(12px,2vh,25px)}
+.level-design .vertical-layout{max-width:1370px;width:100%;margin:auto;display:grid;grid-template-columns:minmax(0,.97fr) minmax(0,1.13fr);align-items:center;gap:clamp(15px,3vw,50px)}
+.level-design .vertical-stack{display:flex;flex-direction:column;align-items:center}
+.level-design .vertical-stack object{display:block;width:100%;height:min(54vh,600px);max-width:560px;border:0;background:transparent}
+.level-design .vertical-stack figcaption{font:11px/1.4 var(--body);letter-spacing:.05em;color:var(--muted);margin-top:10px;text-align:center}
+.level-design .vertical-explain{align-self:center}
+.level-design .vertical-explain .map-card{max-width:calc(37vh * 16 / 9)}
+.level-design .vertical-explain .map-media{border-radius:16px}
+.level-design .section-kicker{font:12px/1.45 var(--body);color:var(--muted);letter-spacing:.13em;margin-top:10px}
+.level-design .vertical-steps{display:flex;align-items:center;justify-content:space-between;gap:7px;margin-top:14px}
+.level-design .vertical-steps .step{border:1px solid var(--ink);border-radius:999px;background:var(--paper);padding:9px 16px;display:flex;align-items:center;gap:8px;white-space:nowrap;font:400 clamp(12px,1.05vw,17px) var(--display)}
+.level-design .vertical-steps .step small{font:10px/1.1 var(--body);color:var(--accent);letter-spacing:.08em}
+.level-design .vertical-steps .transfer{color:var(--accent);font:13px/1.2 var(--body);white-space:nowrap;text-align:center}
+.level-design .vertical-note{font:13px/1.55 var(--body);color:var(--muted);margin:10px 4px 0;max-width:660px}
+.level-design.graybox-review .review-body{margin-top:clamp(14px,2.5vh,30px)}
+.level-design .graybox-figure{max-width:min(84vw,1160px);margin:auto;display:flex;flex-direction:column;align-items:center}
+.level-design .graybox-figure img{display:block;max-width:100%;width:auto;height:auto;max-height:60vh;object-fit:contain;border:1px solid #34453e66;box-shadow:0 10px 30px #23352f14;border-radius:8px;background:#f5edda}
+.level-design .graybox-figure figcaption{font:11px/1.4 var(--body);color:var(--muted);letter-spacing:.08em;margin-top:9px}
+@media(max-height:850px){.level-design .map-grid{row-gap:8px}.level-design .map-card figcaption{margin-top:5px}.level-design .review-body{margin-top:16px}.level-design .spatial-pair.primary{font-size:clamp(24px,2.8vw,42px)}.level-design .spatial-pair.secondary{font-size:clamp(18px,1.95vw,26px)}.level-design .vertical-stack object{height:min(51vh,515px)}}
+@media(max-width:990px){.level-design .vertical-layout{gap:17px}.level-design .vertical-steps{flex-wrap:wrap;justify-content:flex-start}.level-design .vertical-steps .step{padding:7px 11px}.level-design .vertical-note{font-size:11px}.level-design .map-card figcaption span{font-size:10px}}
+
+@media(max-height:850px){.level-design .map-card figcaption{gap:8px}.level-design .map-card figcaption strong{font-size:clamp(15px,1.35vw,20px)}.level-design .map-card figcaption span{font-size:10px}}

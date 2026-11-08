@@ -876,6 +876,23 @@
         "bytes": 249804
       },
       "limitations": "Separate attempt at the same stage; not frame-perfect continuation of the battlefield still. Built-in inspection temporarily slows the simulation while its menu is open; activation returns to the normal base speed. No editorial retiming, energy patch, fake cursor, external model or source change."
+    },
+    {
+      "id": "level.chapter2.connected-stack",
+      "source": "../assets/level-design/chapter2/connected-gameplay-screenshots.svg",
+      "origin": "Approved map-vertical-connected.svg relocated from the composition review. Same actual screenshot stack as stacked-gameplay-screenshots.svg; original C/F dashed connections, markers, floor labels and slight tilt retained. Only relative image paths and the review-only comment were adapted.",
+      "use": "Current / vertical-design — Three Connected Levels",
+      "status": "APPROVED / INTEGRATED",
+      "permission": "User explicitly requested integration of the three approved Level Design compositions on 2026-11-09. Underlying game captures are already approved/public.",
+      "metadata": {
+        "viewBox": "0 0 1500 1800",
+        "dependencies": [
+          "view-L1.jpg",
+          "view-L0.jpg",
+          "view-Lminus1.jpg"
+        ]
+      },
+      "limitations": "Illustrative stack of three full screenshots with separate original cameras, not a registered 3D reconstruction. C and F are separate connections joined by street movement."
     }
   ]
 }

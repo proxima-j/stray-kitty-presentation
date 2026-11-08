@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1800" role="img" aria-labelledby="title desc">
+<title id="title">Midnight Market — three actual gameplay views</title>
+<desc id="desc">Actual captured screenshots of L1 rooftop, L0 street and L minus 1 underpass, stacked from top to bottom with a slight tilt. Each complete screenshot is preserved.</desc>
+<defs><filter id="shadow" x="-10%" y="-10%" width="125%" height="135%"><feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#1d3025" flood-opacity=".18"/></filter></defs>
+<rect width="1500" height="1800" fill="#f5edda"/>
+<g font-family="Arial,Helvetica,sans-serif" fill="#30463d">
+ <text x="58" y="315" font-size="48">L1</text>
+ <text x="58" y="353" font-size="20" letter-spacing="1">ROOFTOP</text>
+ </g>
+ <g transform="matrix(.78 .025 -.09 .70 350 55)" filter="url(#shadow)">
+ <path d="M0 720H1280L1290 734H10Z" fill="#d7bb66"/>
+ <rect width="1280" height="720" fill="#15251e"/>
+ <image href="view-L1.jpg" width="1280" height="720" preserveAspectRatio="xMidYMid meet"/>
+ <rect width="1280" height="720" fill="none" stroke="#d7bb66" stroke-width="5"/>
+ </g><g font-family="Arial,Helvetica,sans-serif" fill="#30463d">
+ <text x="58" y="885" font-size="48">L0</text>
+ <text x="58" y="923" font-size="20" letter-spacing="1">STREET</text>
+ </g>
+ <g transform="matrix(.78 .025 -.09 .70 350 625)" filter="url(#shadow)">
+ <path d="M0 720H1280L1290 734H10Z" fill="#8daa96"/>
+ <rect width="1280" height="720" fill="#15251e"/>
+ <image href="view-L0.jpg" width="1280" height="720" preserveAspectRatio="xMidYMid meet"/>
+ <rect width="1280" height="720" fill="none" stroke="#8daa96" stroke-width="5"/>
+ </g><g font-family="Arial,Helvetica,sans-serif" fill="#30463d">
+ <text x="58" y="1455" font-size="48">L−1</text>
+ <text x="58" y="1493" font-size="20" letter-spacing="1">UNDERPASS</text>
+ </g>
+ <g transform="matrix(.78 .025 -.09 .70 350 1195)" filter="url(#shadow)">
+ <path d="M0 720H1280L1290 734H10Z" fill="#8fa9b9"/>
+ <rect width="1280" height="720" fill="#15251e"/>
+ <image href="view-Lminus1.jpg" width="1280" height="720" preserveAspectRatio="xMidYMid meet"/>
+ <rect width="1280" height="720" fill="none" stroke="#8fa9b9" stroke-width="5"/>
+ </g><text x="350" y="1775" font-family="Arial,Helvetica,sans-serif" font-size="20" fill="#657463">Actual captured gameplay screenshots · full views retained · slight display tilt only</text>
+<!-- Approved presentation overlay: C/F routes and marker positions illustrative on real screenshot stack. -->
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M810 298 C840 510 939 705 986 924" stroke="#edce79" stroke-width="8" stroke-dasharray="11 19"/>
+<path d="M986 924 Q861 1008 742 1115" stroke="#a7e9d5" stroke-width="8" stroke-dasharray="11 19"/>
+<path d="M742 1115 C738 1285 750 1450 770 1598" stroke="#9ec8e9" stroke-width="8" stroke-dasharray="11 19"/>
+</g>
+<g text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="bold" fill="#30463d">
+<circle cx="810" cy="298" r="25" fill="#e9cb72" stroke="#647264" stroke-width="2"/><text x="810" y="306">C</text>
+<circle cx="986" cy="924" r="25" fill="#e9cb72" stroke="#647264" stroke-width="2"/><text x="986" y="932">C</text>
+<circle cx="742" cy="1115" r="25" fill="#97c5e4" stroke="#647264" stroke-width="2"/><text x="742" y="1123">F</text>
+<circle cx="770" cy="1598" r="25" fill="#97c5e4" stroke="#647264" stroke-width="2"/><text x="770" y="1606">F</text>
+</g>
+<g font-family="Arial,Helvetica,sans-serif" font-size="26" fill="#5c7164">
+<text x="58" y="396">C · nwReturn</text>
+<text x="58" y="968">Walk between portals</text>
+<text x="58" y="1537">F · underpassN</text>
+</g>
+</svg>

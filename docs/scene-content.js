@@ -35,7 +35,8 @@
     const button = video.parentElement.querySelector('.clip-toggle');
     const playing = !video.paused;
     video.parentElement.classList.toggle('is-paused', !playing);
-    button.textContent = playing ? 'Ⅱ' : '▶';
+    button.textContent = video.hasAttribute('data-map-clip') ? (playing ? 'PAUSE' : 'PLAY') : (playing ? 'Ⅱ' : '▶');
+    if (video.hasAttribute('data-map-clip')) button.setAttribute('aria-pressed', String(playing));
     button.setAttribute('aria-label', `${playing ? 'Pause' : 'Play'} ${video.getAttribute('aria-label')}`);
   }
   function syncClips() {
@@ -43,7 +44,7 @@
       const play = shouldPlay(video);
       video.autoplay = play;
       video.muted = true;
-      video.preload = play ? 'auto' : 'metadata';
+      video.preload = play ? 'auto' : video.hasAttribute('data-map-clip') ? 'none' : 'metadata';
       if (play && video.paused && !pendingPlay.has(video)) {
         pendingPlay.add(video);
         video.play().then(() => { if (!shouldPlay(video)) video.pause(); })

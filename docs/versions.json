@@ -1,23 +1,20 @@
 {
   "current": {
     "entry": "./",
-    "source_commit": "93569008888d8e0c94cbb94c525739a1defb8ed2",
-    "candidate_base_commit": "a6d58cca53cb52f4d674b0e9f9ef881f54ce54aa",
-    "local_verified_at": "2026-11-08T14:36:47.857605+00:00",
-    "verified_pages_build": "2026-11-08T14:37:59Z",
-    "description": "Seven-page deck: film, pitch, roadmap, game flow, visual novel, Home Hub and sandbox payment",
-    "publication_status": "VERIFIED",
-    "pages_workflow_run": "https://github.com/proxima-j/stray-kitty-presentation/actions/runs/42490718334",
-    "verification_notes": "1600×900 Chrome: screenshot assets, 3-state mouse/Enter/Space cycle, two Home Hub views, all 3 muted looping clips, pause on view/scene exit, 4.2s forward/back, published Current/Previous. Hidden-document pause/resume branch tested with a visibility-event simulation because automated Chrome kept background tabs visible."
+    "source_commit": null,
+    "candidate_base_commit": "c5fab9e2e9dc6d9e3b459621e369e0f0d409d1c0",
+    "local_verified_at": "2026-11-08T17:13:30.165604+00:00",
+    "description": "Ten-page deck: existing seven pages followed by Four Maps, Three Connected Levels and Greybox",
+    "publication_status": "LOCAL_VERIFIED / PUBLICATION_PENDING",
+    "verification_notes": "Chrome 1600x900 and 1366x768; original seven scene blocks and engine files unchanged; 4.2s forward/back, wheel, Home/End, help, film with sound/skip, dialogue, Home tabs/media, payment dialog; four simultaneous normal-speed map loops; manual pause and hidden-document simulation; traversal and all three SVG images; uncropped greybox."
   },
   "previous": {
     "entry": "previous/",
-    "source_commit": "2c1fc278732287a6607666e958622dce9a850cb6",
-    "verified_pages_build": "2026-11-08T14:37:59Z",
-    "description": "Outgoing verified three-page deck, including enlarged original Page 02 illustrations",
-    "original_current_pages_build": "2026-11-08T11:56:44Z",
-    "retained_in_commit": "93569008888d8e0c94cbb94c525739a1defb8ed2"
+    "source_commit": "c5fab9e2e9dc6d9e3b459621e369e0f0d409d1c0",
+    "description": "Outgoing verified seven-page runtime, including full film, original illustrations, narrative interaction, Home Hub and Payment",
+    "publication_status": "SNAPSHOT / PUBLICATION_PENDING",
+    "snapshot_note": "Only asset URLs were rebased for /previous/. Shared media is stored once."
   },
   "shared_assets": "assets/",
-  "retention": "Two usable decks only. Candidate verified before rotation; normal Git history retained. Source commit and deployment evidence are finalized after publication."
+  "retention": "Two usable decks only. Candidate passed local checks before rotation. Runtime source commit and published-build evidence are finalized after published Current/Previous verification."
 }

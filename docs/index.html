@@ -8,10 +8,11 @@
   <link rel="stylesheet" href="library/tokens.css">
   <link rel="stylesheet" href="library/components.css">
   <link rel="stylesheet" href="presentation.css?v=20261108-home-alignment">
+  <link rel="stylesheet" href="level-design.css?v=20261109-level-design">
 </head>
 <body>
 <div id="scrollSpace" class="scroll-space">
- <main id="stage" class="stage" aria-label="Stray Kitty presentation — Pages 01 through 07">
+ <main id="stage" class="stage" aria-label="Stray Kitty presentation — Pages 01 through 10">
   <div id="world" class="world">
    <svg id="roadDrawing" class="route-svg" aria-hidden="true"><defs><clipPath id="revealClip"><rect id="routeReveal" x="0" y="0" width="0" height="2000"/></clipPath></defs><path id="routeGhost" class="route-ghost" d=""/><path id="routeInk" class="route-ink" d="" clip-path="url(#revealClip)"/></svg>
    <section id="opening-film" class="scene scene-film" data-title="Opening Film" data-scene="0" data-page="01" aria-label="Page 01 — Full-screen film">
@@ -117,6 +118,62 @@
      </div>
     </div></div>
    </section>
+   <section id="four-maps" class="scene" data-scene="7" data-page="08" data-title="Four Maps" aria-label="Page 08 — Level Design: Four Maps">
+    <div class="scene-camera"><div class="level-design four-maps-review">
+<h2 data-build="text" data-at="0.04">Four Maps</h2>
+<div class="review-body"><div class="map-grid" data-build="rise" data-at="0.2"><figure class="map-card"><div class="map-media">
+<video muted data-scene-video data-map-clip playsinline loop preload="none" aria-label="Rainy Alley actual gameplay clip" src="assets/level-design/four-maps/p05-alley-old-huang.mp4"></video>
+<button class="clip-toggle" type="button" data-local-space aria-label="Play or pause Rainy Alley video" aria-pressed="false">PLAY</button>
+</div><figcaption><strong>Rainy Alley</strong><span>Old Huang · E interaction</span></figcaption></figure>
+<figure class="map-card"><div class="map-media">
+<video muted data-scene-video data-map-clip playsinline loop preload="none" aria-label="Midnight Market actual gameplay clip" src="assets/level-design/four-maps/p05-market-west-descent.mp4"></video>
+<button class="clip-toggle" type="button" data-local-space aria-label="Play or pause Midnight Market video" aria-pressed="false">PLAY</button>
+</div><figcaption><strong>Midnight Market</strong><span>L0 → L−1 · West descent</span></figcaption></figure>
+<figure class="map-card"><div class="map-media">
+<video muted data-scene-video data-map-clip playsinline loop preload="none" aria-label="Underground Tunnel actual gameplay clip" src="assets/level-design/four-maps/p05-tunnel-space-jump.mp4"></video>
+<button class="clip-toggle" type="button" data-local-space aria-label="Play or pause Underground Tunnel video" aria-pressed="false">PLAY</button>
+</div><figcaption><strong>Underground Tunnel</strong><span>Space jump across the gap</span></figcaption></figure>
+<figure class="map-card"><div class="map-media">
+<video muted data-scene-video data-map-clip playsinline loop preload="none" aria-label="Warehouse actual gameplay clip" src="assets/level-design/four-maps/p05-warehouse-light.mp4"></video>
+<button class="clip-toggle" type="button" data-local-space aria-label="Play or pause Warehouse video" aria-pressed="false">PLAY</button>
+</div><figcaption><strong>Warehouse</strong><span>Switch on the central light</span></figcaption></figure></div></div>
+
+</div></div>
+   </section>
+   <section id="vertical-design" class="scene" data-scene="8" data-page="09" data-title="Three Connected Levels" aria-label="Page 09 — Level Design: Three Connected Levels">
+    <div class="scene-camera"><div class="level-design vertical-map-review">
+<div class="spatial-comparisons" data-build="text" data-at="0.04" role="heading" aria-level="1"><div class="spatial-pair primary"><span>2D View</span><span class="two-way-arrow" aria-hidden="true">↔</span><span>Three-Dimensional Perception</span></div><div class="spatial-pair secondary"><span>Horizontal Exploration</span><span class="two-way-arrow" aria-hidden="true">↔</span><span>Vertical Build</span></div></div>
+<div class="review-body"><div class="vertical-layout">
+<figure class="vertical-stack" data-build="rise" data-at="0.18">
+<object data="assets/level-design/chapter2/connected-gameplay-screenshots.svg" type="image/svg+xml" aria-label="Three levels: actual gameplay captures stacked vertically with slight tilt">Actual Rooftop, Street and Underpass screenshots stacked vertically.</object>
+<figcaption>ACTUAL GAME VIEWS · C/F CONNECTED ROUTES</figcaption>
+</figure>
+<div class="vertical-explain" data-build="rise" data-at="0.35">
+<div class="section-kicker">ONE UNINTERRUPTED THREE-LEVEL TRAVERSAL · 7.30 S</div>
+<div class="map-card" style="margin-top:14px"><div class="map-media">
+<video muted data-scene-video data-map-clip playsinline loop preload="none" aria-label="Actual continuous L1 to L0 to L minus 1 gameplay traversal, 7.30 seconds" src="assets/level-design/chapter2/p06-market-three-level-western-spine.mp4"></video>
+<button class="clip-toggle" type="button" data-local-space aria-pressed="false" aria-label="Play or pause the continuous traversal">PLAY</button>
+</div></div>
+<div class="vertical-steps" aria-label="L1 rooftop to L0 streets to L minus 1 underpass">
+<span class="step"><small>L1</small> Rooftops</span><span class="transfer">C →</span>
+<span class="step"><small>L0</small> Streets</span><span class="transfer">walk · F →</span>
+<span class="step"><small>L−1</small> Underpass</span>
+</div>
+<p class="vertical-note">Two separate floor connections, linked by actual street movement. The footage is a single continuous take.</p>
+</div></div></div>
+
+</div></div>
+   </section>
+   <section id="greybox" class="scene" data-scene="9" data-page="10" data-title="Greybox" aria-label="Page 10 — Level Design: Greybox">
+    <div class="scene-camera"><div class="level-design graybox-review">
+<h2 data-build="text" data-at="0.04">Greybox</h2>
+<div class="review-body"><figure class="graybox-figure" data-build="rise" data-at="0.2">
+<img src="assets/level-design/graybox/chapter2-graybox.png" alt="Original supplied Chapter 2 graybox plan with its existing route annotations, shown uncropped">
+<figcaption>CHAPTER 2 · ORIGINAL ANNOTATED GRAYBOX · 1448 × 1086</figcaption>
+</figure></div>
+
+</div></div>
+   </section>
   </div>
   <div id="heroCat" class="hero-cat" aria-label="Miaomiao, the original Stray Kitty protagonist" role="img"><img src="assets/miaomiao.svg" alt=""></div>
   <button id="helpButton" class="help-button circle-control" type="button" aria-label="Show controls">?</button>
@@ -127,6 +184,6 @@
  <div class="screenshot-dialog-heading"><h3 id="screenshotTitle"></h3><button type="button" id="closeScreenshot" aria-label="Close enlarged screenshot">×</button></div>
  <img id="enlargedScreenshot" alt="">
 </dialog>
-<script src="scene-content.js?v=20261108-readability-2"></script>
+<script src="scene-content.js?v=20261109-level-design"></script>
 <script src="engine-v3.js?v=20261108-home-alignment"></script>
 </body></html>

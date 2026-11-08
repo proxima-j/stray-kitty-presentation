@@ -6,10 +6,10 @@ GitHub is the shared source for ChatGPT and Codex. GitHub Pages automatically pu
 
 | Version | Preview | Verified source |
 | --- | --- | --- |
-| Current | https://proxima-j.github.io/stray-kitty-presentation/ | `93569008888d8e0c94cbb94c525739a1defb8ed2` — verified seven-page deck; deployment 2026-11-08T14:37:59Z |
-| Previous | https://proxima-j.github.io/stray-kitty-presentation/previous/ | `2c1fc278732287a6607666e958622dce9a850cb6` — outgoing verified three-page deck with enlarged original illustrations |
+| Current | https://proxima-j.github.io/stray-kitty-presentation/ | Locally verified ten-page deck; publication verification pending |
+| Previous | https://proxima-j.github.io/stray-kitty-presentation/previous/ | Outgoing seven-page runtime; publication verification pending |
 
-Current supports direct `?page=01` through `?page=07` links. Previous retains `?page=01` through `?page=03`. Stable Current IDs also work as direct links: `roadmap`, `game-flow`, `visual-novel`, `home-hub`, `payment`. [docs/versions.json](docs/versions.json) records verified runtime origins; documentation and asset-only commits do not rotate decks.
+Current supports direct `?page=01` through `?page=10` links. Previous retains `?page=01` through `?page=07`. Stable Current IDs also work as direct links: `roadmap`, `game-flow`, `visual-novel`, `home-hub`, `payment`, `four-maps`, `vertical-design`, `greybox`. [docs/versions.json](docs/versions.json) records verified runtime origins; documentation and asset-only commits do not rotate decks.
 
 - `docs/index.html`, `docs/engine-v3.*`, `docs/presentation.css`, `docs/scene-content.js`, `docs/library/`: Current source and reusable components.
 - `docs/previous/`: Previous's HTML, styles and script recovered from its deployed commit. Only relative asset URLs were adjusted. Its runtime and small style-library copies remain independent of future Current code edits; large media is shared.
@@ -53,4 +53,8 @@ Visual Novel (`?page=05`): click the authentic game image to cycle 1→2→3→1
 
 Home Hub (`?page=06`): starts with THE HOME GROWS, using a larger two-by-two gallery and readable labels. THE HOME RESPONDS plays the three existing muted looping clips together in a larger staggered arrangement. They pause on view/scene exit and when the document is hidden, resuming when visible. Small pause/play fallbacks appear on hover/focus. The opening film retains its separate explicit Play-with-sound behavior.
 
-Payment (`?page=07`): the same verified Xsolla Sandbox 60-tuna journey, with recorded balance 0→60. Larger label rows sit above focused screenshot viewports; click any screenshot to open its complete original (Escape closes it). Asset provenance, including the guaranteed/pity postcard draw and subtle final-home stage, remains in `docs/library/PAGES-03-07-ASSETS.md` and the manifest. Level Design, Events, Combat and UI/UX previews remain separate until their own integration.
+Payment (`?page=07`): the same verified Xsolla Sandbox 60-tuna journey, with recorded balance 0→60. Larger label rows sit above focused screenshot viewports; click any screenshot to open its complete original (Escape closes it). Asset provenance, including the guaranteed/pity postcard draw and subtle final-home stage, remains in `docs/library/PAGES-03-07-ASSETS.md` and the manifest. Level Design follows Payment in Current; Events, Combat, UI/UX and Technical reviews remain separate.
+
+## Integrated Level Design
+
+Payment → [Four Maps](docs/index.html?page=four-maps) → [Three Connected Levels](docs/index.html?page=vertical-design) → [Greybox](docs/index.html?page=greybox). These are normal scenes 08–10 in the unchanged v3 registry/player. The approved 2×2 clips, tilted screenshot stack with separate C/F links and continuous traversal, and original uncropped greybox are retained. Map clips use the existing scene-aware media controller: only the active scene plays; manual pause survives exit/re-entry and document hiding. The annotated SVG is now a production asset with same-folder screenshot links. The other review sections are not integrated.
