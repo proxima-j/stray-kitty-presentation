@@ -28,12 +28,12 @@ These are design-review layouts built directly from the user-selected **already 
 
 Level Design preview revised: 4 muted autoplay map clips; 7.30-second muted autoplay traversal; C/F dashed connectors on a review-only SVG; exact paired ↔ wording; “Greybox” heading. No Current or Previous changes.
 
-## Events and Combat — composition previews (asset placeholders)
+## Events and Combat — asset-filled composition reviews
 
-- [Events 01 — Random Events](events-01-random.html): testing-view trigger zone; event card → successful result card; only the two supplement close-ups are zoom emphasis; short event-to-combat and butterfly-effect labels. All game screenshots pending verification.
-- [Combat 02 — Friends + 阿策](combat-02-friends-ai.html): real-time tactical tower defense mechanisms; before/drag/after still sequence; 2–3 cat figure + ability/VFX profile placeholders; click **And one more friend…** to reveal 阿策 and toggle the advice-card before/after placeholders.
+- [Events 01 — Random Events](events-01-random.html): genuine west-zone testing view, Chinese choice card → corresponding 5+5 success, then Fish +1 / Material +1 crops from that result. Screenshots reveal in order; hover/focus emphasizes the two reward details. Click any image to inspect the published original. The separate testing view illustrates spatial triggering, not one uninterrupted naturally drawn encounter. These are resource rewards; the two footer concepts describe the broader event system. [Capture and mechanics notes](../library/RANDOM-EVENT-ASSETS.md).
+- [Combat 02 — Friends + 阿策](combat-02-friends-ai.html): real battlefield on the left and three named cat/ability/VFX profiles on the right. Click **Reposition** to play the complete muted 7.6-second, 1× close-up inside the same battlefield frame, then return to the still; the clip is a separate take at the same stage. No separate before/drag/after strip. **+ And one more friend…** reveals 阿策; click the question card, **Show answer**, or Right to reveal the actual response. Left returns to the question; close or Escape dismisses the layer. The source label is **Local Fallback** (`source=local`, `reason=not_configured`), not model inference. [Combat capture notes](../library/PAGE-09-COMBAT-ASSETS.md).
 
-These are **composition reviews only**, with working labels 08–09 that may shift when integrating the approved Roadmap/Home Hub/Payment and Level Design pages. No original footage or model output is invented. Current, Previous and existing review pages remain untouched. After approval, Codex replaces placeholders with verified genuine assets and integrates into the approved v3 deck; do not rotate versions for these reviews.
+These remain **isolated composition reviews**, with historical working labels 08–09 that do not fix final presentation order. The existing approved assets are referenced directly without duplication. Current, Previous, the v3 engine and all other review pages are unchanged. Final deck integration waits until these reviews are approved and the preceding Level Design section is integrated; do not rotate versions for these reviews.
 
 ## UI/UX — two isolated composition previews
 

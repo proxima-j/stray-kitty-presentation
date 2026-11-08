@@ -15,30 +15,29 @@
    <section class="combat-main" aria-label="Battlefield and repositioning">
     <div class="tabframe" data-tab="BATTLEFIELD · REPOSITIONING IN ACTION">
      <div class="combat-shot" style="height:clamp(300px,43vh,420px)">
-      <div class="placeholder">
-       <span class="number">01</span><strong>MAIN BATTLEFIELD</strong>
-       <small>AUTHENTIC BATTLE ASSET PENDING · INCLUDING REAL-TIME REPOSITIONING</small>
-      </div>
+      <img class="battlefield-image" src="../assets/pages/09/battlefield-main.png" alt="Authentic Midnight Market real-time battle with companions, enemies and ability controls">
+      <video id="repositionVideo" class="battle-reposition" src="../assets/pages/09/reposition-closeup.mp4" muted playsinline preload="metadata" aria-label="Continuous 7.6-second Banban repositioning demonstration, separate attempt at the same stage, normal speed" hidden></video>
+      <span class="reposition-source" id="repositionSource" hidden>REPOSITION · SEPARATE TAKE · 1×</span>
      </div>
     </div>
     <div class="combat-steps" aria-label="Combat mechanic labels">
-     <div class="combat-step"><b>Reposition</b><small>Move cats during battle</small></div>
+     <button class="combat-step" id="repositionTrigger" type="button" aria-controls="repositionVideo" aria-pressed="false" title="Play the real repositioning demonstration in the battlefield frame"><b>Reposition</b><small>Move cats during battle</small></button>
      <div class="combat-step"><b>Build Energy</b><small>Abilities charge automatically</small></div>
      <div class="combat-step"><b>Activate Skills</b><small>Trigger each cat's ability</small></div>
     </div>
    </section>
-   <section class="combat-profiles" aria-label="Three illustrative companion profile slots, selection pending verified assets">
+   <section class="combat-profiles" aria-label="Three companions and their authentic ability effects">
     <article class="profile" data-id="FRIEND 01">
-     <div class="profile-figure"><small>ORIGINAL CAT FIGURE</small></div>
-     <div class="profile-details"><b>Cat name pending</b><span class="ability">Signature ability · verify from game</span><div class="profile-vfx">MATCHING ABILITY + VFX FRAME</div></div>
+     <div class="profile-figure"><img src="../assets/pages/09/caster-figure.png" alt="绒绒 / Rongrong original pixel-art figure" width="128" height="128"></div>
+     <div class="profile-details"><b>绒绒 / Rongrong</b><span class="ability">星绒绽放 — Star Burst</span><span class="profile-function">Cross-shaped area attack</span><div class="profile-vfx"><img src="../assets/pages/09/caster-star-vfx.png" alt="Rongrong's authentic purple star attack across cross-shaped impact cells"></div></div>
     </article>
     <article class="profile" data-id="FRIEND 02">
-     <div class="profile-figure"><small>ORIGINAL CAT FIGURE</small></div>
-     <div class="profile-details"><b>Cat name pending</b><span class="ability">Signature ability · verify from game</span><div class="profile-vfx">MATCHING ABILITY + VFX FRAME</div></div>
+     <div class="profile-figure"><img src="../assets/pages/09/guard-figure.png" alt="斑斑 / Banban original pixel-art figure" width="128" height="128"></div>
+     <div class="profile-details"><b>斑斑 / Banban</b><span class="ability">罐盖护盾 — Shield</span><span class="profile-function">Temporary self-shield</span><div class="profile-vfx"><img src="../assets/pages/09/guard-shield-vfx.png" alt="Banban's genuine cyan shield release and original skill label"></div></div>
     </article>
     <article class="profile" data-id="FRIEND 03">
-     <div class="profile-figure"><small>ORIGINAL CAT FIGURE</small></div>
-     <div class="profile-details"><b>Cat name pending</b><span class="ability">Signature ability · verify from game</span><div class="profile-vfx">MATCHING ABILITY + VFX FRAME</div></div>
+     <div class="profile-figure"><img src="../assets/pages/09/diandian-figure.png" alt="点点 / Diandian original pixel-art figure" width="128" height="128"></div>
+     <div class="profile-details"><b>点点 / Diandian</b><span class="ability">安心呼噜 — Healing Purr</span><span class="profile-function">Heals active companions</span><div class="profile-vfx"><img src="../assets/pages/09/diandian-heal-vfx.png" alt="Diandian's genuine green Healing Purr effect on active companions"></div></div>
     </article>
    </section>
   </div>
@@ -50,18 +49,16 @@
    <button id="advisorClose" class="advisor-close" type="button" aria-label="Close advisor layer">×</button>
   </div>
   <div class="advisor-id">
-   <div class="advisor-figure">ORIGINAL<br>阿策 FIGURE</div>
-   <p>Context-aware battle advice.<br><span class="micro">Home Hub functionality is a spoken mention only.</span></p>
+   <div class="advisor-figure"><img src="../assets/pages/09/advisor-figure.png" alt="阿策 original pixel-art figure" width="128" height="128"></div>
+   <p>Context-aware battle advice.<br><span class="micro" title="Captured response source=local, reason=not_configured; no model inference is claimed.">Local Fallback</span></p>
   </div>
-  <div class="advisor-screenshot" id="advisorBefore" role="group" aria-label="Advice card before response">
+  <button class="advisor-screenshot" id="advisorBefore" type="button" aria-label="Original advice card before submission; click to show the captured response">
    <span class="small-label">ADVICE CARD · BEFORE</span>
-   <b>Question submitted</b>
-   <small>GENUINE IN-GAME QUESTION / PRE-RESPONSE SCREENSHOT PENDING</small>
-  </div>
+   <img src="../assets/pages/09/advisor-01-before.png" alt="Original Chinese question typed before submission in the same paused battle">
+  </button>
   <div class="advisor-screenshot" id="advisorAfter" role="group" aria-label="Advice card after response" hidden>
    <span class="small-label">ADVICE CARD · AFTER</span>
-   <b>Advice received</b>
-   <small>GENUINE CONTEXTUAL AI RESPONSE SCREENSHOT PENDING · CHECK MODEL VS FALLBACK</small>
+   <img src="../assets/pages/09/advisor-02-after.png" alt="Original Chinese local-fallback response to the same question, showing actual battle context and healing advice">
   </div>
   <div class="advisor-actions"><button id="advisorNext" class="advisor-next" type="button">Show answer →</button><span class="advisor-step" id="advisorStep">1 / 2</span></div>
  </aside>
@@ -77,6 +74,23 @@
  const before=document.getElementById('advisorBefore');
  const after=document.getElementById('advisorAfter');
  const step=document.getElementById('advisorStep');
+ const reposition=document.getElementById('repositionTrigger');
+ const video=document.getElementById('repositionVideo');
+ const source=document.getElementById('repositionSource');
+ let playback=0;
+ function stopReposition(){
+   playback++;video.pause();video.hidden=true;source.hidden=true;
+   reposition.setAttribute('aria-pressed','false');
+ }
+ reposition.addEventListener('click',async()=>{
+   if(!video.hidden){stopReposition();return;}
+   const request=++playback;
+   video.currentTime=0;video.playbackRate=1;video.muted=true;
+   video.hidden=false;source.hidden=false;reposition.setAttribute('aria-pressed','true');
+   try{await video.play();}catch(error){if(request===playback)stopReposition();}
+ });
+ video.addEventListener('ended',stopReposition);
+ video.addEventListener('error',stopReposition);
  let state=0;
  function render(){
    layer.hidden=state===0;
@@ -86,14 +100,16 @@
    step.textContent=state===2?'2 / 2':'1 / 2';
    next.textContent=state===2?'Back to question':'Show answer →';
  }
- function open(){state=1;render();}
- function dismiss(){state=0;render();trigger.focus();}
+ function open(){stopReposition();state=1;render();close.focus({preventScroll:true});}
+ function dismiss(){state=0;render();trigger.focus({preventScroll:true});}
  trigger.addEventListener('click',open);
  close.addEventListener('click',dismiss);
  next.addEventListener('click',()=>{state=state===1?2:1;render();});
+ before.addEventListener('click',()=>{state=2;render();next.focus({preventScroll:true});});
  document.addEventListener('keydown',event=>{
    if(event.key==='Escape'&&state>0){event.preventDefault();dismiss();}
-   else if((event.key===' '||event.key==='ArrowRight')&&state>0&&!event.repeat){event.preventDefault();state=state===1?2:1;render();}
+   else if(state>0&&!event.repeat&&(event.key==='ArrowRight'||event.key==='ArrowLeft')){event.preventDefault();state=event.key==='ArrowRight'?2:1;render();}
+   else if(event.key==='Escape'&&!video.hidden){event.preventDefault();stopReposition();}
  });
  render();
 })();
