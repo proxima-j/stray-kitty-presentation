@@ -76,3 +76,17 @@
 .uiux-page.adaptive-review .review-body{margin-top:14px}
 .uiux-page.adaptive-review .adaptive-layout{padding-top:12px}
 .uiux-page.adaptive-review .adaptive-stage{height:min(53vh,490px)}
+
+/* Page 14: keep the tab inside its reveal bounds and enlarge the actual view. */
+.uiux-page.adaptive-review{display:flex;flex-direction:column;padding:4vh 7.4vw 27vh}
+.uiux-page.adaptive-review h2,.uiux-page.adaptive-review .uiux-kicker{flex-shrink:0}
+.uiux-page.adaptive-review .review-body{flex:1;min-height:0;margin-top:8px}
+.uiux-page.adaptive-review .adaptive-layout{height:100%;padding-top:32px}
+.uiux-page.adaptive-review .adaptive-stage{height:100%;min-height:0;padding:0;display:block}
+.uiux-page.adaptive-review .adaptive-controls{position:absolute;top:10px;left:14px;right:14px;z-index:2}
+.uiux-page.adaptive-review .viewport-toggle button{padding:4px 14px}
+.uiux-page.adaptive-review .adaptive-canvas{position:absolute;inset:8px 12px;height:auto;padding:42px 0 18px}
+.uiux-page.adaptive-review .demo-browser-bar{height:24px}
+.uiux-page.adaptive-review .demo-browser-content{height:calc(100% - 24px)}
+.uiux-page.adaptive-review .stage-note{position:absolute;left:14px;bottom:8px}
+@media(min-width:1100px){.uiux-page.adaptive-review .adaptive-stage[data-viewport=narrow] .adaptive-canvas{padding-top:0;padding-bottom:0}}
