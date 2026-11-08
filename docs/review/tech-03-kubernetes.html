@@ -197,11 +197,11 @@ h1{font-size:clamp(36px,3.8vw,59px);margin-top:10px}
 <header>
  <div class="section-label"><span class="number-pill">03</span>TECHNICAL WALKTHROUGH / DEPLOYMENT</div>
  <h1>Kubernetes Deployment</h1>
- <p class="subtitle">Three Deployments · Pods, containers and persistent storage</p>
+ <p class="subtitle">How Kubernetes makes the game accessible online and preserves player data</p>
 </header>
 <section class="cluster" aria-label="Configured Stray Kitty application topology in team preview namespace">
  <div class="cluster-top">
-  <span class="cluster-tag">TEAM PREVIEW · cn-haozhe-wang</span>
+  <span class="cluster-tag">PUBLIC INTERNET → FRONTEND LOADBALANCER</span>
   <span class="cluster-meta">1 replica per Deployment · Recreate strategy</span>
  </div>
  <div class="application-grid">
@@ -267,7 +267,7 @@ h1{font-size:clamp(36px,3.8vw,59px);margin-top:10px}
  </div>
  <div class="cluster-bottom">
    <div class="agent"><strong>Datadog Agent</strong><span>Separately managed Deployment + ClusterIP Service</span></div>
-   <div class="cluster-foot">Application target: 3 Deployments · 3 Pods · 4 containers · 3 Services · 3 PVCs</div>
+   <div class="cluster-foot">Application target: 3 Deployments · 3 Pods · 4 containers · 3 Services · 3 PVCs<br>Distinct PVC per application Pod · No cross-Pod PVC sharing</div>
  </div>
 </section>
 <section class="evidence" aria-label="November 7 deployment evidence">
