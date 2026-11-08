@@ -26,7 +26,9 @@ This separate section collection contains the four map clips, actual Chapter 2 s
 
 - [Map 01 — Four Maps](map-01-four-maps.html)
 - [Map 02 — Three Connected Levels](map-02-vertical.html)
-- [Map 03 — The Graybox](map-03-graybox.html)
+- [Map 03 — Greybox](map-03-graybox.html)
 - [Selection and preview notes](MAP-COMPOSITION.md)
 
 These are design-review layouts built directly from the user-selected **already collected** media. They are not part of Current or Previous and do not cause version rotation. Keep them until the next approved Codex integration phase is verified; delete only as part of the completed integration/cleanup step.
+
+Level Design preview revised: 4 muted autoplay map clips; 7.30-second muted autoplay traversal; C/F dashed connectors on a review-only SVG; exact paired ↔ wording; “Greybox” heading. No Current or Previous changes.
