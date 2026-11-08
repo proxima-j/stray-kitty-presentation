@@ -553,6 +553,182 @@
         "verification": "Actual confirmed provider ledger entry plus authenticated game-state balance, not redirect alone."
       },
       "limitations": "Sandbox demonstration only; no real payment credentials, personal identifiers or checkout tokens appear in published screenshots."
+    },
+    {
+      "id": "combat.battlefield.main",
+      "source": "../assets/pages/09/battlefield-main.png",
+      "origin": "Native Midnight Market / market_boss screenshot, official market.battle checkpoint; initial isolated attempt.",
+      "source_commit": "1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e",
+      "use": "Page 09 — Combat / Companions / 阿策",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved the revised combat asset package and explicitly authorized GitHub upload in chat on 2026-11-08.",
+      "metadata": {
+        "width": 1920,
+        "height": 1080
+      },
+      "limitations": "Full game HUD retained; intended full-context battlefield."
+    },
+    {
+      "id": "combat.reposition.closeup",
+      "source": "../assets/pages/09/reposition-closeup.mp4",
+      "origin": "New isolated market.battle attempt; real Banban B5→B6 native pointer drag. Source 1920×1080; crop x=600,y=300,w=960,h=540, nearest-neighbor enlargement; complete 1× sequence.",
+      "source_commit": "1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e",
+      "use": "Page 09 — Combat / Companions / 阿策",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved the revised combat asset package and explicitly authorized GitHub upload in chat on 2026-11-08.",
+      "metadata": {
+        "width": 1600,
+        "height": 900,
+        "duration_seconds": 7.6,
+        "codec": "H.264",
+        "audio": false,
+        "speed_multiplier": 1
+      },
+      "limitations": "Same stage/build/layout as the stills, separate attempt. Left goal/outer HUD omitted by close-up."
+    },
+    {
+      "id": "combat.companion.caster.figure",
+      "source": "../assets/pages/09/caster-figure.png",
+      "origin": "Original drawMarketCat(caster) → drawChapterCat → drawCat renderer, transparent export.",
+      "source_commit": "1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e",
+      "use": "Page 09 — Combat / Companions / 阿策",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved the revised combat asset package and explicitly authorized GitHub upload in chat on 2026-11-08.",
+      "metadata": {
+        "width": 128,
+        "height": 128,
+        "transparent": true
+      },
+      "limitations": "Authentic code-native pixel art; no replacement artwork."
+    },
+    {
+      "id": "combat.companion.caster.vfx",
+      "source": "../assets/pages/09/caster-star-vfx.png",
+      "origin": "Actual accepted 星绒绽放 / Star Bloom release from the original battle; cropped from full screenshot. Five-cell cross, 45 damage per enemy, 100 energy.",
+      "source_commit": "1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e",
+      "use": "Page 09 — Combat / Companions / 阿策",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved the revised combat asset package and explicitly authorized GitHub upload in chat on 2026-11-08.",
+      "metadata": {
+        "width": 825,
+        "height": 470
+      },
+      "limitations": "Actual scene background and impact cells retained."
+    },
+    {
+      "id": "combat.companion.guard.figure",
+      "source": "../assets/pages/09/guard-figure.png",
+      "origin": "Original drawMarketCat(guard) → drawChapterCat → drawCat renderer, transparent export.",
+      "source_commit": "1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e",
+      "use": "Page 09 — Combat / Companions / 阿策",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved the revised combat asset package and explicitly authorized GitHub upload in chat on 2026-11-08.",
+      "metadata": {
+        "width": 128,
+        "height": 128,
+        "transparent": true
+      },
+      "limitations": "Authentic code-native pixel art; no replacement artwork."
+    },
+    {
+      "id": "combat.companion.guard.vfx",
+      "source": "../assets/pages/09/guard-shield-vfx.png",
+      "origin": "Actual accepted 罐盖护盾 / Tin-Lid Shield release; tight crop of cyan shield and actual skill label. Self-shield 60 for 8s, 100 energy.",
+      "source_commit": "1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e",
+      "use": "Page 09 — Combat / Companions / 阿策",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved the revised combat asset package and explicitly authorized GitHub upload in chat on 2026-11-08.",
+      "metadata": {
+        "width": 191,
+        "height": 190
+      },
+      "limitations": "Shield does not stack or heal."
+    },
+    {
+      "id": "combat.companion.diandian.figure",
+      "source": "../assets/pages/09/diandian-figure.png",
+      "origin": "Original drawMarketCat(diandian) → drawChapterCat renderer, transparent export.",
+      "source_commit": "1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e",
+      "use": "Page 09 — Combat / Companions / 阿策",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved the revised combat asset package and explicitly authorized GitHub upload in chat on 2026-11-08.",
+      "metadata": {
+        "width": 128,
+        "height": 128,
+        "transparent": true
+      },
+      "limitations": "Authentic code-native pixel art; no replacement artwork."
+    },
+    {
+      "id": "combat.companion.diandian.vfx",
+      "source": "../assets/pages/09/diandian-heal-vfx.png",
+      "origin": "Actual accepted 安心呼噜 / Soothing Purr release, cropped from original battle. Heals active allies up to 80 HP, capped at max, 100 energy.",
+      "source_commit": "1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e",
+      "use": "Page 09 — Combat / Companions / 阿策",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved the revised combat asset package and explicitly authorized GitHub upload in chat on 2026-11-08.",
+      "metadata": {
+        "width": 600,
+        "height": 440
+      },
+      "limitations": "Cannot revive retired cats. Fading prior star effects remain in the genuine combat frame."
+    },
+    {
+      "id": "combat.advisor.figure",
+      "source": "../assets/pages/09/advisor-figure.png",
+      "origin": "Original AdvisorPortrait → drawCat(advisor) renderer, transparent cat-only export.",
+      "source_commit": "1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e",
+      "use": "Page 09 — Combat / Companions / 阿策",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved the revised combat asset package and explicitly authorized GitHub upload in chat on 2026-11-08.",
+      "metadata": {
+        "width": 128,
+        "height": 128,
+        "transparent": true
+      },
+      "limitations": "Figure is separate from both cards."
+    },
+    {
+      "id": "combat.advisor.before",
+      "source": "../assets/pages/09/advisor-01-before.png",
+      "origin": "Pure crop of actual advice interface with question typed before submission; original market_boss attempt, time 47.6s.",
+      "source_commit": "1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e",
+      "use": "Page 09 — Combat / Companions / 阿策",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved the revised combat asset package and explicitly authorized GitHub upload in chat on 2026-11-08.",
+      "metadata": {
+        "width": 724,
+        "height": 406
+      },
+      "limitations": "Authentic pre-submit state, not a pending-response/loading screen."
+    },
+    {
+      "id": "combat.advisor.after",
+      "source": "../assets/pages/09/advisor-02-after.png",
+      "origin": "Pure crop of reply to that same question and paused 47.6s battle snapshot. Actual endpoint HTTP 200, source=local, reason=not_configured.",
+      "source_commit": "1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e",
+      "use": "Page 09 — Combat / Companions / 阿策",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved the revised combat asset package and explicitly authorized GitHub upload in chat on 2026-11-08.",
+      "metadata": {
+        "width": 724,
+        "height": 694
+      },
+      "limitations": "LOCAL FALLBACK, not model-backed; no model/provider configuration change."
+    },
+    {
+      "id": "combat.review.contact-sheet",
+      "source": "../assets/pages/09/review-contact-sheet.png",
+      "origin": "User-approved revised local review sheet assembled from the exact curated assets and in-memory samples from reposition-closeup.mp4.",
+      "source_commit": "1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e",
+      "use": "Asset review reference only; not presentation page content",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved the revised combat asset package and explicitly authorized GitHub upload in chat on 2026-11-08.",
+      "metadata": {
+        "width": 3200,
+        "height": 4390
+      },
+      "limitations": "Captions describe local collection. Approval/upload subsequently recorded in PAGE-09-COMBAT-ASSETS.md; no page integration."
     }
   ]
 }
