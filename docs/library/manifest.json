@@ -113,21 +113,19 @@
     },
     {
       "id": "art.d20",
-      "status": "USER-OWNED / PUBLICATION APPROVED — upload pending",
-      "recovered_filename": "d20-dungeon-master-original.png",
-      "source_status": "Exact original recovered on Windows; copy into public repository on next Codex media pass",
-      "publication_target": "../assets/illustrations/d20-dungeon-master-original.png",
-      "clearance": "Approved by user; see ASSET-CLEARANCE.md",
-      "permission": "User confirmed ownership and approved publication in this project on 2026-11-08"
+      "source": "../assets/illustrations/d20-dungeon-master-original.png",
+      "origin": "Original user-supplied Page 02 artwork recovered from Stray-Kitty-Page-02-Layout-Preview.html",
+      "use": "Upper-right Page 02 folder-tab frame",
+      "status": "PUBLISHED",
+      "permission": "User confirmed ownership and approved public GitHub / GitHub Pages publication on 2026-11-08; see ASSET-CLEARANCE.md"
     },
     {
       "id": "art.playful-cats",
-      "status": "USER-OWNED / PUBLICATION APPROVED — upload pending",
-      "recovered_filename": "playful-cats-original.png",
-      "source_status": "Exact original recovered on Windows; copy into public repository on next Codex media pass",
-      "publication_target": "../assets/illustrations/playful-cats-original.png",
-      "clearance": "Approved by user; see ASSET-CLEARANCE.md",
-      "permission": "User confirmed ownership and approved publication in this project on 2026-11-08"
+      "source": "../assets/illustrations/playful-cats-original.png",
+      "origin": "Original user-supplied Page 02 artwork recovered from Stray-Kitty-Page-02-Layout-Preview.html",
+      "use": "Lower-right Page 02 ticket frame",
+      "status": "PUBLISHED",
+      "permission": "User confirmed ownership and approved public GitHub / GitHub Pages publication on 2026-11-08; see ASSET-CLEARANCE.md"
     },
     {
       "id": "film.opening",
