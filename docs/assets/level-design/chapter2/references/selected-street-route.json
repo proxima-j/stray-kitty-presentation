@@ -1,0 +1,17 @@
+{
+  "floor": "L0",
+  "from": "nwReturn.a",
+  "to": "underpassN.a",
+  "points": [
+    {
+      "x": 735,
+      "y": 408
+    },
+    {
+      "x": 669,
+      "y": 674
+    }
+  ],
+  "length": 274.06568555731303,
+  "verification": "Computed with current production isMarketTraversable and production findPath; not a hand-drawn shortcut"
+}

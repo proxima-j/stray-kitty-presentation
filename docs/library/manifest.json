@@ -132,6 +132,212 @@
       "source": "../assets/Stray-Kitty-Android-Final-v02-SFX.mp4",
       "metadata": "../assets/opening-film.json",
       "origin": "User-selected complete opening film; authorized for this public presentation"
+    },
+    {
+      "id": "level.maps.old-huang",
+      "source": "../assets/level-design/four-maps/p05-alley-old-huang.mp4",
+      "origin": "New current-local-build capture; real E interaction opens alley_dog_friend",
+      "use": "Four Maps / Rainy Alley",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved this curated Level Design collection and explicitly authorized GitHub upload on 2026-11-08",
+      "metadata": {
+        "width": 1280,
+        "height": 720,
+        "duration_seconds": 5.7
+      },
+      "limitations": "Silent, normal speed; loop resets at the end. Initial positions were staged before new recordings; recorded actions use production controls."
+    },
+    {
+      "id": "level.maps.market-descent",
+      "source": "../assets/level-design/four-maps/p05-market-west-descent.mp4",
+      "origin": "New current-local-build capture; underpassN L0\u2192L\u22121 plus real movement",
+      "use": "Four Maps / Midnight Market",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved this curated Level Design collection and explicitly authorized GitHub upload on 2026-11-08",
+      "metadata": {
+        "width": 1280,
+        "height": 720,
+        "duration_seconds": 6.3
+      },
+      "limitations": "Silent, normal speed; loop resets at the end. Initial positions were staged before new recordings; recorded actions use production controls."
+    },
+    {
+      "id": "level.maps.tunnel-jump",
+      "source": "../assets/level-design/four-maps/p05-tunnel-space-jump.mp4",
+      "origin": "New current-local-build capture; upper-gap-jump with actual Space input",
+      "use": "Four Maps / Underground Tunnel",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved this curated Level Design collection and explicitly authorized GitHub upload on 2026-11-08",
+      "metadata": {
+        "width": 1280,
+        "height": 720,
+        "duration_seconds": 5.533333
+      },
+      "limitations": "Silent, normal speed; loop resets at the end. Initial positions were staged before new recordings; recorded actions use production controls."
+    },
+    {
+      "id": "level.maps.warehouse-light",
+      "source": "../assets/level-design/four-maps/p05-warehouse-light.mp4",
+      "origin": "Historical 2026-11-06 R03 Warehouse normal-spawn central-light take; trimmed 0.50\u20136.70s",
+      "use": "Four Maps / Warehouse",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved this curated Level Design collection and explicitly authorized GitHub upload on 2026-11-08",
+      "metadata": {
+        "width": 1280,
+        "height": 720,
+        "duration_seconds": 6.2
+      },
+      "limitations": "Silent, normal speed; loop resets at the end. Initial positions were staged before new recordings; recorded actions use production controls."
+    },
+    {
+      "id": "level.chapter2.three-level-traversal",
+      "source": "../assets/level-design/chapter2/p06-market-three-level-western-spine.mp4",
+      "origin": "New current-local-build continuous nwReturn C \u2192 street walk \u2192 underpassN F take",
+      "use": "Chapter 2 Vertical Design",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved this curated Level Design collection and explicitly authorized GitHub upload on 2026-11-08",
+      "metadata": {
+        "width": 1280,
+        "height": 720,
+        "duration_seconds": 7.3
+      },
+      "limitations": "Silent, normal speed; loop resets at the end. Initial positions were staged before new recordings; recorded actions use production controls."
+    },
+    {
+      "id": "level.chapter2.art.L1",
+      "source": "../assets/level-design/chapter2/market-L1.webp",
+      "origin": "Game project web/src/modules/map/assets/night_market_L1_rooftops_1672x941.enhanced-v1.lossless.webp",
+      "use": "Chapter 2 Vertical Design",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved this curated Level Design collection and explicitly authorized GitHub upload on 2026-11-08",
+      "metadata": {
+        "width": 1672,
+        "height": 941,
+        "registration": "1672\u00d7941 world coordinates, as in runtime"
+      }
+    },
+    {
+      "id": "level.chapter2.art.L0",
+      "source": "../assets/level-design/chapter2/market-L0.webp",
+      "origin": "Game project web/src/modules/map/assets/night_market_L0_streets_1672x941.enhanced-v1.lossless.webp",
+      "use": "Chapter 2 Vertical Design",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved this curated Level Design collection and explicitly authorized GitHub upload on 2026-11-08",
+      "metadata": {
+        "width": 1671,
+        "height": 941,
+        "registration": "1672\u00d7941 world coordinates, as in runtime"
+      }
+    },
+    {
+      "id": "level.chapter2.art.Lminus1",
+      "source": "../assets/level-design/chapter2/market-Lminus1.webp",
+      "origin": "Game project web/src/modules/map/assets/night_market_Lminus1_tunnel_1672x941.enhanced-v1.lossless.webp",
+      "use": "Chapter 2 Vertical Design",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved this curated Level Design collection and explicitly authorized GitHub upload on 2026-11-08",
+      "metadata": {
+        "width": 1671,
+        "height": 941,
+        "registration": "1672\u00d7941 world coordinates, as in runtime"
+      }
+    },
+    {
+      "id": "level.chapter2.view.L1",
+      "source": "../assets/level-design/chapter2/view-L1.jpg",
+      "origin": "Actual current-build gameplay screenshot on L1; outer toolbar/footer cropped before approval",
+      "use": "Chapter 2 Vertical Design / actual-screenshot stack",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved this curated Level Design collection and explicitly authorized GitHub upload on 2026-11-08",
+      "metadata": {
+        "width": 1280,
+        "height": 720
+      }
+    },
+    {
+      "id": "level.chapter2.view.L0",
+      "source": "../assets/level-design/chapter2/view-L0.jpg",
+      "origin": "Actual current-build gameplay screenshot on L0; outer toolbar/footer cropped before approval",
+      "use": "Chapter 2 Vertical Design / actual-screenshot stack",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved this curated Level Design collection and explicitly authorized GitHub upload on 2026-11-08",
+      "metadata": {
+        "width": 1280,
+        "height": 720
+      }
+    },
+    {
+      "id": "level.chapter2.view.Lminus1",
+      "source": "../assets/level-design/chapter2/view-Lminus1.jpg",
+      "origin": "Actual current-build gameplay screenshot on Lminus1; outer toolbar/footer cropped before approval",
+      "use": "Chapter 2 Vertical Design / actual-screenshot stack",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved this curated Level Design collection and explicitly authorized GitHub upload on 2026-11-08",
+      "metadata": {
+        "width": 1280,
+        "height": 720
+      }
+    },
+    {
+      "id": "level.chapter2.screenshot-stack",
+      "source": "../assets/level-design/chapter2/stacked-gameplay-screenshots.svg",
+      "origin": "Approved arrangement of view-L1.jpg, view-L0.jpg and view-Lminus1.jpg; full images retained with a slight tilt",
+      "use": "Chapter 2 Vertical Design",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved this curated Level Design collection and explicitly authorized GitHub upload on 2026-11-08",
+      "metadata": {
+        "viewBox": "0 0 1500 1800",
+        "dependencies": [
+          "view-L1.jpg",
+          "view-L0.jpg",
+          "view-Lminus1.jpg"
+        ]
+      },
+      "limitations": "Each original screenshot has its own camera position; the stack is a visual arrangement."
+    },
+    {
+      "id": "level.process.graybox",
+      "source": "../assets/level-design/graybox/chapter2-graybox.png",
+      "origin": "Game project level_design/night_market/design/chapter2_graybox.png; original annotations preserved",
+      "use": "Development Process / graybox only",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved this curated Level Design collection and explicitly authorized GitHub upload on 2026-11-08",
+      "metadata": {
+        "width": 1448,
+        "height": 1086
+      }
+    },
+    {
+      "id": "level.chapter2.spatial-reference",
+      "source": "../assets/level-design/chapter2/references/night_market_v016_spatial_reference.json",
+      "origin": "Game project specs/night-market/night_market_v016_spatial_reference.json",
+      "use": "Chapter 2 source reference",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved this curated Level Design collection and explicitly authorized GitHub upload on 2026-11-08"
+    },
+    {
+      "id": "level.chapter2.traced-mask",
+      "source": "../assets/level-design/chapter2/references/night_market_traced_mask.json",
+      "origin": "Game project specs/night-market/night_market_traced_mask.json",
+      "use": "Chapter 2 source reference",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved this curated Level Design collection and explicitly authorized GitHub upload on 2026-11-08"
+    },
+    {
+      "id": "level.chapter2.street-route",
+      "source": "../assets/level-design/chapter2/references/selected-street-route.json",
+      "origin": "Current production isMarketTraversable + findPath; verified 274.07 native-pixel street link",
+      "use": "Chapter 2 connection evidence",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved this curated Level Design collection and explicitly authorized GitHub upload on 2026-11-08"
+    },
+    {
+      "id": "level.chapter2.recorded-route",
+      "source": "../assets/level-design/chapter2/references/recorded-three-level-route.json",
+      "origin": "Position samples and real floor transitions from the uninterrupted current-build recording",
+      "use": "Chapter 2 connection evidence",
+      "status": "APPROVED / PUBLISHED",
+      "permission": "User approved this curated Level Design collection and explicitly authorized GitHub upload on 2026-11-08"
     }
   ]
 }

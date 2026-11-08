@@ -15,3 +15,9 @@ Read the [asset checklist](ASSET-REQUESTS.md) before the next Codex implementati
 **Lifecycle:** Keep these review previews until Codex implements and verifies the approved pages in Current. Remove `docs/review/` as part of that next completed integration phase, not before. **Current and Previous may still be refined**; neither is permanently frozen. Do not rotate working deck versions for design previews.
 
 The full presentation still uses the original v3 navigation engine in Current. These HTML previews are isolated static compositions.
+
+## Approved Level Design asset collection
+
+[Open the approved media board](level-design-assets.html) · [Asset provenance and inventory](../library/LEVEL-DESIGN-ASSETS.md).
+
+This separate section collection contains the four map clips, actual Chapter 2 screenshot stack and traversal, floor artworks and the single development graybox. It uses section-based paths under `docs/assets/level-design/` because earlier Level Design working numbers 05–07 differ from the newer narrative/Home Hub/payment drafts above. Those drafts and both working decks are unchanged. This is asset publication, not final deck-page integration.
