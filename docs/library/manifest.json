@@ -447,7 +447,9 @@
         "height": 900,
         "codec": "H.264",
         "audio": false,
-        "duration_seconds": 7.267
+        "duration_seconds": 4.844,
+        "speed_multiplier": 1.5,
+        "frame_rate": 45
       }
     },
     {
@@ -463,7 +465,9 @@
         "height": 900,
         "codec": "H.264",
         "audio": false,
-        "duration_seconds": 16.5
+        "duration_seconds": 11.0,
+        "speed_multiplier": 1.5,
+        "frame_rate": 45
       },
       "limitations": "Historical QA recording used a free draw fixture at guaranteed/pity draw 18. Demonstrates the genuine postcard/reveal UI, not an ordinary first-draw probability or evidence of varying outcomes."
     },
@@ -480,7 +484,9 @@
         "height": 900,
         "codec": "H.264",
         "audio": false,
-        "duration_seconds": 9.7
+        "duration_seconds": 6.467,
+        "speed_multiplier": 1.5,
+        "frame_rate": 45
       }
     },
     {

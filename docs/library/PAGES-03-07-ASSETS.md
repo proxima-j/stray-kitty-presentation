@@ -43,6 +43,8 @@ Pages 03 and 04 need no new media. Current, Previous, the v3 engine and all revi
 
 ## Media metadata
 
+All three interaction MP4s play at 1.5× their captured speed, as requested. Full sequences and every source frame are retained at 45 fps; resolution, framing and silence are unchanged. Stable filenames are retained.
+
 | Asset | Format | Duration |
 | --- | --- | --- |
 | `narrative.friends.01` | 1600×900 PNG | — |
@@ -52,9 +54,9 @@ Pages 03 and 04 need no new media. Current, Previous, the v3 engine and all revi
 | `home.growth.02` | 1600×900 PNG | — |
 | `home.growth.03` | 1600×900 PNG | — |
 | `home.growth.04` | 1600×900 PNG | — |
-| `home.interaction.cats` | 1600×900 H.264 MP4, silent | 7.267s |
-| `home.interaction.postcard` | 1600×900 H.264 MP4, silent | 16.5s |
-| `home.interaction.furniture` | 1600×900 H.264 MP4, silent | 9.7s |
+| `home.interaction.cats` | 1600×900 H.264 MP4, silent | 4.844s |
+| `home.interaction.postcard` | 1600×900 H.264 MP4, silent | 11.0s |
+| `home.interaction.furniture` | 1600×900 H.264 MP4, silent | 6.467s |
 | `payment.recharge` | 1600×900 PNG | — |
 | `payment.checkout` | 1600×900 PNG | — |
 | `payment.return` | 1600×900 PNG | — |
