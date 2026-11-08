@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Stray Kitty — Kubernetes Deployment · Design Preview</title>
+<link rel="stylesheet" href="../library/tokens.css">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--paper);color:var(--ink);font-family:var(--body)}
+body{overflow-x:hidden}
+.k8s-preview{
+  position:relative;width:100%;height:100svh;min-height:685px;
+  display:flex;flex-direction:column;gap:clamp(15px,2vh,26px);
+  padding:clamp(27px,4vh,52px) 7.4vw clamp(65px,10.4vh,112px);
+  overflow:hidden;
+}
+.section-label{display:flex;align-items:center;gap:15px;font:400 12px/1.4 var(--body);letter-spacing:.13em;text-transform:uppercase}
+.number-pill{display:inline-flex;align-items:center;justify-content:center;min-width:54px;height:31px;background:var(--gold);border:var(--border) solid var(--ink);border-radius:var(--pill-radius);font:400 14px/1 var(--display);letter-spacing:0}
+.section-label:after{content:"";width:64px;height:1px;background:var(--gold)}
+h1{font:400 clamp(39px,4.3vw,70px)/1.1 var(--display);letter-spacing:-.048em;margin:clamp(12px,2vh,25px) 0 0}
+.subtitle{font:400 clamp(14px,1.2vw,19px)/1.4 var(--body);color:var(--muted);margin:8px 0 0}
+.cluster{
+  flex:1 1 auto;min-height:0;width:100%;
+  display:flex;flex-direction:column;gap:clamp(12px,1.55vh,19px);
+  border:1.5px solid var(--line);border-radius:20px;
+  padding:clamp(16px,1.65vw,26px) clamp(17px,1.75vw,29px);
+  background:rgba(255,255,255,.09);
+}
+.cluster-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.cluster-tag{font:400 12px/1.4 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.cluster-meta{font:400 12px/1.4 var(--body);color:var(--ink);padding:5px 12px;border:1px solid var(--line);border-radius:999px}
+.application-grid{
+  flex:1 1 auto;min-height:0;
+  display:grid;grid-template-columns:minmax(0,1fr) 43px minmax(0,1fr) 43px minmax(0,1fr);
+  align-items:stretch;gap:clamp(7px,1.1vw,19px);
+}
+.component{display:flex;flex-direction:column;min-width:0;min-height:0}
+.node-card{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:clamp(8px,1.25vh,14px);flex:1 1 auto;padding:clamp(14px,1.7vw,28px);border:var(--border) solid var(--ink);border-radius:var(--frame-radius);background:rgba(255,255,255,.14)}
+.node-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%}
+.component-number{font:400 12px/1 var(--display);background:var(--gold);padding:8px 11px;border:1px solid var(--ink);border-radius:99px}
+.pod-count{font:400 clamp(10px,.9vw,13px)/1.2 var(--body);color:var(--muted);text-align:right}
+.node-card h2{font:400 clamp(23px,2.05vw,35px)/1.12 var(--display);letter-spacing:-.035em;margin:0}
+.node-card p{font:400 clamp(13px,1.1vw,18px)/1.35 var(--body);color:var(--muted);margin:0}
+.service-type{margin-top:auto;padding-top:10px;border-top:1px solid var(--gold);width:100%;font:400 clamp(11px,.94vw,15px)/1.45 var(--body);color:var(--ink)}
+.connector{align-self:center;justify-self:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;color:var(--accent);font:400 27px/1 Arial,sans-serif}
+.connector small{font:400 11px/1.2 var(--body);color:var(--muted);white-space:nowrap}
+.storage{display:flex;align-items:center;justify-content:center;text-align:center;gap:10px;flex:0 0 auto;min-height:47px;margin-top:10px;padding:9px 12px;border:1px dashed var(--line);border-radius:12px;background:rgba(207,166,106,.1)}
+.storage strong{font:400 clamp(12px,1vw,16px)/1.25 var(--display);color:var(--ink)}
+.storage span{font:400 clamp(10px,.82vw,13px)/1.4 var(--body);color:var(--muted)}
+.cluster-bottom{display:flex;align-items:center;justify-content:space-between;gap:17px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:12px}
+.agent{display:flex;align-items:center;gap:13px;font:400 13px/1.4 var(--body)}
+.agent strong{font:400 16px/1.25 var(--display)}
+.agent span{color:var(--muted)}
+.cluster-foot{font:400 11px/1.5 var(--body);color:var(--muted);text-align:right}
+.evidence{flex:0 0 auto;border-top:1px solid var(--line);padding-top:12px}
+.evidence-head{display:flex;align-items:baseline;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:10px}
+.evidence h3{margin:0;font:400 12px/1.4 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
+.evidence-date{font:400 12px/1.35 var(--body);color:var(--muted)}
+.proof-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.proof{border:1px solid var(--line);border-radius:99px;display:flex;align-items:center;gap:8px;justify-content:center;min-width:0;padding:10px 7px;font:400 clamp(11px,.86vw,14px)/1.25 var(--body);white-space:nowrap}
+.proof-mark{font-size:16px;color:#51735e}
+.evidence-notes{display:flex;justify-content:space-between;gap:20px;align-items:baseline;flex-wrap:wrap;margin-top:9px;font:400 11px/1.4 var(--body);color:var(--muted)}
+.evidence-notes a{color:var(--ink);text-underline-offset:3px}
+.review-route{position:absolute;left:0;right:0;bottom:clamp(24px,4.7vh,49px);border-top:3px dotted var(--accent);opacity:.6;pointer-events:none}
+.review-cat{position:absolute;left:24%;bottom:clamp(29px,5vh,54px);width:clamp(46px,3.5vw,65px);height:auto;image-rendering:pixelated;filter:drop-shadow(1px 3px 1px rgba(30,51,40,.12));pointer-events:none}
+@media(max-height:810px){
+.k8s-preview{min-height:630px;padding-top:21px;padding-bottom:67px;gap:11px}
+h1{font-size:clamp(36px,3.8vw,59px);margin-top:10px}
+.cluster{gap:9px;padding:12px 17px}
+.node-card{gap:8px;padding:13px 18px}
+.node-card h2{font-size:clamp(20px,1.9vw,29px)}
+.storage{min-height:38px;margin-top:7px}
+.cluster-bottom{padding-top:7px}
+.evidence{padding-top:8px}
+.evidence-head{margin-bottom:7px}
+.proof{padding:7px 5px}
+}
+@media(max-width:1100px){
+.application-grid{grid-template-columns:minmax(0,1fr) 25px minmax(0,1fr) 25px minmax(0,1fr);gap:7px}
+.connector{font-size:21px}.connector small{font-size:9px}
+.node-card{padding:13px 12px}
+.node-card h2{font-size:clamp(18px,2.25vw,28px)}
+.proof-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+.cluster-bottom{align-items:flex-start}
+}
+@media(max-width:675px){
+.k8s-preview{height:auto;min-height:100svh;overflow:visible}
+.application-grid{grid-template-columns:1fr;grid-template-rows:auto 24px auto 24px auto}
+.component{min-height:170px}
+.connector{transform:rotate(90deg)}
+.node-card{min-height:135px}
+.cluster-foot{text-align:left}
+.proof-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+</style>
+</head>
+<body>
+<main class="k8s-preview" aria-label="Kubernetes Deployment architecture review based on verified Nov 7 release">
+<header>
+ <div class="section-label"><span class="number-pill">03</span>TECHNICAL WALKTHROUGH / DEPLOYMENT</div>
+ <h1>Kubernetes Deployment</h1>
+ <p class="subtitle">Three application services with persistent storage</p>
+</header>
+<section class="cluster" aria-label="Configured Stray Kitty application topology in team preview namespace">
+ <div class="cluster-top">
+  <span class="cluster-tag">TEAM PREVIEW · cn-haozhe-wang</span>
+  <span class="cluster-meta">1 replica per Deployment · Recreate strategy</span>
+ </div>
+ <div class="application-grid">
+  <div class="component">
+   <section class="node-card" aria-label="Frontend application Pod">
+    <div class="node-heading"><span class="component-number">01</span><span class="pod-count">POD · 2 CONTAINERS</span></div>
+    <h2>Frontend</h2>
+    <p>nginx + certificate sidecar</p>
+    <div class="service-type">LoadBalancer · public 80 / 443</div>
+   </section>
+   <div class="storage" aria-label="TLS persistent volume claim"><strong>TLS PVC</strong><span>1Gi · RWO</span></div>
+  </div>
+  <div class="connector" aria-hidden="true"><span>→</span><small>/api</small></div>
+  <div class="component">
+   <section class="node-card" aria-label="Game API application Pod">
+    <div class="node-heading"><span class="component-number">02</span><span class="pod-count">POD · 1 CONTAINER</span></div>
+    <h2>Game API</h2>
+    <p>Go · game rules and progress</p>
+    <div class="service-type">ClusterIP · 8080</div>
+   </section>
+   <div class="storage" aria-label="Game save persistent volume claim"><strong>Game PVC</strong><span>1Gi · RWO</span></div>
+  </div>
+  <div class="connector" aria-hidden="true"><span>→</span><small>internal</small></div>
+  <div class="component">
+   <section class="node-card" aria-label="Payment application Pod">
+    <div class="node-heading"><span class="component-number">03</span><span class="pod-count">POD · 1 CONTAINER</span></div>
+    <h2>Payment</h2>
+    <p>paymentd · ledger and callbacks</p>
+    <div class="service-type">ClusterIP · 8082</div>
+   </section>
+   <div class="storage" aria-label="Payment ledger persistent volume claim"><strong>Payment PVC</strong><span>1Gi · RWO</span></div>
+  </div>
+ </div>
+ <div class="cluster-bottom">
+   <div class="agent"><strong>Datadog Agent</strong><span>Separately managed Deployment + ClusterIP Service</span></div>
+   <div class="cluster-foot">Application target: 3 Pods · 4 containers · 3 Services · 3 PVCs</div>
+ </div>
+</section>
+<section class="evidence" aria-label="November 7 deployment evidence">
+ <div class="evidence-head"><h3>DEPLOYMENT VERIFIED</h3><span class="evidence-date">November 7, 2026 · ~23:37 China time</span></div>
+ <div class="proof-list">
+   <div class="proof"><span class="proof-mark">✓</span>Three application rollouts</div>
+   <div class="proof"><span class="proof-mark">✓</span>Payment /readyz</div>
+   <div class="proof"><span class="proof-mark">✓</span>Public /healthz</div>
+   <div class="proof"><span class="proof-mark">✓</span>release.json: deployed</div>
+ </div>
+ <div class="evidence-notes">
+  <span>Recorded release, not a live Pod or PVC-status check. Public /healthz tests frontend availability.</span>
+  <span><a href="https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/pipelines/8015" target="_blank" rel="noopener">Pipeline #8015</a> · <a href="https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/jobs/29905" target="_blank" rel="noopener">Deploy job #29905</a></span>
+ </div>
+</section>
+<div class="review-route" aria-hidden="true"></div>
+<img class="review-cat" src="../assets/miaomiao.svg" alt="" aria-hidden="true">
+</main>
+</body>
+</html>
