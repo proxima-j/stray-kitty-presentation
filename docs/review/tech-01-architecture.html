@@ -18,7 +18,7 @@
       padding:clamp(26px,4.5vh,54px) 7.4vw clamp(62px,10.5vh,112px);
       display:flex;
       flex-direction:column;
-      gap:clamp(12px,2vh,24px);
+      gap:clamp(9px,1.3vh,15px);
       overflow:hidden;
       isolation:isolate;
     }
@@ -55,10 +55,10 @@
       flex:1 1 auto;
       min-height:0;
       width:min(100%,1050px);
-      max-height:580px;
+      max-height:520px;
       margin:0 auto;
       display:grid;
-      grid-template-rows:minmax(86px,1fr) 36px minmax(86px,1fr) 36px minmax(86px,1fr);
+      grid-template-rows:minmax(76px,1fr) 26px minmax(76px,1fr) 26px minmax(76px,1fr);
       justify-items:stretch;
       align-items:stretch;
     }
@@ -94,11 +94,11 @@
     .connected-services{
       flex:0 0 auto;
       border-top:1px solid var(--line);
-      padding-top:clamp(12px,1.5vh,21px);
+      padding-top:clamp(9px,1.15vh,14px);
       width:100%;
     }
     .connected-services h3{
-      margin:0 0 clamp(10px,1.5vh,16px);
+      margin:0 0 clamp(7px,1.1vh,12px);
       color:var(--ink);
       font:400 12px/1.35 var(--body);
       letter-spacing:.14em;
@@ -110,7 +110,7 @@
       align-items:center;
       justify-content:center;
       gap:clamp(5px,.8vh,8px);
-      min-height:clamp(78px,10vh,110px);
+      min-height:clamp(65px,8.4vh,92px);
       padding:12px 10px;
       text-align:center;
       border:var(--border) solid var(--ink);
@@ -119,6 +119,36 @@
     }
     .service strong{font:400 clamp(16px,1.45vw,23px)/1.25 var(--display);color:var(--ink)}
     .service span{font:400 clamp(12px,1.04vw,17px)/1.3 var(--body);color:var(--muted)}
+    .build-deployment{
+      flex:0 0 auto;
+      width:100%;
+      border-top:1px solid var(--line);
+      padding-top:clamp(9px,1.2vh,15px);
+    }
+    .build-deployment h3{
+      margin:0 0 clamp(7px,1vh,11px);
+      font:400 12px/1.35 var(--body);
+      letter-spacing:.14em;
+      color:var(--ink);
+    }
+    .build-card{
+      display:flex;flex-direction:column;align-items:center;justify-content:center;
+      min-height:clamp(65px,8.7vh,95px);
+      gap:clamp(5px,.75vh,8px);
+      padding:10px 16px;
+      background:rgba(255,255,255,.13);
+      border:var(--border) solid var(--ink);
+      border-radius:var(--frame-radius);
+      text-align:center;
+    }
+    .build-card strong{
+      font:400 clamp(17px,1.75vw,28px)/1.24 var(--display);
+      letter-spacing:-.025em;
+    }
+    .build-card span{
+      font:400 clamp(12px,1.05vw,17px)/1.35 var(--body);
+      color:var(--muted);
+    }
     /* Static review-only echo of the approved v3 route and cat.
        The continuous route is owned by v3 when this page is integrated. */
     .review-route{
@@ -147,7 +177,12 @@
       .layer p{font-size:clamp(12px,1vw,16px)}
       .service{min-height:65px}
       .connected-services{padding-top:9px}
-      .connected-services h3{margin-bottom:8px}
+      .connected-services h3{margin-bottom:7px}
+      .build-deployment{padding-top:7px}
+      .build-deployment h3{margin-bottom:6px}
+      .build-card{min-height:62px;gap:4px;padding:7px 12px}
+      .build-card strong{font-size:clamp(16px,1.7vw,24px)}
+      .build-card span{font-size:clamp(11px,.98vw,15px)}
     }
     @media(max-width:700px){
       .tech-page{padding-left:4vw;padding-right:4vw;min-height:550px}
@@ -159,6 +194,8 @@
       .service strong{font-size:clamp(13px,2.4vw,18px)}
       .service span{font-size:clamp(11px,1.8vw,14px)}
       .section-label::after{width:25px}
+      .build-card strong{font-size:clamp(15px,2.8vw,22px)}
+      .build-card span{font-size:clamp(11px,2vw,15px)}
     }
   </style>
 </head>
@@ -186,7 +223,14 @@
       <div class="service-grid">
         <div class="service"><strong>Xsolla</strong><span>Payment service</span></div>
         <div class="service"><strong>AI Advisor</strong><span>Contextual answers</span></div>
-        <div class="service"><strong>Datadog</strong><span>Observability</span></div>
+        <div class="service"><strong>Datadog</strong><span>RUM · APM · Logs · Alerts</span></div>
+      </div>
+    </section>
+    <section class="build-deployment" aria-label="Build and deployment">
+      <h3>BUILD &amp; DEPLOYMENT</h3>
+      <div class="build-card">
+        <strong>GitLab CI/CD → Docker → Kubernetes</strong>
+        <span>Verification · Packaging · Manual deployment · Readiness</span>
       </div>
     </section>
     <div class="review-route" aria-hidden="true"></div>
