@@ -1,0 +1,21 @@
+.number-pill,.pill{display:inline-flex;align-items:center;justify-content:center;border:var(--border) solid var(--ink);border-radius:var(--pill-radius);font-family:var(--display);font-weight:400}
+.number-pill{min-width:52px;height:30px;padding:0 15px;font-size:13px;letter-spacing:.06em;background:var(--gold)}
+.section-label{display:flex;gap:16px;align-items:center;font:12px/1.4 var(--body);letter-spacing:.14em;text-transform:uppercase}
+.section-label::after{content:'';width:65px;border-top:1px solid var(--gold)}
+.folder-frame{border:var(--border) solid var(--ink);border-radius:0 var(--frame-radius) var(--frame-radius) var(--frame-radius);background:var(--paper);position:absolute}
+.folder-tab{position:absolute;left:calc(-1 * var(--border));top:-29px;height:29px;padding:5px 17px 0;border:var(--border) solid var(--ink);border-bottom:0;border-radius:12px 12px 0 0;background:var(--paper);font:12px/1.6 var(--body);letter-spacing:.08em}
+.ticket-frame{position:absolute;background:transparent}
+.ticket-outline{position:absolute;inset:0;width:100%;height:100%;fill:var(--paper);stroke:var(--ink);stroke-width:1.5;vector-effect:non-scaling-stroke;overflow:visible}
+.image-container{border-radius:var(--frame-radius);overflow:hidden}
+.asset-placeholder{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:22px;color:var(--muted)}
+.asset-placeholder strong{font:400 clamp(16px,1.25vw,21px)/1.3 var(--display);color:var(--ink)}
+.asset-placeholder small{max-width:200px;font:11px/1.5 var(--body);letter-spacing:.035em}
+.divider{border:0;border-top:1px solid var(--line)}
+.circle-control{width:38px;height:38px;border:var(--border) solid var(--ink);border-radius:50%;background:var(--paper);color:var(--ink)}
+.flow-route{fill:none;stroke:var(--ink);stroke-width:2.8;stroke-linecap:round;stroke-dasharray:1 12}
+.flow-direction{fill:none;stroke:var(--ink);stroke-width:2.8;stroke-linecap:round}
+.flow-pill{fill:var(--paper);stroke:var(--ink);stroke-width:1.5}
+.flow-label{fill:var(--ink);font:400 22px var(--display);text-anchor:middle;dominant-baseline:middle;letter-spacing:.035em}
+.flow-hub{fill:var(--hub-yellow)}
+/* Reveal/assembly primitives are the approved v3 [data-build] attributes,
+   implemented in engine-v3.js: text, rise, line; data-at controls ordering. */

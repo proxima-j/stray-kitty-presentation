@@ -1,0 +1,96 @@
+:root{--paper:#f5f4ee;--ink:#23352f;--muted:#60756a;--accent:#b76c52;--tint:#e8eee7;--line:#a9b9aa;--route-y:84%;color-scheme:light}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--paper);color:var(--ink);font-family:"Segoe UI",Arial,sans-serif}
+html{scroll-behavior:auto;scrollbar-width:none}html::-webkit-scrollbar,body::-webkit-scrollbar{display:none}body{overscroll-behavior-y:none}button{font:inherit}
+.scroll-space{height:475vh;position:relative}
+.stage{width:100%;height:100dvh;position:sticky;top:0;overflow:hidden;background:var(--paper);isolation:isolate}
+.world{position:absolute;left:0;top:0;width:400vw;height:100%;will-change:transform;contain:layout style}
+.route-svg{position:absolute;inset:0;width:400vw;height:100%;overflow:visible;z-index:11;pointer-events:none;}
+.route-ghost,.route-ink{fill:none;stroke-linecap:round;stroke-dasharray:3.2 13.4;stroke-width:3.2}
+.route-ghost{stroke:#bdc9bf;opacity:.5}.route-ink{stroke:var(--accent);opacity:1}
+.scene{width:100vw;height:100%;position:absolute;top:0;overflow:hidden;perspective:1400px}
+.scene[data-scene="0"]{left:0}.scene[data-scene="1"]{left:100vw}.scene[data-scene="2"]{left:200vw}.scene[data-scene="3"]{left:300vw}
+.scene-camera{position:relative;inset:0;width:100%;height:100%;transform-origin:50% 45%;will-change:transform;transform-style:preserve-3d}
+.scene-camera [data-build]{will-change:transform,opacity,clip-path;transform-origin:center bottom}
+.scene h1,.scene h2{margin:0;line-height:1.04;font-weight:630;letter-spacing:-.055em;overflow-wrap:normal}
+.scene h1 em,.scene h2 em{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.055em;color:var(--accent)}
+.scene p{margin:0}
+.eyebrow{font:bold clamp(11px,.85vw,15px)/1.5 Consolas,"Courier New",monospace;letter-spacing:.13em;color:var(--accent)}
+.lede{font-size:clamp(16px,1.28vw,23px);line-height:1.56;color:#51675c}
+.subnote{font-size:clamp(13px,1vw,17px);line-height:1.5;color:#6a7f72}
+.feature-image{margin:0;position:absolute;z-index:3}
+.feature-image img{display:block;width:100%;height:100%;object-fit:cover;border:1px solid #9daea1;background:#e5e8e3;box-shadow:0px 7px 15px rgba(39,62,49,.055)}
+.feature-image figcaption{color:#66796d;font:bold clamp(10px,.7vw,12px)/1.5 Consolas,monospace;letter-spacing:.08em;padding-top:9px;white-space:nowrap}
+.feature-image figcaption b{color:var(--accent);margin-right:12px}
+.feature-image figcaption span{font-weight:400;color:#819186}
+/* Opening is the full visual exception: the accepted trailer occupies a deliberate content area. */
+.opening-copy{position:absolute;left:7.4vw;top:20%;width:40vw}
+.opening-copy h1{font-size:clamp(45px,5.3vw,88px);margin-top:30px}
+.opening-copy .lede{max-width:33vw;margin-top:27px}
+.opening-instruction{position:absolute;top:calc(100% + 23vh);font:bold 12px Consolas,monospace;letter-spacing:.13em;color:#758c7c;white-space:nowrap}
+.opening-instruction span{font-size:20px;color:var(--accent);vertical-align:-2px;margin-left:10px}
+.opening-film{position:absolute;right:6vw;top:20%;width:44vw;margin:0}
+.film-viewport{height:min(47vh,430px);position:relative;background:#15211b;border:1px solid #8b9e93;padding:7px}
+.film-viewport video{width:100%;height:100%;object-fit:cover;display:block}
+.film-viewport .corner{width:15px;height:15px;position:absolute;border-color:var(--accent)}
+.corner.top-left{top:-6px;left:-6px;border-top:2px solid;border-left:2px solid}.corner.top-right{top:-6px;right:-6px;border-top:2px solid;border-right:2px solid}
+.corner.bottom-left{bottom:-6px;left:-6px;border-bottom:2px solid;border-left:2px solid}.corner.bottom-right{bottom:-6px;right:-6px;border-bottom:2px solid;border-right:2px solid}
+.opening-film figcaption{font:bold 11px Consolas,monospace;color:#536c5d;letter-spacing:.08em;margin-top:13px}
+.opening-film figcaption span{font-weight:normal;color:#8b9c90}
+/* Moment 2 — actual media is the only thing that builds up beside the road. */
+.pitch-copy{position:absolute;top:13%;left:7.4vw;width:60vw;z-index:4}
+.pitch-copy h2{font-size:clamp(46px,5vw,83px);margin-top:18px}
+.pitch-copy .lede{max-width:37vw;margin-top:28px}
+.pitch-copy strong{color:#263f32}
+.pitch-shot{height:20vh;min-height:120px;max-height:210px}
+.pitch-shot img{border:5px solid var(--paper);outline:1px solid #a9bbae}
+.pitch-shot-a{left:7.4vw;top:51%;width:24vw}
+.pitch-shot-b{left:40vw;top:40%;width:23vw}
+.pitch-shot-c{left:71vw;top:25%;width:22vw}
+.pitch-shot-b img{object-position:50% 30%}
+.pitch-payoff{position:absolute;left:40vw;top:74%;font-size:clamp(14px,1vw,18px);line-height:1.5;color:#687d70;max-width:41vw;z-index:4}
+/* Moment 3 — world art / plan / playable floors. */
+.level-copy{position:absolute;left:7.3vw;top:15%;width:44vw;z-index:4}
+.level-copy h2{font-size:clamp(43px,4.25vw,74px);margin-top:19px}
+.level-copy .lede{max-width:36vw;margin-top:24px}
+.level-copy .subnote{max-width:36vw;margin-top:17px}
+.level-art{left:51vw;top:14%;width:43.5vw;height:39vh;max-height:370px}
+.level-art img{object-position:50% 45%}
+.level-plan{left:51vw;top:58%;width:21vw;height:19vh;max-height:183px}
+.level-plan img{object-fit:contain;background:#f4f4ef}
+.floor-stack{position:absolute;left:74vw;top:56%;width:19.2vw;z-index:4}
+.floor-title{font:bold 10px Consolas,monospace;letter-spacing:.08em;color:#657a6d;margin-bottom:16px!important}
+.floor{display:flex;align-items:center;gap:11px;margin-bottom:9px;border-bottom:1px solid #aabdaf;padding-bottom:5px}
+.floor b{font:bold 15px Consolas,monospace;width:34px;color:var(--accent)}
+.floor span{font-size:13px;flex:1;color:#40594a}
+.floor i{background:#bed1c4;width:18%;height:7px;transform:skewX(-13deg)}
+.floor-note{font:10px/1.5 Consolas,monospace;color:#87988e;max-width:190px;margin-top:10px!important}
+/* Moment 4 — engineering content itself assembles, not decorative buildings. */
+.tech-copy{position:absolute;top:15%;left:7.3vw;width:76vw;z-index:4}
+.tech-copy h2{font-size:clamp(44px,4.55vw,79px);margin-top:18px}
+.tech-copy .lede{max-width:56vw;margin-top:19px}
+.tech-game{left:7.3vw;top:47%;width:29vw;height:23vh;max-height:230px}
+.tech-game img{object-position:50% 49%}
+.tech-flow{position:absolute;left:41vw;top:50%;width:52vw;height:26%;display:flex;gap:0;align-items:flex-start;z-index:4}
+.flow-node{width:25%;padding:14px 12px 7px;border-top:2px solid #9cb0a3;position:relative;min-height:80px}
+.flow-node b{display:block;font:bold 12px Consolas,monospace;color:var(--accent)}
+.flow-node strong{display:block;font-size:clamp(13px,1.1vw,19px);color:#294135;margin-top:12px}
+.flow-node small{display:block;font-size:clamp(10px,.83vw,13px);color:#718477;margin-top:6px}
+.flow-connector{position:absolute;left:0;top:0;width:100%;height:2px;background:var(--accent);transform-origin:0 50%;opacity:.65}
+.flow-note{font:10px/1.6 Consolas,monospace;color:#839489;letter-spacing:.04em;position:absolute;left:1%;top:74%;max-width:440px}
+/* Foreground: genuine cat, always in front of the scroll-linked route. */
+.hero-cat{position:absolute;left:calc(24% - 29px);top:calc(var(--route-y) - 63px);width:72px;height:66px;z-index:25;pointer-events:none;filter:drop-shadow(1px 4px 1px rgba(30,51,40,.12));transform-origin:center bottom;will-change:top,transform}
+.hero-cat img{width:100%;height:100%;image-rendering:pixelated;display:block}
+.hero-cat.walking img{animation:walk-bounce .31s steps(2,end) infinite}
+@keyframes walk-bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+.help-button{position:absolute;right:12px;top:12px;z-index:60;opacity:0;border:0;background:transparent;color:#6f7f72;font:bold 12px Consolas,monospace;cursor:pointer;padding:11px}
+.help-button:hover,.help-button:focus-visible{opacity:.85}
+.help-panel{position:absolute;top:22px;right:22px;z-index:80;max-width:300px;background:#fbfcf7;box-shadow:0 14px 44px rgba(28,53,39,.14);border:1px solid #a8bcad;padding:23px}
+.help-panel[hidden]{display:none}.help-panel button{float:right;background:none;border:0;font-size:22px;cursor:pointer}.help-panel h3{font-size:16px;margin:0 0 16px}.help-panel p{font-size:12px;line-height:1.7;color:#587062;margin:0 0 10px}.help-panel kbd{background:#e5ebe4;padding:2px 4px;border-radius:2px}
+@media(max-width:1050px){.opening-copy h1{font-size:clamp(35px,4.8vw,70px)}.opening-film{top:24%;width:43vw}.pitch-copy h2{font-size:clamp(37px,4.8vw,68px)}.pitch-copy .lede{max-width:38vw}.pitch-shot-a{width:25vw}.pitch-shot-b{left:39vw;width:25vw}.pitch-shot-c{left:70vw;width:24vw}.level-copy h2{font-size:clamp(36px,4.15vw,57px)}.level-art{width:43vw}.floor-stack{width:20vw}}
+@media(max-height:730px){.opening-copy{top:16%}.opening-film{top:16%}.film-viewport{height:43vh}.pitch-copy{top:10%}.pitch-copy h2{font-size:clamp(36px,4.5vw,70px)}.pitch-copy .lede{margin-top:16px}.pitch-shot-a{top:51%}.pitch-shot-b{top:38%}.pitch-shot-c{top:24%}.level-copy{top:11%}.level-copy h2{font-size:clamp(36px,4.15vw,62px)}.level-copy .lede{margin-top:13px}.level-copy .subnote{margin-top:11px}.level-art{top:12%;height:37vh}.level-plan{top:54%}.floor-stack{top:54%}.tech-copy{top:10%}.tech-copy h2{font-size:clamp(40px,4.15vw,68px)}.tech-copy .lede{margin-top:14px}.tech-game{top:45%}.tech-flow{top:48%}}
+@media(prefers-reduced-motion:reduce){.hero-cat.walking img{animation:none}.hero-cat,.help-button{transition:none!important}}
+
+/* Settings live only inside the optional help panel; no permanent chrome. */
+.pace-control{display:flex;gap:10px;align-items:center;justify-content:space-between;font:11px/1.45 Consolas,monospace;color:#526d5f;margin-top:16px}
+.pace-control select{border:1px solid #b1c2b5;background:#f4f7f1;color:#2b4537;padding:7px;font:11px Consolas,monospace;max-width:170px}

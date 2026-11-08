@@ -1,0 +1,2 @@
+@font-face{font-family:Faculty Glyphic;src:url('../assets/fonts/FacultyGlyphic-Regular.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
+:root{--paper:#F4E6C7;--ink:#34453E;--muted:#62685A;--accent:#B56E55;--gold:#CFA66A;--hub-yellow:#F0D36A;--line:#8D917B;--display:'Faculty Glyphic',Georgia,serif;--body:Arial,Helvetica,sans-serif;--border:1.5px;--pill-radius:999px;--frame-radius:18px;--route-y:84%;--beat-ms:4200;color-scheme:light}

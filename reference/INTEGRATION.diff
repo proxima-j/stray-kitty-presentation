@@ -1,0 +1,103 @@
+--- approved-v3/script.js
++++ docs/engine-v3.js
+@@ -18,7 +18,7 @@
+   const paceSelect = document.getElementById('paceSelect');
+   const scenes = [...document.querySelectorAll('.scene')];
+ 
+-  const stops = [0, 0.335, 0.665, 1];
++  const stops = scenes.map((_, index) => index / Math.max(1, scenes.length - 1));
+   const clamp = (value, min = 0, max = 1) => Math.max(min, Math.min(max, value));
+   const mix = (a, b, t) => a + (b - a) * t;
+   const smooth = value => { const t = clamp(value); return t * t * (3 - 2 * t); };
+@@ -57,7 +57,7 @@
+       `S ${w * 2.52} ${h * .806}, ${w * 2.94} ${h * .835}`,
+       `S ${w * 3.60} ${h * .815}, ${w * 4} ${h * .832}`,
+     ].join(' ');
+-    routeSvg.setAttribute('viewBox', `0 0 ${4 * w} ${h}`);
++    routeSvg.setAttribute('viewBox', `0 0 ${scenes.length * w} ${h}`);
+     routeGhost.setAttribute('d', d);
+     routeInk.setAttribute('d', d);
+     routeReveal.setAttribute('height', String(h));
+@@ -99,7 +99,7 @@
+         return index - 1 + smooth(segment(phase, 0.015, 0.72));
+       }
+     }
+-    return 3;
++    return stops.length - 1;
+   }
+   function revealProgress(progress, index) {
+     if (index === 0) return 1;
+@@ -157,13 +157,28 @@
+ 
+     // Video stops decoding as the opening exits, reducing scroll jank.
+     if (progress > 0.16 || document.hidden) {
+-      if (!video.paused) video.pause();
+-    } else if (video.paused && !reducedMotion && !document.hidden && progress <= 0.005) {
+-      video.play().catch(() => {});
++      if (video && !video.paused) video.pause();
++    } else if (video && video.paused && !reducedMotion && !document.hidden && progress <= 0.005) {
++      video?.play().catch(() => {});
+     }
+     world.dataset.distance = cameraDistanceNow.toFixed(4);
+     world.dataset.progress = progress.toFixed(4);
+-    world.dataset.scene = String(Math.min(3, Math.round(cameraDistanceNow)));
++    world.dataset.scene = String(Math.min(stops.length - 1, Math.round(cameraDistanceNow)));
++    // Integration only: direct review URLs and accessible off-screen scenes.
++    const activeIndex = Math.round(cameraDistanceNow);
++    scenes.forEach((scene, index) => {
++      scene.inert = index !== activeIndex;
++      scene.setAttribute('aria-hidden', String(index !== activeIndex));
++    });
++    if (Math.abs(progress - stops[activeIndex]) < 0.00002) {
++      const page = scenes[activeIndex].dataset.page;
++      const url = new URL(location.href);
++      if (url.searchParams.get('page') !== page) {
++        url.searchParams.set('page', page);
++        history.replaceState(null, '', url);
++      }
++      document.title = `Stray Kitty — Page ${page} · ${activeIndex ? 'Game Flow' : 'Elevator Pitch'}`;
++    }
+   }
+ 
+   function frame(now) {
+@@ -247,10 +262,10 @@
+     const p = renderedProgress;
+     if (direction > 0) {
+       const index = stops.findIndex(s => s > p + 0.025);
+-      startMove(index < 0 ? 3 : index);
++      startMove(index < 0 ? stops.length - 1 : index);
+     } else {
+       const reversedIndex = [...stops].reverse().findIndex(s => s < p - 0.025);
+-      startMove(reversedIndex < 0 ? 0 : 3 - reversedIndex);
++      startMove(reversedIndex < 0 ? 0 : stops.length - 1 - reversedIndex);
+     }
+   }
+   function onWheel() {
+@@ -296,19 +311,23 @@
+       event.preventDefault(); startMove(0, true);
+     }
+     if (event.key === 'End') {
+-      event.preventDefault(); startMove(3, true);
++      event.preventDefault(); startMove(stops.length - 1, true);
+     }
+   });
+   window.addEventListener('wheel', onWheel, { passive: true });
+   window.addEventListener('touchstart', onWheel, { passive: true });
+   window.addEventListener('scroll', () => { if (!keyboardMotion) requestFrame(); }, { passive: true });
+   window.addEventListener('resize', onResize);
+-  document.addEventListener('visibilitychange', () => { if (document.hidden) video.pause(); });
++  document.addEventListener('visibilitychange', () => { if (document.hidden) video?.pause(); });
+ 
+   routeGeometry();
+-  renderedProgress = pageProgress();
++  const requestedPage = new URLSearchParams(location.search).get('page');
++  const entryIndex = Math.max(0, scenes.findIndex(scene => scene.dataset.page === requestedPage));
++  renderedProgress = stops[entryIndex];
++  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
++  window.scrollTo({ top: renderedProgress * scrollRange(), behavior: 'instant' });
+   previousDistance = cameraDistance(renderedProgress);
+   updateView(renderedProgress, 0);
+   requestFrame();
+-  video.play().catch(() => {});
++  video?.play().catch(() => {});
+ })();

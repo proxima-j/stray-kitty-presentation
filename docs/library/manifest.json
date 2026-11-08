@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "status": "DESIGN REVIEW",
+  "components": [
+    {
+      "id": "type.display",
+      "use": "Faculty Glyphic display face",
+      "variants": "OFL; self-hosted",
+      "source": "tokens.css"
+    },
+    {
+      "id": "type.body",
+      "use": "Readable pitch prose",
+      "variants": "Arial/system sans",
+      "source": "tokens.css"
+    },
+    {
+      "id": "color.palette",
+      "use": "Cream, green ink, gold, rust and hub yellow",
+      "variants": "warm cream base",
+      "source": "tokens.css"
+    },
+    {
+      "id": "shape.pill",
+      "use": "Loop and Home Hub nodes",
+      "variants": "normal / yellow hub; same border and radius rule",
+      "source": "components.css"
+    },
+    {
+      "id": "shape.folder",
+      "use": "Upper-right D20 illustration frame",
+      "variants": "tabbed outline",
+      "source": "components.css"
+    },
+    {
+      "id": "shape.ticket",
+      "use": "Lower-right cat illustration frame",
+      "variants": "notched SVG outline",
+      "source": "../index.html"
+    },
+    {
+      "id": "shape.image",
+      "use": "Rounded image container",
+      "variants": "rounded / overflow hidden",
+      "source": "components.css"
+    },
+    {
+      "id": "label.number",
+      "use": "Page 02 section number",
+      "variants": "gold pill",
+      "source": "components.css"
+    },
+    {
+      "id": "label.section",
+      "use": "Small editorial label",
+      "variants": "fine divider",
+      "source": "components.css"
+    },
+    {
+      "id": "rule.divider",
+      "use": "Fine separators",
+      "variants": "1px ink line",
+      "source": "components.css"
+    },
+    {
+      "id": "control.circle",
+      "use": "Optional control button",
+      "variants": "focus / hover",
+      "source": "components.css"
+    },
+    {
+      "id": "route.oval",
+      "use": "Continuous four-node game loop",
+      "variants": "dotted ellipse",
+      "source": "../index.html"
+    },
+    {
+      "id": "route.arrow",
+      "use": "Tangent arrowheads and optional hub connector",
+      "variants": "solid tangent / curved dotted",
+      "source": "../index.html"
+    },
+    {
+      "id": "route.walk",
+      "use": "Original traced travel route and Miaomiao",
+      "variants": "v3 original SVG geometry",
+      "source": "../engine-v3.js"
+    },
+    {
+      "id": "motion.assembly",
+      "use": "Approved v3 progressive assembly",
+      "variants": "data-build=text|rise|line, data-at ordering",
+      "source": "../engine-v3.js"
+    },
+    {
+      "id": "motion.navigation",
+      "use": "Approved v3 reversible motion",
+      "variants": "4200ms default, scrub, Esc, Home/End",
+      "source": "../engine-v3.js"
+    }
+  ],
+  "assets": [
+    {
+      "id": "font.faculty-glyphic",
+      "source": "../assets/fonts/FacultyGlyphic-Regular.ttf",
+      "license": "SIL OFL 1.1; ../assets/fonts/OFL.txt",
+      "upstream": "https://github.com/google/fonts/tree/main/ofl/facultyglyphic"
+    },
+    {
+      "id": "character.miaomiao",
+      "source": "../assets/miaomiao.svg",
+      "origin": "Approved v3 source archive; project-owned character"
+    },
+    {
+      "id": "art.d20",
+      "status": "PLACEHOLDER \u2014 redistribution permission pending"
+    },
+    {
+      "id": "art.playful-cats",
+      "status": "PLACEHOLDER \u2014 redistribution permission pending"
+    }
+  ]
+}
