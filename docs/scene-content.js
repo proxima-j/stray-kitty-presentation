@@ -19,13 +19,20 @@
   let activeView = { id: '', visible: false };
   const manualPause = new WeakSet();
   const pendingPlay = new WeakSet();
-  // Direct entry into a later scene should not compete with the full film download.
+  // Keep the full film available without fetching it behind later scenes.
   const requestedPage = new URLSearchParams(location.search).get('page');
   const openingFilm = document.getElementById('openingVideo');
-  if (requestedPage && !['01', 'opening-film'].includes(requestedPage) && openingFilm.paused) {
-    openingFilm.preload = 'none';
+  const filmSource = openingFilm.querySelector('source');
+  const mediaBase = document.currentScript?.src || location.href;
+  function loadOpeningFilm() {
+    if (!filmSource?.dataset.filmSrc || filmSource.hasAttribute('src')) return;
+    filmSource.src = new URL(filmSource.dataset.filmSrc, mediaBase).href;
+    openingFilm.preload = 'auto';
     openingFilm.load();
   }
+  if (!requestedPage || ['01', 'opening-film'].includes(requestedPage)) loadOpeningFilm();
+  else { openingFilm.preload = 'none'; openingFilm.load(); }
+  document.getElementById('playOpeningFilm')?.addEventListener('click', loadOpeningFilm);
 
   function shouldPlay(video) {
     return activeView.visible && video.closest('.scene').id === activeView.id &&
@@ -44,7 +51,7 @@
       const play = shouldPlay(video);
       video.autoplay = play;
       video.muted = true;
-      video.preload = play ? 'auto' : video.hasAttribute('data-map-clip') ? 'none' : 'metadata';
+      video.preload = play ? 'auto' : 'none';
       if (play && video.paused && !pendingPlay.has(video)) {
         pendingPlay.add(video);
         video.play().then(() => { if (!shouldPlay(video)) video.pause(); })
@@ -73,6 +80,7 @@
   });
   window.addEventListener('presentation:viewchange', event => {
     activeView = event.detail;
+    if (activeView.id === 'opening-film' && activeView.visible) loadOpeningFilm();
     syncClips();
   });
   document.addEventListener('visibilitychange', syncClips);

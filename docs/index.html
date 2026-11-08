@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="library/components.css">
   <link rel="stylesheet" href="presentation.css?v=20261108-home-alignment">
   <link rel="stylesheet" href="level-design.css?v=20261109-level-design">
-  <link rel="preload" as="script" href="scene-content.js?v=20261109-level-design">
+  <link rel="preload" as="script" href="scene-content.js?v=20261109-level-media">
   <link rel="preload" as="script" href="engine-v3.js?v=20261109-level-design">
 </head>
 <body>
@@ -20,7 +20,7 @@
    <section id="opening-film" class="scene scene-film" data-title="Opening Film" data-scene="0" data-page="01" aria-label="Page 01 — Full-screen film">
     <div class="scene-camera"><div class="film-fullscreen">
       <video id="openingVideo" playsinline preload="auto" poster="assets/opening-film-poster.jpg" aria-label="Stray Kitty opening film">
-        <source src="assets/Stray-Kitty-Android-Final-v02-SFX.mp4" type="video/mp4">
+        <source data-film-src="assets/Stray-Kitty-Android-Final-v02-SFX.mp4" type="video/mp4">
         Your browser cannot play the opening video.
       </video>
       <button id="playOpeningFilm" class="film-play-button" type="button" aria-label="Play opening film with sound">Play film <span aria-hidden="true">▶</span></button>
@@ -100,9 +100,9 @@
        <figure><div class="home-media"><img src="assets/pages/06/greenhouse-stage-04.png" alt="Final shared-home state with subtle warmer lighting and string lights"></div><figcaption>CELEBRATION</figcaption></figure>
       </div></div>
       <div id="homeResponds" class="home-view" data-view="responds" hidden><div class="home-gallery interaction-gallery">
-       <figure><div class="home-media video-media"><video data-scene-video muted loop playsinline poster="assets/pages/06/greenhouse-stage-03.png" preload="metadata" src="assets/pages/06/cat-reaction.mp4?v=20261108-playback" aria-label="Petting Tuanzi and the companion's response"></video><button class="clip-toggle" type="button" data-local-space aria-label="Pause cat reaction clip">Ⅱ</button></div><figcaption>INTERACTIVE</figcaption></figure>
-       <figure><div class="home-media video-media"><video data-scene-video muted loop playsinline poster="assets/pages/06/greenhouse-stage-03.png" preload="metadata" src="assets/pages/06/postcard-to-parcel.mp4?v=20261108-playback" aria-label="Postcard preparation, sending, parcel and furniture reveal; guaranteed-reward QA example"></video><button class="clip-toggle" type="button" data-local-space aria-label="Pause postcard clip">Ⅱ</button></div><figcaption>RANDOM REWARDS</figcaption></figure>
-       <figure><div class="home-media video-media"><video data-scene-video muted loop playsinline poster="assets/pages/06/greenhouse-stage-03.png" preload="metadata" src="assets/pages/06/furniture-drag-save.mp4?v=20261108-playback" aria-label="Dragging, placing and saving furniture"></video><button class="clip-toggle" type="button" data-local-space aria-label="Pause furniture clip">Ⅱ</button></div><figcaption>CUSTOMIZATION</figcaption></figure>
+       <figure><div class="home-media video-media"><video data-scene-video muted loop playsinline poster="assets/pages/06/greenhouse-stage-03.png" preload="none" src="assets/pages/06/cat-reaction.mp4?v=20261108-playback" aria-label="Petting Tuanzi and the companion's response"></video><button class="clip-toggle" type="button" data-local-space aria-label="Pause cat reaction clip">Ⅱ</button></div><figcaption>INTERACTIVE</figcaption></figure>
+       <figure><div class="home-media video-media"><video data-scene-video muted loop playsinline poster="assets/pages/06/greenhouse-stage-03.png" preload="none" src="assets/pages/06/postcard-to-parcel.mp4?v=20261108-playback" aria-label="Postcard preparation, sending, parcel and furniture reveal; guaranteed-reward QA example"></video><button class="clip-toggle" type="button" data-local-space aria-label="Pause postcard clip">Ⅱ</button></div><figcaption>RANDOM REWARDS</figcaption></figure>
+       <figure><div class="home-media video-media"><video data-scene-video muted loop playsinline poster="assets/pages/06/greenhouse-stage-03.png" preload="none" src="assets/pages/06/furniture-drag-save.mp4?v=20261108-playback" aria-label="Dragging, placing and saving furniture"></video><button class="clip-toggle" type="button" data-local-space aria-label="Pause furniture clip">Ⅱ</button></div><figcaption>CUSTOMIZATION</figcaption></figure>
       </div></div>
      </div>
     </div></div>
@@ -186,6 +186,6 @@
  <div class="screenshot-dialog-heading"><h3 id="screenshotTitle"></h3><button type="button" id="closeScreenshot" aria-label="Close enlarged screenshot">×</button></div>
  <img id="enlargedScreenshot" alt="">
 </dialog>
-<script src="scene-content.js?v=20261109-level-design"></script>
+<script src="scene-content.js?v=20261109-level-media"></script>
 <script src="engine-v3.js?v=20261109-level-design"></script>
 </body></html>
