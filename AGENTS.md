@@ -11,3 +11,5 @@ Read the latest main branch before edits. Keep GitHub as shared source and the e
 Do not publish unlicensed reference imagery or fonts. Current D20/cat illustration frames deliberately contain labeled placeholders.
 
 Verification: static serve, intended remote commit, successful Pages deployment, one normal-viewport visual smoke check of Pages 02/03, and one forward/backward transition. Stop when those pass. Do not run game tests, broad suites, benchmarks, repeated browser checks or extra recordings.
+
+Asset handoff: follow [docs/library/ASSET-WORKFLOW.md](docs/library/ASSET-WORKFLOW.md). For every approved, publishable image/video, commit the asset together with its consuming page and register its source/license/path in the manifest. Do not rely on local Windows paths or chat attachments as canonical dependencies. Do not publish unknown-rights third-party illustrations; see ASSET-CLEARANCE.md. The D20/cat originals are already recovered on the user's Windows computer.

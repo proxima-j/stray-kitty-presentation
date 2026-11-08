@@ -39,3 +39,7 @@ Open `http://localhost:8080/?page=01`, `?page=02` or `?page=03`. `docs/index.htm
 
 Original reference materials are preserved for this presentation project; no license to unrelated third-party content is granted. Do not add cleared images until their publication rights are confirmed.
 Shared Stray Kitty presentation source and live page reviews.
+
+## Asset-first updates
+
+For new pages, put approved and publishable artwork/media in the repository **in the same change** as its HTML/CSS and add a manifest entry. Both ChatGPT and Codex then use the GitHub paths directly; no routine chat-file downloads. The policy and current Page 02 clearance exception are documented in [docs/library/ASSET-WORKFLOW.md](docs/library/ASSET-WORKFLOW.md). The D20 and cat originals are already recovered locally but still need publication permission; do not reconstruct or redownload them.
