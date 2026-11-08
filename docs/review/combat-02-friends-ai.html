@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<script>document.documentElement.classList.add("context-loading")</script>
 <meta name="robots" content="noindex"><title>Stray Kitty — Combat + Friends + AI · Composition Review</title>
-<link rel="stylesheet" href="review.css"><link rel="stylesheet" href="showcase-preview.css"></head>
+<link rel="stylesheet" href="review.css"><link rel="stylesheet" href="showcase-preview.css?v=context-01"></head>
 <body>
 <main class="review-page showcase-review combat-review">
- <div class="label"><span class="num">09</span>COMBAT + FRIENDS + AI · COMPOSITION REVIEW · WORKING PAGE NUMBER</div>
  <h1>Real-Time Tactical Tower Defense</h1>
  <div class="combat-bridge">
   <span>FROM RANDOM EVENTS</span><span class="arrow-inline">→</span><b>BATTLE PRESSURE + SUPPORT</b>
@@ -14,7 +14,7 @@
   <div class="combat-board">
    <section class="combat-main" aria-label="Battlefield and repositioning">
     <div class="tabframe" data-tab="BATTLEFIELD · REPOSITIONING IN ACTION">
-     <div class="combat-shot" style="height:clamp(300px,43vh,420px)">
+     <div class="combat-shot">
       <img class="battlefield-image" src="../assets/pages/09/battlefield-main.png" alt="Authentic Midnight Market real-time battle with companions, enemies and ability controls">
       <video id="repositionVideo" class="battle-reposition" src="../assets/pages/09/reposition-closeup.mp4" muted playsinline preload="metadata" aria-label="Continuous 7.6-second Banban repositioning demonstration, separate attempt at the same stage, normal speed" hidden></video>
       <span class="reposition-source" id="repositionSource" hidden>REPOSITION · SEPARATE TAKE · 1×</span>
@@ -29,20 +29,20 @@
    <section class="combat-profiles" aria-label="Three companions and their authentic ability effects">
     <article class="profile" data-id="FRIEND 01">
      <div class="profile-figure"><img src="../assets/pages/09/caster-figure.png" alt="绒绒 / Rongrong original pixel-art figure" width="128" height="128"></div>
-     <div class="profile-details"><b>绒绒 / Rongrong</b><span class="ability">星绒绽放 — Star Burst</span><span class="profile-function">Cross-shaped area attack</span><div class="profile-vfx"><img src="../assets/pages/09/caster-star-vfx.png" alt="Rongrong's authentic purple star attack across cross-shaped impact cells"></div></div>
+     <div class="profile-details"><b>绒绒 / Rongrong</b><span class="ability">星绒绽放 — Star Burst</span><span class="profile-function">Cross-shaped area attack</span></div><div class="profile-vfx"><img src="../assets/pages/09/caster-star-vfx.png" alt="Rongrong's authentic purple star attack across cross-shaped impact cells"></div>
     </article>
     <article class="profile" data-id="FRIEND 02">
      <div class="profile-figure"><img src="../assets/pages/09/guard-figure.png" alt="斑斑 / Banban original pixel-art figure" width="128" height="128"></div>
-     <div class="profile-details"><b>斑斑 / Banban</b><span class="ability">罐盖护盾 — Shield</span><span class="profile-function">Temporary self-shield</span><div class="profile-vfx"><img src="../assets/pages/09/guard-shield-vfx.png" alt="Banban's genuine cyan shield release and original skill label"></div></div>
+     <div class="profile-details"><b>斑斑 / Banban</b><span class="ability">罐盖护盾 — Shield</span><span class="profile-function">Temporary self-shield</span></div><div class="profile-vfx"><img src="../assets/pages/09/guard-shield-vfx.png" alt="Banban's genuine cyan shield release and original skill label"></div>
     </article>
     <article class="profile" data-id="FRIEND 03">
      <div class="profile-figure"><img src="../assets/pages/09/diandian-figure.png" alt="点点 / Diandian original pixel-art figure" width="128" height="128"></div>
-     <div class="profile-details"><b>点点 / Diandian</b><span class="ability">安心呼噜 — Healing Purr</span><span class="profile-function">Heals active companions</span><div class="profile-vfx"><img src="../assets/pages/09/diandian-heal-vfx.png" alt="Diandian's genuine green Healing Purr effect on active companions"></div></div>
+     <div class="profile-details"><b>点点 / Diandian</b><span class="ability">安心呼噜 — Healing Purr</span><span class="profile-function">Heals active companions</span></div><div class="profile-vfx"><img src="../assets/pages/09/diandian-heal-vfx.png" alt="Diandian's genuine green Healing Purr effect on active companions"></div>
     </article>
+ <button class="advisor-trigger" id="advisorTrigger" type="button" aria-controls="advisorLayer" aria-expanded="false">+ And one more friend…</button>
    </section>
   </div>
  </div>
- <button class="advisor-trigger" id="advisorTrigger" type="button" aria-controls="advisorLayer" aria-expanded="false">+ And one more friend…</button>
  <aside class="advisor-layer" id="advisorLayer" aria-label="阿策 AI advisor reveal" hidden>
   <div class="advisor-header">
    <div><span class="small-label">ANOTHER FRIEND</span><br><strong>阿策 · AI Advisor</strong></div>
@@ -62,56 +62,6 @@
   </div>
   <div class="advisor-actions"><button id="advisorNext" class="advisor-next" type="button">Show answer →</button><span class="advisor-step" id="advisorStep">1 / 2</span></div>
  </aside>
- <div class="review-route" aria-hidden="true"></div>
- <img class="review-cat" src="../assets/miaomiao.svg" alt="">
 </main>
-<script>
-(()=>{
- const trigger=document.getElementById('advisorTrigger');
- const layer=document.getElementById('advisorLayer');
- const close=document.getElementById('advisorClose');
- const next=document.getElementById('advisorNext');
- const before=document.getElementById('advisorBefore');
- const after=document.getElementById('advisorAfter');
- const step=document.getElementById('advisorStep');
- const reposition=document.getElementById('repositionTrigger');
- const video=document.getElementById('repositionVideo');
- const source=document.getElementById('repositionSource');
- let playback=0;
- function stopReposition(){
-   playback++;video.pause();video.hidden=true;source.hidden=true;
-   reposition.setAttribute('aria-pressed','false');
- }
- reposition.addEventListener('click',async()=>{
-   if(!video.hidden){stopReposition();return;}
-   const request=++playback;
-   video.currentTime=0;video.playbackRate=1;video.muted=true;
-   video.hidden=false;source.hidden=false;reposition.setAttribute('aria-pressed','true');
-   try{await video.play();}catch(error){if(request===playback)stopReposition();}
- });
- video.addEventListener('ended',stopReposition);
- video.addEventListener('error',stopReposition);
- let state=0;
- function render(){
-   layer.hidden=state===0;
-   trigger.setAttribute('aria-expanded',String(state>0));
-   before.hidden=state!==1;
-   after.hidden=state!==2;
-   step.textContent=state===2?'2 / 2':'1 / 2';
-   next.textContent=state===2?'Back to question':'Show answer →';
- }
- function open(){stopReposition();state=1;render();close.focus({preventScroll:true});}
- function dismiss(){state=0;render();trigger.focus({preventScroll:true});}
- trigger.addEventListener('click',open);
- close.addEventListener('click',dismiss);
- next.addEventListener('click',()=>{state=state===1?2:1;render();});
- before.addEventListener('click',()=>{state=2;render();next.focus({preventScroll:true});});
- document.addEventListener('keydown',event=>{
-   if(event.key==='Escape'&&state>0){event.preventDefault();dismiss();}
-   else if(state>0&&!event.repeat&&(event.key==='ArrowRight'||event.key==='ArrowLeft')){event.preventDefault();state=event.key==='ArrowRight'?2:1;render();}
-   else if(event.key==='Escape'&&!video.hidden){event.preventDefault();stopReposition();}
- });
- render();
-})();
-</script>
+<script src="showcase-context.js"></script>
 </body></html>
