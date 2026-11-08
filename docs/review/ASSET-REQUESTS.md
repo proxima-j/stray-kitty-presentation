@@ -19,14 +19,14 @@
 | `home.growth.02` | 06 | Early repair/progression state, visibly different from Stage 01. | `docs/assets/pages/06/greenhouse-stage-02.png` |
 | `home.growth.03` | 06 | More developed/lived-in state, visibly different from Stage 02. | `docs/assets/pages/06/greenhouse-stage-03.png` |
 | `home.growth.04` | 06 | Best available late/final shared-home state, ideally endgame/celebration if actually present. | `docs/assets/pages/06/greenhouse-stage-04.png` |
-| `home.interaction.cats` | 06 | Short real **touch/pet cat → visible reaction** capture. | `docs/assets/pages/06/cat-reaction.mp4` and `cat-reaction-poster.png` |
-| `home.interaction.postcard` | 06 | Real **draw/prepare postcard → send → package/reward reveal**, illustrating repeatable randomized furniture collection. | `docs/assets/pages/06/postcard-to-parcel.mp4` and `postcard-to-parcel-poster.png` |
-| `home.interaction.furniture` | 06 | Real **drag furniture → place → save/arrangement persists** capture. | `docs/assets/pages/06/furniture-drag-save.mp4` and `furniture-drag-save-poster.png` |
+| `home.interaction.cats` | 06 | Short real **touch/pet cat → visible reaction** capture. | `docs/assets/pages/06/cat-reaction.mp4` |
+| `home.interaction.postcard` | 06 | Real **draw/prepare postcard → send → package/reward reveal**, illustrating repeatable randomized furniture collection. | `docs/assets/pages/06/postcard-to-parcel.mp4` |
+| `home.interaction.furniture` | 06 | Real **drag furniture → place → save/arrangement persists** capture. | `docs/assets/pages/06/furniture-drag-save.mp4` |
 | `payment.recharge` | 07 | In-game recharge window with an actual item/pack selection. | `docs/assets/pages/07/1-recharge.png` |
 | `payment.checkout` | 07 | Actual **Xsolla sandbox** checkout page from this user journey. | `docs/assets/pages/07/2-checkout.png` |
 | `payment.return` | 07 | Return to game **after** the asynchronous webhook/ledger has confirmed credit; show the verified updated balance, not only a return message. | `docs/assets/pages/07/3-confirmation.png` |
 
-**Total baseline:** 10 PNG screenshots (3 narrative + 4 greenhouse + 3 payment), 3 short MP4 interaction clips, 3 poster PNGs. No new media for Pages 03–04. One **optional** extra screenshot of a different real postcard reward may strengthen the *Random Rewards* emphasis, if already easy to obtain; don't spend time grinding extra draws.
+**Total baseline:** 10 PNG screenshots (3 narrative + 4 greenhouse + 3 payment) and **3 short MP4 interaction clips**. No separate poster images need to be collected. No new media for Pages 03–04. One **optional** extra screenshot of a different real postcard reward may strengthen the *Random Rewards* emphasis, if already easy to obtain; don't spend time grinding extra draws.
 
 ## Capture and selection standards
 
@@ -47,7 +47,7 @@ If several credible scenes exist, provide **up to two candidates** (one thumbnai
 - Postcard: **8–18 seconds** if needed for the whole actual sequence, include the parcel reveal; cut only idle waits, preserving real causal order. The random-reward mechanic should be apparent through the actual result or the real reward interface. An additional distinct genuine reward screenshot is optional if immediately available.
 - Furniture: **5–10 seconds**, including drag, placement and a visible save or restored state.
 
-Create compact silent H.264 MP4s with readable UI and a matched PNG poster each; preserve original aspect ratio, consistent capture viewport and sufficient pixel-art sharpness. **Do not export GIFs or autoplay all three clips simultaneously.** The final deck will play one clip only when selected.
+Create three compact silent H.264 MP4s with readable UI; preserve original aspect ratio, consistent capture viewport and sufficient pixel-art sharpness. **Do not capture or export separate poster PNGs.** During later integration, show each clip's first paused frame or automatically derive a thumbnail from that same clip only if necessary for reliable browser display. **Do not export GIFs or autoplay all three clips simultaneously.** The final deck will play one clip only when selected.
 
 ### Page 07 — Payment
 
