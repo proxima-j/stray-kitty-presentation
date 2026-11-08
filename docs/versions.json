@@ -1,15 +1,20 @@
 {
   "current": {
     "entry": "./",
-    "source_commit": "cadb3ee78a4a4f8215927af77434fb3ae6eb978d",
+    "source_commit": "7f57560a08c53d5f8e0a5293011c3d477c9525cd",
     "candidate_base_commit": "3d6109b03032ff71ed98715dbfcebf6bf1906227",
     "description": "Fourteen-page deck: approved UI/UX Dice and Adaptive scenes follow Combat",
     "publication_status": "VERIFIED",
     "local_verified_at": "2026-11-08T18:52:45.795878+00:00",
-    "verification_notes": "Chrome 1600x900 and 1366x768: Combat→Dice→Adaptive and reverse; 4205ms visible-stop transition; four native 1.5x-encoded loops playing; active-scene pause, persistent manual hold; English colored badges; Normal/Narrow toggle, 565px selected original-image dialog, local Space; frames/captions clear unchanged cat/route band. Off-screen screenshots and film remain unloaded. First twelve scene blocks and all global engine/styles/shared interactions unchanged. No page errors. Published default Chrome: fourteen scenes, four dice loops advancing, no off-screen screenshot/film downloads on Dice entry, forward Adaptive transition, loops pause on exit, selected Narrow WebP and original PNG (565px), Normal preview and original PNG (1600px), retained twelve-page Previous at Combat with its image loaded. No page errors. Superseded review URLs redirect to integrated pages after verification.",
-    "public_verified_at": "2026-11-08T18:57:26.453185+00:00",
-    "verified_pages_build": "2026-11-08T18:55:12Z",
-    "pages_workflow_run": "https://github.com/proxima-j/stray-kitty-presentation/actions/runs/42512332800"
+    "verification_notes": "Chrome 1600x900 and 1366x768: Combat→Dice→Adaptive and reverse; 4205ms visible-stop transition; four native 1.5x-encoded loops playing; active-scene pause, persistent manual hold; English colored badges; Normal/Narrow toggle, 565px selected original-image dialog, local Space; frames/captions clear unchanged cat/route band. Off-screen screenshots and film remain unloaded. First twelve scene blocks and all global engine/styles/shared interactions unchanged. No page errors. Published default Chrome: fourteen scenes, four dice loops advancing, no off-screen screenshot/film downloads on Dice entry, forward Adaptive transition, loops pause on exit, selected Narrow WebP and original PNG (565px), Normal preview and original PNG (1600px), retained twelve-page Previous at Combat with its image loaded. No page errors. Superseded review URLs redirect to integrated pages after verification. Page 14 maintenance: reserve full tab reveal bounds and reclaim internal space for larger uncropped screenshots; original-image controls and Normal/Narrow retained. Checked locally at 1600x900/1366x768 and on the published in-app-browser viewport. No engine, media asset, Dice or Previous changes.",
+    "public_verified_at": "2026-11-08T19:24:45.771970+00:00",
+    "publication_evidence": {
+      "url": "https://proxima-j.github.io/stray-kitty-presentation/?page=adaptive-interface&v=7f57560",
+      "http_status": 200,
+      "style_version": "uiux.css?v=20261109-adaptive-fit",
+      "deployed_asset_last_modified": "Sun, 08 Nov 2026 19:23:17 GMT",
+      "verification": "Live published Page 14 checked in browser: full heading/tab visible, selected 565x616 screenshot loaded, panel clears unchanged cat/route. Local Normal/Narrow and original-image dialog checked at presentation sizes. GitHub anonymous workflow API was rate-limited; deployment verified directly via served build marker/CSS and actual browser."
+    }
   },
   "previous": {
     "entry": "previous/",

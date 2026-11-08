@@ -34,3 +34,7 @@ The earlier isolated implementation check confirmed native desktop UI scaling/le
 ## Integration boundary
 
 Existing twelve scene blocks, engine-v3.js, engine-v3.css, presentation.css, level-design.css, events-combat.css/js and shared interactions are preserved. New styling/behavior is isolated in uiux.css/js. No global navigation framework, permanent header/footer or second cat/route is introduced. The outgoing optimized twelve-page runtime becomes Previous only after local candidate verification. UI/UX source assets remain shared once. Technical reviews stay independent.
+
+## Page 14 display correction
+
+The user reported a clipped upper tab and an undersized game view. The reveal wrapper now reserves the complete WINDOW SIZE tab, and the panel reclaims internal whitespace to enlarge the actual uncropped screenshot. Normal/Narrow, original-image viewing, approved assets and the unchanged cat/route are preserved. Desktop Narrow controls occupy unused side space; smaller viewports reserve their control row. This is a scoped page correction without deck rotation. Published build 7f57560 was verified directly in the browser and through its served HTML/CSS marker.
