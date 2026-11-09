@@ -61,8 +61,8 @@ The latest Page 16 update aligns both confirmation and image to November 6 / pip
 
 These three independent review pages follow the 2026-11-09 agreed content direction. They do **not** modify Current, Previous, or the v3 presentation engine; their working identifiers are not final page numbers.
 
-- [Teamwork 01 — Five Owners. One Game.](teamwork-01-collaboration.html): revised diagram-first layout with five primary role streams converging on role-owned Work Items; separate request and branch/MR loops, daily alignment, and three linked source-evidence slots for real GitLab screenshots (screenshots not yet collected).
-- [Teamwork 02 — Test the Idea. Change the Design.](teamwork-02-iteration.html): revised single-glance feedback-loop diagram and explicit before/trigger/after visual comparisons for 2d6 failure balancing and AI-scope decisions. The AI narrowing came from design discussion, not evidenced playtesting.
+- [Teamwork 01 — Five Owners. One Integrated Game.](teamwork-01-collaboration.html): diagram-first layout of five role-owned Work Items; two connected coordination/code-integration tracks; a daily sync ribbon; and two source-linked GitLab QA/fix screenshot placeholders (the private screenshots are not yet collected).
+- [Teamwork 02 — Design. Test. Rethink.](teamwork-02-iteration.html): three-stage repeating design / playtesting & QA / iteration diagram, plus two before/after examples (2d6 failure combinations and AI feature scope). Distinguishes playtest feedback from design discussion; includes concise optimization and ownership reflections.
 - [Future — Where Could Stray Kitty Go Next?](teamwork-03-future.html): three prospective game directions, illustrated with existing genuine game captures; not a workflow optimization checklist or promised features.
 
 Composition review only: no additional GitLab screenshots or new game media were collected. Any new source screenshots should undergo asset/rights review before adding them to the public repo. Keep these reviews until approved integration is published and verified.
