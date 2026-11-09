@@ -14,6 +14,12 @@
       "permission": "Included sample"
     },
     {
+      "id": "template.sample.after",
+      "path": "assets/sample-media-after.svg",
+      "purpose": "Distinct after-state illustration for local Before/After demonstration, not actual project evidence",
+      "permission": "Included original sample"
+    },
+    {
       "id": "template.font",
       "path": "assets/fonts/FacultyGlyphic-Regular.ttf",
       "purpose": "Display typography",
