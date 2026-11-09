@@ -1,0 +1,23 @@
+/* Blank Canvas visual settings. No duplicate camera/reveal engine. */
+/* Edit these variables to establish a new project's palette and typography. */
+body[data-visual-preset="neutral"] {
+  --paper:#FAFAF8;
+  --ink:#292D2B;
+  --muted:#696F6A;
+  --accent:#777F78;
+  --gold:#D7DBD5;
+  --hub-yellow:#E8EBE6;
+  --line:#BBC4BA;
+}
+/* Change data-visual-preset to "original" to inherit tokens.css defaults. */
+/* Hide only the artwork; keep SVG/marker measurable for the camera algorithm. */
+body[data-route="off"] #roadDrawing{visibility:hidden}
+body[data-traveler="off"] #heroCat{visibility:hidden}
+.blank-canvas{position:absolute;inset:10% 9% 17%;display:flex;flex-direction:column;align-items:flex-start;gap:clamp(24px,6vh,56px);min-height:0}
+.blank-page-id{font:600 11px/1.35 var(--body);letter-spacing:.18em;color:var(--muted)}
+.blank-content-guide{max-width:min(750px,100%);display:flex;flex-direction:column;gap:18px}
+.blank-content-guide strong{font:400 clamp(40px,4.5vw,80px)/1.08 var(--display);letter-spacing:-.045em}
+.blank-content-guide p{font:400 clamp(16px,1.5vw,23px)/1.5 var(--body);color:var(--muted);max-width:55ch}
+.blank-reveal-rule{height:1px;min-height:1px;background:var(--accent);width:min(520px,85%);transform-origin:left}
+@media(max-width:720px){.blank-canvas{inset:11% 7% 20%}.blank-content-guide strong{font-size:clamp(35px,8vw,55px)}}
+/* This guide is temporary working content. Replace it in the new project's own index.html. */
