@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "id": "template.marker",
+      "path": "assets/traveler.svg",
+      "purpose": "Original generic traveler, replace with your own licensed marker",
+      "permission": "Included sample"
+    },
+    {
+      "id": "template.sample",
+      "path": "assets/sample-media.svg",
+      "purpose": "Illustrative placeholder, never evidence of a functioning system",
+      "permission": "Included sample"
+    },
+    {
+      "id": "template.font",
+      "path": "assets/fonts/FacultyGlyphic-Regular.ttf",
+      "purpose": "Display typography",
+      "permission": "SIL OFL",
+      "license": "assets/fonts/OFL.txt"
+    }
+  ]
+}

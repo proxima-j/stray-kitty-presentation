@@ -1,0 +1,31 @@
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--paper);color:var(--ink);font-family:var(--body)}
+html{scroll-behavior:auto;scrollbar-width:none;overflow-anchor:none}
+html::-webkit-scrollbar,body::-webkit-scrollbar{display:none}
+body{overscroll-behavior-y:none}
+button{font:inherit;color:inherit}
+[hidden]{display:none!important}
+.scroll-space{height:600vh;position:relative}
+.stage{width:100%;height:100dvh;position:sticky;top:0;overflow:hidden;background:var(--paper);isolation:isolate}
+.world{position:absolute;left:0;top:0;width:500vw;height:100%;will-change:transform;contain:layout style}
+.route-svg{position:absolute;inset:0;width:500vw;height:100%;overflow:visible;z-index:11;pointer-events:none}
+.route-ghost,.route-ink{fill:none;stroke-linecap:round;stroke-dasharray:3.2 13.4;stroke-width:3.2}
+.route-ghost{stroke:var(--ink);opacity:.17}.route-ink{stroke:var(--accent);opacity:1}
+.scene{width:100vw;height:100%;position:absolute;top:0;overflow:clip;perspective:1400px;font-family:var(--body)}
+.scene-camera{position:relative;inset:0;width:100%;height:100%;transform-origin:50% 45%;will-change:transform;transform-style:preserve-3d}
+.scene-camera [data-build]{will-change:transform,opacity,clip-path;transform-origin:center bottom}
+.scene h1,.scene h2{margin:0;font-weight:400;letter-spacing:-.055em}
+.scene p{margin:0}
+.hero-cat{position:absolute;left:calc(24% - 27px);top:calc(var(--route-y) - 58px);height:60px;width:65px;z-index:25;pointer-events:none;filter:drop-shadow(1px 4px 1px rgba(30,51,40,.12));transform-origin:center bottom;will-change:top,transform}
+.hero-cat img{width:100%;height:100%;display:block;image-rendering:pixelated}
+.hero-cat.walking img{animation:walk-bounce .31s steps(2,end) infinite}
+@keyframes walk-bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+.help-button{position:absolute;right:12px;top:12px;z-index:60;opacity:.55;border:0;background:transparent;font:400 16px var(--body);cursor:pointer;padding:11px}
+.help-panel{position:absolute;top:23px;right:23px;z-index:80;max-width:330px;border:var(--border) solid var(--ink);border-radius:var(--frame-radius);background:var(--paper);padding:22px;box-shadow:0 14px 44px rgba(28,53,39,.13)}
+.help-panel button{float:right;background:none;border:0;font-size:23px;cursor:pointer}
+.help-panel h3{font:400 24px var(--display);margin:0 0 12px}
+.help-panel p{font:400 12px/1.7 var(--body);color:var(--muted);margin:0 0 10px}
+.help-panel select{background:var(--paper);border:1px solid var(--line);padding:5px;border-radius:5px}
+.help-panel kbd{background:rgba(207,166,106,.22);padding:2px 5px}
+button:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.hero-cat.walking img{animation:none}}
