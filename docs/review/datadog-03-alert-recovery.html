@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>Stray Kitty — Detect, Alert, Recover · Review</title>
+<link rel="stylesheet" href="../library/tokens.css"><link rel="stylesheet" href="datadog-preview.css"></head>
+<body>
+<main class="dd-page" id="ddSyntheticPreview" aria-label="Datadog page 3 monitoring and alert review">
+ <div class="section-label"><span class="number-pill">19</span>TECHNICAL WALKTHROUGH / DATADOG</div>
+ <header class="page-intro"><h1>Detect. Alert. Recover.</h1><p>Controlled failure evidence and external checks of the public game.</p></header>
+ <div class="dd-alert-layout dd-hero">
+  <section class="dd-frame dd-timeline" aria-label="Historical verified alert and recovery timeline">
+   <div class="dd-label">01 / ALERT &amp; RECOVERY</div>
+   <h2>A test of the monitoring loop</h2>
+   <div class="dd-alert-tag">NOV 2, 2026 · CONTROLLED CONTAINER TEST · UTC</div>
+   <div class="dd-event-rail">
+    <div class="dd-event-dot"></div>
+    <div class="dd-event-copy"><strong>19:19:28 · ALERT</strong><span>Heartbeat monitor detected the deliberately stopped game container.</span></div>
+    <div class="dd-event-line"></div><div></div>
+    <div class="dd-event-dot is-end"></div>
+    <div class="dd-event-copy"><strong>19:26:28 · RECOVERY</strong><span>The game container was restarted and monitoring returned to OK.</span></div>
+   </div>
+   <p class="dd-timeline-foot">Timeline reconstructed from a committed evidence record; it is not a capture of the old Datadog monitor UI. This was not a production outage.</p>
+   <a class="dd-link" target="_blank" rel="noopener" href="https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/blob/main/evidence/observability/heartbeat-alert-cycle.json">Archived test evidence ↗</a>
+  </section>
+  <section class="dd-frame dd-synth" aria-label="External synthetic checks in Tokyo and Seoul">
+   <div class="dd-label">02 / EXTERNAL SYNTHETICS</div>
+   <div class="dd-synth-top">
+    <h2>Can the public reach us?</h2>
+    <div class="dd-tabrow" role="tablist" aria-label="Choose a public endpoint check">
+     <button class="dd-select" type="button" role="tab" data-check-tab="healthz" aria-controls="ddHealthz" aria-selected="true">Game /healthz</button>
+     <button class="dd-select" type="button" role="tab" data-check-tab="payment" aria-controls="ddPayment" aria-selected="false">Payment config</button>
+    </div>
+   </div>
+   <div id="ddHealthz" class="dd-synth-photo" data-check-panel="healthz" role="tabpanel">
+    <img src="../assets/datadog/page-03-alerts/synthetics-healthz.png" alt="Real Datadog HTTP health check test-run screenshot with passing results from Tokyo and Seoul, Nov 9, 2026"/>
+   </div>
+   <div id="ddPayment" class="dd-synth-photo" data-check-panel="payment" role="tabpanel" hidden>
+    <img data-src="../assets/datadog/page-03-alerts/synthetics-payment-config.png" alt="Real Datadog payment-config endpoint test-run screenshot with passing results from Tokyo and Seoul, Nov 9, 2026"/>
+   </div>
+   <div class="dd-synth-label">Tokyo + Seoul · Five-minute scheduled checks · Recorded Nov 9, 2026</div>
+   <div class="dd-synth-label">A passing HTTP 200 response establishes endpoint reachability, not a complete checkout or gameplay test.</div>
+  </section>
+ </div>
+ <div class="dd-footer"><span>Monitor response = historical controlled test</span><span>Public endpoint results = genuine scheduled Datadog checks</span></div>
+ <div class="dd-review-line" aria-hidden="true"></div><img class="dd-review-cat" src="../assets/miaomiao.svg" alt="" aria-hidden="true">
+</main>
+<script src="datadog-preview.js"></script>
+</body></html>

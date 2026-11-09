@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>Stray Kitty — From Gameplay to Telemetry · Review</title>
+<link rel="stylesheet" href="../library/tokens.css"><link rel="stylesheet" href="datadog-preview.css"></head>
+<body>
+<main class="dd-page" id="ddSequence" data-demo-state="idle" aria-label="Datadog page 1 interactive review">
+ <div class="section-label"><span class="number-pill">17</span>TECHNICAL WALKTHROUGH / DATADOG</div>
+ <header class="page-intro"><h1>From Gameplay to Telemetry</h1><p>One real event choice. One traceable request.</p></header>
+ <div class="dd-stage-grid dd-hero">
+  <section aria-label="Authentic recorded gameplay">
+   <div class="dd-panel-heading"><strong>01 / The Game</strong><span class="dd-pill">Recorded QA action</span></div>
+   <div class="dd-frame dd-media-frame dd-media-shell">
+    <div class="game-viewport">
+     <video id="ddIdleVideo" src="../assets/datadog/page-01-telemetry/event-idle-loop.mp4" autoplay loop muted playsinline preload="metadata" aria-label="Authentic recorded idle game scene"></video>
+     <video id="ddResponseVideo" src="../assets/datadog/page-01-telemetry/event-response.mp4" playsinline preload="none" aria-label="Authentic event choice animation and sound" hidden></video>
+     <div class="game-overlay">ALLEY · EVENT CHOICE</div>
+     <div class="game-pulse">CLICK GAME UI TO TRIGGER →</div>
+     <button id="ddGameClick" type="button" class="game-hitbox" aria-label="Click the event choice in the gameplay footage to play the recorded action"></button>
+    </div>
+   </div>
+   <div class="dd-panel-caption"><span id="ddActionHint" aria-live="polite">Click the event choice in the game frame</span><button id="ddSound" type="button" class="dd-button" aria-pressed="true">Sound: On</button></div>
+  </section>
+  <section aria-label="Real Datadog before and after captures">
+   <div class="dd-panel-heading"><strong>02 / Datadog APM</strong><span class="dd-pill">Correlated browser + Go trace</span></div>
+   <div class="dd-frame dd-media-frame dd-media-shell">
+    <div class="datadog-viewport">
+     <img src="../assets/datadog/page-01-telemetry/datadog-before.png" alt="Actual Datadog Trace Explorer before the QA event, at its earlier capture window">
+     <img id="ddDatadogAfter" class="after-capture" src="../assets/datadog/page-01-telemetry/datadog-after.png" alt="Actual Datadog Trace Explorer after ingestion with the fresh CHOOSE_EVENT trace">
+     <div id="ddDatadogProgress" class="datadog-status" aria-live="polite" hidden><span class="dd-spinner"></span>Recorded action playing · matching telemetry retrieved after ingestion</div>
+     <div id="ddDatadogFinished" class="datadog-status" aria-live="polite" hidden>CHOOSE_EVENT · Trace 13259980332647197655</div>
+    </div>
+   </div>
+   <div class="dd-panel-caption"><span>Browser request → Go API → correlated log</span><button id="ddViewTrace" type="button" class="dd-button" disabled>View trace detail ↗</button></div>
+  </section>
+ </div>
+ <div class="dd-qa-note"><span>Reconstructed presentation timing from one genuine QA action on Nov 9, 2026; the slide does not send a new request.</span><span><button id="ddReplay" type="button" class="dd-button" disabled>↻ Replay</button></span></div>
+ <div class="dd-review-line" aria-hidden="true"></div><img class="dd-review-cat" src="../assets/miaomiao.svg" alt="" aria-hidden="true">
+</main>
+<div id="ddTraceOverlay" class="dd-overlay" hidden role="dialog" aria-modal="true" aria-label="Actual Datadog trace detail screenshot">
+ <div class="dd-overlay-inner">
+  <div class="dd-overlay-head"><span>CHOOSE_EVENT · Matched APM trace and log · QA</span><button id="ddTraceClose" type="button" class="dd-button">Close ×</button></div>
+  <img src="../assets/datadog/page-01-telemetry/datadog-trace-detail.png" alt="Actual matching Datadog trace detail; trace 13259980332647197655"/>
+ </div>
+</div>
+<script src="datadog-preview.js"></script>
+</body></html>
