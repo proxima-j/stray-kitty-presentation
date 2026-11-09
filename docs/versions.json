@@ -17,7 +17,15 @@
       "verification": "Published 22-scene Current: native four-stage controls with matching genuine evidence, future shared images and marker. Published 19-scene Previous: original Datadog media loaded from shared assets. Focused source/nav/layout tests passed locally before promotion."
     },
     "readability_maintenance_base_commit": "03e1e0fdce4e1bc9818bac079c3633a9d0fcc54a",
-    "readability_maintenance_notes": "User-requested Page 20 readability: enlarged evidence allocation and CSS-only source excerpts (title/status, mentions and selected findings), complete original on click. Page-20-only cat/route clearance adds 7vh with smooth/reduced-motion-aware entry/exit, without editing v3 engine or 4200ms navigation. Page 21 diagrams, Page 22, original media and Previous unchanged; no rotation."
+    "readability_maintenance_notes": "User-requested Page 20 readability: enlarged evidence allocation and CSS-only source excerpts (title/status, mentions and selected findings), complete original on click. Page-20-only cat/route clearance adds 7vh with smooth/reduced-motion-aware entry/exit, without editing v3 engine or 4200ms navigation. Page 21 diagrams, Page 22, original media and Previous unchanged; no rotation.",
+    "page_02_poster_maintenance": {
+      "integrated_commit": "093219a80aa29fbc8e1c1208a52536a84ae0eed2",
+      "public_pages_build": "https://github.com/proxima-j/stray-kitty-presentation/actions/runs/42635912073",
+      "published_verified_date": "2026-11-09",
+      "details": "Page 02 exact approved text; complete uncropped user poster above existing D20 and playful-cat art; deferred media; unchanged 22-scene v3 engine/route and frozen 19-scene Previous.",
+      "check": "Pages build success and read-only post-publication browser observation of new poster gallery, image loading, horizontal supporting artwork and no pitch/route overlap. Broader deck regression not re-run for this single-slide update.",
+      "rotation": "None: individual slide content maintenance, as permitted by repository policy."
+    }
   },
   "previous": {
     "entry": "previous/",

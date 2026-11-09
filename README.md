@@ -109,3 +109,10 @@ Iteration preserves the two 6×6 probability diagrams (10/36 → 6/36 failure ou
 Focused local candidate checks passed at 1600×900 and 1366×768 before rotation. All original 19 scene blocks and existing runtime files are byte-identical; v3 4200ms navigation, one cat/route, opening film and existing interactions are preserved. Previous is frozen from `89e52a078d0e2ff4ad03fa1ff3250abd9d9d5155`, with asset paths rebased and no media duplication. Earlier integration sections above describe their historical checkpoints; the two-version table is authoritative.
 
 Page 20 readability maintenance: selected source crops now show the title/status, relevant @mention and key finding at larger scale; click retains the complete original. More detail-panel space and a slightly lower Page-20-only cat/route improve legibility. No new binary assets, Page 21/22 edits, engine edits or version rotation.
+
+
+## Current Page 02 — integrated horizontal poster
+
+[Elevator Pitch, Page 02](https://proxima-j.github.io/stray-kitty-presentation/?page=02) now uses the exact approved poster composition: original unchanged pitch copy at left, uncropped user-supplied landscape poster at upper right, and approved D20 and playful-cats illustrations side by side underneath. The shared lossless poster WebP is loaded only when Page 02 is active; no new media copies, additional cat/route, scene counts or engine changes were introduced.
+
+Integrated in `093219a80aa29fbc8e1c1208a52536a84ae0eed2`. [GitHub Pages build #42635912073](https://github.com/proxima-j/stray-kitty-presentation/actions/runs/42635912073) completed successfully. The post-deployment browser review confirmed the new poster-gallery element, loaded poster and both illustration assets, horizontal supporting artwork and unobstructed pitch/route. This was a single-slide maintenance update, so Previous remains the verified outgoing nineteen-scene deck, unchanged. The superseded composition preview was retired after publication verification. Closing Q&A review and its shared poster remain intact.
