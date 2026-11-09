@@ -40,7 +40,7 @@ Copy-Item -Force .\blank.html .\index.html
 python -m http.server 8080
 ~~~
 
-Open http://localhost:8080/ and replace the two construction-guide scenes. The original five-page example still remains available in the copied `blank.html`'s original folder as examples only if you preserved it separately. For **Example Mode**, copy the folder and run the server without replacing `index.html`.
+Open http://localhost:8080/ and replace the two construction-guide scenes. The five-page examples remain available in the original GitHub repository and live demo. If you also want them inside the new project, save a separate copy of the original `index.html` **before** replacing it. For **Example Mode**, copy the folder and run the server without replacing `index.html`.
 
 **Blank Canvas visual switches:** edit the opening `<body data-route="off" data-traveler="off" data-visual-preset="neutral">` in the copied `index.html`. Use `on` for `data-route` and/or `data-traveler` to show the original global visuals. Change `data-visual-preset` to `original` for the sample colors; edit `styles/blank.css` for a new brand palette/typography. Keep `#roadDrawing` and `#heroCat` in the document even when hidden, because the camera measures them.
 
