@@ -2,7 +2,7 @@
   "current": {
     "entry": "./",
     "candidate_base_commit": "5e8a0e27e5840605c363447177fdf6242e5319c1",
-    "build_marker": "20261109-datadog-refinement6",
+    "build_marker": "20261109-datadog-refinement7",
     "description": "Nineteen-page deck: approved Datadog Gameplay to Telemetry, Observability, and Detect Alert Recover follow Kubernetes",
     "publication_status": "LOCAL_VERIFIED; verify deployed marker after push",
     "local_verified_at": "2026-11-09T12:21:21.242319+00:00",

@@ -6,7 +6,7 @@ GitHub is the shared source for ChatGPT and Codex. GitHub Pages automatically pu
 
 | Version | Preview | Verified source |
 | --- | --- | --- |
-| Current | https://proxima-j.github.io/stray-kitty-presentation/ | Nineteen-page deck, Datadog integration marker `20261109-datadog-refinement6`; local candidate verified before rotation |
+| Current | https://proxima-j.github.io/stray-kitty-presentation/ | Nineteen-page deck, Datadog integration marker `20261109-datadog-refinement7`; local candidate verified before rotation |
 | Previous | https://proxima-j.github.io/stray-kitty-presentation/previous/ | Outgoing verified sixteen-page runtime `5e8a0e27e5840605c363447177fdf6242e5319c1` |
 
 Current supports direct `?page=01` through `?page=19` links. Previous retains `?page=01` through `?page=16`. Stable Current IDs also work as direct links: `roadmap`, `game-flow`, `visual-novel`, `home-hub`, `payment`, `four-maps`, `vertical-design`, `greybox`, `random-events`, `combat`, `dice-animations`, `adaptive-interface`, `technical-architecture`, `kubernetes-deployment`, `gameplay-telemetry`, `observability`, `detect-alert-recover`. [docs/versions.json](docs/versions.json) records verified runtime origins; documentation and asset-only commits do not rotate decks.
@@ -92,7 +92,7 @@ The three approved reviews are native scenes in the original v3 player. The genu
 
 Datadog CSS is scoped; images load on scene entry, dashboard chunks on selection, and the short response clip is prepared only when Page 17 enters view. Long dashboard notes scroll inside their frames; Page 19 uses larger aligned frames that fit its evidence and phone note without scrolling at the normal presentation viewport, clear of the authentic cat/route. The first sixteen scene blocks, existing runtime files and 4200ms engine are unchanged. Current/Previous media remains stored once. Approved partial review sources remain available for provenance; there are only two complete decks.
 
-The nineteen-page candidate passed focused local serve, media, trace scrolling, dashboard chunk/source inspection, alert/recovery and forward/back navigation checks before rotation. The outgoing sixteen-page Current is frozen as Previous. Check `20261109-datadog-refinement6` in served HTML when confirming deployment.
+The nineteen-page candidate passed focused local serve, media, trace scrolling, dashboard chunk/source inspection, alert/recovery and forward/back navigation checks before rotation. The outgoing sixteen-page Current is frozen as Previous. Check `20261109-datadog-refinement7` in served HTML when confirming deployment.
 
 
 Datadog follow-up maintenance: smaller Page 17 WebP/720p H.264-AAC delivery copies reduce its initial still and six-second clip transfer sizes, while all originals remain available. The genuine still stays visible during video buffering. Datadog scenes rely on the existing v3 camera perspective, removing a duplicate parent perspective boundary that could leave Page 17 blank in Chromium. Page 18 copy now focuses on game performance, correct player interactions, payments/economy/AI; sample event and AI count callouts were removed. Page 19’s payment tab updates both its endpoint heading and genuine screenshot. Previous is unchanged; no version rotation for these slide refinements.

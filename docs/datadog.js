@@ -54,6 +54,7 @@
     response.muted = true;
     function prepareResponse() {
       if (response.hasAttribute('src')) return;
+      response.poster = response.dataset.mediaPoster;
       response.preload = 'auto';
       response.src = response.dataset.responseSrc;
       response.load();
