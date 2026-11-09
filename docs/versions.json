@@ -30,9 +30,16 @@
       "base_commit": "de465ba7d547dba3a5886eff3d990b18fd70a924",
       "details": "Approved Page 22 click response: incoming pulse through Living World, then two illustrative future influences; approximately 1.1 seconds, replayable, no idle loops. Shared future-world.js owns connectors and scene-local interaction. Effects stop on scene exit and respect reduced motion; Enter/Space remain local. Title and bottom takeaway retained.",
       "rotation": "None: individual scene interaction maintenance; frozen 19-scene Previous unchanged.",
-      "publication_status": "LOCAL_VERIFIED; published verification pending",
+      "publication_status": "VERIFIED",
       "local_verified_at": "2026-11-09T15:07:17.292771+00:00",
-      "verification": "Focused browser checks at 1366x768 and 1600x900: four images and unchanged composition, finite pulse, replay and rapid reselection, Enter/Space kept scene 22, reverse/forward 22↔21, effect stopped on exit, idle connector animations none. First 21 scene blocks and collaboration prefix unchanged; original engine, 4200ms beat, one cat/route, Previous and Q&A unchanged."
+      "verification": "Focused browser checks at 1366x768 and 1600x900: four images and unchanged composition, finite pulse, replay and rapid reselection, Enter/Space kept scene 22, reverse/forward 22↔21, effect stopped on exit, idle connector animations none. First 21 scene blocks and collaboration prefix unchanged; original engine, 4200ms beat, one cat/route, Previous and Q&A unchanged.",
+      "public_verified_at": "2026-11-09T15:11:24.549442+00:00",
+      "publication_evidence": {
+        "integration_commit": "b94208c08361c354e452e9258e5cca541df804f9",
+        "pages_build": "https://github.com/proxima-j/stray-kitty-presentation/actions/runs/42641412930",
+        "url": "https://proxima-j.github.io/stray-kitty-presentation/?page=connected-world",
+        "verification": "Published native Page 22 click/replay and local keyboard activation observed with four loaded images; finite effect and scene exit/return verified locally at both normal presentation sizes. First 21 scenes, global 4200ms engine, single cat/route, Previous and Q&A preserved."
+      }
     }
   },
   "previous": {

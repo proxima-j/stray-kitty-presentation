@@ -10,7 +10,7 @@
 | 21 | [Design. Test. Rethink.](https://proxima-j.github.io/stray-kitty-presentation/?page=design-test-rethink) | Original iteration loop, dice grids and AI scope comparison |
 | 22 | [A Dynamic, Living World](https://proxima-j.github.io/stray-kitty-presentation/?page=connected-world) | Four existing systems around Living World; bidirectional future influences |
 
-Production markup is in `docs/index.html`; styles and behavior are scoped in `docs/teamwork.css` and `docs/teamwork.js`. After public Current and Previous verification, the three superseded review compositions and four unused dedicated CSS/JS files were retired. Their originals remain available in normal Git history.
+Production markup is in `docs/index.html`; styles and behavior are scoped in `docs/teamwork.css`, `docs/teamwork.js` (collaboration), and `docs/future-world.js` (Future). After public Current and Previous verification, the three superseded review compositions and four unused dedicated CSS/JS files were retired. Their originals remain available in normal Git history.
 
 ## Four genuine GitLab assets
 
@@ -60,4 +60,4 @@ The walkthrough now shows enlarged, clearly labelled selected source excerpts: W
 
 ## Approved Future interaction integration
 
-The reviewed click response is integrated into native Page 22 via `docs/future-world.js` and scoped `docs/teamwork.css` states. One short incoming pulse branches into two illustrative outgoing influences; receiving nodes brighten gently and settle. Images stay still, and no effect loops at idle. Repeated clicks cancel prior pulses and replay; reduced-motion preferences use static highlights. Scene visibility cancels effects on exit, and local Enter/Space activation does not advance v3. Existing four game images, approved title, bottom takeaway, original v3 4200ms engine and single cat/route are retained. No new binary assets or version rotation. The standalone trial remains temporarily for comparison until native public verification, then becomes a link to the integrated scene.
+The reviewed click response is integrated into native Page 22 via `docs/future-world.js` and scoped `docs/teamwork.css` states. One short incoming pulse branches into two illustrative outgoing influences; receiving nodes brighten gently and settle. Images stay still, and no effect loops at idle. Repeated clicks cancel prior pulses and replay; reduced-motion preferences use static highlights. Scene visibility cancels effects on exit, and local Enter/Space activation does not advance v3. Existing four game images, approved title, bottom takeaway, original v3 4200ms engine and single cat/route are retained. No new binary assets or version rotation. After native public verification, the trial URL redirects to Page 22 and its unused review-only stylesheet is removed. The approved shared interaction remains in `docs/future-world.js`.
