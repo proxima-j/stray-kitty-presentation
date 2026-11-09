@@ -56,3 +56,13 @@ Current contains sixteen scenes; Previous retains the outgoing verified fourteen
 Page 16 now uses the user-supplied authentic deployment-card screenshot from pipeline #7813 (November 6), separately labelled from the left November 7 record. See TECHNICAL-ASSETS.md for crop and verified source; no new review or scene was created.
 
 The latest Page 16 update aligns both confirmation and image to November 6 / pipeline #7813 and shows all five successful jobs, with full-resolution enlargement. This supersedes the earlier mixed-date description. Published panel and image dialog verified.
+
+## Teamwork, Iteration & Future — composition previews (discussion only)
+
+These three independent review pages follow the 2026-11-09 agreed content direction. They do **not** modify Current, Previous, or the v3 presentation engine; their working identifiers are not final page numbers.
+
+- [Teamwork 01 — Five Owners. One Game.](teamwork-01-collaboration.html): five limited primary role labels; role-owned GitLab Work Items and cross-team tickets alongside the branch/MR/merge loop; daily alignment; documented map/combat peer-QA case with a GitLab evidence link.
+- [Teamwork 02 — From Assumptions to Iteration](teamwork-02-iteration.html): pre-design intentions → playtesting and QA → decisions and iteration; separately sourced event balancing and AI-scope discussions; brief optimization/limitations and integrated lessons.
+- [Future — Where Could Stray Kitty Go Next?](teamwork-03-future.html): three prospective game directions, illustrated with existing genuine game captures; not a workflow optimization checklist or promised features.
+
+Composition review only: no additional GitLab screenshots or new game media were collected. Any new source screenshots should undergo asset/rights review before adding them to the public repo. Keep these reviews until approved integration is published and verified.
