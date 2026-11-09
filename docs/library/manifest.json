@@ -1683,6 +1683,46 @@
         "processing": "Lossless authentic frame extraction and rectangular crop only; no recreated text, colour or border."
       },
       "provenance": "../assets/datadog/capture-manifest.json"
+    },
+    {
+      "id": "datadog.collection.datadog-trace-header",
+      "source": "../assets/datadog/page-01-telemetry/datadog-trace-header.png",
+      "use": "Page 1: scrollable complete trace Overview",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "metadata": {
+        "source_url": "https://us5.datadoghq.com/apm/traces?query=service%3Akitty-api%20env%3Apreview%20%40command.type%3ACHOOSE_EVENT&agg_m=count&agg_m_source=base&agg_t=count&cols=service%2Cresource_name%2C%40duration%2C%40http.method%2C%40http.status_code%2C%40_span.count%2C%40_duration.by_service&fromUser=false&graphType=flamegraph&historicalData=true&messageDisplay=inline&query_translation_version=v0&shouldShowLegend=true&sort=desc&spanType=all&storage=hot&timeHint=1794206614354&trace=AwAAAaG_DENSwezhiAAAABhBYUdfREV1dUFBRElFbi16WFVQc0NnUzQAAAAkZjFhMWJmMGMtNDY1Yi00YjhmLWI3ZjEtNGY0NDI2YzdhNzc2AAAADw&trace__spanID=8343603351340215695&traceID=13259980332647197655&traceQuery=&view=spans&start=1794206348462&end=1794206717750&paused=true",
+        "captured_utc": "2026-11-09T06:47:40.987Z",
+        "trace_id": "13259980332647197655",
+        "qa": true,
+        "dimensions": [
+          1088,
+          413
+        ],
+        "method": "Lossless top crop of the existing cleared matching trace screenshot; client metadata redaction retained.",
+        "publication": "User explicitly requested an authentic scrollable detail view in the existing public Datadog preview. No account/player/session identifiers included.",
+        "limitations": "Recorded QA evidence from the November 9 action; presentation scrolling does not query live Datadog. Overview attributes only; Logs and other source tabs are not simulated."
+      },
+      "provenance": "../assets/datadog/capture-manifest.json"
+    },
+    {
+      "id": "datadog.collection.datadog-trace-attributes",
+      "source": "../assets/datadog/page-01-telemetry/datadog-trace-attributes.png",
+      "use": "Page 1: scrollable complete trace Overview",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "metadata": {
+        "source_url": "https://us5.datadoghq.com/apm/traces?query=service%3Akitty-api%20env%3Apreview%20%40command.type%3ACHOOSE_EVENT&agg_m=count&agg_m_source=base&agg_t=count&cols=service%2Cresource_name%2C%40duration%2C%40http.method%2C%40http.status_code%2C%40_span.count%2C%40_duration.by_service&fromUser=false&graphType=flamegraph&historicalData=true&messageDisplay=inline&query_translation_version=v0&shouldShowLegend=true&sort=desc&spanType=all&storage=hot&timeHint=1794206614354&trace=AwAAAaG_DENSwezhiAAAABhBYUdfREV1dUFBRElFbi16WFVQc0NnUzQAAAAkZjFhMWJmMGMtNDY1Yi00YjhmLWI3ZjEtNGY0NDI2YzdhNzc2AAAADw&trace__spanID=8343603351340215695&traceID=13259980332647197655&traceQuery=&view=spans&start=1794206348462&end=1794206717750&paused=true",
+        "captured_utc": "2026-11-09T10:30:05.817Z",
+        "trace_id": "13259980332647197655",
+        "qa": true,
+        "dimensions": [
+          1088,
+          927
+        ],
+        "method": "Contiguous lossless crops stitched at measured native scrollTop offsets 0, 288, 576, 622 from the same authenticated trace Overview. No tags, values or text recreated; scrollbar chrome excluded.",
+        "publication": "User explicitly requested an authentic scrollable detail view in the existing public Datadog preview. No account/player/session identifiers included.",
+        "limitations": "Recorded QA evidence from the November 9 action; presentation scrolling does not query live Datadog. Overview attributes only; Logs and other source tabs are not simulated."
+      },
+      "provenance": "../assets/datadog/capture-manifest.json"
     }
   ]
 }

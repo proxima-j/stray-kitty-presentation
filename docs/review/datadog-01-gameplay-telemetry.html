@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>Stray Kitty — From Gameplay to Telemetry · Review</title>
-<link rel="stylesheet" href="../library/tokens.css"><link rel="stylesheet" href="datadog-preview.css?v=static-game-button"></head>
+<link rel="stylesheet" href="../library/tokens.css"><link rel="stylesheet" href="datadog-preview.css?v=scrollable-trace"></head>
 <body>
 <main class="dd-page" id="ddSequence" data-demo-state="idle" aria-label="Datadog page 1 interactive review">
  <div class="section-label"><span class="number-pill">17</span>TECHNICAL WALKTHROUGH / DATADOG</div>
@@ -12,12 +12,12 @@
    <div class="dd-frame dd-media-frame dd-media-shell">
     <div class="game-viewport">
      <img id="ddIdleStill" src="../assets/datadog/page-01-telemetry/event-idle-still.png" alt="Authentic game screenshot before the recorded event choice" width="1600" height="900">
-     <video id="ddResponseVideo" src="../assets/datadog/page-01-telemetry/event-response.mp4" playsinline preload="none" aria-label="Authentic event choice animation and sound" hidden></video>
+     <video id="ddResponseVideo" src="../assets/datadog/page-01-telemetry/event-response.mp4" muted playsinline preload="none" aria-label="Authentic event choice animation and sound" hidden></video>
      <div class="game-overlay">ALLEY · EVENT CHOICE</div>
      <button id="ddGameClick" type="button" class="game-hitbox" aria-label="Roll dice — play this recorded QA action" data-source-rect="563,642,474,56"><img src="../assets/datadog/page-01-telemetry/event-roll-button.png" alt="" width="474" height="56"></button>
     </div>
    </div>
-   <div class="dd-panel-caption"><span id="ddActionHint" aria-live="polite">Click the recorded Roll dice button</span><button id="ddSound" type="button" class="dd-button" aria-pressed="true">Sound: On</button></div>
+   <div class="dd-panel-caption"><span id="ddActionHint" aria-live="polite">Click the recorded Roll dice button</span><button id="ddSound" type="button" class="dd-button" aria-pressed="false">Sound: Off</button></div>
   </section>
   <section aria-label="Real Datadog before and after captures">
    <div class="dd-panel-heading"><strong>02 / Datadog APM</strong><span class="dd-pill">Correlated browser + Go trace</span></div>
@@ -26,10 +26,10 @@
      <img src="../assets/datadog/page-01-telemetry/datadog-before.png" alt="Actual Datadog Trace Explorer before the QA event, at its earlier capture window">
      <img id="ddDatadogAfter" class="after-capture" src="../assets/datadog/page-01-telemetry/datadog-after.png" alt="Actual Datadog Trace Explorer after ingestion with the fresh CHOOSE_EVENT trace">
      <div id="ddDatadogProgress" class="datadog-status" aria-live="polite" hidden><span class="dd-spinner"></span>Recorded action playing · matching telemetry retrieved after ingestion</div>
-     <div id="ddDatadogFinished" class="datadog-status" aria-live="polite" hidden>CHOOSE_EVENT · Trace 13259980332647197655</div>
+     <button id="ddDatadogFinished" type="button" class="datadog-status dd-trace-trigger" aria-label="Open CHOOSE_EVENT trace detail" aria-haspopup="dialog" aria-controls="ddTraceOverlay" hidden>CHOOSE_EVENT · Trace 13259980332647197655 ↗</button>
     </div>
    </div>
-   <div class="dd-panel-caption"><span>Browser request → Go API → correlated log</span><button id="ddViewTrace" type="button" class="dd-button" disabled>View trace detail ↗</button></div>
+   <div class="dd-panel-caption"><span>Browser request → Go API → correlated log</span><button id="ddViewTrace" type="button" class="dd-button" aria-haspopup="dialog" aria-controls="ddTraceOverlay" disabled>View trace detail ↗</button></div>
   </section>
  </div>
  <div class="dd-qa-note"><span>Reconstructed presentation timing from one genuine QA action on Nov 9, 2026; the slide does not send a new request.</span><span><button id="ddReplay" type="button" class="dd-button" disabled>↻ Replay</button></span></div>
@@ -37,9 +37,15 @@
 </main>
 <div id="ddTraceOverlay" class="dd-overlay" hidden role="dialog" aria-modal="true" aria-label="Actual Datadog trace detail screenshot">
  <div class="dd-overlay-inner">
-  <div class="dd-overlay-head"><span>CHOOSE_EVENT · Matched APM trace and log · QA</span><button id="ddTraceClose" type="button" class="dd-button">Close ×</button></div>
-  <img src="../assets/datadog/page-01-telemetry/datadog-trace-detail.png" alt="Actual matching Datadog trace detail; trace 13259980332647197655"/>
+  <div class="dd-overlay-head"><span>CHOOSE_EVENT · Trace 13259980332647197655 · QA</span><button id="ddTraceClose" type="button" class="dd-button">Close ×</button></div>
+  <p class="dd-trace-hint">Scroll inside the trace to inspect the recorded span attributes.</p>
+  <div class="dd-trace-window">
+   <div id="ddTraceScroll" class="dd-trace-scroll" tabindex="0" role="region" aria-label="Scrollable recorded CHOOSE_EVENT trace detail">
+    <img src="../assets/datadog/page-01-telemetry/datadog-trace-header.png" alt="Matching Datadog trace: browser request and Go API span; HTTP 200; trace 13259980332647197655" width="1088" height="413">
+    <img src="../assets/datadog/page-01-telemetry/datadog-trace-attributes.png" alt="Complete recorded Overview attributes: CHOOSE_EVENT; HTTP POST /api/v1/commands; status 200; Go span 8343603351340215695; November 9, 2026" width="1088" height="927">
+   </div>
+  </div>
  </div>
 </div>
-<script src="datadog-preview.js?v=static-game-button"></script>
+<script src="datadog-preview.js?v=scrollable-trace"></script>
 </body></html>

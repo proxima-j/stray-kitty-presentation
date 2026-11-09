@@ -16,7 +16,9 @@
     const overlay = document.getElementById('ddTraceOverlay');
     const close = document.getElementById('ddTraceClose');
     let step = 'idle';
-    let audioEnabled = true;
+    let audioEnabled = false;
+    let traceOpener = null;
+    response.muted = true;
     // The overlay is an exact crop of the green button in the 1600×900 still.
     const sourceButton = { x: 563, y: 642, width: 474, height: 56 };
     function alignGameButton() {
@@ -77,12 +79,24 @@
             .catch(() => { response.hidden = true; idle.hidden = false; setStep('idle'); });
       }
     }
-    function closeOverlay() { overlay.hidden = true; }
+    function closeOverlay() {
+      const wasOpen = !overlay.hidden;
+      overlay.hidden = true;
+      if (wasOpen && traceOpener) traceOpener.focus();
+    }
+    function openTrace(event) {
+      if (step !== 'complete') return;
+      traceOpener = event.currentTarget;
+      overlay.hidden = false;
+      document.getElementById('ddTraceScroll').scrollTop = 0;
+      close.focus();
+    }
     clickArea.addEventListener('click', start);
     response.addEventListener('ended', finish);
     response.addEventListener('error', () => { if (step === 'response') replayDemo(); });
     replay.addEventListener('click', replayDemo);
-    view.addEventListener('click', () => { if (step === 'complete') { overlay.hidden = false; close.focus(); } });
+    view.addEventListener('click', openTrace);
+    finished.addEventListener('click', openTrace);
     close.addEventListener('click', closeOverlay);
     overlay.addEventListener('click', event => { if (event.target === overlay) closeOverlay(); });
     sound.addEventListener('click', () => {
