@@ -86,3 +86,8 @@ The 22-scene candidate passed local checks at 1600×900 and 1366×768, then the 
 ## Future influence — click-effect trial
 
 [Interactive Future preview](future-click.html) reuses the approved four-node Living World composition and four existing game images. Click or keyboard-activate a system: a small pulse travels into Living World, then along two illustrative outgoing connections; recipients gently brighten and settle. The finite effect lasts about 1.1 seconds, replays on another click, and cancels cleanly on rapid reselection. There is no idle animation or moving imagery. Reduced-motion preferences use static highlights. All relationships remain explicitly proposed future development. Current, Previous, Q&A and the v3 runtime are unchanged; this is a standalone interaction trial awaiting feedback.
+
+
+## Page 02 — Elevator Pitch with horizontal poster (isolated composition review)
+
+[Open the Page 02 poster composition](page-02-poster-composition.html). Reuses the exact current elevator-pitch text, the original approved D20 and playful-cat illustrations, and the existing user-supplied 3344×1882 horizontal poster (lossless WebP under `docs/assets/closing/`). The poster is the dominant artwork on the right, with the two original illustrations in a smaller lower strip. No copy, assets, Current/Previous deck or animation engine were changed. Static cat/route echoes are for composition review only. Do not integrate or remove this review without approval.
