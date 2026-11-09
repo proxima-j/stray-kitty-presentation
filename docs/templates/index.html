@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="description" content="One place to preview, reuse and adapt Forward Story v3 and its page-by-page presentation workflow.">
+<title>Start Here — Forward Story Presentation Template</title>
+<link rel="stylesheet" href="./forward-story-v3/styles/tokens.css">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--paper);color:var(--ink);font-family:var(--body)}
+a{color:inherit;text-underline-offset:4px}
+button{font:inherit}
+main{width:min(1130px,calc(100% - 9vw));margin:auto;padding:clamp(30px,6vh,64px) 0 95px}
+.eyebrow{display:flex;align-items:center;gap:16px;font:400 12px/1.35 var(--body);letter-spacing:.14em;text-transform:uppercase}
+.eyebrow span{display:inline-flex;justify-content:center;align-items:center;width:48px;height:31px;border:1.5px solid var(--ink);border-radius:99px;background:var(--gold);font:400 15px var(--display);letter-spacing:0}
+.eyebrow:after{content:"";height:1px;width:64px;background:var(--gold)}
+header{max-width:970px;margin:clamp(36px,6vh,78px) 0 clamp(25px,4vh,46px)}
+h1,h2,h3,p{margin:0}
+h1{font:400 clamp(46px,6.1vw,90px)/1.08 var(--display);letter-spacing:-.055em}
+header p{max-width:720px;font:400 clamp(16px,1.3vw,21px)/1.55 var(--body);color:var(--muted);margin-top:23px}
+.highlight{color:var(--accent)}
+.featured{display:grid;grid-template-columns:1.04fr .96fr;gap:18px;margin:0 0 36px}
+.feature{display:flex;min-height:235px;flex-direction:column;gap:14px;padding:clamp(23px,2.5vw,37px);border:1.5px solid var(--ink);border-radius:var(--frame-radius);text-decoration:none;transition:background .16s}
+.feature:hover,.feature:focus-visible{background:rgba(255,255,255,.4)}
+.feature.primary{background:var(--gold)}
+.feature.primary:hover{background:#d9b67f}
+.feature h2{font:400 clamp(25px,2.55vw,39px)/1.16 var(--display);letter-spacing:-.025em}
+.feature p{font:400 15px/1.5 var(--body);color:var(--muted);max-width:46ch}
+.feature.primary p{color:var(--ink)}
+.feature .eyebrow-small{font:400 11px/1.3 var(--body);letter-spacing:.12em;text-transform:uppercase}
+.feature .cta{margin-top:auto;font:400 15px/1.4 var(--body);border-top:1px solid rgba(52,69,62,.5);padding-top:14px}
+.section-title{display:flex;align-items:baseline;gap:19px;margin:37px 0 16px}
+.section-title h2{font:400 clamp(24px,2.3vw,35px)/1.2 var(--display)}
+.section-title span{font:400 12px/1.35 var(--body);color:var(--muted)}
+.resource-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.resource{display:flex;flex-direction:column;gap:10px;text-decoration:none;border:1px solid var(--line);border-radius:var(--frame-radius);padding:23px;min-height:153px;background:rgba(255,255,255,.1);transition:background .15s}
+.resource:hover,.resource:focus-visible{background:rgba(255,255,255,.4)}
+.resource .eyebrow-small{font:400 10px/1.3 var(--body);letter-spacing:.14em;color:var(--accent)}
+.resource h3{font:400 22px/1.2 var(--display)}
+.resource p{font:400 13px/1.45 var(--body);color:var(--muted)}
+.preamble{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin:38px 0 17px}
+.preamble h2{font:400 clamp(23px,2.3vw,35px)/1.2 var(--display)}
+.preamble p{font:400 13px/1.45 var(--body);color:var(--muted)}
+.prompt{display:flex;flex-direction:column;gap:16px;padding:24px;border:1.5px solid var(--ink);border-radius:var(--frame-radius);background:rgba(255,255,255,.12)}
+.prompt pre{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;font:400 13px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--ink)}
+.prompt-action{align-self:flex-start;background:var(--ink);color:var(--paper);border:1.5px solid var(--ink);border-radius:999px;padding:11px 19px;cursor:pointer}
+.prompt-action:hover,.prompt-action:focus-visible{background:#50655a}
+footer{margin:42px 0 0;padding-top:20px;border-top:2px dotted var(--accent);display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;color:var(--muted);font:400 12px/1.5 var(--body)}
+footer a{color:var(--ink)}
+@media(max-width:780px){.featured{grid-template-columns:1fr}.resource-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.feature{min-height:190px}}
+@media(max-width:500px){main{width:calc(100% - 35px)}.resource-grid{grid-template-columns:1fr}.resource{min-height:110px}.section-title{flex-wrap:wrap}.eyebrow:after{display:none}}
+</style>
+</head>
+<body>
+<main>
+<div class="eyebrow"><span>V3</span>REUSABLE PRESENTATION SYSTEM</div>
+<header><h1>Start a new story<br><span class="highlight">in motion.</span></h1>
+<p>One entry point for the Forward Story template, its cinematic transitions, editable scene layouts, and the page-by-page production workflow. Everything remains accessible from the same GitHub account—no ZIP required.</p></header>
+<section class="featured" aria-label="Start here">
+<a class="feature primary" href="./forward-story-v3/?page=01">
+ <span class="eyebrow-small">01 / SEE IT WORK</span>
+ <h2>Open the live template</h2>
+ <p>Explore five example scenes with the original-style 4.2-second reversible motion, dotted route, traveling pixel marker and local interactions.</p>
+ <span class="cta">Launch demo ↗</span>
+</a>
+<a class="feature" href="https://github.com/proxima-j/stray-kitty-presentation/tree/main/docs/templates/forward-story-v3">
+ <span class="eyebrow-small">02 / START A NEW PROJECT</span>
+ <h2>Use the source files</h2>
+ <p>Open the complete content-neutral starter in GitHub. Copy this folder into a separate project; the original production deck stays untouched.</p>
+ <span class="cta">View starter source ↗</span>
+</a>
+</section>
+<div class="section-title"><h2>Everything needed to build</h2><span>The same workflow that produced the original deck</span></div>
+<section class="resource-grid" aria-label="Documentation and resources">
+<a class="resource" href="./forward-story-v3/WORKFLOW.md"><span class="eyebrow-small">01 / CANONICAL PROCESS</span><h3>Page workflow</h3><p>Content → evidence → review → approval → integration → verification.</p></a>
+<a class="resource" href="./forward-story-v3/SCENE-RECIPES.md"><span class="eyebrow-small">02 / IMPLEMENTATION</span><h3>Scene recipes</h3><p>Copyable markup for layouts, media, reveals, buttons and replay.</p></a>
+<a class="resource" href="./forward-story-v3/ARCHITECTURE.md"><span class="eyebrow-small">03 / HOW IT WORKS</span><h3>Animation system</h3><p>Global camera, route, 4.2s pacing, scene-local behaviors and constraints.</p></a>
+<a class="resource" href="./forward-story-v3/README.md"><span class="eyebrow-small">04 / FIRST STEPS</span><h3>Getting started</h3><p>Clone or copy the starter and run it on a local HTTP server.</p></a>
+<a class="resource" href="https://app.notion.com/p/413e33b0423f8180bb92dabaf04af226"><span class="eyebrow-small">05 / KNOWLEDGE HUB</span><h3>Notion reference</h3><p>One place to find the template again, with decisions and project context.</p></a>
+<a class="resource" href="https://github.com/proxima-j/stray-kitty-presentation"><span class="eyebrow-small">06 / ORIGINAL WORK</span><h3>Stray Kitty source</h3><p>Reference the finished presentation without copying game-specific content.</p></a>
+</section>
+<div class="preamble"><h2>Starting with Codex?</h2><p>Copy the instruction below into any new project chat.</p></div>
+<section class="prompt" aria-label="Reusable Codex starting prompt">
+<pre id="starterPrompt">Create a new presentation using the Forward Story v3 template:
+https://github.com/proxima-j/stray-kitty-presentation/tree/main/docs/templates/forward-story-v3
+
+Read README.md, WORKFLOW.md, SCENE-RECIPES.md, ARCHITECTURE.md and assets/manifest.json inside the starter.
+
+Copy the starter into my NEW project/repository. Do not modify the Stray Kitty source, Current or Previous decks. Preserve the 4.2-second reversible scene transitions, one continuous dotted route and traveling marker, progressive scene reveals, typography and on-demand media. Replace sample content with my new project's content and cleared assets.
+
+First discuss the project story and page plan. Build isolated previews for approval before integration. Follow the documented asset, verification and publication workflow. Ask only for essential details missing from the new project.</pre>
+<button id="copyStarter" class="prompt-action" type="button" aria-label="Copy the reusable Codex project-starting prompt">Copy starting prompt</button>
+</section>
+<footer><span>Generic assets and licensed font only · Production content stays in its original repository</span><a href="https://app.notion.com/p/413e33b0423f8180bb92dabaf04af226">Save this in Notion ↗</a></footer>
+</main>
+<script>
+const copyButton=document.getElementById("copyStarter");
+copyButton.addEventListener("click",async()=>{
+ const prompt=document.getElementById("starterPrompt").textContent;
+ try{
+  if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(prompt);}
+  else{const field=document.createElement("textarea");field.value=prompt;document.body.append(field);field.select();if(!document.execCommand("copy"))throw new Error("Copy unsupported");field.remove();}
+  copyButton.textContent="Copied";
+  copyButton.setAttribute("aria-label","Prompt copied to clipboard");
+ }catch{copyButton.textContent="Select and copy the prompt above";}
+});
+</script>
+</body></html>

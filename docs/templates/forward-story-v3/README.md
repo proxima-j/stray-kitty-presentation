@@ -2,6 +2,8 @@
 
 A runnable, content-neutral presentation starter derived from the **approved Forward Story v3 motion system** used for Stray Kitty. The original scene-travel algorithm is reused and generalized, rather than imitated with a new animation library.
 
+**[START HERE — template, source, workflow and Codex prompt](https://proxima-j.github.io/stray-kitty-presentation/templates/)**
+
 **Live starter:** https://proxima-j.github.io/stray-kitty-presentation/templates/forward-story-v3/
 
 ## What is retained

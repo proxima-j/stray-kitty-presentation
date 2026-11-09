@@ -2,6 +2,8 @@
 
 GitHub is the shared source for ChatGPT and Codex. GitHub Pages automatically publishes `main:/docs`. Use live page links for reviews instead of transferring HTML/PNG exports.
 
+**Reusable template:** [Start Here — Forward Story v3](https://proxima-j.github.io/stray-kitty-presentation/templates/) · [Production workflow](docs/templates/forward-story-v3/WORKFLOW.md) · [Notion reference](https://app.notion.com/p/413e33b0423f8180bb92dabaf04af226).
+
 ## Two working versions
 
 | Version | Preview | Verified source |
