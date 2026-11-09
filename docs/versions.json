@@ -2,11 +2,13 @@
   "current": {
     "entry": "./",
     "candidate_base_commit": "5e8a0e27e5840605c363447177fdf6242e5319c1",
-    "build_marker": "20261109-datadog-r6",
+    "build_marker": "20261109-datadog-refinement6",
     "description": "Nineteen-page deck: approved Datadog Gameplay to Telemetry, Observability, and Detect Alert Recover follow Kubernetes",
     "publication_status": "LOCAL_VERIFIED; verify deployed marker after push",
-    "local_verified_at": "2026-11-09T11:57:19.658997+00:00",
-    "verification_notes": "Focused normal-browser checks: 16→17→18→19 and reverse, muted six-second QA response, matching trace and scrollable attributes, Overview side-by-side, Option A chunk selection and full-image inspection, original Slack/Datadog alert-recovery switches and image inspection, Synthetics and phone icon. Long explanatory panels scroll within their frames at shorter viewports. Existing sixteen scenes and all old runtime files byte-identical; v3 4200ms engine unchanged. No backend requests, infrastructure changes or new recordings."
+    "local_verified_at": "2026-11-09T12:21:21.242319+00:00",
+    "verification_notes": "Focused normal-browser checks: 16→17→18→19 and reverse, muted six-second QA response, matching trace and scrollable attributes, Overview side-by-side, Option A chunk selection and full-image inspection, original Slack/Datadog alert-recovery switches and image inspection, Synthetics and phone icon. Long explanatory panels scroll within their frames at shorter viewports. Existing sixteen scenes and all old runtime files byte-identical; v3 4200ms engine unchanged. No backend requests, infrastructure changes or new recordings.",
+    "maintenance_base_commit": "b6beaea3a084ae04f3927d64b1817973d8468932",
+    "maintenance_notes": "Page 17: smaller image/video delivery copies, scene-entry response preparation and genuine still retained while buffering; duplicate parent perspective removed from Datadog scenes to fix Chromium blank rendering. V3 camera, engine and 4200ms beat unchanged. Page 18: performance/interaction-tracking copy; event and AI sample-count callouts removed. Page 19: larger aligned frames fit without panel scrolling at normal viewport; payment heading and deferred screenshot source corrected. Previous unchanged; this is a slide maintenance commit, not a version rotation."
   },
   "previous": {
     "entry": "previous/",

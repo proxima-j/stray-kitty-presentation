@@ -478,6 +478,58 @@
       "width": 565,
       "height": 616,
       "quality": 90
+    },
+    {
+      "source": "assets/datadog/page-01-telemetry/event-idle-still.png",
+      "path": "assets/datadog/page-01-telemetry/event-idle-still-web.webp",
+      "kind": "web-image",
+      "original_bytes": 1615372,
+      "bytes": 268046,
+      "width": 1600,
+      "height": 900,
+      "quality": 88
+    },
+    {
+      "source": "assets/datadog/page-01-telemetry/datadog-before.png",
+      "path": "assets/datadog/page-01-telemetry/datadog-before-web.webp",
+      "kind": "lossless-image",
+      "original_bytes": 283193,
+      "bytes": 186680,
+      "width": 1091,
+      "height": 676
+    },
+    {
+      "source": "assets/datadog/page-01-telemetry/datadog-after.png",
+      "path": "assets/datadog/page-01-telemetry/datadog-after-web.webp",
+      "kind": "lossless-image",
+      "original_bytes": 306537,
+      "bytes": 203844,
+      "width": 1091,
+      "height": 676
+    },
+    {
+      "source": "assets/datadog/page-01-telemetry/event-roll-button.png",
+      "path": "assets/datadog/page-01-telemetry/event-roll-button-web.webp",
+      "kind": "lossless-image",
+      "original_bytes": 8357,
+      "bytes": 5722,
+      "width": 474,
+      "height": 56
+    },
+    {
+      "source": "assets/datadog/page-01-telemetry/event-response.mp4",
+      "path": "assets/datadog/page-01-telemetry/event-response-web.mp4",
+      "kind": "web-video",
+      "original_bytes": 1666908,
+      "bytes": 511058,
+      "width": 1280,
+      "height": 720,
+      "duration_seconds": 6.016,
+      "video_duration_seconds": 6,
+      "fps": 25,
+      "video_codec": "H.264",
+      "audio_codec": "AAC",
+      "encoding": "CRF 26, AAC 96k, fast-start; complete recording and audio retained"
     }
   ]
 }

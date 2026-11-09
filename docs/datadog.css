@@ -220,4 +220,14 @@
 .datadog-scope .dd-alert-proof{flex:none;min-height:190px;height:clamp(190px,27vh,300px)}
 
 .datadog-scope .dd-analysis .dd-source{font-size:11px}
-
+/* More room for the matched alert / Synthetics frames; the v3 route stays fixed. */
+#detect-alert-recover .dd-page{padding-bottom:clamp(128px,22vh,238px)}
+#detect-alert-recover .dd-alert-evidence{display:grid;grid-template-rows:auto auto minmax(160px,1fr) auto auto;gap:6px;padding:clamp(12px,1.1vw,18px);overflow:hidden}
+#detect-alert-recover .dd-alert-proof{height:auto;min-height:160px}
+#detect-alert-recover .dd-alert-steps{gap:8px}
+#detect-alert-recover .dd-alert-stage{padding:6px 8px;gap:4px}
+#detect-alert-recover .dd-alert-stage p{line-height:1.35}
+#detect-alert-recover .dd-monitor-layout{align-items:stretch}
+#detect-alert-recover .dd-footer{padding-left:22vw;font-size:10px}
+/* The v3 camera already supplies perspective. A second perspective boundary can blank these nested pages in Chromium. */
+.scene.datadog-scope{perspective:none}

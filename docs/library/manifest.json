@@ -1809,6 +1809,98 @@
         "publication": "User explicitly requested the project Datadog and Slack screenshots beside the explanation in the existing public Page 3 preview.",
         "provenance": "page-03-alerts/health-alert-cycle-provenance.json"
       }
+    },
+    {
+      "id": "datadog.web.event-idle-still-web",
+      "source": "../assets/datadog/page-01-telemetry/event-idle-still-web.webp",
+      "origin": "Web delivery derivative of the existing genuine QA capture: assets/datadog/page-01-telemetry/event-idle-still.png",
+      "use": "Page 17 fast initial display and click-to-play recorded response",
+      "status": "APPROVED / PUBLICATION AUTHORIZED",
+      "permission": "Existing user-approved Datadog evidence; smaller delivery copies requested November 9, 2026. Unmodified original retained.",
+      "metadata": {
+        "source": "assets/datadog/page-01-telemetry/event-idle-still.png",
+        "path": "assets/datadog/page-01-telemetry/event-idle-still-web.webp",
+        "kind": "web-image",
+        "original_bytes": 1615372,
+        "bytes": 268046,
+        "width": 1600,
+        "height": 900,
+        "quality": 88
+      }
+    },
+    {
+      "id": "datadog.web.datadog-before-web",
+      "source": "../assets/datadog/page-01-telemetry/datadog-before-web.webp",
+      "origin": "Web delivery derivative of the existing genuine QA capture: assets/datadog/page-01-telemetry/datadog-before.png",
+      "use": "Page 17 fast initial display and click-to-play recorded response",
+      "status": "APPROVED / PUBLICATION AUTHORIZED",
+      "permission": "Existing user-approved Datadog evidence; smaller delivery copies requested November 9, 2026. Unmodified original retained.",
+      "metadata": {
+        "source": "assets/datadog/page-01-telemetry/datadog-before.png",
+        "path": "assets/datadog/page-01-telemetry/datadog-before-web.webp",
+        "kind": "lossless-image",
+        "original_bytes": 283193,
+        "bytes": 186680,
+        "width": 1091,
+        "height": 676
+      }
+    },
+    {
+      "id": "datadog.web.datadog-after-web",
+      "source": "../assets/datadog/page-01-telemetry/datadog-after-web.webp",
+      "origin": "Web delivery derivative of the existing genuine QA capture: assets/datadog/page-01-telemetry/datadog-after.png",
+      "use": "Page 17 fast initial display and click-to-play recorded response",
+      "status": "APPROVED / PUBLICATION AUTHORIZED",
+      "permission": "Existing user-approved Datadog evidence; smaller delivery copies requested November 9, 2026. Unmodified original retained.",
+      "metadata": {
+        "source": "assets/datadog/page-01-telemetry/datadog-after.png",
+        "path": "assets/datadog/page-01-telemetry/datadog-after-web.webp",
+        "kind": "lossless-image",
+        "original_bytes": 306537,
+        "bytes": 203844,
+        "width": 1091,
+        "height": 676
+      }
+    },
+    {
+      "id": "datadog.web.event-roll-button-web",
+      "source": "../assets/datadog/page-01-telemetry/event-roll-button-web.webp",
+      "origin": "Web delivery derivative of the existing genuine QA capture: assets/datadog/page-01-telemetry/event-roll-button.png",
+      "use": "Page 17 fast initial display and click-to-play recorded response",
+      "status": "APPROVED / PUBLICATION AUTHORIZED",
+      "permission": "Existing user-approved Datadog evidence; smaller delivery copies requested November 9, 2026. Unmodified original retained.",
+      "metadata": {
+        "source": "assets/datadog/page-01-telemetry/event-roll-button.png",
+        "path": "assets/datadog/page-01-telemetry/event-roll-button-web.webp",
+        "kind": "lossless-image",
+        "original_bytes": 8357,
+        "bytes": 5722,
+        "width": 474,
+        "height": 56
+      }
+    },
+    {
+      "id": "datadog.web.event-response-web",
+      "source": "../assets/datadog/page-01-telemetry/event-response-web.mp4",
+      "origin": "Web delivery derivative of the existing genuine QA capture: assets/datadog/page-01-telemetry/event-response.mp4",
+      "use": "Page 17 fast initial display and click-to-play recorded response",
+      "status": "APPROVED / PUBLICATION AUTHORIZED",
+      "permission": "Existing user-approved Datadog evidence; smaller delivery copies requested November 9, 2026. Unmodified original retained.",
+      "metadata": {
+        "source": "assets/datadog/page-01-telemetry/event-response.mp4",
+        "path": "assets/datadog/page-01-telemetry/event-response-web.mp4",
+        "kind": "web-video",
+        "original_bytes": 1666908,
+        "bytes": 511058,
+        "width": 1280,
+        "height": 720,
+        "duration_seconds": 6.016,
+        "video_duration_seconds": 6,
+        "fps": 25,
+        "video_codec": "H.264",
+        "audio_codec": "AAC",
+        "encoding": "CRF 26, AAC 96k, fast-start; complete recording and audio retained"
+      }
     }
   ]
 }

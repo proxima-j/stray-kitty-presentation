@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="events-combat.css?v=20261109-integrated">
   <link rel="preload" as="script" href="events-combat.js?v=20261109-integrated">
   <link rel="stylesheet" href="technical.css?v=20261109-full-pipeline">
-  <link rel="stylesheet" href="datadog.css?v=20261109-datadog-r6">
+  <link rel="stylesheet" href="datadog.css?v=20261109-datadog-refinement6">
   <link rel="stylesheet" href="uiux.css?v=20261109-adaptive-fit">
   <link rel="preload" as="script" href="uiux.js?v=20261109-adaptive-fit">
   <link rel="preload" as="script" href="scene-content.js?v=20261109-on-demand-events">
@@ -475,10 +475,10 @@
    <div class="dd-panel-heading"><strong>01 / The Game</strong><span class="dd-pill">Recorded QA action</span></div>
    <div class="dd-frame dd-media-frame dd-media-shell">
     <div class="game-viewport">
-     <img id="ddIdleStill" data-media-src="assets/datadog/page-01-telemetry/event-idle-still.png" alt="Authentic game screenshot before the recorded event choice" width="1600" height="900">
-     <video id="ddResponseVideo" data-response-src="assets/datadog/page-01-telemetry/event-response.mp4" muted playsinline preload="none" aria-label="Authentic event choice animation and sound" hidden></video>
+     <img id="ddIdleStill" data-media-src="assets/datadog/page-01-telemetry/event-idle-still-web.webp" alt="Authentic game screenshot before the recorded event choice" width="1600" height="900">
+     <video id="ddResponseVideo" data-media-poster="assets/datadog/page-01-telemetry/event-idle-still-web.webp" data-response-src="assets/datadog/page-01-telemetry/event-response-web.mp4" muted playsinline preload="none" aria-label="Authentic event choice animation and sound" hidden></video>
      <div class="game-overlay">ALLEY · EVENT CHOICE</div>
-     <button id="ddGameClick" type="button" class="game-hitbox" aria-label="Roll dice — play this recorded QA action" data-source-rect="563,642,474,56"><img data-media-src="assets/datadog/page-01-telemetry/event-roll-button.png" alt="" width="474" height="56"></button>
+     <button id="ddGameClick" type="button" class="game-hitbox" aria-label="Roll dice — play this recorded QA action" data-source-rect="563,642,474,56"><img data-media-src="assets/datadog/page-01-telemetry/event-roll-button-web.webp" alt="" width="474" height="56"></button>
     </div>
    </div>
    <div class="dd-panel-caption"><span id="ddActionHint" aria-live="polite">Click the recorded Roll dice button</span><button id="ddSound" type="button" class="dd-button" aria-pressed="false">Sound: Off</button></div>
@@ -487,8 +487,8 @@
    <div class="dd-panel-heading"><strong>02 / Datadog APM</strong><span class="dd-pill">Correlated browser + Go trace</span></div>
    <div class="dd-frame dd-media-frame dd-media-shell">
     <div class="datadog-viewport">
-     <img data-media-src="assets/datadog/page-01-telemetry/datadog-before.png" alt="Actual Datadog Trace Explorer before the QA event, at its earlier capture window">
-     <img id="ddDatadogAfter" class="after-capture" data-media-src="assets/datadog/page-01-telemetry/datadog-after.png" alt="Actual Datadog Trace Explorer after ingestion with the fresh CHOOSE_EVENT trace">
+     <img data-media-src="assets/datadog/page-01-telemetry/datadog-before-web.webp" alt="Actual Datadog Trace Explorer before the QA event, at its earlier capture window">
+     <img id="ddDatadogAfter" class="after-capture" data-media-src="assets/datadog/page-01-telemetry/datadog-after-web.webp" alt="Actual Datadog Trace Explorer after ingestion with the fresh CHOOSE_EVENT trace">
      <div id="ddDatadogProgress" class="datadog-status" aria-live="polite" hidden><span class="dd-spinner"></span>Recorded action playing · matching telemetry retrieved after ingestion</div>
      <button id="ddDatadogFinished" type="button" class="datadog-status dd-trace-trigger" aria-label="Open CHOOSE_EVENT trace detail" aria-haspopup="dialog" aria-controls="ddTraceOverlay" hidden>CHOOSE_EVENT · Trace 13259980332647197655 ↗</button>
     </div>
@@ -526,9 +526,9 @@
    <div class="dd-frame composition-board" data-board="performance" aria-label="Authentic dashboard section composition"></div>
    <aside tabindex="0" class="dd-frame dd-analysis">
     <span class="dd-label">REAL USER MONITORING</span>
-    <div class="dd-big">4.43 s</div>
-    <h2>How quickly does the game feel ready?</h2>
-    <p>Window-level LCP p75 from 113 recorded RUM sessions. The image charts <em>daily</em> p75, so its trend and the summary use different aggregations.</p>
+    <div class="dd-big">4.43 s</div><span class="dd-label">RECORDED LCP P75</span>
+    <h2>How does the game perform?</h2>
+    <p>Track loading speed, responsiveness and frontend errors to understand the player experience.</p>
     <div class="dd-rule"></div>
     <div class="dd-source">Nov 2–9, 2026 · Performance data may include public-host QA</div>
     <a class="dd-link" target="_blank" rel="noopener" href="https://us5.datadoghq.com/dashboard/b6t-avm-uyi">Player Journey dashboard ↗</a>
@@ -538,9 +538,8 @@
    <div class="dd-frame composition-board" data-board="events" aria-label="Authentic dashboard section composition"></div>
    <aside tabindex="0" class="dd-frame dd-analysis">
     <span class="dd-label">GAMEPLAY OBSERVABILITY</span>
-    <div class="dd-big">10 events</div>
-    <h2>What happens after a choice?</h2>
-    <p>1 success · 2 failures · 7 partial outcomes in this small non-QA sample. These are recorded outcomes, not the game's intended dice probabilities.</p>
+    <h2>Are player interactions working correctly?</h2>
+    <p>Trace choices, story progress and combat events to check that player actions behave as expected.</p>
     <div class="dd-rule"></div>
     <div class="dd-source">Nov 2–9, 2026 · Backend query excludes qa:true</div>
     <a class="dd-link" target="_blank" rel="noopener" href="https://us5.datadoghq.com/dashboard/b6t-avm-uyi">Player Journey dashboard ↗</a>
@@ -550,9 +549,8 @@
    <div class="dd-frame composition-board" data-board="advisor" aria-label="Authentic dashboard section composition"></div>
    <aside tabindex="0" class="dd-frame dd-analysis">
     <span class="dd-label">AI / BUSINESS OBSERVABILITY</span>
-    <div class="dd-big">4 Home + 1 Battle</div>
     <h2>How do payments, economy and AI behave?</h2>
-    <p>Payments, currency flows and five successful Advisor calls in the recorded non-QA sample. These sections show instrumentation, not reliability at scale.</p>
+    <p>Track payment flows, currency changes and AI Advisor requests across the game.</p>
     <div class="dd-rule"></div>
     <div class="dd-source">Nov 2–9, 2026 · Backend query excludes qa:true</div>
     <a class="dd-link" target="_blank" rel="noopener" href="https://us5.datadoghq.com/dashboard/wbx-cm5-me5">Business &amp; Payments dashboard ↗</a>
@@ -602,7 +600,7 @@
   <section class="dd-frame dd-synth dd-monitor-synthetics" aria-label="External synthetic checks in Tokyo and Seoul">
    <div class="dd-label">02 / EXTERNAL SYNTHETICS</div>
    <div class="dd-synth-top">
-    <h2>Can players reach the public game?</h2>
+    <h2 id="ddSyntheticHeading">Can players reach the public game?</h2>
     <div class="dd-tabrow" role="tablist" aria-label="Choose a public endpoint check">
      <button class="dd-select" type="button" role="tab" data-check-tab="healthz" aria-controls="ddHealthz" aria-selected="true">Public health check</button>
      <button class="dd-select" type="button" role="tab" data-check-tab="payment" aria-controls="ddPayment" aria-selected="false">Payment configuration</button>
@@ -612,7 +610,7 @@
     <img data-media-src="assets/datadog/page-03-alerts/synthetics-healthz.png" alt="Authentic Datadog HTTP health-check runs from Tokyo and Seoul, both passed on November 9, 2026"/>
    </div>
    <div id="ddPayment" class="dd-synth-photo" data-check-panel="payment" role="tabpanel" hidden>
-    <img data-data-media-src="assets/datadog/page-03-alerts/synthetics-payment-config.png" alt="Authentic Datadog payment-configuration HTTP checks from Tokyo and Seoul, both passed on November 9, 2026"/>
+    <img data-src="assets/datadog/page-03-alerts/synthetics-payment-config.png" alt="Authentic Datadog payment-configuration HTTP checks from Tokyo and Seoul, both passed on November 9, 2026"/>
    </div>
    <div class="dd-synth-label">Tokyo + Seoul · scheduled every five minutes · observed Nov 9, 2026</div>
    <div class="dd-synth-label">HTTP 200 establishes endpoint reachability, not a full game or payment workflow.</div>
@@ -664,6 +662,6 @@
 <script src="scene-content.js?v=20261109-on-demand-events"></script>
 <script src="events-combat.js?v=20261109-integrated"></script>
 <script src="uiux.js?v=20261109-adaptive-fit"></script>
-<script src="datadog.js?v=20261109-datadog-r6"></script>
+<script src="datadog.js?v=20261109-datadog-refinement6"></script>
 <script src="engine-v3.js?v=20261109-level-design"></script>
 </body></html>

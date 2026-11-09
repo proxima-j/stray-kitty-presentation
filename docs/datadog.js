@@ -50,7 +50,14 @@
     let audioEnabled = false;
     let qaVisible = false;
     let traceOpener = null;
+    let playback = 0;
     response.muted = true;
+    function prepareResponse() {
+      if (response.hasAttribute('src')) return;
+      response.preload = 'auto';
+      response.src = response.dataset.responseSrc;
+      response.load();
+    }
     // The overlay is an exact crop of the green button in the 1600×900 still.
     const sourceButton = { x: 563, y: 642, width: 474, height: 56 };
     function alignGameButton() {
@@ -85,6 +92,7 @@
       reveal.classList.toggle('is-visible', next === 'complete');
     }
     function replayDemo() {
+      playback++;
       response.pause();
       response.hidden = true;
       try { response.currentTime = 0; } catch (_) {}
@@ -101,16 +109,21 @@
       event.stopPropagation();
       if (step !== 'idle') return;
       qaVisible = true;
-      if (!response.hasAttribute('src')) response.src = response.dataset.responseSrc;
+      prepareResponse();
+      const request = ++playback;
       setStep('response');
-      idle.hidden = true;
+      // Keep the genuine still visible while a slow connection buffers the clip.
+      idle.hidden = false;
       response.hidden = false;
       response.muted = !audioEnabled;
       try { response.currentTime = 0; } catch (_) {}
       const play = response.play();
       if (play && typeof play.catch === 'function') {
-        play.catch(() => { response.muted = true; return response.play(); })
-            .catch(() => { response.hidden = true; idle.hidden = false; setStep('idle'); });
+        play.catch(() => {
+          if (request !== playback || !qaVisible) return;
+          response.muted = true;
+          return response.play().catch(() => { if (request === playback) replayDemo(); });
+        });
       }
     }
     function closeOverlay() {
@@ -127,6 +140,14 @@
     }
     clickArea.addEventListener('click', start);
     response.addEventListener('ended', finish);
+    response.addEventListener('playing', () => {
+      if (step !== 'response') return;
+      idle.hidden = true;
+      hint.textContent = 'Playing the genuine recorded event result…';
+    });
+    response.addEventListener('waiting', () => {
+      if (step === 'response') hint.textContent = 'Loading recorded action…';
+    });
     response.addEventListener('error', () => { if (step === 'response') replayDemo(); });
     replay.addEventListener('click', replayDemo);
     view.addEventListener('click', openTrace);
@@ -148,6 +169,7 @@
     }
     window.addEventListener('presentation:viewchange', event => {
       qaVisible = event.detail.id === 'gameplay-telemetry' && event.detail.visible;
+      if (event.detail.id === 'gameplay-telemetry') prepareResponse();
       syncResponse();
     });
     document.addEventListener('visibilitychange', syncResponse);
@@ -174,7 +196,11 @@
   if (synth) {
     const tabs = [...synth.querySelectorAll('[data-check-tab]')];
     const images = [...synth.querySelectorAll('[data-check-panel]')];
+    const heading = document.getElementById('ddSyntheticHeading');
     tabs.forEach(tab => tab.addEventListener('click', () => {
+      heading.textContent = tab.dataset.checkTab === 'payment'
+        ? 'Is the payment configuration reachable?'
+        : 'Can players reach the public game?';
       tabs.forEach(b => b.setAttribute('aria-selected', String(b === tab)));
       images.forEach(panel => {
         const active = panel.dataset.checkPanel === tab.dataset.checkTab;
