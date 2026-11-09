@@ -2,13 +2,15 @@
 
 This workflow is the reusable process developed for the Stray Kitty presentation. It separates **content approval**, **evidence collection**, **composition preview**, **runtime integration** and **publication verification** so different contributors or agents can work concurrently without overwriting one another.
 
-## Phase 0 — Lock the overall direction
+## Phase 0 — Choose Blank Canvas or Examples, then lock the overall direction
+
+**Blank Canvas is the default starting mode.** Copy the full template folder to a NEW project and copy `blank.html` over its `index.html`. Use the existing engine and two minimal placeholder scenes while deciding what each page should contain; do not infer the page order, layout or art style from the five-scene sample. Example Mode is optional if a project explicitly wants ready-made compositions. Both modes share the same `scripts/story-engine.js`, media handling and reveal primitives.
 
 Write down the audience, available presentation time, speaker, constraints, and one-sentence story arc.
 
 Select the sections and expected amount of technical depth. Decide which pages need a video, which can be authentic static screenshots, and which are truly interactive. Favor recordings where live connectivity or demo reliability is uncertain.
 
-Lock one visual language: cream paper, dark-green text, Faculty Glyphic headings, thin rounded frames and gold accents. The **single dotted route and traveler** connect all sections. The engine, not individual scenes, owns the 4.2-second movement and reversible navigation.
+Choose a consistent visual language for the new project. Cream paper, green text, Faculty Glyphic, pill shapes and dotted route/traveler are **original example choices**, not requirements for Blank Canvas. In Blank Canvas, edit `styles/blank.css` and the body `data-route`, `data-traveler`, `data-visual-preset` attributes. The route and traveler can be hidden or shown independently; retain their DOM nodes because the shared engine uses the underlying geometry. The engine, not individual scenes, owns the 4.2-second movement, reversible navigation and `data-build`/`data-at` arrivals.
 
 ## Phase 1 — Each page starts with a content contract
 
@@ -80,7 +82,7 @@ Only after approval:
 1. Fetch latest main before editing, preserving simultaneous work.
 2. Copy the approved layout into one native section.scene with a unique ID; use data-scene 0,1,2… and data-page 01,02,03…
 3. Add one .scene-camera. Page CSS should be scoped to its scene ID/class.
-4. **Remove any preview-only static cat/route echoes**. One traveler and route exist in the deck shell only.
+4. **Remove any preview-only static traveler/route echoes**. The shell keeps one route and one traveler DOM element even if Blank Canvas hides them; do not add duplicates.
 5. Use data-media-src to delay image loads; do not preload the whole deck behind the first page.
 6. Local controls use data-local-space and run only when the scene is active. Pause videos when leaving or hiding the page.
 7. Keep engine source untouched unless there is a demonstrable global bug.
@@ -113,19 +115,17 @@ For collaborative production decks, retain **Current** and **Previous** as the t
 
 Store exact page decisions, accepted wording, preview/asset links, known limitations, and verified commit/build in a concise Notion checkpoint. **GitHub remains the source of truth for executable pages, assets and workflow documents**.
 
-A migration entry should include: agreed section order; approved vs pending pages; latest Current/Previous; exact asset provenance and evidence bounds; dropped alternatives; the next smallest action.
+A migration entry should include: **selected starting mode (Blank Canvas or Examples)**; route/traveler visibility and visual identity choice; agreed section order; approved vs pending pages; latest Current/Previous; asset provenance and evidence bounds; dropped alternatives; the next smallest action.
 
 ## Reusable Codex/agent handoff
 
 ~~~text
-Use the existing presentation repository at latest main. Read its README,
-WORKFLOW.md, SCENE-RECIPES.md, architecture notes and asset manifest.
+Use Forward Story v3 in a NEW project, beginning with the Blank Canvas mode unless explicitly asked for examples. Copy the complete template folder, replacing only the NEW project's index.html with blank.html. Read README.md, WORKFLOW.md, SCENE-RECIPES.md, ARCHITECTURE.md and the asset manifest. Keep the existing story-engine.js camera/route math and data-build/data-at reveals. Decide each page's content, layout and visual identity by discussion; do not impose the five demonstration compositions. Route/traveler are optional visual settings.
 Work on [PAGE ID and one-sentence goal].
 Approved composition/copy: [EXACT LINK OR SPEC].
 Use only [CLEARED ASSETS and source/version/date]. Collect missing real evidence
 efficiently and record provenance; don't invent media or claims.
-Create/edit only an isolated review preview first. Preserve Current, Previous,
-the single traveler/route and the 4.2s reversible v3 engine.
+Create/edit only an isolated review preview first. Preserve the original repository's Current and Previous, keep the shared route/traveler nodes (visible only if chosen), and keep the 4.2s reversible v3 engine.
 After approval, integrate as a native scene, reuse on-demand media handling,
 verify at 1600x900 and 1366x768 plus one forward/reverse and interaction test.
 Publish without force, verify the real result, and remove only this page's
