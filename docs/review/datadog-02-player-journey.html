@@ -1,48 +1,14 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>Stray Kitty — Observability Across the Game · Review</title>
 <link rel="stylesheet" href="../library/tokens.css"><link rel="stylesheet" href="datadog-preview.css"><style>
-/* Page 18 review only: no changes to shared preview CSS, interaction JS, or Current. */
-.dd-overview-board{display:flex;flex-direction:column;justify-content:space-between;gap:clamp(12px,2vh,25px);padding:clamp(16px,2.1vw,34px);min-height:0}
-.dd-observe-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.dd-observe-scope{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,1.5vw,22px);flex:1;min-height:0}
-.dd-scope-card{display:flex;flex-direction:column;gap:clamp(7px,1.25vh,14px);border:var(--border) solid var(--ink);border-radius:var(--frame-radius);padding:clamp(14px,1.55vw,25px);background:rgba(255,255,255,.12)}
-.dd-scope-num{font:400 12px/1 var(--display);width:33px;height:33px;border-radius:999px;background:var(--gold);border:1px solid var(--ink);display:flex;align-items:center;justify-content:center}
-.dd-scope-card h2{font:400 clamp(20px,1.8vw,29px)/1.2 var(--display);letter-spacing:-.03em;margin:0}
-.dd-scope-card p{font:400 clamp(12px,.95vw,15px)/1.42 var(--body);color:var(--muted);margin:0}
-.dd-signal-list{display:flex;flex-direction:column;gap:7px;margin-top:auto}
-.dd-signal-list span{border-bottom:1px solid rgba(141,145,123,.6);padding-bottom:7px;font:400 clamp(12px,1vw,16px)/1.3 var(--body)}
-.dd-observe-base{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.dd-observe-base span{border:1px solid var(--line);border-radius:999px;padding:8px 6px;text-align:center;font:400 clamp(10px,.85vw,13px)/1.3 var(--body)}
-.dd-board-caveat{font:400 10px/1.35 var(--body);color:var(--muted)}
-.dd-overview-copy{gap:clamp(11px,1.5vh,19px)}
-.dd-overview-copy h2{font-size:clamp(17px,1.5vw,23px)}
-.dd-overview-copy .dd-big{font-size:clamp(31px,3.35vw,54px)}
-.dd-overview-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.dd-overview-stats>div{display:flex;align-items:flex-start;flex-direction:column;gap:4px}
-.dd-overview-stats strong{font:400 clamp(24px,2.5vw,37px)/1.1 var(--display)}
-.dd-overview-stats span{font:400 11px/1.42 var(--body);color:var(--muted)}
+/* Standalone Overview review; the production deck is unchanged. */
+.dd-overview-copy{gap:clamp(10px,1.4vh,17px)}
+.dd-overview-copy h2{font-size:clamp(20px,1.65vw,27px)}
+.dd-coverage h3{font:400 clamp(17px,1.3vw,21px)/1.2 var(--display);margin:0 0 6px}
+.dd-coverage p{font-size:clamp(12px,.95vw,15px);line-height:1.5}
+.dd-overview-image{color:inherit}
 .dd-tabrow{gap:clamp(6px,.7vw,12px)}
 .dd-select{padding:9px clamp(10px,1.4vw,21px)}
-@media(max-height:790px){
- .dd-overview-board{padding:14px;gap:9px}
- .dd-scope-card{gap:7px;padding:12px}
- .dd-signal-list{gap:3px}
- .dd-signal-list span{padding-bottom:4px;font-size:12px}
- .dd-overview-copy{gap:10px}
- .dd-overview-copy .dd-big{font-size:clamp(30px,3vw,44px)}
- .dd-observe-base span{padding:5px}
-}
-@media(max-width:1050px){
- .dd-overview-layout{grid-template-columns:minmax(0,1.3fr) minmax(220px,.7fr)}
- .dd-scope-card h2{font-size:clamp(18px,2.2vw,25px)}
- .dd-overview-stats{grid-template-columns:1fr}
-}
-@media(max-width:720px){
- .dd-overview-layout{grid-template-columns:1fr}
- .dd-overview-board{min-height:420px}
- .dd-overview-stats{grid-template-columns:1fr 1fr}
- .dd-observe-base span{font-size:10px}
-}
 </style></head>
 <body>
 <main class="dd-page" id="ddDashboardPreview" aria-label="Datadog page 2 dashboard review">
@@ -56,36 +22,17 @@
  </div>
  <div class="dd-hero">
   <section id="ddOverview" class="dd-dashboard-shell dd-overview-layout" data-dashboard-panel="overview" role="tabpanel">
-   <div class="dd-frame dd-overview-board" role="img" aria-label="Editorial overview of the audited Datadog coverage: technical health and gameplay and business signals">
-    <div class="dd-observe-top"><span class="dd-label">DATADOG COVERAGE · NOVEMBER 9 SNAPSHOT</span><span class="dd-pill">3 dashboards</span></div>
-    <div class="dd-observe-scope">
-     <div class="dd-scope-card">
-      <div class="dd-scope-num">01</div>
-      <h2>System Health</h2>
-      <p>Can players reach the game, and are services responding?</p>
-      <div class="dd-signal-list"><span>APM &amp; Traces</span><span>Logs &amp; Metrics</span><span>Alerts &amp; SLOs</span><span>External Checks</span></div>
-     </div>
-     <div class="dd-scope-card">
-      <div class="dd-scope-num">02</div>
-      <h2>Players &amp; Gameplay</h2>
-      <p>Where are players struggling, and what happens after each choice?</p>
-      <div class="dd-signal-list"><span>RUM &amp; Performance</span><span>Story, Events &amp; Battles</span><span>Payments &amp; Economy</span><span>AI Advisor</span></div>
-     </div>
-    </div>
-    <div class="dd-observe-base"><span>Overview</span><span>Player Journey</span><span>Business &amp; Payments</span></div>
-    <span class="dd-board-caveat">Coverage summary based on the verified configuration, not a Datadog UI screenshot.</span>
-   </div>
+   <a class="dd-frame dd-dashboard-image dd-overview-image" href="../assets/datadog/page-02-player-journey/dashboard-overview.png" target="_blank" rel="noopener" aria-label="Open the authentic Overview dashboard capture at full size">
+    <img src="../assets/datadog/page-02-player-journey/dashboard-overview.png" alt="Actual Datadog Overview: service metrics, 11 OK and 5 No Data operational monitors, and two seven-day SLO widgets, captured November 9, 2026">
+   </a>
    <aside class="dd-frame dd-analysis dd-overview-copy">
     <span class="dd-label">ENGINEERING + PRODUCT VISIBILITY</span>
-    <div class="dd-big">One game.<br>Many signals.</div>
-    <h2>We can monitor both how the game runs and how it is played.</h2>
-    <p>Three real dashboards connect infrastructure, user experience, gameplay choices, business activity and AI requests.</p>
+    <h2>We monitor both how the game runs and how it is played.</h2>
+    <div class="dd-coverage"><h3>Technical Health</h3><p>APM, traces and logs<br>Service performance<br>Alerts, SLOs and external monitoring</p></div>
+    <div class="dd-coverage"><h3>Gameplay &amp; Business</h3><p>Player experience and RUM<br>Story, random events and combat<br>Payments, economy and AI Advisor</p></div>
     <div class="dd-rule"></div>
-    <div class="dd-overview-stats">
-     <div><strong>24</strong><span>Monitor objects<br>(16 operational + 8 components)</span></div>
-     <div><strong>2</strong><span>Public endpoint checks<br>Tokyo + Seoul</span></div>
-    </div>
-    <div class="dd-source">Configuration snapshot reviewed Nov 9, 2026 · Counts describe monitoring coverage, not universal health.</div>
+    <div class="dd-source">This Overview shows operational monitoring. Player Journey and Business &amp; Payments provide the additional gameplay and business views.</div>
+    <div class="dd-source">Captured Nov 9, 2026 · Selected range 07:00–08:00 UTC. KPI overrides and SLOs use seven days; monitor status is a capture-time snapshot. No Data remains visible.</div>
     <a class="dd-link" target="_blank" rel="noopener" href="https://us5.datadoghq.com/dashboard/tiy-p7i-rek">Actual Overview dashboard ↗</a>
    </aside>
   </section>
@@ -126,7 +73,7 @@
    </aside>
   </section>
  </div>
- <div class="dd-footer"><span>Overview: editorial synthesis · Detail tabs: genuine Datadog screenshots</span><span>Dashboard figures: fixed Nov 2–9, 2026 window; small samples require caution.</span></div>
+ <div class="dd-footer"><span>All four views use genuine Datadog screenshots</span><span>Detail tabs: fixed Nov 2–9 window · Overview: Nov 9 capture with widget time overrides.</span></div>
  <div class="dd-review-line" aria-hidden="true"></div><img class="dd-review-cat" src="../assets/miaomiao.svg" alt="" aria-hidden="true">
 </main>
 <script src="datadog-preview.js"></script>

@@ -17,13 +17,32 @@
     const close = document.getElementById('ddTraceClose');
     let step = 'idle';
     let audioEnabled = true;
+    // Authentic button bounds in the 1600×900 idle frame; the pixels stay in the video.
+    const sourceButton = { x: 563, y: 642, width: 474, height: 56 };
+    function alignGameButton() {
+      const { width, height } = idle.getBoundingClientRect();
+      const scale = Math.min(width / 1600, height / 900);
+      const left = (width - 1600 * scale) / 2;
+      const top = (height - 900 * scale) / 2;
+      Object.assign(clickArea.style, {
+        left: `${left + sourceButton.x * scale}px`,
+        top: `${top + sourceButton.y * scale}px`,
+        width: `${sourceButton.width * scale}px`,
+        height: `${sourceButton.height * scale}px`
+      });
+    }
+    new ResizeObserver(alignGameButton).observe(idle.parentElement);
+    idle.addEventListener('loadedmetadata', alignGameButton);
+    clickArea.addEventListener('keydown', event => {
+      if (event.key === ' ' || event.key === 'Enter') event.stopPropagation();
+    });
     function setStep(next) {
       step = next;
       qa.dataset.demoState = step;
       progress.hidden = next !== 'response';
       finished.hidden = next !== 'complete';
       clickArea.disabled = next !== 'idle';
-      hint.textContent = next === 'idle' ? 'Click the event choice in the game frame' :
+      hint.textContent = next === 'idle' ? 'Click the recorded Roll dice button' :
         next === 'response' ? 'Playing the genuine recorded event result…' :
         'Trace recorded · use Replay to repeat';
       replay.disabled = next === 'idle';
@@ -39,12 +58,14 @@
       if (!document.hidden) idle.play().catch(() => {});
       closeOverlay();
       setStep('idle');
+      alignGameButton();
     }
     function finish() {
       if (step !== 'response') return;
       setStep('complete');
     }
-    function start() {
+    function start(event) {
+      event.stopPropagation();
       if (step !== 'idle') return;
       setStep('response');
       idle.pause();
@@ -88,6 +109,7 @@
     idle.muted = true;
     idle.play().catch(() => {});
     setStep('idle');
+    alignGameButton();
   }
   const dashboard = document.getElementById('ddDashboardPreview');
   if (dashboard) {

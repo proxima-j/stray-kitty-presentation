@@ -314,6 +314,26 @@
         1600,
         1410
       ]
+    },
+    {
+      "path": "page-02-player-journey/dashboard-overview.png",
+      "public_path": "docs/assets/datadog/page-02-player-journey/dashboard-overview.png",
+      "status": "READY",
+      "source_url": "https://us5.datadoghq.com/dashboard/tiy-p7i-rek?fromUser=false&refresh_mode=paused&from_ts=1794207600000&to_ts=1794211200000&live=false",
+      "captured_utc": "2026-11-09T08:54:07.699Z",
+      "data_time_window": [
+        "2026-11-09T07:00:00Z",
+        "2026-11-09T08:00:00Z"
+      ],
+      "widget_overrides": "Six KPI widgets use live_span:1w with prior-period comparisons; SLO widgets have their own rolling periods. Monitor summary is capture-time state, not history.",
+      "method": "Authenticated rendered Datadog dashboard full-page screenshot; one contiguous lossless crop [174,329,1555,1430]. No reconstructed widgets, stitched sections or altered values.",
+      "dimensions": [
+        1381,
+        1101
+      ],
+      "redactions": "Crop excludes account/navigation/header and unrelated lower dashboard sections; no masks needed in the retained region.",
+      "publication": "User explicitly requested capture and publication of cleared Overview evidence in the standalone review.",
+      "limitations": "Operational coverage only; not every gameplay/business metric. Six KPI seven-day overrides and two seven-day SLOs differ from the selected one-hour global range. Monitor status is current at capture, not historical. Five No Data monitors do not prove healthy workloads. Seven-day command p95 widget displays an average of p95 points, not a whole-window p95. QA and synthetic traffic may be present; no reliability claim."
     }
   ],
   "omissions": [
@@ -334,5 +354,28 @@
     "correlation": "Fresh RUM/APM/log and owned QA result confirmed.",
     "screenshots": "Real authenticated UI, fixed global and Inspect windows checked, same APM crop, account/device redactions documented.",
     "runtime": "Current, Previous, v3 engine and game repository unchanged."
+  },
+  "preview_refinement": {
+    "date": "2026-11-09",
+    "scope": "Standalone Datadog reviews only; Current/Previous and v3 engine unchanged.",
+    "game_button": {
+      "source_video": "page-01-telemetry/event-idle-loop.mp4",
+      "source_frame": [
+        1600,
+        900
+      ],
+      "rect_xywh": [
+        563,
+        642,
+        474,
+        56
+      ],
+      "method": "Transparent semantic HTML button over the existing recorded control. ResizeObserver applies object-fit:contain scale and centered letterbox offsets. No duplicate artwork or approximate UI drawing. Click and Enter/Space stay local to the demo."
+    },
+    "historical_evidence": {
+      "source": "https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/blob/main/evidence/observability/heartbeat-alert-cycle.json",
+      "status": "JSON reconfirmed on latest main. Original monitor 339853048 returns 404 in the connected US5 organization; original US1 browser view requires sign-in. Slack browser session requires workspace sign-in and no Slack connector is available. Matching notification screenshots could not be verified; placeholders retained."
+    },
+    "phone": "No verified phone screenshot/recording in supplied conversation or project/staging assets. Separate emulator attempt is paused at Google sign-in; no install or alert triggered in this refinement task. Placeholder retained."
   }
 }

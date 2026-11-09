@@ -1267,6 +1267,33 @@
       "origin": "Local selected evidence derivatives",
       "permission": "User authorized curated project gameplay and Datadog evidence publication; account/player/session identifiers removed.",
       "provenance": "../assets/datadog/capture-manifest.json"
+    },
+    {
+      "id": "datadog.collection.dashboard-overview",
+      "source": "../assets/datadog/page-02-player-journey/dashboard-overview.png",
+      "use": "Standalone Datadog Page 2 Overview review; operational monitoring evidence",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "origin": "https://us5.datadoghq.com/dashboard/tiy-p7i-rek?fromUser=false&refresh_mode=paused&from_ts=1794207600000&to_ts=1794211200000&live=false",
+      "permission": "User explicitly requested authentic Overview capture and safe publication in the review preview. No account/player/session identifiers in retained crop.",
+      "metadata": {
+        "captured_utc": "2026-11-09T08:54:07.699Z",
+        "global_window_utc": [
+          "2026-11-09T07:00:00Z",
+          "2026-11-09T08:00:00Z"
+        ],
+        "crop_xyxy": [
+          174,
+          329,
+          1555,
+          1430
+        ],
+        "dimensions": [
+          1381,
+          1101
+        ],
+        "widget_overrides": "Six KPI widgets use live_span:1w with prior-period comparisons; SLO widgets have their own rolling periods. Monitor summary is capture-time state, not history."
+      },
+      "provenance": "../assets/datadog/capture-manifest.json"
     }
   ]
 }

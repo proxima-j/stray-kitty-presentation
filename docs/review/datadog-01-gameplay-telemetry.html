@@ -14,11 +14,11 @@
      <video id="ddIdleVideo" src="../assets/datadog/page-01-telemetry/event-idle-loop.mp4" autoplay loop muted playsinline preload="metadata" aria-label="Authentic recorded idle game scene"></video>
      <video id="ddResponseVideo" src="../assets/datadog/page-01-telemetry/event-response.mp4" playsinline preload="none" aria-label="Authentic event choice animation and sound" hidden></video>
      <div class="game-overlay">ALLEY · EVENT CHOICE</div>
-     <div class="game-pulse">CLICK GAME UI TO TRIGGER →</div>
-     <button id="ddGameClick" type="button" class="game-hitbox" aria-label="Click the event choice in the gameplay footage to play the recorded action"></button>
+     <div class="game-pulse">CLICK THE ORIGINAL BUTTON</div>
+     <button id="ddGameClick" type="button" class="game-hitbox" aria-label="Roll dice — play this recorded QA action" data-source-rect="563,642,474,56"></button>
     </div>
    </div>
-   <div class="dd-panel-caption"><span id="ddActionHint" aria-live="polite">Click the event choice in the game frame</span><button id="ddSound" type="button" class="dd-button" aria-pressed="true">Sound: On</button></div>
+   <div class="dd-panel-caption"><span id="ddActionHint" aria-live="polite">Click the recorded Roll dice button</span><button id="ddSound" type="button" class="dd-button" aria-pressed="true">Sound: On</button></div>
   </section>
   <section aria-label="Real Datadog before and after captures">
    <div class="dd-panel-heading"><strong>02 / Datadog APM</strong><span class="dd-pill">Correlated browser + Go trace</span></div>
