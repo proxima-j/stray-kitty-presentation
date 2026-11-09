@@ -1,31 +1,55 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
-<title>Stray Kitty · Future — What's Next</title>
-<link rel="stylesheet" href="review.css"><link rel="stylesheet" href="teamwork-preview.css"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex"><title>Stray Kitty · Future — A More Connected World</title>
+<link rel="stylesheet" href="review.css"><link rel="stylesheet" href="teamwork-preview.css"><link rel="stylesheet" href="teamwork-revision.css"></head>
 <body>
-<main class="review-page tw-review tw-future">
- <div class="label"><span class="num">FUTURE</span>WHAT'S NEXT · COMPOSITION REVIEW · WORKING NUMBER</div>
- <h1>Where Could Stray Kitty Go Next?</h1>
- <p class="subtitle">Future game-development directions, grounded in today's playable experience—not committed release promises.</p>
+<main class="review-page tw-review tw-future-vision">
+ <div class="label"><span class="num">FUTURE</span>FUTURE DIRECTION · CONCEPT REVIEW</div>
+ <h1>A More Connected World</h1>
+ <p class="subtitle">Future vision: one choice can ripple through exploration, combat, companions, home and story.</p>
  <div class="review-body">
-  <section class="tw-future-grid" aria-label="Three future game improvements">
-   <article class="tw-future-card">
-    <div class="tw-future-media"><img class="market-view" src="../assets/level-design/chapter2/view-L0.jpg" alt="Current Midnight Market scene in Stray Kitty"><span class="tw-future-index">01 · CONTENT</span></div>
-    <div class="tw-future-copy"><h2>A World That Remembers</h2><p>Expand narrative echoes, meaningful consequences, companion stories and the Home Hub.</p></div>
+  <section class="tw-world" aria-label="Future interconnected Stray Kitty game architecture">
+   <svg class="tw-world-connections" viewBox="0 0 1200 530" preserveAspectRatio="none" aria-hidden="true">
+    <defs><marker id="tw-arrow-tip" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto-start-reverse" markerUnits="strokeWidth"><path d="M0,0 L8,4 L0,8 Z" fill="#b56e55"/></marker>
+      <marker id="tw-arrow-gold" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto-start-reverse" markerUnits="strokeWidth"><path d="M0,0 L8,4 L0,8 Z" fill="#cfa66a"/></marker></defs>
+    <path class="tw-world-link" d="M304 123 C390 123 397 218 475 229" marker-start="url(#tw-arrow-tip)" marker-end="url(#tw-arrow-tip)"/>
+    <path class="tw-world-link" d="M725 229 C806 218 811 123 896 123" marker-start="url(#tw-arrow-tip)" marker-end="url(#tw-arrow-tip)"/>
+    <path class="tw-world-link" d="M304 403 C391 403 398 325 475 304" marker-start="url(#tw-arrow-tip)" marker-end="url(#tw-arrow-tip)"/>
+    <path class="tw-world-link" d="M725 304 C808 325 812 403 896 403" marker-start="url(#tw-arrow-tip)" marker-end="url(#tw-arrow-tip)"/>
+    <path class="tw-world-crosslink" d="M335 42 Q600 -24 866 42" marker-start="url(#tw-arrow-gold)" marker-end="url(#tw-arrow-gold)"/>
+    <path class="tw-world-crosslink" d="M336 484 Q600 556 865 484" marker-start="url(#tw-arrow-gold)" marker-end="url(#tw-arrow-gold)"/>
+   </svg>
+   <div class="tw-world-topnote">RANDOM EVENTS <span aria-hidden="true">↔</span> TOWER DEFENSE</div>
+   <article class="tw-world-node tw-world-events">
+    <img src="../assets/level-design/chapter2/view-L0.jpg" alt="Real current Midnight Market exploration scene">
+    <div><small>EXPLORATION & EVENTS</small><h2>Choices with consequences</h2><p>Encounters can change battles, cats and home life.</p></div>
    </article>
-   <article class="tw-future-card">
-    <div class="tw-future-media"><img class="battle-view" src="../assets/pages/09/battlefield-main.webp" alt="Current Stray Kitty tactical combat board"><span class="tw-future-index">02 · GAMEPLAY</span></div>
-    <div class="tw-future-copy"><h2>Sharper Adventures</h2><p>Refine event and combat balance, onboarding, interaction feedback and retry flow.</p></div>
+   <article class="tw-world-node tw-world-battle">
+    <img src="../assets/pages/09/battlefield-main.webp" alt="Real current tactical battle scene">
+    <div><small>COMBAT</small><h2>Unpredictable encounters</h2><p>Events during battles; more distinct cat abilities.</p></div>
    </article>
-   <article class="tw-future-card">
-    <div class="tw-future-media"><img class="narrow-view" src="../assets/uiux/adaptive/narrow-user-selected.webp" alt="Current selected narrow game screenshot with event result"><span class="tw-future-index">03 · QUALITY</span></div>
-    <div class="tw-future-copy"><h2>Smoother Play, More Devices</h2><p>Improve loading and rendering; verify narrow-screen usability and actual device support.</p></div>
+   <div class="tw-world-core">
+    <span class="tw-world-halo" aria-hidden="true"></span>
+    <small>THE SHARED EXPERIENCE</small>
+    <strong>Living World</strong>
+    <span>Choices · Cat states<br>Home growth · Story progress</span>
+   </div>
+   <article class="tw-world-node tw-world-home">
+    <img src="../assets/pages/06/greenhouse-stage-04.webp" alt="Real current Stray Kitty greenhouse Home Hub">
+    <div><small>CATS & HOME</small><h2>Personality in action</h2><p>Distinct interactions, animations and relationships.</p></div>
    </article>
+   <article class="tw-world-node tw-world-story">
+    <img src="../assets/pages/05/friends-dialogue-01.webp" alt="Real current in-game dialogue scene">
+    <div><small>STORY & WORLD</small><h2>Deeper character journeys</h2><p>Side stories and character moments within combat.</p></div>
+   </article>
+   <div class="tw-world-bottomnote">HOME & RELATIONSHIPS <span aria-hidden="true">↔</span> STORY & WORLD</div>
+   <span class="tw-world-annot tw-ann-1">Consequences</span>
+   <span class="tw-world-annot tw-ann-2">Battle surprises</span>
+   <span class="tw-world-annot tw-ann-3">Cat states</span>
+   <span class="tw-world-annot tw-ann-4">Story echoes</span>
   </section>
-  <div class="tw-future-foot"><b>Keep building a home worth returning to.</b><small>Existing gameplay captures · Future ideas, not implemented features</small></div>
+  <footer class="tw-world-footer"><strong>One action. Multiple systems respond.</strong><small>Proposed future connections · existing game imagery, not completed features</small></footer>
  </div>
  <div class="review-route" aria-hidden="true"></div><img class="review-cat" src="../assets/miaomiao.svg" alt="">
-</main>
-</body>
-</html>
+</main></body></html>
