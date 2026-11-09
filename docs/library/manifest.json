@@ -97,6 +97,15 @@
       "use": "Approved v3 reversible motion",
       "variants": "4200ms default, scrub, Esc, Home/End",
       "source": "../engine-v3.js"
+    },
+    {
+      "id": "datadog.integrated-scenes",
+      "use": "Pages 17–19: scoped approved compositions, on-demand media, local replay/sound, scrollable evidence and source inspection",
+      "variants": "Native v3 scenes; Overview side-by-side; detail Option A titled stack; Slack/Datadog ALERT/RECOVERY",
+      "source": "../datadog.css",
+      "behavior": "../datadog.js",
+      "status": "DESIGN_APPROVED / integrated after candidate verification",
+      "assets": "Existing registered assets/datadog and phone icon; no duplicate binaries"
     }
   ],
   "assets": [

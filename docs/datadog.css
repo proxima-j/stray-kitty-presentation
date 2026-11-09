@@ -1,0 +1,223 @@
+/* Approved Datadog compositions, scoped to native v3 scenes and dialogs. */
+.datadog-scope *{box-sizing:border-box}
+.datadog-scope [hidden]{display:none!important}
+.datadog-scope button{font:inherit;color:inherit}
+.datadog-scope .dd-page{
+ position:relative;display:flex;flex-direction:column;gap:clamp(12px,1.6vh,19px);
+ width:100%;height:100svh;min-height:675px;
+ padding:clamp(23px,3.8vh,49px) 7.4vw clamp(69px,10.1vh,116px);
+ overflow:hidden;isolation:isolate
+}
+.datadog-scope .section-label{display:flex;align-items:center;gap:15px;font:400 12px/1.4 var(--body);letter-spacing:.13em;text-transform:uppercase;flex:0 0 auto}
+.datadog-scope .number-pill{display:inline-flex;align-items:center;justify-content:center;min-width:54px;height:31px;border:var(--border) solid var(--ink);border-radius:var(--pill-radius);background:var(--gold);font:400 14px/1 var(--display);letter-spacing:0}
+.datadog-scope .section-label:after{content:"";height:1px;width:64px;background:var(--gold)}
+.datadog-scope .page-intro{flex:0 0 auto}
+.datadog-scope .page-intro h1{font:400 clamp(36px,4.45vw,69px)/1.1 var(--display);margin:0;letter-spacing:-.044em}
+.datadog-scope .page-intro p{font:400 clamp(14px,1.12vw,18px)/1.4 var(--body);color:var(--muted);margin:9px 0 0}
+.datadog-scope .dd-review-line{position:absolute;left:0;right:0;bottom:clamp(25px,4.8vh,52px);border-top:3px dotted var(--accent);opacity:.62;pointer-events:none}
+.datadog-scope .dd-review-cat{position:absolute;width:clamp(46px,3.5vw,65px);height:auto;left:24%;bottom:clamp(29px,5vh,55px);image-rendering:pixelated;filter:drop-shadow(1px 3px 1px rgba(30,51,40,.12));pointer-events:none}
+.datadog-scope .dd-label{font:400 11px/1.35 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.datadog-scope .dd-muted{color:var(--muted)}
+.datadog-scope .dd-pill{border:1px solid var(--line);border-radius:999px;padding:5px 10px;font:400 11px/1.3 var(--body);white-space:nowrap}
+.datadog-scope .dd-rule{height:1px;background:var(--line);opacity:.6}
+.datadog-scope .dd-link{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+.datadog-scope .dd-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;border:1px solid var(--ink);border-radius:999px;background:transparent;padding:9px 15px;font:400 12px/1.15 var(--body);transition:background .2s}
+.datadog-scope .dd-button:hover,.datadog-scope .dd-button:focus-visible{background:rgba(207,166,106,.22)}
+.datadog-scope .dd-button:focus-visible,.datadog-scope .dd-select:focus-visible,.datadog-scope .game-hitbox:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.datadog-scope .dd-button[disabled]{cursor:not-allowed;opacity:.48}
+.datadog-scope .dd-active{background:var(--gold)}
+.datadog-scope .dd-hero{flex:1 1 auto;min-height:0;display:flex;flex-direction:column}
+.datadog-scope .dd-footer{font:400 11px/1.4 var(--body);color:var(--muted);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.datadog-scope .dd-frame{border:var(--border) solid var(--ink);border-radius:var(--frame-radius);background:rgba(255,255,255,.14);overflow:hidden}
+.datadog-scope .dd-stage-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(11px,1.35vw,22px);flex:1;min-height:0}
+.datadog-scope .dd-stage-grid>section{min-height:0;min-width:0;display:flex;flex-direction:column;gap:11px}
+.datadog-scope .dd-panel-heading{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.datadog-scope .dd-panel-heading strong{font:400 clamp(19px,1.55vw,27px)/1.15 var(--display)}
+.datadog-scope .dd-panel-heading .dd-pill{font-size:10px}
+.datadog-scope .dd-media-frame{flex:1 1 auto;min-height:0;position:relative;background:rgba(52,69,62,.08)}
+.datadog-scope .game-viewport{position:relative;aspect-ratio:16/9;max-height:100%;width:100%;margin:auto;overflow:hidden;border-radius:11px;background:#263d37}
+.datadog-scope .game-viewport video,.datadog-scope .game-viewport>img{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:contain;object-position:center}
+.datadog-scope .game-hitbox{position:absolute;left:35.1875%;top:71.333333%;width:29.625%;height:6.222222%;padding:0;border:0;border-radius:2px;background:transparent;cursor:pointer;z-index:4;font-size:0;color:transparent}
+.datadog-scope .game-hitbox:disabled{pointer-events:none;cursor:default}
+.datadog-scope .game-hitbox img{display:block;width:100%;height:100%}
+.datadog-scope .game-overlay{position:absolute;z-index:3;left:16px;top:14px;pointer-events:none;border:1px solid rgba(244,230,199,.45);background:rgba(24,40,33,.75);color:#f4e6c7;border-radius:999px;padding:7px 12px;font:400 11px/1.3 var(--body)}
+.datadog-scope .datadog-viewport{width:100%;aspect-ratio:1091/676;max-height:100%;position:relative;margin:auto;background:#f6f8f9;border-radius:11px;overflow:hidden;border:1px solid rgba(52,69,62,.13)}
+.datadog-scope .datadog-viewport img{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.datadog-scope .after-capture{opacity:0;transition:opacity .45s ease}
+.datadog-scope .after-capture.is-visible{opacity:1}
+.datadog-scope .datadog-status{position:absolute;z-index:2;bottom:12px;left:12px;display:flex;align-items:center;gap:8px;max-width:calc(100% - 24px);padding:8px 11px;border-radius:9px;background:rgba(244,230,199,.96);border:1px solid var(--line);font:400 11px/1.32 var(--body)}
+.datadog-scope .dd-trace-trigger{cursor:pointer;color:var(--ink);text-align:left}
+.datadog-scope .dd-trace-trigger:hover,.datadog-scope .dd-trace-trigger:focus-visible{background:var(--gold)}
+.datadog-scope .dd-trace-trigger:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.datadog-scope .dd-spinner{display:inline-block;border:2px solid rgba(52,69,62,.2);border-top-color:var(--accent);width:13px;height:13px;border-radius:50%;animation:dd-spin 1s linear infinite}
+@keyframes dd-spin{to{transform:rotate(360deg)}}
+.datadog-scope .dd-media-shell{display:flex;flex:1;min-height:0;align-items:center;justify-content:center;padding:10px}
+.datadog-scope .dd-panel-caption{min-height:48px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:9px;font:400 12px/1.4 var(--body);color:var(--muted)}
+.datadog-scope .dd-panel-caption>span{flex:1 1 130px}
+.datadog-scope .dd-qa-note{display:flex;justify-content:space-between;gap:20px;align-items:center;font:400 11px/1.45 var(--body);color:var(--muted)}
+.datadog-scope .dd-overlay{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:clamp(15px,3vw,44px);background:rgba(28,40,34,.85)}
+.datadog-scope .dd-overlay-inner{width:min(1250px,100%);max-height:95vh;display:flex;flex-direction:column;gap:12px}
+.datadog-scope .dd-overlay-head{display:flex;align-items:center;justify-content:space-between;gap:15px;color:#f4e6c7;font:400 16px/1.3 var(--display)}
+.datadog-scope .dd-overlay img{display:block;max-height:80vh;max-width:100%;object-fit:contain;border-radius:9px}
+.datadog-scope .dd-overlay .dd-button{color:#f4e6c7;border-color:#f4e6c7}
+.datadog-scope #ddTraceOverlay .dd-overlay-inner{width:min(1100px,100%);height:100%;min-height:0}
+.datadog-scope .dd-trace-hint{margin:0;color:#f4e6c7;font:400 12px/1.4 var(--body)}
+.datadog-scope .dd-trace-window{display:flex;flex-direction:column;flex:1;min-height:0;overflow:hidden;background:white;border-radius:9px}
+.datadog-scope .dd-trace-window img{width:100%;height:auto;max-height:none;max-width:none;object-fit:initial;border-radius:0;flex:none}
+.datadog-scope .dd-trace-scroll{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;scrollbar-color:#75857c #edf0ed}
+.datadog-scope .dd-trace-scroll:focus-visible{outline:3px solid var(--gold);outline-offset:-3px}
+.datadog-scope .dd-tabrow{display:flex;gap:8px;flex-wrap:wrap}
+.datadog-scope .dd-select{cursor:pointer;border:var(--border) solid var(--ink);background:transparent;border-radius:999px;padding:9px clamp(13px,1.7vw,24px);font:400 12px/1.3 var(--body)}
+.datadog-scope .dd-select[aria-selected="true"]{background:var(--gold)}
+.datadog-scope .dd-dashboard-shell{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1.65fr) minmax(235px,.62fr);gap:clamp(14px,1.65vw,27px)}
+.datadog-scope .dd-dashboard-image{height:100%;min-height:0;display:flex;align-items:center;justify-content:center;padding:13px;background:rgba(255,255,255,.15)}
+.datadog-scope .dd-dashboard-image img{display:block;width:100%;height:100%;max-height:100%;object-fit:contain;border-radius:7px}
+.datadog-scope .dd-analysis{min-width:0;display:flex;flex-direction:column;justify-content:center;gap:clamp(14px,2vh,28px);padding:clamp(16px,1.8vw,30px)}
+.datadog-scope .dd-analysis .dd-big{font:400 clamp(26px,2.6vw,44px)/1.08 var(--display);letter-spacing:-.045em}
+.datadog-scope .dd-analysis h2{font:400 clamp(20px,1.8vw,29px)/1.2 var(--display);margin:0}
+.datadog-scope .dd-analysis p{font:400 clamp(13px,1.13vw,17px)/1.5 var(--body);color:var(--muted);margin:0}
+.datadog-scope .dd-analysis .dd-source{font:400 11px/1.45 var(--body);color:var(--muted)}
+.datadog-scope .dd-alert-layout{display:grid;grid-template-columns:minmax(0,.87fr) minmax(0,1.13fr);gap:clamp(14px,1.8vw,30px);flex:1;min-height:0}
+.datadog-scope .dd-timeline{display:flex;flex-direction:column;min-height:0;padding:clamp(14px,1.9vw,28px);gap:14px}
+.datadog-scope .dd-timeline h2{margin:0;font:400 clamp(22px,2.15vw,35px)/1.17 var(--display)}
+.datadog-scope .dd-timeline .dd-alert-tag{font:400 11px/1.4 var(--body);color:var(--muted)}
+.datadog-scope .dd-event-rail{display:grid;grid-template-columns:24px minmax(0,1fr);gap:0 12px;align-items:start}
+.datadog-scope .dd-event-dot{height:17px;width:17px;border:1.5px solid var(--accent);border-radius:100%;background:var(--paper);margin:3px auto}
+.datadog-scope .dd-event-dot.is-end{background:var(--gold);border-color:var(--ink)}
+.datadog-scope .dd-event-line{height:clamp(35px,6vh,72px);border-left:2px solid var(--line);margin:0 auto}
+.datadog-scope .dd-event-copy{display:flex;flex-direction:column;gap:4px;padding-bottom:8px}
+.datadog-scope .dd-event-copy strong{font:400 clamp(18px,1.65vw,27px)/1.2 var(--display)}
+.datadog-scope .dd-event-copy span{font:400 12px/1.45 var(--body);color:var(--muted)}
+.datadog-scope .dd-timeline-foot{font:400 11px/1.45 var(--body);color:var(--muted);margin-top:auto}
+.datadog-scope .dd-synth{display:flex;flex-direction:column;min-height:0;padding:clamp(13px,1.6vw,24px);gap:13px}
+.datadog-scope .dd-synth-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.datadog-scope .dd-synth h2{font:400 clamp(21px,1.8vw,31px)/1.2 var(--display);margin:0}
+.datadog-scope .dd-synth .dd-tabrow{gap:5px}
+.datadog-scope .dd-synth .dd-select{font-size:11px;padding:6px 11px}
+.datadog-scope .dd-synth-photo{display:flex;flex:1;min-height:0;align-items:center;justify-content:center}
+.datadog-scope .dd-synth-photo img{display:block;width:100%;height:100%;object-fit:contain}
+.datadog-scope .dd-synth-label{font:400 11px/1.42 var(--body);color:var(--muted)}
+@media(max-height:820px){.datadog-scope .dd-page{min-height:615px;padding-top:20px;padding-bottom:64px;gap:10px}
+.datadog-scope .page-intro h1{font-size:clamp(33px,4vw,60px)}
+.datadog-scope .page-intro p{margin-top:5px}
+.datadog-scope .dd-panel-caption{min-height:38px}
+.datadog-scope .dd-media-shell{padding:8px}
+.datadog-scope .dd-analysis{gap:13px}
+.datadog-scope .dd-timeline{gap:8px;padding:14px}
+.datadog-scope .dd-event-line{height:33px}
+.datadog-scope .dd-synth{gap:8px;padding:14px}}
+@media(max-width:1050px){.datadog-scope .dd-page{padding-left:5vw;padding-right:5vw}
+.datadog-scope .dd-dashboard-shell{grid-template-columns:minmax(0,1.4fr) minmax(225px,.6fr)}
+.datadog-scope .dd-analysis{padding:15px}
+.datadog-scope .dd-analysis .dd-big{font-size:clamp(24px,3vw,34px)}
+.datadog-scope .dd-panel-heading strong{font-size:clamp(17px,2.1vw,23px)}}
+@media(max-width:720px){.datadog-scope .dd-page{height:auto;min-height:100svh;overflow:visible}
+.datadog-scope .dd-stage-grid,.datadog-scope .dd-dashboard-shell,.datadog-scope .dd-alert-layout{grid-template-columns:1fr}
+.datadog-scope .dd-media-frame{min-height:0}
+.datadog-scope .dd-media-shell{padding:6px}
+.datadog-scope .dd-dashboard-image{height:340px}
+.datadog-scope .dd-analysis{padding:18px;gap:9px}
+.datadog-scope .dd-synth-photo{min-height:240px}
+.datadog-scope .dd-qa-note{flex-direction:column;align-items:flex-start;gap:5px}
+.datadog-scope .section-label:after{display:none}
+.datadog-scope .game-viewport,.datadog-scope .datadog-viewport{max-height:unset}}
+@media(prefers-reduced-motion:reduce){.datadog-scope .after-capture{transition:none}
+.datadog-scope .dd-spinner{animation:none}}
+.datadog-scope .dd-overview-copy{gap:clamp(10px,1.4vh,17px)}
+.datadog-scope .dd-overview-copy h2{font-size:clamp(20px,1.65vw,27px)}
+.datadog-scope .dd-coverage h3{font:400 clamp(17px,1.3vw,21px)/1.2 var(--display);margin:0 0 6px}
+.datadog-scope .dd-coverage p{font-size:clamp(12px,.95vw,15px);line-height:1.5}
+.datadog-scope .dd-overview-image{color:inherit}
+.datadog-scope .dd-tabrow{gap:clamp(6px,.7vw,12px)}
+.datadog-scope .dd-select{padding:9px clamp(10px,1.4vw,21px)}
+.datadog-scope .composition-picker{margin-left:auto;display:flex;gap:7px;letter-spacing:0;text-transform:none}
+.datadog-scope .composition-picker .dd-button{font-size:11px;padding:7px 12px}
+.datadog-scope .composition-picker [aria-pressed="true"]{background:var(--gold)}
+.datadog-scope .composition-board{position:relative;min-height:0;padding:12px;display:flex;gap:12px;overflow:hidden}
+.datadog-scope .composition-board button{cursor:pointer}
+.datadog-scope .composition-board img{display:block;width:100%;height:100%;object-fit:contain}
+.datadog-scope .chunk-stack{display:flex;flex-direction:column;gap:8px;width:100%;height:100%;min-height:0}
+.datadog-scope .chunk-card{display:flex;flex-direction:column;min-height:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:rgba(255,255,255,.2)}
+.datadog-scope .chunk-card.is-open{flex:1}
+.datadog-scope .chunk-title{display:flex;justify-content:space-between;gap:10px;text-align:left;border:0;background:transparent;padding:10px 13px;font:400 15px/1.2 var(--display);flex:0 0 auto}
+.datadog-scope .chunk-title:hover,.datadog-scope .chunk-title:focus-visible{background:rgba(207,166,106,.2)}
+.datadog-scope .chunk-card.is-open .chunk-title{background:rgba(207,166,106,.22)}
+.datadog-scope .chunk-view{display:none;flex:1;min-height:0;padding:7px;background:transparent;border:0}
+.datadog-scope .chunk-card.is-open .chunk-view{display:flex;align-items:center;justify-content:center}
+.datadog-scope .screenshot-column{min-width:0;min-height:0;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px}
+.datadog-scope .screenshot-column>span{font:400 11px/1.3 var(--body);color:var(--muted);letter-spacing:.05em;text-align:center;flex:0 0 auto}
+.datadog-scope .screenshot-sheet{display:flex;flex-direction:column;max-width:100%;overflow:hidden;border:1px solid var(--line);background:white;border-radius:7px}
+.datadog-scope .screenshot-sheet button{display:block;width:100%;padding:0;border:0;min-height:0;background:transparent;flex-shrink:0}
+.datadog-scope .screenshot-sheet img{width:100%;height:auto}
+.datadog-scope .screenshot-sheet button:hover{outline:2px solid var(--gold);outline-offset:-2px}
+.datadog-scope .composition-board button:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
+.datadog-scope #compositionInspect .dd-overlay-inner{max-width:1400px;align-items:center}
+.datadog-scope #compositionInspect .dd-overlay-head{width:100%}
+@media(max-height:820px){.datadog-scope .chunk-title{padding:8px 11px;font-size:13px}
+.datadog-scope .composition-board{padding:9px;gap:8px}}
+.datadog-scope .dd-monitor-layout{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(12px,1.5vw,25px)}
+.datadog-scope .dd-alert-evidence{gap:clamp(9px,1.2vh,14px)}
+.datadog-scope .dd-evidence-header{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.datadog-scope .dd-evidence-header h2{font-size:clamp(18px,1.7vw,26px);max-width:34ch}
+.datadog-scope .dd-alert-proof{display:grid;grid-template-columns:minmax(130px,.7fr) minmax(0,1.3fr);gap:12px;flex:1;min-height:0}
+.datadog-scope .dd-alert-steps{display:flex;flex-direction:column;gap:12px;justify-content:center}
+.datadog-scope .dd-alert-stage{display:flex;flex-direction:column;gap:8px;min-width:0;border:1px solid var(--line);border-radius:12px;padding:clamp(10px,1.15vw,16px);background:rgba(255,255,255,.1);text-align:left;cursor:pointer}
+.datadog-scope .dd-alert-stage[aria-pressed="true"]{background:rgba(207,166,106,.25);border-color:var(--ink)}
+.datadog-scope .dd-alert-stage:focus-visible,.datadog-scope .dd-evidence-zoom:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.datadog-scope .dd-proof-status{display:flex;align-items:center;gap:8px}
+.datadog-scope .dd-proof-status strong{font:400 clamp(14px,1.15vw,19px)/1.3 var(--display)}
+.datadog-scope .dd-proof-dot{width:12px;height:12px;border:1.5px solid var(--ink);border-radius:50%;flex:0 0 12px}
+.datadog-scope .dd-proof-dot.is-alert{border-color:var(--accent);background:transparent}
+.datadog-scope .dd-proof-dot.is-recovered{background:var(--gold)}
+.datadog-scope .dd-alert-stage p{font:400 clamp(11px,.92vw,14px)/1.4 var(--body);color:var(--muted);margin:0}
+.datadog-scope .dd-evidence-visual{display:flex;flex-direction:column;min-width:0;min-height:0;gap:7px}
+.datadog-scope .dd-evidence-sources{display:flex;gap:5px}
+.datadog-scope .dd-evidence-sources .dd-select{font-size:11px;padding:6px 13px}
+.datadog-scope .dd-evidence-zoom{display:flex;align-items:center;justify-content:center;flex:1;min-height:0;width:100%;padding:3px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.15);cursor:zoom-in;overflow:hidden}
+.datadog-scope .dd-evidence-zoom img{display:block;width:100%;height:100%;object-fit:contain;border-radius:7px}
+.datadog-scope .dd-evidence-caption{font:400 10px/1.3 var(--body);color:var(--muted)}
+.datadog-scope #ddAlertImageOverlay .dd-overlay-inner{height:100%;min-height:0}
+.datadog-scope .dd-alert-image-scroll{overflow:auto;overscroll-behavior:contain;min-height:0;flex:1;background:#fff;border-radius:9px}
+.datadog-scope .dd-alert-image-scroll img{width:100%;max-height:none;height:auto;max-width:none;border-radius:0}
+.datadog-scope .dd-alert-image-source{color:var(--paper);font-size:12px}
+.datadog-scope .dd-archived-source{display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding-top:10px;border-top:1px solid var(--line)}
+.datadog-scope .dd-archived-source p{font:400 11px/1.4 var(--body);color:var(--muted);margin:0}
+.datadog-scope .dd-archived-source .dd-link{font-size:11px}
+.datadog-scope .dd-mobile-slot{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:10px;padding:10px 13px;margin-top:auto;background:rgba(207,166,106,.12)}
+.datadog-scope .dd-mobile-slot img{width:30px;height:42px;flex:none}
+.datadog-scope .dd-mobile-slot p{margin:0;font:400 clamp(12px,1.02vw,16px)/1.4 var(--body)}
+.datadog-scope .dd-archive-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.datadog-scope .dd-archive-actions .dd-button{padding:7px 12px;font-size:11px}
+.datadog-scope .dd-record-panel{overflow:auto;min-height:0;padding:20px;border-radius:10px;background:var(--paper);color:var(--ink);overscroll-behavior:contain}
+.datadog-scope .dd-record-panel pre{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;font:400 13px/1.65 ui-monospace,monospace}
+.datadog-scope .dd-monitor-synthetics{gap:clamp(7px,1vh,13px)}
+.datadog-scope .dd-monitor-synthetics .dd-synth-top{align-items:flex-start}
+.datadog-scope .dd-monitor-synthetics .dd-synth-top h2{font-size:clamp(19px,1.6vw,27px)}
+.datadog-scope .dd-monitor-synthetics .dd-tabrow{flex-wrap:nowrap}
+.datadog-scope .dd-monitor-synthetics .dd-select{font-size:10px;white-space:nowrap}
+.datadog-scope .dd-monitor-synthetics .dd-synth-photo img{max-height:100%;object-fit:contain}
+@media(max-height:800px){.datadog-scope .dd-monitor-layout{gap:11px}
+.datadog-scope .dd-alert-evidence{padding:12px;gap:7px}
+.datadog-scope .dd-alert-stage{padding:8px;gap:5px}
+.datadog-scope .dd-archived-source{padding-top:7px;gap:4px}
+.datadog-scope .dd-mobile-slot{padding:7px 10px;gap:8px}
+.datadog-scope .dd-monitor-synthetics{padding:12px;gap:7px}}
+@media(max-width:1100px){.datadog-scope .dd-evidence-header{flex-wrap:wrap}
+.datadog-scope .dd-alert-proof{gap:7px}
+.datadog-scope .dd-alert-stage{padding:9px}
+.datadog-scope .dd-proof-status strong{font-size:clamp(14px,1.3vw,18px)}
+.datadog-scope .dd-monitor-synthetics .dd-tabrow{flex-wrap:wrap}}
+@media(max-width:720px){.datadog-scope .dd-monitor-layout{grid-template-columns:1fr}
+.datadog-scope .dd-alert-proof{grid-template-columns:minmax(120px,.7fr) minmax(0,1.3fr);min-height:300px}
+.datadog-scope .dd-mobile-slot{margin-top:0}}
+.datadog-scope{color:var(--ink);font-family:var(--body)}
+.datadog-scope .dd-page{height:100%;min-height:0;padding-bottom:clamp(160px,26vh,281px)}
+.datadog-scope .dd-overlay-inner{min-height:0}
+.datadog-scope .dd-analysis{justify-content:flex-start;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;padding:14px;gap:10px}
+.datadog-scope .dd-analysis>*{flex-shrink:0}
+.datadog-scope .dd-alert-evidence{overflow:auto;overscroll-behavior:contain;scrollbar-width:thin}
+.datadog-scope .dd-alert-evidence>*{flex-shrink:0}
+.datadog-scope .dd-alert-proof{flex:none;min-height:190px;height:clamp(190px,27vh,300px)}
+
+.datadog-scope .dd-analysis .dd-source{font-size:11px}
+

@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="events-combat.css?v=20261109-integrated">
   <link rel="preload" as="script" href="events-combat.js?v=20261109-integrated">
   <link rel="stylesheet" href="technical.css?v=20261109-full-pipeline">
+  <link rel="stylesheet" href="datadog.css?v=20261109-datadog-r6">
   <link rel="stylesheet" href="uiux.css?v=20261109-adaptive-fit">
   <link rel="preload" as="script" href="uiux.js?v=20261109-adaptive-fit">
   <link rel="preload" as="script" href="scene-content.js?v=20261109-on-demand-events">
@@ -19,7 +20,7 @@
 </head>
 <body>
 <div id="scrollSpace" class="scroll-space">
- <main id="stage" class="stage" aria-label="Stray Kitty presentation — Pages 01 through 16">
+ <main id="stage" class="stage" aria-label="Stray Kitty presentation — Pages 01 through 19">
   <div id="world" class="world">
    <svg id="roadDrawing" class="route-svg" aria-hidden="true"><defs><clipPath id="revealClip"><rect id="routeReveal" x="0" y="0" width="0" height="2000"/></clipPath></defs><path id="routeGhost" class="route-ghost" d=""/><path id="routeInk" class="route-ink" d="" clip-path="url(#revealClip)"/></svg>
    <section id="opening-film" class="scene scene-film" data-title="Opening Film" data-scene="0" data-page="01" aria-label="Page 01 — Full-screen film">
@@ -466,6 +467,160 @@
 
 </div></div>
    </section>
+   <section id="gameplay-telemetry" class="scene datadog-scope" data-scene="16" data-page="17" data-title="From Gameplay to Telemetry" aria-label="Page 17 — From Gameplay to Telemetry"><div class="scene-camera"><div class="dd-page" id="ddSequence" data-demo-state="idle" aria-label="Datadog page 1 interactive review">
+ <div class="section-label"><span class="number-pill">17</span>TECHNICAL WALKTHROUGH / DATADOG</div>
+ <header data-build="text" data-at=".04" class="page-intro"><h1>From Gameplay to Telemetry</h1><p>One real event choice. One traceable request.</p></header>
+ <div class="dd-stage-grid dd-hero" data-build="rise" data-at=".20">
+  <section aria-label="Authentic recorded gameplay">
+   <div class="dd-panel-heading"><strong>01 / The Game</strong><span class="dd-pill">Recorded QA action</span></div>
+   <div class="dd-frame dd-media-frame dd-media-shell">
+    <div class="game-viewport">
+     <img id="ddIdleStill" data-media-src="assets/datadog/page-01-telemetry/event-idle-still.png" alt="Authentic game screenshot before the recorded event choice" width="1600" height="900">
+     <video id="ddResponseVideo" data-response-src="assets/datadog/page-01-telemetry/event-response.mp4" muted playsinline preload="none" aria-label="Authentic event choice animation and sound" hidden></video>
+     <div class="game-overlay">ALLEY · EVENT CHOICE</div>
+     <button id="ddGameClick" type="button" class="game-hitbox" aria-label="Roll dice — play this recorded QA action" data-source-rect="563,642,474,56"><img data-media-src="assets/datadog/page-01-telemetry/event-roll-button.png" alt="" width="474" height="56"></button>
+    </div>
+   </div>
+   <div class="dd-panel-caption"><span id="ddActionHint" aria-live="polite">Click the recorded Roll dice button</span><button id="ddSound" type="button" class="dd-button" aria-pressed="false">Sound: Off</button></div>
+  </section>
+  <section aria-label="Real Datadog before and after captures">
+   <div class="dd-panel-heading"><strong>02 / Datadog APM</strong><span class="dd-pill">Correlated browser + Go trace</span></div>
+   <div class="dd-frame dd-media-frame dd-media-shell">
+    <div class="datadog-viewport">
+     <img data-media-src="assets/datadog/page-01-telemetry/datadog-before.png" alt="Actual Datadog Trace Explorer before the QA event, at its earlier capture window">
+     <img id="ddDatadogAfter" class="after-capture" data-media-src="assets/datadog/page-01-telemetry/datadog-after.png" alt="Actual Datadog Trace Explorer after ingestion with the fresh CHOOSE_EVENT trace">
+     <div id="ddDatadogProgress" class="datadog-status" aria-live="polite" hidden><span class="dd-spinner"></span>Recorded action playing · matching telemetry retrieved after ingestion</div>
+     <button id="ddDatadogFinished" type="button" class="datadog-status dd-trace-trigger" aria-label="Open CHOOSE_EVENT trace detail" aria-haspopup="dialog" aria-controls="ddTraceOverlay" hidden>CHOOSE_EVENT · Trace 13259980332647197655 ↗</button>
+    </div>
+   </div>
+   <div class="dd-panel-caption"><span>Browser request → Go API → correlated log</span><button id="ddViewTrace" type="button" class="dd-button" aria-haspopup="dialog" aria-controls="ddTraceOverlay" disabled>View trace detail ↗</button></div>
+  </section>
+ </div>
+ <div class="dd-qa-note"><span>Reconstructed presentation timing from one genuine QA action on Nov 9, 2026; the slide does not send a new request.</span><span><button id="ddReplay" type="button" class="dd-button" disabled>↻ Replay</button></span></div>
+
+</div></div></section>
+   <section id="observability" class="scene datadog-scope" data-scene="17" data-page="18" data-title="Observability Across the Game" aria-label="Page 18 — Observability Across the Game"><div class="scene-camera"><div class="dd-page" id="ddDashboardPreview" data-selected-composition="stacked" aria-label="Datadog page 2 dashboard review">
+ <div class="section-label"><span class="number-pill">18</span>TECHNICAL WALKTHROUGH / DATADOG</div>
+ <header data-build="text" data-at=".04" class="page-intro"><h1>Observability Across the Game</h1><p>From system health to player behavior, all in one monitoring workflow.</p></header>
+ <div class="dd-tabrow" role="tablist" aria-label="Choose a Datadog dashboard insight">
+  <button class="dd-select" role="tab" data-dashboard-tab="overview" aria-selected="true" aria-controls="ddOverview" type="button">01 · Overview</button>
+  <button class="dd-select" role="tab" data-dashboard-tab="performance" aria-selected="false" aria-controls="ddPerformance" type="button">02 · Player Experience</button>
+  <button class="dd-select" role="tab" data-dashboard-tab="events" aria-selected="false" aria-controls="ddEvents" type="button">03 · Gameplay Events</button>
+  <button class="dd-select" role="tab" data-dashboard-tab="advisor" aria-selected="false" aria-controls="ddAdvisor" type="button">04 · Business &amp; AI</button>
+ </div>
+ <div class="dd-hero" data-build="rise" data-at=".20">
+  <section id="ddOverview" class="dd-dashboard-shell dd-overview-layout" data-dashboard-panel="overview" role="tabpanel">
+   <div class="dd-frame composition-board" data-board="overview" aria-label="Authentic dashboard section composition"></div>
+   <aside tabindex="0" class="dd-frame dd-analysis dd-overview-copy">
+    <span class="dd-label">ENGINEERING + PRODUCT VISIBILITY</span>
+    <h2>We monitor both how the game runs and how it is played.</h2>
+    <div class="dd-coverage"><h3>Technical Health</h3><p>APM, traces and logs<br>Service performance<br>Alerts, SLOs and external monitoring</p></div>
+    <div class="dd-coverage"><h3>Gameplay &amp; Business</h3><p>Player experience and RUM<br>Story, random events and combat<br>Payments, economy and AI Advisor</p></div>
+    <div class="dd-rule"></div>
+    <div class="dd-source">This Overview shows operational monitoring. Player Journey and Business &amp; Payments provide the additional gameplay and business views.</div>
+    <div class="dd-source">Captured Nov 9, 2026 · Selected range 08:00–09:00 UTC. KPI overrides and SLOs use seven days; monitor status is a capture-time snapshot. No Data remains visible.</div>
+    <a class="dd-link" target="_blank" rel="noopener" href="https://us5.datadoghq.com/dashboard/tiy-p7i-rek">Actual Overview dashboard ↗</a>
+   </aside>
+  </section>
+  <section id="ddPerformance" class="dd-dashboard-shell" data-dashboard-panel="performance" role="tabpanel" hidden>
+   <div class="dd-frame composition-board" data-board="performance" aria-label="Authentic dashboard section composition"></div>
+   <aside tabindex="0" class="dd-frame dd-analysis">
+    <span class="dd-label">REAL USER MONITORING</span>
+    <div class="dd-big">4.43 s</div>
+    <h2>How quickly does the game feel ready?</h2>
+    <p>Window-level LCP p75 from 113 recorded RUM sessions. The image charts <em>daily</em> p75, so its trend and the summary use different aggregations.</p>
+    <div class="dd-rule"></div>
+    <div class="dd-source">Nov 2–9, 2026 · Performance data may include public-host QA</div>
+    <a class="dd-link" target="_blank" rel="noopener" href="https://us5.datadoghq.com/dashboard/b6t-avm-uyi">Player Journey dashboard ↗</a>
+   </aside>
+  </section>
+  <section id="ddEvents" class="dd-dashboard-shell" data-dashboard-panel="events" role="tabpanel" hidden>
+   <div class="dd-frame composition-board" data-board="events" aria-label="Authentic dashboard section composition"></div>
+   <aside tabindex="0" class="dd-frame dd-analysis">
+    <span class="dd-label">GAMEPLAY OBSERVABILITY</span>
+    <div class="dd-big">10 events</div>
+    <h2>What happens after a choice?</h2>
+    <p>1 success · 2 failures · 7 partial outcomes in this small non-QA sample. These are recorded outcomes, not the game's intended dice probabilities.</p>
+    <div class="dd-rule"></div>
+    <div class="dd-source">Nov 2–9, 2026 · Backend query excludes qa:true</div>
+    <a class="dd-link" target="_blank" rel="noopener" href="https://us5.datadoghq.com/dashboard/b6t-avm-uyi">Player Journey dashboard ↗</a>
+   </aside>
+  </section>
+  <section id="ddAdvisor" class="dd-dashboard-shell" data-dashboard-panel="advisor" role="tabpanel" hidden>
+   <div class="dd-frame composition-board" data-board="advisor" aria-label="Authentic dashboard section composition"></div>
+   <aside tabindex="0" class="dd-frame dd-analysis">
+    <span class="dd-label">AI / BUSINESS OBSERVABILITY</span>
+    <div class="dd-big">4 Home + 1 Battle</div>
+    <h2>How do payments, economy and AI behave?</h2>
+    <p>Payments, currency flows and five successful Advisor calls in the recorded non-QA sample. These sections show instrumentation, not reliability at scale.</p>
+    <div class="dd-rule"></div>
+    <div class="dd-source">Nov 2–9, 2026 · Backend query excludes qa:true</div>
+    <a class="dd-link" target="_blank" rel="noopener" href="https://us5.datadoghq.com/dashboard/wbx-cm5-me5">Business &amp; Payments dashboard ↗</a>
+   </aside>
+  </section>
+ </div>
+ <div class="dd-footer"><span><span id="compositionHint">Operational Overview · service metrics, monitors and SLOs</span></span><span>Authentic section montage · Click any capture to inspect · Widget time overrides remain in the source.</span></div>
+
+</div></div></section>
+   <section id="detect-alert-recover" class="scene datadog-scope" data-scene="18" data-page="19" data-title="Detect, Alert, Recover" aria-label="Page 19 — Detect, Alert, Recover"><div class="scene-camera"><div class="dd-page" id="ddSyntheticPreview" aria-label="Datadog page 3 monitoring and alert review">
+ <div class="section-label"><span class="number-pill">19</span>TECHNICAL WALKTHROUGH / DATADOG</div>
+ <header data-build="text" data-at=".04" class="page-intro"><h1>Detect. Alert. Recover.</h1><p>A failed public check, a Slack alert—and a verified recovery.</p></header>
+
+ <div class="dd-alert-layout dd-hero dd-monitor-layout" data-build="rise" data-at=".20">
+  <section tabindex="0" class="dd-frame dd-timeline dd-alert-evidence" aria-label="Matching historical Datadog runs and Slack notifications">
+   <div class="dd-label">01 / REAL ALERT &amp; RECOVERY</div>
+   <div class="dd-evidence-header">
+     <h2>From failed check to recovery</h2>
+     <span class="dd-pill">NOV 4 · UTC+08</span>
+   </div>
+   <div class="dd-alert-proof">
+     <div class="dd-alert-steps" aria-label="Choose the alert or recovery evidence">
+      <button class="dd-alert-stage" type="button" data-alert-stage="alert" aria-pressed="true">
+       <span class="dd-proof-status"><span class="dd-proof-dot is-alert"></span><strong>22:36 · ALERT</strong></span>
+       <p>The public health check failed. Datadog notified Slack.</p>
+      </button>
+      <button class="dd-alert-stage" type="button" data-alert-stage="recovery" aria-pressed="false">
+       <span class="dd-proof-status"><span class="dd-proof-dot is-recovered"></span><strong>22:41 · RECOVERY</strong></span>
+       <p>The check passed again, and Slack received recovery.</p>
+      </button>
+     </div>
+     <div class="dd-evidence-visual">
+      <div class="dd-evidence-sources" role="tablist" aria-label="Choose the original evidence source">
+       <button class="dd-select" type="button" role="tab" data-alert-source="slack" aria-selected="true">Slack</button>
+       <button class="dd-select" type="button" role="tab" data-alert-source="datadog" aria-selected="false">Datadog</button>
+      </div>
+      <button id="ddEvidenceZoom" class="dd-evidence-zoom" type="button" aria-label="Enlarge Slack alert screenshot" aria-haspopup="dialog" aria-controls="ddAlertImageOverlay"><img id="ddEvidenceImage" data-media-src="assets/datadog/page-03-alerts/slack-health-alert.png" alt="Original Slack alert for the Stray Kitty health check, November 4 at 22:36 UTC+08"></button>
+      <div id="ddEvidenceCaption" class="dd-evidence-caption">Original Slack message · click to enlarge</div>
+     </div>
+   </div>
+   <div class="dd-archived-source">
+     <p>Same /healthz monitor · five minutes apart. The failed run records a TLS certificate error; the underlying cause was not independently established.</p>
+     <div class="dd-archive-actions"><button class="dd-button" id="ddOpenArchive" type="button" aria-haspopup="dialog" aria-controls="ddArchiveOverlay">Separate Nov 2 test record ↗</button><a class="dd-link" target="_blank" rel="noopener" href="assets/datadog/page-03-alerts/health-alert-cycle-provenance.json">Screenshot sources ↗</a></div>
+   </div>
+   <div class="dd-mobile-slot"><img data-media-src="library/icons/phone-notification.svg" alt="" aria-hidden="true"><p>Slack alerts can reach teammates on their phones when mobile notifications are enabled.</p></div>
+  </section>
+  <section class="dd-frame dd-synth dd-monitor-synthetics" aria-label="External synthetic checks in Tokyo and Seoul">
+   <div class="dd-label">02 / EXTERNAL SYNTHETICS</div>
+   <div class="dd-synth-top">
+    <h2>Can players reach the public game?</h2>
+    <div class="dd-tabrow" role="tablist" aria-label="Choose a public endpoint check">
+     <button class="dd-select" type="button" role="tab" data-check-tab="healthz" aria-controls="ddHealthz" aria-selected="true">Public health check</button>
+     <button class="dd-select" type="button" role="tab" data-check-tab="payment" aria-controls="ddPayment" aria-selected="false">Payment configuration</button>
+    </div>
+   </div>
+   <div id="ddHealthz" class="dd-synth-photo" data-check-panel="healthz" role="tabpanel">
+    <img data-media-src="assets/datadog/page-03-alerts/synthetics-healthz.png" alt="Authentic Datadog HTTP health-check runs from Tokyo and Seoul, both passed on November 9, 2026"/>
+   </div>
+   <div id="ddPayment" class="dd-synth-photo" data-check-panel="payment" role="tabpanel" hidden>
+    <img data-data-media-src="assets/datadog/page-03-alerts/synthetics-payment-config.png" alt="Authentic Datadog payment-configuration HTTP checks from Tokyo and Seoul, both passed on November 9, 2026"/>
+   </div>
+   <div class="dd-synth-label">Tokyo + Seoul · scheduled every five minutes · observed Nov 9, 2026</div>
+   <div class="dd-synth-label">HTTP 200 establishes endpoint reachability, not a full game or payment workflow.</div>
+  </section>
+ </div>
+ <div class="dd-footer"><span>Historical notifications: Nov 4, 2026 · captured Nov 9</span><span>Public endpoint images: genuine Datadog results</span></div>
+
+</div></div></section>
   </div>
   <div id="heroCat" class="hero-cat" aria-label="Miaomiao, the original Stray Kitty protagonist" role="img"><img src="assets/miaomiao.svg" alt=""></div>
   <button id="helpButton" class="help-button circle-control" type="button" aria-label="Show controls">?</button>
@@ -476,8 +631,39 @@
  <div class="screenshot-dialog-heading"><h3 id="screenshotTitle"></h3><button type="button" id="closeScreenshot" aria-label="Close enlarged screenshot">×</button></div>
  <img id="enlargedScreenshot" alt="">
 </dialog>
+<div id="datadogOverlays" class="datadog-scope">
+<div id="ddTraceOverlay" class="dd-overlay" hidden role="dialog" aria-modal="true" aria-label="Actual Datadog trace detail screenshot">
+ <div class="dd-overlay-inner">
+  <div class="dd-overlay-head"><span>CHOOSE_EVENT · Trace 13259980332647197655 · QA</span><button id="ddTraceClose" type="button" class="dd-button">Close ×</button></div>
+  <p class="dd-trace-hint">Scroll inside the trace to inspect the recorded span attributes.</p>
+  <div class="dd-trace-window">
+   <div id="ddTraceScroll" class="dd-trace-scroll" tabindex="0" role="region" aria-label="Scrollable recorded CHOOSE_EVENT trace detail">
+    <img data-media-src="assets/datadog/page-01-telemetry/datadog-trace-header.png" alt="Matching Datadog trace: browser request and Go API span; HTTP 200; trace 13259980332647197655" width="1088" height="413">
+    <img data-media-src="assets/datadog/page-01-telemetry/datadog-trace-attributes.png" alt="Complete recorded Overview attributes: CHOOSE_EVENT; HTTP POST /api/v1/commands; status 200; Go span 8343603351340215695; November 9, 2026" width="1088" height="927">
+   </div>
+  </div>
+ </div>
+</div>
+
+<div class="dd-overlay" id="compositionInspect" hidden role="dialog" aria-modal="true" aria-label="Authentic dashboard section at full size"><div class="dd-overlay-inner"><div class="dd-overlay-head"><span id="compositionInspectTitle"></span><button class="dd-button" id="compositionInspectClose" type="button">Close ×</button></div><img id="compositionInspectImage" alt=""></div></div>
+
+<div id="ddArchiveOverlay" class="dd-overlay" hidden role="dialog" aria-modal="true" aria-label="Archived alert and recovery evidence">
+ <div class="dd-overlay-inner">
+  <div class="dd-overlay-head"><span>November 2, 2026 · Controlled test · Archived evidence</span><button id="ddCloseArchive" type="button" class="dd-button">Close ×</button></div>
+  <div class="dd-record-panel" tabindex="0" role="region" aria-label="Scrollable archived event JSON"><pre id="ddArchiveRecord">Loading archived record…</pre></div>
+ </div>
+</div>
+<div id="ddAlertImageOverlay" class="dd-overlay" hidden role="dialog" aria-modal="true" aria-label="Original alert or recovery screenshot">
+ <div class="dd-overlay-inner">
+  <div class="dd-overlay-head"><span id="ddAlertImageTitle">Slack · ALERT · November 4, 2026</span><button id="ddCloseAlertImage" type="button" class="dd-button">Close ×</button></div>
+  <div class="dd-alert-image-scroll" tabindex="0" role="region" aria-label="Scrollable original screenshot"><img id="ddAlertImageFull" alt=""></div>
+  <a id="ddAlertImageSource" class="dd-alert-image-source" target="_blank" rel="noopener">Open original source ↗</a>
+ </div>
+</div>
+</div>
 <script src="scene-content.js?v=20261109-on-demand-events"></script>
 <script src="events-combat.js?v=20261109-integrated"></script>
 <script src="uiux.js?v=20261109-adaptive-fit"></script>
+<script src="datadog.js?v=20261109-datadog-r6"></script>
 <script src="engine-v3.js?v=20261109-level-design"></script>
 </body></html>

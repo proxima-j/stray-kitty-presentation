@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="level-design.css?v=20261109-level-design">
   <link rel="stylesheet" href="events-combat.css?v=20261109-integrated">
   <link rel="preload" as="script" href="events-combat.js?v=20261109-integrated">
+  <link rel="stylesheet" href="technical.css?v=20261109-full-pipeline">
   <link rel="stylesheet" href="uiux.css?v=20261109-adaptive-fit">
   <link rel="preload" as="script" href="uiux.js?v=20261109-adaptive-fit">
   <link rel="preload" as="script" href="scene-content.js?v=20261109-on-demand-events">
@@ -18,7 +19,7 @@
 </head>
 <body>
 <div id="scrollSpace" class="scroll-space">
- <main id="stage" class="stage" aria-label="Stray Kitty presentation — Pages 01 through 14">
+ <main id="stage" class="stage" aria-label="Stray Kitty presentation — Pages 01 through 16">
   <div id="world" class="world">
    <svg id="roadDrawing" class="route-svg" aria-hidden="true"><defs><clipPath id="revealClip"><rect id="routeReveal" x="0" y="0" width="0" height="2000"/></clipPath></defs><path id="routeGhost" class="route-ghost" d=""/><path id="routeInk" class="route-ink" d="" clip-path="url(#revealClip)"/></svg>
    <section id="opening-film" class="scene scene-film" data-title="Opening Film" data-scene="0" data-page="01" aria-label="Page 01 — Full-screen film">
@@ -336,6 +337,135 @@
 
 
 </div></div></section>
+   <section id="technical-architecture" class="scene" data-scene="14" data-page="15" data-title="Technical Architecture" aria-label="Page 15 — Technical Architecture">
+    <div class="scene-camera"><div aria-label="Technical Architecture" class="tech-page">
+<div class="section-label" data-at=".04" data-build="text"><span class="number-pill">15</span>TECHNICAL WALKTHROUGH / ARCHITECTURE</div>
+<section aria-label="Three main technical layers" class="architecture-stack" data-at=".14" data-build="rise">
+<div class="layer">
+<h2>Browser — React + TypeScript + Canvas 2D</h2>
+<p>UI, local movement, collision and combat simulation</p>
+</div>
+<span aria-hidden="true" class="double-direction">↕</span>
+<div class="layer">
+<h2>Go Game API</h2>
+<p>Session validation, commands, game rules and persistent consequences</p>
+</div>
+<span aria-hidden="true" class="double-direction">↕</span>
+<div class="layer">
+<h2>Game Repository — JSON State</h2>
+<p>Progression, inventory, rewards, flags and command receipts</p>
+</div>
+</section>
+<section aria-label="Connected services" class="connected-services" data-at=".48" data-build="rise">
+<h3>CONNECTED SERVICES</h3>
+<div class="service-grid">
+<div class="service"><strong>Xsolla</strong><span>Payment service</span></div>
+<div class="service"><strong>AI Advisor</strong><span>Contextual answers</span></div>
+<div class="service"><strong>Datadog</strong><span>RUM · APM · Logs · Alerts</span></div>
+</div>
+</section>
+<section aria-label="Online deployment and public access" class="build-deployment" data-at=".72" data-build="rise">
+<h3>ONLINE DEPLOYMENT</h3>
+<div class="build-card">
+<strong>Deployed on Kubernetes · Playable Online</strong>
+<span>Public frontend · HTTPS access · Internal game and payment services</span>
+</div>
+</section>
+
+
+</div></div>
+   </section>
+   <section id="kubernetes-deployment" class="scene" data-scene="15" data-page="16" data-title="Kubernetes Deployment" aria-label="Page 16 — Kubernetes Deployment">
+    <div class="scene-camera"><div aria-label="Kubernetes Deployment" class="k8s-preview">
+<header data-at=".04" data-build="text">
+<div class="section-label"><span class="number-pill">16</span>TECHNICAL WALKTHROUGH / DEPLOYMENT</div>
+<h1>Kubernetes Deployment</h1>
+<p class="subtitle">How Kubernetes makes the game accessible online and preserves player data</p>
+</header>
+<section aria-label="Configured application Pod and persistent storage topology" class="cluster" data-at=".18" data-build="rise">
+<div class="cluster-top">
+<span class="cluster-tag">PUBLIC INTERNET → FRONTEND LOADBALANCER</span>
+<span class="cluster-meta">1 replica per Deployment · Recreate strategy</span>
+</div>
+<div class="application-grid">
+<div aria-label="Frontend application Kubernetes resources" class="component">
+<section aria-label="Frontend Deployment with one Pod" class="deployment-shell">
+<div class="deployment-heading">
+<span class="component-number">01</span>
+<h2>Frontend</h2>
+<span class="replica-label">DEPLOYMENT · 1 REPLICA</span>
+</div>
+<div class="pod-shell">
+<span class="pod-tag">POD · 2 CONTAINERS</span>
+<div class="container-list"><span class="container-chip">nginx</span><span class="container-chip">certbot sidecar</span></div>
+</div>
+</section>
+<div aria-hidden="true" class="volume-link"><span class="volume-line"></span><small>mount</small></div>
+<div aria-label="certificate state persistent volume claim" class="storage">
+<strong>TLS PVC</strong>
+<span>1Gi · RWO · certificate state</span>
+</div>
+</div>
+<div aria-hidden="true" class="connector"><span>→</span><small>game requests</small></div>
+<div aria-label="Game API application Kubernetes resources" class="component">
+<section aria-label="Game API Deployment with one Pod" class="deployment-shell">
+<div class="deployment-heading">
+<span class="component-number">02</span>
+<h2>Game API</h2>
+<span class="replica-label">DEPLOYMENT · 1 REPLICA</span>
+</div>
+<div class="pod-shell">
+<span class="pod-tag">POD · 1 CONTAINER</span>
+<div class="container-list"><span class="container-chip">Go game</span></div>
+</div>
+</section>
+<div aria-hidden="true" class="volume-link"><span class="volume-line"></span><small>mount</small></div>
+<div aria-label="save data persistent volume claim" class="storage">
+<strong>Game PVC</strong>
+<span>1Gi · RWO · save data</span>
+</div>
+</div>
+<div aria-hidden="true" class="connector"><span>→</span><small>payments</small></div>
+<div aria-label="Payment application Kubernetes resources" class="component">
+<section aria-label="Payment Deployment with one Pod" class="deployment-shell">
+<div class="deployment-heading">
+<span class="component-number">03</span>
+<h2>Payment</h2>
+<span class="replica-label">DEPLOYMENT · 1 REPLICA</span>
+</div>
+<div class="pod-shell">
+<span class="pod-tag">POD · 1 CONTAINER</span>
+<div class="container-list"><span class="container-chip">paymentd</span></div>
+</div>
+</section>
+<div aria-hidden="true" class="volume-link"><span class="volume-line"></span><small>mount</small></div>
+<div aria-label="payment ledger persistent volume claim" class="storage">
+<strong>Payment PVC</strong>
+<span>1Gi · RWO · payment ledger</span>
+</div>
+</div>
+</div>
+<div class="cluster-bottom">
+<div class="agent"><strong>Datadog Agent</strong><span>Separately managed Deployment + ClusterIP Service</span></div>
+<div class="cluster-foot">Application target: 3 Deployments · 3 Pods · 4 containers · 3 Services · 3 PVCs<br/>Distinct PVC per application Pod · No cross-Pod PVC sharing</div>
+</div>
+</section>
+<section aria-label="Dated November 6 pipeline 7813 deployment record" class="evidence" data-at=".70" data-build="rise">
+<div class="evidence-copy">
+<h3>DEPLOYED ONLINE</h3>
+<strong>Verified November 6, 2026</strong>
+<p>All five pipeline jobs passed, including deployment.</p>
+<span><a href="https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/pipelines/7813" target="_blank" rel="noopener">GitLab pipeline #7813 · main branch</a></span>
+</div>
+<button type="button" aria-label="Enlarge the full successful GitLab pipeline 7813" class="record-panel pipeline-evidence" data-full-image="../assets/pages/16/gitlab-pipeline-7813-full.png" data-image-title="GitLab pipeline #7813 — November 6, 2026" data-local-space="">
+<span class="record-heading"><span>PIPELINE #7813 · ALL FIVE JOBS PASSED</span><span>Enlarge ↗</span></span>
+<img class="pipeline-capture" data-media-src="../assets/pages/16/gitlab-pipeline-7813-full.png" width="1138" height="144" alt="Actual successful GitLab pipeline: verify server_checks and web_checks, build server_build, package deploy_images, and deploy deploy_apply">
+</button>
+</section>
+
+
+</div></div>
+   </section>
   </div>
   <div id="heroCat" class="hero-cat" aria-label="Miaomiao, the original Stray Kitty protagonist" role="img"><img src="../assets/miaomiao.svg" alt=""></div>
   <button id="helpButton" class="help-button circle-control" type="button" aria-label="Show controls">?</button>

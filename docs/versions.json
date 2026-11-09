@@ -1,9 +1,18 @@
 {
   "current": {
     "entry": "./",
-    "source_commit": "4d643dc62f901508c4d09f13a6ad6bb6c7583aef",
+    "candidate_base_commit": "5e8a0e27e5840605c363447177fdf6242e5319c1",
+    "build_marker": "20261109-datadog-r6",
+    "description": "Nineteen-page deck: approved Datadog Gameplay to Telemetry, Observability, and Detect Alert Recover follow Kubernetes",
+    "publication_status": "LOCAL_VERIFIED; verify deployed marker after push",
+    "local_verified_at": "2026-11-09T11:57:19.658997+00:00",
+    "verification_notes": "Focused normal-browser checks: 16→17→18→19 and reverse, muted six-second QA response, matching trace and scrollable attributes, Overview side-by-side, Option A chunk selection and full-image inspection, original Slack/Datadog alert-recovery switches and image inspection, Synthetics and phone icon. Long explanatory panels scroll within their frames at shorter viewports. Existing sixteen scenes and all old runtime files byte-identical; v3 4200ms engine unchanged. No backend requests, infrastructure changes or new recordings."
+  },
+  "previous": {
+    "entry": "previous/",
+    "source_commit": "5e8a0e27e5840605c363447177fdf6242e5319c1",
     "candidate_base_commit": "8752b694e92679d604d0d4e903835927a1b9aa91",
-    "description": "Sixteen-page deck: Technical Architecture and Kubernetes Deployment follow UI/UX",
+    "description": "Outgoing verified sixteen-page deck through Kubernetes Deployment",
     "publication_status": "VERIFIED",
     "local_verified_at": "2026-11-09T05:21:12.684114+00:00",
     "verification_notes": "Chrome 1600x900 and 1366x768: technical compositions legible and contained, no Pod or architecture-stack overflow, single cat/route; Combat→Dice→Adaptive→Architecture→Kubernetes and reverse, settled transitions 4207–4211ms, no page errors. First fourteen scene blocks, engine and shared runtime byte-identical. Dated deployment textual evidence; no new background media. Opening film behavior unaffected (shared runtime/source unchanged). Asset maintenance: confirmation and full five-job screenshot now both refer to pipeline #7813 / November 6, 2026. Local and published screenshot panel, source link and existing 1138×144 enlargement dialog passed. No engine, diagram or Previous changes.",
@@ -13,27 +22,9 @@
       "http_status": 200,
       "style_version": "technical.css?v=20261109-full-pipeline",
       "verification": "Published normal browser viewport: matching November 6 confirmation and all five pipeline jobs visible. Clicking the pipeline opens the genuine 1138×144 crop. Source link points to pipeline #7813. Superseded single-card asset removed after checking both retained decks. Shared v3 runtime, diagram and Previous untouched."
-    }
-  },
-  "previous": {
-    "entry": "previous/",
-    "source_commit": "8752b694e92679d604d0d4e903835927a1b9aa91",
-    "candidate_base_commit": "3d6109b03032ff71ed98715dbfcebf6bf1906227",
-    "description": "Outgoing verified fourteen-page deck through Dice and Adaptive UI",
-    "publication_status": "VERIFIED",
-    "local_verified_at": "2026-11-08T18:52:45.795878+00:00",
-    "verification_notes": "Chrome 1600x900 and 1366x768: Combat→Dice→Adaptive and reverse; 4205ms visible-stop transition; four native 1.5x-encoded loops playing; active-scene pause, persistent manual hold; English colored badges; Normal/Narrow toggle, 565px selected original-image dialog, local Space; frames/captions clear unchanged cat/route band. Off-screen screenshots and film remain unloaded. First twelve scene blocks and all global engine/styles/shared interactions unchanged. No page errors. Published default Chrome: fourteen scenes, four dice loops advancing, no off-screen screenshot/film downloads on Dice entry, forward Adaptive transition, loops pause on exit, selected Narrow WebP and original PNG (565px), Normal preview and original PNG (1600px), retained twelve-page Previous at Combat with its image loaded. No page errors. Superseded review URLs redirect to integrated pages after verification. Page 14 maintenance: reserve full tab reveal bounds and reclaim internal space for larger uncropped screenshots; original-image controls and Normal/Narrow retained. Checked locally at 1600x900/1366x768 and on the published in-app-browser viewport. No engine, media asset, Dice or Previous changes.",
-    "public_verified_at": "2026-11-09T05:24:14.535390+00:00",
-    "publication_evidence": {
-      "url": "https://proxima-j.github.io/stray-kitty-presentation/?page=adaptive-interface&v=7f57560",
-      "http_status": 200,
-      "style_version": "uiux.css?v=20261109-adaptive-fit",
-      "deployed_asset_last_modified": "Sun, 08 Nov 2026 19:23:17 GMT",
-      "verification": "Live published Page 14 checked in browser: full heading/tab visible, selected 565x616 screenshot loaded, panel clears unchanged cat/route. Local Normal/Narrow and original-image dialog checked at presentation sizes. GitHub anonymous workflow API was rate-limited; deployment verified directly via served build marker/CSS and actual browser."
     },
-    "snapshot_note": "Frozen after sixteen-page candidate passed; index, font and UI/UX original-image URLs rebased. Shared assets stored once.",
-    "snapshot_public_verification": "Published fourteen-page Previous at Adaptive UI: Normal/Narrow switch and selected original PNG (565px) loaded successfully from shared asset path."
+    "snapshot_note": "Frozen after the nineteen-page Datadog candidate passed. Small runtime files are independent; shared asset and font URLs rebased. No media duplicated."
   },
   "shared_assets": "assets/",
-  "retention": "Exactly two usable decks: sixteen-page Current and outgoing verified fourteen-page Previous. Candidate verified before rotation; media stored once. Documentation-only changes do not rotate."
+  "retention": "Exactly two usable complete decks: nineteen-page Current and outgoing verified sixteen-page Previous. Candidate verified before rotation; assets shared once."
 }
