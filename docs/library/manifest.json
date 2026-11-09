@@ -1632,6 +1632,57 @@
         ]
       },
       "provenance": "../assets/datadog/composition-review/provenance.json"
+    },
+    {
+      "id": "datadog.collection.event-idle-still",
+      "source": "../assets/datadog/page-01-telemetry/event-idle-still.png",
+      "use": "Page 1 standalone telemetry review: static game scene and exact interactive green button",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "origin": "../assets/datadog/page-01-telemetry/event-idle-loop.mp4",
+      "permission": "User requested a static screenshot and identical green button using the previously cleared genuine QA recording.",
+      "metadata": {
+        "dimensions": [
+          1600,
+          900
+        ],
+        "source_frame_seconds": 2,
+        "source_video_dimensions": [
+          1600,
+          900
+        ],
+        "crop_xyxy": null,
+        "derived_utc": "2026-11-09T10:18:50.399049+00:00",
+        "processing": "Lossless authentic frame extraction and rectangular crop only; no recreated text, colour or border."
+      },
+      "provenance": "../assets/datadog/capture-manifest.json"
+    },
+    {
+      "id": "datadog.collection.event-roll-button",
+      "source": "../assets/datadog/page-01-telemetry/event-roll-button.png",
+      "use": "Page 1 standalone telemetry review: static game scene and exact interactive green button",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "origin": "../assets/datadog/page-01-telemetry/event-idle-loop.mp4",
+      "permission": "User requested a static screenshot and identical green button using the previously cleared genuine QA recording.",
+      "metadata": {
+        "dimensions": [
+          474,
+          56
+        ],
+        "source_frame_seconds": 2,
+        "source_video_dimensions": [
+          1600,
+          900
+        ],
+        "crop_xyxy": [
+          563,
+          642,
+          1037,
+          698
+        ],
+        "derived_utc": "2026-11-09T10:18:50.399049+00:00",
+        "processing": "Lossless authentic frame extraction and rectangular crop only; no recreated text, colour or border."
+      },
+      "provenance": "../assets/datadog/capture-manifest.json"
     }
   ]
 }

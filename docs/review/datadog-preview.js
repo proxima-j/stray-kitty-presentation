@@ -3,7 +3,7 @@
   'use strict';
   const qa = document.getElementById('ddSequence');
   if (qa) {
-    const idle = document.getElementById('ddIdleVideo');
+    const idle = document.getElementById('ddIdleStill');
     const response = document.getElementById('ddResponseVideo');
     const clickArea = document.getElementById('ddGameClick');
     const reveal = document.getElementById('ddDatadogAfter');
@@ -17,10 +17,10 @@
     const close = document.getElementById('ddTraceClose');
     let step = 'idle';
     let audioEnabled = true;
-    // Authentic button bounds in the 1600×900 idle frame; the pixels stay in the video.
+    // The overlay is an exact crop of the green button in the 1600×900 still.
     const sourceButton = { x: 563, y: 642, width: 474, height: 56 };
     function alignGameButton() {
-      const { width, height } = idle.getBoundingClientRect();
+      const { width, height } = idle.parentElement.getBoundingClientRect();
       const scale = Math.min(width / 1600, height / 900);
       const left = (width - 1600 * scale) / 2;
       const top = (height - 900 * scale) / 2;
@@ -32,7 +32,7 @@
       });
     }
     new ResizeObserver(alignGameButton).observe(idle.parentElement);
-    idle.addEventListener('loadedmetadata', alignGameButton);
+    idle.addEventListener('load', alignGameButton);
     clickArea.addEventListener('keydown', event => {
       if (event.key === ' ' || event.key === 'Enter') event.stopPropagation();
     });
@@ -42,6 +42,7 @@
       progress.hidden = next !== 'response';
       finished.hidden = next !== 'complete';
       clickArea.disabled = next !== 'idle';
+      clickArea.hidden = next !== 'idle';
       hint.textContent = next === 'idle' ? 'Click the recorded Roll dice button' :
         next === 'response' ? 'Playing the genuine recorded event result…' :
         'Trace recorded · use Replay to repeat';
@@ -54,8 +55,6 @@
       response.hidden = true;
       try { response.currentTime = 0; } catch (_) {}
       idle.hidden = false;
-      try { idle.currentTime = 0; } catch (_) {}
-      if (!document.hidden) idle.play().catch(() => {});
       closeOverlay();
       setStep('idle');
       alignGameButton();
@@ -68,7 +67,6 @@
       event.stopPropagation();
       if (step !== 'idle') return;
       setStep('response');
-      idle.pause();
       idle.hidden = true;
       response.hidden = false;
       response.muted = !audioEnabled;
@@ -76,7 +74,7 @@
       const play = response.play();
       if (play && typeof play.catch === 'function') {
         play.catch(() => { response.muted = true; return response.play(); })
-            .catch(() => { response.hidden = true; idle.hidden = false; idle.play().catch(() => {}); setStep('idle'); });
+            .catch(() => { response.hidden = true; idle.hidden = false; setStep('idle'); });
       }
     }
     function closeOverlay() { overlay.hidden = true; }
@@ -98,16 +96,11 @@
     });
     document.addEventListener('visibilitychange', () => {
       if (document.hidden) {
-        idle.pause();
         if (step === 'response') response.pause();
-      } else if (step === 'idle') {
-        idle.play().catch(() => {});
       } else if (step === 'response') {
         response.play().catch(() => {});
       }
     });
-    idle.muted = true;
-    idle.play().catch(() => {});
     setStep('idle');
     alignGameButton();
   }

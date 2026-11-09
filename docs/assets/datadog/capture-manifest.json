@@ -334,6 +334,63 @@
       "redactions": "Crop excludes account/navigation/header and unrelated lower dashboard sections; no masks needed in the retained region.",
       "publication": "User explicitly requested capture and publication of cleared Overview evidence in the standalone review.",
       "limitations": "Operational coverage only; not every gameplay/business metric. Six KPI seven-day overrides and two seven-day SLOs differ from the selected one-hour global range. Monitor status is current at capture, not historical. Five No Data monitors do not prove healthy workloads. Seven-day command p95 widget displays an average of p95 points, not a whole-window p95. QA and synthetic traffic may be present; no reliability claim."
+    },
+    {
+      "path": "page-01-telemetry/event-idle-still.png",
+      "public_path": "docs/assets/datadog/page-01-telemetry/event-idle-still.png",
+      "status": "READY",
+      "source_url": "https://starry-kitty.duckdns.org/",
+      "captured_utc": "2026-11-09T06:43:29.903Z",
+      "derived_utc": "2026-11-09T10:18:50.399049+00:00",
+      "qa": true,
+      "trace_id": "13259980332647197655",
+      "method": "Lossless authentic frame extraction and rectangular crop only; no recreated text, colour or border.",
+      "metadata": {
+        "dimensions": [
+          1600,
+          900
+        ],
+        "source_frame_seconds": 2,
+        "source_video_dimensions": [
+          1600,
+          900
+        ],
+        "crop_xyxy": null,
+        "derived_utc": "2026-11-09T10:18:50.399049+00:00",
+        "processing": "Lossless authentic frame extraction and rectangular crop only; no recreated text, colour or border."
+      },
+      "publication": "User explicitly requested using the previously cleared recording in the public standalone preview. No player/account identifiers visible."
+    },
+    {
+      "path": "page-01-telemetry/event-roll-button.png",
+      "public_path": "docs/assets/datadog/page-01-telemetry/event-roll-button.png",
+      "status": "READY",
+      "source_url": "https://starry-kitty.duckdns.org/",
+      "captured_utc": "2026-11-09T06:43:29.903Z",
+      "derived_utc": "2026-11-09T10:18:50.399049+00:00",
+      "qa": true,
+      "trace_id": "13259980332647197655",
+      "method": "Lossless authentic frame extraction and rectangular crop only; no recreated text, colour or border.",
+      "metadata": {
+        "dimensions": [
+          474,
+          56
+        ],
+        "source_frame_seconds": 2,
+        "source_video_dimensions": [
+          1600,
+          900
+        ],
+        "crop_xyxy": [
+          563,
+          642,
+          1037,
+          698
+        ],
+        "derived_utc": "2026-11-09T10:18:50.399049+00:00",
+        "processing": "Lossless authentic frame extraction and rectangular crop only; no recreated text, colour or border."
+      },
+      "publication": "User explicitly requested using the previously cleared recording in the public standalone preview. No player/account identifiers visible."
     }
   ],
   "omissions": [
@@ -370,7 +427,9 @@
         474,
         56
       ],
-      "method": "Transparent semantic HTML button over the existing recorded control. ResizeObserver applies object-fit:contain scale and centered letterbox offsets. No duplicate artwork or approximate UI drawing. Click and Enter/Space stay local to the demo."
+      "method": "Static authentic screenshot at idle time. A semantic HTML button displays the exact green-control crop over source rectangle [563,642,474,56]. Only its click plays the existing six-second response with original audio; overlay is hidden during playback, and Replay restores the still. No idle video or yellow instruction badge. Contain scaling and letterboxing remain supported.",
+      "source_still": "page-01-telemetry/event-idle-still.png",
+      "button_crop": "page-01-telemetry/event-roll-button.png"
     },
     "historical_evidence": {
       "source": "https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/blob/main/evidence/observability/heartbeat-alert-cycle.json",
