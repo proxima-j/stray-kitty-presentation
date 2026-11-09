@@ -1,19 +1,18 @@
 {
   "current": {
     "entry": "./",
-    "source_commit": "3b93b117965c1356bb08e57cc2aedf966034beb3",
+    "source_commit": "0e10b2b02f4d76c0e0ffd5b6764f75b660b82aad",
     "candidate_base_commit": "8752b694e92679d604d0d4e903835927a1b9aa91",
     "description": "Sixteen-page deck: Technical Architecture and Kubernetes Deployment follow UI/UX",
     "publication_status": "VERIFIED",
     "local_verified_at": "2026-11-09T05:21:12.684114+00:00",
-    "verification_notes": "Chrome 1600x900 and 1366x768: technical compositions legible and contained, no Pod or architecture-stack overflow, single cat/route; Combat→Dice→Adaptive→Architecture→Kubernetes and reverse, settled transitions 4207–4211ms, no page errors. First fourteen scene blocks, engine and shared runtime byte-identical. Dated deployment textual evidence; no new background media. Opening film behavior unaffected (shared runtime/source unchanged).",
-    "public_verified_at": "2026-11-09T05:24:14.535390+00:00",
+    "verification_notes": "Chrome 1600x900 and 1366x768: technical compositions legible and contained, no Pod or architecture-stack overflow, single cat/route; Combat→Dice→Adaptive→Architecture→Kubernetes and reverse, settled transitions 4207–4211ms, no page errors. First fourteen scene blocks, engine and shared runtime byte-identical. Dated deployment textual evidence; no new background media. Opening film behavior unaffected (shared runtime/source unchanged). Asset maintenance: user-supplied November 6 pipeline #7813 deployment screenshot replaces the right text fallback; crop only, no status alteration, separately labelled from November 7 record. Local/public screenshot footprint checked; original engine and Previous unchanged.",
+    "public_verified_at": "2026-11-09T05:47:09.032452+00:00",
     "publication_evidence": {
-      "url": "https://proxima-j.github.io/stray-kitty-presentation/?page=technical-architecture&v=3b93b11",
+      "url": "https://proxima-j.github.io/stray-kitty-presentation/?page=kubernetes-deployment&v=0e10b2b",
       "http_status": 200,
-      "style_version": "technical.css?v=20261109-technical",
-      "deployed_asset_last_modified": "Mon, 09 Nov 2026 05:22:56 GMT",
-      "verification": "Published in-app browser: sixteen scenes, both technical layouts visible, Page 15→16 and reverse settled correctly; single original cat/route, deferred opening film remains unloaded. Previous fourteen-page deck loads; Normal/Narrow and rebased 565px original-image link work. Anonymous GitHub workflow API was rate-limited, so deployed source was verified through the public build marker, styles and actual browser."
+      "style_version": "technical.css?v=20261109-pipeline-evidence",
+      "verification": "Published browser: authentic user-supplied pipeline #7813 deployment-card crop loaded at native 260×91, labelled November 6, 2026 and linked to its own pipeline. Left November 7 deployment confirmation retained separately. Local normal viewport and public layout check passed; screenshot HTTP 200 / 6705 bytes. Media remains deferred until scene entry. Engine, other scene content and Previous unchanged."
     }
   },
   "previous": {

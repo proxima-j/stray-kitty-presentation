@@ -6,7 +6,7 @@ GitHub is the shared source for ChatGPT and Codex. GitHub Pages automatically pu
 
 | Version | Preview | Verified source |
 | --- | --- | --- |
-| Current | https://proxima-j.github.io/stray-kitty-presentation/ | Sixteen-page runtime `3b93b117965c1356bb08e57cc2aedf966034beb3`; published and verified |
+| Current | https://proxima-j.github.io/stray-kitty-presentation/ | Sixteen-page runtime `0e10b2b02f4d76c0e0ffd5b6764f75b660b82aad`; published and verified |
 | Previous | https://proxima-j.github.io/stray-kitty-presentation/previous/ | Outgoing fourteen-page runtime `8752b694e92679d604d0d4e903835927a1b9aa91`; published and verified |
 
 Current supports direct `?page=01` through `?page=16` links. Previous retains `?page=01` through `?page=14`. Stable Current IDs also work as direct links: `roadmap`, `game-flow`, `visual-novel`, `home-hub`, `payment`, `four-maps`, `vertical-design`, `greybox`, `random-events`, `combat`, `dice-animations`, `adaptive-interface`, `technical-architecture`, `kubernetes-deployment`. [docs/versions.json](docs/versions.json) records verified runtime origins; documentation and asset-only commits do not rotate decks.
