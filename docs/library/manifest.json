@@ -1723,6 +1723,15 @@
         "limitations": "Recorded QA evidence from the November 9 action; presentation scrolling does not query live Datadog. Overview attributes only; Logs and other source tabs are not simulated."
       },
       "provenance": "../assets/datadog/capture-manifest.json"
+    },
+    {
+      "id": "icon.phone-notification",
+      "source": "icons/phone-notification.svg",
+      "use": "Datadog Page 3: illustrative phone icon accompanying the Slack mobile-notification note",
+      "status": "ORIGINAL / CLEARED FOR PUBLICATION",
+      "origin": "Project-authored SVG using the existing cream, green and gold design tokens",
+      "permission": "Created for the user's explicit request for a phone icon in the public preview; no third-party imagery.",
+      "limitations": "Illustration only, not a captured phone or evidence of delivered notification."
     }
   ]
 }

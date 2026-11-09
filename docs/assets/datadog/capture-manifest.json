@@ -433,8 +433,8 @@
     },
     {
       "asset": "phone-notification",
-      "status": "OPTIONAL / NOT VERIFIED",
-      "reason": "No verified mobile notification. No emulator install, test alerts, faults or notification settings changes."
+      "status": "NOT REQUIRED / USER CANCELLED CAPTURE",
+      "reason": "On November 9, the user chose an illustrative phone icon and one sentence instead of recording a notification. Mobile delivery remains unverified. Existing monitor messages route to Slack; no new alert or notification-setting change was made."
     }
   ],
   "private_sources": "Native original WEBM, original audio, uncropped UI captures, owned QA identifiers and timing metadata retained only in local private-originals; never uploaded.",
@@ -465,9 +465,9 @@
     },
     "historical_evidence": {
       "source": "https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/blob/main/evidence/observability/heartbeat-alert-cycle.json",
-      "status": "JSON reconfirmed on latest main. Original monitor 339853048 returns 404 in the connected US5 organization; original US1 browser view requires sign-in. Slack browser session requires workspace sign-in and no Slack connector is available. Matching notification screenshots could not be verified; placeholders retained."
+      "status": "Original monitor 339853048 still returns 404 in connected US5, with no matching November 2 events returned. Page 3 now presents the existing verified archived event records and opens the complete published JSON in a scrollable inspector. No simulated Datadog or Slack notification screenshots."
     },
-    "phone": "No verified phone screenshot/recording in supplied conversation or project/staging assets. Separate emulator attempt is paused at Google sign-in; no install or alert triggered in this refinement task. Placeholder retained."
+    "phone": "User cancelled phone capture on November 9, 2026. Replaced the placeholder with a project-authored phone icon and a conditional Slack mobile-notification sentence. Slack destination verified read-only in monitor 23526036; phone delivery and device registration were not tested. The phone-capture reminder was paused."
   },
   "composition_comparison": {
     "review": "review/datadog-02-composition-review.html",
