@@ -1141,6 +1141,132 @@
       "job_url": "https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/jobs/29328",
       "limitation": "November 6 pipeline/job history, not a current Pod-health inspection.",
       "provenance": "TECHNICAL-ASSETS.md"
+    },
+    {
+      "id": "datadog.collection.datadog-before",
+      "source": "../assets/datadog/page-01-telemetry/datadog-before.png",
+      "use": "Future Datadog presentation composition; asset collection only",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "origin": "https://us5.datadoghq.com/apm/traces?query=service%3Akitty-api%20env%3Apreview%20%40command.type%3ACHOOSE_EVENT&cols=service%2Cresource_name%2C%40duration%2C%40http.method%2C%40http.status_code%2C%40_span.count%2C%40_duration.by_service&fromUser=false&historicalData=true&messageDisplay=inline&query_translation_version=v0&sort=desc&spanType=all&storage=hot&traceQuery=&view=spans&start=1794206348462&end=1794206418058&paused=true",
+      "permission": "User authorized curated project gameplay and Datadog evidence publication; account/player/session identifiers removed.",
+      "provenance": "../assets/datadog/capture-manifest.json"
+    },
+    {
+      "id": "datadog.collection.datadog-after",
+      "source": "../assets/datadog/page-01-telemetry/datadog-after.png",
+      "use": "Future Datadog presentation composition; asset collection only",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "origin": "https://us5.datadoghq.com/apm/traces?query=service%3Akitty-api+env%3Apreview+%40command.type%3ACHOOSE_EVENT&cols=service%2Cresource_name%2C%40duration%2C%40http.method%2C%40http.status_code%2C%40_span.count%2C%40_duration.by_service&fromUser=false&historicalData=true&messageDisplay=inline&query_translation_version=v0&sort=desc&spanType=all&storage=hot&traceQuery=&view=spans&start=1794206348462&end=1794206717750&paused=true",
+      "permission": "User authorized curated project gameplay and Datadog evidence publication; account/player/session identifiers removed.",
+      "provenance": "../assets/datadog/capture-manifest.json"
+    },
+    {
+      "id": "datadog.collection.datadog-trace-detail",
+      "source": "../assets/datadog/page-01-telemetry/datadog-trace-detail.png",
+      "use": "Future Datadog presentation composition; asset collection only",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "origin": "https://us5.datadoghq.com/apm/traces?query=service%3Akitty-api%20env%3Apreview%20%40command.type%3ACHOOSE_EVENT&agg_m=count&agg_m_source=base&agg_t=count&cols=service%2Cresource_name%2C%40duration%2C%40http.method%2C%40http.status_code%2C%40_span.count%2C%40_duration.by_service&fromUser=false&graphType=flamegraph&historicalData=true&messageDisplay=inline&query_translation_version=v0&shouldShowLegend=true&sort=desc&spanType=all&storage=hot&timeHint=1794206614354&trace=AwAAAaG_DENSwezhiAAAABhBYUdfREV1dUFBRElFbi16WFVQc0NnUzQAAAAkZjFhMWJmMGMtNDY1Yi00YjhmLWI3ZjEtNGY0NDI2YzdhNzc2AAAADw&trace__spanID=8343603351340215695&traceID=13259980332647197655&traceQuery=&view=spans&start=1794206348462&end=1794206717750&paused=true",
+      "permission": "User authorized curated project gameplay and Datadog evidence publication; account/player/session identifiers removed.",
+      "provenance": "../assets/datadog/capture-manifest.json"
+    },
+    {
+      "id": "datadog.collection.dashboard-performance",
+      "source": "../assets/datadog/page-02-player-journey/dashboard-performance.png",
+      "use": "Future Datadog presentation composition; asset collection only",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "origin": "https://us5.datadoghq.com/dashboard/b6t-avm-uyi?fromUser=false&fullscreen_end_ts=1794203921000&fullscreen_paused=true&fullscreen_refresh_mode=paused&fullscreen_section=overview&fullscreen_start_ts=1793599121000&fullscreen_widget=4808068891931255&graph-explorer__tile_def=N4IgbglgXiBcIBcIFsCmBnVAnCGQBoQtUBHAVwwXTgG1R0EBPAG1TlAAcBDVhBN%2BABMA9gHMA%2BgGNmXdOgiSCiRhwEh0w5hEFKA7toQALOCAB2wrMh4gAvoSaqTW020IAzC8jIzqsOiB4IWRMAGQBhAAUAAg4AdgBWJVMyZAAjbHEPSy4EdhAyUwhc2FAHNUkuc0KK5nECoqV6hHFTLjQTTElhUx0bOxAsrxkTEgBGKIB6KNGABjn5%2BdsAXUJybFxff1b2%2BDGlQRyucQ0yLEk1LBSlTC4z4xKQNaxGEwABMthIVF0o164ODhaCpIboAOm2qFgAGsikwALRuLDdfg9KIAElQpjA6MMwgYtkIEB6qAAHng-CAAFQgFYgURIsgccSpF5%2BWldZAcMj8PJcUT01CiHIQbomDiSBJKNAIHCKeCvL66UEyLCiShSZGYhBubzibhE3KE0z8LBgaywAAcADYACwLGb9BgWPlqXG5Gy04joDjdTCZTw5ExINCYHB4OylFRqYRgbAyF6rChhzagDlcnkPPkCoUg0wmLoFd2EA4II4nM5qVCx43UQgQkZJxija6oW6Se6gJ6s9TCU7nWDtypq8QyriSGGmURRUOQfswviMOH-CC2D2EL0%2B0x%2BwaB%2BDBjDrcO0qxYKHYFMgGTpZgmQD2QYBfTUA-X5RABMoPitfAPAoJkYUQAvK%2B75KGUJi6LchSTlEBzoIYqC9PgoBXqgN7wIAd7pRDan5mswP7wH%2BgE2iBUYmNgSJYNBshwb0Sw2EAA&refresh_mode=paused&from_ts=1793599121000&to_ts=1794203921000&live=false",
+      "permission": "User authorized curated project gameplay and Datadog evidence publication; account/player/session identifiers removed.",
+      "provenance": "../assets/datadog/capture-manifest.json"
+    },
+    {
+      "id": "datadog.collection.dashboard-events",
+      "source": "../assets/datadog/page-02-player-journey/dashboard-events.png",
+      "use": "Future Datadog presentation composition; asset collection only",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "origin": "https://us5.datadoghq.com/dashboard/b6t-avm-uyi?fromUser=false&fullscreen_end_ts=1794203921000&fullscreen_paused=true&fullscreen_refresh_mode=paused&fullscreen_section=overview&fullscreen_start_ts=1793599121000&fullscreen_widget=8007315744639109&refresh_mode=paused&from_ts=1793599121000&to_ts=1794203921000&live=false",
+      "permission": "User authorized curated project gameplay and Datadog evidence publication; account/player/session identifiers removed.",
+      "provenance": "../assets/datadog/capture-manifest.json"
+    },
+    {
+      "id": "datadog.collection.dashboard-ai",
+      "source": "../assets/datadog/page-02-player-journey/dashboard-ai.png",
+      "use": "Future Datadog presentation composition; asset collection only",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "origin": "https://us5.datadoghq.com/dashboard/wbx-cm5-me5?fromUser=false&fullscreen_end_ts=1794203921000&fullscreen_paused=true&fullscreen_refresh_mode=paused&fullscreen_section=overview&fullscreen_start_ts=1793599121000&fullscreen_widget=2507372915091162&refresh_mode=paused&from_ts=1793599121000&to_ts=1794203921000&live=false",
+      "permission": "User authorized curated project gameplay and Datadog evidence publication; account/player/session identifiers removed.",
+      "provenance": "../assets/datadog/capture-manifest.json"
+    },
+    {
+      "id": "datadog.collection.synthetics-healthz",
+      "source": "../assets/datadog/page-03-alerts/synthetics-healthz.png",
+      "use": "Future Datadog presentation composition; asset collection only",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "origin": "https://us5.datadoghq.com/synthetics/details/nu2-fet-6dn?from_user=false&refresh_mode=sliding&selectedEventId=summary&tab=test-runs&from_ts=1794203489120&to_ts=1794207089120&live=true",
+      "permission": "User authorized curated project gameplay and Datadog evidence publication; account/player/session identifiers removed.",
+      "provenance": "../assets/datadog/capture-manifest.json"
+    },
+    {
+      "id": "datadog.collection.synthetics-payment-config",
+      "source": "../assets/datadog/page-03-alerts/synthetics-payment-config.png",
+      "use": "Future Datadog presentation composition; asset collection only",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "origin": "https://us5.datadoghq.com/synthetics/details/m5a-scg-gq6?from_user=false&refresh_mode=sliding&selectedEventId=summary&tab=test-runs&from_ts=1794203522015&to_ts=1794207122015&live=true",
+      "permission": "User authorized curated project gameplay and Datadog evidence publication; account/player/session identifiers removed.",
+      "provenance": "../assets/datadog/capture-manifest.json"
+    },
+    {
+      "id": "datadog.collection.event-source-recording",
+      "source": "../assets/datadog/page-01-telemetry/event-source-recording.mp4",
+      "use": "Future Datadog presentation composition; asset collection only",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "origin": "https://starry-kitty.duckdns.org/",
+      "permission": "User authorized curated project gameplay and Datadog evidence publication; account/player/session identifiers removed.",
+      "provenance": "../assets/datadog/capture-manifest.json"
+    },
+    {
+      "id": "datadog.collection.event-idle-loop",
+      "source": "../assets/datadog/page-01-telemetry/event-idle-loop.mp4",
+      "use": "Future Datadog presentation composition; asset collection only",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "origin": "https://starry-kitty.duckdns.org/",
+      "permission": "User authorized curated project gameplay and Datadog evidence publication; account/player/session identifiers removed.",
+      "provenance": "../assets/datadog/capture-manifest.json"
+    },
+    {
+      "id": "datadog.collection.event-response",
+      "source": "../assets/datadog/page-01-telemetry/event-response.mp4",
+      "use": "Future Datadog presentation composition; asset collection only",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "origin": "https://starry-kitty.duckdns.org/",
+      "permission": "User authorized curated project gameplay and Datadog evidence publication; account/player/session identifiers removed.",
+      "provenance": "../assets/datadog/capture-manifest.json"
+    },
+    {
+      "id": "datadog.collection.correlation-evidence",
+      "source": "../assets/datadog/page-01-telemetry/correlation-evidence.json",
+      "use": "Future Datadog presentation composition; asset collection only",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "origin": "https://us5.datadoghq.com/apm/trace/13259980332647197655",
+      "permission": "User authorized curated project gameplay and Datadog evidence publication; account/player/session identifiers removed.",
+      "provenance": "../assets/datadog/capture-manifest.json"
+    },
+    {
+      "id": "datadog.collection.alert-recovery-evidence",
+      "source": "../assets/datadog/page-03-alerts/alert-recovery-evidence.json",
+      "use": "Future Datadog presentation composition; asset collection only",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "origin": "https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/blob/main/evidence/observability/heartbeat-alert-cycle.json",
+      "permission": "User authorized curated project gameplay and Datadog evidence publication; account/player/session identifiers removed.",
+      "provenance": "../assets/datadog/capture-manifest.json"
+    },
+    {
+      "id": "datadog.collection.review-contact-sheet",
+      "source": "../assets/datadog/review-contact-sheet.png",
+      "use": "Future Datadog presentation composition; asset collection only",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "origin": "Local selected evidence derivatives",
+      "permission": "User authorized curated project gameplay and Datadog evidence publication; account/player/session identifiers removed.",
+      "provenance": "../assets/datadog/capture-manifest.json"
     }
   ]
 }

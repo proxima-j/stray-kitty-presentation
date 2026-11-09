@@ -1,0 +1,50 @@
+{
+  "logs": [
+    {
+      "utc": "2026-11-09T06:43:35.279Z",
+      "fields": {
+        "duration_ms": 22.257,
+        "level": "INFO",
+        "method": "POST",
+        "path": "/api/v1/commands",
+        "qa": true,
+        "request_id": "3a7de7e03b2f2904550af0507df11f334f2a1275a02b03d7",
+        "route": "/api/v1/commands",
+        "service": "kitty-api",
+        "status": 200
+      }
+    }
+  ],
+  "spans": [
+    {
+      "command": "CHOOSE_EVENT",
+      "durationMs": 22.280308,
+      "id": "8343603351340215695",
+      "name": "http.request",
+      "parent": "8950747117456615069",
+      "resource": "POST /api/v1/commands",
+      "service": "kitty-api",
+      "status": "200",
+      "trace": "13259980332647197655"
+    },
+    {
+      "durationMs": 818.4,
+      "id": "8950747117456615069",
+      "name": "browser.request",
+      "resource": "/api/v1/commands",
+      "service": "kitty-frontend",
+      "status": "200",
+      "trace": "13259980332647197655"
+    }
+  ],
+  "verifiedAt": "2026-11-09T06:45:04Z",
+  "rum": {
+    "resourceId": "c97d1892-5305-4be8-a8b7-e52e3edf8bc7",
+    "traceId": "13259980332647197655",
+    "spanId": "8950747117456615069",
+    "utc": "2026-11-09T06:43:34.313Z",
+    "httpStatus": 200
+  },
+  "traceparent": "Not retained",
+  "logCorrelation": "Logs queried by the exact fresh trace ID; matching request ID, owned isolated QA player and server result verified privately. Player/session identifiers removed."
+}

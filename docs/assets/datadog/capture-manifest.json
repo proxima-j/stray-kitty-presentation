@@ -1,0 +1,338 @@
+{
+  "collection": "Datadog presentation assets only; no slides implemented",
+  "created_utc": "2026-11-09T06:54:16.427680+00:00",
+  "publication_authorization": "User asset collection brief explicitly requests safe curated evidence under presentation docs/assets/datadog.",
+  "game_revision": {
+    "apm_version": "0.1.0",
+    "deployed_commit": "not independently verified"
+  },
+  "fresh_action": {
+    "command": "CHOOSE_EVENT",
+    "event": "alley:feeder_bowl_event",
+    "choice": "Carry some back for companions (option 02)",
+    "recorder_click_utc": "2026-11-09T06:43:34.911Z",
+    "rum_resource_utc": "2026-11-09T06:43:34.313Z",
+    "api_span_utc": "2026-11-09T06:43:34.332Z",
+    "trace_id": "13259980332647197655",
+    "request_id": "3a7de7e03b2f2904550af0507df11f334f2a1275a02b03d7",
+    "rum_resource_id": "c97d1892-5305-4be8-a8b7-e52e3edf8bc7",
+    "traceparent": "not retained",
+    "qa": true,
+    "http_status": 200,
+    "result": "5 + 6 = 11, success, fish +1 / material +1",
+    "proof": "Same trace in RUM browser span and APM parent relationship; trace-filtered log matches request ID and isolated owned QA player; owned state result privately confirmed. Timestamp proximity alone not used."
+  },
+  "assets": [
+    {
+      "path": "page-01-telemetry/datadog-before.png",
+      "public_path": "docs/assets/datadog/page-01-telemetry/datadog-before.png",
+      "status": "READY",
+      "source_url": "https://us5.datadoghq.com/apm/traces?query=service%3Akitty-api%20env%3Apreview%20%40command.type%3ACHOOSE_EVENT&cols=service%2Cresource_name%2C%40duration%2C%40http.method%2C%40http.status_code%2C%40_span.count%2C%40_duration.by_service&fromUser=false&historicalData=true&messageDisplay=inline&query_translation_version=v0&sort=desc&spanType=all&storage=hot&traceQuery=&view=spans&start=1794206348462&end=1794206418058&paused=true",
+      "captured_utc": "2026-11-09T06:40:58.251Z",
+      "data_time_window": [
+        "2026-11-09T06:39:08.462000Z",
+        "2026-11-09T06:40:18.058000Z"
+      ],
+      "publication": "Cleared curated project evidence; raw player/session/account data excluded.",
+      "method": "Authenticated Datadog UI, identical lossless crop [158,36,1249,712]; no row/metric edits.",
+      "qa": true,
+      "limitations": "Before and after use identical filters and fixed start. Datadog clamps future end to capture time, so the after end extends to include the recorded action and ingestion; timestamps are visible. No instantaneous delivery claim.",
+      "dimensions": [
+        1091,
+        676
+      ]
+    },
+    {
+      "path": "page-01-telemetry/datadog-after.png",
+      "public_path": "docs/assets/datadog/page-01-telemetry/datadog-after.png",
+      "status": "READY",
+      "source_url": "https://us5.datadoghq.com/apm/traces?query=service%3Akitty-api+env%3Apreview+%40command.type%3ACHOOSE_EVENT&cols=service%2Cresource_name%2C%40duration%2C%40http.method%2C%40http.status_code%2C%40_span.count%2C%40_duration.by_service&fromUser=false&historicalData=true&messageDisplay=inline&query_translation_version=v0&sort=desc&spanType=all&storage=hot&traceQuery=&view=spans&start=1794206348462&end=1794206717750&paused=true",
+      "captured_utc": "2026-11-09T06:46:01.850Z",
+      "data_time_window": [
+        "2026-11-09T06:39:08.462000Z",
+        "2026-11-09T06:45:17.750000Z"
+      ],
+      "publication": "Cleared curated project evidence; raw player/session/account data excluded.",
+      "method": "Authenticated Datadog UI, identical lossless crop [158,36,1249,712]; no row/metric edits.",
+      "qa": true,
+      "limitations": "Before and after use identical filters and fixed start. Datadog clamps future end to capture time, so the after end extends to include the recorded action and ingestion; timestamps are visible. No instantaneous delivery claim.",
+      "dimensions": [
+        1091,
+        676
+      ]
+    },
+    {
+      "path": "page-01-telemetry/datadog-trace-detail.png",
+      "public_path": "docs/assets/datadog/page-01-telemetry/datadog-trace-detail.png",
+      "status": "READY",
+      "source_url": "https://us5.datadoghq.com/apm/traces?query=service%3Akitty-api%20env%3Apreview%20%40command.type%3ACHOOSE_EVENT&agg_m=count&agg_m_source=base&agg_t=count&cols=service%2Cresource_name%2C%40duration%2C%40http.method%2C%40http.status_code%2C%40_span.count%2C%40_duration.by_service&fromUser=false&graphType=flamegraph&historicalData=true&messageDisplay=inline&query_translation_version=v0&shouldShowLegend=true&sort=desc&spanType=all&storage=hot&timeHint=1794206614354&trace=AwAAAaG_DENSwezhiAAAABhBYUdfREV1dUFBRElFbi16WFVQc0NnUzQAAAAkZjFhMWJmMGMtNDY1Yi00YjhmLWI3ZjEtNGY0NDI2YzdhNzc2AAAADw&trace__spanID=8343603351340215695&traceID=13259980332647197655&traceQuery=&view=spans&start=1794206348462&end=1794206717750&paused=true",
+      "captured_utc": "2026-11-09T06:47:40.987Z",
+      "data_time_window": [
+        "2026-11-09T06:43:34.313Z",
+        "2026-11-09T06:43:35.279Z"
+      ],
+      "publication": "Cleared curated project evidence; raw player/session/account data excluded.",
+      "method": "Authenticated actual trace UI; lossless crop; solid mask over browser/device/country strip.",
+      "qa": true,
+      "trace_id": "13259980332647197655",
+      "dimensions": [
+        1104,
+        676
+      ]
+    },
+    {
+      "path": "page-02-player-journey/dashboard-performance.png",
+      "public_path": "docs/assets/datadog/page-02-player-journey/dashboard-performance.png",
+      "status": "READY",
+      "source_url": "https://us5.datadoghq.com/dashboard/b6t-avm-uyi?fromUser=false&fullscreen_end_ts=1794203921000&fullscreen_paused=true&fullscreen_refresh_mode=paused&fullscreen_section=overview&fullscreen_start_ts=1793599121000&fullscreen_widget=4808068891931255&graph-explorer__tile_def=N4IgbglgXiBcIBcIFsCmBnVAnCGQBoQtUBHAVwwXTgG1R0EBPAG1TlAAcBDVhBN%2BABMA9gHMA%2BgGNmXdOgiSCiRhwEh0w5hEFKA7toQALOCAB2wrMh4gAvoSaqTW020IAzC8jIzqsOiB4IWRMAGQBhAAUAAg4AdgBWJVMyZAAjbHEPSy4EdhAyUwhc2FAHNUkuc0KK5nECoqV6hHFTLjQTTElhUx0bOxAsrxkTEgBGKIB6KNGABjn5%2BdsAXUJybFxff1b2%2BDGlQRyucQ0yLEk1LBSlTC4z4xKQNaxGEwABMthIVF0o164ODhaCpIboAOm2qFgAGsikwALRuLDdfg9KIAElQpjA6MMwgYtkIEB6qAAHng-CAAFQgFYgURIsgccSpF5%2BWldZAcMj8PJcUT01CiHIQbomDiSBJKNAIHCKeCvL66UEyLCiShSZGYhBubzibhE3KE0z8LBgaywAAcADYACwLGb9BgWPlqXG5Gy04joDjdTCZTw5ExINCYHB4OylFRqYRgbAyF6rChhzagDlcnkPPkCoUg0wmLoFd2EA4II4nM5qVCx43UQgQkZJxija6oW6Se6gJ6s9TCU7nWDtypq8QyriSGGmURRUOQfswviMOH-CC2D2EL0%2B0x%2BwaB%2BDBjDrcO0qxYKHYFMgGTpZgmQD2QYBfTUA-X5RABMoPitfAPAoJkYUQAvK%2B75KGUJi6LchSTlEBzoIYqC9PgoBXqgN7wIAd7pRDan5mswP7wH%2BgE2iBUYmNgSJYNBshwb0Sw2EAA&refresh_mode=paused&from_ts=1793599121000&to_ts=1794203921000&live=false",
+      "captured_utc": "2026-11-09T06:50:39.698Z",
+      "data_time_window": [
+        "2026-11-02T05:58:41Z",
+        "2026-11-09T05:58:41Z"
+      ],
+      "publication": "Cleared curated project evidence; raw player/session/account data excluded.",
+      "method": "Authenticated Datadog Inspect view; lossless modal crop; no configuration edits.",
+      "qa": "Backend event/AI queries exclude qa:true; performance RUM does not exclude QA sessions.",
+      "widget_time_override": null,
+      "limitations": "Small sample, no reliability or optimization-impact claim. LCP is daily p75, not the whole-window percentile. Chart legend AVG is an average of daily points.",
+      "dimensions": [
+        1552,
+        867
+      ]
+    },
+    {
+      "path": "page-02-player-journey/dashboard-events.png",
+      "public_path": "docs/assets/datadog/page-02-player-journey/dashboard-events.png",
+      "status": "READY",
+      "source_url": "https://us5.datadoghq.com/dashboard/b6t-avm-uyi?fromUser=false&fullscreen_end_ts=1794203921000&fullscreen_paused=true&fullscreen_refresh_mode=paused&fullscreen_section=overview&fullscreen_start_ts=1793599121000&fullscreen_widget=8007315744639109&refresh_mode=paused&from_ts=1793599121000&to_ts=1794203921000&live=false",
+      "captured_utc": "2026-11-09T06:50:55.039Z",
+      "data_time_window": [
+        "2026-11-02T05:58:41Z",
+        "2026-11-09T05:58:41Z"
+      ],
+      "publication": "Cleared curated project evidence; raw player/session/account data excluded.",
+      "method": "Authenticated Datadog Inspect view; lossless modal crop; no configuration edits.",
+      "qa": "Backend event/AI queries exclude qa:true; performance RUM does not exclude QA sessions.",
+      "widget_time_override": "Saved widget has live_span 1w; Inspect capture visibly shows fixed Nov 2 13:58â€“Nov 9 13:58 UTC+08.",
+      "limitations": "Small sample, no reliability or optimization-impact claim. LCP is daily p75, not the whole-window percentile. Chart legend AVG is an average of daily points.",
+      "dimensions": [
+        1552,
+        867
+      ]
+    },
+    {
+      "path": "page-02-player-journey/dashboard-ai.png",
+      "public_path": "docs/assets/datadog/page-02-player-journey/dashboard-ai.png",
+      "status": "READY",
+      "source_url": "https://us5.datadoghq.com/dashboard/wbx-cm5-me5?fromUser=false&fullscreen_end_ts=1794203921000&fullscreen_paused=true&fullscreen_refresh_mode=paused&fullscreen_section=overview&fullscreen_start_ts=1793599121000&fullscreen_widget=2507372915091162&refresh_mode=paused&from_ts=1793599121000&to_ts=1794203921000&live=false",
+      "captured_utc": "2026-11-09T06:51:18.587Z",
+      "data_time_window": [
+        "2026-11-02T05:58:41Z",
+        "2026-11-09T05:58:41Z"
+      ],
+      "publication": "Cleared curated project evidence; raw player/session/account data excluded.",
+      "method": "Authenticated Datadog Inspect view; lossless modal crop; no configuration edits.",
+      "qa": "Backend event/AI queries exclude qa:true; performance RUM does not exclude QA sessions.",
+      "widget_time_override": "Saved widget has live_span 1w; Inspect capture uses explicit fixed window.",
+      "limitations": "Small sample, no reliability or optimization-impact claim. LCP is daily p75, not the whole-window percentile. Chart legend AVG is an average of daily points.",
+      "dimensions": [
+        1552,
+        867
+      ]
+    },
+    {
+      "path": "page-03-alerts/synthetics-healthz.png",
+      "public_path": "docs/assets/datadog/page-03-alerts/synthetics-healthz.png",
+      "status": "READY",
+      "source_url": "https://us5.datadoghq.com/synthetics/details/nu2-fet-6dn?from_user=false&refresh_mode=sliding&selectedEventId=summary&tab=test-runs&from_ts=1794203489120&to_ts=1794207089120&live=true",
+      "captured_utc": "2026-11-09T06:51:56.470Z",
+      "data_time_window": [
+        "2026-11-09T05:51:29.120000Z",
+        "2026-11-09T06:51:29.120000Z"
+      ],
+      "publication": "Cleared curated project evidence; raw player/session/account data excluded.",
+      "method": "Authenticated scheduled Test Runs UI; lossless crop; creator account masked.",
+      "qa": false,
+      "results": [
+        {
+          "location": "Tokyo (AWS)",
+          "result": "PASSED",
+          "timeUTC": "2026-11-09T06:50:00Z",
+          "precision": "minute",
+          "durationMs": 323
+        },
+        {
+          "location": "Seoul (AWS)",
+          "result": "PASSED",
+          "timeUTC": "2026-11-09T06:50:00Z",
+          "precision": "minute",
+          "durationMs": 588
+        }
+      ],
+      "limitations": "HTTP status 200 endpoint reachability checks only; not full gameplay or checkout. UI timestamps have minute precision and UTC+08 offset.",
+      "dimensions": [
+        1360,
+        564
+      ]
+    },
+    {
+      "path": "page-03-alerts/synthetics-payment-config.png",
+      "public_path": "docs/assets/datadog/page-03-alerts/synthetics-payment-config.png",
+      "status": "READY",
+      "source_url": "https://us5.datadoghq.com/synthetics/details/m5a-scg-gq6?from_user=false&refresh_mode=sliding&selectedEventId=summary&tab=test-runs&from_ts=1794203522015&to_ts=1794207122015&live=true",
+      "captured_utc": "2026-11-09T06:52:28.177Z",
+      "data_time_window": [
+        "2026-11-09T05:52:02.015000Z",
+        "2026-11-09T06:52:02.015000Z"
+      ],
+      "publication": "Cleared curated project evidence; raw player/session/account data excluded.",
+      "method": "Authenticated scheduled Test Runs UI; lossless crop; creator account masked.",
+      "qa": false,
+      "results": [
+        {
+          "location": "Tokyo (AWS)",
+          "result": "PASSED",
+          "timeUTC": "2026-11-09T06:49:00Z",
+          "precision": "minute",
+          "durationMs": 480
+        },
+        {
+          "location": "Seoul (AWS)",
+          "result": "PASSED",
+          "timeUTC": "2026-11-09T06:49:00Z",
+          "precision": "minute",
+          "durationMs": 605
+        }
+      ],
+      "limitations": "HTTP status 200 endpoint reachability checks only; not full gameplay or checkout. UI timestamps have minute precision and UTC+08 offset.",
+      "dimensions": [
+        1360,
+        564
+      ]
+    },
+    {
+      "path": "page-01-telemetry/event-source-recording.mp4",
+      "public_path": "docs/assets/datadog/page-01-telemetry/event-source-recording.mp4",
+      "status": "READY",
+      "source_url": "https://starry-kitty.duckdns.org/",
+      "captured_utc": "2026-11-09T06:43:29.903Z",
+      "data_time_window": [
+        "2026-11-09T06:43:29.903Z",
+        "2026-11-09T06:43:42.877Z"
+      ],
+      "publication": "Cleared curated project evidence; raw player/session/account data excluded.",
+      "method": "One actual isolated QA event; native Playwright 1600x900/25fps capture, H.264 CRF18 and faststart. Genuine WebAudio output duplicated into MediaStreamDestination and recorded separately, then AAC muxed.",
+      "qa": true,
+      "duration_seconds": 13,
+      "dimensions": [
+        1600,
+        900
+      ],
+      "audio": "AAC 48kHz stereo original game audio",
+      "limitations": "Audio/video streams independently recorded; tail-based alignment is approximate. Native rain may have a small loop boundary; no regenerated frames or dice effects. Deployed APM version 0.1.0; deployed commit not independently established."
+    },
+    {
+      "path": "page-01-telemetry/event-idle-loop.mp4",
+      "public_path": "docs/assets/datadog/page-01-telemetry/event-idle-loop.mp4",
+      "status": "READY",
+      "source_url": "https://starry-kitty.duckdns.org/",
+      "captured_utc": "2026-11-09T06:43:29.903Z",
+      "data_time_window": [
+        "2026-11-09T06:43:29.903Z",
+        "2026-11-09T06:43:42.877Z"
+      ],
+      "publication": "Cleared curated project evidence; raw player/session/account data excluded.",
+      "method": "One actual isolated QA event; native Playwright 1600x900/25fps capture, H.264 CRF18 and faststart. Genuine WebAudio output duplicated into MediaStreamDestination and recorded separately, then AAC muxed.",
+      "qa": true,
+      "duration_seconds": 4.96,
+      "dimensions": [
+        1600,
+        900
+      ],
+      "audio": "Muted derivative; original audio preserved privately.",
+      "limitations": "Audio/video streams independently recorded; tail-based alignment is approximate. Native rain may have a small loop boundary; no regenerated frames or dice effects. Deployed APM version 0.1.0; deployed commit not independently established."
+    },
+    {
+      "path": "page-01-telemetry/event-response.mp4",
+      "public_path": "docs/assets/datadog/page-01-telemetry/event-response.mp4",
+      "status": "READY",
+      "source_url": "https://starry-kitty.duckdns.org/",
+      "captured_utc": "2026-11-09T06:43:29.903Z",
+      "data_time_window": [
+        "2026-11-09T06:43:29.903Z",
+        "2026-11-09T06:43:42.877Z"
+      ],
+      "publication": "Cleared curated project evidence; raw player/session/account data excluded.",
+      "method": "One actual isolated QA event; native Playwright 1600x900/25fps capture, H.264 CRF18 and faststart. Genuine WebAudio output duplicated into MediaStreamDestination and recorded separately, then AAC muxed.",
+      "qa": true,
+      "duration_seconds": 6,
+      "dimensions": [
+        1600,
+        900
+      ],
+      "audio": "AAC 48kHz stereo original game audio",
+      "limitations": "Audio/video streams independently recorded; tail-based alignment is approximate. Native rain may have a small loop boundary; no regenerated frames or dice effects. Deployed APM version 0.1.0; deployed commit not independently established."
+    },
+    {
+      "path": "page-01-telemetry/correlation-evidence.json",
+      "public_path": "docs/assets/datadog/page-01-telemetry/correlation-evidence.json",
+      "status": "READY",
+      "source_url": "https://us5.datadoghq.com/apm/trace/13259980332647197655",
+      "captured_utc": "2026-11-09",
+      "data_time_window": null,
+      "publication": "Cleared curated project evidence; raw player/session/account data excluded.",
+      "method": "Sanitized APM/RUM/log API verification",
+      "qa": true,
+      "limitations": "Traceparent header not retained. Private player/session identifiers excluded; clock readings differ by about 0.6 seconds."
+    },
+    {
+      "path": "page-03-alerts/alert-recovery-evidence.json",
+      "public_path": "docs/assets/datadog/page-03-alerts/alert-recovery-evidence.json",
+      "status": "READY",
+      "source_url": "https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/blob/main/evidence/observability/heartbeat-alert-cycle.json",
+      "captured_utc": "2026-11-09",
+      "data_time_window": null,
+      "publication": "Cleared curated project evidence; raw player/session/account data excluded.",
+      "method": "Committed historical JSON, not a recreated monitor screenshot",
+      "qa": true,
+      "limitations": "Original monitor UI unavailable in US5; historical controlled stop/restart test."
+    },
+    {
+      "path": "review-contact-sheet.png",
+      "public_path": "docs/assets/datadog/review-contact-sheet.png",
+      "status": "READY",
+      "source_url": "Local selected evidence derivatives",
+      "captured_utc": "2026-11-09",
+      "data_time_window": [
+        "2026-11-02T05:58:41Z",
+        "2026-11-09T05:58:41Z"
+      ],
+      "publication": "Cleared curated project evidence; raw player/session/account data excluded.",
+      "method": "Clearly labelled review collage of genuine selected assets; no simulated Datadog interface.",
+      "limitations": "Review thumbnails only; use full-resolution source assets for composition.",
+      "dimensions": [
+        1600,
+        1410
+      ]
+    }
+  ],
+  "omissions": [
+    {
+      "asset": "alert-recovery-evidence.png",
+      "status": "PARTIAL",
+      "reason": "Historical monitor UI inaccessible in US5; exact committed JSON retained instead. Controlled 2026-11-02 container stop/restart, ALERT 19:19:28Z, RECOVERY 19:26:28Z."
+    },
+    {
+      "asset": "phone-notification",
+      "status": "OPTIONAL / NOT VERIFIED",
+      "reason": "No verified mobile notification. No emulator install, test alerts, faults or notification settings changes."
+    }
+  ],
+  "private_sources": "Native original WEBM, original audio, uncropped UI captures, owned QA identifiers and timing metadata retained only in local private-originals; never uploaded.",
+  "verification": {
+    "video": "H.264 decode and selected action/result frames verified; response includes original non-silent AAC audio, -38.3dB mean / -25.2dB peak. Idle muted.",
+    "correlation": "Fresh RUM/APM/log and owned QA result confirmed.",
+    "screenshots": "Real authenticated UI, fixed global and Inspect windows checked, same APM crop, account/device redactions documented.",
+    "runtime": "Current, Previous, v3 engine and game repository unchanged."
+  }
+}
