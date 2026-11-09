@@ -8,7 +8,7 @@
 | --- | --- | --- |
 | 20 | [Cross-Team Collaboration](https://proxima-j.github.io/stray-kitty-presentation/?page=cross-team-collaboration) | Four local stages; distinct coordination/delivery tracks; daily checks; genuine evidence inspection |
 | 21 | [Design. Test. Rethink.](https://proxima-j.github.io/stray-kitty-presentation/?page=design-test-rethink) | Original iteration loop, dice grids and AI scope comparison |
-| 22 | [A More Connected World](https://proxima-j.github.io/stray-kitty-presentation/?page=connected-world) | Four existing systems around Living World; bidirectional future influences |
+| 22 | [A Dynamic, Living World](https://proxima-j.github.io/stray-kitty-presentation/?page=connected-world) | Four existing systems around Living World; bidirectional future influences |
 
 Production markup is in `docs/index.html`; styles and behavior are scoped in `docs/teamwork.css` and `docs/teamwork.js`. After public Current and Previous verification, the three superseded review compositions and four unused dedicated CSS/JS files were retired. Their originals remain available in normal Git history.
 

@@ -71,7 +71,7 @@ The latest Page 16 update aligns both confirmation and image to November 6 / pip
 
 - [Page 20 — Cross-Team Collaboration](../?page=cross-team-collaboration): four local stages and genuine GitLab Work Item #4 / merged !80 via !81 / focused follow-up QA. Distinct coordination and delivery tracks; daily alignment; inspectable original evidence.
 - [Page 21 — Design. Test. Rethink.](../?page=design-test-rethink): approved iteration loop, both ordinary-2d6 matrices and the AI design-scope comparison.
-- [Page 22 — A More Connected World](../?page=connected-world): four existing game images around Living World, with bidirectional connections and explicit future-direction labels.
+- [Page 22 — A Dynamic, Living World](../?page=connected-world): four existing game images around Living World, with bidirectional connections and explicit future-direction labels.
 
 The 22-scene candidate passed local checks at 1600×900 and 1366×768, then the published Current and outgoing 19-scene Previous were checked. The three superseded Teamwork review HTML pages and their four now-unused dedicated CSS/JS files were removed only after public verification. Shared review dependencies and unrelated reviews remain.
 

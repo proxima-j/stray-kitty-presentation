@@ -125,7 +125,7 @@
     },
     {
       "id": "scene.connected-world",
-      "use": "A More Connected World",
+      "use": "A Dynamic, Living World",
       "source": "../index.html#connected-world",
       "styles": "../teamwork.css",
       "script": "../teamwork.js",

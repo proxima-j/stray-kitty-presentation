@@ -3,7 +3,7 @@
     "entry": "./",
     "candidate_base_commit": "89e52a078d0e2ff4ad03fa1ff3250abd9d9d5155",
     "build_marker": "20261109-teamwork-focus1",
-    "description": "Twenty-two scenes: complete technical/Datadog section, then Cross-Team Collaboration, Design. Test. Rethink., A More Connected World. No Closing/Q&A.",
+    "description": "Twenty-two scenes: complete technical/Datadog section, then Cross-Team Collaboration, Design. Test. Rethink., A Dynamic, Living World. No Closing/Q&A.",
     "publication_status": "VERIFIED",
     "local_verified_at": "2026-11-09T13:26:55.643265+00:00",
     "verification_notes": "Focused candidate browser checks at 1600x900 and 1366x768. Four local stages, matching text/evidence, Next/Previous, focused Space isolation and full-image inspection; 36-cell grids with 10/6 failures; four shared future images and six bidirectional connectors. Forward/back through 19-22; opening full film plays with sound and manual skip; existing dialogue interaction. Prior 19 scene blocks and all runtime files byte-identical; original v3 4200ms beat, single cat and route preserved. GitLab evidence #4 notes 8317/8605/9310, related merged !80 via integration !81; no formal approval invented.",

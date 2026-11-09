@@ -100,7 +100,7 @@ Datadog follow-up maintenance: smaller Page 17 WebP/720p H.264-AAC delivery copi
 
 ## Teamwork & Future — Pages 20–22
 
-The entire technical/Datadog walkthrough is followed by [Cross-Team Collaboration](https://proxima-j.github.io/stray-kitty-presentation/?page=cross-team-collaboration), [Design. Test. Rethink.](https://proxima-j.github.io/stray-kitty-presentation/?page=design-test-rethink) and [A More Connected World](https://proxima-j.github.io/stray-kitty-presentation/?page=connected-world). No Closing/Q&A scene was added.
+The entire technical/Datadog walkthrough is followed by [Cross-Team Collaboration](https://proxima-j.github.io/stray-kitty-presentation/?page=cross-team-collaboration), [Design. Test. Rethink.](https://proxima-j.github.io/stray-kitty-presentation/?page=design-test-rethink) and [A Dynamic, Living World](https://proxima-j.github.io/stray-kitty-presentation/?page=connected-world). No Closing/Q&A scene was added.
 
 The approved compositions are native v3 scenes, with scoped `teamwork.css` / `teamwork.js`. The four-stage walkthrough uses genuine Work Item #4 notes 8317, 8605 and 9310, and merged fix MR !80, integrated through !81. No formal MR approval is claimed. Follow-up QA covers tested major routes, not every branch; daily checks remain a workflow explanation. Click each evidence image to inspect the actual excerpt.
 
