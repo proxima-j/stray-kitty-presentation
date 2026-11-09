@@ -1,0 +1,421 @@
+{
+  "purpose": "Compare titled stacks with two consecutive screenshot columns. Overview is always side by side. The original approved review and Current/Previous stay unchanged.",
+  "captures": [
+    {
+      "dashboard": "b6t-avm-uyi",
+      "source": "https://us5.datadoghq.com/dashboard/b6t-avm-uyi?fromUser=false&refresh_mode=paused&from_ts=1793599121000&to_ts=1794203921000&live=false",
+      "captured_utc": "2026-11-09T09:48:56.901Z",
+      "fixed_global_window": [
+        "2026-11-02T05:58:41Z",
+        "2026-11-09T05:58:41Z"
+      ],
+      "groups": [
+        {
+          "title": "",
+          "y": 329.01043701171875
+        },
+        {
+          "title": "",
+          "y": 1160.0833740234375
+        },
+        {
+          "title": "",
+          "y": 1621.791748046875
+        },
+        {
+          "title": "",
+          "y": 1898.822998046875
+        },
+        {
+          "title": "",
+          "y": 2360.53125
+        },
+        {
+          "title": "",
+          "y": 2637.55224609375
+        },
+        {
+          "title": "",
+          "y": 2914.58349609375
+        },
+        {
+          "title": "",
+          "y": 3191.604248046875
+        },
+        {
+          "title": "",
+          "y": 3653.3125
+        },
+        {
+          "title": "",
+          "y": 4115.02099609375
+        }
+      ],
+      "method": "Full-page capture with tall viewport so selected sections are rendered; contiguous crops only."
+    },
+    {
+      "dashboard": "wbx-cm5-me5",
+      "source": "https://us5.datadoghq.com/dashboard/wbx-cm5-me5?fromUser=false&refresh_mode=paused&from_ts=1793599121000&to_ts=1794203921000&live=false",
+      "captured_utc": "2026-11-09T09:48:56.974Z",
+      "fixed_global_window": [
+        "2026-11-02T05:58:41Z",
+        "2026-11-09T05:58:41Z"
+      ],
+      "privacy": "Raw original contains a player/session log section; it stays private. Curated crops end before that section.",
+      "method": "Full-page capture with tall viewport so selected sections are rendered; contiguous crops only."
+    },
+    {
+      "dashboard": "tiy-p7i-rek",
+      "source": "https://us5.datadoghq.com/dashboard/tiy-p7i-rek?fromUser=false&refresh_mode=paused&from_ts=1794211200000&to_ts=1794214800000&live=false",
+      "captured_utc": "2026-11-09T09:49:48.351Z",
+      "fixed_global_window": [
+        "2026-11-09T08:00:00Z",
+        "2026-11-09T09:00:00Z"
+      ],
+      "method": "Full-page capture with tall viewport so selected sections are rendered; contiguous crops only."
+    }
+  ],
+  "processing": "Lossless rectangular section crops only. Both layouts reuse the same PNG files; column strips place consecutive crops directly together. No values, labels or status colours reconstructed. Browser screenshots with blank/lazy widgets were rejected; final sources use tall viewports with all selected sections rendered.",
+  "privacy": "Private originals contain account UI and, in Business, player/session logs. Only crops before the log section are published.",
+  "limitations": "Dashboard text and values retain the original Chinese UI. Backend business queries generally exclude qa:true; public RUM may include QA. Global fixed windows coexist with widget-level 1w overrides and prior-period comparisons; displayed ratios are small samples, not reliability claims. Blank/No Data chart states remain genuine. Overview capture uses a different selected window from the two detail dashboards.",
+  "assets": [
+    {
+      "id": "datadog.composition.overview-01",
+      "source": "../assets/datadog/composition-review/overview-01.png",
+      "use": "Standalone A/B composition review; authentic contiguous dashboard section",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "origin": "https://us5.datadoghq.com/dashboard/tiy-p7i-rek?fromUser=false&refresh_mode=paused&from_ts=1794211200000&to_ts=1794214800000&live=false",
+      "permission": "User requested two public composition reviews using genuine dashboard sections. Account/navigation and player/session logs excluded.",
+      "metadata": {
+        "crop_xyxy": [
+          174,
+          329,
+          1555,
+          1850
+        ],
+        "dimensions": [
+          1381,
+          1521
+        ],
+        "capture_batch_completed_utc": "2026-11-09T09:49:48.351Z",
+        "global_window": [
+          "2026-11-09T08:00:00Z",
+          "2026-11-09T09:00:00Z"
+        ]
+      },
+      "provenance": "../assets/datadog/composition-review/provenance.json"
+    },
+    {
+      "id": "datadog.composition.overview-02",
+      "source": "../assets/datadog/composition-review/overview-02.png",
+      "use": "Standalone A/B composition review; authentic contiguous dashboard section",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "origin": "https://us5.datadoghq.com/dashboard/tiy-p7i-rek?fromUser=false&refresh_mode=paused&from_ts=1794211200000&to_ts=1794214800000&live=false",
+      "permission": "User requested two public composition reviews using genuine dashboard sections. Account/navigation and player/session logs excluded.",
+      "metadata": {
+        "crop_xyxy": [
+          174,
+          1850,
+          1555,
+          3371
+        ],
+        "dimensions": [
+          1381,
+          1521
+        ],
+        "capture_batch_completed_utc": "2026-11-09T09:49:48.351Z",
+        "global_window": [
+          "2026-11-09T08:00:00Z",
+          "2026-11-09T09:00:00Z"
+        ]
+      },
+      "provenance": "../assets/datadog/composition-review/provenance.json"
+    },
+    {
+      "id": "datadog.composition.performance-01",
+      "source": "../assets/datadog/composition-review/performance-01.png",
+      "use": "Standalone A/B composition review; authentic contiguous dashboard section",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "origin": "https://us5.datadoghq.com/dashboard/b6t-avm-uyi?fromUser=false&refresh_mode=paused&from_ts=1793599121000&to_ts=1794203921000&live=false",
+      "permission": "User requested two public composition reviews using genuine dashboard sections. Account/navigation and player/session logs excluded.",
+      "metadata": {
+        "crop_xyxy": [
+          174,
+          329,
+          1555,
+          1160
+        ],
+        "dimensions": [
+          1381,
+          831
+        ],
+        "capture_batch_completed_utc": "2026-11-09T09:49:48.351Z",
+        "global_window": [
+          "2026-11-02T05:58:41Z",
+          "2026-11-09T05:58:41Z"
+        ]
+      },
+      "provenance": "../assets/datadog/composition-review/provenance.json"
+    },
+    {
+      "id": "datadog.composition.performance-02",
+      "source": "../assets/datadog/composition-review/performance-02.png",
+      "use": "Standalone A/B composition review; authentic contiguous dashboard section",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "origin": "https://us5.datadoghq.com/dashboard/b6t-avm-uyi?fromUser=false&refresh_mode=paused&from_ts=1793599121000&to_ts=1794203921000&live=false",
+      "permission": "User requested two public composition reviews using genuine dashboard sections. Account/navigation and player/session logs excluded.",
+      "metadata": {
+        "crop_xyxy": [
+          174,
+          1160,
+          1555,
+          1622
+        ],
+        "dimensions": [
+          1381,
+          462
+        ],
+        "capture_batch_completed_utc": "2026-11-09T09:49:48.351Z",
+        "global_window": [
+          "2026-11-02T05:58:41Z",
+          "2026-11-09T05:58:41Z"
+        ]
+      },
+      "provenance": "../assets/datadog/composition-review/provenance.json"
+    },
+    {
+      "id": "datadog.composition.performance-03",
+      "source": "../assets/datadog/composition-review/performance-03.png",
+      "use": "Standalone A/B composition review; authentic contiguous dashboard section",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "origin": "https://us5.datadoghq.com/dashboard/b6t-avm-uyi?fromUser=false&refresh_mode=paused&from_ts=1793599121000&to_ts=1794203921000&live=false",
+      "permission": "User requested two public composition reviews using genuine dashboard sections. Account/navigation and player/session logs excluded.",
+      "metadata": {
+        "crop_xyxy": [
+          174,
+          1622,
+          1555,
+          1899
+        ],
+        "dimensions": [
+          1381,
+          277
+        ],
+        "capture_batch_completed_utc": "2026-11-09T09:49:48.351Z",
+        "global_window": [
+          "2026-11-02T05:58:41Z",
+          "2026-11-09T05:58:41Z"
+        ]
+      },
+      "provenance": "../assets/datadog/composition-review/provenance.json"
+    },
+    {
+      "id": "datadog.composition.events-01",
+      "source": "../assets/datadog/composition-review/events-01.png",
+      "use": "Standalone A/B composition review; authentic contiguous dashboard section",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "origin": "https://us5.datadoghq.com/dashboard/b6t-avm-uyi?fromUser=false&refresh_mode=paused&from_ts=1793599121000&to_ts=1794203921000&live=false",
+      "permission": "User requested two public composition reviews using genuine dashboard sections. Account/navigation and player/session logs excluded.",
+      "metadata": {
+        "crop_xyxy": [
+          174,
+          1899,
+          1555,
+          2361
+        ],
+        "dimensions": [
+          1381,
+          462
+        ],
+        "capture_batch_completed_utc": "2026-11-09T09:49:48.351Z",
+        "global_window": [
+          "2026-11-02T05:58:41Z",
+          "2026-11-09T05:58:41Z"
+        ]
+      },
+      "provenance": "../assets/datadog/composition-review/provenance.json"
+    },
+    {
+      "id": "datadog.composition.events-02",
+      "source": "../assets/datadog/composition-review/events-02.png",
+      "use": "Standalone A/B composition review; authentic contiguous dashboard section",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "origin": "https://us5.datadoghq.com/dashboard/b6t-avm-uyi?fromUser=false&refresh_mode=paused&from_ts=1793599121000&to_ts=1794203921000&live=false",
+      "permission": "User requested two public composition reviews using genuine dashboard sections. Account/navigation and player/session logs excluded.",
+      "metadata": {
+        "crop_xyxy": [
+          174,
+          2361,
+          1555,
+          2638
+        ],
+        "dimensions": [
+          1381,
+          277
+        ],
+        "capture_batch_completed_utc": "2026-11-09T09:49:48.351Z",
+        "global_window": [
+          "2026-11-02T05:58:41Z",
+          "2026-11-09T05:58:41Z"
+        ]
+      },
+      "provenance": "../assets/datadog/composition-review/provenance.json"
+    },
+    {
+      "id": "datadog.composition.events-03",
+      "source": "../assets/datadog/composition-review/events-03.png",
+      "use": "Standalone A/B composition review; authentic contiguous dashboard section",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "origin": "https://us5.datadoghq.com/dashboard/b6t-avm-uyi?fromUser=false&refresh_mode=paused&from_ts=1793599121000&to_ts=1794203921000&live=false",
+      "permission": "User requested two public composition reviews using genuine dashboard sections. Account/navigation and player/session logs excluded.",
+      "metadata": {
+        "crop_xyxy": [
+          174,
+          2638,
+          1555,
+          2915
+        ],
+        "dimensions": [
+          1381,
+          277
+        ],
+        "capture_batch_completed_utc": "2026-11-09T09:49:48.351Z",
+        "global_window": [
+          "2026-11-02T05:58:41Z",
+          "2026-11-09T05:58:41Z"
+        ]
+      },
+      "provenance": "../assets/datadog/composition-review/provenance.json"
+    },
+    {
+      "id": "datadog.composition.events-04",
+      "source": "../assets/datadog/composition-review/events-04.png",
+      "use": "Standalone A/B composition review; authentic contiguous dashboard section",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "origin": "https://us5.datadoghq.com/dashboard/b6t-avm-uyi?fromUser=false&refresh_mode=paused&from_ts=1793599121000&to_ts=1794203921000&live=false",
+      "permission": "User requested two public composition reviews using genuine dashboard sections. Account/navigation and player/session logs excluded.",
+      "metadata": {
+        "crop_xyxy": [
+          174,
+          2915,
+          1555,
+          3192
+        ],
+        "dimensions": [
+          1381,
+          277
+        ],
+        "capture_batch_completed_utc": "2026-11-09T09:49:48.351Z",
+        "global_window": [
+          "2026-11-02T05:58:41Z",
+          "2026-11-09T05:58:41Z"
+        ]
+      },
+      "provenance": "../assets/datadog/composition-review/provenance.json"
+    },
+    {
+      "id": "datadog.composition.advisor-01",
+      "source": "../assets/datadog/composition-review/advisor-01.png",
+      "use": "Standalone A/B composition review; authentic contiguous dashboard section",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "origin": "https://us5.datadoghq.com/dashboard/wbx-cm5-me5?fromUser=false&refresh_mode=paused&from_ts=1793599121000&to_ts=1794203921000&live=false",
+      "permission": "User requested two public composition reviews using genuine dashboard sections. Account/navigation and player/session logs excluded.",
+      "metadata": {
+        "crop_xyxy": [
+          174,
+          329,
+          1555,
+          791
+        ],
+        "dimensions": [
+          1381,
+          462
+        ],
+        "capture_batch_completed_utc": "2026-11-09T09:49:48.351Z",
+        "global_window": [
+          "2026-11-02T05:58:41Z",
+          "2026-11-09T05:58:41Z"
+        ]
+      },
+      "provenance": "../assets/datadog/composition-review/provenance.json"
+    },
+    {
+      "id": "datadog.composition.advisor-02",
+      "source": "../assets/datadog/composition-review/advisor-02.png",
+      "use": "Standalone A/B composition review; authentic contiguous dashboard section",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "origin": "https://us5.datadoghq.com/dashboard/wbx-cm5-me5?fromUser=false&refresh_mode=paused&from_ts=1793599121000&to_ts=1794203921000&live=false",
+      "permission": "User requested two public composition reviews using genuine dashboard sections. Account/navigation and player/session logs excluded.",
+      "metadata": {
+        "crop_xyxy": [
+          174,
+          791,
+          1555,
+          1253
+        ],
+        "dimensions": [
+          1381,
+          462
+        ],
+        "capture_batch_completed_utc": "2026-11-09T09:49:48.351Z",
+        "global_window": [
+          "2026-11-02T05:58:41Z",
+          "2026-11-09T05:58:41Z"
+        ]
+      },
+      "provenance": "../assets/datadog/composition-review/provenance.json"
+    },
+    {
+      "id": "datadog.composition.advisor-03",
+      "source": "../assets/datadog/composition-review/advisor-03.png",
+      "use": "Standalone A/B composition review; authentic contiguous dashboard section",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "origin": "https://us5.datadoghq.com/dashboard/wbx-cm5-me5?fromUser=false&refresh_mode=paused&from_ts=1793599121000&to_ts=1794203921000&live=false",
+      "permission": "User requested two public composition reviews using genuine dashboard sections. Account/navigation and player/session logs excluded.",
+      "metadata": {
+        "crop_xyxy": [
+          174,
+          1253,
+          1555,
+          1715
+        ],
+        "dimensions": [
+          1381,
+          462
+        ],
+        "capture_batch_completed_utc": "2026-11-09T09:49:48.351Z",
+        "global_window": [
+          "2026-11-02T05:58:41Z",
+          "2026-11-09T05:58:41Z"
+        ]
+      },
+      "provenance": "../assets/datadog/composition-review/provenance.json"
+    },
+    {
+      "id": "datadog.composition.advisor-04",
+      "source": "../assets/datadog/composition-review/advisor-04.png",
+      "use": "Standalone A/B composition review; authentic contiguous dashboard section",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "origin": "https://us5.datadoghq.com/dashboard/wbx-cm5-me5?fromUser=false&refresh_mode=paused&from_ts=1793599121000&to_ts=1794203921000&live=false",
+      "permission": "User requested two public composition reviews using genuine dashboard sections. Account/navigation and player/session logs excluded.",
+      "metadata": {
+        "crop_xyxy": [
+          174,
+          1715,
+          1555,
+          2176
+        ],
+        "dimensions": [
+          1381,
+          461
+        ],
+        "capture_batch_completed_utc": "2026-11-09T09:49:48.351Z",
+        "global_window": [
+          "2026-11-02T05:58:41Z",
+          "2026-11-09T05:58:41Z"
+        ]
+      },
+      "provenance": "../assets/datadog/composition-review/provenance.json"
+    }
+  ]
+}

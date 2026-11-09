@@ -377,5 +377,21 @@
       "status": "JSON reconfirmed on latest main. Original monitor 339853048 returns 404 in the connected US5 organization; original US1 browser view requires sign-in. Slack browser session requires workspace sign-in and no Slack connector is available. Matching notification screenshots could not be verified; placeholders retained."
     },
     "phone": "No verified phone screenshot/recording in supplied conversation or project/staging assets. Separate emulator attempt is paused at Google sign-in; no install or alert triggered in this refinement task. Placeholder retained."
+  },
+  "composition_comparison": {
+    "review": "review/datadog-02-composition-review.html",
+    "options": [
+      "?layout=stacked&tab=performance",
+      "?layout=spread&tab=performance"
+    ],
+    "tabs": [
+      "Overview",
+      "Player Experience",
+      "Gameplay Events",
+      "Business & AI"
+    ],
+    "overview": "Locked side by side in both options",
+    "source_inventory": "assets/datadog/composition-review/provenance.json",
+    "processing": "13 authentic contiguous section crops reused by both layouts; no metric or status reconstruction; original sources retained privately."
   }
 }

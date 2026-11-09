@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>Stray Kitty — Observability Across the Game · A/B Composition Review</title>
+<link rel="stylesheet" href="../library/tokens.css"><link rel="stylesheet" href="datadog-preview.css"><style>
+/* Standalone Overview review; the production deck is unchanged. */
+.dd-overview-copy{gap:clamp(10px,1.4vh,17px)}
+.dd-overview-copy h2{font-size:clamp(20px,1.65vw,27px)}
+.dd-coverage h3{font:400 clamp(17px,1.3vw,21px)/1.2 var(--display);margin:0 0 6px}
+.dd-coverage p{font-size:clamp(12px,.95vw,15px);line-height:1.5}
+.dd-overview-image{color:inherit}
+.dd-tabrow{gap:clamp(6px,.7vw,12px)}
+.dd-select{padding:9px clamp(10px,1.4vw,21px)}
+</style><link rel="stylesheet" href="datadog-composition-review.css"></head>
+<body>
+<main class="dd-page" id="ddDashboardPreview" aria-label="Datadog page 2 dashboard review">
+ <div class="section-label"><span class="number-pill">18</span>TECHNICAL WALKTHROUGH / DATADOG
+ <div class="composition-picker" aria-label="Choose a composition"><button type="button" class="dd-button" data-layout="stacked">A · Titled stack</button><button type="button" class="dd-button" data-layout="spread">B · Side by side</button></div></div>
+ <header class="page-intro"><h1>Observability Across the Game</h1><p>From system health to player behavior, all in one monitoring workflow.</p></header>
+ <div class="dd-tabrow" role="tablist" aria-label="Choose a Datadog dashboard insight">
+  <button class="dd-select" role="tab" data-dashboard-tab="overview" aria-selected="true" aria-controls="ddOverview" type="button">01 · Overview</button>
+  <button class="dd-select" role="tab" data-dashboard-tab="performance" aria-selected="false" aria-controls="ddPerformance" type="button">02 · Player Experience</button>
+  <button class="dd-select" role="tab" data-dashboard-tab="events" aria-selected="false" aria-controls="ddEvents" type="button">03 · Gameplay Events</button>
+  <button class="dd-select" role="tab" data-dashboard-tab="advisor" aria-selected="false" aria-controls="ddAdvisor" type="button">04 · Business &amp; AI</button>
+ </div>
+ <div class="dd-hero">
+  <section id="ddOverview" class="dd-dashboard-shell dd-overview-layout" data-dashboard-panel="overview" role="tabpanel">
+   <div class="dd-frame composition-board" data-board="overview" aria-label="Authentic dashboard section composition"></div>
+   <aside class="dd-frame dd-analysis dd-overview-copy">
+    <span class="dd-label">ENGINEERING + PRODUCT VISIBILITY</span>
+    <h2>We monitor both how the game runs and how it is played.</h2>
+    <div class="dd-coverage"><h3>Technical Health</h3><p>APM, traces and logs<br>Service performance<br>Alerts, SLOs and external monitoring</p></div>
+    <div class="dd-coverage"><h3>Gameplay &amp; Business</h3><p>Player experience and RUM<br>Story, random events and combat<br>Payments, economy and AI Advisor</p></div>
+    <div class="dd-rule"></div>
+    <div class="dd-source">This Overview shows operational monitoring. Player Journey and Business &amp; Payments provide the additional gameplay and business views.</div>
+    <div class="dd-source">Captured Nov 9, 2026 · Selected range 08:00–09:00 UTC. KPI overrides and SLOs use seven days; monitor status is a capture-time snapshot. No Data remains visible.</div>
+    <a class="dd-link" target="_blank" rel="noopener" href="https://us5.datadoghq.com/dashboard/tiy-p7i-rek">Actual Overview dashboard ↗</a>
+   </aside>
+  </section>
+  <section id="ddPerformance" class="dd-dashboard-shell" data-dashboard-panel="performance" role="tabpanel" hidden>
+   <div class="dd-frame composition-board" data-board="performance" aria-label="Authentic dashboard section composition"></div>
+   <aside class="dd-frame dd-analysis">
+    <span class="dd-label">REAL USER MONITORING</span>
+    <div class="dd-big">4.43 s</div>
+    <h2>How quickly does the game feel ready?</h2>
+    <p>Window-level LCP p75 from 113 recorded RUM sessions. The image charts <em>daily</em> p75, so its trend and the summary use different aggregations.</p>
+    <div class="dd-rule"></div>
+    <div class="dd-source">Nov 2–9, 2026 · Performance data may include public-host QA</div>
+    <a class="dd-link" target="_blank" rel="noopener" href="https://us5.datadoghq.com/dashboard/b6t-avm-uyi">Player Journey dashboard ↗</a>
+   </aside>
+  </section>
+  <section id="ddEvents" class="dd-dashboard-shell" data-dashboard-panel="events" role="tabpanel" hidden>
+   <div class="dd-frame composition-board" data-board="events" aria-label="Authentic dashboard section composition"></div>
+   <aside class="dd-frame dd-analysis">
+    <span class="dd-label">GAMEPLAY OBSERVABILITY</span>
+    <div class="dd-big">10 events</div>
+    <h2>What happens after a choice?</h2>
+    <p>1 success · 2 failures · 7 partial outcomes in this small non-QA sample. These are recorded outcomes, not the game's intended dice probabilities.</p>
+    <div class="dd-rule"></div>
+    <div class="dd-source">Nov 2–9, 2026 · Backend query excludes qa:true</div>
+    <a class="dd-link" target="_blank" rel="noopener" href="https://us5.datadoghq.com/dashboard/b6t-avm-uyi">Player Journey dashboard ↗</a>
+   </aside>
+  </section>
+  <section id="ddAdvisor" class="dd-dashboard-shell" data-dashboard-panel="advisor" role="tabpanel" hidden>
+   <div class="dd-frame composition-board" data-board="advisor" aria-label="Authentic dashboard section composition"></div>
+   <aside class="dd-frame dd-analysis">
+    <span class="dd-label">AI / BUSINESS OBSERVABILITY</span>
+    <div class="dd-big">4 Home + 1 Battle</div>
+    <h2>How do payments, economy and AI behave?</h2>
+    <p>Payments, currency flows and five successful Advisor calls in the recorded non-QA sample. These sections show instrumentation, not reliability at scale.</p>
+    <div class="dd-rule"></div>
+    <div class="dd-source">Nov 2–9, 2026 · Backend query excludes qa:true</div>
+    <a class="dd-link" target="_blank" rel="noopener" href="https://us5.datadoghq.com/dashboard/wbx-cm5-me5">Business &amp; Payments dashboard ↗</a>
+   </aside>
+  </section>
+ </div>
+ <div class="dd-footer"><span><span id="compositionHint">Overview is locked side by side</span></span><span>Authentic section montage · Click any capture to inspect · Widget time overrides remain in the source.</span></div>
+ <div class="dd-review-line" aria-hidden="true"></div><img class="dd-review-cat" src="../assets/miaomiao.svg" alt="" aria-hidden="true">
+</main>
+<div class="dd-overlay" id="compositionInspect" hidden role="dialog" aria-modal="true" aria-label="Authentic dashboard section at full size"><div class="dd-overlay-inner"><div class="dd-overlay-head"><span id="compositionInspectTitle"></span><button class="dd-button" id="compositionInspectClose" type="button">Close ×</button></div><img id="compositionInspectImage" alt=""></div></div>
+<script src="datadog-preview.js"></script><script src="datadog-composition-review.js"></script>
+</body></html>

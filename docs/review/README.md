@@ -1,5 +1,13 @@
 # Remaining composition reviews
 
+## Datadog dashboard composition comparison
+
+- [A — Titled section stack](datadog-02-composition-review.html?layout=stacked&tab=performance): stacked section headers reveal one complete authentic dashboard chunk at a time.
+- [B — Two consecutive screenshot columns](datadog-02-composition-review.html?layout=spread&tab=performance): the same selected source sections appear together in two columns.
+- Both preserve Overview / Player Experience / Gameplay Events / Business & AI. Overview is locked side by side in both options. Each image opens its original section at full size.
+- [Source sections and capture provenance](../assets/datadog/composition-review/provenance.json). Shared PNGs are reused across both options. No reconstructed widgets, duplicated binaries between layouts, or private player/session log crops.
+- Composition review only: the existing approved Datadog previews, Current, Previous and v3 runtime remain unchanged. The Overview snapshot and the fixed November 2–9 detail views have separately recorded time windows and widget overrides.
+
 Roadmap, Game Flow, Visual Novel, Home Hub and Payment are integrated and verified in Current. Their five superseded HTML previews and completed collection brief have been removed after successful publication.
 
 - [Roadmap — Page 03](../?page=03)

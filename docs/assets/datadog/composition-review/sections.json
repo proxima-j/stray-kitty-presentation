@@ -1,0 +1,104 @@
+{
+  "overview": {
+    "sections": [
+      {
+        "title": "Upper dashboard",
+        "src": "../assets/datadog/composition-review/overview-01.png",
+        "width": 1381,
+        "height": 1521
+      },
+      {
+        "title": "Continued dashboard",
+        "src": "../assets/datadog/composition-review/overview-02.png",
+        "width": 1381,
+        "height": 1521
+      }
+    ],
+    "split": 1,
+    "source": "https://us5.datadoghq.com/dashboard/tiy-p7i-rek?fromUser=false&refresh_mode=paused&from_ts=1794211200000&to_ts=1794214800000&live=false"
+  },
+  "performance": {
+    "sections": [
+      {
+        "title": "Experience & journey KPIs",
+        "src": "../assets/datadog/composition-review/performance-01.png",
+        "width": 1381,
+        "height": 831
+      },
+      {
+        "title": "Loading, responsiveness & errors",
+        "src": "../assets/datadog/composition-review/performance-02.png",
+        "width": 1381,
+        "height": 462
+      },
+      {
+        "title": "Onboarding: continue to Chapter 1",
+        "src": "../assets/datadog/composition-review/performance-03.png",
+        "width": 1381,
+        "height": 277
+      }
+    ],
+    "split": 1,
+    "source": "https://us5.datadoghq.com/dashboard/b6t-avm-uyi?fromUser=false&refresh_mode=paused&from_ts=1793599121000&to_ts=1794203921000&live=false"
+  },
+  "events": {
+    "sections": [
+      {
+        "title": "Story progression",
+        "src": "../assets/datadog/composition-review/events-01.png",
+        "width": 1381,
+        "height": 462
+      },
+      {
+        "title": "Combat & outcomes",
+        "src": "../assets/datadog/composition-review/events-02.png",
+        "width": 1381,
+        "height": 277
+      },
+      {
+        "title": "Choices & story gates",
+        "src": "../assets/datadog/composition-review/events-03.png",
+        "width": 1381,
+        "height": 277
+      },
+      {
+        "title": "Random events & flags",
+        "src": "../assets/datadog/composition-review/events-04.png",
+        "width": 1381,
+        "height": 277
+      }
+    ],
+    "split": 2,
+    "source": "https://us5.datadoghq.com/dashboard/b6t-avm-uyi?fromUser=false&refresh_mode=paused&from_ts=1793599121000&to_ts=1794203921000&live=false"
+  },
+  "advisor": {
+    "sections": [
+      {
+        "title": "Business & Advisor KPIs",
+        "src": "../assets/datadog/composition-review/advisor-01.png",
+        "width": 1381,
+        "height": 462
+      },
+      {
+        "title": "Payments: intent to credit",
+        "src": "../assets/datadog/composition-review/advisor-02.png",
+        "width": 1381,
+        "height": 462
+      },
+      {
+        "title": "Economy: sources & sinks",
+        "src": "../assets/datadog/composition-review/advisor-03.png",
+        "width": 1381,
+        "height": 462
+      },
+      {
+        "title": "AI Advisor: scope, result & latency",
+        "src": "../assets/datadog/composition-review/advisor-04.png",
+        "width": 1381,
+        "height": 461
+      }
+    ],
+    "split": 2,
+    "source": "https://us5.datadoghq.com/dashboard/wbx-cm5-me5?fromUser=false&refresh_mode=paused&from_ts=1793599121000&to_ts=1794203921000&live=false"
+  }
+}

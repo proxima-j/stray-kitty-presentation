@@ -1,0 +1,24 @@
+.composition-picker{margin-left:auto;display:flex;gap:7px;letter-spacing:0;text-transform:none}
+.composition-picker .dd-button{font-size:11px;padding:7px 12px}
+.composition-picker [aria-pressed="true"]{background:var(--gold)}
+.composition-board{position:relative;min-height:0;padding:12px;display:flex;gap:12px;overflow:hidden}
+.composition-board button{cursor:pointer}
+.composition-board img{display:block;width:100%;height:100%;object-fit:contain}
+.chunk-stack{display:flex;flex-direction:column;gap:8px;width:100%;height:100%;min-height:0}
+.chunk-card{display:flex;flex-direction:column;min-height:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:rgba(255,255,255,.2)}
+.chunk-card.is-open{flex:1}
+.chunk-title{display:flex;justify-content:space-between;gap:10px;text-align:left;border:0;background:transparent;padding:10px 13px;font:400 15px/1.2 var(--display);flex:0 0 auto}
+.chunk-title:hover,.chunk-title:focus-visible{background:rgba(207,166,106,.2)}
+.chunk-card.is-open .chunk-title{background:rgba(207,166,106,.22)}
+.chunk-view{display:none;flex:1;min-height:0;padding:7px;background:transparent;border:0}
+.chunk-card.is-open .chunk-view{display:flex;align-items:center;justify-content:center}
+.screenshot-column{min-width:0;min-height:0;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px}
+.screenshot-column>span{font:400 11px/1.3 var(--body);color:var(--muted);letter-spacing:.05em;text-align:center;flex:0 0 auto}
+.screenshot-sheet{display:flex;flex-direction:column;max-width:100%;overflow:hidden;border:1px solid var(--line);background:white;border-radius:7px}
+.screenshot-sheet button{display:block;width:100%;padding:0;border:0;min-height:0;background:transparent;flex-shrink:0}
+.screenshot-sheet img{width:100%;height:auto}
+.screenshot-sheet button:hover{outline:2px solid var(--gold);outline-offset:-2px}
+.composition-board button:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
+#compositionInspect .dd-overlay-inner{max-width:1400px;align-items:center}
+#compositionInspect .dd-overlay-head{width:100%}
+@media(max-height:820px){.chunk-title{padding:8px 11px;font-size:13px}.composition-board{padding:9px;gap:8px}}
