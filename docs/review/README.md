@@ -43,3 +43,12 @@ Verified locally at 1600×900 and 1366×768, then on published Current and Previ
 Current contains fourteen pages; Previous retains the outgoing optimized twelve-page deck. Local checks at 1600×900 and 1366×768, followed by actual published Current/Previous checks, passed. The two old UI/UX review URLs now redirect to Current and the unused placeholder stylesheet was removed after verification. Technical reviews and shared review.css remain intact.
 
 The selected normal/narrow images show different interaction states; their pairing is not controlled same-save/same-panel proof of resize behavior. Native emoji glyphs do not render in the captured dice source build; visible genuine weather/particle effects are preserved. Capture limitations are recorded in the inventory.
+
+
+## Integrated Technical Walkthrough — Pages 15–16
+
+- [Page 15 — Technical Architecture](../?page=technical-architecture): approved Browser / Go API / JSON State layers, connected services and online-access deployment card.
+- [Page 16 — Kubernetes Deployment](../?page=kubernetes-deployment): approved three Deployment / Pod / distinct PVC structure, separately managed Datadog and dated November 7 deployment evidence.
+- [Deployment evidence and provenance](../library/TECHNICAL-ASSETS.md): genuine job #29905 / pipeline #8015 and archived release record. Browser authentication prevented a real screenshot; the bottom-right panel uses clean dated text and the source link. No fabricated screenshot or current Pod health claim.
+
+Current contains sixteen scenes; Previous retains the outgoing verified fourteen-page deck. Local 1600×900 / 1366×768 checks and published Current/Previous browser checks passed, including reversible v3 navigation, the original cat/route and Previous's selected original-image link. After publication verification, `tech-01-architecture.html` and `tech-03-kubernetes.html` were removed. `tech-02-six-systems.html`, shared `review.css`, unrelated active reviews and all existing media remain untouched. No Six Systems scene was integrated.

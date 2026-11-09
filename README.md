@@ -6,8 +6,8 @@ GitHub is the shared source for ChatGPT and Codex. GitHub Pages automatically pu
 
 | Version | Preview | Verified source |
 | --- | --- | --- |
-| Current | https://proxima-j.github.io/stray-kitty-presentation/ | Sixteen-page candidate verified locally; published check pending |
-| Previous | https://proxima-j.github.io/stray-kitty-presentation/previous/ | Outgoing fourteen-page runtime `8752b694e92679d604d0d4e903835927a1b9aa91`; published check pending |
+| Current | https://proxima-j.github.io/stray-kitty-presentation/ | Sixteen-page runtime `3b93b117965c1356bb08e57cc2aedf966034beb3`; published and verified |
+| Previous | https://proxima-j.github.io/stray-kitty-presentation/previous/ | Outgoing fourteen-page runtime `8752b694e92679d604d0d4e903835927a1b9aa91`; published and verified |
 
 Current supports direct `?page=01` through `?page=16` links. Previous retains `?page=01` through `?page=14`. Stable Current IDs also work as direct links: `roadmap`, `game-flow`, `visual-novel`, `home-hub`, `payment`, `four-maps`, `vertical-design`, `greybox`, `random-events`, `combat`, `dice-animations`, `adaptive-interface`, `technical-architecture`, `kubernetes-deployment`. [docs/versions.json](docs/versions.json) records verified runtime origins; documentation and asset-only commits do not rotate decks.
 
@@ -77,4 +77,4 @@ UI/UX publication verified in default Chrome against [Pages build 42512332800](h
 
 [Technical Architecture](https://proxima-j.github.io/stray-kitty-presentation/?page=technical-architecture) → [Kubernetes Deployment](https://proxima-j.github.io/stray-kitty-presentation/?page=kubernetes-deployment) follow the established fourteen-page sequence. The approved layer/services/online-access composition and Pod–PVC diagram are preserved. No Six Systems or CI/CD page is included. The v3 engine, 4200ms transitions and first fourteen scenes are unchanged. [Evidence inventory](docs/library/TECHNICAL-ASSETS.md) records the genuine November 7 release sources and browser sign-in limitation; the supporting panel is dated text, with no current Pod health claim or fabricated screenshot.
 
-Candidate passed focused Chrome checks at 1600×900 and 1366×768, including Combat through both technical pages and reverse. Previous is the outgoing fourteen-page deck, including its independently frozen UI/UX behavior and shared assets. Standalone technical source reviews are retained until published verification succeeds.
+Candidate passed focused Chrome checks at 1600×900 and 1366×768, including Combat through both technical pages and reverse. Previous is the outgoing fourteen-page deck, including its independently frozen UI/UX behavior and shared assets. Published Current and Previous passed real-browser verification. The two superseded technical HTML reviews were removed only afterward; the unrelated Six Systems review and shared review styles remain.
