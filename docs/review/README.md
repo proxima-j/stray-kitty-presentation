@@ -81,3 +81,8 @@ The 22-scene candidate passed local checks at 1600×900 and 1366×768, then the 
 ## Closing Q&A — standalone composition review
 
 [Closing Q&A preview](closing-qa.html) uses the exact user-supplied horizontal poster, preserved as `assets/closing/stray-kitty-poster.png`. A pixel-identical lossless WebP is used when beneficial for delivery. The minimalist 16:9 composition keeps large Faculty Glyphic “Q & A” at left and the complete uncropped poster at right, in approximately 30/70 regions. Static authentic Miaomiao/route echoes reserve composition space; no independent animation or deck controls are added. This review is not integrated into Current/Previous, and no version rotation has occurred. Intended future position: final scene after the Teamwork/Future section, using the single existing v3 cat/route and 4200ms engine after integration approval.
+
+
+## Page 02 — Elevator Pitch with horizontal poster (isolated composition review)
+
+[Open the Page 02 poster composition](page-02-poster-composition.html). Reuses the exact current elevator-pitch text, the original approved D20 and playful-cat illustrations, and the existing user-supplied 3344×1882 horizontal poster (lossless WebP under `docs/assets/closing/`). The poster is the dominant artwork on the right, with the two original illustrations in a smaller lower strip. No copy, assets, Current/Previous deck or animation engine were changed. Static cat/route echoes are for composition review only. Do not integrate or remove this review without approval.
