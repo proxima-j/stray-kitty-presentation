@@ -76,3 +76,8 @@ The latest Page 16 update aligns both confirmation and image to November 6 / pip
 The 22-scene candidate passed local checks at 1600×900 and 1366×768, then the published Current and outgoing 19-scene Previous were checked. The three superseded Teamwork review HTML pages and their four now-unused dedicated CSS/JS files were removed only after public verification. Shared review dependencies and unrelated reviews remain.
 
 [Canonical inventory and source scope](../library/TEAMWORK-FUTURE-ASSETS.md) · [Exact capture provenance](../assets/teamwork/gitlab/provenance.json). Original approved compositions remain in normal Git history. No Closing/Q&A scene was created.
+
+
+## Closing Q&A — standalone composition review
+
+[Closing Q&A preview](closing-qa.html) uses the exact user-supplied horizontal poster, preserved as `assets/closing/stray-kitty-poster.png`. A pixel-identical lossless WebP is used when beneficial for delivery. The minimalist 16:9 composition keeps large Faculty Glyphic “Q & A” at left and the complete uncropped poster at right, in approximately 30/70 regions. Static authentic Miaomiao/route echoes reserve composition space; no independent animation or deck controls are added. This review is not integrated into Current/Previous, and no version rotation has occurred. Intended future position: final scene after the Teamwork/Future section, using the single existing v3 cat/route and 4200ms engine after integration approval.

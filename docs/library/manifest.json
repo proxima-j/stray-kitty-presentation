@@ -130,6 +130,13 @@
       "styles": "../teamwork.css",
       "script": "../teamwork.js",
       "variants": "Native v3 scene; approved composition, scoped styles and shared assets"
+    },
+    {
+      "id": "preview.closing-qa",
+      "use": "Approved minimal 30/70 closing composition, large Faculty Glyphic Q & A and complete poster",
+      "source": "../review/closing-qa.html",
+      "styles": "../review/closing-qa.css",
+      "variants": "Static standalone 16:9 review; no new animation system; future integration only after approval"
     }
   ],
   "assets": [
@@ -2155,6 +2162,47 @@
           "updated": "2026-11-09"
         }
       }
+    },
+    {
+      "id": "closing.poster.original",
+      "source": "../assets/closing/stray-kitty-poster.png",
+      "creator": "User-supplied Stray Kitty project poster; no generated or substituted art",
+      "use": "Standalone closing Q&A composition review; not integrated into Current or Previous",
+      "status": "USER-SUPPLIED / PUBLICATION EXPLICITLY AUTHORIZED",
+      "permission": "User requested this exact file be committed and published in the public presentation repository on November 9, 2026. No broader ownership or license assertion.",
+      "metadata": {
+        "source_filename": "20261109204502_1848_585.png",
+        "source_location": "User-supplied local Downloads file; private absolute path omitted",
+        "width": 3344,
+        "height": 1882,
+        "mode": "RGB",
+        "embedded_metadata": "None: no text chunks or EXIF fields",
+        "captured_or_supplied_date": "2026-11-09",
+        "preview": "../review/closing-qa.html"
+      },
+      "bytes": 2633933,
+      "preservation": "Exact byte copy of supplied PNG; original also retained in Downloads."
+    },
+    {
+      "id": "closing.poster.web",
+      "source": "../assets/closing/stray-kitty-poster.webp",
+      "creator": "User-supplied Stray Kitty project poster; no generated or substituted art",
+      "use": "Standalone closing Q&A composition review; not integrated into Current or Previous",
+      "status": "USER-SUPPLIED / PUBLICATION EXPLICITLY AUTHORIZED",
+      "permission": "User requested this exact file be committed and published in the public presentation repository on November 9, 2026. No broader ownership or license assertion.",
+      "metadata": {
+        "source_filename": "20261109204502_1848_585.png",
+        "source_location": "User-supplied local Downloads file; private absolute path omitted",
+        "width": 3344,
+        "height": 1882,
+        "mode": "RGB",
+        "embedded_metadata": "None: no text chunks or EXIF fields",
+        "captured_or_supplied_date": "2026-11-09",
+        "preview": "../review/closing-qa.html"
+      },
+      "bytes": 1915278,
+      "origin": "../assets/closing/stray-kitty-poster.png",
+      "encoding": "Lossless WebP; decoded RGB pixels verified identical. No crop, resizing, artwork change or embedded metadata."
     }
   ]
 }
