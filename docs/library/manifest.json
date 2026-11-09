@@ -1094,6 +1094,24 @@
         ],
         "limitation": "Image pixel dimensions do not establish original viewport dimensions. This is not a matched same-save/same-panel resize comparison."
       }
+    },
+    {
+      "id": "technical.deployment-record.20261107",
+      "source": "https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/jobs/29905",
+      "use": "Page 16 — bottom-right dated textual deployment evidence",
+      "status": "APPROVED / INTEGRATED TEXTUAL FALLBACK",
+      "origin": "Authenticated GitLab job #29905 trace, pipeline #8015 and archived release.json / preview.json, source commit 1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e",
+      "permission": "User explicitly requested publication of dated sanitized deployment evidence; internal addresses, cluster identifiers, raw logs and release artifacts excluded. No screenshot or new binary asset published.",
+      "verification": {
+        "date": "2026-11-07",
+        "release_status": "deployed",
+        "application_deployments": 3,
+        "matching_application_images": 3,
+        "payment_readiness": "ready",
+        "public_health_check": "ok"
+      },
+      "limitations": "Browser redirects to GitLab sign-in, so no authenticated screenshot collected. Evidence describes November 7 release only, not current Pod health.",
+      "provenance": "TECHNICAL-ASSETS.md"
     }
   ]
 }
