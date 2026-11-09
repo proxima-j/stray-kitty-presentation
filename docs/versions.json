@@ -2,13 +2,15 @@
   "current": {
     "entry": "./",
     "candidate_base_commit": "5e8a0e27e5840605c363447177fdf6242e5319c1",
-    "build_marker": "20261109-datadog-refinement7",
+    "build_marker": "20261109-datadog-taller-frames2",
     "description": "Nineteen-page deck: approved Datadog Gameplay to Telemetry, Observability, and Detect Alert Recover follow Kubernetes",
     "publication_status": "LOCAL_VERIFIED; verify deployed marker after push",
-    "local_verified_at": "2026-11-09T12:21:21.242319+00:00",
+    "local_verified_at": "2026-11-09T12:46:05.575583+00:00",
     "verification_notes": "Focused normal-browser checks: 16→17→18→19 and reverse, muted six-second QA response, matching trace and scrollable attributes, Overview side-by-side, Option A chunk selection and full-image inspection, original Slack/Datadog alert-recovery switches and image inspection, Synthetics and phone icon. Long explanatory panels scroll within their frames at shorter viewports. Existing sixteen scenes and all old runtime files byte-identical; v3 4200ms engine unchanged. No backend requests, infrastructure changes or new recordings.",
     "maintenance_base_commit": "b6beaea3a084ae04f3927d64b1817973d8468932",
-    "maintenance_notes": "Page 17: smaller image/video delivery copies, scene-entry response preparation and genuine still retained while buffering; duplicate parent perspective removed from Datadog scenes to fix Chromium blank rendering. V3 camera, engine and 4200ms beat unchanged. Page 18: performance/interaction-tracking copy; event and AI sample-count callouts removed. Page 19: larger aligned frames fit without panel scrolling at normal viewport; payment heading and deferred screenshot source corrected. Previous unchanged; this is a slide maintenance commit, not a version rotation."
+    "maintenance_notes": "Page 17: smaller image/video delivery copies, scene-entry response preparation and genuine still retained while buffering; duplicate parent perspective removed from Datadog scenes to fix Chromium blank rendering. V3 camera, engine and 4200ms beat unchanged. Page 18: performance/interaction-tracking copy; event and AI sample-count callouts removed. Page 19: larger aligned frames fit without panel scrolling at normal viewport; payment heading and deferred screenshot source corrected. Previous unchanged; this is a slide maintenance commit, not a version rotation.",
+    "frame_maintenance_base_commit": "dacfeabf08e9e65ae7d8181a9ddaf886fd826934",
+    "frame_maintenance_notes": "User-requested frame-only follow-up: Page 17 media frames taller (253px to 289px at the normal 1280x720 browser viewport), still clearing the original cat/route. Page 19 explanatory /healthz paragraph removed from the slide; full evidence provenance remains linked. Shared grid rows align the alert/recovery buttons with the screenshot frame top and bottom. Page 18, media/interaction code, v3 engine and Previous unchanged. No version rotation for this slide maintenance."
   },
   "previous": {
     "entry": "previous/",

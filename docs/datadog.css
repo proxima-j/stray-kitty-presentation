@@ -231,3 +231,14 @@
 #detect-alert-recover .dd-footer{padding-left:22vw;font-size:10px}
 /* The v3 camera already supplies perspective. A second perspective boundary can blank these nested pages in Chromium. */
 .scene.datadog-scope{perspective:none}
+/* Give Page 17 media more height while clearing the original cat/route band. */
+#gameplay-telemetry .dd-page{padding-bottom:clamp(146px,24vh,259px);gap:6px}
+#gameplay-telemetry .dd-stage-grid>section{gap:8px}
+#gameplay-telemetry .dd-panel-caption{min-height:34px}
+/* Share the screenshot's row so the two state buttons align with its edges. */
+#detect-alert-recover .dd-alert-proof{grid-template-rows:auto minmax(0,1fr) auto;row-gap:7px}
+#detect-alert-recover .dd-alert-steps{grid-column:1;grid-row:2;justify-content:space-between;gap:4px}
+#detect-alert-recover .dd-evidence-visual{display:contents}
+#detect-alert-recover .dd-evidence-sources{grid-column:2;grid-row:1}
+#detect-alert-recover .dd-evidence-zoom{grid-column:2;grid-row:2}
+#detect-alert-recover .dd-evidence-caption{grid-column:2;grid-row:3}
