@@ -1,5 +1,13 @@
 # Scene recipes
 
+## 0. Start from a blank scene (recommended for new projects)
+
+Use [Blank Canvas](blank.html) for a page-by-page design process. Copy the **complete** `forward-story-v3/` directory to the new project and copy `blank.html` over the new `index.html`; keep all shared `styles/`, `scripts/` and `assets/` files. The initial two scene shells carry no required composition: discuss each page's central idea, layout, supporting evidence and interaction before replacing the construction guides.
+
+The default blank entry enables only the original **camera transitions and reveal primitives**. The route and traveler are hidden by CSS but their DOM elements are retained for geometry. Change `data-route` or `data-traveler` individually to `on` when those visuals fit the project. Change CSS variables in `styles/blank.css` to customize theme/typography.
+
+The five-page [Example Mode](index.html) is available when ready-made layouts help. Neither mode imposes its opening, diagram, before/after or closing composition on the other.
+
 Everything inside one presentation page goes in a single section.scene nested directly under #world. The global route and pixel traveler stay outside the scenes.
 
 ## 1. New scene
