@@ -1,18 +1,18 @@
 {
   "current": {
     "entry": "./",
-    "source_commit": "0e10b2b02f4d76c0e0ffd5b6764f75b660b82aad",
+    "source_commit": "4d643dc62f901508c4d09f13a6ad6bb6c7583aef",
     "candidate_base_commit": "8752b694e92679d604d0d4e903835927a1b9aa91",
     "description": "Sixteen-page deck: Technical Architecture and Kubernetes Deployment follow UI/UX",
     "publication_status": "VERIFIED",
     "local_verified_at": "2026-11-09T05:21:12.684114+00:00",
-    "verification_notes": "Chrome 1600x900 and 1366x768: technical compositions legible and contained, no Pod or architecture-stack overflow, single cat/route; Combat→Dice→Adaptive→Architecture→Kubernetes and reverse, settled transitions 4207–4211ms, no page errors. First fourteen scene blocks, engine and shared runtime byte-identical. Dated deployment textual evidence; no new background media. Opening film behavior unaffected (shared runtime/source unchanged). Asset maintenance: user-supplied November 6 pipeline #7813 deployment screenshot replaces the right text fallback; crop only, no status alteration, separately labelled from November 7 record. Local/public screenshot footprint checked; original engine and Previous unchanged.",
-    "public_verified_at": "2026-11-09T05:47:09.032452+00:00",
+    "verification_notes": "Chrome 1600x900 and 1366x768: technical compositions legible and contained, no Pod or architecture-stack overflow, single cat/route; Combat→Dice→Adaptive→Architecture→Kubernetes and reverse, settled transitions 4207–4211ms, no page errors. First fourteen scene blocks, engine and shared runtime byte-identical. Dated deployment textual evidence; no new background media. Opening film behavior unaffected (shared runtime/source unchanged). Asset maintenance: confirmation and full five-job screenshot now both refer to pipeline #7813 / November 6, 2026. Local and published screenshot panel, source link and existing 1138×144 enlargement dialog passed. No engine, diagram or Previous changes.",
+    "public_verified_at": "2026-11-09T05:51:44.327938+00:00",
     "publication_evidence": {
-      "url": "https://proxima-j.github.io/stray-kitty-presentation/?page=kubernetes-deployment&v=0e10b2b",
+      "url": "https://proxima-j.github.io/stray-kitty-presentation/?page=kubernetes-deployment&v=4d643dc",
       "http_status": 200,
-      "style_version": "technical.css?v=20261109-pipeline-evidence",
-      "verification": "Published browser: authentic user-supplied pipeline #7813 deployment-card crop loaded at native 260×91, labelled November 6, 2026 and linked to its own pipeline. Left November 7 deployment confirmation retained separately. Local normal viewport and public layout check passed; screenshot HTTP 200 / 6705 bytes. Media remains deferred until scene entry. Engine, other scene content and Previous unchanged."
+      "style_version": "technical.css?v=20261109-full-pipeline",
+      "verification": "Published normal browser viewport: matching November 6 confirmation and all five pipeline jobs visible. Clicking the pipeline opens the genuine 1138×144 crop. Source link points to pipeline #7813. Superseded single-card asset removed after checking both retained decks. Shared v3 runtime, diagram and Previous untouched."
     }
   },
   "previous": {

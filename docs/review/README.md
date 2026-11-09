@@ -54,3 +54,5 @@ The selected normal/narrow images show different interaction states; their pairi
 Current contains sixteen scenes; Previous retains the outgoing verified fourteen-page deck. Local 1600×900 / 1366×768 checks and published Current/Previous browser checks passed, including reversible v3 navigation, the original cat/route and Previous's selected original-image link. After publication verification, `tech-01-architecture.html` and `tech-03-kubernetes.html` were removed. `tech-02-six-systems.html`, shared `review.css`, unrelated active reviews and all existing media remain untouched. No Six Systems scene was integrated.
 
 Page 16 now uses the user-supplied authentic deployment-card screenshot from pipeline #7813 (November 6), separately labelled from the left November 7 record. See TECHNICAL-ASSETS.md for crop and verified source; no new review or scene was created.
+
+The latest Page 16 update aligns both confirmation and image to November 6 / pipeline #7813 and shows all five successful jobs, with full-resolution enlargement. This supersedes the earlier mixed-date description. Published panel and image dialog verified.
