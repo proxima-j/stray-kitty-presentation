@@ -1,45 +1,64 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
-<title>Stray Kitty — Collaboration Diagram · Review</title>
-<link rel="stylesheet" href="review.css"><link rel="stylesheet" href="teamwork-preview.css"></head>
-<body><main class="review-page tw-review tw-diagram-page tw-one">
-  <div class="label"><span class="num">TW 01</span>CROSS-TEAM COLLABORATION · REVISED DIAGRAM</div>
-  <h1>Five Owners. One Game.</h1>
-  <div class="review-body">
-    <section class="tw-diagram-roles" aria-label="Five primary role-owned work streams">
-      <div class="tw-diagram-role"><b>Haozhe</b><small>Narrative</small></div>
-      <div class="tw-diagram-role"><b>Jenny</b><small>Level Design</small></div>
-      <div class="tw-diagram-role"><b>Yao Yu</b><small>Random Events<br>+ Observability</small></div>
-      <div class="tw-diagram-role"><b>Qiwen</b><small>Combat</small></div>
-      <div class="tw-diagram-role"><b>Xuanyang</b><small>UI/UX</small></div>
-    </section>
-    <svg class="tw-branch-network" viewBox="0 0 1200 65" preserveAspectRatio="none" aria-hidden="true">
-      <g fill="none" stroke="#a66e52" stroke-width="2.5" stroke-linecap="round"><path d="M120 0 V23 H1080 V0"/><path d="M360 0 V23 M600 0 V23 M840 0 V23 M600 23 V64"/></g>
-      <circle cx="600" cy="23" r="6" fill="#f0d36a" stroke="#34453e" stroke-width="2"/>
-    </svg>
-    <section class="tw-diagram-network" aria-label="Cross-team request workflow">
-      <div class="tw-diagram-stem"><span class="tw-kicker">CROSS-TEAM COORDINATION</span><strong>Role-based Work Items</strong><small>Requests go to the relevant owner · Dependencies discussed where work happens</small></div>
-      <div class="tw-network-links"><span class="tw-arrow-left" aria-hidden="true">↙</span><span class="tw-arrow-right" aria-hidden="true">↘</span></div>
-      <div class="tw-diagram-lanes">
-        <div class="tw-lane"><span class="tw-kicker">ISSUES & OWNERSHIP</span><div class="tw-lane-items"><b>Ticket / Request</b><span class="tw-dash-arrow">→</span><b>Discuss & Resolve</b></div><small>Inter-team questions, handoffs and scope</small></div>
-        <div class="tw-lane"><span class="tw-kicker">CODE CHANGE</span><div class="tw-lane-items"><b>Branch</b><span class="tw-dash-arrow">→</span><b>MR</b><span class="tw-dash-arrow">→</span><b>Merge</b></div><small>Isolated changes · Review before integration</small></div>
-      </div>
-      <div class="tw-daily-line"><span class="tw-kicker">DAILY ALIGNMENT</span><strong>Check progress & dependencies</strong><span>Reduce conflicts · Avoid overlapping work</span></div>
-    </section>
-    <section class="tw-evidence" aria-label="GitLab evidence slots for documented map and combat peer QA">
-      <div class="tw-case-head">
-        <span class="tw-kicker">EXAMPLE · MAP × COMBAT</span>
-        <strong>Peer QA surfaced a broken player path.</strong>
-        <span>Issue → assigned fix → verified progression</span>
-      </div>
-      <div class="tw-evidence-flow">
-        <a class="tw-evidence-screenshot" href="https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/work_items/4#note_8317" target="_blank" rel="noopener noreferrer"><span class="tw-evidence-icon">01</span><strong>WORK ITEM</strong><small>Real QA report screenshot pending</small><em>Open source ↗</em></a>
-        <span class="tw-evidence-arrow" aria-hidden="true">→</span>
-        <a class="tw-evidence-screenshot" href="https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/work_items/4#note_8605" target="_blank" rel="noopener noreferrer"><span class="tw-evidence-icon">02</span><strong>FIX / MR HANDOFF</strong><small>Real fix / MR evidence pending</small><em>Open source ↗</em></a>
-        <span class="tw-evidence-arrow" aria-hidden="true">→</span>
-        <a class="tw-evidence-screenshot" href="https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/work_items/4#note_9310" target="_blank" rel="noopener noreferrer"><span class="tw-evidence-icon">03</span><strong>FOLLOW-UP QA</strong><small>Real verification screenshot pending</small><em>Open source ↗</em></a>
-      </div>
-    </section>
+<title>Stray Kitty — Teamwork 01 | Collaboration Diagram Review</title>
+<link rel="stylesheet" href="review.css"><link rel="stylesheet" href="teamwork-preview.css"><link rel="stylesheet" href="teamwork-diagram-preview.css"></head>
+<body><main class="review-page tw-review tw-v2">
+<div class="label"><span class="num">TW 01</span>TEAMWORK · FLOW DIAGRAM · COMPOSITION REVIEW</div>
+<h1>Five Owners. One Integrated Game.</h1>
+<p class="subtitle">A team-wide GitLab workflow built around clear ownership and constant coordination.</p>
+<div class="review-body">
+ <section class="tw-v2-roles" aria-label="Five assigned modules and their role-owned GitLab Work Items">
+  <div class="tw-v2-role"><div><div class="tw-v2-role-name">Haozhe</div><div class="tw-v2-role-title">NARRATIVE</div></div><span class="tw-v2-issue">#1</span></div>
+  <div class="tw-v2-role"><div><div class="tw-v2-role-name">Jenny</div><div class="tw-v2-role-title">LEVEL DESIGN</div></div><span class="tw-v2-issue">#3</span></div>
+  <div class="tw-v2-role"><div><div class="tw-v2-role-name">Yao Yu</div><div class="tw-v2-role-title">EVENTS + OBSERVABILITY</div></div><span class="tw-v2-issue">#2 / #18</span></div>
+  <div class="tw-v2-role"><div><div class="tw-v2-role-name">Qiwen</div><div class="tw-v2-role-title">COMBAT</div></div><span class="tw-v2-issue">#4</span></div>
+  <div class="tw-v2-role"><div><div class="tw-v2-role-name">Xuanyang</div><div class="tw-v2-role-title">UI / UX</div></div><span class="tw-v2-issue">#5</span></div>
+ </section>
+ <div class="tw-v2-connect" aria-hidden="true"><svg viewBox="0 0 1000 37" preserveAspectRatio="none">
+  <g fill="none" stroke="#a98161" stroke-width="1.7" stroke-dasharray="5 6">
+   <path d="M100 0V14H900V0 M300 0V14 M500 0V14 M700 0V14 M900 0V14 M500 14V36"/>
+  </g><path d="M495 30L500 36L505 30" fill="none" stroke="#a98161" stroke-width="2"/></svg>
+  <span class="tw-v2-connect-label">REQUESTS ROUTED TO RELEVANT OWNERS</span>
+ </div>
+ <section class="tw-v2-tracks" aria-label="Two cooperating GitLab processes">
+  <div class="tw-v2-track">
+   <div class="tw-v2-track-head"><strong>Coordinate the work</strong><small>WORK ITEMS</small></div>
+   <div class="tw-v2-trackflow">
+    <div class="tw-v2-step"><span>Cross-team<br>request</span><small>Dependency / bug</small></div>
+    <span class="tw-v2-step-arr" aria-hidden="true">→</span>
+    <div class="tw-v2-step is-highlight"><span>Owner's<br>Work Item</span><small>Discussion</small></div>
+    <span class="tw-v2-step-arr" aria-hidden="true">→</span>
+    <div class="tw-v2-step"><span>Decision &<br>handoff</span><small>Agree next action</small></div>
+   </div>
+   <div class="tw-v2-track-foot">Tickets go to the corresponding module owner, not a generic queue.</div>
   </div>
-  <div class="review-route" aria-hidden="true"></div><img class="review-cat" src="../assets/miaomiao.svg" alt="">
+  <div class="tw-v2-middle" aria-hidden="true"><span class="sync-mark">⇄</span><span>Aligned<br>work</span></div>
+  <div class="tw-v2-track">
+   <div class="tw-v2-track-head"><strong>Ship the change</strong><small>BRANCH + MR</small></div>
+   <div class="tw-v2-trackflow">
+    <div class="tw-v2-step"><span>New<br>branch</span><small>Isolated change</small></div>
+    <span class="tw-v2-step-arr" aria-hidden="true">→</span>
+    <div class="tw-v2-step is-finish"><span>Merge<br>Request</span><small>Focused checks</small></div>
+    <span class="tw-v2-step-arr" aria-hidden="true">→</span>
+    <div class="tw-v2-step"><span>Review &<br>merge</span><small>Verify result</small></div>
+   </div>
+   <div class="tw-v2-track-foot">The implementation cycle proceeds alongside Work Item coordination.</div>
+  </div>
+ </section>
+ <div class="tw-v2-daily"><div class="daily-pill"><strong>Daily check-ins</strong><small>Shared progress · Dependencies · Avoid overlap & conflicts</small></div></div>
+ <section class="tw-v2-evidence" aria-label="Real cross-team QA case, awaiting screenshot captures">
+  <div class="tw-v2-evidence-title"><strong>One real collaboration case: Map × Combat progression</strong><small>Source-linked GitLab evidence · Screenshot slots pending</small></div>
+  <div class="tw-v2-evidence-row">
+   <div class="tw-v2-proof">
+    <div class="tw-v2-shot-slot">ACTUAL GITLAB<br>SCREENSHOT<br>PENDING</div>
+    <div class="tw-v2-proof-text"><span class="source">WORK ITEM #4 · PEER QA</span><b>Battle retry blocked progression</b><a href="https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/work_items/4#note_8317" target="_blank" rel="noopener noreferrer">Original QA discussion</a></div>
+   </div>
+   <span class="tw-v2-proof-arr" aria-hidden="true">→</span>
+   <div class="tw-v2-proof">
+    <div class="tw-v2-shot-slot">ACTUAL GITLAB<br>SCREENSHOT<br>PENDING</div>
+    <div class="tw-v2-proof-text"><span class="source">FIX REPORT + FOLLOW-UP</span><b>Scoped fixes, then player-path recheck</b><a href="https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/work_items/4#note_9310" target="_blank" rel="noopener noreferrer">Peer recheck evidence</a></div>
+   </div>
+  </div>
+ </section>
+</div><div class="review-route" aria-hidden="true"></div><img class="review-cat" src="../assets/miaomiao.svg" alt="">
 </main></body></html>
