@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="presentation-title" content="Untitled Presentation">
+<title>Blank Canvas — Forward Story v3</title>
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/core.css">
+<link rel="stylesheet" href="styles/layouts.css">
+<link rel="stylesheet" href="styles/blank.css">
+</head>
+<!--
+  NEW PROJECT START:
+  - Copy this entire template folder to a NEW repository.
+  - Copy blank.html over index.html in that NEW folder (keep shared scripts/styles/assets).
+  - No page compositions are prescribed: replace these two empty scene shells.
+  - data-route and data-traveler are independent visual switches (off/on).
+  - data-visual-preset="neutral" is customizable in styles/blank.css; use "original" for the example palette.
+  - Preserve #roadDrawing / #heroCat in the DOM even when visually hidden. The engine measures them.
+-->
+<body data-route="off" data-traveler="off" data-visual-preset="neutral">
+<div id="scrollSpace" class="scroll-space"><main id="stage" class="stage" aria-label="Blank Canvas presentation">
+<div id="world" class="world">
+<svg id="roadDrawing" class="route-svg" aria-hidden="true">
+ <defs><clipPath id="revealClip"><rect id="routeReveal" x="0" y="0" width="0" height="2000"/></clipPath></defs>
+ <path id="routeGhost" class="route-ghost" d=""/><path id="routeInk" class="route-ink" d="" clip-path="url(#revealClip)"/>
+</svg>
+<!-- Page 01. Replace guide content after deciding the project story. -->
+<section class="scene" id="first-page" data-scene="0" data-page="01" data-title="Page 01">
+ <div class="scene-camera"><div class="blank-canvas">
+  <span class="blank-page-id">PAGE 01 / EMPTY CANVAS</span>
+  <div class="blank-content-guide">
+   <strong>Start with the idea.</strong>
+   <p>Decide what this page should communicate before designing its composition.</p>
+  </div>
+ </div></div>
+</section>
+<!-- Page 02. The markup below demonstrates the shared arrival reveal primitives. -->
+<section class="scene" id="second-page" data-scene="1" data-page="02" data-title="Page 02">
+ <div class="scene-camera"><div class="blank-canvas">
+  <span class="blank-page-id" data-build="text" data-at=".08">PAGE 02 / EMPTY CANVAS</span>
+  <div class="blank-content-guide" data-build="rise" data-at=".37">
+   <strong>Design each page independently.</strong>
+   <p>Replace this guide with an approved diagram, image, clip, story or interaction.</p>
+  </div>
+  <div class="blank-reveal-rule" data-build="line" data-at=".68" aria-hidden="true"></div>
+ </div></div>
+</section>
+</div>
+<!-- Keep these global elements even when hidden: the shared engine uses their geometry. -->
+<div id="heroCat" class="hero-cat" role="img" aria-label="Optional traveler marker"><img src="assets/traveler.svg" alt=""></div>
+<button id="helpButton" class="help-button" aria-label="Show controls" aria-expanded="false" type="button">?</button>
+<div id="helpPanel" class="help-panel" hidden role="dialog" aria-label="Presentation controls">
+ <button id="helpClose" type="button" aria-label="Close controls">×</button>
+ <h3>Explore the story</h3>
+ <p><kbd>→</kbd> / <kbd>Space</kbd> next · <kbd>←</kbd> previous · wheel to scrub · <kbd>Esc</kbd> finish motion · <kbd>Home</kbd> first · <kbd>End</kbd> last</p>
+ <label for="paceSelect">Arrow-key pace <select id="paceSelect"><option value="3000">Brisk · 3 s</option><option value="4200" selected>Cinematic · 4.2 s</option><option value="5500">Gentle · 5.5 s</option></select></label>
+</div>
+</main></div>
+<script src="scripts/media.js"></script>
+<script src="scripts/interactions.js"></script>
+<script src="scripts/story-engine.js"></script>
+</body>
+</html>
