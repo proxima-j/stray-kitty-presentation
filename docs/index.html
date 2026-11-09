@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="level-design.css?v=20261109-level-design">
   <link rel="stylesheet" href="events-combat.css?v=20261109-integrated">
   <link rel="preload" as="script" href="events-combat.js?v=20261109-integrated">
-  <link rel="stylesheet" href="technical.css?v=20261109-pipeline-evidence">
+  <link rel="stylesheet" href="technical.css?v=20261109-full-pipeline">
   <link rel="stylesheet" href="uiux.css?v=20261109-adaptive-fit">
   <link rel="preload" as="script" href="uiux.js?v=20261109-adaptive-fit">
   <link rel="preload" as="script" href="scene-content.js?v=20261109-on-demand-events">
@@ -450,18 +450,17 @@
 <div class="cluster-foot">Application target: 3 Deployments · 3 Pods · 4 containers · 3 Services · 3 PVCs<br/>Distinct PVC per application Pod · No cross-Pod PVC sharing</div>
 </div>
 </section>
-<section aria-label="Dated November 7 deployment record" class="evidence" data-at=".70" data-build="rise">
+<section aria-label="Dated November 6 pipeline 7813 deployment record" class="evidence" data-at=".70" data-build="rise">
 <div class="evidence-copy">
 <h3>DEPLOYED ONLINE</h3>
-<strong>Verified November 7, 2026</strong>
-<p>Three application workloads deployed successfully.</p>
-<span>Deployment record only; current Pod readiness was not independently checked.</span>
+<strong>Verified November 6, 2026</strong>
+<p>All five pipeline jobs passed, including deployment.</p>
+<span><a href="https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/pipelines/7813" target="_blank" rel="noopener">GitLab pipeline #7813 · main branch</a></span>
 </div>
-<a aria-label="View successful November 6 deployment in GitLab pipeline 7813" class="record-panel pipeline-evidence" href="https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/pipelines/7813" rel="noopener" target="_blank">
-<div class="record-heading"><span>PIPELINE #7813</span><span>↗</span></div>
-<span class="pipeline-caption">November 6, 2026<br>Deployment passed</span>
-<img class="pipeline-capture" data-media-src="assets/pages/16/gitlab-pipeline-7813-deploy.png" width="260" height="91" alt="Actual GitLab pipeline 7813 deployment card showing a green success check beside deploy_apply">
-</a>
+<button type="button" aria-label="Enlarge the full successful GitLab pipeline 7813" class="record-panel pipeline-evidence" data-full-image="assets/pages/16/gitlab-pipeline-7813-full.png" data-image-title="GitLab pipeline #7813 — November 6, 2026" data-local-space="">
+<span class="record-heading"><span>PIPELINE #7813 · ALL FIVE JOBS PASSED</span><span>Enlarge ↗</span></span>
+<img class="pipeline-capture" data-media-src="assets/pages/16/gitlab-pipeline-7813-full.png" width="1138" height="144" alt="Actual successful GitLab pipeline: verify server_checks and web_checks, build server_build, package deploy_images, and deploy deploy_apply">
+</button>
 </section>
 
 

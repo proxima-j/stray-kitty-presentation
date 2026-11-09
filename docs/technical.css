@@ -410,9 +410,10 @@
  #kubernetes-deployment .deployment-record span{font-size:10px;line-height:1.3}
 }
 
-/* Genuine user-supplied pipeline screenshot; fixed support-panel footprint. */
-#kubernetes-deployment .record-panel.pipeline-evidence{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,260px);column-gap:12px;row-gap:4px;align-items:center}
-#kubernetes-deployment .pipeline-evidence .record-heading{grid-column:1;grid-row:1;align-self:end}
-#kubernetes-deployment .pipeline-caption{grid-column:1;grid-row:2;align-self:start;font:400 11px/1.4 var(--body);color:var(--muted)}
-#kubernetes-deployment .pipeline-capture{grid-column:2;grid-row:1/3;display:block;width:100%;height:80px;object-fit:contain;border-radius:8px}
-@media(max-height:810px){#kubernetes-deployment .pipeline-capture{height:72px}}
+/* Full genuine pipeline; enlarge using the existing screenshot dialog. */
+#kubernetes-deployment .record-panel.pipeline-evidence{display:flex;flex-direction:column;gap:6px;text-align:left;font:inherit;cursor:zoom-in}
+#kubernetes-deployment .pipeline-evidence .record-heading{width:100%;align-items:center;letter-spacing:.05em}
+#kubernetes-deployment .pipeline-evidence .record-heading>span:last-child{white-space:nowrap}
+#kubernetes-deployment .pipeline-capture{display:block;width:100%;height:68px;object-fit:contain;border-radius:6px}
+#kubernetes-deployment .evidence-copy>span a{color:inherit;text-underline-offset:2px}
+@media(max-height:810px){#kubernetes-deployment .record-panel.pipeline-evidence{gap:4px}#kubernetes-deployment .pipeline-capture{height:54px}}
