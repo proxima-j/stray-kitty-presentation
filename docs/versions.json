@@ -4,16 +4,25 @@
     "candidate_base_commit": "89e52a078d0e2ff4ad03fa1ff3250abd9d9d5155",
     "build_marker": "20261109-teamwork-r5",
     "description": "Twenty-two scenes: complete technical/Datadog section, then Cross-Team Collaboration, Design. Test. Rethink., A More Connected World. No Closing/Q&A.",
-    "publication_status": "LOCAL_VERIFIED; deployed check pending",
+    "publication_status": "VERIFIED",
     "local_verified_at": "2026-11-09T13:26:55.643265+00:00",
-    "verification_notes": "Focused candidate browser checks at 1600x900 and 1366x768. Four local stages, matching text/evidence, Next/Previous, focused Space isolation and full-image inspection; 36-cell grids with 10/6 failures; four shared future images and six bidirectional connectors. Forward/back through 19-22; opening full film plays with sound and manual skip; existing dialogue interaction. Prior 19 scene blocks and all runtime files byte-identical; original v3 4200ms beat, single cat and route preserved. GitLab evidence #4 notes 8317/8605/9310, related merged !80 via integration !81; no formal approval invented."
+    "verification_notes": "Focused candidate browser checks at 1600x900 and 1366x768. Four local stages, matching text/evidence, Next/Previous, focused Space isolation and full-image inspection; 36-cell grids with 10/6 failures; four shared future images and six bidirectional connectors. Forward/back through 19-22; opening full film plays with sound and manual skip; existing dialogue interaction. Prior 19 scene blocks and all runtime files byte-identical; original v3 4200ms beat, single cat and route preserved. GitLab evidence #4 notes 8317/8605/9310, related merged !80 via integration !81; no formal approval invented.",
+    "public_verified_at": "2026-11-09T13:30:31.773923+00:00",
+    "publication_evidence": {
+      "integration_commit": "4f36f5bbcdd311ef88db46ec62b3fb0c0d0a34f3",
+      "pages_build": "https://github.com/proxima-j/stray-kitty-presentation/actions/runs/42625645564",
+      "current_url": "https://proxima-j.github.io/stray-kitty-presentation/",
+      "previous_url": "https://proxima-j.github.io/stray-kitty-presentation/previous/",
+      "http_status": 200,
+      "verification": "Published 22-scene Current: native four-stage controls with matching genuine evidence, future shared images and marker. Published 19-scene Previous: original Datadog media loaded from shared assets. Focused source/nav/layout tests passed locally before promotion."
+    }
   },
   "previous": {
     "entry": "previous/",
     "candidate_base_commit": "5e8a0e27e5840605c363447177fdf6242e5319c1",
     "build_marker": "20261109-datadog-taller-frames2",
     "description": "Outgoing verified nineteen-page deck through Datadog Detect, Alert, Recover",
-    "publication_status": "VERIFIED source; rebased snapshot pending public check",
+    "publication_status": "VERIFIED",
     "local_verified_at": "2026-11-09T12:46:05.575583+00:00",
     "verification_notes": "Focused normal-browser checks: 16→17→18→19 and reverse, muted six-second QA response, matching trace and scrollable attributes, Overview side-by-side, Option A chunk selection and full-image inspection, original Slack/Datadog alert-recovery switches and image inspection, Synthetics and phone icon. Long explanatory panels scroll within their frames at shorter viewports. Existing sixteen scenes and all old runtime files byte-identical; v3 4200ms engine unchanged. No backend requests, infrastructure changes or new recordings.",
     "maintenance_base_commit": "b6beaea3a084ae04f3927d64b1817973d8468932",
@@ -21,7 +30,8 @@
     "frame_maintenance_base_commit": "dacfeabf08e9e65ae7d8181a9ddaf886fd826934",
     "frame_maintenance_notes": "User-requested frame-only follow-up: Page 17 media frames taller (253px to 289px at the normal 1280x720 browser viewport), still clearing the original cat/route. Page 19 explanatory /healthz paragraph removed from the slide; full evidence provenance remains linked. Shared grid rows align the alert/recovery buttons with the screenshot frame top and bottom. Page 18, media/interaction code, v3 engine and Previous unchanged. No version rotation for this slide maintenance.",
     "source_commit": "89e52a078d0e2ff4ad03fa1ff3250abd9d9d5155",
-    "snapshot_note": "Frozen only after the 22-scene candidate passed. Small runtime files are independent; all media remains shared once under assets/."
+    "snapshot_note": "Frozen only after the 22-scene candidate passed. Small runtime files are independent; all media remains shared once under assets/.",
+    "public_verified_at": "2026-11-09T13:30:31.773923+00:00"
   },
   "shared_assets": "assets/",
   "retention": "Exactly two usable complete decks: 22-scene Current and outgoing verified 19-scene Previous. Candidate verified before rotation; shared media stored once."

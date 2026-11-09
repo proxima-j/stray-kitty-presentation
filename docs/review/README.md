@@ -67,12 +67,12 @@ Page 16 now uses the user-supplied authentic deployment-card screenshot from pip
 
 The latest Page 16 update aligns both confirmation and image to November 6 / pipeline #7813 and shows all five successful jobs, with full-resolution enlargement. This supersedes the earlier mixed-date description. Published panel and image dialog verified.
 
-## Teamwork, Iteration & Future — composition previews (discussion only)
+## Integrated Teamwork, Iteration & Future — Pages 20–22
 
-These three independent review pages follow the 2026-11-09 agreed content direction. They do **not** modify Current, Previous, or the v3 presentation engine; their working identifiers are not final page numbers.
+- [Page 20 — Cross-Team Collaboration](../?page=cross-team-collaboration): four local stages and genuine GitLab Work Item #4 / merged !80 via !81 / focused follow-up QA. Distinct coordination and delivery tracks; daily alignment; inspectable original evidence.
+- [Page 21 — Design. Test. Rethink.](../?page=design-test-rethink): approved iteration loop, both ordinary-2d6 matrices and the AI design-scope comparison.
+- [Page 22 — A More Connected World](../?page=connected-world): four existing game images around Living World, with bidirectional connections and explicit future-direction labels.
 
-- [Teamwork 01 — Cross-Team Collaboration](teamwork-01-collaboration.html): **clickable four-stage walkthrough** of GitLab **Work Item / Ticket → Discussion & Daily Check**, connected to but distinct from **Branch → Merge Request → Merge & Verify**. No team-name row. Step-specific source-linked map/combat QA evidence; original GitLab screenshots remain pending (current GitLab connector returns project 404).
-- [Teamwork 02 — Design. Test. Rethink.](teamwork-02-iteration.html): unchanged previously accepted three-stage design / playtesting & QA / iteration diagram and two before/after examples.
-- [Future — A More Connected World](teamwork-03-future.html): updated game-future vision illustrated as an **interconnected living-world architecture**: Exploration & Random Events ↔ Combat ↔ Cats & Home ↔ Stories and World, with shared choice/state/relationship consequences. Explicitly prospective, not claims of existing features; current authentic game captures illustrate the source systems.
+The 22-scene candidate passed local checks at 1600×900 and 1366×768, then the published Current and outgoing 19-scene Previous were checked. The three superseded Teamwork review HTML pages and their four now-unused dedicated CSS/JS files were removed only after public verification. Shared review dependencies and unrelated reviews remain.
 
-Asset collection and integration checklist: [Teamwork & Future — Asset Inventory](../library/TEAMWORK-FUTURE-ASSETS.md). Four new GitLab evidence crops are prioritized for TW 01; TW 02 uses existing diagrams, and TW 03 reuses existing game imagery. The new GitLab screenshots are **not yet collected or publication-cleared**. Retain review compositions until the integrated pages are published and verified.
+[Canonical inventory and source scope](../library/TEAMWORK-FUTURE-ASSETS.md) · [Exact capture provenance](../assets/teamwork/gitlab/provenance.json). Original approved compositions remain in normal Git history. No Closing/Q&A scene was created.
