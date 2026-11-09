@@ -2,7 +2,7 @@
   "current": {
     "entry": "./",
     "candidate_base_commit": "89e52a078d0e2ff4ad03fa1ff3250abd9d9d5155",
-    "build_marker": "20261109-teamwork-r5",
+    "build_marker": "20261109-teamwork-focus1",
     "description": "Twenty-two scenes: complete technical/Datadog section, then Cross-Team Collaboration, Design. Test. Rethink., A More Connected World. No Closing/Q&A.",
     "publication_status": "VERIFIED",
     "local_verified_at": "2026-11-09T13:26:55.643265+00:00",
@@ -15,7 +15,9 @@
       "previous_url": "https://proxima-j.github.io/stray-kitty-presentation/previous/",
       "http_status": 200,
       "verification": "Published 22-scene Current: native four-stage controls with matching genuine evidence, future shared images and marker. Published 19-scene Previous: original Datadog media loaded from shared assets. Focused source/nav/layout tests passed locally before promotion."
-    }
+    },
+    "readability_maintenance_base_commit": "03e1e0fdce4e1bc9818bac079c3633a9d0fcc54a",
+    "readability_maintenance_notes": "User-requested Page 20 readability: enlarged evidence allocation and CSS-only source excerpts (title/status, mentions and selected findings), complete original on click. Page-20-only cat/route clearance adds 7vh with smooth/reduced-motion-aware entry/exit, without editing v3 engine or 4200ms navigation. Page 21 diagrams, Page 22, original media and Previous unchanged; no rotation."
   },
   "previous": {
     "entry": "previous/",

@@ -6,7 +6,7 @@ GitHub is the shared source for ChatGPT and Codex. GitHub Pages automatically pu
 
 | Version | Preview | Verified source |
 | --- | --- | --- |
-| Current | https://proxima-j.github.io/stray-kitty-presentation/ | Twenty-two-page deck; Teamwork/Future marker `20261109-teamwork-r5`; candidate verified before rotation |
+| Current | https://proxima-j.github.io/stray-kitty-presentation/ | Twenty-two-page deck; Teamwork/Future marker `20261109-teamwork-focus1`; candidate verified before rotation |
 | Previous | https://proxima-j.github.io/stray-kitty-presentation/previous/ | Outgoing verified nineteen-page runtime `89e52a078d0e2ff4ad03fa1ff3250abd9d9d5155` |
 
 Current supports direct `?page=01` through `?page=22` links. Previous retains `?page=01` through `?page=19`. Stable Current IDs also work as direct links: `roadmap`, `game-flow`, `visual-novel`, `home-hub`, `payment`, `four-maps`, `vertical-design`, `greybox`, `random-events`, `combat`, `dice-animations`, `adaptive-interface`, `technical-architecture`, `kubernetes-deployment`, `gameplay-telemetry`, `observability`, `detect-alert-recover`, `cross-team-collaboration`, `design-test-rethink`, `connected-world`. [docs/versions.json](docs/versions.json) records verified runtime origins; documentation and asset-only commits do not rotate decks.
@@ -107,3 +107,5 @@ The approved compositions are native v3 scenes, with scoped `teamwork.css` / `te
 Iteration preserves the two 6×6 probability diagrams (10/36 → 6/36 failure outcomes) and labels AI scope as a design discussion. Future preserves four existing shared game images and bidirectional Living World connections, explicitly proposed rather than implemented. [Asset inventory](docs/library/TEAMWORK-FUTURE-ASSETS.md) and [capture provenance](docs/assets/teamwork/gitlab/provenance.json) record sources, scope and limited public-presentation clearance.
 
 Focused local candidate checks passed at 1600×900 and 1366×768 before rotation. All original 19 scene blocks and existing runtime files are byte-identical; v3 4200ms navigation, one cat/route, opening film and existing interactions are preserved. Previous is frozen from `89e52a078d0e2ff4ad03fa1ff3250abd9d9d5155`, with asset paths rebased and no media duplication. Earlier integration sections above describe their historical checkpoints; the two-version table is authoritative.
+
+Page 20 readability maintenance: selected source crops now show the title/status, relevant @mention and key finding at larger scale; click retains the complete original. More detail-panel space and a slightly lower Page-20-only cat/route improve legibility. No new binary assets, Page 21/22 edits, engine edits or version rotation.

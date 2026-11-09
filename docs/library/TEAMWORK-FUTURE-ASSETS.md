@@ -51,3 +51,8 @@ Four nodes connect bidirectionally to Living World, with additional cross-system
 Candidate served successfully outside the repository before promotion. Layouts checked at 1600×900 and 1366×768; four walkthrough selections, matching evidence/text, Next/Previous, focused keyboard activation, full original inspection, dice counts, all future images and connector geometry passed. Forward/backward navigation through 19–22, full 60.501-second film playback with sound/manual skip, and existing dialogue interaction checked. Original 19 scene blocks and all shared runtime files are byte-identical, including 4200ms v3 engine. No broad tests, game edits or infrastructure changes. Public Current/Previous verification and final commit are recorded in versions/history.
 
 Missing/substituted evidence: none. Evidence source pages require project sign-in; the curated public crops do not. No administrator elevation was used.
+
+
+## Page 20 readability refinement — November 9
+
+The walkthrough now shows enlarged, clearly labelled selected source excerpts: Work Item title/status, relevant @mention, and a short finding/fix or MR status/branch and fix list. CSS crops reuse the exact four WebPs; no screenshot text was reconstructed, no new binaries were added, and the complete original remains available on click. Exact display crop rectangles are in provenance/manifest. The evidence takes a larger share of the detail panel; compact workflow spacing and Page-20-only lower cat/route clearance provide more height. Original engine/pacing, Page 21 diagrams, Page 22 and Previous remain unchanged. This is a maintenance update, without version rotation.

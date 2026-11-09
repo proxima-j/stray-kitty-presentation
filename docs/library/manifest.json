@@ -1958,7 +1958,31 @@
         "scope": "Peer QA on main 96df703e; two P1 progression reports. Chapter 4 victory settlement used generated state, not a complete played battle.",
         "privacy_review": "Account navigation, unrelated threads, local browser chrome, attachments and reply fields excluded by crop. No credentials, email, student ID, private account ID or confidential label found. Project author names and project identifiers retained as evidence.",
         "publication_clearance": "User explicitly requested these four named GitLab records as curated evidence in the existing public presentation. Source Work Item is not confidential; notes are not internal. Cleared limited project-QA/MR crops only; no broader source export.",
-        "provenance": "../assets/teamwork/gitlab/provenance.json"
+        "provenance": "../assets/teamwork/gitlab/provenance.json",
+        "presentation_excerpts": {
+          "method": "CSS-only viewports of the unchanged source WebP; no new binary or reconstructed text. Separate title/status, mention/context and selected finding where relevant. Complete original opens on click.",
+          "regions_xywh": [
+            [
+              9,
+              32,
+              620,
+              27
+            ],
+            [
+              108,
+              75,
+              515,
+              58
+            ],
+            [
+              120,
+              157,
+              500,
+              46
+            ]
+          ],
+          "updated": "2026-11-09"
+        }
       }
     },
     {
@@ -1993,7 +2017,31 @@
         "scope": "Owner response linking the same reports to MR !80; also distinguishes fixes in !78 and earlier navigation work.",
         "privacy_review": "Account navigation, unrelated threads, local browser chrome, attachments and reply fields excluded by crop. No credentials, email, student ID, private account ID or confidential label found. Project author names and project identifiers retained as evidence.",
         "publication_clearance": "User explicitly requested these four named GitLab records as curated evidence in the existing public presentation. Source Work Item is not confidential; notes are not internal. Cleared limited project-QA/MR crops only; no broader source export.",
-        "provenance": "../assets/teamwork/gitlab/provenance.json"
+        "provenance": "../assets/teamwork/gitlab/provenance.json",
+        "presentation_excerpts": {
+          "method": "CSS-only viewports of the unchanged source WebP; no new binary or reconstructed text. Separate title/status, mention/context and selected finding where relevant. Complete original opens on click.",
+          "regions_xywh": [
+            [
+              9,
+              32,
+              620,
+              27
+            ],
+            [
+              109,
+              105,
+              512,
+              24
+            ],
+            [
+              109,
+              184,
+              512,
+              96
+            ]
+          ],
+          "updated": "2026-11-09"
+        }
       }
     },
     {
@@ -2028,7 +2076,25 @@
         "scope": "MR !80 source fix/map-qa-followup, target main, state merged. Integrated through MR !81; pipeline #6734 passed at 33eefbee. No formal approval recorded.",
         "privacy_review": "Account navigation, unrelated threads, local browser chrome, attachments and reply fields excluded by crop. No credentials, email, student ID, private account ID or confidential label found. Project author names and project identifiers retained as evidence.",
         "publication_clearance": "User explicitly requested these four named GitLab records as curated evidence in the existing public presentation. Source Work Item is not confidential; notes are not internal. Cleared limited project-QA/MR crops only; no broader source export.",
-        "provenance": "../assets/teamwork/gitlab/provenance.json"
+        "provenance": "../assets/teamwork/gitlab/provenance.json",
+        "presentation_excerpts": {
+          "method": "CSS-only viewports of the unchanged source WebP; no new binary or reconstructed text. Separate title/status, mention/context and selected finding where relevant. Complete original opens on click.",
+          "regions_xywh": [
+            [
+              8,
+              47,
+              628,
+              60
+            ],
+            [
+              10,
+              270,
+              620,
+              110
+            ]
+          ],
+          "updated": "2026-11-09"
+        }
       }
     },
     {
@@ -2063,7 +2129,31 @@
         "scope": "Focused normal-player route through Chapters 1, 2, 4 and 5 on main 42498777. Progression passed on this route; remaining P2/P3 hints reported. Not exhaustive boundaries or random branches.",
         "privacy_review": "Account navigation, unrelated threads, local browser chrome, attachments and reply fields excluded by crop. No credentials, email, student ID, private account ID or confidential label found. Project author names and project identifiers retained as evidence.",
         "publication_clearance": "User explicitly requested these four named GitLab records as curated evidence in the existing public presentation. Source Work Item is not confidential; notes are not internal. Cleared limited project-QA/MR crops only; no broader source export.",
-        "provenance": "../assets/teamwork/gitlab/provenance.json"
+        "provenance": "../assets/teamwork/gitlab/provenance.json",
+        "presentation_excerpts": {
+          "method": "CSS-only viewports of the unchanged source WebP; no new binary or reconstructed text. Separate title/status, mention/context and selected finding where relevant. Complete original opens on click.",
+          "regions_xywh": [
+            [
+              9,
+              32,
+              620,
+              27
+            ],
+            [
+              108,
+              105,
+              512,
+              100
+            ],
+            [
+              119,
+              226,
+              508,
+              20
+            ]
+          ],
+          "updated": "2026-11-09"
+        }
       }
     }
   ]

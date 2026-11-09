@@ -12,19 +12,40 @@
   const previous=root.querySelector('#previousPhase');
   const next=root.querySelector('#nextPhase');
   const counter=root.querySelector('#phaseCounter');
-  const image=root.querySelector('#twProofImage');
+  const crops=root.querySelector('#twProofCrops');
+  // Display selected source regions at readable scale; inspect still opens the complete original.
+  const regions=[
+    [[9,32,620,27],[108,75,515,58],[120,157,500,46]],
+    [[9,32,620,27],[109,105,512,24],[109,184,512,96]],
+    [[8,47,628,60],[10,270,620,110]],
+    [[9,32,620,27],[108,105,512,100],[119,226,508,20]]
+  ];
   const inspect=root.querySelector('#twProof');
   const fields={kicker:root.querySelector('#phaseKicker'),title:root.querySelector('#phaseTitle'),detail:root.querySelector('#phaseText'),proof:root.querySelector('#proofTitle'),description:root.querySelector('#proofDescription'),link:root.querySelector('#proofLink')};
   let phase=0,visible=false;
   const media=()=> 'assets/teamwork/gitlab/'+steps[phase].file;
-  function loadEvidence(){if(image.getAttribute('src')!==media())image.src=media();}
+  function loadEvidence(){crops.querySelectorAll('img').forEach(image=>{if(image.getAttribute('src')!==media())image.src=media();});}
+  function showCrops(){
+    const selected=regions[phase];
+    crops.replaceChildren();
+    crops.style.setProperty('--stack-ratio',selected.reduce((sum,r)=>sum+r[3]/r[2],0));
+    crops.style.setProperty('--crop-gaps',((selected.length-1)*6)+'px');
+    selected.forEach(([x,y,w,h],index)=>{
+      const region=document.createElement('span');region.className='tw-proof-crop';region.style.aspectRatio=w+'/'+h;
+      const image=document.createElement('img');image.dataset.mediaSrc=media();
+      image.alt=steps[phase].proof+' — original '+(index===0?'title / status':'selected mention or finding');
+      image.style.cssText=`width:${648/w*100}%;left:${-x/w*100}%;top:${-y/h*100}%;`;
+      region.append(image);crops.append(region);
+    });
+  }
   function show(index,load=true){
     phase=Math.max(0,Math.min(steps.length-1,index));
     const item=steps[phase];root.dataset.phase=String(phase);
     buttons.forEach(button=>{const active=Number(button.dataset.phase)===phase;button.setAttribute('aria-pressed',String(active));button.classList.toggle('is-active',active);});
     for(const key of ['kicker','title','detail','proof','description'])fields[key].textContent=item[key];
+    fields.description.textContent=item.description+' · click for full record';
     fields.link.href=item.link;fields.link.textContent='Original source ↗';
-    image.dataset.mediaSrc=media();image.alt=item.proof+' — genuine GitLab screenshot excerpt';
+    showCrops();
     inspect.setAttribute('aria-label','Inspect '+item.proof);
     counter.textContent=String(phase+1).padStart(2,'0')+' / '+String(steps.length).padStart(2,'0');
     previous.disabled=phase===0;next.textContent=phase===steps.length-1?'Start again ↺':'Next phase →';
@@ -39,7 +60,7 @@
   inspect.addEventListener('click',()=>{
     const dialog=document.getElementById('screenshotDialog');
     const full=document.getElementById('enlargedScreenshot');
-    full.src=media();full.alt=image.alt;
+    full.src=media();full.alt=steps[phase].proof+' — complete original GitLab excerpt';
     document.getElementById('screenshotTitle').textContent=steps[phase].proof;
     dialog.showModal();
   });
