@@ -1,53 +1,52 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
-<title>Stray Kitty — Design and QA Before/After · Review</title>
-<link rel="stylesheet" href="review.css"><link rel="stylesheet" href="teamwork-preview.css"></head>
-<body><main class="review-page tw-review tw-diagram-page tw-two">
-  <div class="label"><span class="num">TW 02</span>DECISION-MAKING & GROWTH · REVISED DIAGRAM</div>
-  <h1>Test the Idea. Change the Design.</h1>
-  <div class="review-body">
-    <section class="tw-two-process" aria-label="An iterative decision loop">
-      <div class="tw-two-stage"><span>01</span><strong>Design Intention</strong><small>What we expected</small></div>
-      <div class="tw-connector" aria-hidden="true">→</div>
-      <div class="tw-two-stage tw-two-test"><span>02</span><strong>Playtesting / QA</strong><small>What we observed</small></div>
-      <div class="tw-connector" aria-hidden="true">→</div>
-      <div class="tw-two-stage tw-two-improve"><span>03</span><strong>Revise & Verify</strong><small>What we changed</small></div>
-    </section>
-    <div class="tw-iteration-loop" aria-label="Changes feed back into the next design and test cycle">
-      <svg viewBox="0 0 1100 40" preserveAspectRatio="none" aria-hidden="true"><path d="M995 4 V24 H95 V4" fill="none" stroke="#b56e55" stroke-width="2" stroke-dasharray="6 8"/><path d="M83 13 L95 3 L107 13" fill="none" stroke="#b56e55" stroke-width="2"/></svg>
-      <span>REPEAT THROUGH DEVELOPMENT</span>
-    </div>
-    <div class="tw-beforeafter-labels"><span>BEFORE · INITIAL DESIGN</span><span>TRIGGER FOR CHANGE</span><span>AFTER · REFINED DECISION</span></div>
-    <section class="tw-decision-story" aria-label="Example one, real numerical playtest balancing">
-      <div class="tw-story-title"><small>01 · PLAYTEST FEEDBACK</small><strong>Random Events</strong></div>
-      <div class="tw-before-box">
-        <div class="tw-comparison-tag">BEFORE</div>
-        <span class="tw-threshold">2d6 ≤ 5</span>
-        <span class="tw-big-percent">27.78%</span>
-        <small>Calculated chance of failure</small>
-      </div>
-      <div class="tw-story-trigger"><span class="tw-cause-symbol" aria-hidden="true">!</span><strong>Failure felt too frequent</strong><small>Playtest feedback challenged the balance</small></div>
-      <div class="tw-after-box">
-        <div class="tw-comparison-tag">AFTER</div>
-        <span class="tw-threshold">2d6 ≤ 4</span>
-        <span class="tw-big-percent">16.67%</span>
-        <small>Calculated chance of failure</small>
-      </div>
-    </section>
-    <section class="tw-decision-story" aria-label="Example two, AI scope narrowed by discussion">
-      <div class="tw-story-title"><small>02 · DESIGN DISCUSSION</small><strong>AI Scope</strong></div>
-      <div class="tw-before-box tw-scope-before">
-        <div class="tw-comparison-tag">CONSIDERED</div>
-        <div class="tw-scope-chips"><span>Exploration</span><span>Events</span><span>Combat</span><span>Home Hub</span></div>
-      </div>
-      <div class="tw-story-trigger"><span class="tw-cause-symbol" aria-hidden="true">?</span><strong>Where is AI useful?</strong><small>Cross-team product decision, not a confirmed playtest finding</small></div>
-      <div class="tw-after-box tw-scope-after">
-        <div class="tw-comparison-tag">SELECTED</div>
-        <div class="tw-scope-chips"><span>Combat</span><span>Home Hub</span></div>
-        <small>Exploration retains contextual authored hints</small>
-      </div>
-    </section>
-    <div class="tw-two-footer"><div><strong>Optimization & Limits</strong><small>Load time · Interaction clarity · QA coverage · Device verification</small></div><b>Learn fast. Make trade-offs. Own the experience.</b></div>
+<title>Stray Kitty — Teamwork 02 | Design Decisions Review</title>
+<link rel="stylesheet" href="review.css"><link rel="stylesheet" href="teamwork-preview.css"><link rel="stylesheet" href="teamwork-diagram-preview.css"></head>
+<body><main class="review-page tw-review tw-v2">
+<div class="label"><span class="num">TW 02</span>DESIGN DECISIONS · BEFORE / AFTER · COMPOSITION REVIEW</div>
+<h1>Design. Test. Rethink.</h1>
+<p class="subtitle">Ideas changed as actual gameplay, QA and cross-team discussion challenged our assumptions.</p>
+<div class="review-body">
+ <section class="tw-v2-loop" aria-label="A recurring design thinking, playtesting and iteration cycle">
+  <div class="tw-v2-cycle">
+   <div class="tw-v2-cycle-node"><strong>Initial Design</strong><small>Intention & hypothesis</small></div>
+   <div class="tw-v2-cycle-arrow" aria-hidden="true">→</div>
+   <div class="tw-v2-cycle-node is-main"><strong>Playtesting & QA</strong><small>Experience, behavior & evidence</small></div>
+   <div class="tw-v2-cycle-arrow" aria-hidden="true">→</div>
+   <div class="tw-v2-cycle-node"><strong>Iterate</strong><small>Revise and optimize</small></div>
   </div>
-  <div class="review-route" aria-hidden="true"></div><img class="review-cat" src="../assets/miaomiao.svg" alt="">
+  <svg class="tw-v2-loop-return" viewBox="0 0 1000 27" preserveAspectRatio="none" aria-hidden="true">
+   <path d="M920 1 C915 25 160 25 80 1"/><path d="M73 8L80 1L87 8"/>
+   <rect x="382" y="8" width="240" height="17" fill="#f4e6c7"/><text x="420" y="21">CONTINUOUS FEEDBACK</text>
+  </svg>
+ </section>
+ <div class="tw-v2-cases">
+  <section class="tw-v2-example" aria-label="Event balancing before and after playtesting">
+   <div class="tw-v2-example-head"><strong>01 · Random Event Balance</strong><span>PLAYTEST-DRIVEN CHANGE · ORDINARY 2D6</span></div>
+   <div class="tw-v2-caseflow">
+    <div class="tw-v2-decision">
+     <div class="tw-v2-decision-info"><span class="eyeline">BEFORE · FAIL ≤ 5</span><span class="big-num">27.78%</span><span class="value-note">10 of 36 dice combinations</span></div>
+     <svg class="tw-v2-mini-dice" viewBox="0 0 102 102" role="img" aria-label="The 36 equally likely outcomes of rolling two six-sided dice, with 10 failure combinations highlighted"><rect class="cell fail" x="3" y="3" width="13" height="13" rx="2"/><rect class="cell fail" x="19" y="3" width="13" height="13" rx="2"/><rect class="cell fail" x="35" y="3" width="13" height="13" rx="2"/><rect class="cell fail" x="51" y="3" width="13" height="13" rx="2"/><rect class="cell" x="67" y="3" width="13" height="13" rx="2"/><rect class="cell" x="83" y="3" width="13" height="13" rx="2"/><rect class="cell fail" x="3" y="19" width="13" height="13" rx="2"/><rect class="cell fail" x="19" y="19" width="13" height="13" rx="2"/><rect class="cell fail" x="35" y="19" width="13" height="13" rx="2"/><rect class="cell" x="51" y="19" width="13" height="13" rx="2"/><rect class="cell" x="67" y="19" width="13" height="13" rx="2"/><rect class="cell" x="83" y="19" width="13" height="13" rx="2"/><rect class="cell fail" x="3" y="35" width="13" height="13" rx="2"/><rect class="cell fail" x="19" y="35" width="13" height="13" rx="2"/><rect class="cell" x="35" y="35" width="13" height="13" rx="2"/><rect class="cell" x="51" y="35" width="13" height="13" rx="2"/><rect class="cell" x="67" y="35" width="13" height="13" rx="2"/><rect class="cell" x="83" y="35" width="13" height="13" rx="2"/><rect class="cell fail" x="3" y="51" width="13" height="13" rx="2"/><rect class="cell" x="19" y="51" width="13" height="13" rx="2"/><rect class="cell" x="35" y="51" width="13" height="13" rx="2"/><rect class="cell" x="51" y="51" width="13" height="13" rx="2"/><rect class="cell" x="67" y="51" width="13" height="13" rx="2"/><rect class="cell" x="83" y="51" width="13" height="13" rx="2"/><rect class="cell" x="3" y="67" width="13" height="13" rx="2"/><rect class="cell" x="19" y="67" width="13" height="13" rx="2"/><rect class="cell" x="35" y="67" width="13" height="13" rx="2"/><rect class="cell" x="51" y="67" width="13" height="13" rx="2"/><rect class="cell" x="67" y="67" width="13" height="13" rx="2"/><rect class="cell" x="83" y="67" width="13" height="13" rx="2"/><rect class="cell" x="3" y="83" width="13" height="13" rx="2"/><rect class="cell" x="19" y="83" width="13" height="13" rx="2"/><rect class="cell" x="35" y="83" width="13" height="13" rx="2"/><rect class="cell" x="51" y="83" width="13" height="13" rx="2"/><rect class="cell" x="67" y="83" width="13" height="13" rx="2"/><rect class="cell" x="83" y="83" width="13" height="13" rx="2"/></svg>
+    </div>
+    <div class="tw-v2-pivot"><b>PLAYTEST</b><p>Too many failures</p><span class="arrow" aria-hidden="true">→</span></div>
+    <div class="tw-v2-decision after">
+     <div class="tw-v2-decision-info"><span class="eyeline">AFTER · FAIL ≤ 4</span><span class="big-num">16.67%</span><span class="value-note">6 of 36 dice combinations</span></div>
+     <svg class="tw-v2-mini-dice" viewBox="0 0 102 102" role="img" aria-label="The 36 equally likely outcomes of rolling two six-sided dice, with 6 failure combinations highlighted"><rect class="cell fail" x="3" y="3" width="13" height="13" rx="2"/><rect class="cell fail" x="19" y="3" width="13" height="13" rx="2"/><rect class="cell fail" x="35" y="3" width="13" height="13" rx="2"/><rect class="cell" x="51" y="3" width="13" height="13" rx="2"/><rect class="cell" x="67" y="3" width="13" height="13" rx="2"/><rect class="cell" x="83" y="3" width="13" height="13" rx="2"/><rect class="cell fail" x="3" y="19" width="13" height="13" rx="2"/><rect class="cell fail" x="19" y="19" width="13" height="13" rx="2"/><rect class="cell" x="35" y="19" width="13" height="13" rx="2"/><rect class="cell" x="51" y="19" width="13" height="13" rx="2"/><rect class="cell" x="67" y="19" width="13" height="13" rx="2"/><rect class="cell" x="83" y="19" width="13" height="13" rx="2"/><rect class="cell fail" x="3" y="35" width="13" height="13" rx="2"/><rect class="cell" x="19" y="35" width="13" height="13" rx="2"/><rect class="cell" x="35" y="35" width="13" height="13" rx="2"/><rect class="cell" x="51" y="35" width="13" height="13" rx="2"/><rect class="cell" x="67" y="35" width="13" height="13" rx="2"/><rect class="cell" x="83" y="35" width="13" height="13" rx="2"/><rect class="cell" x="3" y="51" width="13" height="13" rx="2"/><rect class="cell" x="19" y="51" width="13" height="13" rx="2"/><rect class="cell" x="35" y="51" width="13" height="13" rx="2"/><rect class="cell" x="51" y="51" width="13" height="13" rx="2"/><rect class="cell" x="67" y="51" width="13" height="13" rx="2"/><rect class="cell" x="83" y="51" width="13" height="13" rx="2"/><rect class="cell" x="3" y="67" width="13" height="13" rx="2"/><rect class="cell" x="19" y="67" width="13" height="13" rx="2"/><rect class="cell" x="35" y="67" width="13" height="13" rx="2"/><rect class="cell" x="51" y="67" width="13" height="13" rx="2"/><rect class="cell" x="67" y="67" width="13" height="13" rx="2"/><rect class="cell" x="83" y="67" width="13" height="13" rx="2"/><rect class="cell" x="3" y="83" width="13" height="13" rx="2"/><rect class="cell" x="19" y="83" width="13" height="13" rx="2"/><rect class="cell" x="35" y="83" width="13" height="13" rx="2"/><rect class="cell" x="51" y="83" width="13" height="13" rx="2"/><rect class="cell" x="67" y="83" width="13" height="13" rx="2"/><rect class="cell" x="83" y="83" width="13" height="13" rx="2"/></svg>
+    </div>
+   </div>
+  </section>
+  <section class="tw-v2-example" aria-label="AI feature scope before and after design discussion">
+   <div class="tw-v2-example-head"><strong>02 · Where Should AI Help?</strong><span>DESIGN REVIEW · NOT A PLAYTEST RESULT</span></div>
+   <div class="tw-v2-caseflow">
+    <div class="tw-v2-decision"><div class="tw-v2-ai"><div><span class="eyeline" style="font:bold 9px Arial;letter-spacing:.1em;color:#a16b4b">EARLIER CONSIDERED SCOPE</span></div><strong>Four possible entry points</strong><div class="tw-v2-ai-pills"><span>Explore</span><span>Events</span><span>Combat</span><span>Home Hub</span></div></div></div>
+    <div class="tw-v2-pivot"><b>DISCUSSION</b><p>Clarity vs complexity</p><span class="arrow" aria-hidden="true">→</span></div>
+    <div class="tw-v2-decision after"><div class="tw-v2-ai"><div><span class="eyeline" style="font:bold 9px Arial;letter-spacing:.1em;color:#a16b4b">CHOSEN DIRECTION</span></div><strong>Focused AI chat</strong><div class="tw-v2-ai-pills"><span class="kept">Combat</span><span class="kept">Home Hub</span></div><div class="value-note">Exploration keeps authored contextual hints</div></div></div>
+   </div>
+  </section>
+ </div>
+ <div class="tw-v2-foot">
+  <small><b>Optimization & limits</b> · Performance vs visual fidelity · Narrow-screen verification · Machine checks + human QA</small>
+  <b>Learn fast. Choose scope. Own the experience.</b>
+ </div>
+</div><div class="review-route" aria-hidden="true"></div><img class="review-cat" src="../assets/miaomiao.svg" alt="">
 </main></body></html>
