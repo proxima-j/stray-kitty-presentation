@@ -2,7 +2,8 @@
   'use strict';
   const root=document.getElementById('ddDashboardPreview');
   const query=new URLSearchParams(location.search);
-  let layout=query.get('layout')==='stacked'?'stacked':'spread';
+  const selectedComposition=root.dataset.selectedComposition;
+  let layout=selectedComposition==='stacked'||query.get('layout')==='stacked'?'stacked':'spread';
   let data;
   const dialog=document.getElementById('compositionInspect');
   const image=document.getElementById('compositionInspectImage');
@@ -24,7 +25,7 @@
     }
     hint();requestAnimationFrame(fitSheets);
   }
-  function hint(){const tab=root.querySelector('[data-dashboard-tab][aria-selected="true"]').dataset.dashboardTab;document.getElementById('compositionHint').textContent=tab==='overview'?'Overview · locked side-by-side composition':layout==='stacked'?'A · Titled stack — choose a section header to reveal the complete chunk':'B · Two consecutive screenshot columns — full sections shown together';}
+  function hint(){const tab=root.querySelector('[data-dashboard-tab][aria-selected="true"]').dataset.dashboardTab;document.getElementById('compositionHint').textContent=selectedComposition?(tab==='overview'?'Operational Overview · service metrics, monitors and SLOs':'Choose a section title to explore the complete dashboard chunk'):tab==='overview'?'Overview · locked side-by-side composition':layout==='stacked'?'A · Titled stack — choose a section header to reveal the complete chunk':'B · Two consecutive screenshot columns — full sections shown together';}
   document.querySelectorAll('[data-layout]').forEach(button=>button.addEventListener('click',()=>{layout=button.dataset.layout;query.set('layout',layout);history.replaceState(null,'','?'+query);render();}));
   root.querySelectorAll('[data-dashboard-tab]').forEach(tab=>tab.addEventListener('click',()=>{query.set('tab',tab.dataset.dashboardTab);history.replaceState(null,'','?'+query);hint();requestAnimationFrame(fitSheets);}));
   document.getElementById('compositionInspectClose').addEventListener('click',()=>dialog.hidden=true);

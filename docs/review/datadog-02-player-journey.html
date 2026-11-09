@@ -9,9 +9,9 @@
 .dd-overview-image{color:inherit}
 .dd-tabrow{gap:clamp(6px,.7vw,12px)}
 .dd-select{padding:9px clamp(10px,1.4vw,21px)}
-</style></head>
+</style><link rel="stylesheet" href="datadog-composition-review.css"></head>
 <body>
-<main class="dd-page" id="ddDashboardPreview" aria-label="Datadog page 2 dashboard review">
+<main class="dd-page" id="ddDashboardPreview" data-selected-composition="stacked" aria-label="Datadog page 2 dashboard review">
  <div class="section-label"><span class="number-pill">18</span>TECHNICAL WALKTHROUGH / DATADOG</div>
  <header class="page-intro"><h1>Observability Across the Game</h1><p>From system health to player behavior, all in one monitoring workflow.</p></header>
  <div class="dd-tabrow" role="tablist" aria-label="Choose a Datadog dashboard insight">
@@ -22,9 +22,7 @@
  </div>
  <div class="dd-hero">
   <section id="ddOverview" class="dd-dashboard-shell dd-overview-layout" data-dashboard-panel="overview" role="tabpanel">
-   <a class="dd-frame dd-dashboard-image dd-overview-image" href="../assets/datadog/page-02-player-journey/dashboard-overview.png" target="_blank" rel="noopener" aria-label="Open the authentic Overview dashboard capture at full size">
-    <img src="../assets/datadog/page-02-player-journey/dashboard-overview.png" alt="Actual Datadog Overview: service metrics, 11 OK and 5 No Data operational monitors, and two seven-day SLO widgets, captured November 9, 2026">
-   </a>
+   <div class="dd-frame composition-board" data-board="overview" aria-label="Authentic dashboard section composition"></div>
    <aside class="dd-frame dd-analysis dd-overview-copy">
     <span class="dd-label">ENGINEERING + PRODUCT VISIBILITY</span>
     <h2>We monitor both how the game runs and how it is played.</h2>
@@ -32,12 +30,12 @@
     <div class="dd-coverage"><h3>Gameplay &amp; Business</h3><p>Player experience and RUM<br>Story, random events and combat<br>Payments, economy and AI Advisor</p></div>
     <div class="dd-rule"></div>
     <div class="dd-source">This Overview shows operational monitoring. Player Journey and Business &amp; Payments provide the additional gameplay and business views.</div>
-    <div class="dd-source">Captured Nov 9, 2026 · Selected range 07:00–08:00 UTC. KPI overrides and SLOs use seven days; monitor status is a capture-time snapshot. No Data remains visible.</div>
+    <div class="dd-source">Captured Nov 9, 2026 · Selected range 08:00–09:00 UTC. KPI overrides and SLOs use seven days; monitor status is a capture-time snapshot. No Data remains visible.</div>
     <a class="dd-link" target="_blank" rel="noopener" href="https://us5.datadoghq.com/dashboard/tiy-p7i-rek">Actual Overview dashboard ↗</a>
    </aside>
   </section>
   <section id="ddPerformance" class="dd-dashboard-shell" data-dashboard-panel="performance" role="tabpanel" hidden>
-   <div class="dd-frame dd-dashboard-image"><img src="../assets/datadog/page-02-player-journey/dashboard-performance.png" alt="Actual Datadog Player Journey dashboard chart of daily LCP p75, captured at a fixed November 2–9 window"></div>
+   <div class="dd-frame composition-board" data-board="performance" aria-label="Authentic dashboard section composition"></div>
    <aside class="dd-frame dd-analysis">
     <span class="dd-label">REAL USER MONITORING</span>
     <div class="dd-big">4.43 s</div>
@@ -49,7 +47,7 @@
    </aside>
   </section>
   <section id="ddEvents" class="dd-dashboard-shell" data-dashboard-panel="events" role="tabpanel" hidden>
-   <div class="dd-frame dd-dashboard-image"><img data-src="../assets/datadog/page-02-player-journey/dashboard-events.png" alt="Actual Datadog event result chart for the fixed November 2–9 window"></div>
+   <div class="dd-frame composition-board" data-board="events" aria-label="Authentic dashboard section composition"></div>
    <aside class="dd-frame dd-analysis">
     <span class="dd-label">GAMEPLAY OBSERVABILITY</span>
     <div class="dd-big">10 events</div>
@@ -61,20 +59,21 @@
    </aside>
   </section>
   <section id="ddAdvisor" class="dd-dashboard-shell" data-dashboard-panel="advisor" role="tabpanel" hidden>
-   <div class="dd-frame dd-dashboard-image"><img data-src="../assets/datadog/page-02-player-journey/dashboard-ai.png" alt="Actual Datadog AI Advisor calls by context and result for the fixed November 2–9 window"></div>
+   <div class="dd-frame composition-board" data-board="advisor" aria-label="Authentic dashboard section composition"></div>
    <aside class="dd-frame dd-analysis">
     <span class="dd-label">AI / BUSINESS OBSERVABILITY</span>
     <div class="dd-big">4 Home + 1 Battle</div>
-    <h2>Where do players request help?</h2>
-    <p>Five recorded successful AI calls by context. The dashboard demonstrates instrumentation, not model reliability at scale.</p>
+    <h2>How do payments, economy and AI behave?</h2>
+    <p>Payments, currency flows and five successful Advisor calls in the recorded non-QA sample. These sections show instrumentation, not reliability at scale.</p>
     <div class="dd-rule"></div>
     <div class="dd-source">Nov 2–9, 2026 · Backend query excludes qa:true</div>
     <a class="dd-link" target="_blank" rel="noopener" href="https://us5.datadoghq.com/dashboard/wbx-cm5-me5">Business &amp; Payments dashboard ↗</a>
    </aside>
   </section>
  </div>
- <div class="dd-footer"><span>All four views use genuine Datadog screenshots</span><span>Detail tabs: fixed Nov 2–9 window · Overview: Nov 9 capture with widget time overrides.</span></div>
+ <div class="dd-footer"><span><span id="compositionHint">Operational Overview · service metrics, monitors and SLOs</span></span><span>Authentic section montage · Click any capture to inspect · Widget time overrides remain in the source.</span></div>
  <div class="dd-review-line" aria-hidden="true"></div><img class="dd-review-cat" src="../assets/miaomiao.svg" alt="" aria-hidden="true">
 </main>
-<script src="datadog-preview.js"></script>
+<div class="dd-overlay" id="compositionInspect" hidden role="dialog" aria-modal="true" aria-label="Authentic dashboard section at full size"><div class="dd-overlay-inner"><div class="dd-overlay-head"><span id="compositionInspectTitle"></span><button class="dd-button" id="compositionInspectClose" type="button">Close ×</button></div><img id="compositionInspectImage" alt=""></div></div>
+<script src="datadog-preview.js"></script><script src="datadog-composition-review.js"></script>
 </body></html>

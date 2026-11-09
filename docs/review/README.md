@@ -2,6 +2,8 @@
 
 ## Datadog dashboard composition comparison
 
+Selected on November 9: [main Datadog dashboard review](datadog-02-player-journey.html?tab=performance) now uses Option A for the three detail tabs. Overview remains side by side. The comparison links below are retained for reference; Current is unchanged.
+
 - [A — Titled section stack](datadog-02-composition-review.html?layout=stacked&tab=performance): stacked section headers reveal one complete authentic dashboard chunk at a time.
 - [B — Two consecutive screenshot columns](datadog-02-composition-review.html?layout=spread&tab=performance): the same selected source sections appear together in two columns.
 - Both preserve Overview / Player Experience / Gameplay Events / Business & AI. Overview is locked side by side in both options. Each image opens its original section at full size.

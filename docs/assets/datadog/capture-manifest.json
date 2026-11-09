@@ -392,6 +392,9 @@
     ],
     "overview": "Locked side by side in both options",
     "source_inventory": "assets/datadog/composition-review/provenance.json",
-    "processing": "13 authentic contiguous section crops reused by both layouts; no metric or status reconstruction; original sources retained privately."
+    "processing": "13 authentic contiguous section crops reused by both layouts; no metric or status reconstruction; original sources retained privately.",
+    "selected": "A — titled section stack for Player Experience, Gameplay Events, Business & AI; Overview stays side by side",
+    "selected_review": "review/datadog-02-player-journey.html",
+    "selection_source": "User selected Option A in this chat on November 9, 2026. Standalone review only; no Current integration."
   }
 }
