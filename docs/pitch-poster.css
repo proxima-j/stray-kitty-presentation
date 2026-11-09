@@ -1,0 +1,86 @@
+/* Page 02 only. Direct integration of the user-approved horizontal-poster review.
+   The actual v3 scene, cat, route, navigation, media loader and remaining pages stay unchanged. */
+#elevator-pitch .pitch-layout{
+  top:6.7%;bottom:20%;left:7.4%;right:7.4%;
+  display:grid;grid-template-columns:minmax(0,1.19fr) minmax(0,.95fr);
+  gap:4.1vw;align-items:stretch;
+}
+#elevator-pitch .pitch-text{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;min-width:0}
+#elevator-pitch .pitch-text .section-label{
+  font-size:clamp(9px,.75vw,12px);gap:clamp(7px,1vw,16px);white-space:nowrap;
+}
+#elevator-pitch .pitch-text .number-pill{
+  min-width:3.25vw;height:1.95vw;min-height:22px;padding:0 .8vw;
+  font-size:clamp(11px,.81vw,14px);
+}
+#elevator-pitch .pitch-text .section-label::after{width:4.3vw}
+#elevator-pitch .pitch-text h1{
+  margin:clamp(14px,1.85vw,30px) 0 clamp(10px,1.35vw,21px);
+  font:400 clamp(49px,5.4vw,91px)/1.07 var(--display);
+  letter-spacing:-.055em;
+}
+#elevator-pitch .pitch-text p{
+  font:400 clamp(13px,1.2vw,20px)/1.45 var(--body);
+  letter-spacing:-.015em;margin:0;max-width:47.5em;
+}
+#elevator-pitch .pitch-text .story{
+  font:400 clamp(12px,1.12vw,18.4px)/1.48 var(--body);
+  color:var(--muted);margin-top:clamp(11px,1.4vw,23px);
+}
+#elevator-pitch .pitch-text .closing{
+  font:400 clamp(17px,1.57vw,26px)/1.32 var(--display);
+  letter-spacing:-.027em;color:var(--accent);
+  margin-top:clamp(14px,1.72vw,27px);max-width:45ch;
+}
+#elevator-pitch .pitch-poster-gallery{
+  display:flex;flex-direction:column;align-items:stretch;justify-content:center;
+  min-width:0;min-height:0;gap:clamp(12px,1.3vw,22px);
+}
+#elevator-pitch .pitch-poster-frame{
+  width:100%;aspect-ratio:3344/1882;min-height:0;margin:0;padding:0;
+  display:flex;align-items:center;justify-content:center;
+  border:var(--border) solid var(--ink);border-radius:var(--frame-radius);
+  background:rgba(255,255,255,.08);overflow:hidden;
+}
+#elevator-pitch .pitch-poster-frame img{
+  display:block;width:100%;height:100%;object-fit:contain;
+}
+#elevator-pitch .pitch-support-art{
+  width:100%;height:clamp(105px,13vw,208px);flex:none;
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:clamp(12px,1.3vw,21px);align-items:stretch;
+}
+#elevator-pitch .pitch-support-art .folder-frame,
+#elevator-pitch .pitch-support-art .ticket-frame{
+  position:relative;top:auto;left:auto;right:auto;width:auto;height:100%;min-height:0;
+}
+#elevator-pitch .pitch-support-art .folder-frame{margin-top:9px;height:calc(100% - 9px)}
+#elevator-pitch .pitch-support-art .folder-tab{
+  top:-21px;height:21px;padding:3px 12px 0;
+  font:400 clamp(9px,.68vw,11px)/1.4 var(--body);white-space:nowrap;
+}
+#elevator-pitch .pitch-support-art img{
+  display:block;position:relative;z-index:1;width:100%;height:100%;
+  object-fit:contain;padding:clamp(4px,.45vw,9px);
+}
+#elevator-pitch .pitch-poster-cats{transform:rotate(1.7deg)}
+#elevator-pitch .pitch-poster-cats img{padding:clamp(8px,.8vw,14px)}
+/* Preserve the approved smaller desktop layout without affecting other scenes. */
+@media(max-width:1080px){
+  #elevator-pitch .pitch-layout{
+    left:6%;right:6%;gap:3vw;grid-template-columns:minmax(0,1.16fr) minmax(0,1fr);
+  }
+  #elevator-pitch .pitch-text h1{font-size:5.2vw}
+  #elevator-pitch .pitch-text p{font-size:1.15vw}
+  #elevator-pitch .pitch-text .story{font-size:1.08vw}
+  #elevator-pitch .pitch-text .closing{font-size:1.53vw}
+  #elevator-pitch .pitch-support-art{height:12.5vw}
+}
+@media(max-height:780px){
+  #elevator-pitch .pitch-layout{top:6.7%}
+  #elevator-pitch .pitch-text h1{
+    margin:clamp(14px,1.85vw,30px) 0 clamp(10px,1.35vw,21px);
+  }
+  #elevator-pitch .pitch-text .story{margin-top:clamp(11px,1.4vw,23px)}
+  #elevator-pitch .pitch-text .closing{margin-top:clamp(14px,1.72vw,27px)}
+}
