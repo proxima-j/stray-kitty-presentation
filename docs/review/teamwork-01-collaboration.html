@@ -1,64 +1,64 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
-<title>Stray Kitty — Teamwork 01 | Collaboration Diagram Review</title>
-<link rel="stylesheet" href="review.css"><link rel="stylesheet" href="teamwork-preview.css"><link rel="stylesheet" href="teamwork-diagram-preview.css"></head>
-<body><main class="review-page tw-review tw-v2">
-<div class="label"><span class="num">TW 01</span>TEAMWORK · FLOW DIAGRAM · COMPOSITION REVIEW</div>
-<h1>Five Owners. One Integrated Game.</h1>
-<p class="subtitle">A team-wide GitLab workflow built around clear ownership and constant coordination.</p>
-<div class="review-body">
- <section class="tw-v2-roles" aria-label="Five assigned modules and their role-owned GitLab Work Items">
-  <div class="tw-v2-role"><div><div class="tw-v2-role-name">Haozhe</div><div class="tw-v2-role-title">NARRATIVE</div></div><span class="tw-v2-issue">#1</span></div>
-  <div class="tw-v2-role"><div><div class="tw-v2-role-name">Jenny</div><div class="tw-v2-role-title">LEVEL DESIGN</div></div><span class="tw-v2-issue">#3</span></div>
-  <div class="tw-v2-role"><div><div class="tw-v2-role-name">Yao Yu</div><div class="tw-v2-role-title">RANDOM EVENTS + OBSERVABILITY</div></div><span class="tw-v2-issue">#2 / #18</span></div>
-  <div class="tw-v2-role"><div><div class="tw-v2-role-name">Qiwen</div><div class="tw-v2-role-title">COMBAT</div></div><span class="tw-v2-issue">#4</span></div>
-  <div class="tw-v2-role"><div><div class="tw-v2-role-name">Xuanyang</div><div class="tw-v2-role-title">UI / UX</div></div><span class="tw-v2-issue">#5</span></div>
- </section>
- <div class="tw-v2-connect" aria-hidden="true"><svg viewBox="0 0 1000 37" preserveAspectRatio="none">
-  <g fill="none" stroke="#a98161" stroke-width="1.7" stroke-dasharray="5 6">
-   <path d="M100 0V14H900V0 M300 0V14 M500 0V14 M700 0V14 M900 0V14 M500 14V36"/>
-  </g><path d="M495 30L500 36L505 30" fill="none" stroke="#a98161" stroke-width="2"/></svg>
-  <span class="tw-v2-connect-label">REQUESTS ROUTED TO RELEVANT OWNERS</span>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex"><title>Stray Kitty · GitLab Collaboration Walkthrough</title>
+<link rel="stylesheet" href="review.css"><link rel="stylesheet" href="teamwork-preview.css"><link rel="stylesheet" href="teamwork-revision.css"></head>
+<body>
+<main class="review-page tw-review tw-walk">
+ <div class="label"><span class="num">TW 01</span>TEAMWORK · INTERACTIVE COMPOSITION REVIEW</div>
+ <h1>Cross-Team Collaboration</h1>
+ <p class="subtitle">A GitLab ticket travels through two connected workflows: task coordination and code delivery.</p>
+ <div class="review-body tw-walk-body">
+  <div class="tw-walk-intro"><span class="tw-kicker">SELECT ANY STAGE TO FOLLOW ONE DOCUMENTED CASE</span><span id="phaseCounter" class="tw-phase-counter" aria-live="polite">01 / 04</span></div>
+  <section class="tw-gitlab-map" aria-label="Separate but interconnected GitLab coordination and code tracks">
+   <div class="tw-track">
+    <div class="tw-track-label"><small>TRACK A</small><strong>Work Item & Ticket</strong><span>Coordinate across role owners</span></div>
+    <div class="tw-track-flow">
+     <button type="button" class="tw-flow-node" data-phase="0" aria-pressed="true"><small>GITLAB WORK ITEM</small><strong>Role Owner's<br>Work Item</strong><span>Specific module channel</span></button>
+     <span class="tw-flow-arrow" aria-hidden="true">→</span>
+     <button type="button" class="tw-flow-node" data-phase="0" aria-pressed="true"><small>TICKET / REQUEST</small><strong>Cross-Team<br>Issue</strong><span>Bug or dependency</span></button>
+     <span class="tw-flow-arrow" aria-hidden="true">→</span>
+     <button type="button" class="tw-flow-node" data-phase="1" aria-pressed="false"><small>COORDINATION</small><strong>Discussion<br>& Decision</strong><span>Clarify scope and owner</span></button>
+    </div>
+   </div>
+   <div class="tw-track-connector">
+    <div class="tw-connector-down"><span aria-hidden="true">↓</span> Agreed work moves into implementation</div>
+    <div class="tw-connector-daily"><b>Daily checks</b> <span>Align status, dependencies and overlapping changes across both tracks</span></div>
+    <div class="tw-connector-back">Merged result updates the Work Item <span aria-hidden="true">↺</span></div>
+   </div>
+   <div class="tw-track tw-track-code">
+    <div class="tw-track-label"><small>TRACK B</small><strong>Branch & Merge Request</strong><span>Deliver an isolated change</span></div>
+    <div class="tw-track-flow">
+     <button type="button" class="tw-flow-node" data-phase="2" aria-pressed="false"><small>NEW BRANCH</small><strong>Implement<br>& Check</strong><span>Scoped code change</span></button>
+     <span class="tw-flow-arrow" aria-hidden="true">→</span>
+     <button type="button" class="tw-flow-node" data-phase="2" aria-pressed="false"><small>MERGE REQUEST</small><strong>Submit MR<br>& Review</strong><span>Resolve issues / conflicts</span></button>
+     <span class="tw-flow-arrow" aria-hidden="true">→</span>
+     <button type="button" class="tw-flow-node" data-phase="3" aria-pressed="false"><small>INTEGRATION</small><strong>Merge<br>& Verify</strong><span>Retest player flow</span></button>
+    </div>
+   </div>
+  </section>
+  <section class="tw-phase-detail" aria-label="Stage-by-stage GitLab collaboration case">
+   <div class="tw-phase-copy">
+    <small id="phaseKicker">STEP 01 · TICKET IN WORK ITEM #4</small>
+    <h2 id="phaseTitle">A teammate reports a cross-module issue.</h2>
+    <p id="phaseText">The map/combat peer QA report documents reproducible retry and progression problems in the relevant Combat Work Item.</p>
+    <div class="tw-phase-nav">
+     <button type="button" id="previousPhase" disabled>← Previous</button>
+     <button type="button" id="nextPhase">Next phase →</button>
+    </div>
+   </div>
+   <div class="tw-phase-evidence">
+    <div class="tw-evidence-head"><b>GITLAB · SOURCE EVIDENCE</b><span>PREVIEW · SCREENSHOT TO BE CAPTURED</span></div>
+    <div class="tw-evidence-content">
+     <span class="tw-proof-icon" aria-hidden="true">#4</span>
+     <div><strong id="proofTitle">Work Item #4 — original peer-QA report</strong><p id="proofDescription">Actual GitLab screenshot pending; linked discussion documents the test.</p></div>
+    </div>
+    <a id="proofLink" href="https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/work_items/4#note_8317" target="_blank" rel="noopener noreferrer">Open original Work Item evidence ↗</a>
+   </div>
+  </section>
+  <p class="tw-walk-footnote">The case is documented in GitLab. The walkthrough shows verified summaries with direct links; original UI screenshots are not yet included.</p>
  </div>
- <section class="tw-v2-tracks" aria-label="Two cooperating GitLab processes">
-  <div class="tw-v2-track">
-   <div class="tw-v2-track-head"><strong>Coordinate the work</strong><small>WORK ITEMS</small></div>
-   <div class="tw-v2-trackflow">
-    <div class="tw-v2-step"><span>Cross-team<br>request</span><small>Dependency / bug</small></div>
-    <span class="tw-v2-step-arr" aria-hidden="true">→</span>
-    <div class="tw-v2-step is-highlight"><span>Owner's<br>Work Item</span><small>Discussion</small></div>
-    <span class="tw-v2-step-arr" aria-hidden="true">→</span>
-    <div class="tw-v2-step"><span>Decision &<br>handoff</span><small>Agree next action</small></div>
-   </div>
-   <div class="tw-v2-track-foot">Tickets go to the corresponding module owner, not a generic queue.</div>
-  </div>
-  <div class="tw-v2-middle" aria-hidden="true"><span class="sync-mark">⇄</span><span>Aligned<br>work</span></div>
-  <div class="tw-v2-track">
-   <div class="tw-v2-track-head"><strong>Ship the change</strong><small>BRANCH + MR</small></div>
-   <div class="tw-v2-trackflow">
-    <div class="tw-v2-step"><span>New<br>branch</span><small>Isolated change</small></div>
-    <span class="tw-v2-step-arr" aria-hidden="true">→</span>
-    <div class="tw-v2-step is-finish"><span>Merge<br>Request</span><small>Focused checks</small></div>
-    <span class="tw-v2-step-arr" aria-hidden="true">→</span>
-    <div class="tw-v2-step"><span>Review &<br>merge</span><small>Verify result</small></div>
-   </div>
-   <div class="tw-v2-track-foot">The implementation cycle proceeds alongside Work Item coordination.</div>
-  </div>
- </section>
- <div class="tw-v2-daily"><div class="daily-pill"><strong>Daily check-ins</strong><small>Shared progress · Dependencies · Avoid overlap & conflicts</small></div></div>
- <section class="tw-v2-evidence" aria-label="Real cross-team QA case, awaiting screenshot captures">
-  <div class="tw-v2-evidence-title"><strong>One real collaboration case: Map × Combat progression</strong><small>Source-linked GitLab evidence · Screenshot slots pending</small></div>
-  <div class="tw-v2-evidence-row">
-   <div class="tw-v2-proof">
-    <div class="tw-v2-shot-slot">ACTUAL GITLAB<br>SCREENSHOT<br>PENDING</div>
-    <div class="tw-v2-proof-text"><span class="source">WORK ITEM #4 · PEER QA</span><b>Battle retry blocked progression</b><a href="https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/work_items/4#note_8317" target="_blank" rel="noopener noreferrer">Original QA discussion</a></div>
-   </div>
-   <span class="tw-v2-proof-arr" aria-hidden="true">→</span>
-   <div class="tw-v2-proof">
-    <div class="tw-v2-shot-slot">ACTUAL GITLAB<br>SCREENSHOT<br>PENDING</div>
-    <div class="tw-v2-proof-text"><span class="source">FIX REPORT + FOLLOW-UP</span><b>Scoped fixes, then player-path recheck</b><a href="https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/work_items/4#note_9310" target="_blank" rel="noopener noreferrer">Peer recheck evidence</a></div>
-   </div>
-  </div>
- </section>
-</div><div class="review-route" aria-hidden="true"></div><img class="review-cat" src="../assets/miaomiao.svg" alt="">
-</main></body></html>
+ <div class="review-route" aria-hidden="true"></div><img class="review-cat" src="../assets/miaomiao.svg" alt="">
+</main>
+<script src="teamwork-walkthrough.js"></script>
+</body></html>
