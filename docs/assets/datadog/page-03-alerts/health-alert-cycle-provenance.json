@@ -1,0 +1,110 @@
+{
+  "monitor_id": 23526718,
+  "synthetic_public_id": "nu2-fet-6dn",
+  "endpoint": "https://starry-kitty.duckdns.org/healthz",
+  "classification": "Genuine historical public endpoint check failure and recovery. No new fault injected. Deliberate failure/root cause not established; distinct from November 2 controlled container stop/restart.",
+  "timezone": "UTC+08:00",
+  "alert": {
+    "state_utc": "2026-11-04T14:36:28Z",
+    "slack_posted_utc": "2026-11-04T14:36:44.626Z",
+    "slack_permalink": "https://bjxsollaschool.slack.com/archives/C0C0S9KAWUE/p1793803004626329",
+    "event_id": "8884209031731931923",
+    "linked_result_id": "183503211253861456",
+    "run_displayed_local": "Nov 4, 10:35 pm",
+    "raw_error": "DEPTH_ZERO_SELF_SIGNED_CERT",
+    "run_location": "Tokyo (AWS)"
+  },
+  "recovery": {
+    "state_utc": "2026-11-04T14:41:28Z",
+    "slack_posted_utc": "2026-11-04T14:41:42.935Z",
+    "slack_permalink": "https://bjxsollaschool.slack.com/archives/C0C0S9KAWUE/p1793803302935099",
+    "event_id": "8884214065603981694",
+    "linked_result_id": "1917610770815308180",
+    "run_displayed_local": "Nov 4, 10:40 pm",
+    "run_location": "Tokyo (AWS)",
+    "status_code": 200
+  },
+  "assets": [
+    {
+      "file": "slack-health-alert.png",
+      "dimensions": [
+        554,
+        454
+      ],
+      "source_url": "https://bjxsollaschool.slack.com/archives/C0C0S9KAWUE/p1793803004626329",
+      "crop_xyxy": [
+        96,
+        172,
+        650,
+        626
+      ],
+      "mask_xyxy": null,
+      "captured_utc": "2026-11-09T10:57:58.311109+00:00"
+    },
+    {
+      "file": "slack-health-recovery.png",
+      "dimensions": [
+        554,
+        342
+      ],
+      "source_url": "https://bjxsollaschool.slack.com/archives/C0C0S9KAWUE/p1793803302935099",
+      "crop_xyxy": [
+        96,
+        207,
+        650,
+        549
+      ],
+      "mask_xyxy": null,
+      "captured_utc": "2026-11-09T10:58:23.250624+00:00"
+    },
+    {
+      "file": "datadog-health-failed.png",
+      "dimensions": [
+        879,
+        676
+      ],
+      "source_url": "https://us5.datadoghq.com/synthetics/details/nu2-fet-6dn/result/183503211253861456",
+      "crop_xyxy": [
+        385,
+        36,
+        1264,
+        712
+      ],
+      "mask_xyxy": [
+        856,
+        142,
+        1100,
+        195
+      ],
+      "captured_utc": "2026-11-09T10:59:54.044405+00:00"
+    },
+    {
+      "file": "datadog-health-passed.png",
+      "dimensions": [
+        879,
+        676
+      ],
+      "source_url": "https://us5.datadoghq.com/synthetics/details/nu2-fet-6dn/result/1917610770815308180",
+      "crop_xyxy": [
+        385,
+        36,
+        1264,
+        712
+      ],
+      "mask_xyxy": [
+        912,
+        101,
+        1144,
+        154
+      ],
+      "captured_utc": "2026-11-09T11:00:17.825617+00:00"
+    }
+  ],
+  "limitations": [
+    "Slack display has minute precision; state timestamps are from the corresponding Datadog notification links, not the Slack delivery timestamp.",
+    "The alert and recovery share monitor and check identity; no unrelated notifications were combined.",
+    "Screenshots show selected historical runs and messages, not current service or Pod readiness.",
+    "The failed Datadog run includes an AI-generated explanation; its root-cause suggestions are not independently verified.",
+    "Network IP/DNS metadata masked in Datadog screenshots; Slack sidebar, account and unrelated messages excluded by crop."
+  ]
+}

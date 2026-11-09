@@ -1732,6 +1732,74 @@
       "origin": "Project-authored SVG using the existing cream, green and gold design tokens",
       "permission": "Created for the user's explicit request for a phone icon in the public preview; no third-party imagery.",
       "limitations": "Illustration only, not a captured phone or evidence of delivered notification."
+    },
+    {
+      "id": "datadog.collection.slack-health-alert",
+      "source": "../assets/datadog/page-03-alerts/slack-health-alert.png",
+      "use": "Page 3: genuine November 4 alert/recovery screenshots beside English explanation",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "metadata": {
+        "source_url": "https://bjxsollaschool.slack.com/archives/C0C0S9KAWUE/p1793803004626329",
+        "captured_utc": "2026-11-09T10:57:58.311109+00:00",
+        "dimensions": [
+          554,
+          454
+        ],
+        "method": "Authenticated original UI; lossless crop. Network metadata mask only for Datadog; no status, timestamp, result or message reconstruction.",
+        "publication": "User explicitly requested the project Datadog and Slack screenshots beside the explanation in the existing public Page 3 preview.",
+        "provenance": "page-03-alerts/health-alert-cycle-provenance.json"
+      }
+    },
+    {
+      "id": "datadog.collection.slack-health-recovery",
+      "source": "../assets/datadog/page-03-alerts/slack-health-recovery.png",
+      "use": "Page 3: genuine November 4 alert/recovery screenshots beside English explanation",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "metadata": {
+        "source_url": "https://bjxsollaschool.slack.com/archives/C0C0S9KAWUE/p1793803302935099",
+        "captured_utc": "2026-11-09T10:58:23.250624+00:00",
+        "dimensions": [
+          554,
+          342
+        ],
+        "method": "Authenticated original UI; lossless crop. Network metadata mask only for Datadog; no status, timestamp, result or message reconstruction.",
+        "publication": "User explicitly requested the project Datadog and Slack screenshots beside the explanation in the existing public Page 3 preview.",
+        "provenance": "page-03-alerts/health-alert-cycle-provenance.json"
+      }
+    },
+    {
+      "id": "datadog.collection.datadog-health-failed",
+      "source": "../assets/datadog/page-03-alerts/datadog-health-failed.png",
+      "use": "Page 3: genuine November 4 alert/recovery screenshots beside English explanation",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "metadata": {
+        "source_url": "https://us5.datadoghq.com/synthetics/details/nu2-fet-6dn/result/183503211253861456",
+        "captured_utc": "2026-11-09T10:59:54.044405+00:00",
+        "dimensions": [
+          879,
+          676
+        ],
+        "method": "Authenticated original UI; lossless crop. Network metadata mask only for Datadog; no status, timestamp, result or message reconstruction.",
+        "publication": "User explicitly requested the project Datadog and Slack screenshots beside the explanation in the existing public Page 3 preview.",
+        "provenance": "page-03-alerts/health-alert-cycle-provenance.json"
+      }
+    },
+    {
+      "id": "datadog.collection.datadog-health-passed",
+      "source": "../assets/datadog/page-03-alerts/datadog-health-passed.png",
+      "use": "Page 3: genuine November 4 alert/recovery screenshots beside English explanation",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "metadata": {
+        "source_url": "https://us5.datadoghq.com/synthetics/details/nu2-fet-6dn/result/1917610770815308180",
+        "captured_utc": "2026-11-09T11:00:17.825617+00:00",
+        "dimensions": [
+          879,
+          676
+        ],
+        "method": "Authenticated original UI; lossless crop. Network metadata mask only for Datadog; no status, timestamp, result or message reconstruction.",
+        "publication": "User explicitly requested the project Datadog and Slack screenshots beside the explanation in the existing public Page 3 preview.",
+        "provenance": "page-03-alerts/health-alert-cycle-provenance.json"
+      }
     }
   ]
 }

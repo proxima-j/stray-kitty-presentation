@@ -1,22 +1,32 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>Stray Kitty — Detect, Alert, Recover · Review</title>
 <link rel="stylesheet" href="../library/tokens.css"><link rel="stylesheet" href="datadog-preview.css"><style>
-/* Page 19 review only. Archived event records are not notification screenshots. */
+/* Page 19 review only: authentic matched November 4 Datadog and Slack evidence. */
 .dd-monitor-layout{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(12px,1.5vw,25px)}
 .dd-alert-evidence{gap:clamp(9px,1.2vh,14px)}
 .dd-evidence-header{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
 .dd-evidence-header h2{font-size:clamp(18px,1.7vw,26px);max-width:34ch}
-.dd-alert-proof{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-.dd-alert-stage{display:flex;flex-direction:column;gap:8px;min-width:0;border:1px solid var(--line);border-radius:12px;padding:clamp(10px,1.15vw,16px);background:rgba(255,255,255,.1)}
+.dd-alert-proof{display:grid;grid-template-columns:minmax(130px,.7fr) minmax(0,1.3fr);gap:12px;flex:1;min-height:0}
+.dd-alert-steps{display:flex;flex-direction:column;gap:12px;justify-content:center}
+.dd-alert-stage{display:flex;flex-direction:column;gap:8px;min-width:0;border:1px solid var(--line);border-radius:12px;padding:clamp(10px,1.15vw,16px);background:rgba(255,255,255,.1);text-align:left;cursor:pointer}
+.dd-alert-stage[aria-pressed="true"]{background:rgba(207,166,106,.25);border-color:var(--ink)}
+.dd-alert-stage:focus-visible,.dd-evidence-zoom:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 .dd-proof-status{display:flex;align-items:center;gap:8px}
-.dd-proof-status strong{font:400 clamp(15px,1.3vw,21px)/1.2 var(--display);white-space:nowrap}
+.dd-proof-status strong{font:400 clamp(14px,1.15vw,19px)/1.3 var(--display)}
 .dd-proof-dot{width:12px;height:12px;border:1.5px solid var(--ink);border-radius:50%;flex:0 0 12px}
 .dd-proof-dot.is-alert{border-color:var(--accent);background:transparent}
 .dd-proof-dot.is-recovered{background:var(--gold)}
-.dd-alert-stage p{font:400 clamp(10px,.9vw,14px)/1.4 var(--body);color:var(--muted);margin:0;min-height:34px}
-.dd-proof-capture{min-height:68px;flex:1;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:7px;border:1px solid var(--line);border-radius:10px;background:rgba(207,166,106,.08);text-align:left;padding:10px}
-.dd-proof-capture span{font:400 clamp(9px,.78vw,11px)/1.2 var(--body);letter-spacing:.08em}
-.dd-proof-capture code{font:400 clamp(10px,.85vw,13px)/1.6 ui-monospace,monospace;overflow-wrap:anywhere}
+.dd-alert-stage p{font:400 clamp(11px,.92vw,14px)/1.4 var(--body);color:var(--muted);margin:0}
+.dd-evidence-visual{display:flex;flex-direction:column;min-width:0;min-height:0;gap:7px}
+.dd-evidence-sources{display:flex;gap:5px}
+.dd-evidence-sources .dd-select{font-size:11px;padding:6px 13px}
+.dd-evidence-zoom{display:flex;align-items:center;justify-content:center;flex:1;min-height:0;width:100%;padding:3px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.15);cursor:zoom-in;overflow:hidden}
+.dd-evidence-zoom img{display:block;width:100%;height:100%;object-fit:contain;border-radius:7px}
+.dd-evidence-caption{font:400 10px/1.3 var(--body);color:var(--muted)}
+#ddAlertImageOverlay .dd-overlay-inner{height:100%;min-height:0}
+.dd-alert-image-scroll{overflow:auto;overscroll-behavior:contain;min-height:0;flex:1;background:#fff;border-radius:9px}
+.dd-alert-image-scroll img{width:100%;max-height:none;height:auto;max-width:none;border-radius:0}
+.dd-alert-image-source{color:var(--paper);font-size:12px}
 .dd-archived-source{display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding-top:10px;border-top:1px solid var(--line)}
 .dd-archived-source p{font:400 11px/1.4 var(--body);color:var(--muted);margin:0}
 .dd-archived-source .dd-link{font-size:11px}
@@ -37,7 +47,6 @@
  .dd-monitor-layout{gap:11px}
  .dd-alert-evidence{padding:12px;gap:7px}
  .dd-alert-stage{padding:8px;gap:5px}
- .dd-proof-capture{min-height:52px;padding:5px}
  .dd-archived-source{padding-top:7px;gap:4px}
  .dd-mobile-slot{padding:7px 10px;gap:8px}
  .dd-monitor-synthetics{padding:12px;gap:7px}
@@ -51,39 +60,45 @@
 }
 @media(max-width:720px){
  .dd-monitor-layout{grid-template-columns:1fr}
- .dd-alert-proof{grid-template-columns:1fr 1fr}
- .dd-proof-capture{min-height:70px}
+ .dd-alert-proof{grid-template-columns:minmax(120px,.7fr) minmax(0,1.3fr);min-height:300px}
  .dd-mobile-slot{margin-top:0}
 }
 </style></head>
 <body>
 <main class="dd-page" id="ddSyntheticPreview" aria-label="Datadog page 3 monitoring and alert review">
  <div class="section-label"><span class="number-pill">19</span>TECHNICAL WALKTHROUGH / DATADOG</div>
- <header class="page-intro"><h1>Detect. Alert. Recover.</h1><p>Monitoring a controlled failure—and verifying access from outside our cluster.</p></header>
+ <header class="page-intro"><h1>Detect. Alert. Recover.</h1><p>A failed public check, a Slack alert—and a verified recovery.</p></header>
 
  <div class="dd-alert-layout dd-hero dd-monitor-layout">
-  <section class="dd-frame dd-timeline dd-alert-evidence" aria-label="Historical verified alert and recovery evidence">
-   <div class="dd-label">01 / HISTORICAL ALERT &amp; RECOVERY</div>
+  <section class="dd-frame dd-timeline dd-alert-evidence" aria-label="Matching historical Datadog runs and Slack notifications">
+   <div class="dd-label">01 / REAL ALERT &amp; RECOVERY</div>
    <div class="dd-evidence-header">
-     <h2>A controlled test of the monitoring loop</h2>
-     <span class="dd-pill">NOV 2 · UTC</span>
+     <h2>From failed check to recovery</h2>
+     <span class="dd-pill">NOV 4 · UTC+08</span>
    </div>
    <div class="dd-alert-proof">
-     <div class="dd-alert-stage">
-       <div class="dd-proof-status"><span class="dd-proof-dot is-alert"></span><strong>19:19:28 · ALERT</strong></div>
-       <p>Monitor detected the deliberately stopped game container.</p>
-       <div class="dd-proof-capture"><span>ARCHIVED API EVENT</span><code>type: ALERT<br>time_utc:<br>2026-11-02T19:19:28Z</code></div>
+     <div class="dd-alert-steps" aria-label="Choose the alert or recovery evidence">
+      <button class="dd-alert-stage" type="button" data-alert-stage="alert" aria-pressed="true">
+       <span class="dd-proof-status"><span class="dd-proof-dot is-alert"></span><strong>22:36 · ALERT</strong></span>
+       <p>The public health check failed. Datadog notified Slack.</p>
+      </button>
+      <button class="dd-alert-stage" type="button" data-alert-stage="recovery" aria-pressed="false">
+       <span class="dd-proof-status"><span class="dd-proof-dot is-recovered"></span><strong>22:41 · RECOVERY</strong></span>
+       <p>The check passed again, and Slack received recovery.</p>
+      </button>
      </div>
-     <div class="dd-alert-stage">
-       <div class="dd-proof-status"><span class="dd-proof-dot is-recovered"></span><strong>19:26:28 · RECOVERY</strong></div>
-       <p>The container restarted; the monitor returned to OK.</p>
-       <div class="dd-proof-capture"><span>ARCHIVED API EVENT</span><code>type: RECOVERY<br>time_utc:<br>2026-11-02T19:26:28Z</code></div>
+     <div class="dd-evidence-visual">
+      <div class="dd-evidence-sources" role="tablist" aria-label="Choose the original evidence source">
+       <button class="dd-select" type="button" role="tab" data-alert-source="slack" aria-selected="true">Slack</button>
+       <button class="dd-select" type="button" role="tab" data-alert-source="datadog" aria-selected="false">Datadog</button>
+      </div>
+      <button id="ddEvidenceZoom" class="dd-evidence-zoom" type="button" aria-label="Enlarge Slack alert screenshot" aria-haspopup="dialog" aria-controls="ddAlertImageOverlay"><img id="ddEvidenceImage" src="../assets/datadog/page-03-alerts/slack-health-alert.png" alt="Original Slack alert for the Stray Kitty health check, November 4 at 22:36 UTC+08"></button>
+      <div id="ddEvidenceCaption" class="dd-evidence-caption">Original Slack message · click to enlarge</div>
      </div>
    </div>
    <div class="dd-archived-source">
-     <span class="dd-label">VERIFIED ARCHIVED RECORD</span>
-     <p>A deliberate container stop/restart, recorded seven minutes apart. The original notification screenshots are unavailable.</p>
-     <div class="dd-archive-actions"><button class="dd-button" id="ddOpenArchive" type="button" aria-haspopup="dialog" aria-controls="ddArchiveOverlay">Inspect archived record ↗</button><a class="dd-link" target="_blank" rel="noopener" href="https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/blob/main/evidence/observability/heartbeat-alert-cycle.json">GitLab source ↗</a></div>
+     <p>Same /healthz monitor · five minutes apart. The failed run records a TLS certificate error; the underlying cause was not independently established.</p>
+     <div class="dd-archive-actions"><button class="dd-button" id="ddOpenArchive" type="button" aria-haspopup="dialog" aria-controls="ddArchiveOverlay">Separate Nov 2 test record ↗</button><a class="dd-link" target="_blank" rel="noopener" href="../assets/datadog/page-03-alerts/health-alert-cycle-provenance.json">Screenshot sources ↗</a></div>
    </div>
    <div class="dd-mobile-slot"><img src="../library/icons/phone-notification.svg" alt="" aria-hidden="true"><p>Slack alerts can reach teammates on their phones when mobile notifications are enabled.</p></div>
   </section>
@@ -106,7 +121,7 @@
    <div class="dd-synth-label">HTTP 200 establishes endpoint reachability, not a full game or payment workflow.</div>
   </section>
  </div>
- <div class="dd-footer"><span>Historical controlled test · archived event record</span><span>Public endpoint images: genuine Datadog results</span></div>
+ <div class="dd-footer"><span>Historical notifications: Nov 4, 2026 · captured Nov 9</span><span>Public endpoint images: genuine Datadog results</span></div>
  <div class="dd-review-line" aria-hidden="true"></div><img class="dd-review-cat" src="../assets/miaomiao.svg" alt="" aria-hidden="true">
 </main>
 <div id="ddArchiveOverlay" class="dd-overlay" hidden role="dialog" aria-modal="true" aria-label="Archived alert and recovery evidence">
@@ -115,6 +130,13 @@
   <div class="dd-record-panel" tabindex="0" role="region" aria-label="Scrollable archived event JSON"><pre id="ddArchiveRecord">Loading archived record…</pre></div>
  </div>
 </div>
+<div id="ddAlertImageOverlay" class="dd-overlay" hidden role="dialog" aria-modal="true" aria-label="Original alert or recovery screenshot">
+ <div class="dd-overlay-inner">
+  <div class="dd-overlay-head"><span id="ddAlertImageTitle">Slack · ALERT · November 4, 2026</span><button id="ddCloseAlertImage" type="button" class="dd-button">Close ×</button></div>
+  <div class="dd-alert-image-scroll" tabindex="0" role="region" aria-label="Scrollable original screenshot"><img id="ddAlertImageFull" alt=""></div>
+  <a id="ddAlertImageSource" class="dd-alert-image-source" target="_blank" rel="noopener">Open original source ↗</a>
+ </div>
+</div>
 <script src="datadog-preview.js"></script>
-<script src="datadog-alert-evidence.js?v=archived-alerts"></script>
+<script src="datadog-alert-evidence.js?v=real-alert-screenshots"></script>
 </body></html>

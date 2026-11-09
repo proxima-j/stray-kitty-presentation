@@ -423,6 +423,62 @@
       "method": "Contiguous lossless crops stitched at measured native scrollTop offsets 0, 288, 576, 622 from the same authenticated trace Overview. No tags, values or text recreated; scrollbar chrome excluded.",
       "publication": "User explicitly requested an authentic scrollable detail view in the existing public Datadog preview. No account/player/session identifiers included.",
       "limitations": "Recorded QA evidence from the November 9 action; presentation scrolling does not query live Datadog. Overview attributes only; Logs and other source tabs are not simulated."
+    },
+    {
+      "path": "page-03-alerts/slack-health-alert.png",
+      "public_path": "docs/assets/datadog/page-03-alerts/slack-health-alert.png",
+      "status": "READY",
+      "source_url": "https://bjxsollaschool.slack.com/archives/C0C0S9KAWUE/p1793803004626329",
+      "captured_utc": "2026-11-09T10:57:58.311109+00:00",
+      "dimensions": [
+        554,
+        454
+      ],
+      "method": "Authenticated original UI; lossless crop. Network metadata mask only for Datadog; no status, timestamp, result or message reconstruction.",
+      "publication": "User explicitly requested the project Datadog and Slack screenshots beside the explanation in the existing public Page 3 preview.",
+      "provenance": "page-03-alerts/health-alert-cycle-provenance.json"
+    },
+    {
+      "path": "page-03-alerts/slack-health-recovery.png",
+      "public_path": "docs/assets/datadog/page-03-alerts/slack-health-recovery.png",
+      "status": "READY",
+      "source_url": "https://bjxsollaschool.slack.com/archives/C0C0S9KAWUE/p1793803302935099",
+      "captured_utc": "2026-11-09T10:58:23.250624+00:00",
+      "dimensions": [
+        554,
+        342
+      ],
+      "method": "Authenticated original UI; lossless crop. Network metadata mask only for Datadog; no status, timestamp, result or message reconstruction.",
+      "publication": "User explicitly requested the project Datadog and Slack screenshots beside the explanation in the existing public Page 3 preview.",
+      "provenance": "page-03-alerts/health-alert-cycle-provenance.json"
+    },
+    {
+      "path": "page-03-alerts/datadog-health-failed.png",
+      "public_path": "docs/assets/datadog/page-03-alerts/datadog-health-failed.png",
+      "status": "READY",
+      "source_url": "https://us5.datadoghq.com/synthetics/details/nu2-fet-6dn/result/183503211253861456",
+      "captured_utc": "2026-11-09T10:59:54.044405+00:00",
+      "dimensions": [
+        879,
+        676
+      ],
+      "method": "Authenticated original UI; lossless crop. Network metadata mask only for Datadog; no status, timestamp, result or message reconstruction.",
+      "publication": "User explicitly requested the project Datadog and Slack screenshots beside the explanation in the existing public Page 3 preview.",
+      "provenance": "page-03-alerts/health-alert-cycle-provenance.json"
+    },
+    {
+      "path": "page-03-alerts/datadog-health-passed.png",
+      "public_path": "docs/assets/datadog/page-03-alerts/datadog-health-passed.png",
+      "status": "READY",
+      "source_url": "https://us5.datadoghq.com/synthetics/details/nu2-fet-6dn/result/1917610770815308180",
+      "captured_utc": "2026-11-09T11:00:17.825617+00:00",
+      "dimensions": [
+        879,
+        676
+      ],
+      "method": "Authenticated original UI; lossless crop. Network metadata mask only for Datadog; no status, timestamp, result or message reconstruction.",
+      "publication": "User explicitly requested the project Datadog and Slack screenshots beside the explanation in the existing public Page 3 preview.",
+      "provenance": "page-03-alerts/health-alert-cycle-provenance.json"
     }
   ],
   "omissions": [
@@ -465,7 +521,7 @@
     },
     "historical_evidence": {
       "source": "https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/blob/main/evidence/observability/heartbeat-alert-cycle.json",
-      "status": "Original monitor 339853048 still returns 404 in connected US5, with no matching November 2 events returned. Page 3 now presents the existing verified archived event records and opens the complete published JSON in a scrollable inspector. No simulated Datadog or Slack notification screenshots."
+      "status": "The November 2 monitor remains inaccessible through US5; its archived JSON remains a separate reference. After user Slack sign-in, a different genuine November 4 public /healthz cycle was verified in Slack and its linked US5 Datadog results. Page 3 now presents those original screenshots beside the English explanation. See page-03-alerts/health-alert-cycle-provenance.json for exact matching IDs and times."
     },
     "phone": "User cancelled phone capture on November 9, 2026. Replaced the placeholder with a project-authored phone icon and a conditional Slack mobile-notification sentence. Slack destination verified read-only in monitor 23526036; phone delivery and device registration were not tested. The phone-capture reminder was paused."
   },
