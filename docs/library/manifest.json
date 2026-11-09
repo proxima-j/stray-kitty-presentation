@@ -1098,10 +1098,10 @@
     {
       "id": "technical.deployment-record.20261107",
       "source": "https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/jobs/29905",
-      "use": "Page 16 — bottom-right dated textual deployment evidence",
-      "status": "APPROVED / INTEGRATED TEXTUAL FALLBACK",
+      "use": "Page 16 — left dated November 7 deployment confirmation",
+      "status": "VERIFIED / PUBLISHED DATED CONFIRMATION",
       "origin": "Authenticated GitLab job #29905 trace, pipeline #8015 and archived release.json / preview.json, source commit 1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e",
-      "permission": "User explicitly requested publication of dated sanitized deployment evidence; internal addresses, cluster identifiers, raw logs and release artifacts excluded. No screenshot or new binary asset published.",
+      "permission": "User explicitly requested publication of dated sanitized deployment evidence; internal addresses, cluster identifiers, raw logs and release artifacts excluded. This record is represented by dated text; separate screenshot provenance is registered below.",
       "verification": {
         "date": "2026-11-07",
         "release_status": "deployed",
@@ -1111,6 +1111,35 @@
         "public_health_check": "ok"
       },
       "limitations": "Browser redirects to GitLab sign-in, so no authenticated screenshot collected. Evidence describes November 7 release only, not current Pod health.",
+      "provenance": "TECHNICAL-ASSETS.md"
+    },
+    {
+      "id": "technical.pipeline-7813.deploy-screenshot",
+      "source": "../assets/pages/16/gitlab-pipeline-7813-deploy.png",
+      "use": "Page 16 — bottom-right screenshot of an earlier successful deployment",
+      "status": "USER SUPPLIED / APPROVED FOR PUBLICATION",
+      "origin": "User supplied GitLab pipeline #7813 screenshot; authenticated connector independently confirms all five jobs succeeded, including deploy_apply job #29328, source commit 10ab2008fd2bf758af31318ae5586946ed3352de. Job trace dated November 6, 2026.",
+      "permission": "User offered this actual screenshot to replace the missing deployment screenshot in the publicly published technical page. Crop excludes author, browser UI and unrelated records; no internal addresses, credentials or cluster identifiers visible.",
+      "metadata": {
+        "source_dimensions": [
+          1398,
+          775
+        ],
+        "crop_box": [
+          903,
+          322,
+          1163,
+          413
+        ],
+        "published_dimensions": [
+          260,
+          91
+        ],
+        "processing": "Lossless rectangular crop only; no reconstruction or altered status."
+      },
+      "source_url": "https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/pipelines/7813",
+      "job_url": "https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/jobs/29328",
+      "limitation": "November 6 pipeline evidence; distinct from November 7 pipeline #8015 / job #29905 supporting the left confirmation. Neither is a live Pod-health inspection.",
       "provenance": "TECHNICAL-ASSETS.md"
     }
   ]
