@@ -106,6 +106,30 @@
       "behavior": "../datadog.js",
       "status": "DESIGN_APPROVED / integrated after candidate verification",
       "assets": "Existing registered assets/datadog and phone icon; no duplicate binaries"
+    },
+    {
+      "id": "scene.cross-team-collaboration",
+      "use": "Cross-Team Collaboration",
+      "source": "../index.html#cross-team-collaboration",
+      "styles": "../teamwork.css",
+      "script": "../teamwork.js",
+      "variants": "Native v3 scene; approved composition, scoped styles and shared assets"
+    },
+    {
+      "id": "scene.design-test-rethink",
+      "use": "Design. Test. Rethink.",
+      "source": "../index.html#design-test-rethink",
+      "styles": "../teamwork.css",
+      "script": "../teamwork.js",
+      "variants": "Native v3 scene; approved composition, scoped styles and shared assets"
+    },
+    {
+      "id": "scene.connected-world",
+      "use": "A More Connected World",
+      "source": "../index.html#connected-world",
+      "styles": "../teamwork.css",
+      "script": "../teamwork.js",
+      "variants": "Native v3 scene; approved composition, scoped styles and shared assets"
     }
   ],
   "assets": [
@@ -159,7 +183,7 @@
     {
       "id": "level.maps.market-descent",
       "source": "../assets/level-design/four-maps/p05-market-west-descent.mp4",
-      "origin": "New current-local-build capture; underpassN L0\u2192L\u22121 plus real movement",
+      "origin": "New current-local-build capture; underpassN L0→L−1 plus real movement",
       "use": "Four Maps / Midnight Market",
       "status": "APPROVED / PUBLISHED",
       "permission": "User approved this curated Level Design collection and explicitly authorized GitHub upload on 2026-11-08",
@@ -187,7 +211,7 @@
     {
       "id": "level.maps.warehouse-light",
       "source": "../assets/level-design/four-maps/p05-warehouse-light.mp4",
-      "origin": "Historical 2026-11-06 R03 Warehouse normal-spawn central-light take; trimmed 0.50\u20136.70s",
+      "origin": "Historical 2026-11-06 R03 Warehouse normal-spawn central-light take; trimmed 0.50–6.70s",
       "use": "Four Maps / Warehouse",
       "status": "APPROVED / PUBLISHED",
       "permission": "User approved this curated Level Design collection and explicitly authorized GitHub upload on 2026-11-08",
@@ -201,7 +225,7 @@
     {
       "id": "level.chapter2.three-level-traversal",
       "source": "../assets/level-design/chapter2/p06-market-three-level-western-spine.mp4",
-      "origin": "New current-local-build continuous nwReturn C \u2192 street walk \u2192 underpassN F take",
+      "origin": "New current-local-build continuous nwReturn C → street walk → underpassN F take",
       "use": "Chapter 2 Vertical Design",
       "status": "APPROVED / PUBLISHED",
       "permission": "User approved this curated Level Design collection and explicitly authorized GitHub upload on 2026-11-08",
@@ -222,7 +246,7 @@
       "metadata": {
         "width": 1672,
         "height": 941,
-        "registration": "1672\u00d7941 world coordinates, as in runtime"
+        "registration": "1672×941 world coordinates, as in runtime"
       }
     },
     {
@@ -235,7 +259,7 @@
       "metadata": {
         "width": 1671,
         "height": 941,
-        "registration": "1672\u00d7941 world coordinates, as in runtime"
+        "registration": "1672×941 world coordinates, as in runtime"
       }
     },
     {
@@ -248,7 +272,7 @@
       "metadata": {
         "width": 1671,
         "height": 941,
-        "registration": "1672\u00d7941 world coordinates, as in runtime"
+        "registration": "1672×941 world coordinates, as in runtime"
       }
     },
     {
@@ -1900,6 +1924,146 @@
         "video_codec": "H.264",
         "audio_codec": "AAC",
         "encoding": "CRF 26, AAC 96k, fast-start; complete recording and audio retained"
+      }
+    },
+    {
+      "id": "teamwork.gitlab.ticket",
+      "source": "../assets/teamwork/gitlab/workitem-ticket.webp",
+      "origin": "https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/work_items/4#note_8317",
+      "use": "Page 20 Cross-Team Collaboration / stage 1",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "metadata": {
+        "id": "teamwork.gitlab.ticket",
+        "path": "assets/teamwork/gitlab/workitem-ticket.webp",
+        "source_url": "https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/work_items/4#note_8317",
+        "stage": 1,
+        "captured_utc": "2026-11-09T13:04:35.835415+00:00",
+        "source_date_utc": "2026-10-29T07:44:21Z",
+        "source_date_asia_shanghai": "2026-10-29",
+        "dimensions": [
+          648,
+          420
+        ],
+        "capture_method": "Authenticated in-app GitLab UI screenshot, tightly cropped; lossless WebP conversion. No reconstructed interface or text.",
+        "viewport": [
+          680,
+          682
+        ],
+        "clip": {
+          "x": 8,
+          "y": 48,
+          "width": 648,
+          "height": 420
+        },
+        "scope": "Peer QA on main 96df703e; two P1 progression reports. Chapter 4 victory settlement used generated state, not a complete played battle.",
+        "privacy_review": "Account navigation, unrelated threads, local browser chrome, attachments and reply fields excluded by crop. No credentials, email, student ID, private account ID or confidential label found. Project author names and project identifiers retained as evidence.",
+        "publication_clearance": "User explicitly requested these four named GitLab records as curated evidence in the existing public presentation. Source Work Item is not confidential; notes are not internal. Cleared limited project-QA/MR crops only; no broader source export.",
+        "provenance": "../assets/teamwork/gitlab/provenance.json"
+      }
+    },
+    {
+      "id": "teamwork.gitlab.discussion",
+      "source": "../assets/teamwork/gitlab/workitem-resolution.webp",
+      "origin": "https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/work_items/4#note_8605",
+      "use": "Page 20 Cross-Team Collaboration / stage 2",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "metadata": {
+        "id": "teamwork.gitlab.discussion",
+        "path": "assets/teamwork/gitlab/workitem-resolution.webp",
+        "source_url": "https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/work_items/4#note_8605",
+        "stage": 2,
+        "captured_utc": "2026-11-09T13:04:48.316305+00:00",
+        "source_date_utc": "2026-10-29T16:15:57Z",
+        "source_date_asia_shanghai": "2026-10-30",
+        "dimensions": [
+          648,
+          562
+        ],
+        "capture_method": "Authenticated in-app GitLab UI screenshot, tightly cropped; lossless WebP conversion. No reconstructed interface or text.",
+        "viewport": [
+          680,
+          682
+        ],
+        "clip": {
+          "x": 8,
+          "y": 48,
+          "width": 648,
+          "height": 562
+        },
+        "scope": "Owner response linking the same reports to MR !80; also distinguishes fixes in !78 and earlier navigation work.",
+        "privacy_review": "Account navigation, unrelated threads, local browser chrome, attachments and reply fields excluded by crop. No credentials, email, student ID, private account ID or confidential label found. Project author names and project identifiers retained as evidence.",
+        "publication_clearance": "User explicitly requested these four named GitLab records as curated evidence in the existing public presentation. Source Work Item is not confidential; notes are not internal. Cleared limited project-QA/MR crops only; no broader source export.",
+        "provenance": "../assets/teamwork/gitlab/provenance.json"
+      }
+    },
+    {
+      "id": "teamwork.gitlab.merge-request",
+      "source": "../assets/teamwork/gitlab/branch-mr.webp",
+      "origin": "https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/merge_requests/80",
+      "use": "Page 20 Cross-Team Collaboration / stage 3",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "metadata": {
+        "id": "teamwork.gitlab.merge-request",
+        "path": "assets/teamwork/gitlab/branch-mr.webp",
+        "source_url": "https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/merge_requests/80",
+        "stage": 3,
+        "captured_utc": "2026-11-09T13:05:21.988334+00:00",
+        "source_date_utc": "2026-10-29T20:57:08Z",
+        "source_date_asia_shanghai": "2026-10-30",
+        "dimensions": [
+          648,
+          416
+        ],
+        "capture_method": "Authenticated in-app GitLab UI screenshot, tightly cropped; lossless WebP conversion. No reconstructed interface or text.",
+        "viewport": [
+          680,
+          682
+        ],
+        "clip": {
+          "x": 8,
+          "y": 48,
+          "width": 648,
+          "height": 416
+        },
+        "scope": "MR !80 source fix/map-qa-followup, target main, state merged. Integrated through MR !81; pipeline #6734 passed at 33eefbee. No formal approval recorded.",
+        "privacy_review": "Account navigation, unrelated threads, local browser chrome, attachments and reply fields excluded by crop. No credentials, email, student ID, private account ID or confidential label found. Project author names and project identifiers retained as evidence.",
+        "publication_clearance": "User explicitly requested these four named GitLab records as curated evidence in the existing public presentation. Source Work Item is not confidential; notes are not internal. Cleared limited project-QA/MR crops only; no broader source export.",
+        "provenance": "../assets/teamwork/gitlab/provenance.json"
+      }
+    },
+    {
+      "id": "teamwork.gitlab.recheck",
+      "source": "../assets/teamwork/gitlab/followup-qa.webp",
+      "origin": "https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/work_items/4#note_9310",
+      "use": "Page 20 Cross-Team Collaboration / stage 4",
+      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "metadata": {
+        "id": "teamwork.gitlab.recheck",
+        "path": "assets/teamwork/gitlab/followup-qa.webp",
+        "source_url": "https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/work_items/4#note_9310",
+        "stage": 4,
+        "captured_utc": "2026-11-09T13:05:00.537841+00:00",
+        "source_date_utc": "2026-11-01T16:52:32Z",
+        "source_date_asia_shanghai": "2026-11-02",
+        "dimensions": [
+          648,
+          472
+        ],
+        "capture_method": "Authenticated in-app GitLab UI screenshot, tightly cropped; lossless WebP conversion. No reconstructed interface or text.",
+        "viewport": [
+          680,
+          682
+        ],
+        "clip": {
+          "x": 8,
+          "y": 48,
+          "width": 648,
+          "height": 472
+        },
+        "scope": "Focused normal-player route through Chapters 1, 2, 4 and 5 on main 42498777. Progression passed on this route; remaining P2/P3 hints reported. Not exhaustive boundaries or random branches.",
+        "privacy_review": "Account navigation, unrelated threads, local browser chrome, attachments and reply fields excluded by crop. No credentials, email, student ID, private account ID or confidential label found. Project author names and project identifiers retained as evidence.",
+        "publication_clearance": "User explicitly requested these four named GitLab records as curated evidence in the existing public presentation. Source Work Item is not confidential; notes are not internal. Cleared limited project-QA/MR crops only; no broader source export.",
+        "provenance": "../assets/teamwork/gitlab/provenance.json"
       }
     }
   ]

@@ -6,13 +6,13 @@ GitHub is the shared source for ChatGPT and Codex. GitHub Pages automatically pu
 
 | Version | Preview | Verified source |
 | --- | --- | --- |
-| Current | https://proxima-j.github.io/stray-kitty-presentation/ | Nineteen-page deck, Datadog integration marker `20261109-datadog-refinement7`; local candidate verified before rotation |
-| Previous | https://proxima-j.github.io/stray-kitty-presentation/previous/ | Outgoing verified sixteen-page runtime `5e8a0e27e5840605c363447177fdf6242e5319c1` |
+| Current | https://proxima-j.github.io/stray-kitty-presentation/ | Twenty-two-page deck; Teamwork/Future marker `20261109-teamwork-r5`; candidate verified before rotation |
+| Previous | https://proxima-j.github.io/stray-kitty-presentation/previous/ | Outgoing verified nineteen-page runtime `89e52a078d0e2ff4ad03fa1ff3250abd9d9d5155` |
 
-Current supports direct `?page=01` through `?page=19` links. Previous retains `?page=01` through `?page=16`. Stable Current IDs also work as direct links: `roadmap`, `game-flow`, `visual-novel`, `home-hub`, `payment`, `four-maps`, `vertical-design`, `greybox`, `random-events`, `combat`, `dice-animations`, `adaptive-interface`, `technical-architecture`, `kubernetes-deployment`, `gameplay-telemetry`, `observability`, `detect-alert-recover`. [docs/versions.json](docs/versions.json) records verified runtime origins; documentation and asset-only commits do not rotate decks.
+Current supports direct `?page=01` through `?page=22` links. Previous retains `?page=01` through `?page=19`. Stable Current IDs also work as direct links: `roadmap`, `game-flow`, `visual-novel`, `home-hub`, `payment`, `four-maps`, `vertical-design`, `greybox`, `random-events`, `combat`, `dice-animations`, `adaptive-interface`, `technical-architecture`, `kubernetes-deployment`, `gameplay-telemetry`, `observability`, `detect-alert-recover`, `cross-team-collaboration`, `design-test-rethink`, `connected-world`. [docs/versions.json](docs/versions.json) records verified runtime origins; documentation and asset-only commits do not rotate decks.
 
 - `docs/index.html`, `docs/engine-v3.*`, `docs/presentation.css`, `docs/level-design.css`, `docs/scene-content.js`, `docs/library/`: Current source and reusable components.
-- `docs/previous/`: Outgoing sixteen-page HTML, styles and scripts. Asset URLs are rebased; player script preloads, deferred film source restoration and inactive-clip preload settings prevent off-screen media competing with the active scene. Its content and animation engine are preserved; small runtime files remain independent of future Current edits and large media is shared.
+- `docs/previous/`: Outgoing nineteen-page HTML, styles and scripts. Asset URLs are rebased; player script preloads, deferred film source restoration and inactive-clip preload settings prevent off-screen media competing with the active scene. Its content and animation engine are preserved; small runtime files remain independent of future Current edits and large media is shared.
 - `docs/assets/`: One shared copy of the full opening film, poster, character, fonts/license and approved illustrations.
 - `reference/forward-story-v3/script.js` and `style.css`: Untouched original animation source, rather than a third runnable sample deck.
 
@@ -96,3 +96,14 @@ The nineteen-page candidate passed focused local serve, media, trace scrolling, 
 
 
 Datadog follow-up maintenance: smaller Page 17 WebP/720p H.264-AAC delivery copies reduce its initial still and six-second clip transfer sizes, while all originals remain available. The genuine still stays visible during video buffering. Datadog scenes rely on the existing v3 camera perspective, removing a duplicate parent perspective boundary that could leave Page 17 blank in Chromium. Page 18 copy now focuses on game performance, correct player interactions, payments/economy/AI; sample event and AI count callouts were removed. Page 19’s payment tab updates both its endpoint heading and genuine screenshot. Previous is unchanged; no version rotation for these slide refinements.
+
+
+## Teamwork & Future — Pages 20–22
+
+The entire technical/Datadog walkthrough is followed by [Cross-Team Collaboration](https://proxima-j.github.io/stray-kitty-presentation/?page=cross-team-collaboration), [Design. Test. Rethink.](https://proxima-j.github.io/stray-kitty-presentation/?page=design-test-rethink) and [A More Connected World](https://proxima-j.github.io/stray-kitty-presentation/?page=connected-world). No Closing/Q&A scene was added.
+
+The approved compositions are native v3 scenes, with scoped `teamwork.css` / `teamwork.js`. The four-stage walkthrough uses genuine Work Item #4 notes 8317, 8605 and 9310, and merged fix MR !80, integrated through !81. No formal MR approval is claimed. Follow-up QA covers tested major routes, not every branch; daily checks remain a workflow explanation. Click each evidence image to inspect the actual excerpt.
+
+Iteration preserves the two 6×6 probability diagrams (10/36 → 6/36 failure outcomes) and labels AI scope as a design discussion. Future preserves four existing shared game images and bidirectional Living World connections, explicitly proposed rather than implemented. [Asset inventory](docs/library/TEAMWORK-FUTURE-ASSETS.md) and [capture provenance](docs/assets/teamwork/gitlab/provenance.json) record sources, scope and limited public-presentation clearance.
+
+Focused local candidate checks passed at 1600×900 and 1366×768 before rotation. All original 19 scene blocks and existing runtime files are byte-identical; v3 4200ms navigation, one cat/route, opening film and existing interactions are preserved. Previous is frozen from `89e52a078d0e2ff4ad03fa1ff3250abd9d9d5155`, with asset paths rebased and no media duplication. Earlier integration sections above describe their historical checkpoints; the two-version table is authoritative.

@@ -1,0 +1,129 @@
+{
+  "captured_on": "2026-11-09",
+  "time_zone": "Asia/Shanghai",
+  "records": [
+    {
+      "id": "teamwork.gitlab.ticket",
+      "path": "assets/teamwork/gitlab/workitem-ticket.webp",
+      "source_url": "https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/work_items/4#note_8317",
+      "stage": 1,
+      "captured_utc": "2026-11-09T13:04:35.835415+00:00",
+      "source_date_utc": "2026-10-29T07:44:21Z",
+      "source_date_asia_shanghai": "2026-10-29",
+      "dimensions": [
+        648,
+        420
+      ],
+      "capture_method": "Authenticated in-app GitLab UI screenshot, tightly cropped; lossless WebP conversion. No reconstructed interface or text.",
+      "viewport": [
+        680,
+        682
+      ],
+      "clip": {
+        "x": 8,
+        "y": 48,
+        "width": 648,
+        "height": 420
+      },
+      "scope": "Peer QA on main 96df703e; two P1 progression reports. Chapter 4 victory settlement used generated state, not a complete played battle.",
+      "privacy_review": "Account navigation, unrelated threads, local browser chrome, attachments and reply fields excluded by crop. No credentials, email, student ID, private account ID or confidential label found. Project author names and project identifiers retained as evidence.",
+      "publication_clearance": "User explicitly requested these four named GitLab records as curated evidence in the existing public presentation. Source Work Item is not confidential; notes are not internal. Cleared limited project-QA/MR crops only; no broader source export."
+    },
+    {
+      "id": "teamwork.gitlab.discussion",
+      "path": "assets/teamwork/gitlab/workitem-resolution.webp",
+      "source_url": "https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/work_items/4#note_8605",
+      "stage": 2,
+      "captured_utc": "2026-11-09T13:04:48.316305+00:00",
+      "source_date_utc": "2026-10-29T16:15:57Z",
+      "source_date_asia_shanghai": "2026-10-30",
+      "dimensions": [
+        648,
+        562
+      ],
+      "capture_method": "Authenticated in-app GitLab UI screenshot, tightly cropped; lossless WebP conversion. No reconstructed interface or text.",
+      "viewport": [
+        680,
+        682
+      ],
+      "clip": {
+        "x": 8,
+        "y": 48,
+        "width": 648,
+        "height": 562
+      },
+      "scope": "Owner response linking the same reports to MR !80; also distinguishes fixes in !78 and earlier navigation work.",
+      "privacy_review": "Account navigation, unrelated threads, local browser chrome, attachments and reply fields excluded by crop. No credentials, email, student ID, private account ID or confidential label found. Project author names and project identifiers retained as evidence.",
+      "publication_clearance": "User explicitly requested these four named GitLab records as curated evidence in the existing public presentation. Source Work Item is not confidential; notes are not internal. Cleared limited project-QA/MR crops only; no broader source export."
+    },
+    {
+      "id": "teamwork.gitlab.merge-request",
+      "path": "assets/teamwork/gitlab/branch-mr.webp",
+      "source_url": "https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/merge_requests/80",
+      "stage": 3,
+      "captured_utc": "2026-11-09T13:05:21.988334+00:00",
+      "source_date_utc": "2026-10-29T20:57:08Z",
+      "source_date_asia_shanghai": "2026-10-30",
+      "dimensions": [
+        648,
+        416
+      ],
+      "capture_method": "Authenticated in-app GitLab UI screenshot, tightly cropped; lossless WebP conversion. No reconstructed interface or text.",
+      "viewport": [
+        680,
+        682
+      ],
+      "clip": {
+        "x": 8,
+        "y": 48,
+        "width": 648,
+        "height": 416
+      },
+      "scope": "MR !80 source fix/map-qa-followup, target main, state merged. Integrated through MR !81; pipeline #6734 passed at 33eefbee. No formal approval recorded.",
+      "privacy_review": "Account navigation, unrelated threads, local browser chrome, attachments and reply fields excluded by crop. No credentials, email, student ID, private account ID or confidential label found. Project author names and project identifiers retained as evidence.",
+      "publication_clearance": "User explicitly requested these four named GitLab records as curated evidence in the existing public presentation. Source Work Item is not confidential; notes are not internal. Cleared limited project-QA/MR crops only; no broader source export."
+    },
+    {
+      "id": "teamwork.gitlab.recheck",
+      "path": "assets/teamwork/gitlab/followup-qa.webp",
+      "source_url": "https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/work_items/4#note_9310",
+      "stage": 4,
+      "captured_utc": "2026-11-09T13:05:00.537841+00:00",
+      "source_date_utc": "2026-11-01T16:52:32Z",
+      "source_date_asia_shanghai": "2026-11-02",
+      "dimensions": [
+        648,
+        472
+      ],
+      "capture_method": "Authenticated in-app GitLab UI screenshot, tightly cropped; lossless WebP conversion. No reconstructed interface or text.",
+      "viewport": [
+        680,
+        682
+      ],
+      "clip": {
+        "x": 8,
+        "y": 48,
+        "width": 648,
+        "height": 472
+      },
+      "scope": "Focused normal-player route through Chapters 1, 2, 4 and 5 on main 42498777. Progression passed on this route; remaining P2/P3 hints reported. Not exhaustive boundaries or random branches.",
+      "privacy_review": "Account navigation, unrelated threads, local browser chrome, attachments and reply fields excluded by crop. No credentials, email, student ID, private account ID or confidential label found. Project author names and project identifiers retained as evidence.",
+      "publication_clearance": "User explicitly requested these four named GitLab records as curated evidence in the existing public presentation. Source Work Item is not confidential; notes are not internal. Cleared limited project-QA/MR crops only; no broader source export."
+    }
+  ],
+  "merge_request": {
+    "iid": 80,
+    "source_branch": "fix/map-qa-followup",
+    "target_branch": "main",
+    "state": "merged",
+    "merged_at_utc": "2026-10-29T20:57:08Z",
+    "integration_mr": 81,
+    "integration_source_branch": "merge/fangying-chapter5-qa",
+    "integration_target_branch": "main",
+    "integration_merged_at_utc": "2026-10-29T20:57:05Z",
+    "passing_pipeline": 6734,
+    "pipeline_sha": "33eefbee3e86f11c0db6849df48fd8ddb864f45c",
+    "formal_approval_recorded": false
+  },
+  "daily_alignment": "Approved team-workflow explanation, not a claim note 8605 is a daily check-in."
+}

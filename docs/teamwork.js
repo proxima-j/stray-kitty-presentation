@@ -1,0 +1,76 @@
+(() => {
+  'use strict';
+  const root=document.querySelector('#cross-team-collaboration .tw-walk');
+  const base='https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/';
+  const steps=[
+    {kicker:'01 · WORK ITEM + TICKET',title:'A teammate reports a cross-module issue.',detail:'Peer QA flags two progression blockers: a missing exploration exit and a retry that loses its mainline identity.',proof:'Work Item #4 · original peer QA',description:'Oct 29 · reported P1 blockers',link:base+'work_items/4#note_8317',file:'workitem-ticket.webp'},
+    {kicker:'02 · DISCUSS + DAILY ALIGNMENT',title:'The owners clarify fixes and dependencies.',detail:'The map owner maps each report to a scoped fix and linked MR. Daily checks keep dependencies and overlapping changes visible.',proof:'Work Item #4 · fix response',description:'Oct 30 · owner response',link:base+'work_items/4#note_8605',file:'workitem-resolution.webp'},
+    {kicker:'03 · NEW BRANCH + MERGE REQUEST',title:'A scoped branch reaches the integrated game.',detail:'MR !80 targets main from fix/map-qa-followup. Passing checks and integration MR !81 document delivery; no formal approval was recorded.',proof:'MR !80 · merged through !81',description:'fix/map-qa-followup → main',link:base+'merge_requests/80',file:'branch-mr.webp'},
+    {kicker:'04 · MERGE + PLAYER-PATH VERIFICATION',title:'The integrated game is tested again.',detail:'Peer QA confirms progression on the tested route through Chapters 1, 2, 4 and 5, while reporting remaining control hints.',proof:'Work Item #4 · follow-up QA',description:'Nov 2 · tested routes, not every branch',link:base+'work_items/4#note_9310',file:'followup-qa.webp'}
+  ];
+  const buttons=[...root.querySelectorAll('.tw-flow-node')];
+  const previous=root.querySelector('#previousPhase');
+  const next=root.querySelector('#nextPhase');
+  const counter=root.querySelector('#phaseCounter');
+  const image=root.querySelector('#twProofImage');
+  const inspect=root.querySelector('#twProof');
+  const fields={kicker:root.querySelector('#phaseKicker'),title:root.querySelector('#phaseTitle'),detail:root.querySelector('#phaseText'),proof:root.querySelector('#proofTitle'),description:root.querySelector('#proofDescription'),link:root.querySelector('#proofLink')};
+  let phase=0,visible=false;
+  const media=()=> 'assets/teamwork/gitlab/'+steps[phase].file;
+  function loadEvidence(){if(image.getAttribute('src')!==media())image.src=media();}
+  function show(index,load=true){
+    phase=Math.max(0,Math.min(steps.length-1,index));
+    const item=steps[phase];root.dataset.phase=String(phase);
+    buttons.forEach(button=>{const active=Number(button.dataset.phase)===phase;button.setAttribute('aria-pressed',String(active));button.classList.toggle('is-active',active);});
+    for(const key of ['kicker','title','detail','proof','description'])fields[key].textContent=item[key];
+    fields.link.href=item.link;fields.link.textContent='Original source ↗';
+    image.dataset.mediaSrc=media();image.alt=item.proof+' — genuine GitLab screenshot excerpt';
+    inspect.setAttribute('aria-label','Inspect '+item.proof);
+    counter.textContent=String(phase+1).padStart(2,'0')+' / '+String(steps.length).padStart(2,'0');
+    previous.disabled=phase===0;next.textContent=phase===steps.length-1?'Start again ↺':'Next phase →';
+    if(load||visible)loadEvidence();
+  }
+  buttons.forEach(button=>button.addEventListener('click',()=>show(Number(button.dataset.phase))));
+  previous.addEventListener('click',()=>show(phase-1));
+  next.addEventListener('click',()=>show(phase===steps.length-1?0:phase+1));
+  root.addEventListener('keydown',event=>{
+    if(event.target.closest('button,a')&&[' ','Enter'].includes(event.key))event.stopPropagation();
+  });
+  inspect.addEventListener('click',()=>{
+    const dialog=document.getElementById('screenshotDialog');
+    const full=document.getElementById('enlargedScreenshot');
+    full.src=media();full.alt=image.alt;
+    document.getElementById('screenshotTitle').textContent=steps[phase].proof;
+    dialog.showModal();
+  });
+  window.addEventListener('presentation:viewchange',event=>{visible=event.detail.id==='cross-team-collaboration'&&event.detail.visible;if(visible)loadEvidence();});
+  show(0,false);
+
+  // Match connectors to the actual node edges, independent of viewport/camera transforms.
+  const world=document.querySelector('#connected-world .tw-world');
+  const svg=world.querySelector('.tw-world-connections');
+  const core=world.querySelector('.tw-world-core');
+  const nodes=['.tw-world-events','.tw-world-battle','.tw-world-home','.tw-world-story'].map(s=>world.querySelector(s));
+  const links=[...svg.querySelectorAll('.tw-world-link')];
+  const cross=[...svg.querySelectorAll('.tw-world-crosslink')];
+  const box=e=>({x:e.offsetLeft,y:e.offsetTop,w:e.offsetWidth,h:e.offsetHeight});
+  function draw(){
+    const w=world.clientWidth,h=world.clientHeight;if(!w||!h)return;
+    svg.setAttribute('viewBox',`0 0 ${w} ${h}`);
+    const c=box(core),bounds=nodes.map(box);
+    bounds.forEach((n,i)=>{
+      const left=i%2===0,upper=i<2;
+      const x=left?n.x+n.w:n.x,y=n.y+n.h/2;
+      const tx=left?c.x:c.x+c.w,ty=c.y+c.h*(upper?.32:.68),mx=(x+tx)/2;
+      links[i].setAttribute('d',`M${x} ${y} C${mx} ${y} ${mx} ${ty} ${tx} ${ty}`);
+    });
+    for(let i=0;i<2;i++){
+      const a=bounds[i*2],b=bounds[i*2+1],x=a.x+a.w,tx=b.x;
+      const y=i?a.y+a.h:a.y,ty=i?b.y+b.h:b.y,cy=i?h-5:5;
+      cross[i].setAttribute('d',`M${x} ${y} C${x+45} ${cy} ${tx-45} ${cy} ${tx} ${ty}`);
+    }
+  }
+  new ResizeObserver(draw).observe(world);
+  window.addEventListener('presentation:viewchange',event=>{if(event.detail.id==='connected-world'&&event.detail.visible)requestAnimationFrame(draw);});
+  draw();
+})();
