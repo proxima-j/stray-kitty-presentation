@@ -1,45 +1,109 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>Stray Kitty — Detect, Alert, Recover · Review</title>
-<link rel="stylesheet" href="../library/tokens.css"><link rel="stylesheet" href="datadog-preview.css"></head>
+<link rel="stylesheet" href="../library/tokens.css"><link rel="stylesheet" href="datadog-preview.css"><style>
+/* Page 19 review only. Alert/Slack/mobile capture placeholders are explicit, not fabricated UI. */
+.dd-monitor-layout{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(12px,1.5vw,25px)}
+.dd-alert-evidence{gap:clamp(9px,1.2vh,14px)}
+.dd-evidence-header{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.dd-evidence-header h2{font-size:clamp(18px,1.7vw,26px);max-width:34ch}
+.dd-alert-proof{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.dd-alert-stage{display:flex;flex-direction:column;gap:8px;min-width:0;border:1px solid var(--line);border-radius:12px;padding:clamp(10px,1.15vw,16px);background:rgba(255,255,255,.1)}
+.dd-proof-status{display:flex;align-items:center;gap:8px}
+.dd-proof-status strong{font:400 clamp(15px,1.3vw,21px)/1.2 var(--display);white-space:nowrap}
+.dd-proof-dot{width:12px;height:12px;border:1.5px solid var(--ink);border-radius:50%;flex:0 0 12px}
+.dd-proof-dot.is-alert{border-color:var(--accent);background:transparent}
+.dd-proof-dot.is-recovered{background:var(--gold)}
+.dd-alert-stage p{font:400 clamp(10px,.9vw,14px)/1.4 var(--body);color:var(--muted);margin:0;min-height:34px}
+.dd-proof-capture{min-height:68px;flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;border:1px dashed var(--line);border-radius:10px;background:rgba(207,166,106,.08);text-align:center;padding:8px}
+.dd-proof-capture span{font:400 clamp(9px,.78vw,11px)/1.2 var(--body);letter-spacing:.08em}
+.dd-proof-capture small{font:400 10px/1.3 var(--body);color:var(--muted)}
+.dd-archived-source{display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding-top:10px;border-top:1px solid var(--line)}
+.dd-archived-source p{font:400 11px/1.4 var(--body);color:var(--muted);margin:0}
+.dd-archived-source .dd-link{font-size:11px}
+.dd-mobile-slot{display:flex;align-items:center;gap:12px;flex-wrap:wrap;border:1px dashed var(--line);border-radius:10px;padding:10px 13px;margin-top:auto;background:rgba(255,255,255,.1)}
+.dd-mobile-slot span{font:400 10px/1.3 var(--body);letter-spacing:.07em}
+.dd-mobile-slot strong{font:400 clamp(12px,1.04vw,16px)/1.25 var(--display)}
+.dd-mobile-slot small{font:400 10px/1.3 var(--body);color:var(--muted)}
+.dd-monitor-synthetics{gap:clamp(7px,1vh,13px)}
+.dd-monitor-synthetics .dd-synth-top{align-items:flex-start}
+.dd-monitor-synthetics .dd-synth-top h2{font-size:clamp(19px,1.6vw,27px)}
+.dd-monitor-synthetics .dd-tabrow{flex-wrap:nowrap}
+.dd-monitor-synthetics .dd-select{font-size:10px;white-space:nowrap}
+.dd-monitor-synthetics .dd-synth-photo img{max-height:100%;object-fit:contain}
+@media(max-height:800px){
+ .dd-monitor-layout{gap:11px}
+ .dd-alert-evidence{padding:12px;gap:7px}
+ .dd-alert-stage{padding:8px;gap:5px}
+ .dd-proof-capture{min-height:52px;padding:5px}
+ .dd-archived-source{padding-top:7px;gap:4px}
+ .dd-mobile-slot{padding:7px 10px;gap:8px}
+ .dd-monitor-synthetics{padding:12px;gap:7px}
+}
+@media(max-width:1100px){
+ .dd-evidence-header{flex-wrap:wrap}
+ .dd-alert-proof{gap:7px}
+ .dd-alert-stage{padding:9px}
+ .dd-proof-status strong{font-size:clamp(14px,1.3vw,18px)}
+ .dd-monitor-synthetics .dd-tabrow{flex-wrap:wrap}
+}
+@media(max-width:720px){
+ .dd-monitor-layout{grid-template-columns:1fr}
+ .dd-alert-proof{grid-template-columns:1fr 1fr}
+ .dd-proof-capture{min-height:70px}
+ .dd-mobile-slot{margin-top:0}
+}
+</style></head>
 <body>
 <main class="dd-page" id="ddSyntheticPreview" aria-label="Datadog page 3 monitoring and alert review">
  <div class="section-label"><span class="number-pill">19</span>TECHNICAL WALKTHROUGH / DATADOG</div>
- <header class="page-intro"><h1>Detect. Alert. Recover.</h1><p>Controlled failure evidence and external checks of the public game.</p></header>
- <div class="dd-alert-layout dd-hero">
-  <section class="dd-frame dd-timeline" aria-label="Historical verified alert and recovery timeline">
-   <div class="dd-label">01 / ALERT &amp; RECOVERY</div>
-   <h2>A test of the monitoring loop</h2>
-   <div class="dd-alert-tag">NOV 2, 2026 · CONTROLLED CONTAINER TEST · UTC</div>
-   <div class="dd-event-rail">
-    <div class="dd-event-dot"></div>
-    <div class="dd-event-copy"><strong>19:19:28 · ALERT</strong><span>Heartbeat monitor detected the deliberately stopped game container.</span></div>
-    <div class="dd-event-line"></div><div></div>
-    <div class="dd-event-dot is-end"></div>
-    <div class="dd-event-copy"><strong>19:26:28 · RECOVERY</strong><span>The game container was restarted and monitoring returned to OK.</span></div>
+ <header class="page-intro"><h1>Detect. Alert. Recover.</h1><p>Monitoring a controlled failure—and verifying access from outside our cluster.</p></header>
+
+ <div class="dd-alert-layout dd-hero dd-monitor-layout">
+  <section class="dd-frame dd-timeline dd-alert-evidence" aria-label="Historical verified alert and recovery evidence">
+   <div class="dd-label">01 / HISTORICAL ALERT &amp; RECOVERY</div>
+   <div class="dd-evidence-header">
+     <h2>A controlled test of the monitoring loop</h2>
+     <span class="dd-pill">NOV 2 · UTC</span>
    </div>
-   <p class="dd-timeline-foot">Timeline reconstructed from a committed evidence record; it is not a capture of the old Datadog monitor UI. This was not a production outage.</p>
-   <a class="dd-link" target="_blank" rel="noopener" href="https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/blob/main/evidence/observability/heartbeat-alert-cycle.json">Archived test evidence ↗</a>
+   <div class="dd-alert-proof">
+     <div class="dd-alert-stage">
+       <div class="dd-proof-status"><span class="dd-proof-dot is-alert"></span><strong>19:19:28 · ALERT</strong></div>
+       <p>Monitor detected the deliberately stopped game container.</p>
+       <div class="dd-proof-capture"><span>ACTUAL ALERT CAPTURE</span><small>Pending Datadog / Slack evidence</small></div>
+     </div>
+     <div class="dd-alert-stage">
+       <div class="dd-proof-status"><span class="dd-proof-dot is-recovered"></span><strong>19:26:28 · RECOVERY</strong></div>
+       <p>The container restarted; the monitor returned to OK.</p>
+       <div class="dd-proof-capture"><span>ACTUAL RECOVERY CAPTURE</span><small>Pending Datadog / Slack evidence</small></div>
+     </div>
+   </div>
+   <div class="dd-archived-source">
+     <span class="dd-label">VERIFIED ARCHIVED RECORD</span>
+     <p>The timestamps come from a committed controlled stop/restart test—not a production outage or an accessible historical Datadog UI capture.</p>
+     <a class="dd-link" target="_blank" rel="noopener" href="https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/blob/main/evidence/observability/heartbeat-alert-cycle.json">Open original evidence JSON ↗</a>
+   </div>
+   <div class="dd-mobile-slot"><span>PHONE NOTIFICATION</span><strong>Recording in progress</strong><small>Actual delivery evidence will be added after review</small></div>
   </section>
-  <section class="dd-frame dd-synth" aria-label="External synthetic checks in Tokyo and Seoul">
+  <section class="dd-frame dd-synth dd-monitor-synthetics" aria-label="External synthetic checks in Tokyo and Seoul">
    <div class="dd-label">02 / EXTERNAL SYNTHETICS</div>
    <div class="dd-synth-top">
-    <h2>Can the public reach us?</h2>
+    <h2>Can players reach the public game?</h2>
     <div class="dd-tabrow" role="tablist" aria-label="Choose a public endpoint check">
-     <button class="dd-select" type="button" role="tab" data-check-tab="healthz" aria-controls="ddHealthz" aria-selected="true">Game /healthz</button>
-     <button class="dd-select" type="button" role="tab" data-check-tab="payment" aria-controls="ddPayment" aria-selected="false">Payment config</button>
+     <button class="dd-select" type="button" role="tab" data-check-tab="healthz" aria-controls="ddHealthz" aria-selected="true">Public health check</button>
+     <button class="dd-select" type="button" role="tab" data-check-tab="payment" aria-controls="ddPayment" aria-selected="false">Payment configuration</button>
     </div>
    </div>
    <div id="ddHealthz" class="dd-synth-photo" data-check-panel="healthz" role="tabpanel">
-    <img src="../assets/datadog/page-03-alerts/synthetics-healthz.png" alt="Real Datadog HTTP health check test-run screenshot with passing results from Tokyo and Seoul, Nov 9, 2026"/>
+    <img src="../assets/datadog/page-03-alerts/synthetics-healthz.png" alt="Authentic Datadog HTTP health-check runs from Tokyo and Seoul, both passed on November 9, 2026"/>
    </div>
    <div id="ddPayment" class="dd-synth-photo" data-check-panel="payment" role="tabpanel" hidden>
-    <img data-src="../assets/datadog/page-03-alerts/synthetics-payment-config.png" alt="Real Datadog payment-config endpoint test-run screenshot with passing results from Tokyo and Seoul, Nov 9, 2026"/>
+    <img data-src="../assets/datadog/page-03-alerts/synthetics-payment-config.png" alt="Authentic Datadog payment-configuration HTTP checks from Tokyo and Seoul, both passed on November 9, 2026"/>
    </div>
-   <div class="dd-synth-label">Tokyo + Seoul · Five-minute scheduled checks · Recorded Nov 9, 2026</div>
-   <div class="dd-synth-label">A passing HTTP 200 response establishes endpoint reachability, not a complete checkout or gameplay test.</div>
+   <div class="dd-synth-label">Tokyo + Seoul · scheduled every five minutes · observed Nov 9, 2026</div>
+   <div class="dd-synth-label">HTTP 200 establishes endpoint reachability, not a full game or payment workflow.</div>
   </section>
  </div>
- <div class="dd-footer"><span>Monitor response = historical controlled test</span><span>Public endpoint results = genuine scheduled Datadog checks</span></div>
+ <div class="dd-footer"><span>Alert screenshots and phone notification: awaiting authentic captures</span><span>Public endpoint images: genuine Datadog results</span></div>
  <div class="dd-review-line" aria-hidden="true"></div><img class="dd-review-cat" src="../assets/miaomiao.svg" alt="" aria-hidden="true">
 </main>
 <script src="datadog-preview.js"></script>
