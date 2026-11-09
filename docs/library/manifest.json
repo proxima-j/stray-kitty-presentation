@@ -137,6 +137,15 @@
       "source": "../review/closing-qa.html",
       "styles": "../review/closing-qa.css",
       "variants": "Static standalone 16:9 review; no new animation system; future integration only after approval"
+    },
+    {
+      "id": "preview.future-influence",
+      "source": "../review/future-click.html",
+      "styles": "../review/future-click.css",
+      "script": "../review/future-click.js",
+      "use": "Standalone trial of a calm, finite click-triggered influence pulse through Living World; existing four images reused",
+      "variants": "Mouse / Enter / Space; repeat click replay; reduced-motion static highlights",
+      "status": "INTERACTION REVIEW — not integrated into Current/Previous"
     }
   ],
   "assets": [
