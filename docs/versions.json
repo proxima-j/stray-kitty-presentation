@@ -2,7 +2,7 @@
   "current": {
     "entry": "./",
     "candidate_base_commit": "89e52a078d0e2ff4ad03fa1ff3250abd9d9d5155",
-    "build_marker": "20261109-teamwork-focus1",
+    "build_marker": "20261109-future-integrated1",
     "description": "Twenty-two scenes: complete technical/Datadog section, then Cross-Team Collaboration, Design. Test. Rethink., A Dynamic, Living World. No Closing/Q&A.",
     "publication_status": "VERIFIED",
     "local_verified_at": "2026-11-09T13:26:55.643265+00:00",
@@ -25,6 +25,14 @@
       "details": "Page 02 exact approved text; complete uncropped user poster above existing D20 and playful-cat art; deferred media; unchanged 22-scene v3 engine/route and frozen 19-scene Previous.",
       "check": "Pages build success and read-only post-publication browser observation of new poster gallery, image loading, horizontal supporting artwork and no pitch/route overlap. Broader deck regression not re-run for this single-slide update.",
       "rotation": "None: individual slide content maintenance, as permitted by repository policy."
+    },
+    "future_interaction_maintenance": {
+      "base_commit": "de465ba7d547dba3a5886eff3d990b18fd70a924",
+      "details": "Approved Page 22 click response: incoming pulse through Living World, then two illustrative future influences; approximately 1.1 seconds, replayable, no idle loops. Shared future-world.js owns connectors and scene-local interaction. Effects stop on scene exit and respect reduced motion; Enter/Space remain local. Title and bottom takeaway retained.",
+      "rotation": "None: individual scene interaction maintenance; frozen 19-scene Previous unchanged.",
+      "publication_status": "LOCAL_VERIFIED; published verification pending",
+      "local_verified_at": "2026-11-09T15:07:17.292771+00:00",
+      "verification": "Focused browser checks at 1366x768 and 1600x900: four images and unchanged composition, finite pulse, replay and rapid reselection, Enter/Space kept scene 22, reverse/forward 22↔21, effect stopped on exit, idle connector animations none. First 21 scene blocks and collaboration prefix unchanged; original engine, 4200ms beat, one cat/route, Previous and Q&A unchanged."
     }
   },
   "previous": {

@@ -67,31 +67,4 @@
   window.addEventListener('presentation:viewchange',event=>{visible=event.detail.id==='cross-team-collaboration'&&event.detail.visible;if(visible)loadEvidence();});
   show(0,false);
 
-  // Match connectors to the actual node edges, independent of viewport/camera transforms.
-  const world=document.querySelector('#connected-world .tw-world');
-  const svg=world.querySelector('.tw-world-connections');
-  const core=world.querySelector('.tw-world-core');
-  const nodes=['.tw-world-events','.tw-world-battle','.tw-world-home','.tw-world-story'].map(s=>world.querySelector(s));
-  const links=[...svg.querySelectorAll('.tw-world-link')];
-  const cross=[...svg.querySelectorAll('.tw-world-crosslink')];
-  const box=e=>({x:e.offsetLeft,y:e.offsetTop,w:e.offsetWidth,h:e.offsetHeight});
-  function draw(){
-    const w=world.clientWidth,h=world.clientHeight;if(!w||!h)return;
-    svg.setAttribute('viewBox',`0 0 ${w} ${h}`);
-    const c=box(core),bounds=nodes.map(box);
-    bounds.forEach((n,i)=>{
-      const left=i%2===0,upper=i<2;
-      const x=left?n.x+n.w:n.x,y=n.y+n.h/2;
-      const tx=left?c.x:c.x+c.w,ty=c.y+c.h*(upper?.32:.68),mx=(x+tx)/2;
-      links[i].setAttribute('d',`M${x} ${y} C${mx} ${y} ${mx} ${ty} ${tx} ${ty}`);
-    });
-    for(let i=0;i<2;i++){
-      const a=bounds[i*2],b=bounds[i*2+1],x=a.x+a.w,tx=b.x;
-      const y=i?a.y+a.h:a.y,ty=i?b.y+b.h:b.y,cy=i?h-5:5;
-      cross[i].setAttribute('d',`M${x} ${y} C${x+45} ${cy} ${tx-45} ${cy} ${tx} ${ty}`);
-    }
-  }
-  new ResizeObserver(draw).observe(world);
-  window.addEventListener('presentation:viewchange',event=>{if(event.detail.id==='connected-world'&&event.detail.visible)requestAnimationFrame(draw);});
-  draw();
 })();

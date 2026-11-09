@@ -56,3 +56,8 @@ Missing/substituted evidence: none. Evidence source pages require project sign-i
 ## Page 20 readability refinement — November 9
 
 The walkthrough now shows enlarged, clearly labelled selected source excerpts: Work Item title/status, relevant @mention, and a short finding/fix or MR status/branch and fix list. CSS crops reuse the exact four WebPs; no screenshot text was reconstructed, no new binaries were added, and the complete original remains available on click. Exact display crop rectangles are in provenance/manifest. The evidence takes a larger share of the detail panel; compact workflow spacing and Page-20-only lower cat/route clearance provide more height. Original engine/pacing, Page 21 diagrams, Page 22 and Previous remain unchanged. This is a maintenance update, without version rotation.
+
+
+## Approved Future interaction integration
+
+The reviewed click response is integrated into native Page 22 via `docs/future-world.js` and scoped `docs/teamwork.css` states. One short incoming pulse branches into two illustrative outgoing influences; receiving nodes brighten gently and settle. Images stay still, and no effect loops at idle. Repeated clicks cancel prior pulses and replay; reduced-motion preferences use static highlights. Scene visibility cancels effects on exit, and local Enter/Space activation does not advance v3. Existing four game images, approved title, bottom takeaway, original v3 4200ms engine and single cat/route are retained. No new binary assets or version rotation. The standalone trial remains temporarily for comparison until native public verification, then becomes a link to the integrated scene.

@@ -128,7 +128,7 @@
       "use": "A Dynamic, Living World",
       "source": "../index.html#connected-world",
       "styles": "../teamwork.css",
-      "script": "../teamwork.js",
+      "script": "../future-world.js",
       "variants": "Native v3 scene; approved composition, scoped styles and shared assets"
     },
     {
@@ -139,13 +139,13 @@
       "variants": "Static standalone 16:9 review; no new animation system; future integration only after approval"
     },
     {
-      "id": "preview.future-influence",
-      "source": "../review/future-click.html",
-      "styles": "../review/future-click.css",
-      "script": "../review/future-click.js",
-      "use": "Standalone trial of a calm, finite click-triggered influence pulse through Living World; existing four images reused",
+      "id": "interaction.future-influence",
+      "source": "../index.html#connected-world",
+      "styles": "../teamwork.css",
+      "script": "../future-world.js",
+      "use": "Approved native Page 22 click-triggered influence through Living World; same four shared images",
       "variants": "Mouse / Enter / Space; repeat click replay; reduced-motion static highlights",
-      "status": "INTERACTION REVIEW — not integrated into Current/Previous"
+      "status": "APPROVED / INTEGRATED; focused publication verification pending"
     }
   ],
   "assets": [

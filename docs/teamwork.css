@@ -415,3 +415,19 @@
  #cross-team-collaboration .tw-evidence-head b{font-size:12px}
 }
 @media(prefers-reduced-motion:reduce){#stage:has(.teamwork-scope) #heroCat,#stage:has(.teamwork-scope) #roadDrawing{transition:none}}
+
+/* Approved Page 22 influence: finite click response; no idle connector/halo loops. */
+#connected-world .tw-world-link,#connected-world .tw-world-crosslink{animation:none}
+#connected-world .tw-world-link{opacity:.65;transition:stroke .18s,opacity .18s}
+#connected-world .tw-world-crosslink{opacity:.6}
+#connected-world .tw-world-link.is-connected{stroke:#9b693b;stroke-width:3;opacity:1}
+#connected-world .tw-world-node{cursor:pointer;transition:background-color .22s,border-color .22s,box-shadow .22s}
+#connected-world .tw-world-node:hover{border-color:var(--accent)}
+#connected-world .tw-world-node:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+#connected-world .tw-world-node.is-source{border-color:#9b693b;background:#efdda9;box-shadow:0 0 0 2px rgb(207 166 106 / 28%)}
+#connected-world .tw-world-node.is-connected{border-color:#b58c56}
+#connected-world .tw-world-node.is-receiving{background:#f0dfb0}
+#connected-world .tw-world-core{transition:box-shadow .2s}
+#connected-world .tw-world-core.is-relaying{box-shadow:0 0 0 10px rgb(207 166 106 / 26%),0 10px 25px rgb(52 69 62 / 10%)}
+#connected-world .influence-dot{fill:var(--hub-yellow);stroke:var(--accent);stroke-width:1.5;pointer-events:none}
+@media(prefers-reduced-motion:reduce){#connected-world .tw-world-link,#connected-world .tw-world-node,#connected-world .tw-world-core{transition:none}}

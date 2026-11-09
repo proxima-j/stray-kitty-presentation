@@ -1,6 +1,9 @@
 (() => {
   'use strict';
-  const world=document.querySelector('.tw-world');
+  const scene=document.getElementById('connected-world');
+  const world=(scene||document).querySelector('.tw-world');
+  if(!world)return;
+  let active=!scene;
   const svg=world.querySelector('svg');
   const core=world.querySelector('.tw-world-core');
   const nodes=['events','battle','home','story'].map(key=>world.querySelector('.tw-world-'+key));
@@ -11,7 +14,7 @@
   const cross=[...svg.querySelectorAll('.tw-world-crosslink')];
   const dots=document.createElementNS('http://www.w3.org/2000/svg','g');
   svg.append(dots);
-  const status=document.getElementById('effectStatus');
+  const status=document.getElementById('futureEffectStatus')||document.getElementById('effectStatus');
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
   let frame=0,sequence=0;
   world.dataset.playing='false';
@@ -37,6 +40,7 @@
     });
   }
   function play(source){
+    if(!active)return;
     stop();const targets=destinations[source];sequence++;
     world.dataset.source=String(source);world.dataset.sequence=String(sequence);
     nodes.forEach((node,i)=>{
@@ -70,10 +74,14 @@
   }
   nodes.forEach((node,i)=>{
     node.addEventListener('click',()=>play(i));
-    node.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();play(i);}});
+    node.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();event.stopPropagation();play(i);}});
   });
   document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});
   reduced.addEventListener('change',()=>{if(reduced.matches)stop();});
+  if(scene)window.addEventListener('presentation:viewchange',event=>{
+    active=event.detail.id===scene.id&&event.detail.visible;
+    if(active)requestAnimationFrame(draw);else stop();
+  });
   new ResizeObserver(draw).observe(world);
   document.fonts.ready.then(draw);
   draw();
