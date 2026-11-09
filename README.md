@@ -119,3 +119,8 @@ Integrated in `093219a80aa29fbc8e1c1208a52536a84ae0eed2`. [GitHub Pages build #4
 
 
 Page 22 approved interaction integration: [A Dynamic, Living World](https://proxima-j.github.io/stray-kitty-presentation/?page=connected-world) now uses the approved finite click pulse from the trial. Select a system to follow one influence through Living World to two connected systems; select it again to replay. No idle animation, moving imagery, live game requests or new media. `future-world.js` owns the local response and transform-independent connector geometry; v3 visibility stops it on exit, and Enter/Space activation stays local. “Every choice has consequences.” remains the bottom takeaway. This is scene maintenance without a version rotation.
+
+
+## Reusable cinematic template and workflow
+
+The [Forward Story v3 generic starter](docs/templates/forward-story-v3/) offers the same 4.2-second reversible route/character animation, progressive scene effects, Faculty Glyphic typography and cream/dark-green/gold layout language. [Live template demonstration](https://proxima-j.github.io/stray-kitty-presentation/templates/forward-story-v3/). The [page-by-page production workflow](docs/templates/forward-story-v3/WORKFLOW.md) documents the exact content → asset collection → isolated preview → approval → integration → focused verification → publication → cleanup method used to build the original deck, including a reusable Codex handoff. The template contains only generic assets and is independent of both Current and Previous.
