@@ -72,34 +72,31 @@
 
   const combat = document.getElementById('combat');
   if (!combat) return;
+
   const battlefield = combat.querySelector('.battlefield-image');
-  const video = document.getElementById('repositionVideo');
-  const status = document.getElementById('repositionSource');
-  const reposition = document.getElementById('repositionTrigger');
-  const activate = document.getElementById('skillsTrigger');
+  const defaultVfx = document.getElementById('v2DefaultBattleVfx');
+  const defaultStatus = document.getElementById('v2DefaultVfxStatus');
+  const demoVideo = document.getElementById('repositionVideo');
+  const demoStatus = document.getElementById('repositionSource');
+  const repositionButton = document.getElementById('repositionTrigger');
+  const activateButton = document.getElementById('skillsTrigger');
+  const eventButton = document.getElementById('v2EventProofTrigger');
   const proof = document.getElementById('v2BattleProof');
   const proofTitle = document.getElementById('v2ProofTitle');
   const proofKicker = document.getElementById('v2ProofKicker');
   const proofImage = document.getElementById('v2ProofImage');
   const proofBody = document.getElementById('v2ProofBody');
   const proofCaption = document.getElementById('v2ProofCaption');
-  const eventTrigger = document.getElementById('v2EventProofTrigger');
   const skillCards = [...combat.querySelectorAll('[data-v2-skill]')];
   const advisorLayer = document.getElementById('advisorLayer');
-  const advisorTrigger = document.getElementById('advisorTrigger');
+  const advisorButton = document.getElementById('advisorTrigger');
   const advisorClose = document.getElementById('advisorClose');
   const advisorBefore = document.getElementById('advisorBefore');
   const advisorAfter = document.getElementById('advisorAfter');
   const advisorNext = document.getElementById('advisorNext');
   const advisorStep = document.getElementById('advisorStep');
-  const dialog = document.getElementById('v2FullVfxDialog');
-  const fullButton = document.getElementById('v2FullVfxTrigger');
-  const fullClose = document.getElementById('v2FullVfxClose');
-  const fullFrameVideo = document.getElementById('v2FullVfxVideo');
-  const fullFrameReference = document.getElementById('v2FullVfxReference');
-  const fullFramePending = document.getElementById('v2FullVfxPending');
 
-  const skillReferences = {
+  const existingSkillStills = {
     rongrong: {
       name: 'Rongrong', ability: 'Star Burst',
       still: '../assets/pages/09/caster-star-vfx.webp'
@@ -115,65 +112,119 @@
   };
 
   let playbackGeneration = 0;
-  let activeClip = null;
+  let activeClipName = null;
+  let activeMode = 'default';
 
-  function stopCurrentMedia() {
-    playbackGeneration++;
-    video.pause();
-    fullFrameVideo.pause();
-    video.hidden = true;
+  function stopAllMedia() {
+    playbackGeneration += 1;
+    defaultVfx.pause();
+    demoVideo.pause();
+    defaultVfx.hidden = true;
+    demoVideo.hidden = true;
     battlefield.hidden = false;
-    status.hidden = true;
+    demoStatus.hidden = true;
+    defaultStatus.hidden = true;
     proof.hidden = true;
-    eventTrigger.setAttribute('aria-pressed', 'false');
-    reposition.setAttribute('aria-pressed', 'false');
-    activate.setAttribute('aria-pressed', 'false');
+    eventButton.setAttribute('aria-pressed', 'false');
+    repositionButton.setAttribute('aria-pressed', 'false');
+    activateButton.setAttribute('aria-pressed', 'false');
     skillCards.forEach(card => card.setAttribute('aria-pressed', 'false'));
-    activeClip = null;
+    activeClipName = null;
   }
 
-  async function playHistoricVideo(button, src, name) {
-    stopCurrentMedia();
+  function showDefaultBattleVfx() {
+    stopAllMedia();
+    activeMode = 'default';
+    defaultStatus.hidden = false;
+
+    // No teammate footage yet: keep the genuine original battlefield visible
+    // with an explicit label. Never simulate nonexistent game VFX.
+    const src = defaultVfx.dataset.v2DefaultSrc?.trim();
+    if (!src) {
+      defaultStatus.textContent = 'GENERAL BATTLE VFX · MUTED LOOP PENDING';
+      return;
+    }
+    if (document.hidden) return;
+
     const generation = playbackGeneration;
-    activeClip = name;
-    button.setAttribute('aria-pressed', 'true');
-    if (video.getAttribute('src') !== src) {
-      video.src = src;
-      video.load();
+    defaultVfx.muted = true;
+    defaultVfx.loop = true;
+    defaultVfx.controls = false;
+    defaultVfx.playbackRate = 1;
+    if (defaultVfx.getAttribute('src') !== src) {
+      defaultVfx.src = src;
+      defaultVfx.load();
     }
-    video.muted = true; // These old source clips are silent.
-    video.playbackRate = 1;
-    video.hidden = false;
-    battlefield.hidden = true;
-    status.hidden = false;
-    status.textContent = 'Loading genuine existing ' + name + ' clip (silent)…';
-    try {
-      video.currentTime = 0;
-      await video.play();
-      if (generation !== playbackGeneration) return;
-      status.textContent = 'EXISTING REAL VIDEO · SILENT · NEW VFX/SFX PENDING';
-    } catch {
-      if (generation !== playbackGeneration) return;
-      video.controls = true;
-      status.textContent = 'Clip may require buffering — use the player or click again.';
-    }
+    defaultVfx.hidden = false;
+    defaultStatus.textContent = 'GENERAL BATTLE VFX · MUTED';
+    // This is a muted autoplay loop. No presenter click or sound is needed
+    // when entering Combat or returning from a one-shot demonstration.
+    defaultVfx.play().then(() => {
+      if (generation === playbackGeneration && activeMode === 'default') {
+        battlefield.hidden = true;
+      }
+    }).catch(() => {
+      if (generation !== playbackGeneration || activeMode !== 'default') return;
+      battlefield.hidden = false;
+      defaultVfx.controls = true; // Explicit retry fallback for blocked playback.
+      defaultStatus.textContent = 'MUTED VFX · PLAYBACK BLOCKED — PRESS PLAY ON VIDEO';
+    });
   }
-  reposition.addEventListener('click', () => playHistoricVideo(
-    reposition, video.dataset.previewSrc, 'Reposition'
-  ));
-  activate.addEventListener('click', () => playHistoricVideo(
-    activate, activate.dataset.previewSrc, 'Banban skill'
-  ));
-  video.addEventListener('ended', stopCurrentMedia);
-  video.addEventListener('waiting', () => {
-    if (!activeClip) return;
-    status.hidden = false;
-    status.textContent = 'Buffering ' + activeClip + '…';
+
+  function startRecordedClip(source, label, { audible = false, button = null } = {}) {
+    if (!source) return;
+    stopAllMedia();
+    activeMode = 'clip';
+    activeClipName = label;
+    const generation = playbackGeneration;
+    if (button) button.setAttribute('aria-pressed', 'true');
+
+    if (demoVideo.getAttribute('src') !== source) {
+      demoVideo.src = source;
+      demoVideo.load();
+    }
+    demoVideo.muted = !audible;
+    demoVideo.volume = 1;
+    demoVideo.loop = false;
+    demoVideo.playbackRate = 1;
+    demoVideo.controls = false;
+    demoVideo.hidden = false;
+    demoStatus.hidden = false;
+    demoStatus.textContent = 'Loading genuine ' + label + (audible ? ' with game sound…' : ' (silent)…');
+
+    demoVideo.currentTime = 0;
+    // For audible skill clips, call play() directly inside the profile click.
+    const playback = demoVideo.play();
+    playback.then(() => {
+      if (generation === playbackGeneration) {
+        demoStatus.textContent = audible
+          ? label + ' · VFX + ORIGINAL GAME SFX'
+          : 'EXISTING REAL VIDEO · SILENT · NEW VFX/SFX PENDING';
+      }
+    }).catch(() => {
+      if (generation !== playbackGeneration) return;
+      demoVideo.controls = true;
+      demoStatus.textContent = 'Clip unavailable or blocked — use Play on video to retry.';
+    });
+  }
+
+  repositionButton.addEventListener('click', () => {
+    startRecordedClip(demoVideo.dataset.previewSrc, 'Reposition', {button: repositionButton});
+  });
+  activateButton.addEventListener('click', () => {
+    startRecordedClip(activateButton.dataset.previewSrc, 'Banban skill', {button: activateButton});
+  });
+  demoVideo.addEventListener('ended', showDefaultBattleVfx);
+  demoVideo.addEventListener('waiting', () => {
+    if (!activeClipName) return;
+    demoStatus.hidden = false;
+    demoStatus.textContent = 'Buffering ' + activeClipName + '…';
   });
 
   function showEventProof() {
-    stopCurrentMedia();
-    eventTrigger.setAttribute('aria-pressed', 'true');
+    stopAllMedia();
+    activeMode = 'proof';
+    eventButton.setAttribute('aria-pressed', 'true');
     proof.hidden = false;
     proofKicker.textContent = 'FROM RANDOM EVENTS → BATTLE';
     proofTitle.textContent = 'Carried Battle Effect';
@@ -184,78 +235,53 @@
     proofCaption.textContent =
       'Verified linked capture pending. Fish +1 and Material +1 are resources, not this battle effect.';
   }
-  eventTrigger.addEventListener('click', showEventProof);
+  eventButton.addEventListener('click', showEventProof);
 
   function showSkillPreview(key) {
-    const skill = skillReferences[key];
+    const skill = existingSkillStills[key];
     if (!skill) return;
-    stopCurrentMedia();
     const card = skillCards.find(item => item.dataset.v2Skill === key);
-    card?.setAttribute('aria-pressed', 'true');
+    const source = card?.dataset.v2SkillClip?.trim();
 
-    // One click on a profile opens the genuine clip AND starts its game audio.
-    // Empty clip bindings deliberately keep the reviewed authentic still as a
-    // placeholder until teammate-captured VFX+SFX media has been verified.
-    const clipSrc = card?.dataset.v2SkillClip?.trim();
-    if (clipSrc) {
-      const generation = playbackGeneration;
-      activeClip = skill.name;
-      video.src = clipSrc;
-      video.muted = false;
-      video.volume = 1;
-      video.playbackRate = 1;
-      video.controls = true;
-      video.hidden = false;
-      battlefield.hidden = true;
-      status.hidden = false;
-      status.textContent = 'Loading ' + skill.name + ' · VFX with original game sound…';
-      // Important: play() is called immediately inside the user's card click,
-      // not after a timer or asynchronous media-loading callback.
-      video.currentTime = 0;
-      const playback = video.play();
-      playback.then(() => {
-        if (generation === playbackGeneration) {
-          status.textContent = skill.name + ' · VIDEO + IN-GAME SFX';
-        }
-      }).catch(() => {
-        if (generation === playbackGeneration) {
-          status.textContent = 'Audio/playback blocked — use the video controls to retry.';
-        }
-      });
+    if (source) {
+      startRecordedClip(source, skill.name, {audible: true, button: card});
       return;
     }
 
+    stopAllMedia();
+    activeMode = 'proof';
+    card?.setAttribute('aria-pressed', 'true');
     proof.hidden = false;
     proofKicker.textContent = 'EXISTING AUTHENTIC SKILL STILL';
     proofTitle.textContent = skill.name + ' · ' + skill.ability;
     proofImage.src = skill.still;
-    proofImage.alt = 'Existing genuine ' + skill.name +
-      ' ability screenshot (not updated animation footage)';
+    proofImage.alt = 'Genuine existing ' + skill.name + ' ability screenshot, not the new animation';
     proofImage.hidden = false;
-    proofBody.textContent =
-      'Updated pre-release animation and synchronized game sound pending. Once captured, opening this cat immediately starts its VFX and audio (no second Play click).';
-    proofCaption.textContent =
-      'The still is genuine older game evidence. No new VFX or SFX is simulated.';
+    proofBody.textContent = 'Updated pre-release animation and sound pending. The completed clip will start with audio from this one profile click.';
+    proofCaption.textContent = 'Historical still only. No new VFX or SFX is simulated.';
   }
+
   for (const card of skillCards) {
     card.addEventListener('click', () => showSkillPreview(card.dataset.v2Skill));
     card.addEventListener('keydown', event => {
-      if (event.key !== 'Enter' && event.key !== ' ') return;
+      if (!['Enter', ' '].includes(event.key)) return;
       event.preventDefault();
       showSkillPreview(card.dataset.v2Skill);
     });
   }
-  document.getElementById('v2ProofClose').addEventListener('click', stopCurrentMedia);
+  document.getElementById('v2ProofClose').addEventListener('click', showDefaultBattleVfx);
 
-  function dismissAdvisor(restoreFocus = false) {
+  function dismissAdvisor(restoreFocus = false, restoreBattle = false) {
     advisorLayer.hidden = true;
-    advisorTrigger.setAttribute('aria-expanded', 'false');
-    if (restoreFocus) advisorTrigger.focus({preventScroll: true});
+    advisorButton.setAttribute('aria-expanded', 'false');
+    if (restoreBattle) showDefaultBattleVfx();
+    if (restoreFocus) advisorButton.focus({preventScroll: true});
   }
   function showAdvisorQuestion() {
-    stopCurrentMedia();
+    stopAllMedia();
+    activeMode = 'advisor';
     advisorLayer.hidden = false;
-    advisorTrigger.setAttribute('aria-expanded', 'true');
+    advisorButton.setAttribute('aria-expanded', 'true');
     advisorBefore.hidden = false;
     advisorAfter.hidden = true;
     advisorStep.textContent = '1 / 2';
@@ -268,58 +294,35 @@
     advisorStep.textContent = showAnswer ? '2 / 2' : '1 / 2';
     advisorNext.textContent = showAnswer ? 'Back to question' : 'Show answer →';
   }
-  advisorTrigger.addEventListener('click', showAdvisorQuestion);
-  advisorClose.addEventListener('click', () => dismissAdvisor(true));
+  advisorButton.addEventListener('click', showAdvisorQuestion);
+  advisorClose.addEventListener('click', () => dismissAdvisor(true, true));
   advisorNext.addEventListener('click', toggleAdvisorAnswer);
   advisorBefore.addEventListener('click', toggleAdvisorAnswer);
 
-  fullButton.addEventListener('click', () => {
-    stopCurrentMedia();
-    dismissAdvisor();
-    if (typeof dialog.showModal === 'function') dialog.showModal();
-    else dialog.setAttribute('open', '');
-
-    // In production, a verified full-frame recording is placed in this data
-    // attribute. Opening the viewer then immediately starts video AND sound.
-    const clipSrc = fullFrameVideo.dataset.v2VideoSrc?.trim();
-    if (!clipSrc) return; // Pending asset: show honest static placeholder.
-
-    fullFrameVideo.src = clipSrc;
-    fullFrameVideo.muted = false;
-    fullFrameVideo.volume = 1;
-    fullFrameVideo.currentTime = 0;
-    fullFrameVideo.hidden = false;
-    fullFrameReference.hidden = true;
-    fullFramePending.hidden = true;
-    // User click is the autoplay permission: no separate Play button needed.
-    fullFrameVideo.play().catch(() => {
-      fullFrameVideo.controls = true;
-      fullFramePending.hidden = false;
-      fullFramePending.querySelector('p').textContent =
-        'Playback unavailable — use the video controls to retry with sound.';
-    });
-  });
-  fullClose.addEventListener('click', () => dialog.close());
-  dialog.addEventListener('close', () => {
-    fullFrameVideo.pause();
-    fullFrameVideo.hidden = true;
-    fullFrameReference.hidden = false;
-    fullFramePending.hidden = false;
-    fullButton.focus({preventScroll: true});
-  });
-
   document.addEventListener('keydown', event => {
-    if (event.key !== 'Escape' || !dialog.open) return;
-    event.stopPropagation();
-    dialog.close();
-  }, true);
-  document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-      stopCurrentMedia();
-      if (dialog.open) dialog.close();
+    if (event.key !== 'Escape') return;
+    if (!advisorLayer.hidden) {
+      event.preventDefault();
+      dismissAdvisor(true, true);
+    } else if (!proof.hidden || !demoVideo.hidden) {
+      event.preventDefault();
+      showDefaultBattleVfx();
     }
   });
 
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      stopAllMedia();
+    } else {
+      showDefaultBattleVfx();
+    }
+  });
+  window.addEventListener('presentation:viewchange', event => {
+    if (event.detail?.id !== 'combat') return;
+    if (event.detail.visible) showDefaultBattleVfx();
+    else stopAllMedia();
+  });
+
   dismissAdvisor();
-  stopCurrentMedia();
+  showDefaultBattleVfx();
 })();
