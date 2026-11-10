@@ -51,7 +51,12 @@ def request_json(url, token=None, method='GET', payload=None):
 
 def find_deployment(endpoint, token):
     try:
-        return request_json(endpoint, token)
+        deployment = request_json(endpoint, token)
+        # GitHub can return HTTP 200 with an empty/not_found status for a
+        # commit that has never been submitted, rather than HTTP 404.
+        if deployment.get('status') in (None, '', 'not_found'):
+            return None
+        return deployment
     except ApiError as error:
         if error.status == 404:
             return None
@@ -93,7 +98,7 @@ def wait_for_deployment(endpoint, token, timeout_seconds=1800):
     while True:
         elapsed = time.monotonic() - started
         try:
-            status = request_json(endpoint, token).get('status', 'unknown_status')
+            status = request_json(endpoint, token).get('status') or 'unknown_status'
         except ApiError as error:
             if error.status not in TRANSIENT_HTTP | {404}:
                 raise

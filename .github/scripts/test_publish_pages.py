@@ -62,6 +62,15 @@ class PublisherTests(unittest.TestCase):
             self.assertEqual(publisher.create_or_resume('https://api.example/deployments', 'fake', 'abc', 42), 'abc')
         self.assertEqual(sum(c.kwargs.get('method') == 'POST' for c in api.call_args_list), 1)
 
+    def test_http_200_with_empty_status_is_not_a_running_deployment(self):
+        responses = [{'status': ''}, {'value': 'fake-oidc'}, {'id': 'abc'}]
+        with patch.dict(os.environ, {'ACTIONS_ID_TOKEN_REQUEST_URL': 'https://oidc.example',
+                                     'ACTIONS_ID_TOKEN_REQUEST_TOKEN': 'fake-request'}), \
+             patch.object(publisher, 'request_json', side_effect=responses) as api, \
+             contextlib.redirect_stdout(io.StringIO()):
+            self.assertEqual(publisher.create_or_resume('https://api.example/deployments', 'fake', 'abc', 42), 'abc')
+        self.assertEqual(sum(c.kwargs.get('method') == 'POST' for c in api.call_args_list), 1)
+
     def stamp(self):
         bodies = [b'current deck', b'previous deck']
         return {'commit': 'abc', 'run_id': '123',
