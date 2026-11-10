@@ -77,3 +77,28 @@ This file is the **asset and composition planning register**, not an implementat
 Published GitHub Pages run [42789537961](https://github.com/proxima-j/stray-kitty-presentation/actions/runs/42789537961) succeeded. The [pitch](https://proxima-j.github.io/stray-kitty-presentation/review/v2-02-pitch.html), [Home](https://proxima-j.github.io/stray-kitty-presentation/review/v2-05-home.html), [Events](https://proxima-j.github.io/stray-kitty-presentation/review/v2-10-events.html), and [Combat](https://proxima-j.github.io/stray-kitty-presentation/review/v2-11-combat.html) standalone review pages all served publicly. Their media and pending descriptions are draft/review labels, not a final asset approval.
 
 A read-only browser smoke test confirmed Home GROWS ↔ RESPONDS tabs (four current stills versus three real video slots plus one pending repair slot), and Combat battlefield, three cat cards, Reset and advisor Local Fallback controls. **Combat Activate Skill selected the genuine existing muted video, but it did not autoplay in the test browser and displayed the built-in “Use the video player to retry” status**. This is an observed playback/buffering limitation, not proof that a new VFX/SFX capture exists or that the skill footage played successfully. Verify a click-to-play and buffering/retry flow when new media is integrated. No Current, Previous or archive presentation content was changed.
+
+
+## Latest review correction — 2026-11-10 (supersedes first V2 Events/Combat drafts)
+
+The first two exploratory compositions at docs/review/v2-10-events.html and docs/review/v2-11-combat.html changed too much. **The current production Random Events and Combat layouts are the authoritative starting compositions.** Do not integrate the split-case event design or revised "Fight Together" Combat layout.
+
+**Random Events, V2 Page 10:** Keep the current Trigger → Choice → Result screenshot sequence, Fish +1 / Material +1 close-ups, and existing bottom Battle Support / Butterfly Effect pills. No new second evidence lane or major layout changes. The resource-reward screenshots do not directly alter battle. The demonstration of a genuine different event's carried supply/support or difficulty effect takes place on **the following Combat page**, not on Events.
+
+**Combat, V2 Page 11:** Preserve exactly the current Real-Time Tactical Tower Defense header, left battlefield with Reposition / Build Energy / Activate Skills, right cat profiles, and separate 阿策 Local Fallback reveal. Use the existing "FROM RANDOM EVENTS → BATTLE PRESSURE + SUPPORT" bridge as a discreet clickable cue. After entering Combat, clicking the bridge should temporarily show a verified real event → carried support/penalty → next battle effect in the **existing battlefield window** and restore that window afterward. Do not autoplay or force a second slide.
+
+**Option B approved:** Clicking each existing companion profile (Rongrong, Banban, Diandian) should select and play that cat's genuine updated ability VFX with in-game synchronized SFX in the existing left battlefield window. Keep their authentic portrait, name, role and still VFX visible and use only a subtle selected state. The current Banban skill movie is a separate, silent older recording and cannot demonstrate all three updated SFX.
+
+**Additional general/full-screen VFX:** A separate button opens a near-full-slide 16:9 overlay for actual **uncropped battle-wide VFX with real game sound**. It is not just a magnified small ability crop; verify what real full-frame effects are available in the team's new build. Close/Escape returns to the unchanged Combat composition. This is a local interaction, not another slide or a browser Fullscreen requirement.
+
+**Playback/keyboard requirements:** All audible video starts on an explicit presenter click. Use one active media controller: pause when selecting another clip, leaving the page, hiding the tab or closing the overlay. Retain original Reposition and Activate Skills controls until specifically approved otherwise. Provide loading/retry feedback, preserve 4.2-second global navigation, and keep keyboard focus inside an open overlay.
+
+| New V2 evidence | Where displayed | Status |
+| --- | --- | --- |
+| One real supported event, corresponding carried effect and next battle consequence | Combat top bridge → left battlefield | **PENDING selected/verifiable case** |
+| Rongrong updated VFX + real synchronized SFX | Click Rongrong profile | **PENDING teammate recording** |
+| Banban updated VFX + real synchronized SFX | Click Banban profile | **PENDING teammate recording** |
+| Diandian updated VFX + real synchronized SFX | Click Diandian profile | **PENDING teammate recording** |
+| Full-frame general/battle-wide VFX with authentic SFX | Full-screen-effects 16:9 overlay | **PENDING teammate recording and effect identification** |
+
+Reuse one genuine source capture for multiple views when possible; do not duplicate media unnecessarily. Do not claim any new footage exists until source/build and permission are verified. Existing initial V2 preview URLs remain comparisons only; next review should reproduce the actual original two-page composition before adding small interaction affordances.
