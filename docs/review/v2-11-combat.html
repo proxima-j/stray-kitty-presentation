@@ -41,15 +41,15 @@
 </div>
 </section>
 <section aria-label="Three companions and their authentic ability effects" class="combat-profiles" data-at="0.42" data-build="rise">
-<article class="profile v2-selectable-profile" data-id="FRIEND 01" data-v2-skill="rongrong" role="button" tabindex="0" aria-pressed="false" aria-label="Preview Rongrong skill; updated pre-release VFX and sound pending">
+<article class="profile v2-selectable-profile" data-id="FRIEND 01" data-v2-skill="rongrong" data-v2-skill-clip="" role="button" tabindex="0" aria-pressed="false" aria-label="Preview Rongrong skill; updated pre-release VFX and sound pending">
 <div class="profile-figure"><img alt="绒绒 / Rongrong original pixel-art figure" src="../assets/pages/09/caster-figure.webp" height="128" width="128"/></div>
 <div class="profile-details"><b>绒绒 / Rongrong</b><span class="ability">星绒绽放 — Star Burst</span><span class="profile-function">Cross-shaped area attack</span></div><div class="profile-vfx"><img alt="Rongrong's authentic purple star attack across cross-shaped impact cells" src="../assets/pages/09/caster-star-vfx.webp"/></div>
 </article>
-<article class="profile v2-selectable-profile" data-id="FRIEND 02" data-v2-skill="banban" role="button" tabindex="0" aria-pressed="false" aria-label="Preview Banban skill; updated pre-release VFX and sound pending">
+<article class="profile v2-selectable-profile" data-id="FRIEND 02" data-v2-skill="banban" data-v2-skill-clip="" role="button" tabindex="0" aria-pressed="false" aria-label="Preview Banban skill; updated pre-release VFX and sound pending">
 <div class="profile-figure"><img alt="斑斑 / Banban original pixel-art figure" src="../assets/pages/09/guard-figure.webp" height="128" width="128"/></div>
 <div class="profile-details"><b>斑斑 / Banban</b><span class="ability">罐盖护盾 — Shield</span><span class="profile-function">Temporary self-shield</span></div><div class="profile-vfx"><img alt="Banban's genuine cyan shield release and original skill label" src="../assets/pages/09/guard-shield-vfx.webp"/></div>
 </article>
-<article class="profile v2-selectable-profile" data-id="FRIEND 03" data-v2-skill="diandian" role="button" tabindex="0" aria-pressed="false" aria-label="Preview Diandian skill; updated pre-release VFX and sound pending">
+<article class="profile v2-selectable-profile" data-id="FRIEND 03" data-v2-skill="diandian" data-v2-skill-clip="" role="button" tabindex="0" aria-pressed="false" aria-label="Preview Diandian skill; updated pre-release VFX and sound pending">
 <div class="profile-figure"><img alt="点点 / Diandian original pixel-art figure" src="../assets/pages/09/diandian-figure.webp" height="128" width="128"/></div>
 <div class="profile-details"><b>点点 / Diandian</b><span class="ability">安心呼噜 — Healing Purr</span><span class="profile-function">Heals active companions</span></div><div class="profile-vfx"><img alt="Diandian's genuine green Healing Purr effect on active companions" src="../assets/pages/09/diandian-heal-vfx.webp"/></div>
 </article>
@@ -83,8 +83,9 @@
 <dialog id="v2FullVfxDialog" class="v2-full-vfx-dialog" aria-labelledby="v2FullVfxTitle">
   <div class="v2-full-vfx-header"><span>GENERAL BATTLE VFX · REVIEW PLACEHOLDER</span><button id="v2FullVfxClose" type="button" aria-label="Close full battle VFX review">×</button></div>
   <div class="v2-full-vfx-stage">
-    <img src="../assets/pages/09/battlefield-main.webp" alt="Existing authentic full-frame battlefield used as a reference only; new VFX and game sound pending">
-    <div class="v2-full-vfx-pending"><h3 id="v2FullVfxTitle">FULL-FRAME VFX + SOUND</h3><p>ACTUAL GAMEPLAY RECORDING PENDING</p><small>The teammate's updated general battle effects will be presented here, with the full original game frame and synchronized in-game audio.</small></div>
+    <video id="v2FullVfxVideo" data-v2-video-src="" controls playsinline preload="none" hidden aria-label="Future genuine full-frame battle VFX with original game sound"></video>
+    <img id="v2FullVfxReference" src="../assets/pages/09/battlefield-main.webp" alt="Existing authentic full-frame battlefield used as a reference only; new VFX and game sound pending">
+    <div class="v2-full-vfx-pending" id="v2FullVfxPending"><h3 id="v2FullVfxTitle">FULL-FRAME VFX + SOUND</h3><p>ACTUAL GAMEPLAY RECORDING PENDING</p><small>The teammate's updated general battle effects will be presented here, with the full original game frame. Clicking to open will start the genuine video and its synchronized sound automatically when available.</small></div>
   </div>
 </dialog>
 </main><script src="v2-preserve.js"></script></body></html>
