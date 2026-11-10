@@ -143,7 +143,9 @@
     "media_inventory": "library/PRESENTATION-V2-MEDIA-SLOTS.json",
     "public_preview": "https://proxima-j.github.io/stray-kitty-presentation/",
     "publication_gate": "Final completion report requires a green Pages workflow and matching public 20261110-v2-interim-part1 marker. Workflow runs remain the authoritative deployment record.",
-    "outgoing_current_source": "9e2cd416bde4268df0064eab90b09151f51e01db"
+    "outgoing_current_source": "9e2cd416bde4268df0064eab90b09151f51e01db",
+    "runtime_commit": "0f764237fe13540f547d3b1f9ae66202c0a4c422",
+    "playback_failure_verification": "One private invalid-media probe passed: failed clip hidden, authentic still visible, muted Retry exposed, Return restored clean default. No game/infrastructure/network fault injection; probe not published."
   },
   "previous": {
     "entry": "previous/",
