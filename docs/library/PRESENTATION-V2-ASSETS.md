@@ -102,3 +102,46 @@ The first two exploratory compositions at docs/review/v2-10-events.html and docs
 | Full-frame general/battle-wide VFX with authentic SFX | Full-screen-effects 16:9 overlay | **PENDING teammate recording and effect identification** |
 
 Reuse one genuine source capture for multiple views when possible; do not duplicate media unnecessarily. Do not claim any new footage exists until source/build and permission are verified. Existing initial V2 preview URLs remain comparisons only; next review should reproduce the actual original two-page composition before adding small interaction affordances.
+
+
+## Capture readiness after teammate pre-release animation and audio update (2026-11-10)
+
+**Decision:** Do **one focused, read-only Codex pass after the teammates' VFX/SFX changes land in the agreed capture build**, then capture and verify. There is **no need for another full architecture or repository walkthrough**. The media collection stays pending until the new implementation is accessible and functional.
+
+### New animation requirement: keep the whole skill cycle
+
+The teammate is adding a short **pre-release/anticipation animation** before ability release, plus **in-game sound** for the VFX. Each new individual ability recording must capture the full cause-and-effect sequence without cutting off the new beginning:
+
+1. **Ready / initiation:** battle context, the ability becoming available, and the actual player action or visible activation trigger.
+2. **Pre-release animation:** the full new anticipation/wind-up animation, including its actual duration and any associated sound.
+3. **Ability release and impact:** complete genuine skill VFX and synchronized game sound (not sound added afterward and described as in-game).
+4. **After-effect / settle:** enough time to see the shield, damage, heal, or other implemented result, and the battlefield return to play.
+
+Do not trim to the flash alone. The previous silent Banban demo is a valid **historical fallback/reference** but does not prove the new pre-release animation or updated SFX.
+
+### Focused Codex audit before collecting — one pass, no game changes
+
+Run against the exact target teammate branch/MR or merged commit, with its new files visible:
+
+- **Version/ownership:** identify branch, merge status, SHA, files changed, names of skill effects and available genuine SFX; confirm what actually shipped versus what is proposed. If changes are still in flux, wait for an agreed stable build; avoid recapturing provisional versions.
+- **Activation order:** trace the real input → cast/pre-release animation → skill release → game-state effect → sound playback. Confirm visual/sound synchronization, input acceptance during the pre-release phase, and whether other abilities or pauses can interrupt it.
+- **Capture staging:** identify the shortest legitimate QA save/checkpoint to get enough energy, activate each skill, and repeat without manually patching game logic. Verify the actual target battle and character set; avoid altering production saves or gameplay source for a presentation capture.
+- **Media output:** confirm full native game frame, browser/audio recording method, music/SFX balance, clip length covering all four phases, and whether a single master can supply three skill cuts plus the separate full-frame showcase. Avoid duplicate binaries and over-cropping.
+- **Presentation compatibility:** confirm the app's new ability timing does not conflict with the deck's local replay and global navigation; capture media should be user-started with sound, stop on slide exit, and retain original audio/VFX timing.
+- **Observed vs planned:** give a short evidence table, capture-ready yes/no, missing assets, and exact filenames/entry points. Report blockers; do not claim the game is ready merely because source files exist.
+
+**Special audio precaution:** The presenter plans to **mute the game website in Chrome during the live Chapter 5 demonstration**. Chrome site mute applies to that website and could silence capture if recordings are made with the same site muted. For source capture, use an explicitly **unmuted recording browser/profile**, verify actual captured system/tab audio is present and synchronized, then restore the intended live-demo mute. The presentation is hosted on a different domain and its explicitly clicked VFX clips can remain audible.
+
+### Updated capture acceptance matrix
+
+| Capture | Needs pre-release phase? | Genuine SFX? | Frame / playback | Status |
+| --- | --- | --- | --- | --- |
+| Rongrong Star Burst | **Yes, if present in updated skill implementation** | **Yes** | Native context; presented in existing left battlefield on profile click | **AWAITING STABLE BUILD AND AUDIT** |
+| Banban Shield | **Yes, if present** | **Yes** | Native context; presented in existing left battlefield on profile click | **AWAITING STABLE BUILD AND AUDIT** |
+| Diandian Healing Purr | **Yes, if present** | **Yes** | Native context; presented in existing left battlefield on profile click | **AWAITING STABLE BUILD AND AUDIT** |
+| General/battle-wide VFX | Capture any actual preparation, release, and effect sequence that exists | **Yes** | **Uncropped native 16:9/full-gameplay frame**, large overlay, explicit Play | **EFFECT TO VERIFY IN UPDATED BUILD** |
+| Event carry → subsequent battle | Depends on real chosen event/battle mechanism | Include original game audio if useful; not mandatory when evidence is static | Genuine linked event state and battle effect | **SEPARATE MECHANIC AUDIT PENDING** |
+
+**Collection trigger:** Start capturing only after (1) the teammate confirms the target implementation is ready, (2) the focused audit identifies the exact build and clip boundaries, and (3) normal QA skill release and its actual audio work in that build. A failing capture leads to one targeted correction and retest, not a broad repeated code walkthrough.
+
+**No presentation, game, or archive change is authorized by this planning update.** Mark any future asset READY only after its verified media file and provenance are recorded.
