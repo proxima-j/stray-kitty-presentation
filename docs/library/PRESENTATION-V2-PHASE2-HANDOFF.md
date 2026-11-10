@@ -2,7 +2,7 @@
 
 Build marker: `20261110-v2-interim-part1`. Publication label: **V2 Interim — Media Pending**.
 
-Part 1 integration commit: `INTEGRATION_COMMIT` (the subsequent publication-record commit records this exact content revision). The publishing workflow remains `.github/workflows/pages.yml`: serialized static `docs/` upload and deployment, no build tooling or new hosting.
+Part 1 integration commit: `e0dabbbf7a82272b3f45c846169dabe9da973fbf` (the subsequent publication-record commit records this exact content revision). The publishing workflow remains `.github/workflows/pages.yml`: serialized static `docs/` upload and deployment, no build tooling or new hosting.
 
 ## Retained versions
 
@@ -105,7 +105,7 @@ For each new file record build SHA, source branch/MR, capture date/time/timezone
 
 ## Verification and limits
 
-Part 1: focused candidate checks at 1600×900 and 1366×768; exact 21-scene registry, retained scene content comparison, existing asset references and scoped runtime syntax. Home geometry/playback and pause/resume; three authentic skill-still selections, original Reposition/Activate Skills, evidence-pending bridge, Local Fallback advisor, subtle Return reset, completed-demo reset and scene exit/re-entry; four dashboard tabs and original Slack image; native Pitch ↔ Game Flow transition, opening film and final Q&A. Public deployment evidence is recorded in `docs/versions.json`.
+Part 1: focused candidate checks at 1600×900 and 1366×768; exact 21-scene registry, retained scene content comparison, existing asset references and scoped runtime syntax. Home geometry/playback and pause/resume; three authentic skill-still selections, original Reposition/Activate Skills, evidence-pending bridge, Local Fallback advisor, subtle Return reset, completed-demo reset and scene exit/re-entry; four dashboard tabs and original Slack image; native Pitch ↔ Game Flow transition, opening film and final Q&A. Verified source/retention state is recorded in `docs/versions.json`; the repository Pages Actions run and final completion report provide the public deployment evidence.
 
 New VFX autoplay/loop and individual updated skill playback cannot be visually certified until actual files exist. Linked event consequences remain unverified. Failure/retry handling is implemented; no deliberate network fault or fake gameplay was injected. Browser automation's element-scroll helper can nudge the cinematic scroll position; use normal coordinate clicks for media checks rather than mistaking that automation scroll for a deck layout change. No engine change was made to accommodate that helper.
 

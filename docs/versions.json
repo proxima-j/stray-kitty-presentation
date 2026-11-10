@@ -2,7 +2,7 @@
   "current": {
     "entry": "./",
     "candidate_base_commit": "9e2cd416bde4268df0064eab90b09151f51e01db",
-    "integration_commit": "INTEGRATION_COMMIT",
+    "integration_commit": "e0dabbbf7a82272b3f45c846169dabe9da973fbf",
     "build_marker": "20261110-v2-interim-part1",
     "description": "21-scene V2 Interim — Media Pending. Approved structural integration using genuine existing media and explicit pending states.",
     "publication_status": "V2 INTERIM — MEDIA PENDING",
