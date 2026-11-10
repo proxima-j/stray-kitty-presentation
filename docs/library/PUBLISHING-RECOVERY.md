@@ -50,3 +50,9 @@ Markdown-only pushes no longer create unnecessary full-site deployment attempts.
 Focused publisher tests cover synchronization lasting beyond ten minutes, watcher timeout without cancellation, terminal error handling, resuming a run, recovering a lost POST response, stale release stamps, and stale deck bytes. No game tests, slide changes, media changes, Current/Previous rotation, history rewrite, permission expansion or infrastructure changes are part of this correction. Existing failed runs are historical evidence and are not deleted or relabeled.
 
 The first live API check also returned HTTP 200 with an empty deployment status for a never-submitted commit, rather than the expected 404. The publisher now treats empty/`not_found` status as missing and creates the deployment. A regression covers this case. The waiting watcher was stopped before it had submitted any Pages deployment; the live site was unaffected.
+
+### Verified result
+
+[Publishing run 42852723120](https://github.com/proxima-j/stray-kitty-presentation/actions/runs/42852723120), source `3c1d20e91b5fce5668a2e53e318d42f3be943278`, completed successfully. All eight publisher regressions passed on the runner. The actual Pages API advanced from `deployment_in_progress` to `succeed`, followed by verified public release metadata and matching Current/Previous HTML bytes. No workflow error or deprecated-action warning was reported. Current remains the 20-scene V2 deck and Previous remains the unchanged 23-scene fallback; V1 remains archived and untouched.
+
+This result record is a Markdown-only follow-up. It is available immediately in GitHub source and intentionally does not republish unchanged presentation assets. The live release stamp continues to identify the successfully published code revision above until the next site publication.
