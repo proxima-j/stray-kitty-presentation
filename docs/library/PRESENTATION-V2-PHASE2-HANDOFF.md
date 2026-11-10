@@ -1,12 +1,12 @@
 # V2 Part 2 handoff
 
-Build marker: `20261110-v2-interim-part1`. Publication label: **V2 Interim — Media Pending**.
+Current build marker: `20261110-v2-no-gameflow`. Publication label: **V2 Interim — Media Pending**.
 
-Part 1 integration commit: `e0dabbbf7a82272b3f45c846169dabe9da973fbf` (the subsequent publication-record commit records this exact content revision). Verified runtime including the targeted playback-failure correction: `0f764237fe13540f547d3b1f9ae66202c0a4c422`. Later publication/documentation commits do not change that runtime. The publishing workflow remains `.github/workflows/pages.yml`: serialized static `docs/` upload and deployment, no build tooling or new hosting.
+Part 1 integration commit: `e0dabbbf7a82272b3f45c846169dabe9da973fbf` (the subsequent publication-record commit records this exact content revision). Verified runtime including the targeted playback-failure correction: `0f764237fe13540f547d3b1f9ae66202c0a4c422`. The original Part 1 JavaScript remains unchanged. Subsequent user-requested Game Flow removal uses the 20-page registry below; it changes only scene registration/numbering and documentation, not the player or media. The publishing workflow remains `.github/workflows/pages.yml`: serialized static `docs/` upload and deployment, no build tooling or new hosting.
 
 ## Retained versions
 
-- Current: the verified 21-scene V2 Interim at [the permanent preview](https://proxima-j.github.io/stray-kitty-presentation/).
+- Current: the verified 20-scene V2 Interim at [the permanent preview](https://proxima-j.github.io/stray-kitty-presentation/).
 - Previous: outgoing verified 23-scene Current from `9e2cd416bde4268df0064eab90b09151f51e01db`, frozen under `docs/previous/`, with independent small runtime files and shared `../assets/` media. Includes Roadmap, the separate Alert scene, and final Q&A.
 - Permanent V1: `archive/presentation-v1-2026-11-10` remains pinned to `0daa72fda8cd7ab9f1a8a99aed9f4eb537137461`. Do not modify/merge into/rebase this branch.
 - Reviews remain under `docs/review/` as references. Do not import their camera/route/cat styles into production.
@@ -18,27 +18,26 @@ Part 1 integration commit: `e0dabbbf7a82272b3f45c846169dabe9da973fbf` (the subse
 | --- | --- | --- |
 | 01 | `opening-film` | Opening Film |
 | 02 | `elevator-pitch` | Elevator Pitch |
-| 03 | `game-flow` | Game Flow |
-| 04 | `visual-novel` | Visual Novel |
-| 05 | `home-hub` | Home Hub |
-| 06 | `payment` | Xsolla Sandbox Payment |
-| 07 | `four-maps` | Four Maps |
-| 08 | `vertical-design` | Three Connected Levels |
-| 09 | `greybox` | Greybox |
-| 10 | `random-events` | Random Events |
-| 11 | `combat` | Combat |
-| 12 | `dice-animations` | Dice Roll Animations |
-| 13 | `adaptive-interface` | Responsive & Translucent UI |
-| 14 | `technical-architecture` | Technical Architecture |
-| 15 | `kubernetes-deployment` | Kubernetes Deployment |
-| 16 | `gameplay-telemetry` | From Gameplay to Telemetry |
-| 17 | `observability` | Observability Across the Game |
-| 18 | `cross-team-collaboration` | Cross-Team Collaboration |
-| 19 | `design-test-rethink` | Design. Test. Rethink. |
-| 20 | `connected-world` | A Dynamic, Living World |
-| 21 | `closing-qa` | Q&A |
+| 03 | `visual-novel` | Visual Novel |
+| 04 | `home-hub` | Home Hub |
+| 05 | `payment` | Xsolla Sandbox Payment |
+| 06 | `four-maps` | Four Maps |
+| 07 | `vertical-design` | Three Connected Levels |
+| 08 | `greybox` | Greybox |
+| 09 | `random-events` | Random Events |
+| 10 | `combat` | Combat |
+| 11 | `dice-animations` | Dice Roll Animations |
+| 12 | `adaptive-interface` | Responsive & Translucent UI |
+| 13 | `technical-architecture` | Technical Architecture |
+| 14 | `kubernetes-deployment` | Kubernetes Deployment |
+| 15 | `gameplay-telemetry` | From Gameplay to Telemetry |
+| 16 | `observability` | Observability Across the Game |
+| 17 | `cross-team-collaboration` | Cross-Team Collaboration |
+| 18 | `design-test-rethink` | Design. Test. Rethink. |
+| 19 | `connected-world` | A Dynamic, Living World |
+| 20 | `closing-qa` | Q&A |
 
-Use `?page=<stable-scene-id>` for durable review links. Numeric pages are now 01–21. Chapter 5 is a separately pre-opened live-game tab after Pitch, never a slide/iframe. The exact approved Pitch reminder and its art remain unchanged. Random Events is unchanged except numbering; its Fish +1/Material +1 are resource rewards, not direct battle modifiers.
+Use `?page=<stable-scene-id>` for durable review links. Numeric pages are now 01–20. Game Flow was removed after the initial Part 1 release; return from the separate Chapter 5 demo to Visual Novel, now Page 03. Chapter 5 is a separately pre-opened live-game tab after Pitch, never a slide/iframe. The exact approved Pitch reminder and its art remain unchanged. Random Events is unchanged except numbering; its Fish +1/Material +1 are resource rewards, not direct battle modifiers.
 
 ## IMPLEMENTED: production ownership
 
@@ -101,7 +100,7 @@ For each new file record build SHA, source branch/MR, capture date/time/timezone
 4. Default loop: fill `data-v2-default-src`. The controller automatically uses muted autoplay/loop on scene entry and on reset; it changes the pending status text. Do not force `autoplay` on an off-screen video or assign eager `src` attributes.
 5. Individual skills: fill each card's `data-v2-skill-clip`; remove pending wording from that card's accessible label. The controller will play that clip immediately on click, muted; it no longer shows the historical pending still. Keep portraits/VFX stills on right cards.
 6. Event: fill all three event attributes plus accurate caption only after the complete linkage is verified. Until then leave every field blank and the explicit pending state visible.
-7. Re-run only affected media/layout/lifecycle checks, update the handoff/inventory/versions pending lists, then use the verification-gated Current/Previous rotation only for a newly verified complete deck. Do not rotate for each asset/documentation edit.
+7. Re-run only affected media/layout/lifecycle checks, update the handoff/inventory/versions pending lists, then use the verification-gated Current/Previous rotation only for a newly verified complete deck. Do not rotate for each individual scene/asset/documentation edit.
 
 ## Verification and limits
 
@@ -110,3 +109,8 @@ Part 1: focused candidate checks at 1600×900 and 1366×768; exact 21-scene regi
 New VFX autoplay/loop and individual updated skill playback cannot be visually certified until actual files exist. Linked event consequences remain unverified. Failure/retry handling passed one private invalid-media probe: the failed video hides, the authentic battlefield remains visible, Retry appears, and Return clears it. The probe used invalid local media data only; no game, monitoring or external-network fault was injected, and no probe is published. Browser automation's element-scroll helper can nudge the cinematic scroll position; use normal coordinate clicks for media checks rather than mistaking that automation scroll for a deck layout change. No engine change was made to accommodate that helper.
 
 Part 2 focused tests: changed media returns HTTP 200; complete video cycle and muted start; only one active Combat video; completion/Return restoration; tab/scene exit pauses and re-entry default-only; Home 2×2 geometry at both agreed sizes; pending labels removed only for verified replacements; no missing requests/console errors. Stop after the affected checks pass.
+
+
+## Game Flow removal maintenance
+
+Source before removal: `2f5b7321c3bfb11e205b256a64fa21596a0715e6`. User explicitly requested removing Game Flow and opening all updated page previews. Current has 20 scenes; Home is 04, Combat 10, Observability 16 and Q&A 20. The scene is preserved in the unchanged 23-scene Previous and permanent V1. All retained content, media and JavaScript/CSS are identical except page metadata. The focused Pitch ↔ Visual Novel navigation check passed; broader Part 1 layout/media checks were not repeated. No version rotation or asset deletion. Stable-ID preview links remain the normal review surface.

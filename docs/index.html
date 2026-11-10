@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="color-scheme" content="light">
-  <meta name="presentation-build" content="20261110-v2-interim-part1">
+  <meta name="presentation-build" content="20261110-v2-no-gameflow">
   <meta name="presentation-status" content="V2 Interim — Media Pending">
   <title>Stray Kitty — Presentation</title>
   <link rel="stylesheet" href="engine-v3.css">
@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="pitch-poster.css?v=20261110-live-gameplay-loop">
   <link rel="stylesheet" href="level-design.css?v=20261109-level-design">
   <link rel="stylesheet" href="events-combat.css?v=20261109-integrated">
-  <link rel="preload" as="script" href="events-combat.js?v=20261110-v2-interim-part1">
+  <link rel="preload" as="script" href="events-combat.js?v=20261110-v2-no-gameflow">
   <link rel="stylesheet" href="technical.css?v=20261109-full-pipeline">
   <link rel="stylesheet" href="teamwork.css?v=20261109-future-integrated1">
   <link rel="stylesheet" href="datadog.css?v=20261109-datadog-taller-frames2">
@@ -22,11 +22,11 @@
   <link rel="preload" as="script" href="uiux.js?v=20261109-adaptive-fit">
   <link rel="preload" as="script" href="scene-content.js?v=20261109-on-demand-events">
   <link rel="preload" as="script" href="engine-v3.js?v=20261109-level-design">
-  <link rel="stylesheet" href="v2-interim.css?v=20261110-v2-interim-part1">
+  <link rel="stylesheet" href="v2-interim.css?v=20261110-v2-no-gameflow">
 </head>
 <body>
 <div id="scrollSpace" class="scroll-space">
- <main id="stage" class="stage" aria-label="Stray Kitty presentation — Pages 01 through 21 · V2 Interim — Media Pending">
+ <main id="stage" class="stage" aria-label="Stray Kitty presentation — Pages 01 through 20 · V2 Interim — Media Pending">
   <div id="world" class="world">
    <svg id="roadDrawing" class="route-svg" aria-hidden="true"><defs><clipPath id="revealClip"><rect id="routeReveal" x="0" y="0" width="0" height="2000"/></clipPath></defs><path id="routeGhost" class="route-ghost" d=""/><path id="routeInk" class="route-ink" d="" clip-path="url(#revealClip)"/></svg>
    <section id="opening-film" class="scene scene-film" data-title="Opening Film" data-scene="0" data-page="01" aria-label="Page 01 — Full-screen film">
@@ -58,28 +58,7 @@
      </section>
     </div></div>
    </section>
-   <section id="game-flow" class="scene" data-scene="2" data-page="03" data-title="Game Flow" aria-label="Page 03 — Game Flow">
-    <div class="scene-camera"><figure class="game-flow" data-build="rise" data-at="0.1">
-     <svg viewBox="0 0 1400 700" role="img" aria-labelledby="flowTitle flowDesc">
-      <title id="flowTitle">Game flow</title><desc id="flowDesc">Story, Map Exploration, Narrative and Random Events, Combat, then Story. Home Hub is separate, above-left, with one optional-access arrow toward open space in the loop.</desc>
-      <defs><marker id="flowArrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1 L10 6 L1 11" fill="none" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
-      <ellipse class="flow-route" cx="760" cy="370" rx="460" ry="205"/>
-      <!-- Short tangent arcs sit directly on the continuous oval. Clockwise. -->
-      <path class="flow-direction" d="M990 192.46 A460 205 0 0 1 1085.27 225.04" marker-end="url(#flowArrow)"/>
-      <path class="flow-direction" d="M1158.37 472.5 A460 205 0 0 1 1085.27 514.96" marker-end="url(#flowArrow)"/>
-      <path class="flow-direction" d="M530 547.54 A460 205 0 0 1 434.73 514.96" marker-end="url(#flowArrow)"/>
-      <path class="flow-direction" d="M361.63 267.5 A460 205 0 0 1 434.73 225.04" marker-end="url(#flowArrow)"/>
-      <path class="flow-route" d="M350 145 C420 175 388 245 500 278" marker-end="url(#flowArrow)"/>
-      <g class="flow-node"><rect class="flow-pill flow-hub" x="130" y="69" width="240" height="76" rx="38"/><text class="flow-label" x="250" y="109">HOME HUB</text></g>
-      <g class="flow-node"><rect class="flow-pill" x="640" y="127" width="240" height="76" rx="38"/><text class="flow-label" x="760" y="167">STORY</text></g>
-      <g class="flow-node"><rect class="flow-pill" x="1060" y="332" width="320" height="76" rx="38"/><text class="flow-label" x="1220" y="372">MAP EXPLORATION</text></g>
-      <g class="flow-node"><rect class="flow-pill" x="550" y="529" width="420" height="92" rx="46"/><text class="flow-label" x="760" y="563"><tspan x="760">NARRATIVE &amp;</tspan><tspan x="760" dy="30">RANDOM EVENTS</tspan></text></g>
-      <g class="flow-node"><rect class="flow-pill" x="180" y="332" width="240" height="76" rx="38"/><text class="flow-label" x="300" y="372">COMBAT</text></g>
-     </svg>
-    </figure></div>
-   </section>
-
-   <section id="visual-novel" class="scene" data-scene="3" data-page="04" data-title="Visual Novel" aria-label="Page 04 — Visual Novel">
+   <section id="visual-novel" class="scene" data-scene="2" data-page="03" data-title="Visual Novel" aria-label="Page 03 — Visual Novel">
     <div class="scene-camera"><div class="content-page narrative-content">
      <h2 data-build="text" data-at="0.04">Visual Novel</h2>
      <div class="narrative-shell" data-build="rise" data-at="0.2">
@@ -92,7 +71,7 @@
      </div>
     </div></div>
    </section>
-   <section aria-label="Page 05 — Home Hub" class="scene" data-page="05" data-scene="4" data-title="Home Hub" id="home-hub">
+   <section aria-label="Page 04 — Home Hub" class="scene" data-page="04" data-scene="3" data-title="Home Hub" id="home-hub">
 <div class="scene-camera"><div class="content-page home-content" data-home-mode="growth">
 <header class="home-copy" data-at="0.04" data-build="text">
 <h2>A home that grows, responds, and becomes your own.</h2>
@@ -117,9 +96,9 @@
 </div>
 </div></div>
 </section>
-   <section id="payment" class="scene" data-scene="5" data-page="06" data-title="Payment" aria-label="Page 06 — Payment, Xsolla Sandbox">
+   <section id="payment" class="scene" data-scene="4" data-page="05" data-title="Payment" aria-label="Page 05 — Payment, Xsolla Sandbox">
     <div class="scene-camera"><div class="content-page payment-content">
-     <div class="section-label" data-build="text" data-at="0.02"><span class="number-pill">06</span> XSOLLA SANDBOX</div>
+     <div class="section-label" data-build="text" data-at="0.02"><span class="number-pill">05</span> XSOLLA SANDBOX</div>
      <h2 data-build="text" data-at="0.12">Payment</h2>
      <div class="payment-sequence">
       <figure class="payment-step" data-build="rise" data-at="0.22"><div class="step-frame"><div class="step-tab">01 · Recharge</div><button class="payment-image" type="button" data-full-image="assets/pages/07/1-recharge.png" data-image-title="01 · Recharge" data-local-space aria-label="Enlarge 01 · Recharge screenshot" title="Enlarge screenshot"><svg viewBox="240 76 1120 748" role="img" aria-label="Selected 60-tuna recharge pack and initial balance 0"><image data-media-src="assets/pages/07/1-recharge.webp?v=20261109-small" width="1600" height="900"/></svg></button></div><figcaption>60-tuna pack</figcaption></figure>
@@ -130,7 +109,7 @@
      </div>
     </div></div>
    </section>
-   <section id="four-maps" class="scene" data-scene="6" data-page="07" data-title="Four Maps" aria-label="Page 07 — Level Design: Four Maps">
+   <section id="four-maps" class="scene" data-scene="5" data-page="06" data-title="Four Maps" aria-label="Page 06 — Level Design: Four Maps">
     <div class="scene-camera"><div class="level-design four-maps-review">
 <h2 data-build="text" data-at="0.04">Four Maps</h2>
 <div class="review-body"><div class="map-grid" data-build="rise" data-at="0.2"><figure class="map-card"><div class="map-media">
@@ -152,7 +131,7 @@
 
 </div></div>
    </section>
-   <section id="vertical-design" class="scene" data-scene="7" data-page="08" data-title="Three Connected Levels" aria-label="Page 08 — Level Design: Three Connected Levels">
+   <section id="vertical-design" class="scene" data-scene="6" data-page="07" data-title="Three Connected Levels" aria-label="Page 07 — Level Design: Three Connected Levels">
     <div class="scene-camera"><div class="level-design vertical-map-review">
 <div class="spatial-comparisons" data-build="text" data-at="0.04" role="heading" aria-level="1"><div class="spatial-pair primary"><span>2D View</span><span class="two-way-arrow" aria-hidden="true">↔</span><span>Three-Dimensional Perception</span></div><div class="spatial-pair secondary"><span>Horizontal Exploration</span><span class="two-way-arrow" aria-hidden="true">↔</span><span>Vertical Build</span></div></div>
 <div class="review-body"><div class="vertical-layout">
@@ -176,7 +155,7 @@
 
 </div></div>
    </section>
-   <section id="greybox" class="scene" data-scene="8" data-page="09" data-title="Greybox" aria-label="Page 09 — Level Design: Greybox">
+   <section id="greybox" class="scene" data-scene="7" data-page="08" data-title="Greybox" aria-label="Page 08 — Level Design: Greybox">
     <div class="scene-camera"><div class="level-design graybox-review">
 <h2 data-build="text" data-at="0.04">Greybox</h2>
 <div class="review-body"><figure class="graybox-figure" data-build="rise" data-at="0.2">
@@ -186,7 +165,7 @@
 
 </div></div>
    </section>
-<section id="random-events" class="scene" data-scene="9" data-page="10" data-title="Random Events" aria-label="Page 10 — Random Events"><div class="scene-camera"><div class="events-combat events-review">
+<section id="random-events" class="scene" data-scene="8" data-page="09" data-title="Random Events" aria-label="Page 09 — Random Events"><div class="scene-camera"><div class="events-combat events-review">
 <h2 data-at="0.04" data-build="text">Random Events</h2>
 <div class="review-body">
 <section aria-label="Trigger, choice and successful outcome screenshot sequence" class="event-sequence">
@@ -232,7 +211,7 @@
 </div>
 </div>
 </div></div></section>
-   <section aria-label="Page 11 — Real-Time Tactical Tower Defense" class="scene" data-page="11" data-scene="10" data-title="Real-Time Tactical Tower Defense" id="combat"><div class="scene-camera"><div class="events-combat combat-review">
+   <section aria-label="Page 10 — Real-Time Tactical Tower Defense" class="scene" data-page="10" data-scene="9" data-title="Real-Time Tactical Tower Defense" id="combat"><div class="scene-camera"><div class="events-combat combat-review">
 <h2 data-at="0.04" data-build="text">Real-Time Tactical Tower Defense</h2>
 <div class="combat-bridge" data-at="0.1" data-build="text">
 <span>FROM RANDOM EVENTS</span><span class="arrow-inline">→</span><button aria-controls="v2BattleProof" aria-pressed="false" class="v2-event-proof-trigger" data-local-space="" id="v2EventProofTrigger" type="button">BATTLE PRESSURE + SUPPORT <span aria-hidden="true">▶</span></button>
@@ -303,7 +282,7 @@
 <div class="advisor-actions"><button class="advisor-next" data-local-space="" id="advisorNext" type="button">Show answer →</button><span class="advisor-step" id="advisorStep">1 / 2</span></div>
 </aside>
 </div></div></section>
-<section id="dice-animations" class="scene" data-scene="11" data-page="12" data-title="Dice Roll Animations" aria-label="Page 12 — Dice Roll Animations"><div class="scene-camera"><div class="uiux-page dice-review">
+<section id="dice-animations" class="scene" data-scene="10" data-page="11" data-title="Dice Roll Animations" aria-label="Page 11 — Dice Roll Animations"><div class="scene-camera"><div class="uiux-page dice-review">
 <h2 data-at="0.04" data-build="text">Dice Roll Animations</h2>
 <div class="review-body">
 <section aria-label="Four matched presentation frames for authentic dice outcome animations" class="dice-grid" data-at="0.2" data-build="rise">
@@ -328,7 +307,7 @@
 
 
 </div></div></section>
-<section id="adaptive-interface" class="scene" data-scene="12" data-page="13" data-title="Responsive & Translucent UI" aria-label="Page 13 — Responsive & Translucent UI"><div class="scene-camera"><div class="uiux-page adaptive-review">
+<section id="adaptive-interface" class="scene" data-scene="11" data-page="12" data-title="Responsive & Translucent UI" aria-label="Page 12 — Responsive & Translucent UI"><div class="scene-camera"><div class="uiux-page adaptive-review">
 
 <h2 data-at="0.04" data-build="text">Responsive &amp; Translucent UI</h2>
 <div class="uiux-kicker" data-at="0.12" data-build="text">One interface · Changing viewport width</div>
@@ -355,9 +334,9 @@
 
 
 </div></div></section>
-   <section id="technical-architecture" class="scene" data-scene="13" data-page="14" data-title="Technical Architecture" aria-label="Page 14 — Technical Architecture">
+   <section id="technical-architecture" class="scene" data-scene="12" data-page="13" data-title="Technical Architecture" aria-label="Page 13 — Technical Architecture">
     <div class="scene-camera"><div aria-label="Technical Architecture" class="tech-page">
-<div class="section-label" data-at=".04" data-build="text"><span class="number-pill">14</span>TECHNICAL WALKTHROUGH / ARCHITECTURE</div>
+<div class="section-label" data-at=".04" data-build="text"><span class="number-pill">13</span>TECHNICAL WALKTHROUGH / ARCHITECTURE</div>
 <section aria-label="Three main technical layers" class="architecture-stack" data-at=".14" data-build="rise">
 <div class="layer">
 <h2>Browser — React + TypeScript + Canvas 2D</h2>
@@ -393,10 +372,10 @@
 
 </div></div>
    </section>
-   <section id="kubernetes-deployment" class="scene" data-scene="14" data-page="15" data-title="Kubernetes Deployment" aria-label="Page 15 — Kubernetes Deployment">
+   <section id="kubernetes-deployment" class="scene" data-scene="13" data-page="14" data-title="Kubernetes Deployment" aria-label="Page 14 — Kubernetes Deployment">
     <div class="scene-camera"><div aria-label="Kubernetes Deployment" class="k8s-preview">
 <header data-at=".04" data-build="text">
-<div class="section-label"><span class="number-pill">15</span>TECHNICAL WALKTHROUGH / DEPLOYMENT</div>
+<div class="section-label"><span class="number-pill">14</span>TECHNICAL WALKTHROUGH / DEPLOYMENT</div>
 <h1>Kubernetes Deployment</h1>
 <p class="subtitle">How Kubernetes makes the game accessible online and preserves player data</p>
 </header>
@@ -484,8 +463,8 @@
 
 </div></div>
    </section>
-   <section id="gameplay-telemetry" class="scene datadog-scope" data-scene="15" data-page="16" data-title="From Gameplay to Telemetry" aria-label="Page 16 — From Gameplay to Telemetry"><div class="scene-camera"><div class="dd-page" id="ddSequence" data-demo-state="idle" aria-label="Datadog page 1 interactive review">
- <div class="section-label"><span class="number-pill">16</span>TECHNICAL WALKTHROUGH / DATADOG</div>
+   <section id="gameplay-telemetry" class="scene datadog-scope" data-scene="14" data-page="15" data-title="From Gameplay to Telemetry" aria-label="Page 15 — From Gameplay to Telemetry"><div class="scene-camera"><div class="dd-page" id="ddSequence" data-demo-state="idle" aria-label="Datadog page 1 interactive review">
+ <div class="section-label"><span class="number-pill">15</span>TECHNICAL WALKTHROUGH / DATADOG</div>
  <header data-build="text" data-at=".04" class="page-intro"><h1>From Gameplay to Telemetry</h1><p>One real event choice. One traceable request.</p></header>
  <div class="dd-stage-grid dd-hero" data-build="rise" data-at=".20">
   <section aria-label="Authentic recorded gameplay">
@@ -516,8 +495,8 @@
  <div class="dd-qa-note"><span>Reconstructed presentation timing from one genuine QA action on Nov 9, 2026; the slide does not send a new request.</span><span><button id="ddReplay" type="button" class="dd-button" disabled>↻ Replay</button></span></div>
 
 </div></div></section>
-   <section id="observability" class="scene datadog-scope" data-scene="16" data-page="17" data-title="Observability Across the Game" aria-label="Page 17 — Observability Across the Game"><div class="scene-camera"><div class="dd-page" id="ddDashboardPreview" data-selected-composition="stacked" aria-label="Datadog page 2 dashboard review">
- <div class="section-label"><span class="number-pill">17</span>TECHNICAL WALKTHROUGH / DATADOG</div>
+   <section id="observability" class="scene datadog-scope" data-scene="15" data-page="16" data-title="Observability Across the Game" aria-label="Page 16 — Observability Across the Game"><div class="scene-camera"><div class="dd-page" id="ddDashboardPreview" data-selected-composition="stacked" aria-label="Datadog page 2 dashboard review">
+ <div class="section-label"><span class="number-pill">16</span>TECHNICAL WALKTHROUGH / DATADOG</div>
  <header data-build="text" data-at=".04" class="page-intro"><h1>Observability Across the Game</h1><p>From system health to player behavior, all in one monitoring workflow.</p></header>
  <div class="v2-dd-toolbar"><div class="dd-tabrow" role="tablist" aria-label="Choose a Datadog dashboard insight">
   <button class="dd-select" role="tab" data-dashboard-tab="overview" aria-selected="true" aria-controls="ddOverview" type="button">01 · Overview</button>
@@ -580,7 +559,7 @@
  <div class="dd-footer"><span><span id="compositionHint">Operational Overview · service metrics, monitors and SLOs</span></span><span>Authentic section montage · Click any capture to inspect · Widget time overrides remain in the source.</span></div>
 
 </div></div></section>
-   <section id="cross-team-collaboration" class="scene teamwork-scope" data-scene="17" data-page="18" data-title="Cross-Team Collaboration" aria-label="Page 18 — Cross-Team Collaboration"><div class="scene-camera"><div class="review-page tw-review tw-walk">
+   <section id="cross-team-collaboration" class="scene teamwork-scope" data-scene="16" data-page="17" data-title="Cross-Team Collaboration" aria-label="Page 17 — Cross-Team Collaboration"><div class="scene-camera"><div class="review-page tw-review tw-walk">
  <div class="label"><span class="num">20</span>TEAMWORK / COLLABORATION</div>
  <h1 data-build="text" data-at=".04">Cross-Team Collaboration</h1>
  <p class="subtitle">A GitLab ticket travels through two connected workflows: task coordination and code delivery.</p>
@@ -633,7 +612,7 @@
  </div>
 
 </div></div></section>
-   <section id="design-test-rethink" class="scene teamwork-scope" data-scene="18" data-page="19" data-title="Design. Test. Rethink." aria-label="Page 19 — Design. Test. Rethink."><div class="scene-camera"><div class="review-page tw-review tw-v2">
+   <section id="design-test-rethink" class="scene teamwork-scope" data-scene="17" data-page="18" data-title="Design. Test. Rethink." aria-label="Page 18 — Design. Test. Rethink."><div class="scene-camera"><div class="review-page tw-review tw-v2">
 <div class="label"><span class="num">21</span>TEAMWORK / ITERATION</div>
 <h1 data-build="text" data-at=".04">Design. Test. Rethink.</h1>
 <p class="subtitle">Ideas changed as actual gameplay, QA and cross-team discussion challenged our assumptions.</p>
@@ -681,7 +660,7 @@
  </div>
 </div>
 </div></div></section>
-   <section id="connected-world" class="scene teamwork-scope" data-scene="19" data-page="20" data-title="A Dynamic, Living World" aria-label="Page 20 — A Dynamic, Living World"><div class="scene-camera"><div class="review-page tw-review tw-future-vision">
+   <section id="connected-world" class="scene teamwork-scope" data-scene="18" data-page="19" data-title="A Dynamic, Living World" aria-label="Page 19 — A Dynamic, Living World"><div class="scene-camera"><div class="review-page tw-review tw-future-vision">
  <div class="label"><span class="num">22</span>FUTURE DIRECTION · CLICK A SYSTEM</div>
  <h1 data-build="text" data-at=".04">A Dynamic, Living World</h1>
  <div class="review-body" data-build="rise" data-at=".16">
@@ -729,7 +708,7 @@
  </div>
 
 </div></div></section>
-   <section id="closing-qa" class="scene scene-qa" data-scene="20" data-page="21" data-title="Q &amp; A" aria-label="Page 21 — Q and A"><div class="scene-camera">
+   <section id="closing-qa" class="scene scene-qa" data-scene="19" data-page="20" data-title="Q &amp; A" aria-label="Page 20 — Q and A"><div class="scene-camera">
     <div class="qa-composition">
       <h1>Q &amp; A</h1>
       <img class="qa-poster" data-media-src="assets/closing/stray-kitty-poster.webp" width="3344" height="1882" alt="The complete horizontal Stray Kitty poster supplied for the presentation">
@@ -776,9 +755,9 @@
 </div>
 </div>
 <script src="scene-content.js?v=20261109-on-demand-events"></script>
-<script src="events-combat.js?v=20261110-v2-interim-part1"></script>
+<script src="events-combat.js?v=20261110-v2-no-gameflow"></script>
 <script src="uiux.js?v=20261109-adaptive-fit"></script>
-<script src="datadog.js?v=20261110-v2-interim-part1"></script>
+<script src="datadog.js?v=20261110-v2-no-gameflow"></script>
 <script src="teamwork.js?v=20261109-future-integrated1"></script>
 <script src="future-world.js?v=20261109-future-integrated1"></script>
 <script src="engine-v3.js?v=20261109-level-design"></script>

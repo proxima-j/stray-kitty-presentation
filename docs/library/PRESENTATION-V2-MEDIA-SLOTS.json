@@ -1,5 +1,5 @@
 {
-  "build_marker": "20261110-v2-interim-part1",
+  "build_marker": "20261110-v2-no-gameflow",
   "status": "IMPLEMENTED / PENDING MEDIA",
   "note": "Binding inventory only. Planned paths are NOT existing or registered assets; populate only after verified capture and publication clearance. Paths are relative to docs/.",
   "slots": [
