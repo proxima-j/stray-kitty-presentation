@@ -8,10 +8,12 @@
   <link rel="stylesheet" href="library/tokens.css">
   <link rel="stylesheet" href="library/components.css">
   <link rel="stylesheet" href="presentation.css?v=20261108-home-alignment">
+  <link rel="stylesheet" href="pitch-poster.css?v=20261109-poster-current">
   <link rel="stylesheet" href="level-design.css?v=20261109-level-design">
   <link rel="stylesheet" href="events-combat.css?v=20261109-integrated">
   <link rel="preload" as="script" href="events-combat.js?v=20261109-integrated">
   <link rel="stylesheet" href="technical.css?v=20261109-full-pipeline">
+  <link rel="stylesheet" href="teamwork.css?v=20261109-future-integrated1">
   <link rel="stylesheet" href="datadog.css?v=20261109-datadog-taller-frames2">
   <link rel="stylesheet" href="uiux.css?v=20261109-adaptive-fit">
   <link rel="preload" as="script" href="uiux.js?v=20261109-adaptive-fit">
@@ -20,7 +22,7 @@
 </head>
 <body>
 <div id="scrollSpace" class="scroll-space">
- <main id="stage" class="stage" aria-label="Stray Kitty presentation — Pages 01 through 19">
+ <main id="stage" class="stage" aria-label="Stray Kitty presentation — Pages 01 through 22">
   <div id="world" class="world">
    <svg id="roadDrawing" class="route-svg" aria-hidden="true"><defs><clipPath id="revealClip"><rect id="routeReveal" x="0" y="0" width="0" height="2000"/></clipPath></defs><path id="routeGhost" class="route-ghost" d=""/><path id="routeInk" class="route-ink" d="" clip-path="url(#revealClip)"/></svg>
    <section id="opening-film" class="scene scene-film" data-title="Opening Film" data-scene="0" data-page="01" aria-label="Page 01 — Full-screen film">
@@ -42,10 +44,13 @@
       <p class="story">Our story begins with a very ordinary cat problem: an irresistible smell of tuna. One rainy adventure later, Miaomiao is lost. As she explores unfamiliar places and helps other cats along the way, her search for home gradually becomes a journey to build one together.</p>
       <p class="closing">For cat lovers and tabletop adventurers alike, it's a world of curiosity, chance, and unexpected friendships.</p>
      </div>
-     <div class="pitch-art" aria-label="Tabletop adventure and playful cat illustrations">
-      <div class="folder-frame d20-frame" data-asset-id="art.d20"><span class="folder-tab">TABLETOP ADVENTURE</span><img class="artwork" data-media-src="../assets/illustrations/d20-dungeon-master-original.webp" alt="Dungeon Master D20 illustration"></div>
-      <div class="ticket-frame cats-frame" data-asset-id="art.playful-cats"><svg class="ticket-outline" viewBox="0 0 400 250" preserveAspectRatio="none" aria-hidden="true"><path d="M20 1 H380 Q399 1 399 20 V95 Q374 95 374 125 Q374 155 399 155 V230 Q399 249 380 249 H20 Q1 249 1 230 V155 Q26 155 26 125 Q26 95 1 95 V20 Q1 1 20 1Z"/></svg><img class="artwork" data-media-src="../assets/illustrations/playful-cats-original.webp" alt="Playful illustrated cats"></div>
-     </div>
+     <section class="pitch-poster-gallery" aria-label="Original Stray Kitty poster and approved tabletop and cat illustrations">
+      <figure class="pitch-poster-frame" data-asset-id="closing.poster.web"><img data-media-src="../assets/closing/stray-kitty-poster.webp" width="3344" height="1882" alt="Original full horizontal Stray Kitty project poster, uncropped"></figure>
+      <div class="pitch-support-art">
+       <div class="folder-frame pitch-poster-d20" data-asset-id="art.d20"><span class="folder-tab">TABLETOP ADVENTURE</span><img class="artwork" data-media-src="../assets/illustrations/d20-dungeon-master-original.webp" alt="Original D20 tabletop illustration"></div>
+       <div class="ticket-frame pitch-poster-cats" data-asset-id="art.playful-cats"><svg class="ticket-outline" viewBox="0 0 400 250" preserveAspectRatio="none" aria-hidden="true"><path d="M20 1 H380 Q399 1 399 20 V95 Q374 95 374 125 Q374 155 399 155 V230 Q399 249 380 249 H20 Q1 249 1 230 V155 Q26 155 26 125 Q26 95 1 95 V20 Q1 1 20 1Z"/></svg><img class="artwork" data-media-src="../assets/illustrations/playful-cats-original.webp" alt="Original playful-cat illustration"></div>
+      </div>
+     </section>
     </div></div>
    </section>
    <section id="roadmap" class="scene" data-scene="2" data-page="03" data-title="Roadmap" aria-label="Page 03 — Roadmap">
@@ -618,6 +623,155 @@
  <div class="dd-footer"><span>Historical notifications: Nov 4, 2026 · captured Nov 9</span><span>Public endpoint images: genuine Datadog results</span></div>
 
 </div></div></section>
+   <section id="cross-team-collaboration" class="scene teamwork-scope" data-scene="19" data-page="20" data-title="Cross-Team Collaboration" aria-label="Page 20 — Cross-Team Collaboration"><div class="scene-camera"><div class="review-page tw-review tw-walk">
+ <div class="label"><span class="num">20</span>TEAMWORK / COLLABORATION</div>
+ <h1 data-build="text" data-at=".04">Cross-Team Collaboration</h1>
+ <p class="subtitle">A GitLab ticket travels through two connected workflows: task coordination and code delivery.</p>
+ <div class="review-body tw-walk-body" data-build="rise" data-at=".16">
+  <div class="tw-walk-intro"><span class="tw-kicker">SELECT A STAGE · ONE DOCUMENTED MAP × COMBAT CASE</span><span id="phaseCounter" class="tw-phase-counter" aria-live="polite">01 / 04</span></div>
+  <section class="tw-gitlab-map" aria-label="Separate but interconnected GitLab coordination and code tracks">
+   <div class="tw-track">
+    <div class="tw-track-label"><small>TRACK A</small><strong>Work Item & Ticket</strong><span>Coordinate across role owners</span></div>
+    <div class="tw-track-flow">
+     <button type="button" class="tw-flow-node" data-local-space data-phase="0" aria-pressed="true"><small>GITLAB WORK ITEM</small><strong>Role Owner's<br>Work Item</strong><span>Specific module channel</span></button>
+     <span class="tw-flow-arrow" aria-hidden="true">→</span>
+     <button type="button" class="tw-flow-node" data-local-space data-phase="0" aria-pressed="true"><small>TICKET / REQUEST</small><strong>Cross-Team<br>Issue</strong><span>Bug or dependency</span></button>
+     <span class="tw-flow-arrow" aria-hidden="true">→</span>
+     <button type="button" class="tw-flow-node" data-local-space data-phase="1" aria-pressed="false"><small>COORDINATION</small><strong>Discussion<br>& Decision</strong><span>Clarify scope and owner</span></button>
+    </div>
+   </div>
+   <div class="tw-track-connector">
+    <div class="tw-connector-down"><span aria-hidden="true">↓</span> Agreed work moves into implementation</div>
+    <div class="tw-connector-daily"><b>Daily checks</b> <span>Align status, dependencies and overlapping changes across both tracks</span></div>
+    <div class="tw-connector-back">Merged result updates the Work Item <span aria-hidden="true">↺</span></div>
+   </div>
+   <div class="tw-track tw-track-code">
+    <div class="tw-track-label"><small>TRACK B</small><strong>Branch & Merge Request</strong><span>Deliver an isolated change</span></div>
+    <div class="tw-track-flow">
+     <button type="button" class="tw-flow-node" data-local-space data-phase="2" aria-pressed="false"><small>NEW BRANCH</small><strong>Implement<br>& Check</strong><span>Scoped code change</span></button>
+     <span class="tw-flow-arrow" aria-hidden="true">→</span>
+     <button type="button" class="tw-flow-node" data-local-space data-phase="2" aria-pressed="false"><small>MERGE REQUEST</small><strong>Submit MR<br>& Review</strong><span>Resolve issues / conflicts</span></button>
+     <span class="tw-flow-arrow" aria-hidden="true">→</span>
+     <button type="button" class="tw-flow-node" data-local-space data-phase="3" aria-pressed="false"><small>INTEGRATION</small><strong>Merge<br>& Verify</strong><span>Retest player flow</span></button>
+    </div>
+   </div>
+  </section>
+  <section class="tw-phase-detail" aria-label="Stage-by-stage GitLab collaboration case">
+   <div class="tw-phase-copy">
+    <small id="phaseKicker">STEP 01 · TICKET IN WORK ITEM #4</small>
+    <h2 id="phaseTitle">A teammate reports a cross-module issue.</h2>
+    <p id="phaseText">The map/combat peer QA report documents reproducible retry and progression problems in the relevant Combat Work Item.</p>
+    <div class="tw-phase-nav">
+     <button type="button" id="previousPhase" data-local-space disabled>← Previous</button>
+     <button type="button" id="nextPhase" data-local-space>Next phase →</button>
+    </div>
+   </div>
+   <div class="tw-phase-evidence">
+    <div class="tw-evidence-head"><b id="proofTitle">Work Item #4 · peer QA</b><span>GITLAB · SELECTED EXCERPTS</span></div>
+    <button id="twProof" class="tw-evidence-shot" type="button" data-local-space aria-label="Inspect the original GitLab evidence" aria-haspopup="dialog"><span id="twProofCrops" class="tw-proof-crops"></span></button>
+    <div class="tw-evidence-footer"><span id="proofDescription">Oct 29, 2026 · click to inspect</span><a id="proofLink" href="https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/work_items/4#note_8317" target="_blank" rel="noopener">Original source ↗</a></div>
+   </div>
+  </section>
+  <p class="tw-walk-footnote">Work Item #4 → fix MR !80 → integration MR !81 → focused peer QA. Daily checks describe the team workflow.</p>
+ </div>
+
+</div></div></section>
+   <section id="design-test-rethink" class="scene teamwork-scope" data-scene="20" data-page="21" data-title="Design. Test. Rethink." aria-label="Page 21 — Design. Test. Rethink."><div class="scene-camera"><div class="review-page tw-review tw-v2">
+<div class="label"><span class="num">21</span>TEAMWORK / ITERATION</div>
+<h1 data-build="text" data-at=".04">Design. Test. Rethink.</h1>
+<p class="subtitle">Ideas changed as actual gameplay, QA and cross-team discussion challenged our assumptions.</p>
+<div class="review-body" data-build="rise" data-at=".16">
+ <section class="tw-v2-loop" aria-label="A recurring design thinking, playtesting and iteration cycle">
+  <div class="tw-v2-cycle">
+   <div class="tw-v2-cycle-node"><strong>Initial Design</strong><small>Intention & hypothesis</small></div>
+   <div class="tw-v2-cycle-arrow" aria-hidden="true">→</div>
+   <div class="tw-v2-cycle-node is-main"><strong>Playtesting & QA</strong><small>Experience, behavior & evidence</small></div>
+   <div class="tw-v2-cycle-arrow" aria-hidden="true">→</div>
+   <div class="tw-v2-cycle-node"><strong>Iterate</strong><small>Revise and optimize</small></div>
+  </div>
+  <svg class="tw-v2-loop-return" viewBox="0 0 1000 27" preserveAspectRatio="none" aria-hidden="true">
+   <path d="M920 1 C915 25 160 25 80 1"/><path d="M73 8L80 1L87 8"/>
+   <rect x="382" y="8" width="240" height="17" fill="#f4e6c7"/><text x="420" y="21">CONTINUOUS FEEDBACK</text>
+  </svg>
+ </section>
+ <div class="tw-v2-cases">
+  <section class="tw-v2-example" aria-label="Event balancing before and after playtesting">
+   <div class="tw-v2-example-head"><strong>01 · Random Event Balance</strong><span>PLAYTEST-DRIVEN CHANGE · ORDINARY 2D6</span></div>
+   <div class="tw-v2-caseflow">
+    <div class="tw-v2-decision">
+     <div class="tw-v2-decision-info"><span class="eyeline">BEFORE · FAIL ≤ 5</span><span class="big-num">27.78%</span><span class="value-note">10 of 36 dice combinations</span></div>
+     <svg class="tw-v2-mini-dice" viewBox="0 0 102 102" role="img" aria-label="The 36 equally likely outcomes of rolling two six-sided dice, with 10 failure combinations highlighted"><rect class="cell fail" x="3" y="3" width="13" height="13" rx="2"/><rect class="cell fail" x="19" y="3" width="13" height="13" rx="2"/><rect class="cell fail" x="35" y="3" width="13" height="13" rx="2"/><rect class="cell fail" x="51" y="3" width="13" height="13" rx="2"/><rect class="cell" x="67" y="3" width="13" height="13" rx="2"/><rect class="cell" x="83" y="3" width="13" height="13" rx="2"/><rect class="cell fail" x="3" y="19" width="13" height="13" rx="2"/><rect class="cell fail" x="19" y="19" width="13" height="13" rx="2"/><rect class="cell fail" x="35" y="19" width="13" height="13" rx="2"/><rect class="cell" x="51" y="19" width="13" height="13" rx="2"/><rect class="cell" x="67" y="19" width="13" height="13" rx="2"/><rect class="cell" x="83" y="19" width="13" height="13" rx="2"/><rect class="cell fail" x="3" y="35" width="13" height="13" rx="2"/><rect class="cell fail" x="19" y="35" width="13" height="13" rx="2"/><rect class="cell" x="35" y="35" width="13" height="13" rx="2"/><rect class="cell" x="51" y="35" width="13" height="13" rx="2"/><rect class="cell" x="67" y="35" width="13" height="13" rx="2"/><rect class="cell" x="83" y="35" width="13" height="13" rx="2"/><rect class="cell fail" x="3" y="51" width="13" height="13" rx="2"/><rect class="cell" x="19" y="51" width="13" height="13" rx="2"/><rect class="cell" x="35" y="51" width="13" height="13" rx="2"/><rect class="cell" x="51" y="51" width="13" height="13" rx="2"/><rect class="cell" x="67" y="51" width="13" height="13" rx="2"/><rect class="cell" x="83" y="51" width="13" height="13" rx="2"/><rect class="cell" x="3" y="67" width="13" height="13" rx="2"/><rect class="cell" x="19" y="67" width="13" height="13" rx="2"/><rect class="cell" x="35" y="67" width="13" height="13" rx="2"/><rect class="cell" x="51" y="67" width="13" height="13" rx="2"/><rect class="cell" x="67" y="67" width="13" height="13" rx="2"/><rect class="cell" x="83" y="67" width="13" height="13" rx="2"/><rect class="cell" x="3" y="83" width="13" height="13" rx="2"/><rect class="cell" x="19" y="83" width="13" height="13" rx="2"/><rect class="cell" x="35" y="83" width="13" height="13" rx="2"/><rect class="cell" x="51" y="83" width="13" height="13" rx="2"/><rect class="cell" x="67" y="83" width="13" height="13" rx="2"/><rect class="cell" x="83" y="83" width="13" height="13" rx="2"/></svg>
+    </div>
+    <div class="tw-v2-pivot"><b>PLAYTEST</b><p>Too many failures</p><span class="arrow" aria-hidden="true">→</span></div>
+    <div class="tw-v2-decision after">
+     <div class="tw-v2-decision-info"><span class="eyeline">AFTER · FAIL ≤ 4</span><span class="big-num">16.67%</span><span class="value-note">6 of 36 dice combinations</span></div>
+     <svg class="tw-v2-mini-dice" viewBox="0 0 102 102" role="img" aria-label="The 36 equally likely outcomes of rolling two six-sided dice, with 6 failure combinations highlighted"><rect class="cell fail" x="3" y="3" width="13" height="13" rx="2"/><rect class="cell fail" x="19" y="3" width="13" height="13" rx="2"/><rect class="cell fail" x="35" y="3" width="13" height="13" rx="2"/><rect class="cell" x="51" y="3" width="13" height="13" rx="2"/><rect class="cell" x="67" y="3" width="13" height="13" rx="2"/><rect class="cell" x="83" y="3" width="13" height="13" rx="2"/><rect class="cell fail" x="3" y="19" width="13" height="13" rx="2"/><rect class="cell fail" x="19" y="19" width="13" height="13" rx="2"/><rect class="cell" x="35" y="19" width="13" height="13" rx="2"/><rect class="cell" x="51" y="19" width="13" height="13" rx="2"/><rect class="cell" x="67" y="19" width="13" height="13" rx="2"/><rect class="cell" x="83" y="19" width="13" height="13" rx="2"/><rect class="cell fail" x="3" y="35" width="13" height="13" rx="2"/><rect class="cell" x="19" y="35" width="13" height="13" rx="2"/><rect class="cell" x="35" y="35" width="13" height="13" rx="2"/><rect class="cell" x="51" y="35" width="13" height="13" rx="2"/><rect class="cell" x="67" y="35" width="13" height="13" rx="2"/><rect class="cell" x="83" y="35" width="13" height="13" rx="2"/><rect class="cell" x="3" y="51" width="13" height="13" rx="2"/><rect class="cell" x="19" y="51" width="13" height="13" rx="2"/><rect class="cell" x="35" y="51" width="13" height="13" rx="2"/><rect class="cell" x="51" y="51" width="13" height="13" rx="2"/><rect class="cell" x="67" y="51" width="13" height="13" rx="2"/><rect class="cell" x="83" y="51" width="13" height="13" rx="2"/><rect class="cell" x="3" y="67" width="13" height="13" rx="2"/><rect class="cell" x="19" y="67" width="13" height="13" rx="2"/><rect class="cell" x="35" y="67" width="13" height="13" rx="2"/><rect class="cell" x="51" y="67" width="13" height="13" rx="2"/><rect class="cell" x="67" y="67" width="13" height="13" rx="2"/><rect class="cell" x="83" y="67" width="13" height="13" rx="2"/><rect class="cell" x="3" y="83" width="13" height="13" rx="2"/><rect class="cell" x="19" y="83" width="13" height="13" rx="2"/><rect class="cell" x="35" y="83" width="13" height="13" rx="2"/><rect class="cell" x="51" y="83" width="13" height="13" rx="2"/><rect class="cell" x="67" y="83" width="13" height="13" rx="2"/><rect class="cell" x="83" y="83" width="13" height="13" rx="2"/></svg>
+    </div>
+   </div>
+  </section>
+  <section class="tw-v2-example" aria-label="AI feature scope before and after design discussion">
+   <div class="tw-v2-example-head"><strong>02 · Where Should AI Help?</strong><span>DESIGN REVIEW · NOT A PLAYTEST RESULT</span></div>
+   <div class="tw-v2-caseflow">
+    <div class="tw-v2-decision"><div class="tw-v2-ai"><div><span class="eyeline" style="font:bold 9px Arial;letter-spacing:.1em;color:#a16b4b">EARLIER CONSIDERED SCOPE</span></div><strong>Four possible entry points</strong><div class="tw-v2-ai-pills"><span>Explore</span><span>Events</span><span>Combat</span><span>Home Hub</span></div></div></div>
+    <div class="tw-v2-pivot"><b>DISCUSSION</b><p>Clarity vs complexity</p><span class="arrow" aria-hidden="true">→</span></div>
+    <div class="tw-v2-decision after"><div class="tw-v2-ai"><div><span class="eyeline" style="font:bold 9px Arial;letter-spacing:.1em;color:#a16b4b">CHOSEN DIRECTION</span></div><strong>Focused AI chat</strong><div class="tw-v2-ai-pills"><span class="kept">Combat</span><span class="kept">Home Hub</span></div><div class="value-note">Exploration keeps authored contextual hints</div></div></div>
+   </div>
+  </section>
+ </div>
+ <div class="tw-v2-foot">
+  <small><b>Optimization & limits</b> · Performance vs visual fidelity · Narrow-screen verification · Machine checks + human QA</small>
+  <b>Learn fast. Choose scope. Own the experience.</b>
+ </div>
+</div>
+</div></div></section>
+   <section id="connected-world" class="scene teamwork-scope" data-scene="21" data-page="22" data-title="A Dynamic, Living World" aria-label="Page 22 — A Dynamic, Living World"><div class="scene-camera"><div class="review-page tw-review tw-future-vision">
+ <div class="label"><span class="num">22</span>FUTURE DIRECTION · CLICK A SYSTEM</div>
+ <h1 data-build="text" data-at=".04">A Dynamic, Living World</h1>
+ <div class="review-body" data-build="rise" data-at=".16">
+  <section class="tw-world" aria-label="Future interconnected Stray Kitty game architecture">
+   <svg class="tw-world-connections" viewBox="0 0 1200 530" preserveAspectRatio="none" aria-hidden="true">
+    <defs><marker id="tw-arrow-tip" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto-start-reverse" markerUnits="strokeWidth"><path d="M0,0 L8,4 L0,8 Z" fill="#b56e55"/></marker>
+      <marker id="tw-arrow-gold" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto-start-reverse" markerUnits="strokeWidth"><path d="M0,0 L8,4 L0,8 Z" fill="#cfa66a"/></marker></defs>
+    <path class="tw-world-link" d="M304 123 C390 123 397 218 475 229" marker-start="url(#tw-arrow-tip)" marker-end="url(#tw-arrow-tip)"/>
+    <path class="tw-world-link" d="M725 229 C806 218 811 123 896 123" marker-start="url(#tw-arrow-tip)" marker-end="url(#tw-arrow-tip)"/>
+    <path class="tw-world-link" d="M304 403 C391 403 398 325 475 304" marker-start="url(#tw-arrow-tip)" marker-end="url(#tw-arrow-tip)"/>
+    <path class="tw-world-link" d="M725 304 C808 325 812 403 896 403" marker-start="url(#tw-arrow-tip)" marker-end="url(#tw-arrow-tip)"/>
+    <path class="tw-world-crosslink" d="M335 42 Q600 -24 866 42" marker-start="url(#tw-arrow-gold)" marker-end="url(#tw-arrow-gold)"/>
+    <path class="tw-world-crosslink" d="M336 484 Q600 556 865 484" marker-start="url(#tw-arrow-gold)" marker-end="url(#tw-arrow-gold)"/>
+   </svg>
+   <div class="tw-world-topnote">RANDOM EVENTS <span aria-hidden="true">↔</span> TOWER DEFENSE</div>
+   <article class="tw-world-node tw-world-events" role="button" tabindex="0" data-local-space aria-label="Show influence from Exploration and Events" aria-pressed="false">
+    <img data-media-src="../assets/level-design/chapter2/view-L0.jpg" alt="Real current Midnight Market exploration scene">
+    <div><small>EXPLORATION & EVENTS</small><h2>Choices with consequences</h2><p>Encounters can change battles, cats and home life.</p></div>
+   </article>
+   <article class="tw-world-node tw-world-battle" role="button" tabindex="0" data-local-space aria-label="Show influence from Combat" aria-pressed="false">
+    <img data-media-src="../assets/pages/09/battlefield-main.webp" alt="Real current tactical battle scene">
+    <div><small>COMBAT</small><h2>Unpredictable encounters</h2><p>Events during battles; more distinct cat abilities.</p></div>
+   </article>
+   <div class="tw-world-core">
+    <small>THE SHARED EXPERIENCE</small>
+    <strong>Living World</strong>
+    <span>Choices · Cat states<br>Home growth · Story progress</span>
+   </div>
+   <article class="tw-world-node tw-world-home" role="button" tabindex="0" data-local-space aria-label="Show influence from Cats and Home" aria-pressed="false">
+    <img data-media-src="../assets/pages/06/greenhouse-stage-04.webp" alt="Real current Stray Kitty greenhouse Home Hub">
+    <div><small>CATS & HOME</small><h2>Personality in action</h2><p>Distinct interactions, animations and relationships.</p></div>
+   </article>
+   <article class="tw-world-node tw-world-story" role="button" tabindex="0" data-local-space aria-label="Show influence from Story and World" aria-pressed="false">
+    <img data-media-src="../assets/pages/05/friends-dialogue-01.webp" alt="Real current in-game dialogue scene">
+    <div><small>STORY & WORLD</small><h2>Deeper character journeys</h2><p>Side stories and character moments within combat.</p></div>
+   </article>
+   <div class="tw-world-bottomnote">HOME & RELATIONSHIPS <span aria-hidden="true">↔</span> STORY & WORLD</div>
+   <span class="tw-world-annot tw-ann-1">Consequences</span>
+   <span class="tw-world-annot tw-ann-2">Battle surprises</span>
+   <span class="tw-world-annot tw-ann-3">Cat states</span>
+   <span class="tw-world-annot tw-ann-4">Story echoes</span>
+  </section>
+  <p id="futureEffectStatus" class="sr-only" role="status" aria-live="polite">Click a system to preview a proposed future influence. Click again to replay.</p>
+  <footer class="tw-world-footer"><strong>Every choice has consequences.</strong><small>Proposed future connections · existing game imagery, not completed features</small></footer>
+ </div>
+
+</div></div></section>
   </div>
   <div id="heroCat" class="hero-cat" aria-label="Miaomiao, the original Stray Kitty protagonist" role="img"><img src="../assets/miaomiao.svg" alt=""></div>
   <button id="helpButton" class="help-button circle-control" type="button" aria-label="Show controls">?</button>
@@ -662,5 +816,7 @@
 <script src="events-combat.js?v=20261109-integrated"></script>
 <script src="uiux.js?v=20261109-adaptive-fit"></script>
 <script src="datadog.js?v=20261109-datadog-refinement7"></script>
+<script src="teamwork.js?v=20261109-future-integrated1"></script>
+<script src="future-world.js?v=20261109-future-integrated1"></script>
 <script src="engine-v3.js?v=20261109-level-design"></script>
 </body></html>

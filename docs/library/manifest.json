@@ -132,11 +132,13 @@
       "variants": "Native v3 scene; approved composition, scoped styles and shared assets"
     },
     {
-      "id": "preview.closing-qa",
-      "use": "Approved minimal 30/70 closing composition, large Faculty Glyphic Q & A and complete poster",
-      "source": "../review/closing-qa.html",
-      "styles": "../review/closing-qa.css",
-      "variants": "Static standalone 16:9 review; no new animation system; future integration only after approval"
+      "id": "scene.closing-qa",
+      "use": "Final native Q&A scene after Future, with approved 30/70 composition and full user poster",
+      "source": "../index.html#closing-qa",
+      "styles": "../closing-qa.css",
+      "variants": "Large Faculty Glyphic Q & A; full uncropped poster; one shared v3 cat/route; no local animation",
+      "script": "../engine-v3.js",
+      "status": "APPROVED COMPOSITION / LOCAL_VERIFIED; public verification pending"
     },
     {
       "id": "interaction.future-influence",
@@ -2177,7 +2179,7 @@
       "id": "closing.poster.original",
       "source": "../assets/closing/stray-kitty-poster.png",
       "creator": "User-supplied Stray Kitty project poster; no generated or substituted art",
-      "use": "Approved Current Page 02 elevator-pitch poster; also used by the standalone Closing Q&A composition preview",
+      "use": "Approved Current Page 02 elevator-pitch poster and final Page 23 Q&A; complete supplied artwork preserved",
       "status": "USER-SUPPLIED / PUBLICATION EXPLICITLY AUTHORIZED",
       "permission": "User requested this exact file be committed and published in the public presentation repository on November 9, 2026. No broader ownership or license assertion.",
       "metadata": {
@@ -2188,7 +2190,7 @@
         "mode": "RGB",
         "embedded_metadata": "None: no text chunks or EXIF fields",
         "captured_or_supplied_date": "2026-11-09",
-        "preview": "../review/closing-qa.html"
+        "preview": "../?page=closing-qa"
       },
       "bytes": 2633933,
       "preservation": "Exact byte copy of supplied PNG; original also retained in Downloads."
@@ -2197,7 +2199,7 @@
       "id": "closing.poster.web",
       "source": "../assets/closing/stray-kitty-poster.webp",
       "creator": "User-supplied Stray Kitty project poster; no generated or substituted art",
-      "use": "Approved Current Page 02 elevator-pitch poster; also used by the standalone Closing Q&A composition preview",
+      "use": "Approved Current Page 02 elevator-pitch poster and final Page 23 Q&A; complete supplied artwork preserved",
       "status": "USER-SUPPLIED / PUBLICATION EXPLICITLY AUTHORIZED",
       "permission": "User requested this exact file be committed and published in the public presentation repository on November 9, 2026. No broader ownership or license assertion.",
       "metadata": {
@@ -2208,7 +2210,7 @@
         "mode": "RGB",
         "embedded_metadata": "None: no text chunks or EXIF fields",
         "captured_or_supplied_date": "2026-11-09",
-        "preview": "../review/closing-qa.html"
+        "preview": "../?page=closing-qa"
       },
       "bytes": 1915278,
       "origin": "../assets/closing/stray-kitty-poster.png",

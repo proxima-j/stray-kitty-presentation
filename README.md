@@ -8,13 +8,13 @@ GitHub is the shared source for ChatGPT and Codex. GitHub Pages automatically pu
 
 | Version | Preview | Verified source |
 | --- | --- | --- |
-| Current | https://proxima-j.github.io/stray-kitty-presentation/ | Twenty-two-page deck; Teamwork/Future marker `20261109-future-integrated1`; candidate verified before rotation |
-| Previous | https://proxima-j.github.io/stray-kitty-presentation/previous/ | Outgoing verified nineteen-page runtime `89e52a078d0e2ff4ad03fa1ff3250abd9d9d5155` |
+| Current | https://proxima-j.github.io/stray-kitty-presentation/ | Twenty-three-page deck; final Q&A marker `20261110-qa-integrated1`; candidate verified before rotation |
+| Previous | https://proxima-j.github.io/stray-kitty-presentation/previous/ | Outgoing verified twenty-two-page runtime `e68b52bb0594db5e987097e3aeccd18b26aeec8a` |
 
-Current supports direct `?page=01` through `?page=22` links. Previous retains `?page=01` through `?page=19`. Stable Current IDs also work as direct links: `roadmap`, `game-flow`, `visual-novel`, `home-hub`, `payment`, `four-maps`, `vertical-design`, `greybox`, `random-events`, `combat`, `dice-animations`, `adaptive-interface`, `technical-architecture`, `kubernetes-deployment`, `gameplay-telemetry`, `observability`, `detect-alert-recover`, `cross-team-collaboration`, `design-test-rethink`, `connected-world`. [docs/versions.json](docs/versions.json) records verified runtime origins; documentation and asset-only commits do not rotate decks.
+Current supports direct `?page=01` through `?page=23` links. Previous retains `?page=01` through `?page=22`. Stable Current IDs also work as direct links: `roadmap`, `game-flow`, `visual-novel`, `home-hub`, `payment`, `four-maps`, `vertical-design`, `greybox`, `random-events`, `combat`, `dice-animations`, `adaptive-interface`, `technical-architecture`, `kubernetes-deployment`, `gameplay-telemetry`, `observability`, `detect-alert-recover`, `cross-team-collaboration`, `design-test-rethink`, `connected-world`, `closing-qa`. [docs/versions.json](docs/versions.json) records verified runtime origins; documentation and asset-only commits do not rotate decks.
 
 - `docs/index.html`, `docs/engine-v3.*`, `docs/presentation.css`, `docs/level-design.css`, `docs/scene-content.js`, `docs/library/`: Current source and reusable components.
-- `docs/previous/`: Outgoing nineteen-page HTML, styles and scripts. Asset URLs are rebased; player script preloads, deferred film source restoration and inactive-clip preload settings prevent off-screen media competing with the active scene. Its content and animation engine are preserved; small runtime files remain independent of future Current edits and large media is shared.
+- `docs/previous/`: Outgoing twenty-two-page HTML, styles and scripts. Asset URLs are rebased; player script preloads, deferred film source restoration and inactive-clip preload settings prevent off-screen media competing with the active scene. Its content and animation engine are preserved; small runtime files remain independent of future Current edits and large media is shared.
 - `docs/assets/`: One shared copy of the full opening film, poster, character, fonts/license and approved illustrations.
 - `reference/forward-story-v3/script.js` and `style.css`: Untouched original animation source, rather than a third runnable sample deck.
 
@@ -126,3 +126,10 @@ Page 22 approved interaction integration: [A Dynamic, Living World](https://prox
 ## Reusable cinematic template and workflow
 
 The [Forward Story v3 generic starter](docs/templates/forward-story-v3/) offers the same 4.2-second reversible route/character animation, progressive scene effects, Faculty Glyphic typography and cream/dark-green/gold layout language. [Live template demonstration](https://proxima-j.github.io/stray-kitty-presentation/templates/forward-story-v3/). The [page-by-page production workflow](docs/templates/forward-story-v3/WORKFLOW.md) documents the exact content → asset collection → isolated preview → approval → integration → focused verification → publication → cleanup method used to build the original deck, including a reusable Codex handoff. The template contains only generic assets and is independent of both Current and Previous.
+
+
+## Final Q&A — Page 23
+
+[A Dynamic, Living World](https://proxima-j.github.io/stray-kitty-presentation/?page=connected-world) → [Q & A](https://proxima-j.github.io/stray-kitty-presentation/?page=closing-qa), the final scene. The approved composition is preserved: approximately 30/70, large Faculty Glyphic Q & A at left and the complete uncropped 3344×1882 user poster at right, warm cream background, no additional visible copy or frame. The existing single Miaomiao and continuous dotted route remain global; the v3 engine and its 4200ms beat are unchanged. The original PNG and lossless WebP remain shared assets, with the poster loaded on scene entry.
+
+The 23-scene private candidate passed focused 1600×900 and 1366×768 layout/asset checks and Future ↔ Q&A navigation before promotion. Outgoing verified Current is frozen as the 22-scene Previous with rebased shared asset URLs and independent small runtime files. Reusable templates and unrelated reviews remain untouched. This is a complete-deck version rotation; earlier integration sections describe historical checkpoints. Public verification is recorded in `docs/versions.json`.
