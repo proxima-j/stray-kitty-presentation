@@ -91,3 +91,17 @@ The 22-scene candidate passed local checks at 1600×900 and 1366×768, then the 
 ## Integrated Page 02 — horizontal poster
 
 [View Current Elevator Pitch](../?page=02): the exact approved 16:9 composition is integrated into Current. Unchanged text at left; complete horizontal poster at upper right with original D20 and playful-cats illustrations beneath. Published Pages build #42635912073 verified the media and composition after commit `093219a`. The superseded standalone Page 02 review was removed after this verification. Previous and other active reviews—including Closing Q&A—remain unchanged.
+
+
+## V2 — Product-first composition reviews (2026-11-10)
+
+**Review only; Current remains a 23-scene deck.** Target V2 removes Roadmap and Detect, Alert, Recover, yielding 21 pages; those original pages are permanently preserved in the [V1 source archive](https://github.com/proxima-j/stray-kitty-presentation/tree/archive/presentation-v1-2026-11-10). The Chapter 5 live demo follows the Elevator Pitch by switching to a pre-opened game tab: **no new slide**.
+
+- [V2 02 — Elevator Pitch](v2-02-pitch.html): existing approved poster/artwork/story and already published **LIVE GAMEPLAY · CHAPTER 5** cue; no new media needed
+- [V2 05 — Home Hub](v2-05-home.html): same GROWS/RESPONDS interaction, 2×2 visual gallery in each state; four current genuine growth images are **temporary references** awaiting richer staged/recorded furniture captures; fourth Repair slot is explicitly **PENDING**
+- [V2 10 — Random Events](v2-10-events.html): separate real **resource reward** example and a **different future evidence case** for event → carried battle effect. No claim that the displayed Fish +1/Material +1 buff combat
+- [V2 11 — Combat](v2-11-combat.html): enlarged actual battlefield, current genuine silent clips, compact companion roles and retained 阿策 local-fallback context; updated teammate VFX and in-game SFX **PENDING**
+
+[Canonical V2 asset list, provenance gates and needed captures](../library/PRESENTATION-V2-ASSETS.md) · [Notion decisions and planned 21-page order](https://app.notion.com/p/414e33b0423f81649454e1a9ade5c211) (Section 11).
+
+Shared preview code: v2-compositions.css and v2-compositions.js. None of these is part of the native presentation. All screenshots and original gameplay evidence should be verified and publication-cleared before the new layouts enter Current. Do not delete these previews until approved integration has been publicly verified.
