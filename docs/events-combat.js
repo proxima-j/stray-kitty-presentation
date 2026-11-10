@@ -65,6 +65,8 @@
   function playbackFailed(clip) {
     if (!active() || clip.hidden) return;
     clearTimeout(bufferingTimer);
+    clip.pause();
+    clip.hidden = true;
     battlefield.hidden = false;
     retry.hidden = false;
     const output = clip === defaultVideo ? defaultStatus : status;
