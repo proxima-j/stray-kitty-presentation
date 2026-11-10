@@ -26,3 +26,11 @@ References: [Pages limits](https://docs.github.com/en/pages/getting-started-with
 The repository now uses `.github/workflows/pages.yml`, following GitHub's official static-site workflow: checkout, configure, upload `docs/`, and deploy in one job. A bounded artifact-availability check precedes deployment. Runs share the `pages` concurrency group and do not cancel an in-progress deployment. Official actions are pinned to release commits. Pages must use the GitHub Actions (`workflow`) build type, retaining the existing public URL.
 
 This recovery changes publishing and documentation only. No deck source, review composition, media, animation, Current/Previous contents or archive branch changes. Verify the new workflow's deployment and latest public review before reporting success; do not repeatedly rerun the failed generated workflow.
+
+## November 10 — V2 interim final metadata sync
+
+V2 structural publication [42834403627](https://github.com/proxima-j/stray-kitty-presentation/actions/runs/42834403627) and the verified runtime/handoff publication [42834887825](https://github.com/proxima-j/stray-kitty-presentation/actions/runs/42834887825) succeeded. The 21-scene V2 and outgoing 23-scene Previous were then observed/checked without changing their contents further.
+
+The final metadata-only [run 42835501857](https://github.com/proxima-j/stray-kitty-presentation/actions/runs/42835501857) found its artifact and created deployment `8e48951f379bfa10b6ef9356c97dd246e654b957` at 14:36:27 UTC. It spent over two minutes queued, then remained at `syncing_files` when the deploy action's default ten-minute deadline expired at 14:46:44 UTC. GitHub canceled that deployment. No content-validation or artifact error was reported; the working V2 remained live.
+
+The workflow now allows the deploy action twenty minutes, with a twenty-five-minute job cap for upload plus deployment. This fresh workflow revision also avoids retrying the already canceled deployment ID. Serialization, artifact availability, permissions, source folder and public URL stay the same. This is a targeted publishing-only correction after the observed timeout; no slide/media tests or version rotation are repeated. [Official deploy action timeout input](https://github.com/actions/deploy-pages/blob/v5/action.yml).
