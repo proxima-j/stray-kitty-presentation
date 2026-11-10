@@ -9,11 +9,16 @@
 <div class="dd-page" id="ddDashboardPreview" data-selected-composition="stacked" aria-label="Datadog page 2 dashboard review">
  <div class="section-label"><span class="number-pill">V2</span>TECHNICAL WALKTHROUGH / DATADOG</div>
  <header data-build="text" data-at=".04" class="page-intro"><h1>Observability Across the Game</h1><p>From system health to player behavior, all in one monitoring workflow.</p></header>
- <div class="dd-tabrow" role="tablist" aria-label="Choose a Datadog dashboard insight">
+ <div class="v2-dd-toolbar"><div class="dd-tabrow" role="tablist" aria-label="Choose a Datadog dashboard insight">
   <button class="dd-select" role="tab" data-dashboard-tab="overview" aria-selected="true" aria-controls="ddOverview" type="button">01 · Overview</button>
   <button class="dd-select" role="tab" data-dashboard-tab="performance" aria-selected="false" aria-controls="ddPerformance" type="button">02 · Player Experience</button>
   <button class="dd-select" role="tab" data-dashboard-tab="events" aria-selected="false" aria-controls="ddEvents" type="button">03 · Gameplay Events</button>
   <button class="dd-select" role="tab" data-dashboard-tab="advisor" aria-selected="false" aria-controls="ddAdvisor" type="button">04 · Business &amp; AI</button>
+ </div>
+ <a class="v2-dd-alert-banner" href="../assets/datadog/page-03-alerts/slack-health-alert.png" target="_blank" rel="noopener" title="View the original November 4, 2026 Slack health-check alert. Slack can notify phones when mobile notifications are enabled.">
+  <span class="v2-dd-alert-bell" aria-hidden="true">!</span>
+  <span class="v2-dd-alert-text"><strong>ALERTS VIA SLACK</strong><small>Phone notifications, if enabled</small></span>
+ </a>
  </div>
  <div class="dd-hero" data-build="rise" data-at=".20">
   <section id="ddOverview" class="dd-dashboard-shell dd-overview-layout" data-dashboard-panel="overview" role="tabpanel">
@@ -22,11 +27,6 @@
     <span class="dd-label">ENGINEERING + PRODUCT VISIBILITY</span>
     <h2>We monitor both how the game runs and how it is played.</h2>
     <div class="dd-coverage"><h3>Technical Health</h3><p>APM, traces and logs<br>Service performance<br>Alerts, SLOs and external monitoring</p></div>
-    <div class="v2-dd-alert-hint" role="note" aria-label="Historical alert example, November 4, 2026">
-      <a href="../assets/datadog/page-03-alerts/slack-health-alert.png" target="_blank" rel="noopener" title="View the existing authentic Slack alert screenshot"><img src="../assets/datadog/page-03-alerts/slack-health-alert.png" alt="Small thumbnail of the original November 4 Slack health-check alert" loading="lazy"></a>
-      <div><strong>ALERT → RECOVERY</strong><span>Nov 4 · Slack notification</span></div>
-      <span class="v2-dd-alert-notice">RECORDED</span>
-    </div>
     <div class="dd-coverage"><h3>Gameplay &amp; Business</h3><p>Player experience and RUM<br>Story, random events and combat<br>Payments, economy and AI Advisor</p></div>
     <div class="dd-rule"></div>
     <div class="dd-source">This Overview shows operational monitoring. Player Journey and Business &amp; Payments provide the additional gameplay and business views.</div>
