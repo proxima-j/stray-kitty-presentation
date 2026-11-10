@@ -122,3 +122,27 @@
  .v2-reference-traveler{bottom:10.5%}
 }
 @media(prefers-reduced-motion:reduce){.v2-combat-preview .v2-selectable-profile{transition:none}}
+
+/* Progressive furniture captures: keep Stage 01 real and unaltered. Stages
+   02–04 show intentionally distinct PENDING slots, not fabricated furnishings. */
+.v2-home-preview .home-media.v2-growth-pending{position:relative;isolation:isolate}
+.v2-home-preview .v2-growth-pending .v2-stage-reference{
+ display:block;width:100%;height:100%;object-fit:contain;
+ filter:grayscale(.35) brightness(.88);opacity:.32
+}
+.v2-home-preview .v2-growth-spec{
+ position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;
+ align-items:center;justify-content:center;gap:clamp(6px,.65vw,12px);
+ padding:clamp(12px,1.1vw,20px);text-align:center;
+ background:linear-gradient(135deg,rgba(244,230,199,.52),rgba(236,223,194,.84))
+}
+.v2-home-preview .v2-growth-spec small{
+ color:var(--accent);font:700 clamp(9px,.72vw,11px)/1.3 var(--body);
+ letter-spacing:.075em
+}
+.v2-home-preview .v2-growth-spec strong{
+ color:var(--ink);font:400 clamp(16px,1.5vw,25px)/1.15 var(--display)
+}
+.v2-home-preview .v2-growth-spec span{
+ color:var(--muted);font:clamp(10px,.82vw,13px)/1.35 var(--body);max-width:260px
+}
