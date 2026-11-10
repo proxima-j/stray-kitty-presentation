@@ -22,15 +22,40 @@ Canonical decisions: [Notion rehearsal handoff — Section 11](https://app.notio
 
 All existing paths are under docs/. Listed V2 file targets below are suggestions **not actual assets** and must never be marked as uploaded or cleared until recorded and verified.
 
-### Capture group A — home growth stages: PENDING
+### Capture groups A and B — Home Hub media replacement (PENDING)
 
-Proposed files: docs/assets/v2/home/growth-01.webp … growth-04.webp.
+**Composition contract (locked):** Keep the **current native Home Hub GROWS composition** exactly as designed—title, two tabs, 2×2 frames, captions, image fit, sizing, alignment, and 4.2-second shared v3 page transitions. Only the four GROWS images change. For **RESPONDS**, keep the same page shell, title and tabs but use the **exact same 2×2 grid geometry and equal media frame/caption sizes as GROWS**, containing three existing real video clips plus one new repair clip. No alternative staggered arrangement.
 
-Four genuine chapter/home progression checkpoints with the **same camera, viewport, scale and framing**. Arrange visibly more furniture/decor in later stages **within actual game state**. If manually prepared with isolated QA saves, label those captures as staged QA arrangements, not automatically awarded default furniture. No image synthesis or copy/paste furniture. Compare at projected slide size for legibility and record exact game revision/checkpoints.
+#### A1–A4 — Four progressively furnished Home GROWS views
 
-### Capture group B — one repair animation: PENDING
+| Slot / current caption | Existing authentic reference | New required capture | Planned derivative | Status |
+| --- | --- | --- | --- | --- |
+| 01 · BEGINNING | `docs/assets/pages/06/greenhouse-stage-01.webp` | Initial sparse shelter with actual available furniture/decor; visible baseline for later comparison | `docs/assets/v2/home/growth-01.webp` | **PENDING** |
+| 02 · REBUILDING | `docs/assets/pages/06/greenhouse-stage-02.webp` | Same camera, later legitimate repair/checkpoint state, with a clear but modest increase in genuine furniture | `docs/assets/v2/home/growth-02.webp` | **PENDING** |
+| 03 · GROWING | `docs/assets/pages/06/greenhouse-stage-03.webp` | Further home improvement and distinct additional real furniture/decoration | `docs/assets/v2/home/growth-03.webp` | **PENDING** |
+| 04 · CELEBRATION | `docs/assets/pages/06/greenhouse-stage-04.webp` | Most visibly furnished state with a genuine late-story/finale home setting; should be recognizably richer than Stage 03 | `docs/assets/v2/home/growth-04.webp` | **PENDING** |
 
-Proposed: docs/assets/v2/home/repair-animation.mp4 (or WebM/GIF when justified). Record a real fix/repair interaction, visible result, ideally ~4–8s. No secrets or UI debugging overlays. MP4/WebM may be smaller and controllable compared with GIF; silently looping is fine. Preserve source master, source date, QA checkpoint and timing conversion.
+- Capture authentic game states through supported chapter/home checkpoints and actual owned/planted/decorated items. If additional furnishings are prepared in separate **isolated QA saves**, identify the staging and do not claim that a specific arrangement automatically appears at that chapter milestone.
+- Use the **same camera, scale, viewport and framing** for all four comparisons. Historical originals were captured at 1600×900, camera x=-42, y=3, scale=0.528169014084507; use these parameters if still applicable in the updated build, otherwise establish and record one stable shared camera. Keep a consistent 16:9 source/crop, UI visibility, brightness/exposure policy and furniture arrangement continuity.
+- Furniture/decoration should **visibly accumulate** (baseline → modest → clearly furnished → richly furnished). Do not photoshop or generatively insert new furniture, edit historical evidence or imply the game's final home has items it cannot legitimately own/place.
+- Preserve original authentic screenshots and their asset IDs. After approving new captures, replace only the four GROWS media references in V2. Match image dimensions and verify legibility in the real deck frame at 1600×900 and 1366×768. Record game commit/checkpoint, item/furniture state, staging method, dimensions, permissions and verification.
+
+#### B1–B4 — Four Home RESPONDS interaction tiles
+
+| Position in **same 2×2 grid** | Existing source / requested media | Caption concept | Status |
+| --- | --- | --- | --- |
+| Top-left | `docs/assets/pages/06/cat-reaction-web.mp4` | CAT REACTION | **READY, existing genuine clip** |
+| Top-right | `docs/assets/pages/06/postcard-to-parcel-web.mp4` | POSTCARD & REWARD | **READY, existing genuine clip; guarantee/pity QA outcome** |
+| Bottom-left | `docs/assets/pages/06/furniture-drag-save-web.mp4` | CUSTOMIZATION / FURNITURE PLACEMENT | **READY, existing genuine clip** |
+| Bottom-right | **New genuine Home Hub repair/restoration animation** | HOME RESTORATION | **PENDING capture** |
+
+Proposed repair derivative: `docs/assets/v2/home/repair-animation.mp4` (alternatively a compatible WebM or GIF after comparing delivery size and controls). The user requested a fixing-animation GIF concept, but a silent looping MP4/WebM can provide the same visible action more efficiently.
+
+- Capture the **actual Home Hub repair action** in a stable authorized save: visible pre-repair state → user interaction/input → authentic fixing animation → completed visual change or repair confirmation. Aim for a focused ~4–8-second loop or enough time to show the complete genuine action; do not truncate the resolution simply to hit a target duration.
+- Keep the native pixel-art image, original playback timing, useful game context and full visible change. If the interaction is longer, prefer a short genuine whole-action clip with manual replay over a misleading jump cut. Record exact build/checkpoint, source master, frame size/duration, edit/crop, rights and source audio presence. Avoid private player/session/QA identifiers.
+- On the presentation page, make the fourth clip behave like the other three: lazy load only when RESPONDS is shown, silent loop or deliberate click-to-play as approved, manual pause/play control, and stop when hidden/leaving the page. If the selected new clip has sound, **do not enable autoplay audio**.
+- Match the **exact GROWS 2×2 frame aspect ratio, captions, spacing and positions**. Do not move the header or tab controls when switching modes; the page should visually change only the four media contents.
+- Do not upload or register the proposed V2 files until the captures exist and have passed provenance/publication review. Until then the existing four GROWS images and three RESPONDS clips remain the production fallback.
 
 ### Capture group C — authentic event to combat connection: PENDING
 
