@@ -479,7 +479,7 @@
         "width": 1600,
         "height": 900
       },
-      "v2_usage": "Historical authentic reference only; cumulative replacement PENDING MEDIA, explicitly labelled in Current."
+      "v2_usage": "Historical capture retained for Previous/archive; Current uses home.v2.growth replacement."
     },
     {
       "id": "home.growth.03",
@@ -494,7 +494,7 @@
         "width": 1600,
         "height": 900
       },
-      "v2_usage": "Historical authentic reference only; cumulative replacement PENDING MEDIA, explicitly labelled in Current."
+      "v2_usage": "Historical capture retained for Previous/archive; Current uses home.v2.growth replacement."
     },
     {
       "id": "home.growth.04",
@@ -510,7 +510,7 @@
         "height": 900
       },
       "limitations": "Genuine implemented stage 4, but shares the stage-3 furnished layout; differences are subtle warmer lighting/string lights. Do not present it as a new architectural rebuild.",
-      "v2_usage": "Historical authentic reference only; cumulative replacement PENDING MEDIA, explicitly labelled in Current."
+      "v2_usage": "Historical capture retained for Previous/archive; Current uses home.v2.growth replacement."
     },
     {
       "id": "home.interaction.cats",
@@ -2234,6 +2234,365 @@
       "bytes": 1915278,
       "origin": "../assets/closing/stray-kitty-poster.png",
       "encoding": "Lossless WebP; decoded RGB pixels verified identical. No crop, resizing, artwork change or embedded metadata."
+    },
+    {
+      "id": "home.v2.growth.02",
+      "source": "../assets/v2/home/growth-02.webp",
+      "origin": "Full actual game viewport screenshot via capture browser; unmodified committed source in isolated local server and private QA save; native furniture editor and Save.",
+      "use": "Current Page 04 / Home Hub",
+      "status": "APPROVED / INTEGRATED",
+      "review_status": "VERIFIED",
+      "integrated_in": "../index.html?page=home-hub",
+      "element_id": "homeGrowth02",
+      "permission": "User explicitly authorized genuine project-owned Home gameplay capture, isolated QA staging and public GitHub Pages integration in V2 Part 2A (2026-11-11).",
+      "metadata": {
+        "source_game_sha": "1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e",
+        "capture_date": "2026-11-11T00:30:56.330549+08:00",
+        "original_file": "growth-02.jpg",
+        "original_dimensions": [
+          1600,
+          900
+        ],
+        "published_dimensions": [
+          960,
+          540
+        ],
+        "camera": {
+          "height": 450,
+          "scale": 0.528169014084507,
+          "viewport": {
+            "height": 450,
+            "width": 800,
+            "x": 0,
+            "y": 15
+          },
+          "width": 800,
+          "worldHeight": 941,
+          "worldWidth": 1672,
+          "x": -42,
+          "y": 3,
+          "zoom": 1
+        },
+        "stage": 2,
+        "state": "greenhouse.home_2 QA checkpoint; 3 furniture placements",
+        "furniture": [
+          {
+            "height": 97.80933852140078,
+            "id": "soft_blanket",
+            "slot": "furniture:soft_blanket",
+            "width": 133,
+            "x": 426,
+            "y": 515
+          },
+          {
+            "height": 46.57714285714286,
+            "id": "red_cushion",
+            "slot": "furniture:red_cushion",
+            "width": 78,
+            "x": 836,
+            "y": 515
+          },
+          {
+            "height": 186.5,
+            "id": "box_castle",
+            "slot": "furniture:box_castle",
+            "width": 162,
+            "x": 1246,
+            "y": 515
+          }
+        ],
+        "furniture_count": 3,
+        "crop": "None; full 16:9 viewport resized only. JPEG master to WebP quality 88.",
+        "slide": "04 / home-hub"
+      },
+      "provenance_record": "HOME-PART2A-CAPTURE.json"
+    },
+    {
+      "id": "home.v2.growth.03",
+      "source": "../assets/v2/home/growth-03.webp",
+      "origin": "Full actual game viewport screenshot via capture browser; unmodified committed source in isolated local server and private QA save; native furniture editor and Save.",
+      "use": "Current Page 04 / Home Hub",
+      "status": "APPROVED / INTEGRATED",
+      "review_status": "VERIFIED",
+      "integrated_in": "../index.html?page=home-hub",
+      "element_id": "homeGrowth03",
+      "permission": "User explicitly authorized genuine project-owned Home gameplay capture, isolated QA staging and public GitHub Pages integration in V2 Part 2A (2026-11-11).",
+      "metadata": {
+        "source_game_sha": "1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e",
+        "capture_date": "2026-11-11T00:32:18.569477+08:00",
+        "original_file": "growth-03.jpg",
+        "original_dimensions": [
+          1600,
+          900
+        ],
+        "published_dimensions": [
+          960,
+          540
+        ],
+        "camera": {
+          "height": 450,
+          "scale": 0.528169014084507,
+          "viewport": {
+            "height": 450,
+            "width": 800,
+            "x": 0,
+            "y": 15
+          },
+          "width": 800,
+          "worldHeight": 941,
+          "worldWidth": 1672,
+          "x": -42,
+          "y": 3,
+          "zoom": 1
+        },
+        "stage": 3,
+        "state": "Same QA save after real skylight, floor and planting repairs; 3 additional placements",
+        "furniture": [
+          {
+            "height": 97.80933852140078,
+            "id": "soft_blanket",
+            "slot": "furniture:soft_blanket",
+            "width": 133,
+            "x": 426,
+            "y": 515
+          },
+          {
+            "height": 46.57714285714286,
+            "id": "red_cushion",
+            "slot": "furniture:red_cushion",
+            "width": 78,
+            "x": 836,
+            "y": 515
+          },
+          {
+            "height": 186.5,
+            "id": "box_castle",
+            "slot": "furniture:box_castle",
+            "width": 162,
+            "x": 1246,
+            "y": 515
+          },
+          {
+            "height": 47.18844984802432,
+            "id": "snack_cushion",
+            "slot": "furniture:snack_cushion",
+            "width": 75,
+            "x": 1144,
+            "y": 668
+          },
+          {
+            "height": 141.23867069486406,
+            "id": "moon_hammock",
+            "slot": "furniture:moon_hammock",
+            "width": 170,
+            "x": 324,
+            "y": 668
+          },
+          {
+            "height": 77.77033492822966,
+            "id": "sun_lamp",
+            "slot": "furniture:sun_lamp",
+            "width": 54,
+            "x": 836,
+            "y": 668
+          }
+        ],
+        "furniture_count": 6,
+        "crop": "None; full 16:9 viewport resized only. JPEG master to WebP quality 88.",
+        "slide": "04 / home-hub"
+      },
+      "provenance_record": "HOME-PART2A-CAPTURE.json"
+    },
+    {
+      "id": "home.v2.growth.04",
+      "source": "../assets/v2/home/growth-04.webp",
+      "origin": "Full actual game viewport screenshot via capture browser; unmodified committed source in isolated local server and private QA save; native furniture editor and Save.",
+      "use": "Current Page 04 / Home Hub",
+      "status": "APPROVED / INTEGRATED",
+      "review_status": "VERIFIED",
+      "integrated_in": "../index.html?page=home-hub",
+      "element_id": "homeGrowth04",
+      "permission": "User explicitly authorized genuine project-owned Home gameplay capture, isolated QA staging and public GitHub Pages integration in V2 Part 2A (2026-11-11).",
+      "metadata": {
+        "source_game_sha": "1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e",
+        "capture_date": "2026-11-11T00:33:49.736044+08:00",
+        "original_file": "growth-04.jpg",
+        "original_dimensions": [
+          1600,
+          900
+        ],
+        "published_dimensions": [
+          960,
+          540
+        ],
+        "camera": {
+          "height": 450,
+          "scale": 0.528169014084507,
+          "viewport": {
+            "height": 450,
+            "width": 800,
+            "x": 0,
+            "y": 15
+          },
+          "width": 800,
+          "worldHeight": 941,
+          "worldWidth": 1672,
+          "x": -42,
+          "y": 3,
+          "zoom": 1
+        },
+        "stage": 4,
+        "state": "Genuine finale.home QA checkpoint with prior owned furniture and homeLayout/placements carried into this isolated save, then 3 further native editor placements. Not an uninterrupted playthrough.",
+        "furniture": [
+          {
+            "height": 108.45108695652172,
+            "id": "star_glass",
+            "slot": "furniture:star_glass",
+            "width": 65,
+            "x": 1144,
+            "y": 238
+          },
+          {
+            "height": 124.48295454545456,
+            "id": "clover_rug",
+            "slot": "furniture:clover_rug",
+            "width": 218,
+            "x": 631,
+            "y": 668
+          },
+          {
+            "height": 97.80933852140078,
+            "id": "soft_blanket",
+            "slot": "furniture:soft_blanket",
+            "width": 133,
+            "x": 426,
+            "y": 515
+          },
+          {
+            "height": 46.57714285714286,
+            "id": "red_cushion",
+            "slot": "furniture:red_cushion",
+            "width": 78,
+            "x": 836,
+            "y": 515
+          },
+          {
+            "height": 186.5,
+            "id": "box_castle",
+            "slot": "furniture:box_castle",
+            "width": 162,
+            "x": 1246,
+            "y": 515
+          },
+          {
+            "height": 181.91489361702128,
+            "id": "acorn_library",
+            "slot": "furniture:acorn_library",
+            "width": 150,
+            "x": 631,
+            "y": 515
+          },
+          {
+            "height": 47.18844984802432,
+            "id": "snack_cushion",
+            "slot": "furniture:snack_cushion",
+            "width": 75,
+            "x": 1144,
+            "y": 668
+          },
+          {
+            "height": 141.23867069486406,
+            "id": "moon_hammock",
+            "slot": "furniture:moon_hammock",
+            "width": 170,
+            "x": 324,
+            "y": 668
+          },
+          {
+            "height": 77.77033492822966,
+            "id": "sun_lamp",
+            "slot": "furniture:sun_lamp",
+            "width": 54,
+            "x": 836,
+            "y": 668
+          }
+        ],
+        "furniture_count": 9,
+        "crop": "None; full 16:9 viewport resized only. JPEG master to WebP quality 88.",
+        "slide": "04 / home-hub"
+      },
+      "provenance_record": "HOME-PART2A-CAPTURE.json"
+    },
+    {
+      "id": "home.v2.restoration",
+      "source": "../assets/v2/home/repair-animation.mp4",
+      "origin": "Reused genuine R06 game recording, skylight repair through native repair UI at greenhouse.home_2; private save; materials 40→33 and stamps 10→9; camera unchanged. Source SHA from original API executable Go build metadata (vcs.modified=false), build-confirmation.json documents freshly built matching frontend.",
+      "use": "Current Page 04 / Home Hub",
+      "status": "APPROVED / INTEGRATED",
+      "review_status": "VERIFIED",
+      "integrated_in": "../index.html?page=home-hub",
+      "element_id": "homeRestorationVideo",
+      "permission": "User explicitly authorized genuine project-owned Home gameplay capture, isolated QA staging and public GitHub Pages integration in V2 Part 2A (2026-11-11).",
+      "metadata": {
+        "source_game_sha": "897f4c4ca63a4cd92ca2bfb6fff0dd296317251f",
+        "capture_date": "2026-11-06",
+        "original_file": "R06_Greenhouse_Skylight-Repair_100pct_T01.mp4",
+        "raw_master": "R06_Greenhouse_Skylight-Repair_100pct_T01.webm",
+        "original_dimensions": [
+          1920,
+          1080
+        ],
+        "original_duration_seconds": 13.9,
+        "raw_master_duration_seconds": 14.307,
+        "published_dimensions": [
+          1280,
+          720
+        ],
+        "published_duration_seconds": 8,
+        "frame_rate": 30,
+        "codec": "H.264 / yuv420p / faststart; no audio stream",
+        "camera": {
+          "height": 450,
+          "scale": 0.528169014084507,
+          "viewport": {
+            "height": 450,
+            "width": 800,
+            "x": 0,
+            "y": 15
+          },
+          "width": 800,
+          "worldHeight": 941,
+          "worldWidth": 1672,
+          "x": -42,
+          "y": 3,
+          "zoom": 1
+        },
+        "checkpoint": "greenhouse.home_2",
+        "edit": "Continuous MP4 source interval 1.5–9.5 s, no crop, no speed change (1.0×); before → selection → confirmation → full native repair effect → completed glass and sunlight.",
+        "input_marks_raw_seconds": {
+          "selection": 2.714,
+          "confirmation": 4.362
+        },
+        "source_mp4_raw_offset_seconds": 0.5,
+        "poster": "assets/v2/home/repair-poster.webp",
+        "slide": "04 / home-hub"
+      },
+      "provenance_record": "HOME-PART2A-CAPTURE.json"
+    },
+    {
+      "id": "home.v2.restoration.poster",
+      "source": "../assets/v2/home/repair-poster.webp",
+      "origin": "Uncropped frame at 1.5 seconds from the same genuine R06 restoration master; resized to 960x540 WebP.",
+      "use": "Current Page 04 restoration poster and honest load-failure still",
+      "status": "APPROVED / INTEGRATED",
+      "permission": "User explicitly authorized genuine project-owned Home gameplay capture, isolated QA staging and public GitHub Pages integration in V2 Part 2A (2026-11-11).",
+      "source_game_sha": "897f4c4ca63a4cd92ca2bfb6fff0dd296317251f",
+      "capture_date": "2026-11-06",
+      "parent_asset": "home.v2.restoration",
+      "metadata": {
+        "width": 960,
+        "height": 540
+      }
     }
   ],
   "current_presentation": {
@@ -2342,9 +2701,9 @@
         "title": "Q & A"
       }
     ],
-    "media_status": "PENDING MEDIA",
+    "media_status": "HOME VERIFIED / COMBAT MEDIA PENDING",
     "pending_bindings": "PRESENTATION-V2-MEDIA-SLOTS.json",
     "handoff": "PRESENTATION-V2-PHASE2-HANDOFF.md",
-    "note": "Registry and stable integrated_in links describe Current V2. Existing capture dates, numbered source folders and collection-page descriptions remain historical provenance; no pending media files have been registered."
+    "note": "20-scene Current: Home Part 2A complete; seven Combat/event file slots remain pending. Historical source folders/capture dates preserved. No version rotation."
   }
 }

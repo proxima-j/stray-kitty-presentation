@@ -1,47 +1,55 @@
 {
   "build_marker": "20261110-v2-no-gameflow",
-  "status": "IMPLEMENTED / PENDING MEDIA",
-  "note": "Binding inventory only. Planned paths are NOT existing or registered assets; populate only after verified capture and publication clearance. Paths are relative to docs/.",
+  "status": "HOME VERIFIED / COMBAT MEDIA PENDING",
+  "note": "Home binaries and production bindings verified; seven Combat/event targets remain planned files, not collected assets. Paths relative to docs/.",
   "slots": [
     {
       "id": "home-growth-02",
       "scene": "home-hub",
-      "status": "PENDING MEDIA",
+      "status": "VERIFIED",
       "element_id": "homeGrowth02",
       "binding": "data-media-src",
       "planned_path": "assets/v2/home/growth-02.webp",
-      "fallback": "assets/pages/06/greenhouse-stage-02.webp",
-      "requirement": "Genuine cumulative furnishings, same build/save/camera; keep all earlier items."
+      "fallback": "Descriptive alt text if image request fails.",
+      "requirement": "Completed: native QA furniture placements, same source build and camera; earlier player-added furnishings retained; staged finale disclosed.",
+      "path": "assets/v2/home/growth-02.webp",
+      "provenance": "HOME-PART2A-CAPTURE.json"
     },
     {
       "id": "home-growth-03",
       "scene": "home-hub",
-      "status": "PENDING MEDIA",
+      "status": "VERIFIED",
       "element_id": "homeGrowth03",
       "binding": "data-media-src",
       "planned_path": "assets/v2/home/growth-03.webp",
-      "fallback": "assets/pages/06/greenhouse-stage-03.webp",
-      "requirement": "Genuine cumulative furnishings, same build/save/camera; keep all earlier items."
+      "fallback": "Descriptive alt text if image request fails.",
+      "requirement": "Completed: native QA furniture placements, same source build and camera; earlier player-added furnishings retained; staged finale disclosed.",
+      "path": "assets/v2/home/growth-03.webp",
+      "provenance": "HOME-PART2A-CAPTURE.json"
     },
     {
       "id": "home-growth-04",
       "scene": "home-hub",
-      "status": "PENDING MEDIA",
+      "status": "VERIFIED",
       "element_id": "homeGrowth04",
       "binding": "data-media-src",
       "planned_path": "assets/v2/home/growth-04.webp",
-      "fallback": "assets/pages/06/greenhouse-stage-04.webp",
-      "requirement": "Genuine cumulative furnishings, same build/save/camera; keep all earlier items."
+      "fallback": "Descriptive alt text if image request fails.",
+      "requirement": "Completed: native QA furniture placements, same source build and camera; earlier player-added furnishings retained; staged finale disclosed.",
+      "path": "assets/v2/home/growth-04.webp",
+      "provenance": "HOME-PART2A-CAPTURE.json"
     },
     {
       "id": "home-restoration",
       "scene": "home-hub",
-      "status": "PENDING MEDIA",
+      "status": "VERIFIED",
       "element_id": "homeRestorationVideo",
       "binding": "data-media-src",
       "planned_path": "assets/v2/home/repair-animation.mp4",
-      "fallback": "Explicit repair-capture placeholder; no fabricated animation.",
-      "requirement": "Actual repair: readable before, supported input, complete animation and completed repair."
+      "fallback": "Genuine restoration poster plus existing Play retry and load-failure label.",
+      "requirement": "Completed: genuine skylight repair at original timing, before/input/full transformation/completed state.",
+      "path": "assets/v2/home/repair-animation.mp4",
+      "provenance": "HOME-PART2A-CAPTURE.json"
     },
     {
       "id": "combat-default",

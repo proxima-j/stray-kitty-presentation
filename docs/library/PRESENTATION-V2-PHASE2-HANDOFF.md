@@ -1,16 +1,15 @@
 # V2 Part 2 handoff
 
-Current build marker: `20261110-v2-no-gameflow`. Publication label: **V2 Interim — Media Pending**.
+Current: **20-scene V2 Interim — Home verified; Combat media pending**, marker `20261110-v2-no-gameflow`. Home is Page 04, stable ID `home-hub`. Part 2A completes Home media only. The existing serialized GitHub Pages workflow publishes `docs/`; the successful Actions run and matching public `deployment.json` identify the deployed commit.
 
-Part 1 integration commit: `e0dabbbf7a82272b3f45c846169dabe9da973fbf` (the subsequent publication-record commit records this exact content revision). Verified runtime including the targeted playback-failure correction: `0f764237fe13540f547d3b1f9ae66202c0a4c422`. The original Part 1 JavaScript remains unchanged. Subsequent user-requested Game Flow removal uses the 20-page registry below; it changes only scene registration/numbering and documentation, not the player or media. The publishing workflow remains `.github/workflows/pages.yml`: serialized static `docs/` upload and deployment, no build tooling or new hosting.
+## Retained versions and scope
 
-## Retained versions
-
-- Current: the verified 20-scene V2 Interim at [the permanent preview](https://proxima-j.github.io/stray-kitty-presentation/).
-- Previous: outgoing verified 23-scene Current from `9e2cd416bde4268df0064eab90b09151f51e01db`, frozen under `docs/previous/`, with independent small runtime files and shared `../assets/` media. Includes Roadmap, the separate Alert scene, and final Q&A.
-- Permanent V1: `archive/presentation-v1-2026-11-10` remains pinned to `0daa72fda8cd7ab9f1a8a99aed9f4eb537137461`. Do not modify/merge into/rebase this branch.
-- Reviews remain under `docs/review/` as references. Do not import their camera/route/cat styles into production.
-- Part 1 recorded no gameplay, changed no game source or infrastructure, and added no media binaries. The existing 4200ms v3 engine, film sound, one traveler and continuous route are preserved.
+- Current remains the default deck; no rotation for this focused media update.
+- Previous remains the frozen 23-scene source from `9e2cd416bde4268df0064eab90b09151f51e01db`, under `docs/previous/`, sharing existing assets once.
+- Permanent V1 branch `archive/presentation-v1-2026-11-10` stays at `0daa72fda8cd7ab9f1a8a99aed9f4eb537137461`.
+- Game Flow, Roadmap and standalone Alert remain removed from Current. No other page, game source, monitoring or infrastructure was modified by Part 2A.
+- Original 4200ms reversible engine, single Miaomiao/continuous route, full opening film and its user-started sound are unchanged.
+- Historical Part 1 integration: `e0dabbbf7a82272b3f45c846169dabe9da973fbf`; targeted Combat playback correction: `0f764237fe13540f547d3b1f9ae66202c0a4c422`; page-removal base: `2f5b7321c3bfb11e205b256a64fa21596a0715e6`.
 
 ## V2 registry
 
@@ -39,24 +38,34 @@ Part 1 integration commit: `e0dabbbf7a82272b3f45c846169dabe9da973fbf` (the subse
 
 Use `?page=<stable-scene-id>` for durable review links. Numeric pages are now 01–20. Game Flow was removed after the initial Part 1 release; return from the separate Chapter 5 demo to Visual Novel, now Page 03. Chapter 5 is a separately pre-opened live-game tab after Pitch, never a slide/iframe. The exact approved Pitch reminder and its art remain unchanged. Random Events is unchanged except numbering; its Fish +1/Material +1 are resource rewards, not direct battle modifiers.
 
-## IMPLEMENTED: production ownership
+## Part 2A — Home Hub verified
 
-- `docs/index.html`: authoritative registry, media bindings, ARIA metadata. `docs/v2-interim.css`: scoped `#home-hub`, `#combat`, `#observability` additions, including the reviewed 24% opacity Return control.
-- `docs/scene-content.js`: unchanged generic lazy images, Home view switching and scene-aware muted video/pause buttons. Restoration is a hidden, empty video slot; no missing URL is requested.
-- `docs/events-combat.js`: scene-local Combat controller. One selected video plus the default loop slot; only one may play. All muted, no new audio controls. Selection stops the prior demonstration; completion, close or Return restores default. Exit/tab hiding stops/reset all demonstrations; re-entry resumes default only. Buffering/failure exposes a muted Retry control while preserving a still. Default remains the authentic screenshot until a verified loop is bound.
-- `docs/datadog.js`: existing four dashboards unchanged; the removed Alert scene's obsolete initialization is guarded. The Slack banner uses the existing full-image dialog, not a fifth tab or new slide.
-- `docs/library/PRESENTATION-V2-MEDIA-SLOTS.json`: exact pending file targets, fallback paths, selectors and attribute names. This is a **binding inventory**, not a claim those planned files exist. No planned asset was registered in `manifest.json`.
+[Live Home](https://proxima-j.github.io/stray-kitty-presentation/?page=home-hub). Detailed capture/source/placement records: [HOME-PART2A-CAPTURE.json](HOME-PART2A-CAPTURE.json). All four principal binaries exist and are registered in `manifest.json` and the media slots inventory.
 
-## PENDING MEDIA: exact slots and fallbacks
-
-All paths below are relative to `docs/`. Planned files do not exist yet.
-
-| Slot / production binding | Planned file | Actual Part 1 fallback |
+| Binding | Published file under `docs/` | Verified content |
 | --- | --- | --- |
-| `#homeGrowth02`, `data-media-src` | `assets/v2/home/growth-02.webp` | `assets/pages/06/greenhouse-stage-02.webp`, explicitly pending historical reference |
-| `#homeGrowth03`, `data-media-src` | `assets/v2/home/growth-03.webp` | `assets/pages/06/greenhouse-stage-03.webp`, explicitly pending historical reference |
-| `#homeGrowth04`, `data-media-src` | `assets/v2/home/growth-04.webp` | `assets/pages/06/greenhouse-stage-04.webp`, explicitly pending historical reference |
-| `#homeRestorationVideo`, `data-media-src` | `assets/v2/home/repair-animation.mp4` | Restrained RESTORATION capture-pending placeholder |
+| `#homeGrowth01` | `assets/pages/06/greenhouse-stage-01.webp` | Original BEGINNING, unchanged |
+| `#homeGrowth02` | `assets/v2/home/growth-02.webp` | REBUILDING: blanket, red cushion, castle (3 added items) |
+| `#homeGrowth03` | `assets/v2/home/growth-03.webp` | GROWING: same 3 plus hammock, sun lamp, snack cushion (6) |
+| `#homeGrowth04` | `assets/v2/home/growth-04.webp` | CELEBRATION: same 6 plus chandelier, acorn library, clover rug (9) |
+| `#homeRestorationVideo` | `assets/v2/home/repair-animation.mp4` | Genuine skylight repair, full before/input/animation/completed change; 8 s, 1280×720 H.264, 30 fps, no audio |
+
+New stills: real 1600×900 browser captures, uncropped 960×540 WebP derivatives, exact source `1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e`, isolated QA save. Camera x=-42/y=3/scale=.528169014084507, zoom1, logical viewport800×450 at y15. All prior player-added IDs/coordinates/dimensions are exact subsets of subsequent captures (3→6→9). Native repair upgrades change authored stage furnishings; this is authentic game behavior, not an arrangement reset.
+
+Stage 02 uses `greenhouse.home_2`. Stage 03 advances the same save through real skylight/floor/planting repairs. Stage 04 uses the genuine `finale.home` checkpoint; only owned furniture, saved homeLayout and placements were copied from the isolated Stage 03 save, followed by three native editor placements. **Staged QA sequence, not a claimed uninterrupted campaign.** No real player save or game rule was changed. The retained Stage 01 has the same camera/world framing; its exact historical frontend SHA was not separately recorded.
+
+Repair reuses `R06_Greenhouse_Skylight-Repair_100pct_T01.mp4`, captured November 6 at source `897f4c4ca63a4cd92ca2bfb6fff0dd296317251f` (clean original API executable build metadata; matching fresh frontend build record). Original1920×1080/13.9s MP4 and raw14.307s WebM remain local. One continuous1.5–9.5s interval, original1.0× timing, full frame, faststart. Materials40→33, stamps10→9; camera unchanged. Genuine before-frame poster: `assets/v2/home/repair-poster.webp` (960×540). No reconstructed imagery.
+
+RESPONDS retains its approved 2×2 positions and the three original files unchanged: `assets/pages/06/cat-reaction-web.mp4` (5.813s), `postcard-to-parcel-web.mp4` (11s, guaranteed-reward QA example), `furniture-drag-save-web.mp4` (6.467s). The existing generic scene player owns all four muted loops and pause controls. Home-only error feedback retains each genuine poster and retries through the existing Play control. No independent player was added.
+
+Focused verification: both galleries have equal bounding boxes at1600×900 (960.104×626.521) and1366×768 (819.688×539.375); all images decode, four clips advance muted, manual pause works, hidden tab/scene pauses, re-entry resumes normally, no Home pending overlay remains. Native forward/back scene navigation works; single cat/route and20-scene registry retained. Stage01/three existing clips/film/engine/Previous/V1 unchanged. One private missing-clip probe also retained the genuine poster and exposed the existing Play retry with an honest unavailable label; no fault was injected into the game or infrastructure. Publication requires the public Home check; use Actions and deployment stamp, not historical failed runs.
+
+## Part 2B — Combat Assets Pending
+
+**Seven files remain pending. Do not mark V2 media-complete.** Combat implementation and existing fallbacks were not modified or recaptured during Part 2A.
+
+| Production binding | Planned file (does not exist yet) | Existing fallback |
+| --- | --- | --- |
 | `#v2DefaultBattleVfx`, `data-v2-default-src` | `assets/v2/combat/general-battle-vfx-muted.mp4` | `assets/pages/09/battlefield-main.webp` |
 | `[data-v2-skill="rongrong"]`, `data-v2-skill-clip` | `assets/v2/combat/rongrong-skill-muted.mp4` | `assets/pages/09/caster-star-vfx.webp` |
 | `[data-v2-skill="banban"]`, `data-v2-skill-clip` | `assets/v2/combat/banban-skill-muted.mp4` | `assets/pages/09/guard-shield-vfx.webp` |
@@ -65,52 +74,15 @@ All paths below are relative to `docs/`. Planned files do not exist yet.
 | `#v2BattleProof`, `data-v2-event-state` | `assets/v2/events/carry-state.webp` | Explicit linked-evidence-pending state |
 | `#v2BattleProof`, `data-v2-event-battle` | `assets/v2/events/carry-battle.mp4` | Explicit linked-evidence-pending state |
 
-Also populate `#v2BattleProof[data-v2-event-caption]` with a short accurate source/save/build explanation. The event controller requires all three paths **and** that caption before showing linked evidence. It presents Choice, Stored effect, then the actual battle video in the same battlefield; completion returns to default. Never bind the feeder-bowl reward screenshots as proof of battle support.
+Also fill `#v2BattleProof[data-v2-event-caption]` with an accurate source/save/build explanation. All three event paths and caption are required to show Choice → Stored effect → subsequent battle in the existing battlefield. Do not bind the feeder-bowl Fish+1/Material+1 resource rewards as combat modifiers.
 
-Stage 01 (`#homeGrowth01`, `assets/pages/06/greenhouse-stage-01.webp`, 960×540) remains the genuine unchanged baseline with no pending treatment. Retain it.
+### Next capture gate and blockers
 
-Existing genuine Home clips stay unchanged, muted, with the same 2×2 geometry in both modes:
+1. Identify the teammate's stable shipped visual-effects commit/MR. One focused read-only activation-order check, not another whole-codebase audit.
+2. Capture the actual general full-frame uncropped VFX loop (typically8–15s) and three complete individual skill cycles: ready/input → entire anticipation/wind-up → release/impact → visible result/settle. Preserve original timing. No SFX/audio recording is required; everything plays muted.
+3. Identify a genuine event/choice that stores support or pressure and a subsequent battle that actually consumes it. Record event/choice IDs, saved modifier, battle attempt, exact build and checkpoint. Capture two stills and one complete consequence clip. **Blocked until the stable updated build and linked mechanic are verified.** Prefer same save; disclose separately staged checkpoints if necessary.
+4. Register only existing cleared files; replace exact attributes in the media-slot JSON. Remove pending wording only after verification. Recheck only affected media/playback/layout, then publish normally. No rotation for isolated page/media changes.
 
-- Top-right INTERACTIVE: `assets/pages/06/cat-reaction-web.mp4`, H.264 960×540, 5.813 s.
-- Bottom-left RANDOM REWARDS: `assets/pages/06/postcard-to-parcel-web.mp4`, H.264 960×540, 11.000 s. This is the existing guaranteed-reward QA example.
-- Bottom-right CUSTOMIZATION: `assets/pages/06/furniture-drag-save-web.mp4`, H.264 960×540, 6.467 s.
+Existing Reposition (`reposition-closeup.mp4`,7.6s) and Activate Skills (`skill-activation-closeup.mp4`,5.233s) remain historical genuine clips, not proof of the new anticipation animations. Preserve the Local Fallback advisor label. Current Combat controller already provides one active video, muted default/selection, completion/Return reset, scene/tab exit pause, and honest failure/retry. Preserve its geometry and reviewed subtle Return control.
 
-Existing Combat controls remain genuine historical clips: `#repositionVideo[data-demo-src]` → `assets/pages/09/reposition-closeup.mp4` (960×540, 7.600 s), `#skillsTrigger[data-demo-src]` → `assets/pages/09/skill-activation-closeup.mp4` (720×406, 5.233 s). These do not prove the teammate's updated anticipation animation. The same `#repositionVideo` element plays selected clips to enforce single-video ownership. Advisor uses `advisor-figure.webp`, `advisor-01-before.webp`, `advisor-02-after.webp` in `assets/pages/09/`; keep the **Local Fallback** label.
-
-Observability banner reuses `assets/datadog/page-03-alerts/slack-health-alert.png` (historical Nov 4 notification), through `data-full-image`. It says **ALERTS VIA SLACK / Phone notifications, if enabled**. Neither phone delivery nor automatic root-cause repair has been verified. No phone/emulator capture is needed for this interim deck.
-
-## Capture acceptance and smallest Part 2 action
-
-**Next smallest action:** ask for/identify the teammate's stable shipped VFX build/commit, then do one focused read-only check of skill activation order and one legitimate capture checkpoint. Do not repeat a codebase-wide audit. If that build is unavailable, Home growth/repair can be captured independently from a verified supported save.
-
-For each new file record build SHA, source branch/MR, capture date/time/timezone, actual event/choice or skill, save/checkpoint and battle attempt, camera/viewport, input/phase boundaries, whether QA-staged, editing/derivative details, and publication permission. Retain high-quality local masters. Use genuine gameplay and supported inventory/repair mechanics; no added furniture in image editing or invented effects.
-
-- Growth: same build/save progression and camera. Baseline → few genuine additions → those items plus more → richest arrangement retaining earlier items. Historical source used 1600×900, camera x=-42/y=3/scale=.528169014084507; verify before reuse or document one new common camera. Web stills 960×540 or larger preserving 16:9/full intended content.
-- Repair: clear before state, real input, full actual repair and completed result; roughly 4–8 s when feasible without cutting the action.
-- Three skills: enough battle context to identify the cat/input, the entire newly shipped pre-release/wind-up, full release and impact, visible result and settle. Keep original timing; roughly 5–12 s is guidance, not permission to truncate. No sound capture is required.
-- General battle loop: authentic full-frame, uncropped combat VFX, typically 8–15 s if a complete readable sequence fits. Do not reuse the old Banban close-up as new full-frame VFX.
-- Event chain: verify actual source event ID/choice, stored support/pressure and the subsequent battle's consumption/effect. Prefer same build/save; disclose separate staged checkpoints if necessary. Capture two readable stills and the shortest complete consequence clip, typically 4–10 s. **BLOCKED for capture until a genuine linked mechanic and stable build are identified.**
-- Video delivery: native 16:9 master around 1600×900 or 1920×1080; lightweight H.264/yuv420p fast-start MP4, typically 960×540 for Home and at least 1280×720 for the full-frame battle. Preserve aspect, complete action and original timing. All gameplay playback muted; opening film retains existing separate sound. No Git LFS.
-
-## Replacing and clearing pending states
-
-1. Verify the media/provenance first; register only files that actually exist in `docs/library/manifest.json`, following `ASSET-WORKFLOW.md`, in the same change as their bindings. Update slot status to VERIFIED only after checks. Shared assets remain one copy.
-2. Growth: replace the three `data-media-src` values, remove each historical `src` if editing a live DOM, remove `v2-growth-pending`/`v2-stage-reference` and `.v2-growth-spec`, and update alt text accurately. Keep Stage 01 unchanged.
-3. Repair: bind `#homeRestorationVideo[data-media-src]` and a verified poster, remove its `hidden`, remove the placeholder content inside `#homeRestorationMedia` and `v2-asset-placeholder`, unhide its existing `.clip-toggle`. It already participates in generic `data-scene-video` lifecycle. Keep the tile/caption geometry unchanged.
-4. Default loop: fill `data-v2-default-src`. The controller automatically uses muted autoplay/loop on scene entry and on reset; it changes the pending status text. Do not force `autoplay` on an off-screen video or assign eager `src` attributes.
-5. Individual skills: fill each card's `data-v2-skill-clip`; remove pending wording from that card's accessible label. The controller will play that clip immediately on click, muted; it no longer shows the historical pending still. Keep portraits/VFX stills on right cards.
-6. Event: fill all three event attributes plus accurate caption only after the complete linkage is verified. Until then leave every field blank and the explicit pending state visible.
-7. Re-run only affected media/layout/lifecycle checks, update the handoff/inventory/versions pending lists, then use the verification-gated Current/Previous rotation only for a newly verified complete deck. Do not rotate for each individual scene/asset/documentation edit.
-
-## Verification and limits
-
-Part 1: focused candidate checks at 1600×900 and 1366×768; exact 21-scene registry, retained scene content comparison, existing asset references and scoped runtime syntax. Home geometry/playback and pause/resume; three authentic skill-still selections, original Reposition/Activate Skills, evidence-pending bridge, Local Fallback advisor, subtle Return reset, completed-demo reset and scene exit/re-entry; four dashboard tabs and original Slack image; native Pitch ↔ Game Flow transition, opening film and final Q&A. Verified source/retention state is recorded in `docs/versions.json`; the repository Pages Actions run and final completion report provide the public deployment evidence.
-
-New VFX autoplay/loop and individual updated skill playback cannot be visually certified until actual files exist. Linked event consequences remain unverified. Failure/retry handling passed one private invalid-media probe: the failed video hides, the authentic battlefield remains visible, Retry appears, and Return clears it. The probe used invalid local media data only; no game, monitoring or external-network fault was injected, and no probe is published. Browser automation's element-scroll helper can nudge the cinematic scroll position; use normal coordinate clicks for media checks rather than mistaking that automation scroll for a deck layout change. No engine change was made to accommodate that helper.
-
-Part 2 focused tests: changed media returns HTTP 200; complete video cycle and muted start; only one active Combat video; completion/Return restoration; tab/scene exit pauses and re-entry default-only; Home 2×2 geometry at both agreed sizes; pending labels removed only for verified replacements; no missing requests/console errors. Stop after the affected checks pass.
-
-
-## Game Flow removal maintenance
-
-Source before removal: `2f5b7321c3bfb11e205b256a64fa21596a0715e6`. User explicitly requested removing Game Flow and opening all updated page previews. Current has 20 scenes; Home is 04, Combat 10, Observability 16 and Q&A 20. The scene is preserved in the unchanged 23-scene Previous and permanent V1. All retained content, media and JavaScript/CSS are identical except page metadata. The focused Pitch ↔ Visual Novel navigation check passed; broader Part 1 layout/media checks were not repeated. No version rotation or asset deletion. Stable-ID preview links remain the normal review surface.
+Observability's four tabs and Slack evidence banner remain untouched. Historical Slack capture does not verify mobile delivery or automatic root-cause repair. No phone/emulator recording is needed.

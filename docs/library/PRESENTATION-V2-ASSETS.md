@@ -1,6 +1,8 @@
 # Stray Kitty V2 — Composition and Asset Inventory
 
-**2026-11-10 · V2 INTERIM — MEDIA PENDING. Part 1 structural integration is explicitly approved for publication.**
+**2026-11-11 · Home Part 2A complete; Combat media pending. Current remains the approved 20-scene V2 Interim.**
+
+[Home capture provenance](HOME-PART2A-CAPTURE.json) records the four completed assets and staged QA method. This status supersedes historical Home pending instructions below. Combat requirements remain unresolved.
 
 The Part 1 status below supersedes the older review-only/planning restrictions in this historical inventory. [Part 2 handoff](PRESENTATION-V2-PHASE2-HANDOFF.md) and [exact media slots](PRESENTATION-V2-MEDIA-SLOTS.json) are the current implementation references.
 
@@ -18,43 +20,26 @@ Canonical decisions: [Notion rehearsal handoff — Section 11](https://app.notio
 | V2 page | Existing authentic media to reuse | New, pending | Composition intent |
 | --- | --- | --- | --- |
 | 02 Elevator Pitch | assets/closing/stray-kitty-poster.webp; assets/illustrations/d20-dungeon-master-original.webp; assets/illustrations/playful-cats-original.webp | **None** | **Locked Current layout** with original poster, story and updated **UP NEXT / LIVE GAMEPLAY · CHAPTER 5 / The Gameplay Loop in Action** text. No more composition work. |
-| 04 Home Hub | assets/pages/06/greenhouse-stage-01.webp through -04.webp; cat-reaction-web.mp4; postcard-to-parcel-web.mp4; furniture-drag-save-web.mp4 | **Three updated growth screenshots (Stages 02–04)** plus **one real repair/restoration clip**; Stage 01 stays original | Original GROWS 2×2: no additions in BEGINNING, then furniture accumulates across REBUILDING, GROWING, CELEBRATION. RESPONDS same 2×2: RESTORATION top-left; CAT REACTION top-right; POSTCARD/REWARD bottom-left; CUSTOMIZATION bottom-right. |
+| 04 Home Hub | assets/pages/06/greenhouse-stage-01.webp through -04.webp; cat-reaction-web.mp4; postcard-to-parcel-web.mp4; furniture-drag-save-web.mp4 | **COMPLETE:** three cumulative stills and authentic repair; Stage01 unchanged | Original GROWS 2×2: no additions in BEGINNING, then furniture accumulates across REBUILDING, GROWING, CELEBRATION. RESPONDS same 2×2: RESTORATION top-left; CAT REACTION top-right; POSTCARD/REWARD bottom-left; CUSTOMIZATION bottom-right. |
 | 09 Random Events | assets/pages/08/01-testing-view.webp; 02-event-choice.webp; 03-event-success.webp; existing Fish +1 and Material +1 reward crops | **None on this page**. Different event-to-battle proof is collected for **Combat** | **Exact existing composition and visuals**. Do not introduce a second event, new panel or trigger. Original Fish +1/Material +1 are resource rewards, not a direct battle modifier. |
 | 10 Combat | assets/pages/09/battlefield-main.webp; reposition-closeup.mp4; skill-activation-closeup.mp4; companion portraits/VFX crops; advisor before/after stills | **Three individual visual skill captures with pre-release animation; one native full-frame muted general VFX loop; a verified event→battle effect** | **Exact production geometry and original controls**. Make each existing companion profile clickable; use the same battlefield for event proof and skill clips, while authentic full-frame general VFX loops muted in the battlefield by default. No additional VFX button or popup. All Combat videos, including selected companion skills, play muted. Retain 阿策 Local Fallback. |
 
 All existing paths are under docs/. Listed V2 file targets below are suggestions **not actual assets** and must never be marked as uploaded or cleared until recorded and verified.
 
-### Capture groups A and B — Home Hub progression + repair media (latest agreed)
+### Capture groups A and B — Home Hub completed (2026-11-11)
 
-**Composition locked:** Preserve the existing Home GROWS 2×2 grid, left title/tabs, frame sizes, border and caption alignment. RESPONDS must use exactly the same geometry. The user inspected the old images and observed that multiple stages are nearly identical: **do not use them as if gradual furnishing were already visible.**
+Approved two-tab2×2 composition unchanged. Original Stage01 and three existing interaction clips remain untouched. New assets are registered and bound in production:
 
-#### A — Four stages, with only three NEW screenshots
-
-| Stage / position | Capture requirement | Asset / status |
+| Asset | Binding | Verified provenance |
 | --- | --- | --- |
-| **01 BEGINNING (top-left)** | **Do not add any new furniture.** Preserve the approved original beginning image exactly as it is; this is the unchanged baseline for all later stages. | Existing `docs/assets/pages/06/greenhouse-stage-01.webp` — **READY, NO RECAPTURE NEEDED** |
-| **02 REBUILDING (top-right)** | From the Beginning arrangement, add **a small number of real furniture/decor items** while retaining the baseline arrangement. Visible, modest progression from Stage 01. | Planned `docs/assets/v2/home/growth-02.webp` — **PENDING** |
-| **03 GROWING (bottom-left)** | Retain Stage 02's furniture and add **more genuine items**, with an obvious richer arrangement than REBUILDING. | Planned `docs/assets/v2/home/growth-03.webp` — **PENDING** |
-| **04 CELEBRATION (bottom-right)** | Keep accumulated items and add further real furniture/decor so this is **clearly the most furnished stage**; preserve the legitimate home/finale context. | Planned `docs/assets/v2/home/growth-04.webp` — **PENDING** |
+| `assets/v2/home/growth-02.webp` | `#homeGrowth02` | Native QA editor:3 added furnishings |
+| `assets/v2/home/growth-03.webp` | `#homeGrowth03` | Same earlier3 plus3, real repairs completed |
+| `assets/v2/home/growth-04.webp` | `#homeGrowth04` | Same earlier6 plus3, genuine finale checkpoint with disclosed isolated-save carryover |
+| `assets/v2/home/repair-animation.mp4` | `#homeRestorationVideo` | Genuine November6 skylight repair;8s continuous original-speed cut;1280×720 H.264/no audio |
 
-**Incremental requirement:** Furniture should accumulate, not reset randomly across screenshots: **baseline → baseline + few → previous + more → richest**. Avoid claiming a screenshot is a stage-specific default arrangement when extra furnishings were prepared in an isolated QA save.
+Stills use exact committed game source `1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e`, real1600×900 captures, uncropped960×540 WebP derivatives. Camera matches retained baseline exactly. Each prior ID/position/dimension remains in the next image. Repair sourceSHA `897f4c4ca63a4cd92ca2bfb6fff0dd296317251f`; original footage/build/evidence preserved locally. One genuine poster derivative is shared with load-failure fallback. Public posting of these project-owned captures and isolated QA staging was explicitly authorized in Part2A.
 
-**Capture consistency:** Same actual gameplay build, camera position and scale, viewport, image framing and asset style throughout. Historical originals used 1600×900, camera x=-42, y=3, scale=0.528169014084507; reuse if still valid, otherwise document a new common camera. Capture through real supported inventory/decor mechanics or authorized staged QA state. Record stage/save IDs, placed items, build SHA, capture time, cropping and publication clearance. No Photoshop/generative additions or fictional game states.
-
-**Review placeholder behavior:** Stage 01 shows its authentic screenshot **without a pending label**. Stages 02–04 show clearly differentiated **capture-pending placeholders** with the planned cumulative density, over their historical images only as faint references. They are not presented as the finished, increasingly furnished versions. On receiving cleared assets, swap the three image paths and remove pending treatments. No new Stage 01 asset is required.
-
-#### B — HOME RESPONDS: Restoration first (same 2×2 frame geometry)
-
-| Position | Media | Status |
-| --- | --- | --- |
-| **Top-left** | **RESTORATION** — new authentic fix/repair animation showing before → interaction → actual completed repair | **PENDING** |
-| **Top-right** | **INTERACTIVE / CAT REACTION** — `docs/assets/pages/06/cat-reaction-web.mp4` | **READY** |
-| **Bottom-left** | **RANDOM REWARDS / POSTCARD & PARCEL** — `docs/assets/pages/06/postcard-to-parcel-web.mp4` | **READY**, guarantee/pity QA example |
-| **Bottom-right** | **CUSTOMIZATION / FURNITURE** — `docs/assets/pages/06/furniture-drag-save-web.mp4` | **READY** |
-
-Proposed new genuine repair derivative: `docs/assets/v2/home/repair-animation.mp4` or a smaller suitable WebM/GIF. The fixing action must have a readable start, actual game action, and meaningful completion, in roughly 4–8 seconds if feasible without artificial truncation. Use a legitimate checkpoint/save and retain native pixel-art VFX and timing, source master, captured dimensions/duration, crop and attribution.
-
-For the deck: maintain identical 16:9 tile framing, gaps and captions across both modes; no layout jump when switching tabs. Retain scene-aware/lazy media loading, pause controls and stop on scene exit/tab hide. Home clips remain muted unless an actual new audio requirement is separately approved. No new assets get registered in the manifest before the verified media exists.
+Full dates, camera, QA checkpoints, furniture coordinates, source masters, encoding, permission and bindings: [HOME-PART2A-CAPTURE.json](HOME-PART2A-CAPTURE.json). High-quality local masters and private save remain outside Git. No personal/save/authentication data published. See [Part2B handoff](PRESENTATION-V2-PHASE2-HANDOFF.md) for the seven remaining Combat/event files. These older review instructions are history; do not restore pending Home treatments.
 
 ### Capture group C — authentic event to combat connection: PENDING
 

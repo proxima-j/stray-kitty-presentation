@@ -4,7 +4,7 @@
     "candidate_base_commit": "9e2cd416bde4268df0064eab90b09151f51e01db",
     "integration_commit": "e0dabbbf7a82272b3f45c846169dabe9da973fbf",
     "build_marker": "20261110-v2-no-gameflow",
-    "description": "20-scene V2 Interim — Media Pending. Game Flow removed by user request; remaining content and 4200ms player unchanged.",
+    "description": "20-scene V2 Interim: Home Part2A completed; seven Combat/event media slots pending. Approved composition and 4200ms engine preserved.",
     "publication_status": "V2 INTERIM — MEDIA PENDING",
     "verification_status": "VERIFIED PAGE-REMOVAL MAINTENANCE / MEDIA PENDING",
     "local_verified_at": "2026-11-10T23:01:55.087284+08:00",
@@ -120,12 +120,8 @@
       "page": 20,
       "after": "connected-world"
     },
-    "media_status": "PENDING MEDIA",
+    "media_status": "HOME VERIFIED / COMBAT MEDIA PENDING",
     "pending_slots": [
-      "home-growth-02",
-      "home-growth-03",
-      "home-growth-04",
-      "home-restoration",
       "combat-default",
       "combat-skill-rongrong",
       "combat-skill-banban",
@@ -152,6 +148,14 @@
         "combat",
         "observability"
       ]
+    },
+    "home_part2a": {
+      "date": "2026-11-11",
+      "provenance": "library/HOME-PART2A-CAPTURE.json",
+      "source_game_sha": "1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e",
+      "repair_source_game_sha": "897f4c4ca63a4cd92ca2bfb6fff0dd296317251f",
+      "verification": "Home at 1600x900 and 1366x768; same two-tab 2x2 geometry; 3→6→9 cumulative placements; four muted clips and existing pause control; scene/tab lifecycle; original Stage01/three clips/film/engine/20-scene registry retained. Public publication must match deployment.json.",
+      "rotation": "None; page-specific media completion. Previous/V1 unchanged."
     }
   },
   "previous": {

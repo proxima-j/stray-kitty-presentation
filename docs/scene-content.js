@@ -94,10 +94,22 @@
   }));
   clips.forEach(video => {
     video.parentElement.querySelector('.clip-toggle').addEventListener('click', () => {
+      if (video.closest('#home-hub') && video.error) video.load();
       if (video.paused) manualPause.delete(video);
       else manualPause.add(video);
       syncClips();
     });
+    // Home keeps its genuine poster/still on a failed request; retry uses this player.
+    if (video.closest('#home-hub')) {
+      const fallback = document.createElement('small');
+      fallback.className = 'home-media-error';
+      fallback.setAttribute('role', 'status');
+      fallback.textContent = 'Video unavailable · press Play to retry';
+      fallback.hidden = true;
+      video.parentElement.append(fallback);
+      video.addEventListener('error', () => { fallback.hidden = false; });
+      video.addEventListener('loadeddata', () => { fallback.hidden = true; });
+    }
     video.addEventListener('play', () => updateButton(video));
     video.addEventListener('pause', () => updateButton(video));
     video.addEventListener('loadeddata', syncClips);
