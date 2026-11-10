@@ -69,6 +69,17 @@
 .v2-combat-preview .v2-selectable-profile:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 .v2-combat-preview .v2-selectable-profile::after{content:"▶";position:absolute;right:10px;top:7px;font:10px var(--body);color:var(--accent)}
 .v2-combat-preview .combat-main>.tabframe{position:relative}
+.v2-combat-preview .v2-return-battlefield{
+ position:absolute;right:0;top:0;z-index:8;height:29px;
+ border:1.5px solid var(--ink);border-radius:10px 10px 0 0;
+ padding:4px clamp(9px,1vw,15px);background:var(--hub-yellow);
+ color:var(--ink);font:700 clamp(10px,.78vw,12px)/1.25 var(--body);
+ cursor:pointer;white-space:nowrap
+}
+.v2-combat-preview .v2-return-battlefield:is(:hover,:focus-visible){
+ background:var(--gold);outline:2px solid var(--accent);outline-offset:2px
+}
+
 /* Default battlefield slot: full native game frame, muted autoplay loop when
    recorded media exists. The current original still remains the truthful fallback. */
 .v2-combat-preview .combat-shot .v2-default-battle-vfx{
