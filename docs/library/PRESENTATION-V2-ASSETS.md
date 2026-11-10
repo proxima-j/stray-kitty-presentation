@@ -170,19 +170,21 @@ Run against the exact target teammate branch/MR or merged commit, with its new f
 **No presentation, game, or archive change is authorized by this planning update.** Mark any future asset READY only after its verified media file and provenance are recorded.
 
 
-## 2026-11-10 — Latest approved muted-default Combat behavior
+## 2026-11-10 — Final visual-only Combat playback specification
 
-**This supersedes earlier descriptions of a Full Battle VFX popup/button, a full-screen overlay, and sound for the general VFX.**
+**Latest instruction supersedes all earlier Combat SFX capture and sound-on-selection proposals. No new sound recording is needed.**
 
-- **Default:** The real general/battle-wide VFX recording is shown in the **existing main battlefield frame**, automatically playing **muted and looping** whenever Combat is visible. No additional VFX button, pop-up, Fullscreen API or slide.
-- **Until collected:** Reuse the existing authentic battlefield still with a clear **GENERAL BATTLE VFX · MUTED LOOP PENDING** indicator. No synthetic/fake effect and no empty broken video.
-- **Other actions:** Reposition, Activate Skills, a companion profile, or Event Support temporarily replaces/overlays the default frame. After a one-shot clip ends, an event/skill proof is dismissed, or the advisor is closed, restore the muted general loop.
-- **Audio:** Rongrong, Banban and Diandian skill VFX recordings with genuine pre-release motion + synced game audio should play **with sound immediately upon clicking the respective profile** (one user gesture, no second Play). Historical Banban/Reposition clips are silent. The default loop remains muted always.
-- **Lifecycle:** Selecting anything else pauses the prior source first. Hidden page/tab pauses playback; returning to Combat restarts only the muted general VFX, never an audible skill. Buffering/autoplay failure must show a retry option.
-- **Pending recording:** The full-frame background VFX clip still needs a genuine source recording, clean loop point and verified rights. Preserve native frame and original effects; do not fabricate media.
+- **Default battlefield:** An authentic full-frame VFX video starts automatically **muted and looping** in the existing left battlefield frame whenever Combat becomes active. No extra Full Battle VFX button, dialog or slide. Until that real video is available, the original authentic still remains visible with a clear pending label.
+- **Individual cats:** Selecting Rongrong, Banban or Diandian begins their genuine skill animation **muted** immediately, without a second Play action. Clips must preserve the short new pre-release animation, release VFX and visible result. Reposition and Activate Skills also remain muted.
+- **Event Support:** Clicking the existing Combat bridge displays verified linked event→battle evidence inside the left battlefield; moving footage remains muted. The source remains pending.
+- **Return behavior:** One video active at a time. A selected demo pauses the muted general loop; when it finishes or is dismissed, return to the muted loop. On slide/tab exit stop all video; on re-entry resume only the muted default. If a browser blocks playback, provide retry controls, still muted.
+- **Other moving media:** Home Hub loops, dice animations, gameplay demonstrations, GIF-like effects and other in-slide motion stay muted. GIF media has no audio by design. The manually triggered opening film retains its existing separate sound.
+- **No SFX deliverables:** The teammate's video can be captured without recording its game sound. Audio quality or synchronization must not block visual media collection; only visual timing, frame accuracy and game-state provenance need verification.
 
-The isolated [Combat review](https://proxima-j.github.io/stray-kitty-presentation/review/v2-11-combat.html) implements the empty default-muted video slot. Current production and permanent Version 1 remain unchanged.
+[Combat V2 preview](https://proxima-j.github.io/stray-kitty-presentation/review/v2-11-combat.html) · No new full-frame or updated skill media has been collected. Current production and the permanent V1 archive remain unchanged.
 
-## 2026-11-10 — Brief alert hint on the surviving Observability page
+## 2026-11-10 — Observability alert reminder moved to the dashboard toolbar
 
-Once the standalone Detect, Alert, Recover slide is removed from V2, retain only a **small, optional one-line historical alert reminder** on the existing Observability Overview (no extra alert slide and no monitoring section restructure). Reuse the already approved Nov 4, 2026 Slack alert screenshot from `docs/assets/datadog/page-03-alerts/slack-health-alert.png`, with concise **ALERT → RECOVERY · Nov 4 · Slack notification** wording and optional original-image access. This proves a recorded notification and later check recovery, not automatic self-healing. The [isolated Observability review](https://proxima-j.github.io/stray-kitty-presentation/review/v2-observability-alert.html) stages that addition. No new media capture required.
+The [Observability V2 review](https://proxima-j.github.io/stray-kitty-presentation/review/v2-observability-alert.html) now places a small **ALERTS VIA SLACK / Phone notifications, if enabled** banner beside the **04 · Business & AI** tab, rather than within the Technical Health or Gameplay panels. It is a distinct cue, **not a fifth dashboard tab** and not an extra slide. Clicking it links to the authentic November 4 Slack alert capture at `docs/assets/datadog/page-03-alerts/slack-health-alert.png`.
+
+This supports a one-second spoken reminder that Slack notifications can reach teammates' phones **when mobile notifications are enabled**. The dated evidence shows detection/notification and a later recorded recovery; it does not establish automatic root-cause repair. No new media capture required. The public Current Observability remains unmodified until V2 native integration is separately approved.
