@@ -74,6 +74,8 @@
   if (!combat) return;
 
   const battlefield = combat.querySelector('.battlefield-image');
+  const battlefieldFrame = document.getElementById('v2BattlefieldFrame');
+  const returnButton = document.getElementById('v2ReturnBattlefield');
   const defaultVfx = document.getElementById('v2DefaultBattleVfx');
   const defaultStatus = document.getElementById('v2DefaultVfxStatus');
   const demoVideo = document.getElementById('repositionVideo');
@@ -125,6 +127,7 @@
     demoStatus.hidden = true;
     defaultStatus.hidden = true;
     proof.hidden = true;
+    returnButton.hidden = true;
     eventButton.setAttribute('aria-pressed', 'false');
     repositionButton.setAttribute('aria-pressed', 'false');
     activateButton.setAttribute('aria-pressed', 'false');
@@ -175,6 +178,7 @@
     if (!source) return;
     stopAllMedia();
     activeMode = 'clip';
+    returnButton.hidden = false;
     activeClipName = label;
     const generation = playbackGeneration;
     if (button) button.setAttribute('aria-pressed', 'true');
@@ -221,6 +225,7 @@
   function showEventProof() {
     stopAllMedia();
     activeMode = 'proof';
+    returnButton.hidden = false;
     eventButton.setAttribute('aria-pressed', 'true');
     proof.hidden = false;
     proofKicker.textContent = 'FROM RANDOM EVENTS → BATTLE';
@@ -247,6 +252,7 @@
 
     stopAllMedia();
     activeMode = 'proof';
+    returnButton.hidden = false;
     card?.setAttribute('aria-pressed', 'true');
     proof.hidden = false;
     proofKicker.textContent = 'EXISTING AUTHENTIC SKILL STILL';
@@ -277,6 +283,7 @@
   function showAdvisorQuestion() {
     stopAllMedia();
     activeMode = 'advisor';
+    returnButton.hidden = false;
     advisorLayer.hidden = false;
     advisorButton.setAttribute('aria-expanded', 'true');
     advisorBefore.hidden = false;
@@ -295,6 +302,12 @@
   advisorClose.addEventListener('click', () => dismissAdvisor(true, true));
   advisorNext.addEventListener('click', toggleAdvisorAnswer);
   advisorBefore.addEventListener('click', toggleAdvisorAnswer);
+
+  returnButton.addEventListener('click', () => {
+    dismissAdvisor(false, false);
+    showDefaultBattleVfx();
+    battlefieldFrame.focus({preventScroll: true});
+  });
 
   document.addEventListener('keydown', event => {
     if (event.key !== 'Escape') return;
