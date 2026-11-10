@@ -1,6 +1,6 @@
 # Stray Kitty presentation
 
-GitHub is the shared source for ChatGPT and Codex. GitHub Pages automatically publishes `main:/docs`. Use live page links for reviews instead of transferring HTML/PNG exports.
+GitHub is the shared source for ChatGPT and Codex. The [Pages workflow](.github/workflows/pages.yml) automatically publishes `docs/` from `main`, using one serialized upload/deploy job. Use live page links for reviews instead of transferring HTML/PNG exports.
 
 **Reusable template:** [Start Here — Forward Story v3](https://proxima-j.github.io/stray-kitty-presentation/templates/) · [Production workflow](docs/templates/forward-story-v3/WORKFLOW.md) · [Notion reference](https://app.notion.com/p/413e33b0423f8180bb92dabaf04af226).
 
@@ -27,7 +27,7 @@ The obsolete four-scene v3 sample page, one-file packer and demo-only screenshot
 - [Permanent V1 source snapshot](https://github.com/proxima-j/stray-kitty-presentation/tree/0daa72fda8cd7ab9f1a8a99aed9f4eb537137461/docs) · [Archive branch](https://github.com/proxima-j/stray-kitty-presentation/tree/archive/presentation-v1-2026-11-10)
 - V1 contains **all 23 scenes**, including the original **Detect, Alert, Recover** page, and its associated committed media, scripts and styles. Its historical verified state is recorded inside the archived `docs/versions.json`.
 - **Do not delete, rename, force-update, rebase, merge into, or use this archive branch for routine work.** Future presentation changes go to Current on `main` through the existing verification workflow.
-- This is a **permanent historical source snapshot**, separate from the two rolling live working decks (Current and Previous). GitHub Pages still publishes `main:/docs`; the archive branch is recoverable/runnable source, **not currently a separate live GitHub Pages URL**. If a permanent browsable V1 is later required, publish it from this snapshot with an explicit archive-only deployment without touching the snapshot itself.
+- This is a **permanent historical source snapshot**, separate from the two rolling live working decks (Current and Previous). GitHub Pages still publishes `docs/` from `main`; the archive branch is recoverable/runnable source, **not currently a separate live GitHub Pages URL**. If a permanent browsable V1 is later required, publish it from this snapshot with an explicit archive-only deployment without touching the snapshot itself.
 - This archival rule is intentionally an exception to “exactly two working versions”; archival history is not another working deck.
 
 ## Rolling retention policy
