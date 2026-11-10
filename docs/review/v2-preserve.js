@@ -171,7 +171,7 @@
     });
   }
 
-  function startRecordedClip(source, label, { audible = false, button = null } = {}) {
+  function startRecordedClip(source, label, { button = null } = {}) {
     if (!source) return;
     stopAllMedia();
     activeMode = 'clip';
@@ -183,23 +183,20 @@
       demoVideo.src = source;
       demoVideo.load();
     }
-    demoVideo.muted = !audible;
-    demoVideo.volume = 1;
+    demoVideo.muted = true; // All Combat clips stay muted.
     demoVideo.loop = false;
     demoVideo.playbackRate = 1;
     demoVideo.controls = false;
     demoVideo.hidden = false;
     demoStatus.hidden = false;
-    demoStatus.textContent = 'Loading genuine ' + label + (audible ? ' with game sound…' : ' (silent)…');
+    demoStatus.textContent = 'Loading genuine ' + label + ' · muted…';
 
     demoVideo.currentTime = 0;
-    // For audible skill clips, call play() directly inside the profile click.
+    // Play the selected muted VFX immediately on the profile/button click.
     const playback = demoVideo.play();
     playback.then(() => {
       if (generation === playbackGeneration) {
-        demoStatus.textContent = audible
-          ? label + ' · VFX + ORIGINAL GAME SFX'
-          : 'EXISTING REAL VIDEO · SILENT · NEW VFX/SFX PENDING';
+        demoStatus.textContent = label + ' · VIDEO · MUTED';
       }
     }).catch(() => {
       if (generation !== playbackGeneration) return;
@@ -244,7 +241,7 @@
     const source = card?.dataset.v2SkillClip?.trim();
 
     if (source) {
-      startRecordedClip(source, skill.name, {audible: true, button: card});
+      startRecordedClip(source, skill.name, {button: card});
       return;
     }
 
@@ -257,8 +254,8 @@
     proofImage.src = skill.still;
     proofImage.alt = 'Genuine existing ' + skill.name + ' ability screenshot, not the new animation';
     proofImage.hidden = false;
-    proofBody.textContent = 'Updated pre-release animation and sound pending. The completed clip will start with audio from this one profile click.';
-    proofCaption.textContent = 'Historical still only. No new VFX or SFX is simulated.';
+    proofBody.textContent = 'Updated pre-release animation pending. Once captured, clicking this cat starts its VFX automatically, muted.';
+    proofCaption.textContent = 'Historical still only. The updated animation has not been captured; no sound is required.';
   }
 
   for (const card of skillCards) {
