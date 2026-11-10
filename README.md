@@ -20,6 +20,16 @@ Current supports direct `?page=01` through `?page=23` links. Previous retains `?
 
 The obsolete four-scene v3 sample page, one-file packer and demo-only screenshots/excerpt were removed from the working tree. They remain in normal Git history. Current's HTML, styles, animation code, content, film and illustrations were not changed by this cleanup.
 
+## Permanent Version 1 archive (preserve; not a working deck)
+
+**Version 1 — 23-page complete presentation, November 10, 2026** is frozen on the independent branch `archive/presentation-v1-2026-11-10` at original commit `0daa72fda8cd7ab9f1a8a99aed9f4eb537137461`.
+
+- [Permanent V1 source snapshot](https://github.com/proxima-j/stray-kitty-presentation/tree/0daa72fda8cd7ab9f1a8a99aed9f4eb537137461/docs) · [Archive branch](https://github.com/proxima-j/stray-kitty-presentation/tree/archive/presentation-v1-2026-11-10)
+- V1 contains **all 23 scenes**, including the original **Detect, Alert, Recover** page, and its associated committed media, scripts and styles. Its historical verified state is recorded inside the archived `docs/versions.json`.
+- **Do not delete, rename, force-update, rebase, merge into, or use this archive branch for routine work.** Future presentation changes go to Current on `main` through the existing verification workflow.
+- This is a **permanent historical source snapshot**, separate from the two rolling live working decks (Current and Previous). GitHub Pages still publishes `main:/docs`; the archive branch is recoverable/runnable source, **not currently a separate live GitHub Pages URL**. If a permanent browsable V1 is later required, publish it from this snapshot with an explicit archive-only deployment without touching the snapshot itself.
+- This archival rule is intentionally an exception to “exactly two working versions”; archival history is not another working deck.
+
 ## Rolling retention policy
 
 Keep exactly two usable decks. Do not rotate for documentation edits, housekeeping, individual slide commits or an unverified candidate.
