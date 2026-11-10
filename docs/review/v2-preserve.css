@@ -1,0 +1,124 @@
+/* V2 isolated review skin: retain actual production page styles and geometry.
+   This file adds only review affordances and the approved Home RESPONDS 2x2 change.
+   No script here runs the production Forward Story v3 camera. */
+.v2-preview{overflow:hidden;background:var(--paper);color:var(--ink)}
+.v2-preview-stage{position:relative;display:block;width:100vw;height:100dvh;min-height:0;overflow:hidden}
+.v2-preview-stage>.scene{left:0!important;top:0!important;width:100vw;height:100%;overflow:hidden}
+.v2-reference-route{position:absolute;inset:auto 0 12%;width:100%;height:28px;z-index:11;pointer-events:none;overflow:visible}
+.v2-reference-route path{fill:none;stroke:var(--accent);stroke-width:3;stroke-dasharray:3 13;stroke-linecap:round}
+.v2-reference-traveler{position:absolute;left:calc(24% - 28px);bottom:10.8%;width:65px;height:60px;image-rendering:pixelated;z-index:25;pointer-events:none}
+.v2-preview-label{position:absolute;right:1%;top:1%;z-index:50;border:1px solid var(--line);background:rgba(244,230,199,.88);padding:6px 10px;border-radius:99px;color:var(--accent);font:700 9px/1.3 var(--body);letter-spacing:.06em;pointer-events:none}
+.v2-preview [hidden]{display:none!important}
+
+/* All four Home GROWS screenshots retain the original composition and framing. */
+.v2-home-preview .home-media{position:relative}
+.v2-asset-label{position:absolute;left:7px;top:7px;z-index:3;padding:5px 8px;border-radius:6px;border:1px solid rgba(52,69,62,.6);background:rgba(244,230,199,.92);color:var(--accent);font:700 8px/1.25 var(--body);letter-spacing:.04em;max-width:90%;pointer-events:none}
+
+/* Reuse the GROWS 2x2 grid for the RESPONDS view; also keep the same
+   left title, vertical tabs, right content area, captions and gap. */
+.v2-home-preview .home-content[data-home-mode="responds"]{
+ display:grid;grid-template-columns:minmax(260px,.27fr) minmax(0,.73fr);gap:3vw;align-items:center
+}
+.v2-home-preview .home-content[data-home-mode="responds"] .home-copy{
+ position:relative;left:auto;top:auto;width:auto
+}
+.v2-home-preview .home-content[data-home-mode="responds"] h2{
+ font-size:clamp(36px,3.1vw,56px);line-height:1.13
+}
+.v2-home-preview .home-content[data-home-mode="responds"] .home-tabs{
+ flex-direction:column;flex-wrap:nowrap;align-items:flex-start;margin-top:28px
+}
+.v2-home-preview .home-content[data-home-mode="responds"] .home-body{
+ position:static;inset:auto
+}
+.v2-home-preview .home-content[data-home-mode="responds"] .home-view{
+ height:auto
+}
+.v2-home-preview .v2-responds-gallery{
+ display:grid;position:static;height:auto;grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:24px;align-items:start
+}
+.v2-home-preview .v2-responds-gallery figure{
+ position:static;width:auto;left:auto;right:auto;top:auto;bottom:auto
+}
+.v2-home-preview .v2-responds-gallery .home-media video{display:block;width:100%;height:100%;object-fit:contain}
+.v2-home-preview .v2-asset-placeholder{
+ background:repeating-linear-gradient(135deg,#e8e4d2,#e8e4d2 13px,#eeead9 13px,#eeead9 26px);
+ display:flex;align-items:center;justify-content:center;text-align:center;padding:14px
+}
+.v2-home-preview .v2-asset-placeholder-content{display:flex;flex-direction:column;align-items:center;gap:9px}
+.v2-home-preview .v2-asset-placeholder-content span{font:400 25px/1 var(--display);color:var(--accent)}
+.v2-home-preview .v2-asset-placeholder-content strong{font:400 clamp(15px,1.15vw,20px)/1.2 var(--display)}
+.v2-home-preview .v2-asset-placeholder-content small{font:700 9px/1.3 var(--body);color:var(--muted);letter-spacing:.065em}
+.v2-home-preview .v2-responds-gallery .clip-toggle{z-index:4}
+.v2-home-preview .home-view .home-media video[controls]{object-fit:contain}
+
+/* The original Combat columns, cards, label, and advisor overlay remain intact.
+   Only small click affordances and temporary demonstrations are added. */
+.v2-combat-preview .v2-event-proof-trigger{
+ border:0;background:transparent;padding:0;font:inherit;color:var(--accent);
+ cursor:pointer;text-decoration:underline;text-decoration-color:transparent;
+ text-underline-offset:4px
+}
+.v2-combat-preview .v2-event-proof-trigger span{font-size:11px;margin-left:5px}
+.v2-combat-preview .v2-event-proof-trigger:is(:hover,:focus-visible,[aria-pressed="true"]){text-decoration-color:var(--accent);outline-offset:4px}
+.v2-combat-preview .v2-selectable-profile{cursor:pointer;transition:background .12s,box-shadow .12s}
+.v2-combat-preview .v2-selectable-profile:is(:hover,:focus-visible,[aria-pressed="true"]){
+ background:#f0e2bd;box-shadow:0 0 0 2px var(--gold)
+}
+.v2-combat-preview .v2-selectable-profile:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.v2-combat-preview .v2-selectable-profile::after{content:"▶";position:absolute;right:10px;top:7px;font:10px var(--body);color:var(--accent)}
+.v2-combat-preview .combat-main>.tabframe{position:relative}
+.v2-combat-preview .v2-full-vfx-button{
+ position:absolute;top:0;right:0;z-index:4;border:var(--border) solid var(--ink);
+ border-radius:10px 10px 0 0;background:var(--hub-yellow);padding:5px 11px;
+ font:700 10px/1.45 var(--body);letter-spacing:.05em;cursor:pointer;height:29px
+}
+.v2-combat-preview .v2-full-vfx-button:hover{background:var(--gold)}
+.v2-combat-preview .v2-battle-proof{
+ position:absolute;inset:0;z-index:3;background:rgba(244,230,199,.965);
+ border-radius:0 16px 16px 16px;padding:clamp(11px,1.4vw,21px);
+ display:flex;align-items:center;justify-content:center
+}
+.v2-combat-preview .v2-proof-close{
+ position:absolute;right:10px;top:9px;width:28px;height:28px;border:1px solid var(--ink);
+ border-radius:50%;background:var(--paper);font:20px/1 var(--body);cursor:pointer;z-index:1
+}
+.v2-combat-preview .v2-proof-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;text-align:center;width:100%;height:100%;min-height:0}
+.v2-combat-preview .v2-proof-kicker{font:700 9px/1.3 var(--body);letter-spacing:.09em;color:var(--accent)}
+.v2-combat-preview .v2-proof-inner h3{font:400 clamp(14px,1.35vw,22px)/1.2 var(--display);margin:0}
+.v2-combat-preview .v2-proof-inner img{height:min(44%,140px);width:85%;min-height:0;object-fit:contain;image-rendering:pixelated}
+.v2-combat-preview .v2-proof-inner small{font:10px/1.3 var(--body);color:var(--muted);max-width:90%}
+.v2-combat-preview .v2-proof-inner #v2ProofBody{font:11px/1.35 var(--body);color:var(--muted);max-width:90%}
+.v2-combat-preview .v2-event-steps{display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap}
+.v2-combat-preview .v2-event-steps span{border:1px dashed var(--accent);border-radius:9px;padding:7px;background:#eee1c4;font:10px/1.3 var(--body);color:var(--ink)}
+.v2-combat-preview .v2-event-steps b{color:var(--accent);font-size:14px}
+.v2-combat-preview .v2-full-vfx-dialog{
+ position:fixed;margin:auto;inset:0;width:min(1380px,94vw);max-width:94vw;
+ max-height:94dvh;border:2px solid var(--ink);border-radius:18px;
+ background:var(--paper);padding:17px;box-shadow:0 24px 90px #1a2f2655;
+ z-index:80;color:var(--ink)
+}
+.v2-combat-preview .v2-full-vfx-dialog::backdrop{background:rgba(19,30,23,.79)}
+.v2-combat-preview .v2-full-vfx-header{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:13px;font:700 12px/1.35 var(--body);letter-spacing:.08em;color:var(--accent)}
+.v2-combat-preview .v2-full-vfx-header button{background:var(--paper);border:1px solid var(--ink);border-radius:50%;width:36px;height:36px;font:24px/1 var(--body);cursor:pointer}
+.v2-combat-preview .v2-full-vfx-stage{
+ position:relative;aspect-ratio:16/9;max-height:calc(94dvh - 95px);overflow:hidden;
+ display:flex;align-items:center;justify-content:center;background:var(--ink);border-radius:12px
+}
+.v2-combat-preview .v2-full-vfx-stage img{display:block;width:100%;height:100%;object-fit:contain;filter:brightness(.6)}
+.v2-combat-preview .v2-full-vfx-pending{
+ position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;
+ justify-content:center;text-align:center;gap:11px;padding:25px;color:var(--paper);
+ background:linear-gradient(135deg,rgba(10,22,17,.3),rgba(10,22,17,.76))
+}
+.v2-combat-preview .v2-full-vfx-pending h3{font:400 clamp(28px,3.6vw,60px)/1.12 var(--display);margin:0;color:var(--paper)}
+.v2-combat-preview .v2-full-vfx-pending p{font:700 13px/1.4 var(--body);letter-spacing:.12em;color:var(--gold)}
+.v2-combat-preview .v2-full-vfx-pending small{font:13px/1.5 var(--body);max-width:610px}
+@media(max-height:780px){
+ .v2-home-preview .home-content[data-home-mode="responds"] h2{font-size:clamp(32px,2.8vw,44px)}
+ .v2-home-preview .home-content[data-home-mode="responds"] .home-tabs{margin-top:18px}
+ .v2-home-preview .v2-responds-gallery{gap:16px}
+ .v2-reference-traveler{bottom:10.5%}
+}
+@media(prefers-reduced-motion:reduce){.v2-combat-preview .v2-selectable-profile{transition:none}}
