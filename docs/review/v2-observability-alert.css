@@ -1,41 +1,49 @@
-/* V2-only: a discreet historical alert reminder inside the existing Overview.
-   Authentic public screenshot from the archived Alert page; no new dashboard. */
+/* V2 only: a small, separate historical Slack alert cue beside the
+   dashboard category tabs. The Overview Technical Health panel stays intact. */
 .v2-dd-preview{background:var(--paper);color:var(--ink)}
-.v2-dd-preview .dd-overview-copy{gap:clamp(7px,1vh,12px)}
-.v2-dd-preview .dd-overview-copy h2{font-size:clamp(20px,1.6vw,26px)}
-.v2-dd-preview .dd-overview-copy .dd-coverage h3{margin:0 0 4px}
-.v2-dd-preview .dd-overview-copy .dd-coverage p{font-size:clamp(12px,.93vw,14px);line-height:1.42}
-.v2-dd-preview .v2-dd-alert-hint{
-  display:flex;align-items:center;gap:9px;
-  padding:5px 8px;min-width:0;flex:none;
-  background:rgba(207,166,106,.15);
-  border:1px solid rgba(181,110,85,.65);border-radius:10px;
+.v2-dd-preview .v2-dd-toolbar{
+ display:flex;align-items:center;gap:clamp(9px,1vw,16px);
+ min-width:0;flex:0 0 auto;flex-wrap:wrap
 }
-.v2-dd-preview .v2-dd-alert-hint a{
-  width:48px;height:32px;flex:none;border:1px solid var(--line);
-  border-radius:5px;overflow:hidden;background:var(--paper)
+.v2-dd-preview .v2-dd-toolbar .dd-tabrow{
+ flex:1 1 auto;min-width:0;display:flex;flex-wrap:wrap;align-items:center
 }
-.v2-dd-preview .v2-dd-alert-hint a img{
-  display:block;width:100%;height:100%;object-fit:cover;object-position:top left
+.v2-dd-preview .v2-dd-alert-banner{
+ display:flex;align-items:center;gap:9px;flex:0 0 auto;
+ min-height:37px;padding:6px 12px;
+ border:1px solid var(--accent);border-radius:999px;
+ background:rgba(207,166,106,.14);color:var(--ink);
+ text-decoration:none;transition:background .15s
 }
-.v2-dd-preview .v2-dd-alert-hint a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.v2-dd-preview .v2-dd-alert-hint>div{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1}
-.v2-dd-preview .v2-dd-alert-hint strong{
-  color:var(--accent);font:700 10px/1.25 var(--body);letter-spacing:.06em;white-space:nowrap
+.v2-dd-preview .v2-dd-alert-banner:is(:hover,:focus-visible){
+ background:rgba(207,166,106,.31);outline:2px solid var(--accent);outline-offset:2px
 }
-.v2-dd-preview .v2-dd-alert-hint span{
-  color:var(--muted);font:10px/1.24 var(--body)
+.v2-dd-preview .v2-dd-alert-bell{
+ display:grid;place-items:center;width:21px;height:21px;
+ flex:0 0 auto;border:1px solid var(--accent);border-radius:50%;
+ color:var(--accent);font:700 13px/1 var(--body)
 }
-.v2-dd-preview .v2-dd-alert-notice{opacity:.6;font-size:8px!important;letter-spacing:.04em;flex:none}
+.v2-dd-preview .v2-dd-alert-text{display:flex;flex-direction:column;gap:2px}
+.v2-dd-preview .v2-dd-alert-text strong{
+ font:700 10px/1.2 var(--body);color:var(--accent);letter-spacing:.07em;
+ white-space:nowrap
+}
+.v2-dd-preview .v2-dd-alert-text small{
+ font:10px/1.25 var(--body);color:var(--muted);white-space:nowrap
+}
 .v2-dd-preview .v2-dd-review-note{
-  position:fixed;left:50%;bottom:5px;transform:translateX(-50%);
-  z-index:70;pointer-events:none;max-width:92vw;
-  color:var(--accent);font:700 9px/1.2 var(--body);
-  letter-spacing:.02em;text-align:center
+ position:fixed;left:50%;bottom:5px;transform:translateX(-50%);
+ z-index:70;pointer-events:none;max-width:92vw;
+ color:var(--accent);font:700 9px/1.2 var(--body);
+ letter-spacing:.02em;text-align:center
 }
-@media(max-height:780px){
-  .v2-dd-preview .dd-overview-copy{gap:7px;padding:13px 15px}
-  .v2-dd-preview .v2-dd-alert-hint{padding:3px 6px;gap:7px}
-  .v2-dd-preview .v2-dd-alert-hint a{height:26px;width:39px}
-  .v2-dd-preview .v2-dd-alert-hint strong{font-size:9px}
+@media(max-width:1160px){
+ .v2-dd-preview .v2-dd-alert-banner{padding:6px 10px;min-height:35px}
+ .v2-dd-preview .v2-dd-alert-text small{font-size:9px}
 }
+@media(max-width:720px){
+ .v2-dd-preview .v2-dd-toolbar{gap:7px}
+ .v2-dd-preview .v2-dd-toolbar .dd-tabrow{flex:1 0 100%}
+ .v2-dd-preview .v2-dd-alert-banner{margin-left:auto}
+}
+@media(prefers-reduced-motion:reduce){.v2-dd-preview .v2-dd-alert-banner{transition:none}}
