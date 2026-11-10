@@ -100,8 +100,8 @@
     },
     {
       "id": "datadog.integrated-scenes",
-      "use": "Pages 17–19: scoped approved compositions, on-demand media, local replay/sound, scrollable evidence and source inspection",
-      "variants": "Native v3 scenes; Overview side-by-side; detail Option A titled stack; Slack/Datadog ALERT/RECOVERY",
+      "use": "Current V2 Pages 16–17: native telemetry and four-dashboard Observability with historical Slack banner",
+      "variants": "Native v3 scenes; Overview side-by-side; detail Option A titled stack; historical alert image opens from the standalone banner. Separate Alert scene retained in Previous/V1.",
       "source": "../datadog.css",
       "behavior": "../datadog.js",
       "status": "DESIGN_APPROVED / integrated after candidate verification",
@@ -150,6 +150,19 @@
       "variants": "Mouse / Enter / Space; repeat click replay; reduced-motion static highlights",
       "status": "APPROVED / INTEGRATED / PUBLIC_VERIFIED",
       "former_review": "../review/future-click.html (redirect to native scene)"
+    },
+    {
+      "id": "v2.interim.interactions",
+      "use": "Native Home 2×2 galleries, scoped Combat demonstrations and standalone Slack banner",
+      "source": "../index.html",
+      "styles": "../v2-interim.css",
+      "behavior": [
+        "../scene-content.js",
+        "../events-combat.js",
+        "../datadog.js"
+      ],
+      "status": "IMPLEMENTED / PENDING MEDIA",
+      "notes": "Existing authentic files only. Pending slots are documented separately and do not claim asset existence."
     }
   ],
   "assets": [
@@ -399,7 +412,7 @@
       "use": "Page 05",
       "status": "APPROVED / INTEGRATED",
       "review_status": "APPROVED",
-      "integrated_in": "../index.html?page=05",
+      "integrated_in": "../index.html?page=visual-novel",
       "permission": "User authorized publication of project-owned gameplay captures in this asset-collection task, 2026-11-08.",
       "metadata": {
         "width": 1600,
@@ -414,7 +427,7 @@
       "use": "Page 05",
       "status": "APPROVED / INTEGRATED",
       "review_status": "APPROVED",
-      "integrated_in": "../index.html?page=05",
+      "integrated_in": "../index.html?page=visual-novel",
       "permission": "User authorized publication of project-owned gameplay captures in this asset-collection task, 2026-11-08.",
       "metadata": {
         "width": 1600,
@@ -429,7 +442,7 @@
       "use": "Page 05",
       "status": "APPROVED / INTEGRATED",
       "review_status": "APPROVED",
-      "integrated_in": "../index.html?page=05",
+      "integrated_in": "../index.html?page=visual-novel",
       "permission": "User authorized publication of project-owned gameplay captures in this asset-collection task, 2026-11-08.",
       "metadata": {
         "width": 1600,
@@ -444,7 +457,7 @@
       "use": "Page 06",
       "status": "APPROVED / INTEGRATED",
       "review_status": "APPROVED",
-      "integrated_in": "../index.html?page=06",
+      "integrated_in": "../index.html?page=home-hub",
       "permission": "User authorized publication of project-owned gameplay captures in this asset-collection task, 2026-11-08.",
       "metadata": {
         "width": 1600,
@@ -458,12 +471,13 @@
       "use": "Page 06",
       "status": "APPROVED / INTEGRATED",
       "review_status": "APPROVED",
-      "integrated_in": "../index.html?page=06",
+      "integrated_in": "../index.html?page=home-hub",
       "permission": "User authorized publication of project-owned gameplay captures in this asset-collection task, 2026-11-08.",
       "metadata": {
         "width": 1600,
         "height": 900
-      }
+      },
+      "v2_usage": "Historical authentic reference only; cumulative replacement PENDING MEDIA, explicitly labelled in Current."
     },
     {
       "id": "home.growth.03",
@@ -472,12 +486,13 @@
       "use": "Page 06",
       "status": "APPROVED / INTEGRATED",
       "review_status": "APPROVED",
-      "integrated_in": "../index.html?page=06",
+      "integrated_in": "../index.html?page=home-hub",
       "permission": "User authorized publication of project-owned gameplay captures in this asset-collection task, 2026-11-08.",
       "metadata": {
         "width": 1600,
         "height": 900
-      }
+      },
+      "v2_usage": "Historical authentic reference only; cumulative replacement PENDING MEDIA, explicitly labelled in Current."
     },
     {
       "id": "home.growth.04",
@@ -486,13 +501,14 @@
       "use": "Page 06",
       "status": "APPROVED / INTEGRATED",
       "review_status": "APPROVED",
-      "integrated_in": "../index.html?page=06",
+      "integrated_in": "../index.html?page=home-hub",
       "permission": "User authorized publication of project-owned gameplay captures in this asset-collection task, 2026-11-08.",
       "metadata": {
         "width": 1600,
         "height": 900
       },
-      "limitations": "Genuine implemented stage 4, but shares the stage-3 furnished layout; differences are subtle warmer lighting/string lights. Do not present it as a new architectural rebuild."
+      "limitations": "Genuine implemented stage 4, but shares the stage-3 furnished layout; differences are subtle warmer lighting/string lights. Do not present it as a new architectural rebuild.",
+      "v2_usage": "Historical authentic reference only; cumulative replacement PENDING MEDIA, explicitly labelled in Current."
     },
     {
       "id": "home.interaction.cats",
@@ -501,7 +517,7 @@
       "use": "Page 06",
       "status": "APPROVED / INTEGRATED",
       "review_status": "APPROVED",
-      "integrated_in": "../index.html?page=06",
+      "integrated_in": "../index.html?page=home-hub",
       "permission": "User authorized publication of project-owned gameplay captures in this asset-collection task, 2026-11-08.",
       "metadata": {
         "width": 1600,
@@ -520,7 +536,7 @@
       "use": "Page 06",
       "status": "APPROVED / INTEGRATED",
       "review_status": "APPROVED",
-      "integrated_in": "../index.html?page=06",
+      "integrated_in": "../index.html?page=home-hub",
       "permission": "User authorized publication of project-owned gameplay captures in this asset-collection task, 2026-11-08.",
       "metadata": {
         "width": 1600,
@@ -540,7 +556,7 @@
       "use": "Page 06",
       "status": "APPROVED / INTEGRATED",
       "review_status": "APPROVED",
-      "integrated_in": "../index.html?page=06",
+      "integrated_in": "../index.html?page=home-hub",
       "permission": "User authorized publication of project-owned gameplay captures in this asset-collection task, 2026-11-08.",
       "metadata": {
         "width": 1600,
@@ -559,7 +575,7 @@
       "use": "Page 07",
       "status": "APPROVED / INTEGRATED",
       "review_status": "APPROVED",
-      "integrated_in": "../index.html?page=07",
+      "integrated_in": "../index.html?page=payment",
       "permission": "User explicitly authorized one new 60-tuna Xsolla sandbox payment and capture in chat on 2026-11-08; existing asset-publication authorization applies.",
       "metadata": {
         "width": 1600,
@@ -590,7 +606,7 @@
       "use": "Page 07",
       "status": "APPROVED / INTEGRATED",
       "review_status": "APPROVED",
-      "integrated_in": "../index.html?page=07",
+      "integrated_in": "../index.html?page=payment",
       "permission": "User explicitly authorized one new 60-tuna Xsolla sandbox payment and capture in chat on 2026-11-08; existing asset-publication authorization applies.",
       "metadata": {
         "width": 1600,
@@ -621,7 +637,7 @@
       "use": "Page 07",
       "status": "APPROVED / INTEGRATED",
       "review_status": "APPROVED",
-      "integrated_in": "../index.html?page=07",
+      "integrated_in": "../index.html?page=payment",
       "permission": "User explicitly authorized one new 60-tuna Xsolla sandbox payment and capture in chat on 2026-11-08; existing asset-publication authorization applies.",
       "metadata": {
         "width": 1600,
@@ -2180,7 +2196,7 @@
       "id": "closing.poster.original",
       "source": "../assets/closing/stray-kitty-poster.png",
       "creator": "User-supplied Stray Kitty project poster; no generated or substituted art",
-      "use": "Approved Current Page 02 elevator-pitch poster and final Page 23 Q&A; complete supplied artwork preserved",
+      "use": "Approved Current Page 02 elevator-pitch poster and final Page 21 Q&A; complete supplied artwork preserved",
       "status": "USER-SUPPLIED / PUBLICATION EXPLICITLY AUTHORIZED",
       "permission": "User requested this exact file be committed and published in the public presentation repository on November 9, 2026. No broader ownership or license assertion.",
       "metadata": {
@@ -2200,7 +2216,7 @@
       "id": "closing.poster.web",
       "source": "../assets/closing/stray-kitty-poster.webp",
       "creator": "User-supplied Stray Kitty project poster; no generated or substituted art",
-      "use": "Approved Current Page 02 elevator-pitch poster and final Page 23 Q&A; complete supplied artwork preserved",
+      "use": "Approved Current Page 02 elevator-pitch poster and final Page 21 Q&A; complete supplied artwork preserved",
       "status": "USER-SUPPLIED / PUBLICATION EXPLICITLY AUTHORIZED",
       "permission": "User requested this exact file be committed and published in the public presentation repository on November 9, 2026. No broader ownership or license assertion.",
       "metadata": {
@@ -2217,5 +2233,121 @@
       "origin": "../assets/closing/stray-kitty-poster.png",
       "encoding": "Lossless WebP; decoded RGB pixels verified identical. No crop, resizing, artwork change or embedded metadata."
     }
-  ]
+  ],
+  "current_presentation": {
+    "label": "V2 Interim — Media Pending",
+    "build_marker": "20261110-v2-interim-part1",
+    "scene_count": 21,
+    "registry": [
+      {
+        "page": "01",
+        "id": "opening-film",
+        "title": "Opening Film"
+      },
+      {
+        "page": "02",
+        "id": "elevator-pitch",
+        "title": "Elevator Pitch"
+      },
+      {
+        "page": "03",
+        "id": "game-flow",
+        "title": "Game Flow"
+      },
+      {
+        "page": "04",
+        "id": "visual-novel",
+        "title": "Visual Novel"
+      },
+      {
+        "page": "05",
+        "id": "home-hub",
+        "title": "Home Hub"
+      },
+      {
+        "page": "06",
+        "id": "payment",
+        "title": "Payment"
+      },
+      {
+        "page": "07",
+        "id": "four-maps",
+        "title": "Four Maps"
+      },
+      {
+        "page": "08",
+        "id": "vertical-design",
+        "title": "Three Connected Levels"
+      },
+      {
+        "page": "09",
+        "id": "greybox",
+        "title": "Greybox"
+      },
+      {
+        "page": "10",
+        "id": "random-events",
+        "title": "Random Events"
+      },
+      {
+        "page": "11",
+        "id": "combat",
+        "title": "Real-Time Tactical Tower Defense"
+      },
+      {
+        "page": "12",
+        "id": "dice-animations",
+        "title": "Dice Roll Animations"
+      },
+      {
+        "page": "13",
+        "id": "adaptive-interface",
+        "title": "Responsive & Translucent UI"
+      },
+      {
+        "page": "14",
+        "id": "technical-architecture",
+        "title": "Technical Architecture"
+      },
+      {
+        "page": "15",
+        "id": "kubernetes-deployment",
+        "title": "Kubernetes Deployment"
+      },
+      {
+        "page": "16",
+        "id": "gameplay-telemetry",
+        "title": "From Gameplay to Telemetry"
+      },
+      {
+        "page": "17",
+        "id": "observability",
+        "title": "Observability Across the Game"
+      },
+      {
+        "page": "18",
+        "id": "cross-team-collaboration",
+        "title": "Cross-Team Collaboration"
+      },
+      {
+        "page": "19",
+        "id": "design-test-rethink",
+        "title": "Design. Test. Rethink."
+      },
+      {
+        "page": "20",
+        "id": "connected-world",
+        "title": "A Dynamic, Living World"
+      },
+      {
+        "page": "21",
+        "id": "closing-qa",
+        "title": "Q & A"
+      }
+    ],
+    "media_status": "PENDING MEDIA",
+    "pending_bindings": "PRESENTATION-V2-MEDIA-SLOTS.json",
+    "handoff": "PRESENTATION-V2-PHASE2-HANDOFF.md",
+    "note": "Registry and stable integrated_in links describe Current V2. Existing capture dates, numbered source folders and collection-page descriptions remain historical provenance; no pending media files have been registered."
+  }
 }

@@ -1,0 +1,6 @@
+/* Approved closing composition; all movement belongs to the existing v3 engine. */
+.scene.scene-qa{perspective:none}
+.scene-qa .scene-camera{container-type:inline-size}
+.scene-qa .qa-composition{position:absolute;inset:8% 5.5%;display:grid;grid-template-columns:minmax(0,3fr) minmax(0,7fr);column-gap:2.5%;align-items:center}
+.scene-qa .qa-composition h1{margin:0;font:400 9.2cqw/1 var(--display);letter-spacing:-.06em;white-space:nowrap;text-align:center;color:var(--ink)}
+.scene-qa .qa-poster{display:block;width:100%;height:auto;object-fit:contain}

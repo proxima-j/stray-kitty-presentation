@@ -1,9 +1,155 @@
 {
   "current": {
     "entry": "./",
+    "candidate_base_commit": "9e2cd416bde4268df0064eab90b09151f51e01db",
+    "integration_commit": "INTEGRATION_COMMIT",
+    "build_marker": "20261110-v2-interim-part1",
+    "description": "21-scene V2 Interim — Media Pending. Approved structural integration using genuine existing media and explicit pending states.",
+    "publication_status": "V2 INTERIM — MEDIA PENDING",
+    "verification_status": "VERIFIED CANDIDATE BEFORE ROTATION",
+    "local_verified_at": "2026-11-10T22:27:11.221207+08:00",
+    "verification_notes": "Focused real-browser checks at 1600x900 and 1366x768: all 21 direct scene links; identical Home mode geometry and muted playback/pause; Combat three still selections, genuine Reposition/Activate Skills, evidence-pending bridge, advisor Local Fallback, 24% idle transparent Return and keyboard-focus affordance, one active video, completion/reset/scene exit/re-entry; original Slack image and four dashboards; native Pitch-to-Game Flow forward/back, opening full film unmuted on user Play and manual Skip. No console warnings/errors observed. Static local asset references resolve. 18 retained scenes unchanged except numbering; engine and generic media player byte-identical.",
+    "registry": [
+      {
+        "page": "01",
+        "id": "opening-film",
+        "title": "Opening Film"
+      },
+      {
+        "page": "02",
+        "id": "elevator-pitch",
+        "title": "Elevator Pitch"
+      },
+      {
+        "page": "03",
+        "id": "game-flow",
+        "title": "Game Flow"
+      },
+      {
+        "page": "04",
+        "id": "visual-novel",
+        "title": "Visual Novel"
+      },
+      {
+        "page": "05",
+        "id": "home-hub",
+        "title": "Home Hub"
+      },
+      {
+        "page": "06",
+        "id": "payment",
+        "title": "Payment"
+      },
+      {
+        "page": "07",
+        "id": "four-maps",
+        "title": "Four Maps"
+      },
+      {
+        "page": "08",
+        "id": "vertical-design",
+        "title": "Three Connected Levels"
+      },
+      {
+        "page": "09",
+        "id": "greybox",
+        "title": "Greybox"
+      },
+      {
+        "page": "10",
+        "id": "random-events",
+        "title": "Random Events"
+      },
+      {
+        "page": "11",
+        "id": "combat",
+        "title": "Real-Time Tactical Tower Defense"
+      },
+      {
+        "page": "12",
+        "id": "dice-animations",
+        "title": "Dice Roll Animations"
+      },
+      {
+        "page": "13",
+        "id": "adaptive-interface",
+        "title": "Responsive & Translucent UI"
+      },
+      {
+        "page": "14",
+        "id": "technical-architecture",
+        "title": "Technical Architecture"
+      },
+      {
+        "page": "15",
+        "id": "kubernetes-deployment",
+        "title": "Kubernetes Deployment"
+      },
+      {
+        "page": "16",
+        "id": "gameplay-telemetry",
+        "title": "From Gameplay to Telemetry"
+      },
+      {
+        "page": "17",
+        "id": "observability",
+        "title": "Observability Across the Game"
+      },
+      {
+        "page": "18",
+        "id": "cross-team-collaboration",
+        "title": "Cross-Team Collaboration"
+      },
+      {
+        "page": "19",
+        "id": "design-test-rethink",
+        "title": "Design. Test. Rethink."
+      },
+      {
+        "page": "20",
+        "id": "connected-world",
+        "title": "A Dynamic, Living World"
+      },
+      {
+        "page": "21",
+        "id": "closing-qa",
+        "title": "Q & A"
+      }
+    ],
+    "removed_from_v2": [
+      "roadmap",
+      "detect-alert-recover"
+    ],
+    "final_scene": {
+      "id": "closing-qa",
+      "page": 21,
+      "after": "connected-world"
+    },
+    "media_status": "PENDING MEDIA",
+    "pending_slots": [
+      "home-growth-02",
+      "home-growth-03",
+      "home-growth-04",
+      "home-restoration",
+      "combat-default",
+      "combat-skill-rongrong",
+      "combat-skill-banban",
+      "combat-skill-diandian",
+      "combat-event-choice",
+      "combat-event-state",
+      "combat-event-battle"
+    ],
+    "handoff": "library/PRESENTATION-V2-PHASE2-HANDOFF.md",
+    "media_inventory": "library/PRESENTATION-V2-MEDIA-SLOTS.json",
+    "public_preview": "https://proxima-j.github.io/stray-kitty-presentation/",
+    "publication_gate": "Final completion report requires a green Pages workflow and matching public 20261110-v2-interim-part1 marker. Workflow runs remain the authoritative deployment record.",
+    "outgoing_current_source": "9e2cd416bde4268df0064eab90b09151f51e01db"
+  },
+  "previous": {
+    "entry": "previous/",
     "candidate_base_commit": "e68b52bb0594db5e987097e3aeccd18b26aeec8a",
     "build_marker": "20261110-qa-integrated1",
-    "description": "Twenty-three scenes: the complete game, technical/Datadog and Teamwork/Future sequence, followed by the final Q & A scene.",
+    "description": "Outgoing verified 23-scene deck, including Roadmap, separate Alert and final Q&A. Frozen before V2 interim promotion.",
     "publication_status": "VERIFIED",
     "local_verified_at": "2026-11-10T05:33:44.511900+00:00",
     "verification_notes": "Focused private-candidate checks at 1600x900 and 1366x768: exact approved 30/70 composition, full 3344x1882 poster visible without cropping or distortion, large Faculty Glyphic heading, native single cat/route. Future ↔ Q&A arrow navigation and last-scene ordering checked. All original 22 scene blocks and runtime dependencies byte-identical; no engine or media changes, original 4200ms behavior preserved.",
@@ -17,57 +163,19 @@
     "outgoing_current_source": "e68b52bb0594db5e987097e3aeccd18b26aeec8a",
     "public_verified_at": "2026-11-10T05:44:10.365546+00:00",
     "publication_evidence": {
-      "integration_commit": "4f66ae0b09646233a4875b31b9c99f51ac12d5ff",
-      "pages_build": "https://github.com/proxima-j/stray-kitty-presentation/actions/runs/42763136807",
-      "url": "https://proxima-j.github.io/stray-kitty-presentation/?page=closing-qa",
-      "http_status": 200,
-      "verification": "Published native Page 23 observed in browser: full 3344x1882 poster loaded, Faculty Glyphic loaded, final registry position closing-qa, 23 scenes. Right at final scene remained at distance 22 / progress 1. No crop or duplicate cat/route. Private candidate layouts passed at both requested sizes, with Future ↔ Q&A navigation."
-    }
-  },
-  "previous": {
-    "entry": "previous/",
-    "candidate_base_commit": "89e52a078d0e2ff4ad03fa1ff3250abd9d9d5155",
-    "build_marker": "20261109-future-integrated1",
-    "description": "Outgoing verified twenty-two-page deck ending with A Dynamic, Living World",
-    "publication_status": "VERIFIED",
-    "local_verified_at": "2026-11-10T05:35:52.548332+00:00",
-    "verification_notes": "Focused candidate browser checks at 1600x900 and 1366x768. Four local stages, matching text/evidence, Next/Previous, focused Space isolation and full-image inspection; 36-cell grids with 10/6 failures; four shared future images and six bidirectional connectors. Forward/back through 19-22; opening full film plays with sound and manual skip; existing dialogue interaction. Prior 19 scene blocks and all runtime files byte-identical; original v3 4200ms beat, single cat and route preserved. GitLab evidence #4 notes 8317/8605/9310, related merged !80 via integration !81; no formal approval invented.",
-    "public_verified_at": "2026-11-10T05:44:10.365546+00:00",
-    "publication_evidence": {
-      "source_commit": "e68b52bb0594db5e987097e3aeccd18b26aeec8a",
+      "source_commit": "9e2cd416bde4268df0064eab90b09151f51e01db",
+      "pages_build": "https://github.com/proxima-j/stray-kitty-presentation/actions/runs/42830474625",
       "url": "https://proxima-j.github.io/stray-kitty-presentation/previous/",
-      "http_status": 200,
-      "verification": "Published 22-scene Previous loaded in a real browser at Future: all four shared images loaded, Faculty Glyphic loaded, Future module initialized. Rebased local snapshot click interaction passed. No media duplication."
+      "note": "Outgoing source was publicly verified before rotation; rebased Previous checked locally after snapshot."
     },
-    "readability_maintenance_base_commit": "03e1e0fdce4e1bc9818bac079c3633a9d0fcc54a",
-    "readability_maintenance_notes": "User-requested Page 20 readability: enlarged evidence allocation and CSS-only source excerpts (title/status, mentions and selected findings), complete original on click. Page-20-only cat/route clearance adds 7vh with smooth/reduced-motion-aware entry/exit, without editing v3 engine or 4200ms navigation. Page 21 diagrams, Page 22, original media and Previous unchanged; no rotation.",
-    "page_02_poster_maintenance": {
-      "integrated_commit": "093219a80aa29fbc8e1c1208a52536a84ae0eed2",
-      "public_pages_build": "https://github.com/proxima-j/stray-kitty-presentation/actions/runs/42635912073",
-      "published_verified_date": "2026-11-09",
-      "details": "Page 02 exact approved text; complete uncropped user poster above existing D20 and playful-cat art; deferred media; unchanged 22-scene v3 engine/route and frozen 19-scene Previous.",
-      "check": "Pages build success and read-only post-publication browser observation of new poster gallery, image loading, horizontal supporting artwork and no pitch/route overlap. Broader deck regression not re-run for this single-slide update.",
-      "rotation": "None: individual slide content maintenance, as permitted by repository policy."
-    },
-    "future_interaction_maintenance": {
-      "base_commit": "de465ba7d547dba3a5886eff3d990b18fd70a924",
-      "details": "Approved Page 22 click response: incoming pulse through Living World, then two illustrative future influences; approximately 1.1 seconds, replayable, no idle loops. Shared future-world.js owns connectors and scene-local interaction. Effects stop on scene exit and respect reduced motion; Enter/Space remain local. Title and bottom takeaway retained.",
-      "rotation": "None: individual scene interaction maintenance; frozen 19-scene Previous unchanged.",
-      "publication_status": "VERIFIED",
-      "local_verified_at": "2026-11-09T15:07:17.292771+00:00",
-      "verification": "Focused browser checks at 1366x768 and 1600x900: four images and unchanged composition, finite pulse, replay and rapid reselection, Enter/Space kept scene 22, reverse/forward 22↔21, effect stopped on exit, idle connector animations none. First 21 scene blocks and collaboration prefix unchanged; original engine, 4200ms beat, one cat/route, Previous and Q&A unchanged.",
-      "public_verified_at": "2026-11-09T15:11:24.549442+00:00",
-      "publication_evidence": {
-        "integration_commit": "b94208c08361c354e452e9258e5cca541df804f9",
-        "pages_build": "https://github.com/proxima-j/stray-kitty-presentation/actions/runs/42641412930",
-        "url": "https://proxima-j.github.io/stray-kitty-presentation/?page=connected-world",
-        "verification": "Published native Page 22 click/replay and local keyboard activation observed with four loaded images; finite effect and scene exit/return verified locally at both normal presentation sizes. First 21 scenes, global 4200ms engine, single cat/route, Previous and Q&A preserved."
-      }
-    },
-    "source_commit": "e68b52bb0594db5e987097e3aeccd18b26aeec8a",
-    "snapshot_note": "Frozen only after the approved 23-scene closing candidate passed. Independent small runtime files; all media shared once. Existing templates preserved separately.",
-    "rebased_verification": "Retained 22-scene runtime served locally: all four Future images loaded from shared ../assets paths, Faculty Glyphic loaded, and native Future click response remained functional."
+    "source_commit": "9e2cd416bde4268df0064eab90b09151f51e01db",
+    "snapshot_note": "Independent small runtime and style files, shared media once via ../assets/. Runtime preserved except relative asset rebasing. Archive V1 untouched."
   },
   "shared_assets": "assets/",
-  "retention": "Exactly two retained complete Stray Kitty decks: 23-scene Current and outgoing verified 22-scene Previous. Candidate passed before rotation. Media shared once; unrelated reusable template work preserved."
+  "retention": "Two working decks: 21-scene V2 Interim Current and outgoing verified 23-scene Previous. Permanent archived V1 remains separately immutable; no media duplication or review removal.",
+  "v1_archive": {
+    "branch": "archive/presentation-v1-2026-11-10",
+    "source_commit": "0daa72fda8cd7ab9f1a8a99aed9f4eb537137461",
+    "policy": "Immutable historical snapshot; unchanged by Part 1."
+  }
 }

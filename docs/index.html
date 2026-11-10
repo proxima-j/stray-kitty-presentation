@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="color-scheme" content="light">
+  <meta name="presentation-build" content="20261110-v2-interim-part1">
+  <meta name="presentation-status" content="V2 Interim — Media Pending">
   <title>Stray Kitty — Presentation</title>
   <link rel="stylesheet" href="engine-v3.css">
   <link rel="stylesheet" href="library/tokens.css">
@@ -12,7 +14,7 @@
   <link rel="stylesheet" href="pitch-poster.css?v=20261110-live-gameplay-loop">
   <link rel="stylesheet" href="level-design.css?v=20261109-level-design">
   <link rel="stylesheet" href="events-combat.css?v=20261109-integrated">
-  <link rel="preload" as="script" href="events-combat.js?v=20261109-integrated">
+  <link rel="preload" as="script" href="events-combat.js?v=20261110-v2-interim-part1">
   <link rel="stylesheet" href="technical.css?v=20261109-full-pipeline">
   <link rel="stylesheet" href="teamwork.css?v=20261109-future-integrated1">
   <link rel="stylesheet" href="datadog.css?v=20261109-datadog-taller-frames2">
@@ -20,10 +22,11 @@
   <link rel="preload" as="script" href="uiux.js?v=20261109-adaptive-fit">
   <link rel="preload" as="script" href="scene-content.js?v=20261109-on-demand-events">
   <link rel="preload" as="script" href="engine-v3.js?v=20261109-level-design">
+  <link rel="stylesheet" href="v2-interim.css?v=20261110-v2-interim-part1">
 </head>
 <body>
 <div id="scrollSpace" class="scroll-space">
- <main id="stage" class="stage" aria-label="Stray Kitty presentation — Pages 01 through 23">
+ <main id="stage" class="stage" aria-label="Stray Kitty presentation — Pages 01 through 21 · V2 Interim — Media Pending">
   <div id="world" class="world">
    <svg id="roadDrawing" class="route-svg" aria-hidden="true"><defs><clipPath id="revealClip"><rect id="routeReveal" x="0" y="0" width="0" height="2000"/></clipPath></defs><path id="routeGhost" class="route-ghost" d=""/><path id="routeInk" class="route-ink" d="" clip-path="url(#revealClip)"/></svg>
    <section id="opening-film" class="scene scene-film" data-title="Opening Film" data-scene="0" data-page="01" aria-label="Page 01 — Full-screen film">
@@ -55,14 +58,7 @@
      </section>
     </div></div>
    </section>
-   <section id="roadmap" class="scene" data-scene="2" data-page="03" data-title="Roadmap" aria-label="Page 03 — Roadmap">
-    <div class="scene-camera"><div class="roadmap-content">
-     <div class="roadmap-part" data-build="text" data-at="0.08"><span class="roadmap-partnum">PART 01</span><h2>The Game</h2></div>
-     <div class="roadmap-divider" data-build="line" data-at="0.35" aria-hidden="true"></div>
-     <div class="roadmap-part" data-build="text" data-at="0.58"><span class="roadmap-partnum">PART 02</span><h2>Technical Walkthrough</h2></div>
-    </div></div>
-   </section>
-   <section id="game-flow" class="scene" data-scene="3" data-page="04" data-title="Game Flow" aria-label="Page 04 — Game Flow">
+   <section id="game-flow" class="scene" data-scene="2" data-page="03" data-title="Game Flow" aria-label="Page 03 — Game Flow">
     <div class="scene-camera"><figure class="game-flow" data-build="rise" data-at="0.1">
      <svg viewBox="0 0 1400 700" role="img" aria-labelledby="flowTitle flowDesc">
       <title id="flowTitle">Game flow</title><desc id="flowDesc">Story, Map Exploration, Narrative and Random Events, Combat, then Story. Home Hub is separate, above-left, with one optional-access arrow toward open space in the loop.</desc>
@@ -83,7 +79,7 @@
     </figure></div>
    </section>
 
-   <section id="visual-novel" class="scene" data-scene="4" data-page="05" data-title="Visual Novel" aria-label="Page 05 — Visual Novel">
+   <section id="visual-novel" class="scene" data-scene="3" data-page="04" data-title="Visual Novel" aria-label="Page 04 — Visual Novel">
     <div class="scene-camera"><div class="content-page narrative-content">
      <h2 data-build="text" data-at="0.04">Visual Novel</h2>
      <div class="narrative-shell" data-build="rise" data-at="0.2">
@@ -96,33 +92,34 @@
      </div>
     </div></div>
    </section>
-   <section id="home-hub" class="scene" data-scene="5" data-page="06" data-title="Home Hub" aria-label="Page 06 — Home Hub">
-    <div class="scene-camera"><div class="content-page home-content" data-home-mode="growth">
-     <header class="home-copy" data-build="text" data-at="0.04">
-      <h2>A home that grows, responds, and becomes your own.</h2>
-      <div class="home-tabs" role="group" aria-label="Home Hub views">
-       <button type="button" data-home-view="growth" data-local-space aria-pressed="true" aria-controls="homeGrowth">THE HOME GROWS</button>
-       <button type="button" data-home-view="responds" data-local-space aria-pressed="false" aria-controls="homeResponds">THE HOME RESPONDS</button>
-      </div>
-     </header>
-     <div class="home-body" data-build="rise" data-at="0.22">
-      <div id="homeGrowth" class="home-view" data-view="growth"><div class="home-gallery growth-gallery">
-       <figure><div class="home-media"><img data-media-src="assets/pages/06/greenhouse-stage-01.webp?v=20261109-small" alt="Initial greenhouse shelter"></div><figcaption>BEGINNING</figcaption></figure>
-       <figure><div class="home-media"><img data-media-src="assets/pages/06/greenhouse-stage-02.webp?v=20261109-small" alt="Early greenhouse repairs"></div><figcaption>REBUILDING</figcaption></figure>
-       <figure><div class="home-media"><img data-media-src="assets/pages/06/greenhouse-stage-03.webp?v=20261109-small" alt="Developed shared greenhouse home"></div><figcaption>GROWING</figcaption></figure>
-       <figure><div class="home-media"><img data-media-src="assets/pages/06/greenhouse-stage-04.webp?v=20261109-small" alt="Final shared-home state with subtle warmer lighting and string lights"></div><figcaption>CELEBRATION</figcaption></figure>
-      </div></div>
-      <div id="homeResponds" class="home-view" data-view="responds" hidden><div class="home-gallery interaction-gallery">
-       <figure><div class="home-media video-media"><video data-scene-video muted loop playsinline data-media-poster="assets/pages/06/greenhouse-stage-03.webp?v=20261109-small" preload="none" data-media-src="assets/pages/06/cat-reaction-web.mp4" aria-label="Petting Tuanzi and the companion's response"></video><button class="clip-toggle" type="button" data-local-space aria-label="Pause cat reaction clip">Ⅱ</button></div><figcaption>INTERACTIVE</figcaption></figure>
-       <figure><div class="home-media video-media"><video data-scene-video muted loop playsinline data-media-poster="assets/pages/06/greenhouse-stage-03.webp?v=20261109-small" preload="none" data-media-src="assets/pages/06/postcard-to-parcel-web.mp4" aria-label="Postcard preparation, sending, parcel and furniture reveal; guaranteed-reward QA example"></video><button class="clip-toggle" type="button" data-local-space aria-label="Pause postcard clip">Ⅱ</button></div><figcaption>RANDOM REWARDS</figcaption></figure>
-       <figure><div class="home-media video-media"><video data-scene-video muted loop playsinline data-media-poster="assets/pages/06/greenhouse-stage-03.webp?v=20261109-small" preload="none" data-media-src="assets/pages/06/furniture-drag-save-web.mp4" aria-label="Dragging, placing and saving furniture"></video><button class="clip-toggle" type="button" data-local-space aria-label="Pause furniture clip">Ⅱ</button></div><figcaption>CUSTOMIZATION</figcaption></figure>
-      </div></div>
-     </div>
-    </div></div>
-   </section>
-   <section id="payment" class="scene" data-scene="6" data-page="07" data-title="Payment" aria-label="Page 07 — Payment, Xsolla Sandbox">
+   <section aria-label="Page 05 — Home Hub" class="scene" data-page="05" data-scene="4" data-title="Home Hub" id="home-hub">
+<div class="scene-camera"><div class="content-page home-content" data-home-mode="growth">
+<header class="home-copy" data-at="0.04" data-build="text">
+<h2>A home that grows, responds, and becomes your own.</h2>
+<div aria-label="Home Hub views" class="home-tabs" role="group">
+<button aria-controls="homeGrowth" aria-pressed="true" data-home-view="growth" data-local-space="" type="button">THE HOME GROWS</button>
+<button aria-controls="homeResponds" aria-pressed="false" data-home-view="responds" data-local-space="" type="button">THE HOME RESPONDS</button>
+</div>
+</header>
+<div class="home-body" data-at="0.22" data-build="rise">
+<div class="home-view" data-view="growth" id="homeGrowth"><div class="home-gallery growth-gallery">
+<figure><div class="home-media"><img alt="Original Beginning greenhouse screenshot retained as the baseline with no new furniture" data-media-src="assets/pages/06/greenhouse-stage-01.webp?v=20261109-small" data-v2-slot="home-growth-01" id="homeGrowth01"/></div><figcaption>BEGINNING</figcaption></figure>
+<figure><div class="home-media v2-growth-pending"><img alt="Authentic existing Stage 02 reference only; richer furniture capture is pending" class="v2-stage-reference" data-media-src="assets/pages/06/greenhouse-stage-02.webp?v=20261109-small" data-v2-slot="home-growth-02" id="homeGrowth02"/><div class="v2-growth-spec"><small>STAGE 02 · NEW CAPTURE PENDING</small><strong>FEW ADDITIONS</strong><span>Add a small number of genuine furnishings to the Beginning arrangement.</span></div></div><figcaption>REBUILDING</figcaption></figure>
+<figure><div class="home-media v2-growth-pending"><img alt="Authentic existing Stage 03 reference only; richer furniture capture is pending" class="v2-stage-reference" data-media-src="assets/pages/06/greenhouse-stage-03.webp?v=20261109-small" data-v2-slot="home-growth-03" id="homeGrowth03"/><div class="v2-growth-spec"><small>STAGE 03 · NEW CAPTURE PENDING</small><strong>MORE FURNITURE</strong><span>Carry forward earlier items and add several more furnishings.</span></div></div><figcaption>GROWING</figcaption></figure>
+<figure><div class="home-media v2-growth-pending"><img alt="Authentic existing Stage 04 reference only; richer furniture capture is pending" class="v2-stage-reference" data-media-src="assets/pages/06/greenhouse-stage-04.webp?v=20261109-small" data-v2-slot="home-growth-04" id="homeGrowth04"/><div class="v2-growth-spec"><small>STAGE 04 · NEW CAPTURE PENDING</small><strong>MOST FURNISHED</strong><span>Keep the accumulated items and show the richest real home arrangement.</span></div></div><figcaption>CELEBRATION</figcaption></figure>
+</div></div>
+<div class="home-view" data-view="responds" hidden="" id="homeResponds"><div class="home-gallery growth-gallery v2-responds-gallery">
+<figure class="v2-pending-repair"><div class="home-media v2-asset-placeholder" id="homeRestorationMedia"><div class="v2-asset-placeholder-content"><span>NEW</span><strong>HOME RESTORATION</strong><small>ACTUAL REPAIR ANIMATION PENDING</small><small>Genuine in-game sequence will appear here</small></div><video aria-label="Verified home restoration capture pending" data-media-src="" data-scene-video="" data-v2-slot="home-restoration" hidden="" id="homeRestorationVideo" loop="" muted="" playsinline="" preload="none"></video><button aria-label="Play home restoration clip" class="clip-toggle" data-local-space="" hidden="" type="button">▶</button></div><figcaption>RESTORATION</figcaption></figure>
+<figure><div class="home-media video-media"><video aria-label="Petting Tuanzi and the companion's response" data-media-poster="assets/pages/06/greenhouse-stage-03.webp?v=20261109-small" data-media-src="assets/pages/06/cat-reaction-web.mp4" data-scene-video="" loop="" muted="" playsinline="" preload="none"></video><button aria-label="Pause cat reaction clip" class="clip-toggle" data-local-space="" type="button">Ⅱ</button></div><figcaption>INTERACTIVE</figcaption></figure>
+<figure><div class="home-media video-media"><video aria-label="Postcard preparation, sending, parcel and furniture reveal; guaranteed-reward QA example" data-media-poster="assets/pages/06/greenhouse-stage-03.webp?v=20261109-small" data-media-src="assets/pages/06/postcard-to-parcel-web.mp4" data-scene-video="" loop="" muted="" playsinline="" preload="none"></video><button aria-label="Pause postcard clip" class="clip-toggle" data-local-space="" type="button">Ⅱ</button></div><figcaption>RANDOM REWARDS</figcaption></figure>
+<figure><div class="home-media video-media"><video aria-label="Dragging, placing and saving furniture" data-media-poster="assets/pages/06/greenhouse-stage-03.webp?v=20261109-small" data-media-src="assets/pages/06/furniture-drag-save-web.mp4" data-scene-video="" loop="" muted="" playsinline="" preload="none"></video><button aria-label="Pause furniture clip" class="clip-toggle" data-local-space="" type="button">Ⅱ</button></div><figcaption>CUSTOMIZATION</figcaption></figure>
+</div></div>
+</div>
+</div></div>
+</section>
+   <section id="payment" class="scene" data-scene="5" data-page="06" data-title="Payment" aria-label="Page 06 — Payment, Xsolla Sandbox">
     <div class="scene-camera"><div class="content-page payment-content">
-     <div class="section-label" data-build="text" data-at="0.02"><span class="number-pill">07</span> XSOLLA SANDBOX</div>
+     <div class="section-label" data-build="text" data-at="0.02"><span class="number-pill">06</span> XSOLLA SANDBOX</div>
      <h2 data-build="text" data-at="0.12">Payment</h2>
      <div class="payment-sequence">
       <figure class="payment-step" data-build="rise" data-at="0.22"><div class="step-frame"><div class="step-tab">01 · Recharge</div><button class="payment-image" type="button" data-full-image="assets/pages/07/1-recharge.png" data-image-title="01 · Recharge" data-local-space aria-label="Enlarge 01 · Recharge screenshot" title="Enlarge screenshot"><svg viewBox="240 76 1120 748" role="img" aria-label="Selected 60-tuna recharge pack and initial balance 0"><image data-media-src="assets/pages/07/1-recharge.webp?v=20261109-small" width="1600" height="900"/></svg></button></div><figcaption>60-tuna pack</figcaption></figure>
@@ -133,7 +130,7 @@
      </div>
     </div></div>
    </section>
-   <section id="four-maps" class="scene" data-scene="7" data-page="08" data-title="Four Maps" aria-label="Page 08 — Level Design: Four Maps">
+   <section id="four-maps" class="scene" data-scene="6" data-page="07" data-title="Four Maps" aria-label="Page 07 — Level Design: Four Maps">
     <div class="scene-camera"><div class="level-design four-maps-review">
 <h2 data-build="text" data-at="0.04">Four Maps</h2>
 <div class="review-body"><div class="map-grid" data-build="rise" data-at="0.2"><figure class="map-card"><div class="map-media">
@@ -155,7 +152,7 @@
 
 </div></div>
    </section>
-   <section id="vertical-design" class="scene" data-scene="8" data-page="09" data-title="Three Connected Levels" aria-label="Page 09 — Level Design: Three Connected Levels">
+   <section id="vertical-design" class="scene" data-scene="7" data-page="08" data-title="Three Connected Levels" aria-label="Page 08 — Level Design: Three Connected Levels">
     <div class="scene-camera"><div class="level-design vertical-map-review">
 <div class="spatial-comparisons" data-build="text" data-at="0.04" role="heading" aria-level="1"><div class="spatial-pair primary"><span>2D View</span><span class="two-way-arrow" aria-hidden="true">↔</span><span>Three-Dimensional Perception</span></div><div class="spatial-pair secondary"><span>Horizontal Exploration</span><span class="two-way-arrow" aria-hidden="true">↔</span><span>Vertical Build</span></div></div>
 <div class="review-body"><div class="vertical-layout">
@@ -179,7 +176,7 @@
 
 </div></div>
    </section>
-   <section id="greybox" class="scene" data-scene="9" data-page="10" data-title="Greybox" aria-label="Page 10 — Level Design: Greybox">
+   <section id="greybox" class="scene" data-scene="8" data-page="09" data-title="Greybox" aria-label="Page 09 — Level Design: Greybox">
     <div class="scene-camera"><div class="level-design graybox-review">
 <h2 data-build="text" data-at="0.04">Greybox</h2>
 <div class="review-body"><figure class="graybox-figure" data-build="rise" data-at="0.2">
@@ -189,7 +186,7 @@
 
 </div></div>
    </section>
-<section id="random-events" class="scene" data-scene="10" data-page="11" data-title="Random Events" aria-label="Page 11 — Random Events"><div class="scene-camera"><div class="events-combat events-review">
+<section id="random-events" class="scene" data-scene="9" data-page="10" data-title="Random Events" aria-label="Page 10 — Random Events"><div class="scene-camera"><div class="events-combat events-review">
 <h2 data-at="0.04" data-build="text">Random Events</h2>
 <div class="review-body">
 <section aria-label="Trigger, choice and successful outcome screenshot sequence" class="event-sequence">
@@ -235,54 +232,67 @@
 </div>
 </div>
 </div></div></section>
-<section id="combat" class="scene" data-scene="11" data-page="12" data-title="Real-Time Tactical Tower Defense" aria-label="Page 12 — Real-Time Tactical Tower Defense"><div class="scene-camera"><div class="events-combat combat-review">
+   <section aria-label="Page 11 — Real-Time Tactical Tower Defense" class="scene" data-page="11" data-scene="10" data-title="Real-Time Tactical Tower Defense" id="combat"><div class="scene-camera"><div class="events-combat combat-review">
 <h2 data-at="0.04" data-build="text">Real-Time Tactical Tower Defense</h2>
 <div class="combat-bridge" data-at="0.1" data-build="text">
-<span>FROM RANDOM EVENTS</span><span class="arrow-inline">→</span><b>BATTLE PRESSURE + SUPPORT</b>
+<span>FROM RANDOM EVENTS</span><span class="arrow-inline">→</span><button aria-controls="v2BattleProof" aria-pressed="false" class="v2-event-proof-trigger" data-local-space="" id="v2EventProofTrigger" type="button">BATTLE PRESSURE + SUPPORT <span aria-hidden="true">▶</span></button>
 </div>
 <div class="review-body">
 <div class="combat-board">
 <section aria-label="Battlefield and repositioning" class="combat-main" data-at="0.2" data-build="rise">
-<div class="tabframe" data-tab="BATTLEFIELD · REPOSITIONING IN ACTION">
+<div class="tabframe" data-tab="BATTLEFIELD · REPOSITIONING IN ACTION" id="v2BattlefieldFrame" tabindex="-1">
+<button aria-label="Return to the main battlefield" class="v2-return-battlefield" data-local-space="" hidden="" id="v2ReturnBattlefield" type="button">↶ Return to Battlefield</button>
 <div class="combat-shot">
 <img alt="Authentic Midnight Market real-time battle with companions, enemies and ability controls" class="battlefield-image" data-media-src="assets/pages/09/battlefield-main.webp"/>
+<video aria-label="Future authentic full-frame combat VFX, automatically looping without sound" autoplay="" class="v2-default-battle-vfx" data-media-poster="assets/pages/09/battlefield-main.webp" data-v2-default-src="" hidden="" id="v2DefaultBattleVfx" loop="" muted="" playsinline="" preload="none"></video>
+<span class="v2-default-vfx-status" id="v2DefaultVfxStatus" role="status">GENERAL BATTLE VFX · MUTED LOOP PENDING</span>
 <video aria-label="Continuous Banban repositioning demonstration, separate attempt at the same stage, normal speed" class="battle-reposition" data-demo-src="assets/pages/09/reposition-closeup.mp4?v=web-20261109" data-media-poster="assets/pages/09/battlefield-main.webp" hidden="" id="repositionVideo" muted="" playsinline="" preload="none"></video>
 <span aria-live="polite" class="reposition-source" hidden="" id="repositionSource" role="status"></span>
+<div aria-live="polite" class="v2-battle-proof" data-v2-event-battle="" data-v2-event-caption="" data-v2-event-choice="" data-v2-event-state="" hidden="" id="v2BattleProof">
+<button aria-label="Return to original battlefield" class="v2-proof-close" data-local-space="" id="v2ProofClose" type="button">×</button>
+<div class="v2-proof-inner">
+<span class="v2-proof-kicker" id="v2ProofKicker">EVIDENCE PENDING</span>
+<h3 id="v2ProofTitle">Updated footage pending</h3>
+<img alt="" data-media-src="assets/pages/09/guard-shield-vfx.webp" hidden="" id="v2ProofImage"/>
+<div id="v2ProofBody"></div>
+<small id="v2ProofCaption">This demonstration is not yet a recorded game effect.</small>
 </div>
+</div>
+<button class="v2-combat-retry" data-local-space="" hidden="" id="v2CombatRetry" type="button">Retry clip</button></div>
 </div>
 <div aria-label="Combat mechanic labels" class="combat-steps">
-<button aria-controls="repositionVideo" aria-pressed="false" class="combat-step" id="repositionTrigger" title="Play the real repositioning demonstration in the battlefield frame" type="button"><b>Reposition</b><small>Move cats during battle</small></button>
+<button aria-controls="repositionVideo" aria-pressed="false" class="combat-step" data-local-space="" id="repositionTrigger" title="Play the real repositioning demonstration in the battlefield frame" type="button"><b>Reposition</b><small>Move cats during battle</small></button>
 <div class="combat-step"><b>Build Energy</b><small>Abilities charge automatically</small></div>
-<button aria-controls="repositionVideo" aria-pressed="false" class="combat-step" data-demo-src="assets/pages/09/skill-activation-closeup.mp4" id="skillsTrigger" title="Play Banban's real Shield activation in the battlefield frame" type="button"><b>Activate Skills</b><small>Trigger each cat's ability</small></button>
+<button aria-controls="repositionVideo" aria-pressed="false" class="combat-step" data-demo-src="assets/pages/09/skill-activation-closeup.mp4" data-local-space="" id="skillsTrigger" title="Play Banban's real Shield activation in the battlefield frame" type="button"><b>Activate Skills</b><small>Trigger each cat's ability</small></button>
 </div>
 </section>
 <section aria-label="Three companions and their authentic ability effects" class="combat-profiles" data-at="0.42" data-build="rise">
-<article class="profile" data-id="FRIEND 01">
+<article aria-label="Preview Rongrong skill; updated pre-release animation pending; playback will be muted" aria-pressed="false" class="profile v2-selectable-profile" data-id="FRIEND 01" data-local-space="" data-v2-skill="rongrong" data-v2-skill-clip="" role="button" tabindex="0">
 <div class="profile-figure"><img alt="绒绒 / Rongrong original pixel-art figure" data-media-src="assets/pages/09/caster-figure.webp" height="128" width="128"/></div>
 <div class="profile-details"><b>绒绒 / Rongrong</b><span class="ability">星绒绽放 — Star Burst</span><span class="profile-function">Cross-shaped area attack</span></div><div class="profile-vfx"><img alt="Rongrong's authentic purple star attack across cross-shaped impact cells" data-media-src="assets/pages/09/caster-star-vfx.webp"/></div>
 </article>
-<article class="profile" data-id="FRIEND 02">
+<article aria-label="Preview Banban skill; updated pre-release animation pending; playback will be muted" aria-pressed="false" class="profile v2-selectable-profile" data-id="FRIEND 02" data-local-space="" data-v2-skill="banban" data-v2-skill-clip="" role="button" tabindex="0">
 <div class="profile-figure"><img alt="斑斑 / Banban original pixel-art figure" data-media-src="assets/pages/09/guard-figure.webp" height="128" width="128"/></div>
 <div class="profile-details"><b>斑斑 / Banban</b><span class="ability">罐盖护盾 — Shield</span><span class="profile-function">Temporary self-shield</span></div><div class="profile-vfx"><img alt="Banban's genuine cyan shield release and original skill label" data-media-src="assets/pages/09/guard-shield-vfx.webp"/></div>
 </article>
-<article class="profile" data-id="FRIEND 03">
+<article aria-label="Preview Diandian skill; updated pre-release animation pending; playback will be muted" aria-pressed="false" class="profile v2-selectable-profile" data-id="FRIEND 03" data-local-space="" data-v2-skill="diandian" data-v2-skill-clip="" role="button" tabindex="0">
 <div class="profile-figure"><img alt="点点 / Diandian original pixel-art figure" data-media-src="assets/pages/09/diandian-figure.webp" height="128" width="128"/></div>
 <div class="profile-details"><b>点点 / Diandian</b><span class="ability">安心呼噜 — Healing Purr</span><span class="profile-function">Heals active companions</span></div><div class="profile-vfx"><img alt="Diandian's genuine green Healing Purr effect on active companions" data-media-src="assets/pages/09/diandian-heal-vfx.webp"/></div>
 </article>
-<button aria-controls="advisorLayer" aria-expanded="false" class="advisor-trigger" id="advisorTrigger" type="button">+ And one more friend…</button>
+<button aria-controls="advisorLayer" aria-expanded="false" class="advisor-trigger" data-local-space="" id="advisorTrigger" type="button">+ And one more friend…</button>
 </section>
 </div>
 </div>
 <aside aria-label="阿策 AI advisor reveal" class="advisor-layer" hidden="" id="advisorLayer">
 <div class="advisor-header">
 <div><span class="small-label">ANOTHER FRIEND</span><br/><strong>阿策 · AI Advisor</strong></div>
-<button aria-label="Close advisor layer" class="advisor-close" id="advisorClose" type="button">×</button>
+<button aria-label="Close advisor layer" class="advisor-close" data-local-space="" id="advisorClose" type="button">×</button>
 </div>
 <div class="advisor-id">
 <div class="advisor-figure"><img alt="阿策 original pixel-art figure" data-media-src="assets/pages/09/advisor-figure.webp" height="128" width="128"/></div>
 <p>Context-aware battle advice.<br/><span class="micro" title="Captured response source=local, reason=not_configured; no model inference is claimed.">Local Fallback</span></p>
 </div>
-<button aria-label="Original advice card before submission; click to show the captured response" class="advisor-screenshot" id="advisorBefore" type="button">
+<button aria-label="Original advice card before submission; click to show the captured response" class="advisor-screenshot" data-local-space="" id="advisorBefore" type="button">
 <span class="small-label">ADVICE CARD · BEFORE</span>
 <img alt="Original Chinese question typed before submission in the same paused battle" data-media-src="assets/pages/09/advisor-01-before.webp"/>
 </button>
@@ -290,10 +300,10 @@
 <span class="small-label">ADVICE CARD · AFTER</span>
 <img alt="Original Chinese local-fallback response to the same question, showing actual battle context and healing advice" data-media-src="assets/pages/09/advisor-02-after.webp"/>
 </div>
-<div class="advisor-actions"><button class="advisor-next" id="advisorNext" type="button">Show answer →</button><span class="advisor-step" id="advisorStep">1 / 2</span></div>
+<div class="advisor-actions"><button class="advisor-next" data-local-space="" id="advisorNext" type="button">Show answer →</button><span class="advisor-step" id="advisorStep">1 / 2</span></div>
 </aside>
 </div></div></section>
-<section id="dice-animations" class="scene" data-scene="12" data-page="13" data-title="Dice Roll Animations" aria-label="Page 13 — Dice Roll Animations"><div class="scene-camera"><div class="uiux-page dice-review">
+<section id="dice-animations" class="scene" data-scene="11" data-page="12" data-title="Dice Roll Animations" aria-label="Page 12 — Dice Roll Animations"><div class="scene-camera"><div class="uiux-page dice-review">
 <h2 data-at="0.04" data-build="text">Dice Roll Animations</h2>
 <div class="review-body">
 <section aria-label="Four matched presentation frames for authentic dice outcome animations" class="dice-grid" data-at="0.2" data-build="rise">
@@ -318,7 +328,7 @@
 
 
 </div></div></section>
-<section id="adaptive-interface" class="scene" data-scene="13" data-page="14" data-title="Responsive & Translucent UI" aria-label="Page 14 — Responsive & Translucent UI"><div class="scene-camera"><div class="uiux-page adaptive-review">
+<section id="adaptive-interface" class="scene" data-scene="12" data-page="13" data-title="Responsive & Translucent UI" aria-label="Page 13 — Responsive & Translucent UI"><div class="scene-camera"><div class="uiux-page adaptive-review">
 
 <h2 data-at="0.04" data-build="text">Responsive &amp; Translucent UI</h2>
 <div class="uiux-kicker" data-at="0.12" data-build="text">One interface · Changing viewport width</div>
@@ -345,9 +355,9 @@
 
 
 </div></div></section>
-   <section id="technical-architecture" class="scene" data-scene="14" data-page="15" data-title="Technical Architecture" aria-label="Page 15 — Technical Architecture">
+   <section id="technical-architecture" class="scene" data-scene="13" data-page="14" data-title="Technical Architecture" aria-label="Page 14 — Technical Architecture">
     <div class="scene-camera"><div aria-label="Technical Architecture" class="tech-page">
-<div class="section-label" data-at=".04" data-build="text"><span class="number-pill">15</span>TECHNICAL WALKTHROUGH / ARCHITECTURE</div>
+<div class="section-label" data-at=".04" data-build="text"><span class="number-pill">14</span>TECHNICAL WALKTHROUGH / ARCHITECTURE</div>
 <section aria-label="Three main technical layers" class="architecture-stack" data-at=".14" data-build="rise">
 <div class="layer">
 <h2>Browser — React + TypeScript + Canvas 2D</h2>
@@ -383,10 +393,10 @@
 
 </div></div>
    </section>
-   <section id="kubernetes-deployment" class="scene" data-scene="15" data-page="16" data-title="Kubernetes Deployment" aria-label="Page 16 — Kubernetes Deployment">
+   <section id="kubernetes-deployment" class="scene" data-scene="14" data-page="15" data-title="Kubernetes Deployment" aria-label="Page 15 — Kubernetes Deployment">
     <div class="scene-camera"><div aria-label="Kubernetes Deployment" class="k8s-preview">
 <header data-at=".04" data-build="text">
-<div class="section-label"><span class="number-pill">16</span>TECHNICAL WALKTHROUGH / DEPLOYMENT</div>
+<div class="section-label"><span class="number-pill">15</span>TECHNICAL WALKTHROUGH / DEPLOYMENT</div>
 <h1>Kubernetes Deployment</h1>
 <p class="subtitle">How Kubernetes makes the game accessible online and preserves player data</p>
 </header>
@@ -474,8 +484,8 @@
 
 </div></div>
    </section>
-   <section id="gameplay-telemetry" class="scene datadog-scope" data-scene="16" data-page="17" data-title="From Gameplay to Telemetry" aria-label="Page 17 — From Gameplay to Telemetry"><div class="scene-camera"><div class="dd-page" id="ddSequence" data-demo-state="idle" aria-label="Datadog page 1 interactive review">
- <div class="section-label"><span class="number-pill">17</span>TECHNICAL WALKTHROUGH / DATADOG</div>
+   <section id="gameplay-telemetry" class="scene datadog-scope" data-scene="15" data-page="16" data-title="From Gameplay to Telemetry" aria-label="Page 16 — From Gameplay to Telemetry"><div class="scene-camera"><div class="dd-page" id="ddSequence" data-demo-state="idle" aria-label="Datadog page 1 interactive review">
+ <div class="section-label"><span class="number-pill">16</span>TECHNICAL WALKTHROUGH / DATADOG</div>
  <header data-build="text" data-at=".04" class="page-intro"><h1>From Gameplay to Telemetry</h1><p>One real event choice. One traceable request.</p></header>
  <div class="dd-stage-grid dd-hero" data-build="rise" data-at=".20">
   <section aria-label="Authentic recorded gameplay">
@@ -506,16 +516,19 @@
  <div class="dd-qa-note"><span>Reconstructed presentation timing from one genuine QA action on Nov 9, 2026; the slide does not send a new request.</span><span><button id="ddReplay" type="button" class="dd-button" disabled>↻ Replay</button></span></div>
 
 </div></div></section>
-   <section id="observability" class="scene datadog-scope" data-scene="17" data-page="18" data-title="Observability Across the Game" aria-label="Page 18 — Observability Across the Game"><div class="scene-camera"><div class="dd-page" id="ddDashboardPreview" data-selected-composition="stacked" aria-label="Datadog page 2 dashboard review">
- <div class="section-label"><span class="number-pill">18</span>TECHNICAL WALKTHROUGH / DATADOG</div>
+   <section id="observability" class="scene datadog-scope" data-scene="16" data-page="17" data-title="Observability Across the Game" aria-label="Page 17 — Observability Across the Game"><div class="scene-camera"><div class="dd-page" id="ddDashboardPreview" data-selected-composition="stacked" aria-label="Datadog page 2 dashboard review">
+ <div class="section-label"><span class="number-pill">17</span>TECHNICAL WALKTHROUGH / DATADOG</div>
  <header data-build="text" data-at=".04" class="page-intro"><h1>Observability Across the Game</h1><p>From system health to player behavior, all in one monitoring workflow.</p></header>
- <div class="dd-tabrow" role="tablist" aria-label="Choose a Datadog dashboard insight">
+ <div class="v2-dd-toolbar"><div class="dd-tabrow" role="tablist" aria-label="Choose a Datadog dashboard insight">
   <button class="dd-select" role="tab" data-dashboard-tab="overview" aria-selected="true" aria-controls="ddOverview" type="button">01 · Overview</button>
   <button class="dd-select" role="tab" data-dashboard-tab="performance" aria-selected="false" aria-controls="ddPerformance" type="button">02 · Player Experience</button>
   <button class="dd-select" role="tab" data-dashboard-tab="events" aria-selected="false" aria-controls="ddEvents" type="button">03 · Gameplay Events</button>
   <button class="dd-select" role="tab" data-dashboard-tab="advisor" aria-selected="false" aria-controls="ddAdvisor" type="button">04 · Business &amp; AI</button>
  </div>
- <div class="dd-hero" data-build="rise" data-at=".20">
+ <button class="v2-dd-alert-banner" data-full-image="assets/datadog/page-03-alerts/slack-health-alert.png" data-image-title="Slack health-check alert · November 4, 2026 · Historical notification" data-local-space="" type="button">
+<span aria-hidden="true" class="v2-dd-alert-bell">!</span>
+<span class="v2-dd-alert-text"><strong>ALERTS VIA SLACK</strong><small>Phone notifications, if enabled</small></span>
+</button></div><div class="dd-hero" data-build="rise" data-at=".20">
   <section id="ddOverview" class="dd-dashboard-shell dd-overview-layout" data-dashboard-panel="overview" role="tabpanel">
    <div class="dd-frame composition-board" data-board="overview" aria-label="Authentic dashboard section composition"></div>
    <aside tabindex="0" class="dd-frame dd-analysis dd-overview-copy">
@@ -567,65 +580,7 @@
  <div class="dd-footer"><span><span id="compositionHint">Operational Overview · service metrics, monitors and SLOs</span></span><span>Authentic section montage · Click any capture to inspect · Widget time overrides remain in the source.</span></div>
 
 </div></div></section>
-   <section id="detect-alert-recover" class="scene datadog-scope" data-scene="18" data-page="19" data-title="Detect, Alert, Recover" aria-label="Page 19 — Detect, Alert, Recover"><div class="scene-camera"><div class="dd-page" id="ddSyntheticPreview" aria-label="Datadog page 3 monitoring and alert review">
- <div class="section-label"><span class="number-pill">19</span>TECHNICAL WALKTHROUGH / DATADOG</div>
- <header data-build="text" data-at=".04" class="page-intro"><h1>Detect. Alert. Recover.</h1><p>A failed public check, a Slack alert—and a verified recovery.</p></header>
-
- <div class="dd-alert-layout dd-hero dd-monitor-layout" data-build="rise" data-at=".20">
-  <section tabindex="0" class="dd-frame dd-timeline dd-alert-evidence" aria-label="Matching historical Datadog runs and Slack notifications">
-   <div class="dd-label">01 / REAL ALERT &amp; RECOVERY</div>
-   <div class="dd-evidence-header">
-     <h2>From failed check to recovery</h2>
-     <span class="dd-pill">NOV 4 · UTC+08</span>
-   </div>
-   <div class="dd-alert-proof">
-     <div class="dd-alert-steps" aria-label="Choose the alert or recovery evidence">
-      <button class="dd-alert-stage" type="button" data-alert-stage="alert" aria-pressed="true">
-       <span class="dd-proof-status"><span class="dd-proof-dot is-alert"></span><strong>22:36 · ALERT</strong></span>
-       <p>The public health check failed. Datadog notified Slack.</p>
-      </button>
-      <button class="dd-alert-stage" type="button" data-alert-stage="recovery" aria-pressed="false">
-       <span class="dd-proof-status"><span class="dd-proof-dot is-recovered"></span><strong>22:41 · RECOVERY</strong></span>
-       <p>The check passed again, and Slack received recovery.</p>
-      </button>
-     </div>
-     <div class="dd-evidence-visual">
-      <div class="dd-evidence-sources" role="tablist" aria-label="Choose the original evidence source">
-       <button class="dd-select" type="button" role="tab" data-alert-source="slack" aria-selected="true">Slack</button>
-       <button class="dd-select" type="button" role="tab" data-alert-source="datadog" aria-selected="false">Datadog</button>
-      </div>
-      <button id="ddEvidenceZoom" class="dd-evidence-zoom" type="button" aria-label="Enlarge Slack alert screenshot" aria-haspopup="dialog" aria-controls="ddAlertImageOverlay"><img id="ddEvidenceImage" data-media-src="assets/datadog/page-03-alerts/slack-health-alert.png" alt="Original Slack alert for the Stray Kitty health check, November 4 at 22:36 UTC+08"></button>
-      <div id="ddEvidenceCaption" class="dd-evidence-caption">Original Slack message · click to enlarge</div>
-     </div>
-   </div>
-   <div class="dd-archived-source">
-     <div class="dd-archive-actions"><button class="dd-button" id="ddOpenArchive" type="button" aria-haspopup="dialog" aria-controls="ddArchiveOverlay">Separate Nov 2 test record ↗</button><a class="dd-link" target="_blank" rel="noopener" href="assets/datadog/page-03-alerts/health-alert-cycle-provenance.json">Screenshot sources ↗</a></div>
-   </div>
-   <div class="dd-mobile-slot"><img data-media-src="library/icons/phone-notification.svg" alt="" aria-hidden="true"><p>Slack alerts can reach teammates on their phones when mobile notifications are enabled.</p></div>
-  </section>
-  <section class="dd-frame dd-synth dd-monitor-synthetics" aria-label="External synthetic checks in Tokyo and Seoul">
-   <div class="dd-label">02 / EXTERNAL SYNTHETICS</div>
-   <div class="dd-synth-top">
-    <h2 id="ddSyntheticHeading">Can players reach the public game?</h2>
-    <div class="dd-tabrow" role="tablist" aria-label="Choose a public endpoint check">
-     <button class="dd-select" type="button" role="tab" data-check-tab="healthz" aria-controls="ddHealthz" aria-selected="true">Public health check</button>
-     <button class="dd-select" type="button" role="tab" data-check-tab="payment" aria-controls="ddPayment" aria-selected="false">Payment configuration</button>
-    </div>
-   </div>
-   <div id="ddHealthz" class="dd-synth-photo" data-check-panel="healthz" role="tabpanel">
-    <img data-media-src="assets/datadog/page-03-alerts/synthetics-healthz.png" alt="Authentic Datadog HTTP health-check runs from Tokyo and Seoul, both passed on November 9, 2026"/>
-   </div>
-   <div id="ddPayment" class="dd-synth-photo" data-check-panel="payment" role="tabpanel" hidden>
-    <img data-src="assets/datadog/page-03-alerts/synthetics-payment-config.png" alt="Authentic Datadog payment-configuration HTTP checks from Tokyo and Seoul, both passed on November 9, 2026"/>
-   </div>
-   <div class="dd-synth-label">Tokyo + Seoul · scheduled every five minutes · observed Nov 9, 2026</div>
-   <div class="dd-synth-label">HTTP 200 establishes endpoint reachability, not a full game or payment workflow.</div>
-  </section>
- </div>
- <div class="dd-footer"><span>Historical notifications: Nov 4, 2026 · captured Nov 9</span><span>Public endpoint images: genuine Datadog results</span></div>
-
-</div></div></section>
-   <section id="cross-team-collaboration" class="scene teamwork-scope" data-scene="19" data-page="20" data-title="Cross-Team Collaboration" aria-label="Page 20 — Cross-Team Collaboration"><div class="scene-camera"><div class="review-page tw-review tw-walk">
+   <section id="cross-team-collaboration" class="scene teamwork-scope" data-scene="17" data-page="18" data-title="Cross-Team Collaboration" aria-label="Page 18 — Cross-Team Collaboration"><div class="scene-camera"><div class="review-page tw-review tw-walk">
  <div class="label"><span class="num">20</span>TEAMWORK / COLLABORATION</div>
  <h1 data-build="text" data-at=".04">Cross-Team Collaboration</h1>
  <p class="subtitle">A GitLab ticket travels through two connected workflows: task coordination and code delivery.</p>
@@ -678,7 +633,7 @@
  </div>
 
 </div></div></section>
-   <section id="design-test-rethink" class="scene teamwork-scope" data-scene="20" data-page="21" data-title="Design. Test. Rethink." aria-label="Page 21 — Design. Test. Rethink."><div class="scene-camera"><div class="review-page tw-review tw-v2">
+   <section id="design-test-rethink" class="scene teamwork-scope" data-scene="18" data-page="19" data-title="Design. Test. Rethink." aria-label="Page 19 — Design. Test. Rethink."><div class="scene-camera"><div class="review-page tw-review tw-v2">
 <div class="label"><span class="num">21</span>TEAMWORK / ITERATION</div>
 <h1 data-build="text" data-at=".04">Design. Test. Rethink.</h1>
 <p class="subtitle">Ideas changed as actual gameplay, QA and cross-team discussion challenged our assumptions.</p>
@@ -726,7 +681,7 @@
  </div>
 </div>
 </div></div></section>
-   <section id="connected-world" class="scene teamwork-scope" data-scene="21" data-page="22" data-title="A Dynamic, Living World" aria-label="Page 22 — A Dynamic, Living World"><div class="scene-camera"><div class="review-page tw-review tw-future-vision">
+   <section id="connected-world" class="scene teamwork-scope" data-scene="19" data-page="20" data-title="A Dynamic, Living World" aria-label="Page 20 — A Dynamic, Living World"><div class="scene-camera"><div class="review-page tw-review tw-future-vision">
  <div class="label"><span class="num">22</span>FUTURE DIRECTION · CLICK A SYSTEM</div>
  <h1 data-build="text" data-at=".04">A Dynamic, Living World</h1>
  <div class="review-body" data-build="rise" data-at=".16">
@@ -774,7 +729,7 @@
  </div>
 
 </div></div></section>
-   <section id="closing-qa" class="scene scene-qa" data-scene="22" data-page="23" data-title="Q &amp; A" aria-label="Page 23 — Q and A"><div class="scene-camera">
+   <section id="closing-qa" class="scene scene-qa" data-scene="20" data-page="21" data-title="Q &amp; A" aria-label="Page 21 — Q and A"><div class="scene-camera">
     <div class="qa-composition">
       <h1>Q &amp; A</h1>
       <img class="qa-poster" data-media-src="assets/closing/stray-kitty-poster.webp" width="3344" height="1882" alt="The complete horizontal Stray Kitty poster supplied for the presentation">
@@ -821,9 +776,9 @@
 </div>
 </div>
 <script src="scene-content.js?v=20261109-on-demand-events"></script>
-<script src="events-combat.js?v=20261109-integrated"></script>
+<script src="events-combat.js?v=20261110-v2-interim-part1"></script>
 <script src="uiux.js?v=20261109-adaptive-fit"></script>
-<script src="datadog.js?v=20261109-datadog-refinement7"></script>
+<script src="datadog.js?v=20261110-v2-interim-part1"></script>
 <script src="teamwork.js?v=20261109-future-integrated1"></script>
 <script src="future-world.js?v=20261109-future-integrated1"></script>
 <script src="engine-v3.js?v=20261109-level-design"></script>

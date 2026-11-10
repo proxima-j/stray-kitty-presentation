@@ -1,6 +1,8 @@
 # Stray Kitty V2 — Composition and Asset Inventory
 
-**2026-11-10 · REVIEW ONLY. New media is pending. Do not integrate V2 until approved.**
+**2026-11-10 · V2 INTERIM — MEDIA PENDING. Part 1 structural integration is explicitly approved for publication.**
+
+The Part 1 status below supersedes the older review-only/planning restrictions in this historical inventory. [Part 2 handoff](PRESENTATION-V2-PHASE2-HANDOFF.md) and [exact media slots](PRESENTATION-V2-MEDIA-SLOTS.json) are the current implementation references.
 
 Canonical decisions: [Notion rehearsal handoff — Section 11](https://app.notion.com/p/414e33b0423f81649454e1a9ade5c211). Archived intact V1: [archive/presentation-v1-2026-11-10](https://github.com/proxima-j/stray-kitty-presentation/tree/archive/presentation-v1-2026-11-10), original commit 0daa72fda8cd7ab9f1a8a99aed9f4eb537137461 (23 pages, including Roadmap and Alert).
 
@@ -8,7 +10,7 @@ Canonical decisions: [Notion rehearsal handoff — Section 11](https://app.notio
 
 - Target **21 pages** after deleting Roadmap (old 03) and Detect, Alert, Recover (old 19), preserving both in the permanent V1 archive.
 - Chapter 5 **LIVE DEMO after Page 02**, not an additional slide: narrative → Warehouse light → briefly play combat → presenter-triggered victory shortcut → Home Hub interactions. The shortcut is intentional demonstration acceleration. Pre-open the public game tab and mute the game site separately in Chrome. Test the saved state/progression and keep a recording fallback if useful.
-- The **only remaining page composition reviews** are **05 Home Hub** (old 06) and **11 Combat** (old 12). Page 02 pitch and demo-loop reminder are already published, and **Random Events stays completely unchanged** (only later automatic page renumbering). Game Flow removal remains a separate open discussion; no new media is required for Game Flow or Q&A.
+- The **only remaining page composition reviews** are **05 Home Hub** (old 06) and **11 Combat** (old 12). Page 02 pitch and demo-loop reminder are already published, and **Random Events stays completely unchanged** (only later automatic page renumbering). Game Flow is retained as V2 Page 03; no new media is required for Game Flow or Q&A.
 - Leave surviving Technical Architecture, Kubernetes, From Gameplay to Telemetry, Observability, and the other sections intact except later agreed edits. This asset pass must not modify Current, Previous, archived V1, the v3 motion engine, or the original game repository.
 
 ## Current media vs new asset needs
@@ -188,3 +190,18 @@ Run against the exact target teammate branch/MR or merged commit, with its new f
 The [Observability V2 review](https://proxima-j.github.io/stray-kitty-presentation/review/v2-observability-alert.html) now places a small **ALERTS VIA SLACK / Phone notifications, if enabled** banner beside the **04 · Business & AI** tab, rather than within the Technical Health or Gameplay panels. It is a distinct cue, **not a fifth dashboard tab** and not an extra slide. Clicking it links to the authentic November 4 Slack alert capture at `docs/assets/datadog/page-03-alerts/slack-health-alert.png`.
 
 This supports a one-second spoken reminder that Slack notifications can reach teammates' phones **when mobile notifications are enabled**. The dated evidence shows detection/notification and a later recorded recovery; it does not establish automatic root-cause repair. No new media capture required. The public Current Observability remains unmodified until V2 native integration is separately approved.
+
+
+## Part 1 — implemented production state
+
+**IMPLEMENTED:** 21 native scenes, marker `20261110-v2-interim-part1`. Roadmap and the separate Detect, Alert, Recover scene are removed from V2 only. Game Flow stays. Exact registry and runtime/media bindings are in the Part 2 handoff. Chapter 5 remains a separately pre-opened game tab after the unchanged Pitch reminder, never an extra slide.
+
+**IMPLEMENTED:** Home GROWS preserves Stage 01 and uses three explicitly labelled historical stage references. RESPONDS uses the identical 2×2 geometry: pending RESTORATION / genuine INTERACTIVE / genuine RANDOM REWARDS / genuine CUSTOMIZATION. Muted scene-aware playback and pause controls remain in the existing generic media module.
+
+**IMPLEMENTED:** Combat preserves its original production layout, three companion profiles, Reposition/Activate Skills clips, and Local Fallback advisor. Profiles show their authentic VFX stills with pending-video labels. The bridge shows explicit linked-evidence-pending content. One active Combat video, muted throughout; completion/dismissal/Return restores default; exit resets demonstrations. The nearly invisible reviewed upper-right Return has a transparent background, 24% idle opacity and visible keyboard focus.
+
+**IMPLEMENTED:** Observability's existing four tabs/content remain; a separate ALERTS VIA SLACK / Phone notifications, if enabled banner beside Business & AI opens the existing Nov 4 Slack capture. No fifth tab, verified phone-delivery claim or automatic-repair claim.
+
+**PENDING MEDIA:** three cumulative home stills, one actual repair clip, one uncropped general combat VFX loop, three individual updated skill cycles with full pre-release phases, and one verified event→stored effect→battle chain (two stills plus one consequence clip). Eleven future file targets are documented in `PRESENTATION-V2-MEDIA-SLOTS.json`; none is falsely added as an existing asset to the manifest. Updated VFX capture awaits a stable teammate build; event capture awaits a verified linked mechanic. No new footage was collected in Part 1.
+
+**VERIFICATION:** focused candidate review at 1600×900 and 1366×768; retained scene content/asset references, Home switching/playback, Combat fallback/demonstrations/reset, Observability tabs/banner, film and native navigation. The integration commit, public verification and retained-version state are recorded in the handoff and `../versions.json`. Permanent V1 is unchanged; outgoing 23-scene Current becomes Previous only after the candidate gate passes. Reviews remain as Part 2 references.

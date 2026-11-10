@@ -1,0 +1,117 @@
+{
+  "build_marker": "20261110-v2-interim-part1",
+  "status": "IMPLEMENTED / PENDING MEDIA",
+  "note": "Binding inventory only. Planned paths are NOT existing or registered assets; populate only after verified capture and publication clearance. Paths are relative to docs/.",
+  "slots": [
+    {
+      "id": "home-growth-02",
+      "scene": "home-hub",
+      "status": "PENDING MEDIA",
+      "element_id": "homeGrowth02",
+      "binding": "data-media-src",
+      "planned_path": "assets/v2/home/growth-02.webp",
+      "fallback": "assets/pages/06/greenhouse-stage-02.webp",
+      "requirement": "Genuine cumulative furnishings, same build/save/camera; keep all earlier items."
+    },
+    {
+      "id": "home-growth-03",
+      "scene": "home-hub",
+      "status": "PENDING MEDIA",
+      "element_id": "homeGrowth03",
+      "binding": "data-media-src",
+      "planned_path": "assets/v2/home/growth-03.webp",
+      "fallback": "assets/pages/06/greenhouse-stage-03.webp",
+      "requirement": "Genuine cumulative furnishings, same build/save/camera; keep all earlier items."
+    },
+    {
+      "id": "home-growth-04",
+      "scene": "home-hub",
+      "status": "PENDING MEDIA",
+      "element_id": "homeGrowth04",
+      "binding": "data-media-src",
+      "planned_path": "assets/v2/home/growth-04.webp",
+      "fallback": "assets/pages/06/greenhouse-stage-04.webp",
+      "requirement": "Genuine cumulative furnishings, same build/save/camera; keep all earlier items."
+    },
+    {
+      "id": "home-restoration",
+      "scene": "home-hub",
+      "status": "PENDING MEDIA",
+      "element_id": "homeRestorationVideo",
+      "binding": "data-media-src",
+      "planned_path": "assets/v2/home/repair-animation.mp4",
+      "fallback": "Explicit repair-capture placeholder; no fabricated animation.",
+      "requirement": "Actual repair: readable before, supported input, complete animation and completed repair."
+    },
+    {
+      "id": "combat-default",
+      "scene": "combat",
+      "status": "PENDING MEDIA",
+      "element_id": "v2DefaultBattleVfx",
+      "binding": "data-v2-default-src",
+      "planned_path": "assets/v2/combat/general-battle-vfx-muted.mp4",
+      "fallback": "assets/pages/09/battlefield-main.webp",
+      "requirement": "Authentic uncropped full-frame battle VFX; muted autoplay loop; exact shipped build/effects verified."
+    },
+    {
+      "id": "combat-skill-rongrong",
+      "scene": "combat",
+      "status": "PENDING MEDIA",
+      "selector": "[data-v2-skill=\"rongrong\"]",
+      "binding": "data-v2-skill-clip",
+      "planned_path": "assets/v2/combat/rongrong-skill-muted.mp4",
+      "fallback": "assets/pages/09/caster-star-vfx.webp",
+      "requirement": "Full ready/input, pre-release, release/impact and settle cycle; visual-only, muted, original timing."
+    },
+    {
+      "id": "combat-skill-banban",
+      "scene": "combat",
+      "status": "PENDING MEDIA",
+      "selector": "[data-v2-skill=\"banban\"]",
+      "binding": "data-v2-skill-clip",
+      "planned_path": "assets/v2/combat/banban-skill-muted.mp4",
+      "fallback": "assets/pages/09/guard-shield-vfx.webp",
+      "requirement": "Full ready/input, pre-release, release/impact and settle cycle; visual-only, muted, original timing."
+    },
+    {
+      "id": "combat-skill-diandian",
+      "scene": "combat",
+      "status": "PENDING MEDIA",
+      "selector": "[data-v2-skill=\"diandian\"]",
+      "binding": "data-v2-skill-clip",
+      "planned_path": "assets/v2/combat/diandian-skill-muted.mp4",
+      "fallback": "assets/pages/09/diandian-heal-vfx.webp",
+      "requirement": "Full ready/input, pre-release, release/impact and settle cycle; visual-only, muted, original timing."
+    },
+    {
+      "id": "combat-event-choice",
+      "scene": "combat",
+      "status": "PENDING MEDIA",
+      "element_id": "v2BattleProof",
+      "binding": "data-v2-event-choice",
+      "planned_path": "assets/v2/events/carry-choice.webp",
+      "fallback": "Explicit linked-evidence-pending state. Existing feeder-bowl rewards are not combat modifiers.",
+      "requirement": "Same supported event/choice and stored modifier, linked to a real subsequent battle consumption; verify source/save/build."
+    },
+    {
+      "id": "combat-event-state",
+      "scene": "combat",
+      "status": "PENDING MEDIA",
+      "element_id": "v2BattleProof",
+      "binding": "data-v2-event-state",
+      "planned_path": "assets/v2/events/carry-state.webp",
+      "fallback": "Explicit linked-evidence-pending state. Existing feeder-bowl rewards are not combat modifiers.",
+      "requirement": "Same supported event/choice and stored modifier, linked to a real subsequent battle consumption; verify source/save/build."
+    },
+    {
+      "id": "combat-event-battle",
+      "scene": "combat",
+      "status": "PENDING MEDIA",
+      "element_id": "v2BattleProof",
+      "binding": "data-v2-event-battle",
+      "planned_path": "assets/v2/events/carry-battle.mp4",
+      "fallback": "Explicit linked-evidence-pending state. Existing feeder-bowl rewards are not combat modifiers.",
+      "requirement": "Same supported event/choice and stored modifier, linked to a real subsequent battle consumption; verify source/save/build."
+    }
+  ]
+}
