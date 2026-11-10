@@ -5,7 +5,10 @@ on:
     branches: [main]
     paths:
       - 'docs/**'
+      - '!docs/**/*.md'
+      - '!docs/*.md'
       - '.github/workflows/pages.yml'
+      - '.github/scripts/**'
   workflow_dispatch:
 
 permissions:
@@ -21,7 +24,7 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 40
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -30,17 +33,40 @@ jobs:
         uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
           persist-credentials: false
-      - name: Configure Pages
-        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
+      - name: Check publisher regressions
+        run: python3 -m unittest discover -s .github/scripts -p 'test_publish_pages.py'
+      - name: Stamp the publication
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, os
+          from pathlib import Path
+          stamp = {
+              'commit': os.environ['GITHUB_SHA'],
+              'run_id': os.environ['GITHUB_RUN_ID'],
+              'current_sha256': hashlib.sha256(Path('docs/index.html').read_bytes()).hexdigest(),
+              'previous_sha256': hashlib.sha256(Path('docs/previous/index.html').read_bytes()).hexdigest(),
+          }
+          Path('docs/deployment.json').write_text(json.dumps(stamp) + '\n', encoding='utf-8')
+          PY
+      - name: Pack published docs
+        run: |
+          # Same single-tar, dereferenced format used by upload-pages-artifact.
+          tar --dereference --hard-dereference --directory docs \
+            --exclude=.git --exclude=.github --exclude='.[^/]*' \
+            -cf "$RUNNER_TEMP/artifact.tar" .
       - name: Upload published docs
         id: upload
-        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6, Node 24
         with:
-          path: docs
+          name: github-pages
+          path: ${{ runner.temp }}/artifact.tar
+          retention-days: 1
+          if-no-files-found: error
+          compression-level: 0
       - name: Confirm uploaded artifact is available
         env:
           GH_TOKEN: ${{ github.token }}
-          ARTIFACT_ID: ${{ steps.upload.outputs.artifact_id }}
+          ARTIFACT_ID: ${{ steps.upload.outputs['artifact-id'] }}
         run: |
           python3 - <<'PY'
           import json
@@ -75,10 +101,9 @@ jobs:
           else:
               raise SystemExit('Uploaded github-pages artifact is not available; deployment not started.')
           PY
-      - name: Deploy Pages
+      - name: Deploy Pages and verify public release
         id: deployment
-        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5
-        with:
-          # GitHub can spend several minutes queued before syncing the files.
-          # Allow the accepted deployment to finish instead of canceling at 10m.
-          timeout: 1200000
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ARTIFACT_ID: ${{ steps.upload.outputs['artifact-id'] }}
+        run: python3 -u .github/scripts/publish_pages.py

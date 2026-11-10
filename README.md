@@ -2,6 +2,10 @@
 
 GitHub is the shared source for ChatGPT and Codex. The [Pages workflow](.github/workflows/pages.yml) automatically publishes `docs/` from `main`, using one serialized upload/deploy job. Use live page links for reviews instead of transferring HTML/PNG exports.
 
+Publishing uses GitHub's official Node 24 artifact uploader and the Pages REST/OIDC API through [the small publisher](.github/scripts/publish_pages.py). It allows 30 minutes for an accepted deployment to finish and does not cancel file synchronization at the deploy action's hard ten-minute cap. A rerun resumes an existing nonterminal deployment for the same commit. A terminal canceled/failed deployment needs a fresh corrected revision. The job reports success only after Pages reports success and the public release stamp plus both Current/Previous HTML hashes match the uploaded source. `deployment.json` is generated only on the runner; do not commit it or treat it as a third deck.
+
+Markdown-only changes remain immediately available on GitHub and do not trigger a redundant full-site deployment. They are included in the next presentation/media/workflow publication; use **Run workflow** on `main` when a Markdown-only Pages update is specifically needed. No new hosting, stored secrets or permissions are introduced. Historical failed runs remain an audit record; the latest run and public release stamp describe the active publication.
+
 **Reusable template:** [Start Here — Forward Story v3](https://proxima-j.github.io/stray-kitty-presentation/templates/) · [Production workflow](docs/templates/forward-story-v3/WORKFLOW.md) · [Notion reference](https://app.notion.com/p/413e33b0423f8180bb92dabaf04af226).
 
 ## Two working versions
