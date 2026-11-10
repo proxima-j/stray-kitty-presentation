@@ -16,46 +16,43 @@ Canonical decisions: [Notion rehearsal handoff — Section 11](https://app.notio
 | V2 page | Existing authentic media to reuse | New, pending | Composition intent |
 | --- | --- | --- | --- |
 | 02 Elevator Pitch | assets/closing/stray-kitty-poster.webp; assets/illustrations/d20-dungeon-master-original.webp; assets/illustrations/playful-cats-original.webp | **None** | **Locked Current layout** with original poster, story and updated **UP NEXT / LIVE GAMEPLAY · CHAPTER 5 / The Gameplay Loop in Action** text. No more composition work. |
-| 05 Home Hub | assets/pages/06/greenhouse-stage-01.webp through -04.webp; cat-reaction-web.mp4; postcard-to-parcel-web.mp4; furniture-drag-save-web.mp4 | **Four cumulative-furniture growth screenshots**, **one real repair/restoration clip** | Keep THE HOME GROWS and THE HOME RESPONDS. Two-by-two gallery for each mode; replace the growth photographs after verification; add Repair as the fourth authentic Home Responds clip. |
+| 05 Home Hub | assets/pages/06/greenhouse-stage-01.webp through -04.webp; cat-reaction-web.mp4; postcard-to-parcel-web.mp4; furniture-drag-save-web.mp4 | **Three updated growth screenshots (Stages 02–04)** plus **one real repair/restoration clip**; Stage 01 stays original | Original GROWS 2×2: no additions in BEGINNING, then furniture accumulates across REBUILDING, GROWING, CELEBRATION. RESPONDS same 2×2: RESTORATION top-left; CAT REACTION top-right; POSTCARD/REWARD bottom-left; CUSTOMIZATION bottom-right. |
 | 10 Random Events | assets/pages/08/01-testing-view.webp; 02-event-choice.webp; 03-event-success.webp; existing Fish +1 and Material +1 reward crops | **None on this page**. Different event-to-battle proof is collected for **Combat** | **Exact existing composition and visuals**. Do not introduce a second event, new panel or trigger. Original Fish +1/Material +1 are resource rewards, not a direct battle modifier. |
 | 11 Combat | assets/pages/09/battlefield-main.webp; reposition-closeup.mp4; skill-activation-closeup.mp4; companion portraits/VFX crops; advisor before/after stills | **Three individual skills with real pre-release animation/SFX; one native full-frame general VFX/SFX; a verified event→battle effect** | **Exact production geometry and original controls**. Make each existing companion profile clickable; use the existing battlefield for event proof and skill clips, and a large overlay for full-frame VFX. Retain 阿策 Local Fallback. All sound user-triggered only. |
 
 All existing paths are under docs/. Listed V2 file targets below are suggestions **not actual assets** and must never be marked as uploaded or cleared until recorded and verified.
 
-### Capture groups A and B — Home Hub media replacement (PENDING)
+### Capture groups A and B — Home Hub progression + repair media (latest agreed)
 
-**Composition contract (locked):** Keep the **current native Home Hub GROWS composition** exactly as designed—title, two tabs, 2×2 frames, captions, image fit, sizing, alignment, and 4.2-second shared v3 page transitions. Only the four GROWS images change. For **RESPONDS**, keep the same page shell, title and tabs but use the **exact same 2×2 grid geometry and equal media frame/caption sizes as GROWS**, containing three existing real video clips plus one new repair clip. No alternative staggered arrangement.
+**Composition locked:** Preserve the existing Home GROWS 2×2 grid, left title/tabs, frame sizes, border and caption alignment. RESPONDS must use exactly the same geometry. The user inspected the old images and observed that multiple stages are nearly identical: **do not use them as if gradual furnishing were already visible.**
 
-#### A1–A4 — Four progressively furnished Home GROWS views
+#### A — Four stages, with only three NEW screenshots
 
-| Slot / current caption | Existing authentic reference | New required capture | Planned derivative | Status |
-| --- | --- | --- | --- | --- |
-| 01 · BEGINNING | `docs/assets/pages/06/greenhouse-stage-01.webp` | Initial sparse shelter with actual available furniture/decor; visible baseline for later comparison | `docs/assets/v2/home/growth-01.webp` | **PENDING** |
-| 02 · REBUILDING | `docs/assets/pages/06/greenhouse-stage-02.webp` | Same camera, later legitimate repair/checkpoint state, with a clear but modest increase in genuine furniture | `docs/assets/v2/home/growth-02.webp` | **PENDING** |
-| 03 · GROWING | `docs/assets/pages/06/greenhouse-stage-03.webp` | Further home improvement and distinct additional real furniture/decoration | `docs/assets/v2/home/growth-03.webp` | **PENDING** |
-| 04 · CELEBRATION | `docs/assets/pages/06/greenhouse-stage-04.webp` | Most visibly furnished state with a genuine late-story/finale home setting; should be recognizably richer than Stage 03 | `docs/assets/v2/home/growth-04.webp` | **PENDING** |
+| Stage / position | Capture requirement | Asset / status |
+| --- | --- | --- |
+| **01 BEGINNING (top-left)** | **Do not add any new furniture.** Preserve the approved original beginning image exactly as it is; this is the unchanged baseline for all later stages. | Existing `docs/assets/pages/06/greenhouse-stage-01.webp` — **READY, NO RECAPTURE NEEDED** |
+| **02 REBUILDING (top-right)** | From the Beginning arrangement, add **a small number of real furniture/decor items** while retaining the baseline arrangement. Visible, modest progression from Stage 01. | Planned `docs/assets/v2/home/growth-02.webp` — **PENDING** |
+| **03 GROWING (bottom-left)** | Retain Stage 02's furniture and add **more genuine items**, with an obvious richer arrangement than REBUILDING. | Planned `docs/assets/v2/home/growth-03.webp` — **PENDING** |
+| **04 CELEBRATION (bottom-right)** | Keep accumulated items and add further real furniture/decor so this is **clearly the most furnished stage**; preserve the legitimate home/finale context. | Planned `docs/assets/v2/home/growth-04.webp` — **PENDING** |
 
-- Capture authentic game states through supported chapter/home checkpoints and actual owned/planted/decorated items. If additional furnishings are prepared in separate **isolated QA saves**, identify the staging and do not claim that a specific arrangement automatically appears at that chapter milestone.
-- Use the **same camera, scale, viewport and framing** for all four comparisons. Historical originals were captured at 1600×900, camera x=-42, y=3, scale=0.528169014084507; use these parameters if still applicable in the updated build, otherwise establish and record one stable shared camera. Keep a consistent 16:9 source/crop, UI visibility, brightness/exposure policy and furniture arrangement continuity.
-- Furniture/decoration should **visibly accumulate** (baseline → modest → clearly furnished → richly furnished). Do not photoshop or generatively insert new furniture, edit historical evidence or imply the game's final home has items it cannot legitimately own/place.
-- Preserve original authentic screenshots and their asset IDs. After approving new captures, replace only the four GROWS media references in V2. Match image dimensions and verify legibility in the real deck frame at 1600×900 and 1366×768. Record game commit/checkpoint, item/furniture state, staging method, dimensions, permissions and verification.
+**Incremental requirement:** Furniture should accumulate, not reset randomly across screenshots: **baseline → baseline + few → previous + more → richest**. Avoid claiming a screenshot is a stage-specific default arrangement when extra furnishings were prepared in an isolated QA save.
 
-#### B1–B4 — Four Home RESPONDS interaction tiles
+**Capture consistency:** Same actual gameplay build, camera position and scale, viewport, image framing and asset style throughout. Historical originals used 1600×900, camera x=-42, y=3, scale=0.528169014084507; reuse if still valid, otherwise document a new common camera. Capture through real supported inventory/decor mechanics or authorized staged QA state. Record stage/save IDs, placed items, build SHA, capture time, cropping and publication clearance. No Photoshop/generative additions or fictional game states.
 
-| Position in **same 2×2 grid** | Existing source / requested media | Caption concept | Status |
-| --- | --- | --- | --- |
-| Top-left | `docs/assets/pages/06/cat-reaction-web.mp4` | CAT REACTION | **READY, existing genuine clip** |
-| Top-right | `docs/assets/pages/06/postcard-to-parcel-web.mp4` | POSTCARD & REWARD | **READY, existing genuine clip; guarantee/pity QA outcome** |
-| Bottom-left | `docs/assets/pages/06/furniture-drag-save-web.mp4` | CUSTOMIZATION / FURNITURE PLACEMENT | **READY, existing genuine clip** |
-| Bottom-right | **New genuine Home Hub repair/restoration animation** | HOME RESTORATION | **PENDING capture** |
+**Review placeholder behavior:** Stage 01 shows its authentic screenshot **without a pending label**. Stages 02–04 show clearly differentiated **capture-pending placeholders** with the planned cumulative density, over their historical images only as faint references. They are not presented as the finished, increasingly furnished versions. On receiving cleared assets, swap the three image paths and remove pending treatments. No new Stage 01 asset is required.
 
-Proposed repair derivative: `docs/assets/v2/home/repair-animation.mp4` (alternatively a compatible WebM or GIF after comparing delivery size and controls). The user requested a fixing-animation GIF concept, but a silent looping MP4/WebM can provide the same visible action more efficiently.
+#### B — HOME RESPONDS: Restoration first (same 2×2 frame geometry)
 
-- Capture the **actual Home Hub repair action** in a stable authorized save: visible pre-repair state → user interaction/input → authentic fixing animation → completed visual change or repair confirmation. Aim for a focused ~4–8-second loop or enough time to show the complete genuine action; do not truncate the resolution simply to hit a target duration.
-- Keep the native pixel-art image, original playback timing, useful game context and full visible change. If the interaction is longer, prefer a short genuine whole-action clip with manual replay over a misleading jump cut. Record exact build/checkpoint, source master, frame size/duration, edit/crop, rights and source audio presence. Avoid private player/session/QA identifiers.
-- On the presentation page, make the fourth clip behave like the other three: lazy load only when RESPONDS is shown, silent loop or deliberate click-to-play as approved, manual pause/play control, and stop when hidden/leaving the page. If the selected new clip has sound, **do not enable autoplay audio**.
-- Match the **exact GROWS 2×2 frame aspect ratio, captions, spacing and positions**. Do not move the header or tab controls when switching modes; the page should visually change only the four media contents.
-- Do not upload or register the proposed V2 files until the captures exist and have passed provenance/publication review. Until then the existing four GROWS images and three RESPONDS clips remain the production fallback.
+| Position | Media | Status |
+| --- | --- | --- |
+| **Top-left** | **RESTORATION** — new authentic fix/repair animation showing before → interaction → actual completed repair | **PENDING** |
+| **Top-right** | **INTERACTIVE / CAT REACTION** — `docs/assets/pages/06/cat-reaction-web.mp4` | **READY** |
+| **Bottom-left** | **RANDOM REWARDS / POSTCARD & PARCEL** — `docs/assets/pages/06/postcard-to-parcel-web.mp4` | **READY**, guarantee/pity QA example |
+| **Bottom-right** | **CUSTOMIZATION / FURNITURE** — `docs/assets/pages/06/furniture-drag-save-web.mp4` | **READY** |
+
+Proposed new genuine repair derivative: `docs/assets/v2/home/repair-animation.mp4` or a smaller suitable WebM/GIF. The fixing action must have a readable start, actual game action, and meaningful completion, in roughly 4–8 seconds if feasible without artificial truncation. Use a legitimate checkpoint/save and retain native pixel-art VFX and timing, source master, captured dimensions/duration, crop and attribution.
+
+For the deck: maintain identical 16:9 tile framing, gaps and captions across both modes; no layout jump when switching tabs. Retain scene-aware/lazy media loading, pause controls and stop on scene exit/tab hide. Home clips remain muted unless an actual new audio requirement is separately approved. No new assets get registered in the manifest before the verified media exists.
 
 ### Capture group C — authentic event to combat connection: PENDING
 
@@ -86,7 +83,8 @@ New effects must come from a genuine game build; verify the version, battle atte
 | Requirement | State |
 | --- | --- |
 | Pitch poster / illustrations / Chapter 5 cue | **READY and live** |
-| Four richer Home growth views | **PENDING** |
+| BEGINNING Stage 01 original screenshot | **READY — NO CHANGES** |
+| Three new Home growth captures, Stages 02–04 | **PENDING** |
 | One Home restoration clip | **PENDING** |
 | Different event → battle consequence proof | **PENDING: select and verify case** |
 | Updated VFX and in-game SFX | **PENDING TEAMMATE UPDATE** |
@@ -170,3 +168,10 @@ Run against the exact target teammate branch/MR or merged commit, with its new f
 **Collection trigger:** Start capturing only after (1) the teammate confirms the target implementation is ready, (2) the focused audit identifies the exact build and clip boundaries, and (3) normal QA skill release and its actual audio work in that build. A failing capture leads to one targeted correction and retest, not a broad repeated code walkthrough.
 
 **No presentation, game, or archive change is authorized by this planning update.** Mark any future asset READY only after its verified media file and provenance are recorded.
+
+
+## 2026-11-10 acceptance update: sound starts when VFX opens
+
+Opening an individual combat skill via its cat profile or opening the full-frame effects viewer **must start the real VFX and its synchronized in-game sound automatically as part of that one click**. No second Play click or separately triggered audio button. This is **user-gesture-initiated playback** rather than unprompted sound on slide entry. If browser playback is blocked or buffering, show an explicit retry/play fallback. Preserve the existing silence of historical clips, and never invent missing audio. The production binding stays empty until the teammate delivers a verified clip containing its authentic sound.
+
+The current isolated Combat review includes empty slots for those genuine video URLs and a viewer that will start audio when one is assigned; until then it displays the previous real VFX stills and clearly marked pending footage. End/close/scene exit or selecting a different clip must immediately pause the prior audio. Chrome site mute during the separate live Chapter 5 demo does not apply to the GitHub Pages presentation domain.
