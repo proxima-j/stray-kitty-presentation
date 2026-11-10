@@ -69,12 +69,21 @@
 .v2-combat-preview .v2-selectable-profile:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 .v2-combat-preview .v2-selectable-profile::after{content:"▶";position:absolute;right:10px;top:7px;font:10px var(--body);color:var(--accent)}
 .v2-combat-preview .combat-main>.tabframe{position:relative}
-.v2-combat-preview .v2-full-vfx-button{
- position:absolute;top:0;right:0;z-index:4;border:var(--border) solid var(--ink);
- border-radius:10px 10px 0 0;background:var(--hub-yellow);padding:5px 11px;
- font:700 10px/1.45 var(--body);letter-spacing:.05em;cursor:pointer;height:29px
+/* Default battlefield slot: full native game frame, muted autoplay loop when
+   recorded media exists. The current original still remains the truthful fallback. */
+.v2-combat-preview .combat-shot .v2-default-battle-vfx{
+ position:absolute;inset:0;width:100%;height:100%;object-fit:contain;
+ background:var(--paper);z-index:1;display:block
 }
-.v2-combat-preview .v2-full-vfx-button:hover{background:var(--gold)}
+.v2-combat-preview .combat-shot .battle-reposition{z-index:2}
+.v2-combat-preview .combat-shot .reposition-source{z-index:4}
+.v2-combat-preview .v2-default-vfx-status{
+ position:absolute;bottom:8px;left:8px;z-index:2;
+ border:1px solid rgba(52,69,62,.45);border-radius:6px;
+ background:rgba(244,230,199,.94);padding:6px 9px;
+ font:700 10px/1.3 var(--body);letter-spacing:.055em;color:var(--accent);
+ pointer-events:none
+}
 .v2-combat-preview .v2-battle-proof{
  position:absolute;inset:0;z-index:3;background:rgba(244,230,199,.965);
  border-radius:0 16px 16px 16px;padding:clamp(11px,1.4vw,21px);
@@ -93,29 +102,6 @@
 .v2-combat-preview .v2-event-steps{display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap}
 .v2-combat-preview .v2-event-steps span{border:1px dashed var(--accent);border-radius:9px;padding:7px;background:#eee1c4;font:10px/1.3 var(--body);color:var(--ink)}
 .v2-combat-preview .v2-event-steps b{color:var(--accent);font-size:14px}
-.v2-combat-preview .v2-full-vfx-dialog{
- position:fixed;margin:auto;inset:0;width:min(1380px,94vw);max-width:94vw;
- max-height:94dvh;border:2px solid var(--ink);border-radius:18px;
- background:var(--paper);padding:17px;box-shadow:0 24px 90px #1a2f2655;
- z-index:80;color:var(--ink)
-}
-.v2-combat-preview .v2-full-vfx-dialog::backdrop{background:rgba(19,30,23,.79)}
-.v2-combat-preview .v2-full-vfx-header{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:13px;font:700 12px/1.35 var(--body);letter-spacing:.08em;color:var(--accent)}
-.v2-combat-preview .v2-full-vfx-header button{background:var(--paper);border:1px solid var(--ink);border-radius:50%;width:36px;height:36px;font:24px/1 var(--body);cursor:pointer}
-.v2-combat-preview .v2-full-vfx-stage{
- position:relative;aspect-ratio:16/9;max-height:calc(94dvh - 95px);overflow:hidden;
- display:flex;align-items:center;justify-content:center;background:var(--ink);border-radius:12px
-}
-.v2-combat-preview .v2-full-vfx-stage img{display:block;width:100%;height:100%;object-fit:contain;filter:brightness(.6)}
-.v2-combat-preview .v2-full-vfx-stage video{display:block;width:100%;height:100%;object-fit:contain;background:#101916}
-.v2-combat-preview .v2-full-vfx-pending{
- position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;
- justify-content:center;text-align:center;gap:11px;padding:25px;color:var(--paper);
- background:linear-gradient(135deg,rgba(10,22,17,.3),rgba(10,22,17,.76))
-}
-.v2-combat-preview .v2-full-vfx-pending h3{font:400 clamp(28px,3.6vw,60px)/1.12 var(--display);margin:0;color:var(--paper)}
-.v2-combat-preview .v2-full-vfx-pending p{font:700 13px/1.4 var(--body);letter-spacing:.12em;color:var(--gold)}
-.v2-combat-preview .v2-full-vfx-pending small{font:13px/1.5 var(--body);max-width:610px}
 @media(max-height:780px){
  .v2-home-preview .home-content[data-home-mode="responds"] h2{font-size:clamp(32px,2.8vw,44px)}
  .v2-home-preview .home-content[data-home-mode="responds"] .home-tabs{margin-top:18px}
