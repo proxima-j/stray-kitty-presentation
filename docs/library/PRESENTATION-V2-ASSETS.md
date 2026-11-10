@@ -18,7 +18,7 @@ Canonical decisions: [Notion rehearsal handoff — Section 11](https://app.notio
 | 02 Elevator Pitch | assets/closing/stray-kitty-poster.webp; assets/illustrations/d20-dungeon-master-original.webp; assets/illustrations/playful-cats-original.webp | **None** | **Locked Current layout** with original poster, story and updated **UP NEXT / LIVE GAMEPLAY · CHAPTER 5 / The Gameplay Loop in Action** text. No more composition work. |
 | 05 Home Hub | assets/pages/06/greenhouse-stage-01.webp through -04.webp; cat-reaction-web.mp4; postcard-to-parcel-web.mp4; furniture-drag-save-web.mp4 | **Three updated growth screenshots (Stages 02–04)** plus **one real repair/restoration clip**; Stage 01 stays original | Original GROWS 2×2: no additions in BEGINNING, then furniture accumulates across REBUILDING, GROWING, CELEBRATION. RESPONDS same 2×2: RESTORATION top-left; CAT REACTION top-right; POSTCARD/REWARD bottom-left; CUSTOMIZATION bottom-right. |
 | 10 Random Events | assets/pages/08/01-testing-view.webp; 02-event-choice.webp; 03-event-success.webp; existing Fish +1 and Material +1 reward crops | **None on this page**. Different event-to-battle proof is collected for **Combat** | **Exact existing composition and visuals**. Do not introduce a second event, new panel or trigger. Original Fish +1/Material +1 are resource rewards, not a direct battle modifier. |
-| 11 Combat | assets/pages/09/battlefield-main.webp; reposition-closeup.mp4; skill-activation-closeup.mp4; companion portraits/VFX crops; advisor before/after stills | **Three individual skills with real pre-release animation/SFX; one native full-frame general VFX/SFX; a verified event→battle effect** | **Exact production geometry and original controls**. Make each existing companion profile clickable; use the existing battlefield for event proof and skill clips, and a large overlay for full-frame VFX. Retain 阿策 Local Fallback. All sound user-triggered only. |
+| 11 Combat | assets/pages/09/battlefield-main.webp; reposition-closeup.mp4; skill-activation-closeup.mp4; companion portraits/VFX crops; advisor before/after stills | **Three individual skills with real pre-release animation/SFX; one native full-frame general VFX/SFX; a verified event→battle effect** | **Exact production geometry and original controls**. Make each existing companion profile clickable; use the same battlefield for event proof and skill clips, while authentic full-frame general VFX loops muted in the battlefield by default. No additional VFX button or popup. Only clicked individual skills use game audio. Retain 阿策 Local Fallback. |
 
 All existing paths are under docs/. Listed V2 file targets below are suggestions **not actual assets** and must never be marked as uploaded or cleared until recorded and verified.
 
@@ -112,9 +112,9 @@ The first two exploratory compositions at docs/review/v2-10-events.html and docs
 
 **Option B approved:** Clicking each existing companion profile (Rongrong, Banban, Diandian) should select and play that cat's genuine updated ability VFX with in-game synchronized SFX in the existing left battlefield window. Keep their authentic portrait, name, role and still VFX visible and use only a subtle selected state. The current Banban skill movie is a separate, silent older recording and cannot demonstrate all three updated SFX.
 
-**Additional general/full-screen VFX:** A separate button opens a near-full-slide 16:9 overlay for actual **uncropped battle-wide VFX with real game sound**. It is not just a magnified small ability crop; verify what real full-frame effects are available in the team's new build. Close/Escape returns to the unchanged Combat composition. This is a local interaction, not another slide or a browser Fullscreen requirement.
+**General/battle-wide VFX — default battlefield:** The main left battlefield frame displays a verified full-frame real battle-effects recording **muted, automatically looping** while Combat is active. There is **no Full Battle VFX button, extra overlay, dialog or slide**. Individual demonstrations temporarily replace that loop and restore it upon completion/close. The genuine existing still remains the fallback until the updated recording is available.
 
-**Playback/keyboard requirements:** All audible video starts on an explicit presenter click. Use one active media controller: pause when selecting another clip, leaving the page, hiding the tab or closing the overlay. Retain original Reposition and Activate Skills controls until specifically approved otherwise. Provide loading/retry feedback, preserve 4.2-second global navigation, and keep keyboard focus inside an open overlay.
+**Playback/keyboard requirements:** Default general VFX loops **muted** on Combat entry, while a clicked individual companion skill starts its genuine video and SFX. One video at a time: switching demonstrations pauses the previous clip, then completion/close returns to the muted loop. Page/tab hiding pauses all media; returning resumes only the muted loop. Retain Reposition and Activate Skills and preserve original 4.2-second global navigation.
 
 | New V2 evidence | Where displayed | Status |
 | --- | --- | --- |
@@ -122,7 +122,7 @@ The first two exploratory compositions at docs/review/v2-10-events.html and docs
 | Rongrong updated VFX + real synchronized SFX | Click Rongrong profile | **PENDING teammate recording** |
 | Banban updated VFX + real synchronized SFX | Click Banban profile | **PENDING teammate recording** |
 | Diandian updated VFX + real synchronized SFX | Click Diandian profile | **PENDING teammate recording** |
-| Full-frame general/battle-wide VFX with authentic SFX | Full-screen-effects 16:9 overlay | **PENDING teammate recording and effect identification** |
+| Authentic full-frame general/battle-wide VFX | **Original left battlefield · muted autoplay loop · NO button** | **PENDING teammate recording and effect identification** |
 
 Reuse one genuine source capture for multiple views when possible; do not duplicate media unnecessarily. Do not claim any new footage exists until source/build and permission are verified. Existing initial V2 preview URLs remain comparisons only; next review should reproduce the actual original two-page composition before adding small interaction affordances.
 
@@ -149,7 +149,7 @@ Run against the exact target teammate branch/MR or merged commit, with its new f
 - **Version/ownership:** identify branch, merge status, SHA, files changed, names of skill effects and available genuine SFX; confirm what actually shipped versus what is proposed. If changes are still in flux, wait for an agreed stable build; avoid recapturing provisional versions.
 - **Activation order:** trace the real input → cast/pre-release animation → skill release → game-state effect → sound playback. Confirm visual/sound synchronization, input acceptance during the pre-release phase, and whether other abilities or pauses can interrupt it.
 - **Capture staging:** identify the shortest legitimate QA save/checkpoint to get enough energy, activate each skill, and repeat without manually patching game logic. Verify the actual target battle and character set; avoid altering production saves or gameplay source for a presentation capture.
-- **Media output:** confirm full native game frame, browser/audio recording method, music/SFX balance, clip length covering all four phases, and whether a single master can supply three skill cuts plus the separate full-frame showcase. Avoid duplicate binaries and over-cropping.
+- **Media output:** confirm full native game frame, browser/audio recording method, music/SFX balance, clip length covering all four phases, and whether a single source recording can supply the three skill cuts and the full-frame default battlefield loop. Avoid duplicate binaries and over-cropping.
 - **Presentation compatibility:** confirm the app's new ability timing does not conflict with the deck's local replay and global navigation; capture media should be user-started with sound, stop on slide exit, and retain original audio/VFX timing.
 - **Observed vs planned:** give a short evidence table, capture-ready yes/no, missing assets, and exact filenames/entry points. Report blockers; do not claim the game is ready merely because source files exist.
 
@@ -162,7 +162,7 @@ Run against the exact target teammate branch/MR or merged commit, with its new f
 | Rongrong Star Burst | **Yes, if present in updated skill implementation** | **Yes** | Native context; presented in existing left battlefield on profile click | **AWAITING STABLE BUILD AND AUDIT** |
 | Banban Shield | **Yes, if present** | **Yes** | Native context; presented in existing left battlefield on profile click | **AWAITING STABLE BUILD AND AUDIT** |
 | Diandian Healing Purr | **Yes, if present** | **Yes** | Native context; presented in existing left battlefield on profile click | **AWAITING STABLE BUILD AND AUDIT** |
-| General/battle-wide VFX | Capture any actual preparation, release, and effect sequence that exists | **Yes** | **Uncropped native 16:9/full-gameplay frame**, large overlay, explicit Play | **EFFECT TO VERIFY IN UPDATED BUILD** |
+| General/battle-wide VFX | Capture actual full-frame gameplay effects and their original timing | **Optional in source; playback muted by design** | **Uncropped authentic full frame, auto-looping in existing battlefield** | **PENDING UPDATED BUILD** |
 | Event carry → subsequent battle | Depends on real chosen event/battle mechanism | Include original game audio if useful; not mandatory when evidence is static | Genuine linked event state and battle effect | **SEPARATE MECHANIC AUDIT PENDING** |
 
 **Collection trigger:** Start capturing only after (1) the teammate confirms the target implementation is ready, (2) the focused audit identifies the exact build and clip boundaries, and (3) normal QA skill release and its actual audio work in that build. A failing capture leads to one targeted correction and retest, not a broad repeated code walkthrough.
@@ -170,8 +170,19 @@ Run against the exact target teammate branch/MR or merged commit, with its new f
 **No presentation, game, or archive change is authorized by this planning update.** Mark any future asset READY only after its verified media file and provenance are recorded.
 
 
-## 2026-11-10 acceptance update: sound starts when VFX opens
+## 2026-11-10 — Latest approved muted-default Combat behavior
 
-Opening an individual combat skill via its cat profile or opening the full-frame effects viewer **must start the real VFX and its synchronized in-game sound automatically as part of that one click**. No second Play click or separately triggered audio button. This is **user-gesture-initiated playback** rather than unprompted sound on slide entry. If browser playback is blocked or buffering, show an explicit retry/play fallback. Preserve the existing silence of historical clips, and never invent missing audio. The production binding stays empty until the teammate delivers a verified clip containing its authentic sound.
+**This supersedes earlier descriptions of a Full Battle VFX popup/button, a full-screen overlay, and sound for the general VFX.**
 
-The current isolated Combat review includes empty slots for those genuine video URLs and a viewer that will start audio when one is assigned; until then it displays the previous real VFX stills and clearly marked pending footage. End/close/scene exit or selecting a different clip must immediately pause the prior audio. Chrome site mute during the separate live Chapter 5 demo does not apply to the GitHub Pages presentation domain.
+- **Default:** The real general/battle-wide VFX recording is shown in the **existing main battlefield frame**, automatically playing **muted and looping** whenever Combat is visible. No additional VFX button, pop-up, Fullscreen API or slide.
+- **Until collected:** Reuse the existing authentic battlefield still with a clear **GENERAL BATTLE VFX · MUTED LOOP PENDING** indicator. No synthetic/fake effect and no empty broken video.
+- **Other actions:** Reposition, Activate Skills, a companion profile, or Event Support temporarily replaces/overlays the default frame. After a one-shot clip ends, an event/skill proof is dismissed, or the advisor is closed, restore the muted general loop.
+- **Audio:** Rongrong, Banban and Diandian skill VFX recordings with genuine pre-release motion + synced game audio should play **with sound immediately upon clicking the respective profile** (one user gesture, no second Play). Historical Banban/Reposition clips are silent. The default loop remains muted always.
+- **Lifecycle:** Selecting anything else pauses the prior source first. Hidden page/tab pauses playback; returning to Combat restarts only the muted general VFX, never an audible skill. Buffering/autoplay failure must show a retry option.
+- **Pending recording:** The full-frame background VFX clip still needs a genuine source recording, clean loop point and verified rights. Preserve native frame and original effects; do not fabricate media.
+
+The isolated [Combat review](https://proxima-j.github.io/stray-kitty-presentation/review/v2-11-combat.html) implements the empty default-muted video slot. Current production and permanent Version 1 remain unchanged.
+
+## 2026-11-10 — Brief alert hint on the surviving Observability page
+
+Once the standalone Detect, Alert, Recover slide is removed from V2, retain only a **small, optional one-line historical alert reminder** on the existing Observability Overview (no extra alert slide and no monitoring section restructure). Reuse the already approved Nov 4, 2026 Slack alert screenshot from `docs/assets/datadog/page-03-alerts/slack-health-alert.png`, with concise **ALERT → RECOVERY · Nov 4 · Slack notification** wording and optional original-image access. This proves a recorded notification and later check recovery, not automatic self-healing. The [isolated Observability review](https://proxima-j.github.io/stray-kitty-presentation/review/v2-observability-alert.html) stages that addition. No new media capture required.
