@@ -95,6 +95,9 @@
   const dialog = document.getElementById('v2FullVfxDialog');
   const fullButton = document.getElementById('v2FullVfxTrigger');
   const fullClose = document.getElementById('v2FullVfxClose');
+  const fullFrameVideo = document.getElementById('v2FullVfxVideo');
+  const fullFrameReference = document.getElementById('v2FullVfxReference');
+  const fullFramePending = document.getElementById('v2FullVfxPending');
 
   const skillReferences = {
     rongrong: {
@@ -117,6 +120,7 @@
   function stopCurrentMedia() {
     playbackGeneration++;
     video.pause();
+    fullFrameVideo.pause();
     video.hidden = true;
     battlefield.hidden = false;
     status.hidden = true;
@@ -188,6 +192,39 @@
     stopCurrentMedia();
     const card = skillCards.find(item => item.dataset.v2Skill === key);
     card?.setAttribute('aria-pressed', 'true');
+
+    // One click on a profile opens the genuine clip AND starts its game audio.
+    // Empty clip bindings deliberately keep the reviewed authentic still as a
+    // placeholder until teammate-captured VFX+SFX media has been verified.
+    const clipSrc = card?.dataset.v2SkillClip?.trim();
+    if (clipSrc) {
+      const generation = playbackGeneration;
+      activeClip = skill.name;
+      video.src = clipSrc;
+      video.muted = false;
+      video.volume = 1;
+      video.playbackRate = 1;
+      video.controls = true;
+      video.hidden = false;
+      battlefield.hidden = true;
+      status.hidden = false;
+      status.textContent = 'Loading ' + skill.name + ' · VFX with original game sound…';
+      // Important: play() is called immediately inside the user's card click,
+      // not after a timer or asynchronous media-loading callback.
+      video.currentTime = 0;
+      const playback = video.play();
+      playback.then(() => {
+        if (generation === playbackGeneration) {
+          status.textContent = skill.name + ' · VIDEO + IN-GAME SFX';
+        }
+      }).catch(() => {
+        if (generation === playbackGeneration) {
+          status.textContent = 'Audio/playback blocked — use the video controls to retry.';
+        }
+      });
+      return;
+    }
+
     proof.hidden = false;
     proofKicker.textContent = 'EXISTING AUTHENTIC SKILL STILL';
     proofTitle.textContent = skill.name + ' · ' + skill.ability;
@@ -196,7 +233,7 @@
       ' ability screenshot (not updated animation footage)';
     proofImage.hidden = false;
     proofBody.textContent =
-      'Presenter selection preview — updated pre-release animation and synchronized in-game sound pending.';
+      'Updated pre-release animation and synchronized game sound pending. Once captured, opening this cat immediately starts its VFX and audio (no second Play click).';
     proofCaption.textContent =
       'The still is genuine older game evidence. No new VFX or SFX is simulated.';
   }
@@ -241,9 +278,35 @@
     dismissAdvisor();
     if (typeof dialog.showModal === 'function') dialog.showModal();
     else dialog.setAttribute('open', '');
+
+    // In production, a verified full-frame recording is placed in this data
+    // attribute. Opening the viewer then immediately starts video AND sound.
+    const clipSrc = fullFrameVideo.dataset.v2VideoSrc?.trim();
+    if (!clipSrc) return; // Pending asset: show honest static placeholder.
+
+    fullFrameVideo.src = clipSrc;
+    fullFrameVideo.muted = false;
+    fullFrameVideo.volume = 1;
+    fullFrameVideo.currentTime = 0;
+    fullFrameVideo.hidden = false;
+    fullFrameReference.hidden = true;
+    fullFramePending.hidden = true;
+    // User click is the autoplay permission: no separate Play button needed.
+    fullFrameVideo.play().catch(() => {
+      fullFrameVideo.controls = true;
+      fullFramePending.hidden = false;
+      fullFramePending.querySelector('p').textContent =
+        'Playback unavailable — use the video controls to retry with sound.';
+    });
   });
   fullClose.addEventListener('click', () => dialog.close());
-  dialog.addEventListener('close', () => fullButton.focus({preventScroll: true}));
+  dialog.addEventListener('close', () => {
+    fullFrameVideo.pause();
+    fullFrameVideo.hidden = true;
+    fullFrameReference.hidden = false;
+    fullFramePending.hidden = false;
+    fullButton.focus({preventScroll: true});
+  });
 
   document.addEventListener('keydown', event => {
     if (event.key !== 'Escape' || !dialog.open) return;
