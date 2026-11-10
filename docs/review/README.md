@@ -78,9 +78,9 @@ The 22-scene candidate passed local checks at 1600×900 and 1366×768, then the 
 [Canonical inventory and source scope](../library/TEAMWORK-FUTURE-ASSETS.md) · [Exact capture provenance](../assets/teamwork/gitlab/provenance.json). Original approved compositions remain in normal Git history. No Closing/Q&A scene was created.
 
 
-## Closing Q&A — standalone composition review
+## Integrated Closing Q&A — final Page 23
 
-[Closing Q&A preview](closing-qa.html) uses the exact user-supplied horizontal poster, preserved as `assets/closing/stray-kitty-poster.png`. A pixel-identical lossless WebP is used when beneficial for delivery. The minimalist 16:9 composition keeps large Faculty Glyphic “Q & A” at left and the complete uncropped poster at right, in approximately 30/70 regions. Static authentic Miaomiao/route echoes reserve composition space; no independent animation or deck controls are added. This review is not integrated into Current/Previous, and no version rotation has occurred. Intended future position: final scene after the Teamwork/Future section, using the single existing v3 cat/route and 4200ms engine after integration approval.
+[Q & A](../?page=closing-qa) is the final native scene after A Dynamic, Living World. The approved minimalist 30/70 composition uses the complete supplied 3344×1882 poster, large Faculty Glyphic heading and warm cream background. It reuses the single global cat/route and original 4200ms v3 navigation. The old [preview URL](closing-qa.html) now redirects to the integrated page; the review-only stylesheet was removed after public verification. Current has 23 scenes and Previous retains the outgoing verified 22-scene deck. Shared poster media and unrelated reviews/templates are preserved.
 
 
 ## Integrated Future influence — Page 22

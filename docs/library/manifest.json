@@ -138,7 +138,8 @@
       "styles": "../closing-qa.css",
       "variants": "Large Faculty Glyphic Q & A; full uncropped poster; one shared v3 cat/route; no local animation",
       "script": "../engine-v3.js",
-      "status": "APPROVED COMPOSITION / LOCAL_VERIFIED; public verification pending"
+      "status": "APPROVED / INTEGRATED / PUBLIC_VERIFIED",
+      "former_preview": "../review/closing-qa.html (redirect)"
     },
     {
       "id": "interaction.future-influence",

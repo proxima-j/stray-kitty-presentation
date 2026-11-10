@@ -4,7 +4,7 @@
     "candidate_base_commit": "e68b52bb0594db5e987097e3aeccd18b26aeec8a",
     "build_marker": "20261110-qa-integrated1",
     "description": "Twenty-three scenes: the complete game, technical/Datadog and Teamwork/Future sequence, followed by the final Q & A scene.",
-    "publication_status": "LOCAL_VERIFIED; public verification pending",
+    "publication_status": "VERIFIED",
     "local_verified_at": "2026-11-10T05:33:44.511900+00:00",
     "verification_notes": "Focused private-candidate checks at 1600x900 and 1366x768: exact approved 30/70 composition, full 3344x1882 poster visible without cropping or distortion, large Faculty Glyphic heading, native single cat/route. Future ↔ Q&A arrow navigation and last-scene ordering checked. All original 22 scene blocks and runtime dependencies byte-identical; no engine or media changes, original 4200ms behavior preserved.",
     "poster_asset": "assets/closing/stray-kitty-poster.webp",
@@ -14,24 +14,30 @@
       "page": 23,
       "after": "connected-world"
     },
-    "outgoing_current_source": "e68b52bb0594db5e987097e3aeccd18b26aeec8a"
+    "outgoing_current_source": "e68b52bb0594db5e987097e3aeccd18b26aeec8a",
+    "public_verified_at": "2026-11-10T05:44:10.365546+00:00",
+    "publication_evidence": {
+      "integration_commit": "4f66ae0b09646233a4875b31b9c99f51ac12d5ff",
+      "pages_build": "https://github.com/proxima-j/stray-kitty-presentation/actions/runs/42763136807",
+      "url": "https://proxima-j.github.io/stray-kitty-presentation/?page=closing-qa",
+      "http_status": 200,
+      "verification": "Published native Page 23 observed in browser: full 3344x1882 poster loaded, Faculty Glyphic loaded, final registry position closing-qa, 23 scenes. Right at final scene remained at distance 22 / progress 1. No crop or duplicate cat/route. Private candidate layouts passed at both requested sizes, with Future ↔ Q&A navigation."
+    }
   },
   "previous": {
     "entry": "previous/",
     "candidate_base_commit": "89e52a078d0e2ff4ad03fa1ff3250abd9d9d5155",
     "build_marker": "20261109-future-integrated1",
     "description": "Outgoing verified twenty-two-page deck ending with A Dynamic, Living World",
-    "publication_status": "LOCAL_VERIFIED; public verification pending",
+    "publication_status": "VERIFIED",
     "local_verified_at": "2026-11-10T05:35:52.548332+00:00",
     "verification_notes": "Focused candidate browser checks at 1600x900 and 1366x768. Four local stages, matching text/evidence, Next/Previous, focused Space isolation and full-image inspection; 36-cell grids with 10/6 failures; four shared future images and six bidirectional connectors. Forward/back through 19-22; opening full film plays with sound and manual skip; existing dialogue interaction. Prior 19 scene blocks and all runtime files byte-identical; original v3 4200ms beat, single cat and route preserved. GitLab evidence #4 notes 8317/8605/9310, related merged !80 via integration !81; no formal approval invented.",
-    "public_verified_at": "2026-11-09T13:30:31.773923+00:00",
+    "public_verified_at": "2026-11-10T05:44:10.365546+00:00",
     "publication_evidence": {
-      "integration_commit": "4f36f5bbcdd311ef88db46ec62b3fb0c0d0a34f3",
-      "pages_build": "https://github.com/proxima-j/stray-kitty-presentation/actions/runs/42625645564",
-      "current_url": "https://proxima-j.github.io/stray-kitty-presentation/",
-      "previous_url": "https://proxima-j.github.io/stray-kitty-presentation/previous/",
+      "source_commit": "e68b52bb0594db5e987097e3aeccd18b26aeec8a",
+      "url": "https://proxima-j.github.io/stray-kitty-presentation/previous/",
       "http_status": 200,
-      "verification": "Published 22-scene Current: native four-stage controls with matching genuine evidence, future shared images and marker. Published 19-scene Previous: original Datadog media loaded from shared assets. Focused source/nav/layout tests passed locally before promotion."
+      "verification": "Published 22-scene Previous loaded in a real browser at Future: all four shared images loaded, Faculty Glyphic loaded, Future module initialized. Rebased local snapshot click interaction passed. No media duplication."
     },
     "readability_maintenance_base_commit": "03e1e0fdce4e1bc9818bac079c3633a9d0fcc54a",
     "readability_maintenance_notes": "User-requested Page 20 readability: enlarged evidence allocation and CSS-only source excerpts (title/status, mentions and selected findings), complete original on click. Page-20-only cat/route clearance adds 7vh with smooth/reduced-motion-aware entry/exit, without editing v3 engine or 4200ms navigation. Page 21 diagrams, Page 22, original media and Previous unchanged; no rotation.",
