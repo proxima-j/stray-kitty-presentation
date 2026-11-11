@@ -2625,6 +2625,17 @@
       "provenance_record": "COMBAT-PART2B-CAPTURE.json"
     },
     {
+      "id": "combat.v2.default-poster",
+      "source": "../assets/v2/combat/warehouse-team-burst-poster.webp",
+      "origin": "First frame of the approved Warehouse finale clip warehouse-team-burst-muted.mp4, scaled to 960 × 540 without cropping.",
+      "use": "Current Page 10 / Combat",
+      "status": "APPROVED / INTEGRATED",
+      "integrated_in": "../index.html?page=combat",
+      "binding": ".battlefield-image and #v2DefaultBattleVfx[data-media-poster]",
+      "permission": "Derived from the Warehouse gameplay preview approved for publication.",
+      "provenance_record": "COMBAT-PART2B-CAPTURE.json"
+    },
+    {
       "id": "combat.v2.skill-rongrong",
       "source": "../assets/v2/combat/rongrong-skill-muted.mp4",
       "origin": "100/100 ready → choose Star Burst → aim at D8 → accepted cast, named banner and five-cell cross around the boss → damage and settle. Configured damage: 45 per target.",

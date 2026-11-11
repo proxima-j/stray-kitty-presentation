@@ -69,7 +69,7 @@
     clearTimeout(bufferingTimer);
     clip.pause();
     clip.hidden = true;
-    battlefield.hidden = false;
+    battlefield.hidden = clip !== defaultVideo;
     retry.hidden = false;
     const output = clip === defaultVideo ? defaultStatus : status;
     output.hidden = false;
@@ -80,7 +80,7 @@
     clip.controls = false;
     clip.preload = 'auto';
     clip.playbackRate = 1;
-    // Keep the approved still during loading and reload a failed source on retry.
+    // The default loop has a matching poster. Selected clips load without a poster.
     if (!clip.hasAttribute('poster') && clip.dataset.mediaPoster) clip.poster = clip.dataset.mediaPoster;
     if (clip.getAttribute('src') !== src || clip.error) {
       clip.src = src;
@@ -113,6 +113,7 @@
     stopAll();
     mode = 'clip';
     selectedClip = { src, label, button };
+    battlefield.hidden = true;
     back.hidden = false;
     status.hidden = false;
     status.textContent = 'Loading genuine ' + label + ' · muted…';

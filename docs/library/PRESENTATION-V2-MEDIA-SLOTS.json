@@ -58,7 +58,7 @@
       "element_id": "v2DefaultBattleVfx",
       "binding": "data-v2-default-src",
       "planned_path": "assets/v2/combat/warehouse-team-burst-muted.mp4",
-      "fallback": "assets/pages/09/battlefield-main.webp",
+      "fallback": "assets/v2/combat/warehouse-team-burst-poster.webp",
       "requirement": "Verified capture: Continuous ×1 Warehouse finale take. The boss marks a full row for Shadow Sweep while Momo shields allies across the board and Tuanzi strikes multiple tiles. The sweep lands during the overlapping ally effects.",
       "path": "assets/v2/combat/warehouse-team-burst-muted.mp4",
       "provenance": "COMBAT-PART2B-CAPTURE.json",
