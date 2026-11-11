@@ -35,6 +35,8 @@ jobs:
           persist-credentials: false
       - name: Check publisher regressions
         run: python3 -m unittest discover -s .github/scripts -p 'test_publish_pages.py'
+      - name: Bundle Current deck startup files
+        run: python3 .github/scripts/bundle_current.py docs/index.html
       - name: Stamp the publication
         run: |
           python3 - <<'PY'
