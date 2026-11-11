@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "status": "V2 INTERIM — MEDIA PENDING",
+  "status": "HOME AND COMBAT CAPTURES VERIFIED",
   "components": [
     {
       "id": "type.display",
@@ -2593,10 +2593,228 @@
         "width": 960,
         "height": 540
       }
+    },
+    {
+      "id": "combat.v2.default",
+      "source": "../assets/v2/combat/general-battle-vfx-muted.mp4",
+      "origin": "Continuous ×1 Market play, including Star Burst and Healing Purr banners, board effects and settle. Same camera throughout; ordinary wave progress resets at the loop.",
+      "use": "Current Page 10 / Combat",
+      "status": "APPROVED / INTEGRATED",
+      "review_status": "VERIFIED",
+      "integrated_in": "../index.html?page=combat",
+      "binding": "#v2DefaultBattleVfx[data-v2-default-src]",
+      "permission": "User authorized public posting of the project gameplay captures in Part 2B. The banner art appears only in the game footage.",
+      "metadata": {
+        "source_take": "general-battle",
+        "checkpoint": "market.battle",
+        "battle_attempt": "6f1c0973b5385aae17e6ac4ab1a5078cc629a7e17dbc2759",
+        "game_commit": "41ff1459beecc0acfc89d3d5b3fb22997c9ec874",
+        "original_dimensions": [
+          1600,
+          900
+        ],
+        "published_dimensions": [
+          1280,
+          720
+        ],
+        "duration_seconds": 8.4,
+        "original_sampled_frames": 100,
+        "bytes": 742929,
+        "encoding": "Timestamped gameplay frames encoded H.264/yuv420p fast-start MP4 at 30 fps. Sampled approximately 11–15 fps; frame holds preserve real elapsed time, with no interpolation, retiming, crop or audio."
+      },
+      "provenance_record": "COMBAT-PART2B-CAPTURE.json"
+    },
+    {
+      "id": "combat.v2.skill-rongrong",
+      "source": "../assets/v2/combat/rongrong-skill-muted.mp4",
+      "origin": "100/100 ready → choose Star Burst → aim at D8 → accepted cast, named banner and five-cell cross around the boss → damage and settle. Configured damage: 45 per target.",
+      "use": "Current Page 10 / Combat",
+      "status": "APPROVED / INTEGRATED",
+      "review_status": "VERIFIED",
+      "integrated_in": "../index.html?page=combat",
+      "binding": "[data-v2-skill=\"rongrong\"][data-v2-skill-clip]",
+      "permission": "User authorized public posting of the project gameplay captures in Part 2B. The banner art appears only in the game footage.",
+      "metadata": {
+        "source_take": "rongrong-skill",
+        "checkpoint": "event:alley:crate_event",
+        "battle_attempt": "71e5f0f740f865a5cc38ab77e64310d768d387bda9fd4a4c",
+        "game_commit": "41ff1459beecc0acfc89d3d5b3fb22997c9ec874",
+        "original_dimensions": [
+          1600,
+          900
+        ],
+        "published_dimensions": [
+          1280,
+          720
+        ],
+        "duration_seconds": 6.533333,
+        "original_sampled_frames": 69,
+        "bytes": 471049,
+        "encoding": "Timestamped gameplay frames encoded H.264/yuv420p fast-start MP4 at 30 fps. Sampled approximately 11–15 fps; frame holds preserve real elapsed time, with no interpolation, retiming, crop or audio."
+      },
+      "provenance_record": "COMBAT-PART2B-CAPTURE.json"
+    },
+    {
+      "id": "combat.v2.skill-banban",
+      "source": "../assets/v2/combat/banban-skill-muted.mp4",
+      "origin": "100/100 ready → select Shield → named banner and active shield → shield expires. Actual cast grants 60 shield for up to 8 battle seconds.",
+      "use": "Current Page 10 / Combat",
+      "status": "APPROVED / INTEGRATED",
+      "review_status": "VERIFIED",
+      "integrated_in": "../index.html?page=combat",
+      "binding": "[data-v2-skill=\"banban\"][data-v2-skill-clip]",
+      "permission": "User authorized public posting of the project gameplay captures in Part 2B. The banner art appears only in the game footage.",
+      "metadata": {
+        "source_take": "banban-skill",
+        "checkpoint": "market.battle",
+        "battle_attempt": "6f1c0973b5385aae17e6ac4ab1a5078cc629a7e17dbc2759",
+        "game_commit": "41ff1459beecc0acfc89d3d5b3fb22997c9ec874",
+        "original_dimensions": [
+          1600,
+          900
+        ],
+        "published_dimensions": [
+          1280,
+          720
+        ],
+        "duration_seconds": 10.566667,
+        "original_sampled_frames": 159,
+        "bytes": 840253,
+        "encoding": "Timestamped gameplay frames encoded H.264/yuv420p fast-start MP4 at 30 fps. Sampled approximately 11–15 fps; frame holds preserve real elapsed time, with no interpolation, retiming, crop or audio."
+      },
+      "provenance_record": "COMBAT-PART2B-CAPTURE.json"
+    },
+    {
+      "id": "combat.v2.skill-diandian",
+      "source": "../assets/v2/combat/diandian-skill-muted.mp4",
+      "origin": "100/100 ready → select Healing Purr → named banner and healing effect → settle. Observed Rongrong HP 50→80 and Diandian 70→140. Configured heal: 80 HP, active companions only.",
+      "use": "Current Page 10 / Combat",
+      "status": "APPROVED / INTEGRATED",
+      "review_status": "VERIFIED",
+      "integrated_in": "../index.html?page=combat",
+      "binding": "[data-v2-skill=\"diandian\"][data-v2-skill-clip]",
+      "permission": "User authorized public posting of the project gameplay captures in Part 2B. The banner art appears only in the game footage.",
+      "metadata": {
+        "source_take": "diandian-skill",
+        "checkpoint": "event:alley:crate_event",
+        "battle_attempt": "71e5f0f740f865a5cc38ab77e64310d768d387bda9fd4a4c",
+        "game_commit": "41ff1459beecc0acfc89d3d5b3fb22997c9ec874",
+        "original_dimensions": [
+          1600,
+          900
+        ],
+        "published_dimensions": [
+          1280,
+          720
+        ],
+        "duration_seconds": 5.966667,
+        "original_sampled_frames": 79,
+        "bytes": 615677,
+        "encoding": "Timestamped gameplay frames encoded H.264/yuv420p fast-start MP4 at 30 fps. Sampled approximately 11–15 fps; frame holds preserve real elapsed time, with no interpolation, retiming, crop or audio."
+      },
+      "provenance_record": "COMBAT-PART2B-CAPTURE.json"
+    },
+    {
+      "id": "combat.v2.event-choice",
+      "source": "../assets/v2/events/carry-choice.webp",
+      "origin": "Actual choice card with search selected.",
+      "use": "Current Page 10 / Combat",
+      "status": "APPROVED / INTEGRATED",
+      "review_status": "VERIFIED",
+      "integrated_in": "../index.html?page=combat",
+      "binding": "#v2BattleProof[data-v2-event-choice]",
+      "permission": "User authorized public posting of the project gameplay captures in Part 2B. The banner art appears only in the game footage.",
+      "metadata": {
+        "source_take": "crate-choice.jpg",
+        "checkpoint": "event:alley:crate_event",
+        "battle_attempt": "71e5f0f740f865a5cc38ab77e64310d768d387bda9fd4a4c",
+        "game_commit": "41ff1459beecc0acfc89d3d5b3fb22997c9ec874",
+        "original_dimensions": [
+          1600,
+          900
+        ],
+        "published_dimensions": [
+          500,
+          252
+        ],
+        "crop_width_height_x_y": [
+          500,
+          252,
+          548,
+          168
+        ],
+        "bytes": 15120,
+        "encoding": "Genuine screenshot crop, WebP; no changed text or effects."
+      },
+      "provenance_record": "COMBAT-PART2B-CAPTURE.json"
+    },
+    {
+      "id": "combat.v2.event-state",
+      "source": "../assets/v2/events/carry-state.webp",
+      "origin": "Actual 3+4=7 partial result; Material +2 and Shadow Pressure +1 remain distinct.",
+      "use": "Current Page 10 / Combat",
+      "status": "APPROVED / INTEGRATED",
+      "review_status": "VERIFIED",
+      "integrated_in": "../index.html?page=combat",
+      "binding": "#v2BattleProof[data-v2-event-state]",
+      "permission": "User authorized public posting of the project gameplay captures in Part 2B. The banner art appears only in the game footage.",
+      "metadata": {
+        "source_take": "crate-state.jpg",
+        "checkpoint": "event:alley:crate_event",
+        "battle_attempt": "71e5f0f740f865a5cc38ab77e64310d768d387bda9fd4a4c",
+        "game_commit": "41ff1459beecc0acfc89d3d5b3fb22997c9ec874",
+        "original_dimensions": [
+          1600,
+          900
+        ],
+        "published_dimensions": [
+          500,
+          202
+        ],
+        "crop_width_height_x_y": [
+          500,
+          202,
+          548,
+          372
+        ],
+        "bytes": 13632,
+        "encoding": "Genuine screenshot crop, WebP; no changed text or effects."
+      },
+      "provenance_record": "COMBAT-PART2B-CAPTURE.json"
+    },
+    {
+      "id": "combat.v2.event-battle",
+      "source": "../assets/v2/events/carry-battle.mp4",
+      "origin": "Same rescue attempt starts with 3,120 boss HP versus 2,600 configured at normal pressure; Start Defense input and first wave visible.",
+      "use": "Current Page 10 / Combat",
+      "status": "APPROVED / INTEGRATED",
+      "review_status": "VERIFIED",
+      "integrated_in": "../index.html?page=combat",
+      "binding": "#v2BattleProof[data-v2-event-battle]",
+      "permission": "User authorized public posting of the project gameplay captures in Part 2B. The banner art appears only in the game footage.",
+      "metadata": {
+        "source_take": "carry-live-battle",
+        "checkpoint": "event:alley:crate_event",
+        "battle_attempt": "71e5f0f740f865a5cc38ab77e64310d768d387bda9fd4a4c",
+        "game_commit": "41ff1459beecc0acfc89d3d5b3fb22997c9ec874",
+        "original_dimensions": [
+          1600,
+          900
+        ],
+        "published_dimensions": [
+          1280,
+          720
+        ],
+        "duration_seconds": 9,
+        "original_sampled_frames": 114,
+        "bytes": 590157,
+        "encoding": "Timestamped gameplay frames encoded H.264/yuv420p fast-start MP4 at 30 fps. Sampled approximately 11–15 fps; frame holds preserve real elapsed time, with no interpolation, retiming, crop or audio."
+      },
+      "provenance_record": "COMBAT-PART2B-CAPTURE.json"
     }
   ],
   "current_presentation": {
-    "label": "V2 Interim — Media Pending",
+    "label": "V2 — Home and Combat Captures Verified",
     "build_marker": "20261110-v2-no-gameflow",
     "scene_count": 20,
     "registry": [
@@ -2701,9 +2919,9 @@
         "title": "Q & A"
       }
     ],
-    "media_status": "HOME VERIFIED / COMBAT MEDIA PENDING",
+    "media_status": "HOME AND COMBAT CAPTURES VERIFIED",
     "pending_bindings": "PRESENTATION-V2-MEDIA-SLOTS.json",
     "handoff": "PRESENTATION-V2-PHASE2-HANDOFF.md",
-    "note": "20-scene Current: Home Part 2A complete; seven Combat/event file slots remain pending. Historical source folders/capture dates preserved. No version rotation."
+    "note": "20 scenes; seven Part 2B files integrated. Separate pre-release wind-up absent from verified source build. No version rotation."
   }
 }

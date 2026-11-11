@@ -78,7 +78,9 @@
     clip.controls = false;
     clip.preload = 'auto';
     clip.playbackRate = 1;
-    if (clip.getAttribute('src') !== src) {
+    // Keep the approved still during loading and reload a failed source on retry.
+    if (!clip.hasAttribute('poster') && clip.dataset.mediaPoster) clip.poster = clip.dataset.mediaPoster;
+    if (clip.getAttribute('src') !== src || clip.error) {
       clip.src = src;
       clip.load();
     }

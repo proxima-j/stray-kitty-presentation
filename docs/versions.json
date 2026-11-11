@@ -4,9 +4,9 @@
     "candidate_base_commit": "9e2cd416bde4268df0064eab90b09151f51e01db",
     "integration_commit": "e0dabbbf7a82272b3f45c846169dabe9da973fbf",
     "build_marker": "20261110-v2-no-gameflow",
-    "description": "20-scene V2 Interim: Home Part2A completed; seven Combat/event media slots pending. Approved composition and 4200ms engine preserved.",
-    "publication_status": "V2 INTERIM — MEDIA PENDING",
-    "verification_status": "VERIFIED PAGE-REMOVAL MAINTENANCE / MEDIA PENDING",
+    "description": "20-scene V2 with verified Home and Combat captures; approved composition and 4200ms engine preserved.",
+    "publication_status": "HOME AND COMBAT CAPTURES VERIFIED",
+    "verification_status": "FOCUSED COMBAT CANDIDATE VERIFIED",
     "local_verified_at": "2026-11-10T23:01:55.087284+08:00",
     "registry": [
       {
@@ -120,20 +120,12 @@
       "page": 20,
       "after": "connected-world"
     },
-    "media_status": "HOME VERIFIED / COMBAT MEDIA PENDING",
-    "pending_slots": [
-      "combat-default",
-      "combat-skill-rongrong",
-      "combat-skill-banban",
-      "combat-skill-diandian",
-      "combat-event-choice",
-      "combat-event-state",
-      "combat-event-battle"
-    ],
+    "media_status": "HOME AND COMBAT CAPTURES VERIFIED",
+    "pending_slots": [],
     "handoff": "library/PRESENTATION-V2-PHASE2-HANDOFF.md",
     "media_inventory": "library/PRESENTATION-V2-MEDIA-SLOTS.json",
     "public_preview": "https://proxima-j.github.io/stray-kitty-presentation/",
-    "publication_gate": "Final report requires green Pages publication and matching public 20261110-v2-no-gameflow marker.",
+    "publication_gate": "Successful serialized Pages run and matching public deployment.json; smoke check Combat with actual new media.",
     "outgoing_current_source": "9e2cd416bde4268df0064eab90b09151f51e01db",
     "playback_failure_verification": "One private invalid-media probe passed: failed clip hidden, authentic still visible, muted Retry exposed, Return restored clean default. No game/infrastructure/network fault injection; probe not published.",
     "part1_verification_notes": "Focused real-browser checks at 1600x900 and 1366x768: all 21 direct scene links; identical Home mode geometry and muted playback/pause; Combat three still selections, genuine Reposition/Activate Skills, evidence-pending bridge, advisor Local Fallback, 24% idle transparent Return and keyboard-focus affordance, one active video, completion/reset/scene exit/re-entry; original Slack image and four dashboards; native Pitch-to-Game Flow forward/back, opening full film unmuted on user Play and manual Skip. No console warnings/errors observed. Static local asset references resolve. 18 retained scenes unchanged except numbering; engine and generic media player byte-identical.",
@@ -156,6 +148,15 @@
       "repair_source_game_sha": "897f4c4ca63a4cd92ca2bfb6fff0dd296317251f",
       "verification": "Home at 1600x900 and 1366x768; same two-tab 2x2 geometry; 3→6→9 cumulative placements; four muted clips and existing pause control; scene/tab lifecycle; original Stage01/three clips/film/engine/20-scene registry retained. Public publication must match deployment.json.",
       "rotation": "None; page-specific media completion. Previous/V1 unchanged."
+    },
+    "combat_part2b": {
+      "game_build": "41ff1459beecc0acfc89d3d5b3fb22997c9ec874",
+      "merge_request": "https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/merge_requests/205",
+      "capture_provenance": "library/COMBAT-PART2B-CAPTURE.json",
+      "event": "crate_event / search; 3+4=7; Shadow Pressure +1; same rescue attempt starts at 3,120 HP",
+      "limitation": "Immediate accepted cast with a 2.2 s banner; no distinct pre-release wind-up.",
+      "rotation": "None; single-scene update. Previous/V1 unchanged.",
+      "candidate_verification": "1600x900 and 1366x768. All seven media bindings, muted playback, Return after seven demonstrations, keyboard focus, replay, scene exit/re-entry, one missing-media Retry probe, unchanged 20-scene registry and 4200ms player."
     }
   },
   "previous": {

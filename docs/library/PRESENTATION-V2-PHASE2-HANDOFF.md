@@ -1,6 +1,6 @@
 # V2 Part 2 handoff
 
-Current: **20-scene V2 Interim — Home verified; Combat media pending**, marker `20261110-v2-no-gameflow`. Home is Page 04, stable ID `home-hub`. Part 2A completes Home media only. The existing serialized GitHub Pages workflow publishes `docs/`; the successful Actions run and matching public `deployment.json` identify the deployed commit.
+Current: **20-scene V2 — Home and Combat captures verified**, marker `20261110-v2-no-gameflow`. Home is Page 04 (`home-hub`); Combat is Page 10 (`combat`). The existing serialized GitHub Pages workflow publishes `docs/`; the successful Actions run and matching public `deployment.json` identify the deployed commit.
 
 ## Retained versions and scope
 
@@ -60,29 +60,24 @@ RESPONDS retains its approved 2×2 positions and the three original files unchan
 
 Focused verification: both galleries have equal bounding boxes at1600×900 (960.104×626.521) and1366×768 (819.688×539.375); all images decode, four clips advance muted, manual pause works, hidden tab/scene pauses, re-entry resumes normally, no Home pending overlay remains. Native forward/back scene navigation works; single cat/route and20-scene registry retained. Stage01/three existing clips/film/engine/Previous/V1 unchanged. One private missing-clip probe also retained the genuine poster and exposed the existing Play retry with an honest unavailable label; no fault was injected into the game or infrastructure. Publication requires the public Home check; use Actions and deployment stamp, not historical failed runs.
 
-## Part 2B — Combat Assets Pending
+## Part 2B — Combat captures verified
 
-**Seven files remain pending. Do not mark V2 media-complete.** Combat implementation and existing fallbacks were not modified or recaptured during Part 2A.
+[Live Combat](https://proxima-j.github.io/stray-kitty-presentation/?page=combat) · [Exact build, attempts, crops and encoding](COMBAT-PART2B-CAPTURE.json). Game build `41ff1459beecc0acfc89d3d5b3fb22997c9ec874` includes [MR !205](https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/merge_requests/205), merge `f6f260b5c6d90cf38ea0d0e7ee88aaf7d0365dea`. Recordings use normal gameplay in isolated QA, at the native ×1 speed.
 
-| Production binding | Planned file (does not exist yet) | Existing fallback |
+| Production binding | Verified file under `docs/` | Captured evidence |
 | --- | --- | --- |
-| `#v2DefaultBattleVfx`, `data-v2-default-src` | `assets/v2/combat/general-battle-vfx-muted.mp4` | `assets/pages/09/battlefield-main.webp` |
-| `[data-v2-skill="rongrong"]`, `data-v2-skill-clip` | `assets/v2/combat/rongrong-skill-muted.mp4` | `assets/pages/09/caster-star-vfx.webp` |
-| `[data-v2-skill="banban"]`, `data-v2-skill-clip` | `assets/v2/combat/banban-skill-muted.mp4` | `assets/pages/09/guard-shield-vfx.webp` |
-| `[data-v2-skill="diandian"]`, `data-v2-skill-clip` | `assets/v2/combat/diandian-skill-muted.mp4` | `assets/pages/09/diandian-heal-vfx.webp` |
-| `#v2BattleProof`, `data-v2-event-choice` | `assets/v2/events/carry-choice.webp` | Explicit linked-evidence-pending state |
-| `#v2BattleProof`, `data-v2-event-state` | `assets/v2/events/carry-state.webp` | Explicit linked-evidence-pending state |
-| `#v2BattleProof`, `data-v2-event-battle` | `assets/v2/events/carry-battle.mp4` | Explicit linked-evidence-pending state |
+| `#v2DefaultBattleVfx[data-v2-default-src]` | `assets/v2/combat/general-battle-vfx-muted.mp4` | 8.4 s, uncropped Market battle with Star Burst and Healing Purr |
+| Rongrong `data-v2-skill-clip` | `assets/v2/combat/rongrong-skill-muted.mp4` | 6.53 s, 100 energy, targeting, banner, cross damage and settle |
+| Banban `data-v2-skill-clip` | `assets/v2/combat/banban-skill-muted.mp4` | 10.57 s, 100 energy, banner, shield and expiry |
+| Diandian `data-v2-skill-clip` | `assets/v2/combat/diandian-skill-muted.mp4` | 5.97 s, 100 energy, banner, visible ally HP recovery and settle |
+| `#v2BattleProof[data-v2-event-choice]` | `assets/v2/events/carry-choice.webp` | Genuine crate search selection |
+| `#v2BattleProof[data-v2-event-state]` | `assets/v2/events/carry-state.webp` | Actual 3 + 4 = 7 partial result, Shadow Pressure +1 |
+| `#v2BattleProof[data-v2-event-battle]` | `assets/v2/events/carry-battle.mp4` | 9 s, actual start and first wave of the same rescue attempt; boss starts at 3,120 HP |
 
-Also fill `#v2BattleProof[data-v2-event-caption]` with an accurate source/save/build explanation. All three event paths and caption are required to show Choice → Stored effect → subsequent battle in the existing battlefield. Do not bind the feeder-bowl Fish+1/Material+1 resource rewards as combat modifiers.
+**Timing distinction:** In the inspected build, the engine applies the effect when it accepts the cast. The viewport then emits the 2.2-second cast banner and board feedback. These clips show the whole shipped cast sequence; a separate pre-release wind-up is not implemented in this revision. If a different wind-up build becomes available, verify that revision before replacing the skill captures.
 
-### Next capture gate and blockers
+The dice-based node encounter `crate_event`, choice `search`, stores `shadowPressure: 1` after an unforced roll of 7. The next `alley_rescue` attempt in the same save uses high pressure (1.2× HP), producing the recorded 3,120 starting boss HP versus the 2,600 normal configuration. Material +2 is a separate inventory reward; the feeder-bowl example and its Random Events page remain unchanged.
 
-1. Identify the teammate's stable shipped visual-effects commit/MR. One focused read-only activation-order check, not another whole-codebase audit.
-2. Capture the actual general full-frame uncropped VFX loop (typically8–15s) and three complete individual skill cycles: ready/input → entire anticipation/wind-up → release/impact → visible result/settle. Preserve original timing. No SFX/audio recording is required; everything plays muted.
-3. Identify a genuine event/choice that stores support or pressure and a subsequent battle that actually consumes it. Record event/choice IDs, saved modifier, battle attempt, exact build and checkpoint. Capture two stills and one complete consequence clip. **Blocked until the stable updated build and linked mechanic are verified.** Prefer same save; disclose separately staged checkpoints if necessary.
-4. Register only existing cleared files; replace exact attributes in the media-slot JSON. Remove pending wording only after verification. Recheck only affected media/playback/layout, then publish normally. No rotation for isolated page/media changes.
-
-Existing Reposition (`reposition-closeup.mp4`,7.6s) and Activate Skills (`skill-activation-closeup.mp4`,5.233s) remain historical genuine clips, not proof of the new anticipation animations. Preserve the Local Fallback advisor label. Current Combat controller already provides one active video, muted default/selection, completion/Return reset, scene/tab exit pause, and honest failure/retry. Preserve its geometry and reviewed subtle Return control.
+The existing controller plays only one muted battlefield video, resumes the default loop on completion or Return, and resets on scene exit. The authentic still covers loading or playback failure. Existing Reposition and Activate Skills clips, profiles, Local Fallback advisor and 24% Return styling remain intact. Focused checks at 1600×900 and 1366×768 covered the seven bindings, replay, event proof, each Return path, keyboard focus and forward/back lifecycle. No changes to Home, film, engine, Previous or V1.
 
 Observability's four tabs and Slack evidence banner remain untouched. Historical Slack capture does not verify mobile delivery or automatic root-cause repair. No phone/emulator recording is needed.

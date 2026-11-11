@@ -1,8 +1,8 @@
 # Stray Kitty V2 — Composition and Asset Inventory
 
-**2026-11-11 · Home Part 2A complete; Combat media pending. Current remains the approved 20-scene V2 Interim.**
+**2026-11-11 · Home Part 2A and seven Combat Part 2B captures verified. Current remains the approved 20-scene V2.**
 
-[Home capture provenance](HOME-PART2A-CAPTURE.json) records the four completed assets and staged QA method. This status supersedes historical Home pending instructions below. Combat requirements remain unresolved.
+[Home capture provenance](HOME-PART2A-CAPTURE.json) records the four completed assets and staged QA method. [Combat capture provenance](COMBAT-PART2B-CAPTURE.json) records the four VFX clips and three linked event files. The merged game shows a cast banner on accepted release; a distinct pre-release wind-up is absent. These records supersede the historical capture plans below.
 
 The Part 1 status below supersedes the older review-only/planning restrictions in this historical inventory. [Part 2 handoff](PRESENTATION-V2-PHASE2-HANDOFF.md) and [exact media slots](PRESENTATION-V2-MEDIA-SLOTS.json) are the current implementation references.
 
@@ -22,7 +22,7 @@ Canonical decisions: [Notion rehearsal handoff — Section 11](https://app.notio
 | 02 Elevator Pitch | assets/closing/stray-kitty-poster.webp; assets/illustrations/d20-dungeon-master-original.webp; assets/illustrations/playful-cats-original.webp | **None** | **Locked Current layout** with original poster, story and updated **UP NEXT / LIVE GAMEPLAY · CHAPTER 5 / The Gameplay Loop in Action** text. No more composition work. |
 | 04 Home Hub | assets/pages/06/greenhouse-stage-01.webp through -04.webp; cat-reaction-web.mp4; postcard-to-parcel-web.mp4; furniture-drag-save-web.mp4 | **COMPLETE:** three cumulative stills and authentic repair; Stage01 unchanged | Original GROWS 2×2: no additions in BEGINNING, then furniture accumulates across REBUILDING, GROWING, CELEBRATION. RESPONDS same 2×2: RESTORATION top-left; CAT REACTION top-right; POSTCARD/REWARD bottom-left; CUSTOMIZATION bottom-right. |
 | 09 Random Events | assets/pages/08/01-testing-view.webp; 02-event-choice.webp; 03-event-success.webp; existing Fish +1 and Material +1 reward crops | **None on this page**. Different event-to-battle proof is collected for **Combat** | **Exact existing composition and visuals**. Do not introduce a second event, new panel or trigger. Original Fish +1/Material +1 are resource rewards, not a direct battle modifier. |
-| 10 Combat | assets/pages/09/battlefield-main.webp; reposition-closeup.mp4; skill-activation-closeup.mp4; companion portraits/VFX crops; advisor before/after stills | **Three individual visual skill captures with pre-release animation; one native full-frame muted general VFX loop; a verified event→battle effect** | **Exact production geometry and original controls**. Make each existing companion profile clickable; use the same battlefield for event proof and skill clips, while authentic full-frame general VFX loops muted in the battlefield by default. No additional VFX button or popup. All Combat videos, including selected companion skills, play muted. Retain 阿策 Local Fallback. |
+| 10 Combat | assets/pages/09/battlefield-main.webp; reposition-closeup.mp4; skill-activation-closeup.mp4; companion portraits/VFX crops; advisor before/after stills | **Verified:** three cast-banner skill clips, one full-frame muted loop, and three linked crate-search → rescue-battle evidence files | Existing battlefield, profiles, controls and 阿策 Local Fallback. Captures preserve the full shipped casts, without claiming a separate wind-up. |
 
 All existing paths are under docs/. Listed V2 file targets below are suggestions **not actual assets** and must never be marked as uploaded or cleared until recorded and verified.
 
@@ -39,7 +39,7 @@ Approved two-tab2×2 composition unchanged. Original Stage01 and three existing 
 
 Stills use exact committed game source `1eecfabb5d8524ad10fc4654547a0ede6c9b2a4e`, real1600×900 captures, uncropped960×540 WebP derivatives. Camera matches retained baseline exactly. Each prior ID/position/dimension remains in the next image. Repair sourceSHA `897f4c4ca63a4cd92ca2bfb6fff0dd296317251f`; original footage/build/evidence preserved locally. One genuine poster derivative is shared with load-failure fallback. Public posting of these project-owned captures and isolated QA staging was explicitly authorized in Part2A.
 
-Full dates, camera, QA checkpoints, furniture coordinates, source masters, encoding, permission and bindings: [HOME-PART2A-CAPTURE.json](HOME-PART2A-CAPTURE.json). High-quality local masters and private save remain outside Git. No personal/save/authentication data published. See [Part2B handoff](PRESENTATION-V2-PHASE2-HANDOFF.md) for the seven remaining Combat/event files. These older review instructions are history; do not restore pending Home treatments.
+Full dates, camera, QA checkpoints, furniture coordinates, source masters, encoding, permission and bindings: [HOME-PART2A-CAPTURE.json](HOME-PART2A-CAPTURE.json). High-quality local masters and private save remain outside Git. No personal/save/authentication data published. See [Part2B handoff](PRESENTATION-V2-PHASE2-HANDOFF.md) for the seven verified Combat/event files. These older review instructions are history; do not restore pending Home treatments.
 
 ### Capture group C — authentic event to combat connection: PENDING
 

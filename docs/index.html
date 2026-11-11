@@ -4,7 +4,7 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="color-scheme" content="light">
   <meta name="presentation-build" content="20261110-v2-no-gameflow">
-  <meta name="presentation-status" content="V2 Interim — Media Pending">
+  <meta name="presentation-status" content="V2 — Home and Combat Captures Verified">
   <title>Stray Kitty — Presentation</title>
   <link rel="stylesheet" href="engine-v3.css">
   <link rel="stylesheet" href="library/tokens.css">
@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="pitch-poster.css?v=20261110-live-gameplay-loop">
   <link rel="stylesheet" href="level-design.css?v=20261109-level-design">
   <link rel="stylesheet" href="events-combat.css?v=20261109-integrated">
-  <link rel="preload" as="script" href="events-combat.js?v=20261110-v2-no-gameflow">
+  <link rel="preload" as="script" href="events-combat.js?v=20261111-part2b">
   <link rel="stylesheet" href="technical.css?v=20261109-full-pipeline">
   <link rel="stylesheet" href="teamwork.css?v=20261109-future-integrated1">
   <link rel="stylesheet" href="datadog.css?v=20261109-datadog-taller-frames2">
@@ -22,11 +22,11 @@
   <link rel="preload" as="script" href="uiux.js?v=20261109-adaptive-fit">
   <link rel="preload" as="script" href="scene-content.js?v=20261109-on-demand-events">
   <link rel="preload" as="script" href="engine-v3.js?v=20261109-level-design">
-  <link rel="stylesheet" href="v2-interim.css?v=20261110-v2-no-gameflow">
+  <link rel="stylesheet" href="v2-interim.css?v=20261111-part2b">
 </head>
 <body>
 <div id="scrollSpace" class="scroll-space">
- <main id="stage" class="stage" aria-label="Stray Kitty presentation — Pages 01 through 20 · V2 Interim — Media Pending">
+ <main id="stage" class="stage" aria-label="Stray Kitty presentation — Pages 01 through 20">
   <div id="world" class="world">
    <svg id="roadDrawing" class="route-svg" aria-hidden="true"><defs><clipPath id="revealClip"><rect id="routeReveal" x="0" y="0" width="0" height="2000"/></clipPath></defs><path id="routeGhost" class="route-ghost" d=""/><path id="routeInk" class="route-ink" d="" clip-path="url(#revealClip)"/></svg>
    <section id="opening-film" class="scene scene-film" data-title="Opening Film" data-scene="0" data-page="01" aria-label="Page 01 — Full-screen film">
@@ -223,18 +223,18 @@
 <button aria-label="Return to the main battlefield" class="v2-return-battlefield" data-local-space="" hidden="" id="v2ReturnBattlefield" type="button">↶ Return to Battlefield</button>
 <div class="combat-shot">
 <img alt="Authentic Midnight Market real-time battle with companions, enemies and ability controls" class="battlefield-image" data-media-src="assets/pages/09/battlefield-main.webp"/>
-<video aria-label="Future authentic full-frame combat VFX, automatically looping without sound" autoplay="" class="v2-default-battle-vfx" data-media-poster="assets/pages/09/battlefield-main.webp" data-v2-default-src="" hidden="" id="v2DefaultBattleVfx" loop="" muted="" playsinline="" preload="none"></video>
-<span class="v2-default-vfx-status" id="v2DefaultVfxStatus" role="status">GENERAL BATTLE VFX · MUTED LOOP PENDING</span>
+<video aria-label="Authentic full-frame Market battle VFX, automatically looping muted" autoplay="" class="v2-default-battle-vfx" data-media-poster="assets/pages/09/battlefield-main.webp" data-v2-default-src="assets/v2/combat/general-battle-vfx-muted.mp4" hidden="" id="v2DefaultBattleVfx" loop="" muted="" playsinline="" preload="none"></video>
+<span class="v2-default-vfx-status" id="v2DefaultVfxStatus" role="status">GENERAL BATTLE VFX · MUTED</span>
 <video aria-label="Continuous Banban repositioning demonstration, separate attempt at the same stage, normal speed" class="battle-reposition" data-demo-src="assets/pages/09/reposition-closeup.mp4?v=web-20261109" data-media-poster="assets/pages/09/battlefield-main.webp" hidden="" id="repositionVideo" muted="" playsinline="" preload="none"></video>
 <span aria-live="polite" class="reposition-source" hidden="" id="repositionSource" role="status"></span>
-<div aria-live="polite" class="v2-battle-proof" data-v2-event-battle="" data-v2-event-caption="" data-v2-event-choice="" data-v2-event-state="" hidden="" id="v2BattleProof">
+<div aria-live="polite" class="v2-battle-proof" data-v2-event-battle="assets/v2/events/carry-battle.mp4" data-v2-event-caption="Crate search · roll 7: Shadow Pressure +1 · rescue boss: 2,600 → 3,120 HP · same QA save." data-v2-event-choice="assets/v2/events/carry-choice.webp" data-v2-event-state="assets/v2/events/carry-state.webp" hidden="" id="v2BattleProof">
 <button aria-label="Return to original battlefield" class="v2-proof-close" data-local-space="" id="v2ProofClose" type="button">×</button>
 <div class="v2-proof-inner">
-<span class="v2-proof-kicker" id="v2ProofKicker">EVIDENCE PENDING</span>
-<h3 id="v2ProofTitle">Updated footage pending</h3>
+<span class="v2-proof-kicker" id="v2ProofKicker">FROM RANDOM EVENTS → BATTLE</span>
+<h3 id="v2ProofTitle">Carried Battle Effect</h3>
 <img alt="" data-media-src="assets/pages/09/guard-shield-vfx.webp" hidden="" id="v2ProofImage"/>
 <div id="v2ProofBody"></div>
-<small id="v2ProofCaption">This demonstration is not yet a recorded game effect.</small>
+<small id="v2ProofCaption">Crate search · roll 7: Shadow Pressure +1 · rescue boss: 2,600 → 3,120 HP · same QA save.</small>
 </div>
 </div>
 <button class="v2-combat-retry" data-local-space="" hidden="" id="v2CombatRetry" type="button">Retry clip</button></div>
@@ -246,15 +246,15 @@
 </div>
 </section>
 <section aria-label="Three companions and their authentic ability effects" class="combat-profiles" data-at="0.42" data-build="rise">
-<article aria-label="Preview Rongrong skill; updated pre-release animation pending; playback will be muted" aria-pressed="false" class="profile v2-selectable-profile" data-id="FRIEND 01" data-local-space="" data-v2-skill="rongrong" data-v2-skill-clip="" role="button" tabindex="0">
+<article aria-label="Play Rongrong’s recorded Star Burst, muted" aria-pressed="false" class="profile v2-selectable-profile" data-id="FRIEND 01" data-local-space="" data-v2-skill="rongrong" data-v2-skill-clip="assets/v2/combat/rongrong-skill-muted.mp4" role="button" tabindex="0">
 <div class="profile-figure"><img alt="绒绒 / Rongrong original pixel-art figure" data-media-src="assets/pages/09/caster-figure.webp" height="128" width="128"/></div>
 <div class="profile-details"><b>绒绒 / Rongrong</b><span class="ability">星绒绽放 — Star Burst</span><span class="profile-function">Cross-shaped area attack</span></div><div class="profile-vfx"><img alt="Rongrong's authentic purple star attack across cross-shaped impact cells" data-media-src="assets/pages/09/caster-star-vfx.webp"/></div>
 </article>
-<article aria-label="Preview Banban skill; updated pre-release animation pending; playback will be muted" aria-pressed="false" class="profile v2-selectable-profile" data-id="FRIEND 02" data-local-space="" data-v2-skill="banban" data-v2-skill-clip="" role="button" tabindex="0">
+<article aria-label="Play Banban’s recorded Shield, muted" aria-pressed="false" class="profile v2-selectable-profile" data-id="FRIEND 02" data-local-space="" data-v2-skill="banban" data-v2-skill-clip="assets/v2/combat/banban-skill-muted.mp4" role="button" tabindex="0">
 <div class="profile-figure"><img alt="斑斑 / Banban original pixel-art figure" data-media-src="assets/pages/09/guard-figure.webp" height="128" width="128"/></div>
 <div class="profile-details"><b>斑斑 / Banban</b><span class="ability">罐盖护盾 — Shield</span><span class="profile-function">Temporary self-shield</span></div><div class="profile-vfx"><img alt="Banban's genuine cyan shield release and original skill label" data-media-src="assets/pages/09/guard-shield-vfx.webp"/></div>
 </article>
-<article aria-label="Preview Diandian skill; updated pre-release animation pending; playback will be muted" aria-pressed="false" class="profile v2-selectable-profile" data-id="FRIEND 03" data-local-space="" data-v2-skill="diandian" data-v2-skill-clip="" role="button" tabindex="0">
+<article aria-label="Play Diandian’s recorded Healing Purr, muted" aria-pressed="false" class="profile v2-selectable-profile" data-id="FRIEND 03" data-local-space="" data-v2-skill="diandian" data-v2-skill-clip="assets/v2/combat/diandian-skill-muted.mp4" role="button" tabindex="0">
 <div class="profile-figure"><img alt="点点 / Diandian original pixel-art figure" data-media-src="assets/pages/09/diandian-figure.webp" height="128" width="128"/></div>
 <div class="profile-details"><b>点点 / Diandian</b><span class="ability">安心呼噜 — Healing Purr</span><span class="profile-function">Heals active companions</span></div><div class="profile-vfx"><img alt="Diandian's genuine green Healing Purr effect on active companions" data-media-src="assets/pages/09/diandian-heal-vfx.webp"/></div>
 </article>
@@ -755,7 +755,7 @@
 </div>
 </div>
 <script src="scene-content.js?v=20261109-on-demand-events"></script>
-<script src="events-combat.js?v=20261110-v2-no-gameflow"></script>
+<script src="events-combat.js?v=20261111-part2b"></script>
 <script src="uiux.js?v=20261109-adaptive-fit"></script>
 <script src="datadog.js?v=20261110-v2-no-gameflow"></script>
 <script src="teamwork.js?v=20261109-future-integrated1"></script>

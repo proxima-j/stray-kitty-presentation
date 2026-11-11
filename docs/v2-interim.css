@@ -127,6 +127,9 @@
 #combat .v2-proof-inner img{height:min(44%,140px);width:85%;min-height:0;object-fit:contain;image-rendering:pixelated}
 #combat .v2-proof-inner small{font:10px/1.3 var(--body);color:var(--muted);max-width:90%}
 #combat .v2-proof-inner #v2ProofBody{font:11px/1.35 var(--body);color:var(--muted);max-width:90%}
+#combat #v2BattleProof[data-v2-event-state]:not([data-v2-event-state=""]) img{height:min(60%,170px);image-rendering:auto}
+#combat #v2BattleProof[data-v2-event-state]:not([data-v2-event-state=""]) small{font-size:12px}
+#combat #v2ProofBody button{padding:4px 10px;border:1px solid var(--ink);border-radius:999px;background:var(--paper);color:var(--ink);font:inherit;cursor:pointer}
 #combat .v2-event-steps{display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap}
 #combat .v2-event-steps span{border:1px dashed var(--accent);border-radius:9px;padding:7px;background:#eee1c4;font:10px/1.3 var(--body);color:var(--ink)}
 #combat .v2-event-steps b{color:var(--accent);font-size:14px}

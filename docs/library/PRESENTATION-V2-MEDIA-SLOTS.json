@@ -1,7 +1,7 @@
 {
   "build_marker": "20261110-v2-no-gameflow",
-  "status": "HOME VERIFIED / COMBAT MEDIA PENDING",
-  "note": "Home binaries and production bindings verified; seven Combat/event targets remain planned files, not collected assets. Paths relative to docs/.",
+  "status": "HOME AND COMBAT CAPTURES VERIFIED",
+  "note": "Seven Part 2B files verified. Skill footage shows the merged cast-banner implementation, which has no distinct pre-release wind-up. Paths relative to docs/.",
   "slots": [
     {
       "id": "home-growth-02",
@@ -54,72 +54,93 @@
     {
       "id": "combat-default",
       "scene": "combat",
-      "status": "PENDING MEDIA",
+      "status": "VERIFIED",
       "element_id": "v2DefaultBattleVfx",
       "binding": "data-v2-default-src",
       "planned_path": "assets/v2/combat/general-battle-vfx-muted.mp4",
       "fallback": "assets/pages/09/battlefield-main.webp",
-      "requirement": "Authentic uncropped full-frame battle VFX; muted autoplay loop; exact shipped build/effects verified."
+      "requirement": "Verified capture: Continuous ×1 Market play, including Star Burst and Healing Purr banners, board effects and settle. Same camera throughout; ordinary wave progress resets at the loop.",
+      "path": "assets/v2/combat/general-battle-vfx-muted.mp4",
+      "provenance": "COMBAT-PART2B-CAPTURE.json",
+      "verification": "Continuous ×1 Market play, including Star Burst and Healing Purr banners, board effects and settle. Same camera throughout; ordinary wave progress resets at the loop."
     },
     {
       "id": "combat-skill-rongrong",
       "scene": "combat",
-      "status": "PENDING MEDIA",
+      "status": "VERIFIED",
       "selector": "[data-v2-skill=\"rongrong\"]",
       "binding": "data-v2-skill-clip",
       "planned_path": "assets/v2/combat/rongrong-skill-muted.mp4",
       "fallback": "assets/pages/09/caster-star-vfx.webp",
-      "requirement": "Full ready/input, pre-release, release/impact and settle cycle; visual-only, muted, original timing."
+      "requirement": "Verified capture: 100/100 ready → choose Star Burst → aim at D8 → accepted cast, named banner and five-cell cross around the boss → damage and settle. Configured damage: 45 per target.",
+      "path": "assets/v2/combat/rongrong-skill-muted.mp4",
+      "provenance": "COMBAT-PART2B-CAPTURE.json",
+      "verification": "100/100 ready → choose Star Burst → aim at D8 → accepted cast, named banner and five-cell cross around the boss → damage and settle. Configured damage: 45 per target."
     },
     {
       "id": "combat-skill-banban",
       "scene": "combat",
-      "status": "PENDING MEDIA",
+      "status": "VERIFIED",
       "selector": "[data-v2-skill=\"banban\"]",
       "binding": "data-v2-skill-clip",
       "planned_path": "assets/v2/combat/banban-skill-muted.mp4",
       "fallback": "assets/pages/09/guard-shield-vfx.webp",
-      "requirement": "Full ready/input, pre-release, release/impact and settle cycle; visual-only, muted, original timing."
+      "requirement": "Verified capture: 100/100 ready → select Shield → named banner and active shield → shield expires. Actual cast grants 60 shield for up to 8 battle seconds.",
+      "path": "assets/v2/combat/banban-skill-muted.mp4",
+      "provenance": "COMBAT-PART2B-CAPTURE.json",
+      "verification": "100/100 ready → select Shield → named banner and active shield → shield expires. Actual cast grants 60 shield for up to 8 battle seconds."
     },
     {
       "id": "combat-skill-diandian",
       "scene": "combat",
-      "status": "PENDING MEDIA",
+      "status": "VERIFIED",
       "selector": "[data-v2-skill=\"diandian\"]",
       "binding": "data-v2-skill-clip",
       "planned_path": "assets/v2/combat/diandian-skill-muted.mp4",
       "fallback": "assets/pages/09/diandian-heal-vfx.webp",
-      "requirement": "Full ready/input, pre-release, release/impact and settle cycle; visual-only, muted, original timing."
+      "requirement": "Verified capture: 100/100 ready → select Healing Purr → named banner and healing effect → settle. Observed Rongrong HP 50→80 and Diandian 70→140. Configured heal: 80 HP, active companions only.",
+      "path": "assets/v2/combat/diandian-skill-muted.mp4",
+      "provenance": "COMBAT-PART2B-CAPTURE.json",
+      "verification": "100/100 ready → select Healing Purr → named banner and healing effect → settle. Observed Rongrong HP 50→80 and Diandian 70→140. Configured heal: 80 HP, active companions only."
     },
     {
       "id": "combat-event-choice",
       "scene": "combat",
-      "status": "PENDING MEDIA",
+      "status": "VERIFIED",
       "element_id": "v2BattleProof",
       "binding": "data-v2-event-choice",
       "planned_path": "assets/v2/events/carry-choice.webp",
       "fallback": "Explicit linked-evidence-pending state. Existing feeder-bowl rewards are not combat modifiers.",
-      "requirement": "Same supported event/choice and stored modifier, linked to a real subsequent battle consumption; verify source/save/build."
+      "requirement": "Verified capture: Actual choice card with search selected.",
+      "path": "assets/v2/events/carry-choice.webp",
+      "provenance": "COMBAT-PART2B-CAPTURE.json",
+      "verification": "Actual choice card with search selected."
     },
     {
       "id": "combat-event-state",
       "scene": "combat",
-      "status": "PENDING MEDIA",
+      "status": "VERIFIED",
       "element_id": "v2BattleProof",
       "binding": "data-v2-event-state",
       "planned_path": "assets/v2/events/carry-state.webp",
       "fallback": "Explicit linked-evidence-pending state. Existing feeder-bowl rewards are not combat modifiers.",
-      "requirement": "Same supported event/choice and stored modifier, linked to a real subsequent battle consumption; verify source/save/build."
+      "requirement": "Verified capture: Actual 3+4=7 partial result; Material +2 and Shadow Pressure +1 remain distinct.",
+      "path": "assets/v2/events/carry-state.webp",
+      "provenance": "COMBAT-PART2B-CAPTURE.json",
+      "verification": "Actual 3+4=7 partial result; Material +2 and Shadow Pressure +1 remain distinct."
     },
     {
       "id": "combat-event-battle",
       "scene": "combat",
-      "status": "PENDING MEDIA",
+      "status": "VERIFIED",
       "element_id": "v2BattleProof",
       "binding": "data-v2-event-battle",
       "planned_path": "assets/v2/events/carry-battle.mp4",
       "fallback": "Explicit linked-evidence-pending state. Existing feeder-bowl rewards are not combat modifiers.",
-      "requirement": "Same supported event/choice and stored modifier, linked to a real subsequent battle consumption; verify source/save/build."
+      "requirement": "Verified capture: Same rescue attempt starts with 3,120 boss HP versus 2,600 configured at normal pressure; Start Defense input and first wave visible.",
+      "path": "assets/v2/events/carry-battle.mp4",
+      "provenance": "COMBAT-PART2B-CAPTURE.json",
+      "verification": "Same rescue attempt starts with 3,120 boss HP versus 2,600 configured at normal pressure; Start Defense input and first wave visible."
     }
   ]
 }
