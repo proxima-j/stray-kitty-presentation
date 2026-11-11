@@ -19,6 +19,11 @@
   const helpClose = document.getElementById('helpClose');
   const paceSelect = document.getElementById('paceSelect');
   const scenes = [...document.querySelectorAll('.scene')];
+  const sceneBuilds = scenes.map(scene => ({
+    camera: scene.querySelector('.scene-camera'),
+    elements: [...scene.querySelectorAll('[data-build]')],
+    progress: -1,
+  }));
   const homeSceneIndex = scenes.findIndex(scene => scene.id === 'home-hub');
 
   // Integration geometry is derived from the registry; v3 pacing stays unchanged.
@@ -36,6 +41,7 @@
   // Keyboard: one fixed-duration, reliably paced scene per press.
   let beatDurationMs = 4200;
   let keyboardMotion = null;
+  let pendingDirection = 0;
   let renderedProgress = 0;
   let previousDistance = 0;
   let lastFrameAt = 0;
@@ -45,13 +51,11 @@
   let viewportW = window.innerWidth;
   let viewportH = window.innerHeight;
   let roadSamples = [];
-  let lastRenderedScene = -1;
+  let lastActiveIndex = -1;
+  const scrollTolerancePx = 1;
 
   function scrollRange() {
     return Math.max(1, space.offsetHeight - window.innerHeight);
-  }
-  function pageProgress() {
-    return clamp(window.scrollY / scrollRange());
   }
   function routeGeometry() {
     viewportW = window.innerWidth;
@@ -92,12 +96,6 @@
     return mix(a.y, b.y, clamp((x - a.x) / Math.max(1, b.x - a.x)));
   }
 
-  function currentStep(progress) {
-    for (let i = 1; i < stops.length; i++) {
-      if (progress <= stops[i]) return i;
-    }
-    return stops.length - 1;
-  }
   function stepPhase(progress, index) {
     if (index === 0) return 1;
     return segment(progress, stops[index - 1], stops[index]);
@@ -156,20 +154,16 @@
     hero.classList.toggle('walking', isWalking);
     previousDistance = cameraDistanceNow;
 
-    const arriving = currentStep(progress);
-    scenes.forEach((scene, index) => {
+    sceneBuilds.forEach((build, index) => {
       if (index === 0) return;
       const localProgress = revealProgress(progress, index);
-      const camera = scene.querySelector('.scene-camera');
-      const inView = Math.abs(cameraDistanceNow - index) < 1.15;
+      if (localProgress === build.progress) return;
+      build.progress = localProgress;
       // CSS perspective is strongest at entry, then settles front-on.
       const approach = smooth(segment(localProgress, 0, 0.68));
-      if (inView || lastRenderedScene !== arriving) {
-        camera.style.transform = `perspective(1400px) translate3d(${(1 - approach) * 20}px,${(1 - approach) * 17}px,0) rotateY(${-(1 - approach) * 7}deg) rotateX(${(1 - approach) * 4}deg) scale(${0.95 + 0.05 * approach})`;
-        scene.querySelectorAll('[data-build]').forEach(el => buildElement(el, localProgress));
-      }
+      build.camera.style.transform = `perspective(1400px) translate3d(${(1 - approach) * 20}px,${(1 - approach) * 17}px,0) rotateY(${-(1 - approach) * 7}deg) rotateX(${(1 - approach) * 4}deg) scale(${0.95 + 0.05 * approach})`;
+      build.elements.forEach(el => buildElement(el, localProgress));
     });
-    lastRenderedScene = arriving;
 
     // Video stops decoding as the opening exits, reducing scroll jank.
     if (cameraDistanceNow > 0.02 || document.hidden) {
@@ -177,14 +171,17 @@
     }
     world.dataset.distance = cameraDistanceNow.toFixed(4);
     world.dataset.progress = progress.toFixed(4);
-    world.dataset.scene = String(Math.min(stops.length - 1, Math.round(cameraDistanceNow)));
     // Integration only: direct review URLs and accessible off-screen scenes.
     const activeIndex = Math.round(cameraDistanceNow);
-    scenes.forEach((scene, index) => {
-      scene.inert = index !== activeIndex;
-      scene.setAttribute('aria-hidden', String(index !== activeIndex));
-    });
-    if (Math.abs(progress - stops[activeIndex]) < 0.00002) {
+    if (activeIndex !== lastActiveIndex) {
+      lastActiveIndex = activeIndex;
+      world.dataset.scene = String(activeIndex);
+      scenes.forEach((scene, index) => {
+        scene.inert = index !== activeIndex;
+        scene.setAttribute('aria-hidden', String(index !== activeIndex));
+      });
+    }
+    if (progress === stops[activeIndex]) {
       const page = scenes[activeIndex].dataset.page;
       const url = new URL(location.href);
       if (url.searchParams.get('page') !== page) {
@@ -198,6 +195,7 @@
     const viewKey = `${activeIndex}:${visible}`;
     if (viewKey !== lastViewKey) {
       lastViewKey = viewKey;
+      world.dataset.settledScene = visible ? scenes[activeIndex].id : '';
       window.dispatchEvent(new CustomEvent('presentation:viewchange', {
         detail: { id: scenes[activeIndex].id, page: scenes[activeIndex].dataset.page, visible }
       }));
@@ -208,28 +206,39 @@
     animationFrame = 0;
     const dt = clamp(now - (lastFrameAt || now), 0, 48);
     lastFrameAt = now;
+    const range = scrollRange();
+    let completed = false;
     if (keyboardMotion) {
       const elapsed = now - keyboardMotion.startedAt;
       const q = clamp(elapsed / keyboardMotion.duration);
       // Linear time here: camera easing and individual reveals are authored
       // inside a beat, while the full beat always takes the same time.
       renderedProgress = mix(keyboardMotion.from, keyboardMotion.to, q);
-      window.scrollTo({ top: renderedProgress * scrollRange(), behavior: 'instant' });
+      window.scrollTo({ top: renderedProgress * range, behavior: 'instant' });
       if (q >= 1) {
         renderedProgress = keyboardMotion.to;
         keyboardMotion = null;
         document.documentElement.dataset.transitioning = 'false';
+        completed = true;
       }
     } else {
-      const target = pageProgress();
+      const target = clamp(window.scrollY / range);
       // Damped visual follower absorbs trackpad/wheel jumps; limiting its speed
       // keeps scene-builds visible even after a large wheel delta.
       const weight = 1 - Math.exp(-dt / 185);
-      const delta = clamp((target - renderedProgress) * weight, -(dt / 1000) * 0.21, (dt / 1000) * 0.21);
-      renderedProgress = clamp(renderedProgress + delta);
+      if (Math.abs(target - renderedProgress) * range > scrollTolerancePx) {
+        const delta = clamp((target - renderedProgress) * weight, -(dt / 1000) * 0.21, (dt / 1000) * 0.21);
+        renderedProgress = clamp(renderedProgress + delta);
+      } else {
+        // Native scroll positions are rounded to pixels. Settle on the exact
+        // scene stop so its content, URL and media all agree.
+        const stop = stops.find(value => Math.abs(value - target) * range <= scrollTolerancePx);
+        if (stop !== undefined) renderedProgress = stop;
+      }
     }
     updateView(renderedProgress, dt / 1000);
-    if (keyboardMotion || Math.abs(pageProgress() - renderedProgress) > 0.000015) {
+    if (completed && pendingDirection) advance(pendingDirection);
+    if (keyboardMotion || Math.abs(window.scrollY - renderedProgress * range) > scrollTolerancePx) {
       requestFrame();
     } else if (hero.classList.contains('walking')) {
       // One stationary frame to remove walking state after momentum settles.
@@ -239,31 +248,23 @@
   function requestFrame() {
     if (!animationFrame) animationFrame = requestAnimationFrame(frame);
   }
-  function nearestStableIndex(progress) {
-    let result = 0;
-    for (let index = 1; index < stops.length; index++) {
-      if (Math.abs(progress - stops[index]) < Math.abs(progress - stops[result])) result = index;
-    }
-    return result;
-  }
   function showHelp(show) {
     helpPanel.hidden = !show;
     helpButton.setAttribute('aria-expanded', String(show));
   }
   function finishMotion() {
     if (!keyboardMotion) return;
-    const finalPosition = keyboardMotion.to;
-    keyboardMotion = null;
-    renderedProgress = finalPosition;
-    document.documentElement.dataset.transitioning = 'false';
-    window.scrollTo({ top: finalPosition * scrollRange(), behavior: 'instant' });
-    updateView(renderedProgress, 0);
-    requestFrame();
+    startMove(keyboardMotion.toIndex, true);
   }
   function startMove(destinationIndex, immediate = false) {
+    pendingDirection = 0;
     const toIndex = clamp(destinationIndex, 0, stops.length - 1);
     const from = renderedProgress;
     const to = stops[toIndex];
+    if (to !== from) {
+      // Give the destination's stills and posters the travel time to load.
+      window.dispatchEvent(new CustomEvent('presentation:loadmedia', { detail: { id: scenes[toIndex].id } }));
+    }
     if (immediate || reducedMotion || Math.abs(to - from) < 0.001) {
       keyboardMotion = null;
       renderedProgress = to;
@@ -273,37 +274,40 @@
       requestFrame();
       return;
     }
-    const fromIndex = nearestStableIndex(from);
     const segmentDistance = Math.abs(to - from) / Math.abs(stops[Math.max(1, toIndex)] - stops[Math.max(0, Math.max(1, toIndex) - 1)]);
     const duration = Math.max(750, beatDurationMs * clamp(segmentDistance, 0.18, 1));
-    keyboardMotion = { from, to, toIndex, fromIndex, startedAt: performance.now(), duration };
+    keyboardMotion = { from, to, toIndex, startedAt: performance.now(), duration };
     document.documentElement.dataset.transitioning = 'true';
     requestFrame();
   }
   function advance(direction) {
-    if (keyboardMotion) return; // Held keys / double presses cannot skip the scene build.
-    const p = renderedProgress;
-    if (direction > 0) {
-      const index = stops.findIndex(s => s > p + 0.025);
-      startMove(index < 0 ? stops.length - 1 : index);
-    } else {
-      const reversedIndex = [...stops].reverse().findIndex(s => s < p - 0.025);
-      startMove(reversedIndex < 0 ? 0 : stops.length - 1 - reversedIndex);
-    }
-  }
-  function onWheel() {
     if (keyboardMotion) {
-      // Explicit scrolling takes ownership at the currently displayed point.
+      // Buffer one deliberate tap; key repeats are filtered by the listener.
+      pendingDirection = direction;
+      return;
+    }
+    pendingDirection = 0;
+    const range = scrollRange();
+    const index = direction > 0
+      ? stops.findIndex(stop => (stop - renderedProgress) * range > scrollTolerancePx)
+      : stops.findLastIndex(stop => (renderedProgress - stop) * range > scrollTolerancePx);
+    if (index !== -1) startMove(index);
+  }
+  function onScroll() {
+    if (keyboardMotion) {
+      // Native scrolling takes over only when the document actually moves
+      // away from the position written by the keyboard animation.
+      if (Math.abs(window.scrollY - renderedProgress * scrollRange()) <= scrollTolerancePx) return;
       keyboardMotion = null;
+      pendingDirection = 0;
       document.documentElement.dataset.transitioning = 'false';
     }
     requestFrame();
   }
   function onResize() {
     routeGeometry();
-    renderedProgress = pageProgress();
-    keyboardMotion = null;
-    document.documentElement.dataset.transitioning = 'false';
+    // Keep the scene position and any in-flight beat when the viewport changes.
+    window.scrollTo({ top: renderedProgress * scrollRange(), behavior: 'instant' });
     previousDistance = cameraDistance(renderedProgress);
     updateView(renderedProgress, 0);
     requestFrame();
@@ -360,9 +364,7 @@
       event.preventDefault(); startMove(stops.length - 1, true);
     }
   });
-  window.addEventListener('wheel', onWheel, { passive: true });
-  window.addEventListener('touchstart', onWheel, { passive: true });
-  window.addEventListener('scroll', () => { if (!keyboardMotion) requestFrame(); }, { passive: true });
+  window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', onResize);
   document.addEventListener('visibilitychange', () => { if (document.hidden) video?.pause(); });
 

@@ -252,7 +252,7 @@
 (() => {
   'use strict';
   const open = document.getElementById('ddOpenArchive');
-  if (!open) return; // Alert scene is retained in Previous/V1, not V2.
+  if (!open) return;
   const close = document.getElementById('ddCloseArchive');
   const overlay = document.getElementById('ddArchiveOverlay');
   const record = document.getElementById('ddArchiveRecord');

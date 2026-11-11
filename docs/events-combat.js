@@ -73,10 +73,10 @@
     retry.hidden = false;
     const output = clip === defaultVideo ? defaultStatus : status;
     output.hidden = false;
-    output.textContent = 'Playback unavailable · retry clip · muted';
+    output.textContent = 'Playback unavailable · retry clip';
   }
-  function play(clip, src, token) {
-    clip.muted = true;
+  function play(clip, src, token, audible = false) {
+    clip.muted = !audible;
     clip.controls = false;
     clip.preload = 'auto';
     clip.playbackRate = 1;
@@ -108,22 +108,22 @@
     defaultVideo.loop = true;
     play(defaultVideo, src, generation);
   }
-  function startClip(src, label, button = null) {
+  function startClip(src, label, button = null, audible = false) {
     if (!active() || !src) return;
     stopAll();
     mode = 'clip';
-    selectedClip = { src, label, button };
+    selectedClip = { src, label, button, audible };
     battlefield.hidden = true;
     back.hidden = false;
     status.hidden = false;
-    status.textContent = 'Loading genuine ' + label + ' · muted…';
+    status.textContent = 'Loading ' + label + '…';
     button?.setAttribute('aria-pressed', 'true');
     video.loop = false;
-    video.setAttribute('aria-label', label + ' · genuine recorded footage · muted');
-    play(video, src, generation);
+    video.setAttribute('aria-label', label + (audible ? ' · recorded footage with game sound' : ' · recorded footage, muted'));
+    play(video, src, generation, audible);
   }
   reposition.addEventListener('click', () => startClip(video.dataset.demoSrc, 'Reposition · separate take · 1×', reposition));
-  activate.addEventListener('click', () => startClip(activate.dataset.demoSrc, 'Banban Shield · historical activation · 1×', activate));
+  activate.addEventListener('click', () => startClip(activate.dataset.demoSrc, 'Banban · Shield', activate, true));
   video.addEventListener('ended', () => { if (mode === 'clip') showDefault(); });
   for (const clip of [video, defaultVideo]) {
     clip.addEventListener('error', () => playbackFailed(clip));
@@ -131,7 +131,7 @@
       if (!active() || clip.hidden) return;
       const output = clip === defaultVideo ? defaultStatus : status;
       output.hidden = false;
-      output.textContent = 'Buffering genuine footage · muted…';
+      output.textContent = 'Buffering recorded footage…';
       clearTimeout(bufferingTimer);
       bufferingTimer = setTimeout(() => {
         if (active() && !clip.hidden && clip.readyState < 3) playbackFailed(clip);
@@ -142,12 +142,16 @@
       clearTimeout(bufferingTimer);
       retry.hidden = true;
       const output = clip === defaultVideo ? defaultStatus : status;
-      output.textContent = (clip === defaultVideo ? 'GENERAL BATTLE VFX' : selectedClip?.label || 'Recorded demonstration') + ' · MUTED';
+      output.textContent = (clip === defaultVideo ? 'GENERAL BATTLE VFX' : selectedClip?.label || 'Recorded demonstration') +
+        (clip.muted ? ' · MUTED' : ' · GAME SOUND');
     });
   }
   retry.addEventListener('click', () => {
     if (mode === 'default') showDefault();
-    else if (selectedClip) startClip(selectedClip.src, selectedClip.label, selectedClip.button);
+    else if (selectedClip) {
+      const { src, label, button, audible } = selectedClip;
+      startClip(src, label, button, audible);
+    }
   });
   function openProof(kicker, title, caption) {
     stopAll();
@@ -165,7 +169,7 @@
     const card = cards.find(item => item.dataset.v2Skill === key);
     if (!skill || !active()) return;
     const src = card.dataset.v2SkillClip?.trim();
-    if (src) { startClip(src, skill.name + ' · ' + skill.ability, card); return; }
+    if (src) { startClip(src, skill.name + ' · ' + skill.ability, card, true); return; }
     openProof('EXISTING AUTHENTIC SKILL STILL', skill.name + ' · ' + skill.ability,
       'Historical still only. Updated skill video pending.');
     card.setAttribute('aria-pressed', 'true');

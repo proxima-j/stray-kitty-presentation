@@ -1,13 +1,13 @@
 {
   "current": {
     "entry": "./",
-    "candidate_base_commit": "9e2cd416bde4268df0064eab90b09151f51e01db",
+    "candidate_base_commit": "0bf1adb2427cc0109d92eafeff0f78020da63f1c",
     "integration_commit": "e0dabbbf7a82272b3f45c846169dabe9da973fbf",
-    "build_marker": "20261110-v2-no-gameflow",
-    "description": "20-scene V2 with verified Home and Combat captures; approved composition and 4200ms engine preserved.",
-    "publication_status": "HOME AND COMBAT CAPTURES VERIFIED",
-    "verification_status": "FOCUSED COMBAT CANDIDATE VERIFIED",
-    "local_verified_at": "2026-11-10T23:01:55.087284+08:00",
+    "build_marker": "20261111-v2-combat-sfx-alert",
+    "description": "21-scene V2 with Combat cast sound and the restored V1 Datadog Alert scene.",
+    "publication_status": "CANDIDATE VERIFIED / PAGES VERIFICATION REQUIRED",
+    "verification_status": "FOCUSED CANDIDATE VERIFIED",
+    "local_verified_at": "2026-11-11T21:51:42.746985+08:00",
     "registry": [
       {
         "page": "01",
@@ -91,45 +91,49 @@
       },
       {
         "page": "17",
+        "id": "detect-alert-recover",
+        "title": "Detect. Alert. Recover."
+      },
+      {
+        "page": "18",
         "id": "cross-team-collaboration",
         "title": "Cross-Team Collaboration"
       },
       {
-        "page": "18",
+        "page": "19",
         "id": "design-test-rethink",
         "title": "Design. Test. Rethink."
       },
       {
-        "page": "19",
+        "page": "20",
         "id": "connected-world",
         "title": "A Dynamic, Living World"
       },
       {
-        "page": "20",
+        "page": "21",
         "id": "closing-qa",
         "title": "Q & A"
       }
     ],
     "removed_from_v2": [
       "roadmap",
-      "detect-alert-recover",
       "game-flow"
     ],
     "final_scene": {
       "id": "closing-qa",
-      "page": 20,
+      "page": 21,
       "after": "connected-world"
     },
-    "media_status": "HOME AND COMBAT CAPTURES VERIFIED",
+    "media_status": "AUTHENTIC COMBAT CAST AUDIO AND HISTORICAL ALERT EVIDENCE",
     "pending_slots": [],
     "handoff": "library/PRESENTATION-V2-PHASE2-HANDOFF.md",
     "media_inventory": "library/PRESENTATION-V2-MEDIA-SLOTS.json",
     "public_preview": "https://proxima-j.github.io/stray-kitty-presentation/",
-    "publication_gate": "Successful serialized Pages run and matching public deployment.json; smoke check Combat with actual new media.",
-    "outgoing_current_source": "9e2cd416bde4268df0064eab90b09151f51e01db",
+    "publication_gate": "Matching deployment.json and public Combat audio, Alert and Previous smoke checks.",
+    "outgoing_current_source": "0bf1adb2427cc0109d92eafeff0f78020da63f1c",
     "playback_failure_verification": "One private invalid-media probe passed: failed clip hidden, authentic still visible, muted Retry exposed, Return restored clean default. No game/infrastructure/network fault injection; probe not published.",
     "part1_verification_notes": "Focused real-browser checks at 1600x900 and 1366x768: all 21 direct scene links; identical Home mode geometry and muted playback/pause; Combat three still selections, genuine Reposition/Activate Skills, evidence-pending bridge, advisor Local Fallback, 24% idle transparent Return and keyboard-focus affordance, one active video, completion/reset/scene exit/re-entry; original Slack image and four dashboards; native Pitch-to-Game Flow forward/back, opening full film unmuted on user Play and manual Skip. No console warnings/errors observed. Static local asset references resolve. 18 retained scenes unchanged except numbering; engine and generic media player byte-identical.",
-    "verification_notes": "Focused single-page-removal check: 20 sequential scene/page/ARIA registrations, retained content identical except numbering, native Pitch to Visual Novel forward/back works; Home=04, Combat=10, Observability=16, Q&A=20. Original v3 engine and all media/controllers unchanged. Previous/V1 not rotated or modified.",
+    "verification_notes": "Private candidate at 1600 × 900 and 1366 × 768. Measured tab audio at the cast cues, verified clip switching, Return, end, Escape, and scene exit and re-entry. Verified original Alert and Recovery evidence, image enlargement, archive, both Synthetics tabs, and the restored navigation order.",
     "combat_controller_source_commit": "0f764237fe13540f547d3b1f9ae66202c0a4c422",
     "gameflow_removal": {
       "base_commit": "2f5b7321c3bfb11e205b256a64fa21596a0715e6",
@@ -157,36 +161,37 @@
       "limitation": "Immediate accepted cast with a 2.2 s banner; no distinct pre-release wind-up.",
       "rotation": "None; single-scene update. Previous/V1 unchanged.",
       "candidate_verification": "1600x900 and 1366x768. All seven media bindings, muted playback, Return after seven demonstrations, keyboard focus, replay, scene exit/re-entry, one missing-media Retry probe, unchanged 20-scene registry and 4200ms player."
+    },
+    "combat_sfx_and_alert": {
+      "game_build": "1b7e5fba3ce2c93d5abf9c1325a70970c23d6b17",
+      "cast_sound_commit": "0c2ac3b57f62a1400b66629ce8b46529589ecc1b",
+      "follow_up_sound_commit": "122459dc6e04b2c9a0eef42d79152af7cf495322",
+      "capture_provenance": "library/COMBAT-PART2B-CAPTURE.json",
+      "alert_archive_commit": "0daa72fda8cd7ab9f1a8a99aed9f4eb537137461",
+      "alert_page": 17,
+      "retained_silent_clips": "Previous and the shared asset library."
     }
   },
   "previous": {
     "entry": "previous/",
-    "candidate_base_commit": "e68b52bb0594db5e987097e3aeccd18b26aeec8a",
-    "build_marker": "20261110-qa-integrated1",
-    "description": "Outgoing verified 23-scene deck, including Roadmap, separate Alert and final Q&A. Frozen before V2 interim promotion.",
-    "publication_status": "VERIFIED",
-    "local_verified_at": "2026-11-10T05:33:44.511900+00:00",
-    "verification_notes": "Focused private-candidate checks at 1600x900 and 1366x768: exact approved 30/70 composition, full 3344x1882 poster visible without cropping or distortion, large Faculty Glyphic heading, native single cat/route. Future ↔ Q&A arrow navigation and last-scene ordering checked. All original 22 scene blocks and runtime dependencies byte-identical; no engine or media changes, original 4200ms behavior preserved.",
-    "poster_asset": "assets/closing/stray-kitty-poster.webp",
-    "poster_original": "assets/closing/stray-kitty-poster.png",
+    "source_commit": "0bf1adb2427cc0109d92eafeff0f78020da63f1c",
+    "build_marker": "20261110-v2-no-gameflow",
+    "description": "Outgoing verified 20-scene V2 deck. Combat has silent skill clips and Observability retains its Slack banner.",
+    "publication_status": "VERIFIED OUTGOING CURRENT",
     "final_scene": {
       "id": "closing-qa",
-      "page": 23,
+      "page": 20,
       "after": "connected-world"
     },
-    "outgoing_current_source": "e68b52bb0594db5e987097e3aeccd18b26aeec8a",
-    "public_verified_at": "2026-11-10T05:44:10.365546+00:00",
     "publication_evidence": {
-      "source_commit": "9e2cd416bde4268df0064eab90b09151f51e01db",
-      "pages_build": "https://github.com/proxima-j/stray-kitty-presentation/actions/runs/42830474625",
-      "url": "https://proxima-j.github.io/stray-kitty-presentation/previous/",
-      "note": "Outgoing source was publicly verified before rotation; rebased Previous checked locally after snapshot."
+      "source_commit": "0bf1adb2427cc0109d92eafeff0f78020da63f1c",
+      "pages_build": "https://github.com/proxima-j/stray-kitty-presentation/actions/runs/42998649321",
+      "url": "https://proxima-j.github.io/stray-kitty-presentation/previous/"
     },
-    "source_commit": "9e2cd416bde4268df0064eab90b09151f51e01db",
-    "snapshot_note": "Independent small runtime and style files, shared media once via ../assets/. Runtime preserved except relative asset rebasing. Archive V1 untouched."
+    "snapshot_note": "Independent runtime and styles from outgoing Current with shared media URLs rebased."
   },
   "shared_assets": "assets/",
-  "retention": "Two working decks: 20-scene V2 Interim Current and outgoing verified 23-scene Previous. Game Flow removed from Current only; permanent V1 immutable and media shared once.",
+  "retention": "Current 21-scene V2 and Previous 20-scene V2 share assets. Permanent V1 is preserved separately.",
   "v1_archive": {
     "branch": "archive/presentation-v1-2026-11-10",
     "source_commit": "0daa72fda8cd7ab9f1a8a99aed9f4eb537137461",

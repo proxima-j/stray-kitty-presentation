@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "status": "HOME AND COMBAT CAPTURES VERIFIED",
+  "status": "COMBAT SFX AND V1 ALERT INTEGRATED",
   "components": [
     {
       "id": "type.display",
@@ -1270,20 +1270,22 @@
     {
       "id": "datadog.collection.synthetics-healthz",
       "source": "../assets/datadog/page-03-alerts/synthetics-healthz.png",
-      "use": "Future Datadog presentation composition; asset collection only",
-      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "use": "Current Page 17 / Detect. Alert. Recover.",
+      "status": "INTEGRATED / CLEARED FOR PUBLICATION",
       "origin": "https://us5.datadoghq.com/synthetics/details/nu2-fet-6dn?from_user=false&refresh_mode=sliding&selectedEventId=summary&tab=test-runs&from_ts=1794203489120&to_ts=1794207089120&live=true",
       "permission": "User authorized curated project gameplay and Datadog evidence publication; account/player/session identifiers removed.",
-      "provenance": "../assets/datadog/capture-manifest.json"
+      "provenance": "../assets/datadog/capture-manifest.json",
+      "integrated_in": "../index.html?page=detect-alert-recover"
     },
     {
       "id": "datadog.collection.synthetics-payment-config",
       "source": "../assets/datadog/page-03-alerts/synthetics-payment-config.png",
-      "use": "Future Datadog presentation composition; asset collection only",
-      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "use": "Current Page 17 / Detect. Alert. Recover.",
+      "status": "INTEGRATED / CLEARED FOR PUBLICATION",
       "origin": "https://us5.datadoghq.com/synthetics/details/m5a-scg-gq6?from_user=false&refresh_mode=sliding&selectedEventId=summary&tab=test-runs&from_ts=1794203522015&to_ts=1794207122015&live=true",
       "permission": "User authorized curated project gameplay and Datadog evidence publication; account/player/session identifiers removed.",
-      "provenance": "../assets/datadog/capture-manifest.json"
+      "provenance": "../assets/datadog/capture-manifest.json",
+      "integrated_in": "../index.html?page=detect-alert-recover"
     },
     {
       "id": "datadog.collection.event-source-recording",
@@ -1807,8 +1809,8 @@
     {
       "id": "datadog.collection.slack-health-alert",
       "source": "../assets/datadog/page-03-alerts/slack-health-alert.png",
-      "use": "Page 3: genuine November 4 alert/recovery screenshots beside English explanation",
-      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "use": "Current Page 17 / Detect. Alert. Recover.",
+      "status": "INTEGRATED / CLEARED FOR PUBLICATION",
       "metadata": {
         "source_url": "https://bjxsollaschool.slack.com/archives/C0C0S9KAWUE/p1793803004626329",
         "captured_utc": "2026-11-09T10:57:58.311109+00:00",
@@ -1819,13 +1821,14 @@
         "method": "Authenticated original UI; lossless crop. Network metadata mask only for Datadog; no status, timestamp, result or message reconstruction.",
         "publication": "User explicitly requested the project Datadog and Slack screenshots beside the explanation in the existing public Page 3 preview.",
         "provenance": "page-03-alerts/health-alert-cycle-provenance.json"
-      }
+      },
+      "integrated_in": "../index.html?page=detect-alert-recover"
     },
     {
       "id": "datadog.collection.slack-health-recovery",
       "source": "../assets/datadog/page-03-alerts/slack-health-recovery.png",
-      "use": "Page 3: genuine November 4 alert/recovery screenshots beside English explanation",
-      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "use": "Current Page 17 / Detect. Alert. Recover.",
+      "status": "INTEGRATED / CLEARED FOR PUBLICATION",
       "metadata": {
         "source_url": "https://bjxsollaschool.slack.com/archives/C0C0S9KAWUE/p1793803302935099",
         "captured_utc": "2026-11-09T10:58:23.250624+00:00",
@@ -1836,13 +1839,14 @@
         "method": "Authenticated original UI; lossless crop. Network metadata mask only for Datadog; no status, timestamp, result or message reconstruction.",
         "publication": "User explicitly requested the project Datadog and Slack screenshots beside the explanation in the existing public Page 3 preview.",
         "provenance": "page-03-alerts/health-alert-cycle-provenance.json"
-      }
+      },
+      "integrated_in": "../index.html?page=detect-alert-recover"
     },
     {
       "id": "datadog.collection.datadog-health-failed",
       "source": "../assets/datadog/page-03-alerts/datadog-health-failed.png",
-      "use": "Page 3: genuine November 4 alert/recovery screenshots beside English explanation",
-      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "use": "Current Page 17 / Detect. Alert. Recover.",
+      "status": "INTEGRATED / CLEARED FOR PUBLICATION",
       "metadata": {
         "source_url": "https://us5.datadoghq.com/synthetics/details/nu2-fet-6dn/result/183503211253861456",
         "captured_utc": "2026-11-09T10:59:54.044405+00:00",
@@ -1853,13 +1857,14 @@
         "method": "Authenticated original UI; lossless crop. Network metadata mask only for Datadog; no status, timestamp, result or message reconstruction.",
         "publication": "User explicitly requested the project Datadog and Slack screenshots beside the explanation in the existing public Page 3 preview.",
         "provenance": "page-03-alerts/health-alert-cycle-provenance.json"
-      }
+      },
+      "integrated_in": "../index.html?page=detect-alert-recover"
     },
     {
       "id": "datadog.collection.datadog-health-passed",
       "source": "../assets/datadog/page-03-alerts/datadog-health-passed.png",
-      "use": "Page 3: genuine November 4 alert/recovery screenshots beside English explanation",
-      "status": "COLLECTED / CLEARED FOR PUBLICATION",
+      "use": "Current Page 17 / Detect. Alert. Recover.",
+      "status": "INTEGRATED / CLEARED FOR PUBLICATION",
       "metadata": {
         "source_url": "https://us5.datadoghq.com/synthetics/details/nu2-fet-6dn/result/1917610770815308180",
         "captured_utc": "2026-11-09T11:00:17.825617+00:00",
@@ -1870,7 +1875,8 @@
         "method": "Authenticated original UI; lossless crop. Network metadata mask only for Datadog; no status, timestamp, result or message reconstruction.",
         "publication": "User explicitly requested the project Datadog and Slack screenshots beside the explanation in the existing public Page 3 preview.",
         "provenance": "page-03-alerts/health-alert-cycle-provenance.json"
-      }
+      },
+      "integrated_in": "../index.html?page=detect-alert-recover"
     },
     {
       "id": "datadog.web.event-idle-still-web",
@@ -2639,10 +2645,10 @@
       "id": "combat.v2.skill-rongrong",
       "source": "../assets/v2/combat/rongrong-skill-muted.mp4",
       "origin": "100/100 ready → choose Star Burst → aim at D8 → accepted cast, named banner and five-cell cross around the boss → damage and settle. Configured damage: 45 per target.",
-      "use": "Current Page 10 / Combat",
+      "use": "Previous Page 10 / Combat",
       "status": "APPROVED / INTEGRATED",
       "review_status": "VERIFIED",
-      "integrated_in": "../index.html?page=combat",
+      "integrated_in": "../previous/index.html?page=combat",
       "binding": "[data-v2-skill=\"rongrong\"][data-v2-skill-clip]",
       "permission": "User authorized public posting of the project gameplay captures in Part 2B. The banner art appears only in the game footage.",
       "metadata": {
@@ -2669,10 +2675,10 @@
       "id": "combat.v2.skill-banban",
       "source": "../assets/v2/combat/banban-skill-muted.mp4",
       "origin": "100/100 ready → select Shield → named banner and active shield → shield expires. Actual cast grants 60 shield for up to 8 battle seconds.",
-      "use": "Current Page 10 / Combat",
+      "use": "Previous Page 10 / Combat",
       "status": "APPROVED / INTEGRATED",
       "review_status": "VERIFIED",
-      "integrated_in": "../index.html?page=combat",
+      "integrated_in": "../previous/index.html?page=combat",
       "binding": "[data-v2-skill=\"banban\"][data-v2-skill-clip]",
       "permission": "User authorized public posting of the project gameplay captures in Part 2B. The banner art appears only in the game footage.",
       "metadata": {
@@ -2699,10 +2705,10 @@
       "id": "combat.v2.skill-diandian",
       "source": "../assets/v2/combat/diandian-tunnel-healing-muted.mp4",
       "origin": "Underground Tunnel, at ×1 speed. Diandian starts at 100/100 energy, casts Healing Purr, and restores active allies. Observed Diandian HP 114→140 and Banban HP 133→213 across the take.",
-      "use": "Current Page 10 / Combat",
+      "use": "Previous Page 10 / Combat",
       "status": "APPROVED / INTEGRATED",
       "review_status": "VERIFIED",
-      "integrated_in": "../index.html?page=combat",
+      "integrated_in": "../previous/index.html?page=combat",
       "binding": "[data-v2-skill=\"diandian\"][data-v2-skill-clip]",
       "permission": "User approved publishing this exact gameplay preview.",
       "metadata": {
@@ -2823,12 +2829,75 @@
         "encoding": "Timestamped gameplay frames encoded H.264/yuv420p fast-start MP4 at 30 fps. Sampled approximately 11–15 fps; frame holds preserve real elapsed time, with no interpolation, retiming, crop or audio."
       },
       "provenance_record": "COMBAT-PART2B-CAPTURE.json"
+    },
+    {
+      "id": "combat.v2.skill-rongrong-sfx",
+      "source": "../assets/v2/combat/rongrong-skill-sfx.mp4",
+      "origin": "Continuous isolated game-tab A/V capture from 1b7e5fba3ce2c93d5abf9c1325a70970c23d6b17. Rainy Alley, 100 energy, D8, accepted cast and banner. The configured five-cell cross lights four playable cells at this board edge. The unforced 3 + 3 roll carried Shadow Pressure +1 as before. This cast occurs in Wave 2, versus Wave 4 in the earlier take.",
+      "use": "Current Page 10 / Combat",
+      "status": "APPROVED / INTEGRATED",
+      "integrated_in": "../index.html?page=combat",
+      "binding": "[data-v2-skill=\"rongrong\"][data-v2-skill-clip]",
+      "permission": "User requested publication of the gameplay recordings. The three cast cues are Kenney CC0 audio as credited in the game repository.",
+      "metadata": {
+        "codec": "H.264/AAC",
+        "width": 1280,
+        "height": 720,
+        "audio_hz": 48000,
+        "audio_channels": 1,
+        "bytes": 703079,
+        "seconds": 7.201333,
+        "cue": "skill-star-sparkle.ogg"
+      },
+      "provenance_record": "COMBAT-PART2B-CAPTURE.json"
+    },
+    {
+      "id": "combat.v2.skill-banban-sfx",
+      "source": "../assets/v2/combat/banban-skill-sfx.mp4",
+      "origin": "Continuous isolated game-tab A/V capture from 1b7e5fba3ce2c93d5abf9c1325a70970c23d6b17. Midnight Market, 100 energy, 60 extra shield for up to eight battle seconds. The take includes the banner, visible shield and expiry. Both the companion card and Activate Skills use this recording.",
+      "use": "Current Page 10 / Combat",
+      "status": "APPROVED / INTEGRATED",
+      "integrated_in": "../index.html?page=combat",
+      "binding": "[data-v2-skill=\"banban\"][data-v2-skill-clip]; #skillsTrigger[data-demo-src]",
+      "permission": "User requested publication of the gameplay recordings. The three cast cues are Kenney CC0 audio as credited in the game repository.",
+      "metadata": {
+        "codec": "H.264/AAC",
+        "width": 1280,
+        "height": 720,
+        "audio_hz": 48000,
+        "audio_channels": 1,
+        "bytes": 942775,
+        "seconds": 10.097,
+        "cue": "skill-shield-clang.ogg"
+      },
+      "provenance_record": "COMBAT-PART2B-CAPTURE.json"
+    },
+    {
+      "id": "combat.v2.skill-diandian-sfx",
+      "source": "../assets/v2/combat/diandian-skill-sfx.mp4",
+      "origin": "Continuous isolated game-tab A/V capture from 1b7e5fba3ce2c93d5abf9c1325a70970c23d6b17. Underground Tunnel, 100 energy. The take reproduces Diandian HP 114 → 140 and Banban HP 133 → 213 across the cast.",
+      "use": "Current Page 10 / Combat",
+      "status": "APPROVED / INTEGRATED",
+      "integrated_in": "../index.html?page=combat",
+      "binding": "[data-v2-skill=\"diandian\"][data-v2-skill-clip]",
+      "permission": "User requested publication of the gameplay recordings. The three cast cues are Kenney CC0 audio as credited in the game repository.",
+      "metadata": {
+        "codec": "H.264/AAC",
+        "width": 1280,
+        "height": 720,
+        "audio_hz": 48000,
+        "audio_channels": 1,
+        "bytes": 518450,
+        "seconds": 6.149333,
+        "cue": "skill-heal-chime.ogg"
+      },
+      "provenance_record": "COMBAT-PART2B-CAPTURE.json"
     }
   ],
   "current_presentation": {
-    "label": "V2 — Home and Combat Captures Verified",
-    "build_marker": "20261110-v2-no-gameflow",
-    "scene_count": 20,
+    "label": "V2 — Combat SFX and Datadog Alert",
+    "build_marker": "20261111-v2-combat-sfx-alert",
+    "scene_count": 21,
     "registry": [
       {
         "page": "01",
@@ -2912,28 +2981,33 @@
       },
       {
         "page": "17",
+        "id": "detect-alert-recover",
+        "title": "Detect. Alert. Recover."
+      },
+      {
+        "page": "18",
         "id": "cross-team-collaboration",
         "title": "Cross-Team Collaboration"
       },
       {
-        "page": "18",
+        "page": "19",
         "id": "design-test-rethink",
         "title": "Design. Test. Rethink."
       },
       {
-        "page": "19",
+        "page": "20",
         "id": "connected-world",
         "title": "A Dynamic, Living World"
       },
       {
-        "page": "20",
+        "page": "21",
         "id": "closing-qa",
         "title": "Q & A"
       }
     ],
-    "media_status": "HOME AND COMBAT CAPTURES VERIFIED",
+    "media_status": "COMBAT SFX AND V1 ALERT INTEGRATED",
     "pending_bindings": "PRESENTATION-V2-MEDIA-SLOTS.json",
     "handoff": "PRESENTATION-V2-PHASE2-HANDOFF.md",
-    "note": "20 scenes; seven Part 2B files integrated. Separate pre-release wind-up absent from verified source build. No version rotation."
+    "note": "21 scenes. Companion casts play authentic game audio on activation, and the archived Datadog Alert is Page 17. Previous retains the outgoing 20-scene deck."
   }
 }

@@ -1,7 +1,7 @@
 {
-  "build_marker": "20261110-v2-no-gameflow",
-  "status": "HOME AND COMBAT CAPTURES VERIFIED",
-  "note": "Seven Part 2B files verified. Skill footage shows the merged cast-banner implementation, which has no distinct pre-release wind-up. Paths relative to docs/.",
+  "build_marker": "20261111-v2-combat-sfx-alert",
+  "status": "COMBAT SFX VERIFIED",
+  "note": "Three companion recordings capture game-tab video and native cast audio together. Paths relative to docs/.",
   "slots": [
     {
       "id": "home-growth-02",
@@ -70,12 +70,12 @@
       "status": "VERIFIED",
       "selector": "[data-v2-skill=\"rongrong\"]",
       "binding": "data-v2-skill-clip",
-      "planned_path": "assets/v2/combat/rongrong-skill-muted.mp4",
+      "planned_path": "assets/v2/combat/rongrong-skill-sfx.mp4",
       "fallback": "assets/pages/09/caster-star-vfx.webp",
-      "requirement": "Verified capture: 100/100 ready → choose Star Burst → aim at D8 → accepted cast, named banner and five-cell cross around the boss → damage and settle. Configured damage: 45 per target.",
-      "path": "assets/v2/combat/rongrong-skill-muted.mp4",
+      "requirement": "Authentic cast with synchronized game sound. Rainy Alley, 100 energy, D8, accepted cast and banner. The configured five-cell cross lights four playable cells at this board edge. The unforced 3 + 3 roll carried Shadow Pressure +1 as before. This cast occurs in Wave 2, versus Wave 4 in the earlier take.",
+      "path": "assets/v2/combat/rongrong-skill-sfx.mp4",
       "provenance": "COMBAT-PART2B-CAPTURE.json",
-      "verification": "100/100 ready → choose Star Burst → aim at D8 → accepted cast, named banner and five-cell cross around the boss → damage and settle. Configured damage: 45 per target."
+      "verification": "Rainy Alley, 100 energy, D8, accepted cast and banner. The configured five-cell cross lights four playable cells at this board edge. The unforced 3 + 3 roll carried Shadow Pressure +1 as before. This cast occurs in Wave 2, versus Wave 4 in the earlier take."
     },
     {
       "id": "combat-skill-banban",
@@ -83,12 +83,12 @@
       "status": "VERIFIED",
       "selector": "[data-v2-skill=\"banban\"]",
       "binding": "data-v2-skill-clip",
-      "planned_path": "assets/v2/combat/banban-skill-muted.mp4",
+      "planned_path": "assets/v2/combat/banban-skill-sfx.mp4",
       "fallback": "assets/pages/09/guard-shield-vfx.webp",
-      "requirement": "Verified capture: 100/100 ready → select Shield → named banner and active shield → shield expires. Actual cast grants 60 shield for up to 8 battle seconds.",
-      "path": "assets/v2/combat/banban-skill-muted.mp4",
+      "requirement": "Authentic cast with synchronized game sound. Midnight Market, 100 energy, 60 extra shield for up to eight battle seconds. The take includes the banner, visible shield and expiry. Both the companion card and Activate Skills use this recording.",
+      "path": "assets/v2/combat/banban-skill-sfx.mp4",
       "provenance": "COMBAT-PART2B-CAPTURE.json",
-      "verification": "100/100 ready → select Shield → named banner and active shield → shield expires. Actual cast grants 60 shield for up to 8 battle seconds."
+      "verification": "Midnight Market, 100 energy, 60 extra shield for up to eight battle seconds. The take includes the banner, visible shield and expiry. Both the companion card and Activate Skills use this recording."
     },
     {
       "id": "combat-skill-diandian",
@@ -96,12 +96,12 @@
       "status": "VERIFIED",
       "selector": "[data-v2-skill=\"diandian\"]",
       "binding": "data-v2-skill-clip",
-      "planned_path": "assets/v2/combat/diandian-tunnel-healing-muted.mp4",
+      "planned_path": "assets/v2/combat/diandian-skill-sfx.mp4",
       "fallback": "assets/pages/09/diandian-heal-vfx.webp",
-      "requirement": "Verified capture: Underground Tunnel, at ×1 speed. Diandian starts at 100/100 energy, casts Healing Purr, and restores active allies. Observed Diandian HP 114→140 and Banban HP 133→213 across the take.",
-      "path": "assets/v2/combat/diandian-tunnel-healing-muted.mp4",
+      "requirement": "Authentic cast with synchronized game sound. Underground Tunnel, 100 energy. The take reproduces Diandian HP 114 → 140 and Banban HP 133 → 213 across the cast.",
+      "path": "assets/v2/combat/diandian-skill-sfx.mp4",
       "provenance": "COMBAT-PART2B-CAPTURE.json",
-      "verification": "Underground Tunnel, at ×1 speed. Diandian starts at 100/100 energy, casts Healing Purr, and restores active allies. Observed Diandian HP 114→140 and Banban HP 133→213 across the take."
+      "verification": "Underground Tunnel, 100 energy. The take reproduces Diandian HP 114 → 140 and Banban HP 133 → 213 across the cast."
     },
     {
       "id": "combat-event-choice",

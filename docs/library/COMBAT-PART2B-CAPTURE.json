@@ -226,5 +226,90 @@
       "encoding": "Timestamped gameplay frames encoded H.264/yuv420p fast-start MP4 at 30 fps. Sampled approximately 11–15 fps; frame holds preserve real elapsed time, with no interpolation, retiming, crop or audio.",
       "publication_clearance": "User authorized public posting of the project gameplay captures in Part 2B. The banner art appears only in the game footage."
     }
-  ]
+  ],
+  "sound_recapture": {
+    "date": "2026-11-11 (Asia/Shanghai)",
+    "game_build": "1b7e5fba3ce2c93d5abf9c1325a70970c23d6b17",
+    "cast_sound_commit": "0c2ac3b57f62a1400b66629ce8b46529589ecc1b",
+    "follow_up_sound_commit": "122459dc6e04b2c9a0eef42d79152af7cf495322",
+    "source": "web/src/modules/battle/SkillBanner.tsx and web/src/core/sound.ts",
+    "capture": "One Chrome MediaRecorder capture per cast, from the isolated game tab video and application audio tracks. 1600 × 900 at normal speed. Background music and ambient mix set to zero in the guest browser. H.264/AAC 1280 × 720, mono 48 kHz. Full frame, no audio substitution, added cues, time scaling or system/microphone capture. Raw recordings retained locally.",
+    "attempt_note": "New private QA guest attempts in the same maps and checkpoints. Wave timing and formations can differ from the original silent captures.",
+    "clips": [
+      {
+        "id": "combat-sfx-rongrong",
+        "path": "assets/v2/combat/rongrong-skill-sfx.mp4",
+        "title": "Rongrong · Star Burst",
+        "binding": [
+          "[data-v2-skill=\"rongrong\"][data-v2-skill-clip]"
+        ],
+        "checkpoint": "event:alley:crate_event",
+        "stage": "alley_rescue",
+        "battle_attempt": "a7c18f9154b444f587b8636468348cd54697274a4a49bae3",
+        "cast_cue": "skill-star-sparkle.ogg",
+        "cast_cue_seconds_from_record_start": 1.912,
+        "visible_effect": {
+          "variant": "star",
+          "cells": [
+            "7,3",
+            "8,3",
+            "6,3",
+            "7,4"
+          ]
+        },
+        "duration_seconds": 7.201333,
+        "bytes": 703079,
+        "description": "Rainy Alley, 100 energy, D8, accepted cast and banner. The configured five-cell cross lights four playable cells at this board edge. The unforced 3 + 3 roll carried Shadow Pressure +1 as before. This cast occurs in Wave 2, versus Wave 4 in the earlier take.",
+        "dice": [
+          3,
+          3
+        ],
+        "modifiers": {
+          "shadowPressure": 1
+        },
+        "target": "D8"
+      },
+      {
+        "id": "combat-sfx-banban",
+        "path": "assets/v2/combat/banban-skill-sfx.mp4",
+        "title": "Banban · Shield",
+        "binding": [
+          "[data-v2-skill=\"banban\"][data-v2-skill-clip]",
+          "#skillsTrigger[data-demo-src]"
+        ],
+        "checkpoint": "market.battle",
+        "stage": "market_boss",
+        "battle_attempt": "4df676c6b0aa2273686a7a97ad47d2431e99cacee8050160",
+        "cast_cue": "skill-shield-clang.ogg",
+        "cast_cue_seconds_from_record_start": 0.929,
+        "visible_effect": {
+          "variant": "shield",
+          "cells": []
+        },
+        "duration_seconds": 10.097,
+        "bytes": 942775,
+        "description": "Midnight Market, 100 energy, 60 extra shield for up to eight battle seconds. The take includes the banner, visible shield and expiry. Both the companion card and Activate Skills use this recording."
+      },
+      {
+        "id": "combat-sfx-diandian",
+        "path": "assets/v2/combat/diandian-skill-sfx.mp4",
+        "title": "Diandian · Healing Purr",
+        "binding": [
+          "[data-v2-skill=\"diandian\"][data-v2-skill-clip]"
+        ],
+        "checkpoint": "rescue.battle",
+        "stage": "tunnel_boss",
+        "battle_attempt": "30299c6c756daf9cffdbb4a649a5560fed4e4de69f7e19c2",
+        "cast_cue": "skill-heal-chime.ogg",
+        "cast_cue_seconds_from_record_start": 0.933,
+        "visible_effect": {
+          "variant": "heal",
+          "cells": []
+        },
+        "duration_seconds": 6.149333,
+        "bytes": 518450,
+        "description": "Underground Tunnel, 100 energy. The take reproduces Diandian HP 114 → 140 and Banban HP 133 → 213 across the cast."
+      }
+    ]
+  }
 }

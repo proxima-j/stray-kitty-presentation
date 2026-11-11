@@ -1,91 +1,240 @@
+/* Native V2 Combat. Approved review interactions, owned only by this scene. */
 (() => {
   'use strict';
-  const trigger = document.getElementById('advisorTrigger');
-  const layer = document.getElementById('advisorLayer');
-  const close = document.getElementById('advisorClose');
-  const next = document.getElementById('advisorNext');
-  const before = document.getElementById('advisorBefore');
-  const after = document.getElementById('advisorAfter');
-  const step = document.getElementById('advisorStep');
-  const reposition = document.getElementById('repositionTrigger');
-  const skills = document.getElementById('skillsTrigger');
-  const video = document.getElementById('repositionVideo');
-  const source = document.getElementById('repositionSource');
-  const demos = [
-    {button: reposition, src: video.dataset.demoSrc, label: 'Reposition', caption: 'REPOSITION · SEPARATE TAKE · 1×'},
-    {button: skills, src: skills.dataset.demoSrc, label: 'Activate Skills', caption: 'BANBAN · SHIELD · SEPARATE TAKE · 1×'}
-  ];
-  let state = 0, playback = 0, activeDemo = null, bufferingTimer = 0, retryable = false;
-  for (const button of [trigger, close, next, before, reposition, skills]) button.dataset.localSpace = '';
-  function stopReposition() {
-    playback++; clearTimeout(bufferingTimer); activeDemo = null; retryable = false;
-    video.pause(); video.hidden = true; source.hidden = true;
-    demos.forEach(demo => { demo.button.setAttribute('aria-pressed', 'false'); demo.button.removeAttribute('aria-busy'); });
+  const combat = document.getElementById('combat');
+  if (!combat) return;
+  const get = id => combat.querySelector('#' + id);
+  const battlefield = combat.querySelector('.battlefield-image');
+  const frame = get('v2BattlefieldFrame');
+  const back = get('v2ReturnBattlefield');
+  const defaultVideo = get('v2DefaultBattleVfx');
+  const defaultStatus = get('v2DefaultVfxStatus');
+  const video = get('repositionVideo');
+  const status = get('repositionSource');
+  const retry = get('v2CombatRetry');
+  const reposition = get('repositionTrigger');
+  const activate = get('skillsTrigger');
+  const eventButton = get('v2EventProofTrigger');
+  const proof = get('v2BattleProof');
+  const proofTitle = get('v2ProofTitle');
+  const proofKicker = get('v2ProofKicker');
+  const proofImage = get('v2ProofImage');
+  const proofBody = get('v2ProofBody');
+  const proofCaption = get('v2ProofCaption');
+  const cards = [...combat.querySelectorAll('[data-v2-skill]')];
+  const advisor = get('advisorLayer');
+  const advisorTrigger = get('advisorTrigger');
+  const advisorBefore = get('advisorBefore');
+  const advisorAfter = get('advisorAfter');
+  const advisorNext = get('advisorNext');
+  const advisorStep = get('advisorStep');
+  const skills = {
+    rongrong: { name: 'Rongrong', ability: 'Star Burst', still: '../assets/pages/09/caster-star-vfx.webp' },
+    banban: { name: 'Banban', ability: 'Shield', still: '../assets/pages/09/guard-shield-vfx.webp' },
+    diandian: { name: 'Diandian', ability: 'Healing Purr', still: '../assets/pages/09/diandian-heal-vfx.webp' }
+  };
+  // The deck may already be on Combat when this independently loaded script arrives.
+  let sceneVisible = document.getElementById('world').dataset.settledScene === combat.id;
+  let generation = 0, mode = 'default', bufferingTimer = 0;
+  let selectedClip = null;
+  const active = () => sceneVisible && !document.hidden;
+  function loadImages() {
+    window.dispatchEvent(new CustomEvent('presentation:loadmedia', { detail: { id: 'combat' } }));
   }
-  function showBuffering() {
-    if (!activeDemo) return;
-    source.hidden = false;
-    source.textContent = `${video.currentTime > 0 ? 'Buffering' : 'Loading'} ${activeDemo.label}…`;
-    activeDemo.button.setAttribute('aria-busy', 'true');
+  function stopAll() {
+    generation++;
     clearTimeout(bufferingTimer);
-    bufferingTimer = setTimeout(() => {
-      if (!activeDemo || video.readyState >= 3) return;
-      retryable = true;
-      source.textContent = `Still buffering — click ${activeDemo.label} to retry.`;
-    }, 15000);
+    for (const clip of [defaultVideo, video]) {
+      clip.pause();
+      clip.hidden = true;
+      clip.controls = false;
+      clip.muted = true;
+      if (Number.isFinite(clip.duration)) clip.currentTime = 0;
+    }
+    battlefield.hidden = false;
+    for (const element of [status, defaultStatus, proof, back, retry, advisor]) element.hidden = true;
+    for (const element of [eventButton, reposition, activate, ...cards]) {
+      element.setAttribute('aria-pressed', 'false');
+      element.removeAttribute('aria-busy');
+    }
+    advisorTrigger.setAttribute('aria-expanded', 'false');
+    advisorBefore.hidden = false;
+    advisorAfter.hidden = true;
+    advisorStep.textContent = '1 / 2';
+    advisorNext.textContent = 'Show answer →';
+    selectedClip = null;
   }
-  function showFailure() {
-    if (!activeDemo) return;
-    clearTimeout(bufferingTimer); retryable = true;
-    video.hidden = true; source.hidden = false;
-    activeDemo.button.removeAttribute('aria-busy');
-    source.textContent = `Clip unavailable — click ${activeDemo.label} to retry.`;
+  function playbackFailed(clip) {
+    if (!active() || clip.hidden) return;
+    clearTimeout(bufferingTimer);
+    clip.pause();
+    clip.hidden = true;
+    battlefield.hidden = clip !== defaultVideo;
+    retry.hidden = false;
+    const output = clip === defaultVideo ? defaultStatus : status;
+    output.hidden = false;
+    output.textContent = 'Playback unavailable · retry clip · muted';
   }
-  demos.forEach(demo => demo.button.addEventListener('click', async () => {
-    if (activeDemo === demo && !retryable) { stopReposition(); return; }
-    stopReposition(); activeDemo = demo;
-    const request = playback;
-    video.src = demo.src; video.load();
-    video.currentTime = 0; video.playbackRate = 1; video.muted = true;
-    video.setAttribute('aria-label', `${demo.label}: genuine continuous clip, separate take at the same stage, normal speed`);
-    video.hidden = false; loadImages(); demo.button.setAttribute('aria-pressed', 'true'); showBuffering();
-    try { await video.play(); } catch (error) { if (request === playback) showFailure(); }
-  }));
-  video.addEventListener('waiting', showBuffering);
-  video.addEventListener('stalled', showBuffering);
-  video.addEventListener('playing', () => {
-    if (!activeDemo) return;
-    clearTimeout(bufferingTimer); retryable = false;
-    activeDemo.button.removeAttribute('aria-busy'); source.textContent = activeDemo.caption;
+  function play(clip, src, token) {
+    clip.muted = true;
+    clip.controls = false;
+    clip.preload = 'auto';
+    clip.playbackRate = 1;
+    // The default loop has a matching poster. Selected clips load without a poster.
+    if (!clip.hasAttribute('poster') && clip.dataset.mediaPoster) clip.poster = clip.dataset.mediaPoster;
+    if (clip.getAttribute('src') !== src || clip.error) {
+      clip.src = src;
+      clip.load();
+    }
+    clip.hidden = false;
+    clip.play().then(() => {
+      if (token !== generation) return;
+      if (!active()) { stopAll(); return; }
+      battlefield.hidden = true;
+      retry.hidden = true;
+    }).catch(() => { if (token === generation) playbackFailed(clip); });
+  }
+  function showDefault() {
+    stopAll();
+    mode = 'default';
+    if (!active()) return;
+    defaultStatus.hidden = false;
+    const src = defaultVideo.dataset.v2DefaultSrc?.trim();
+    if (!src) {
+      defaultStatus.textContent = 'GENERAL BATTLE VFX · MUTED LOOP PENDING';
+      return;
+    }
+    defaultStatus.textContent = 'GENERAL BATTLE VFX · MUTED';
+    defaultVideo.loop = true;
+    play(defaultVideo, src, generation);
+  }
+  function startClip(src, label, button = null) {
+    if (!active() || !src) return;
+    stopAll();
+    mode = 'clip';
+    selectedClip = { src, label, button };
+    battlefield.hidden = true;
+    back.hidden = false;
+    status.hidden = false;
+    status.textContent = 'Loading genuine ' + label + ' · muted…';
+    button?.setAttribute('aria-pressed', 'true');
+    video.loop = false;
+    video.setAttribute('aria-label', label + ' · genuine recorded footage · muted');
+    play(video, src, generation);
+  }
+  reposition.addEventListener('click', () => startClip(video.dataset.demoSrc, 'Reposition · separate take · 1×', reposition));
+  activate.addEventListener('click', () => startClip(activate.dataset.demoSrc, 'Banban Shield · historical activation · 1×', activate));
+  video.addEventListener('ended', () => { if (mode === 'clip') showDefault(); });
+  for (const clip of [video, defaultVideo]) {
+    clip.addEventListener('error', () => playbackFailed(clip));
+    clip.addEventListener('waiting', () => {
+      if (!active() || clip.hidden) return;
+      const output = clip === defaultVideo ? defaultStatus : status;
+      output.hidden = false;
+      output.textContent = 'Buffering genuine footage · muted…';
+      clearTimeout(bufferingTimer);
+      bufferingTimer = setTimeout(() => {
+        if (active() && !clip.hidden && clip.readyState < 3) playbackFailed(clip);
+      }, 15000);
+    });
+    clip.addEventListener('playing', () => {
+      if (!active() || clip.hidden) { clip.pause(); return; }
+      clearTimeout(bufferingTimer);
+      retry.hidden = true;
+      const output = clip === defaultVideo ? defaultStatus : status;
+      output.textContent = (clip === defaultVideo ? 'GENERAL BATTLE VFX' : selectedClip?.label || 'Recorded demonstration') + ' · MUTED';
+    });
+  }
+  retry.addEventListener('click', () => {
+    if (mode === 'default') showDefault();
+    else if (selectedClip) startClip(selectedClip.src, selectedClip.label, selectedClip.button);
   });
-  video.addEventListener('ended', stopReposition);
-  video.addEventListener('error', showFailure);
-  function loadImages() { window.dispatchEvent(new CustomEvent('presentation:loadmedia', {detail: {id: 'combat'}})); }
-  function render() {
-    layer.hidden = state === 0;
-    trigger.setAttribute('aria-expanded', String(state > 0));
-    before.hidden = state !== 1; after.hidden = state !== 2;
-    step.textContent = state === 2 ? '2 / 2' : '1 / 2';
-    next.textContent = state === 2 ? 'Back to question' : 'Show answer →';
-    if (state > 0) loadImages();
+  function openProof(kicker, title, caption) {
+    stopAll();
+    mode = 'proof';
+    back.hidden = false;
+    proof.hidden = false;
+    proofKicker.textContent = kicker;
+    proofTitle.textContent = title;
+    proofCaption.textContent = caption;
+    proofImage.hidden = true;
+    proofBody.replaceChildren();
   }
-  function dismiss(focus = true) { state = 0; render(); if (focus) trigger.focus({preventScroll: true}); }
-  trigger.addEventListener('click', () => { stopReposition(); state = 1; render(); close.focus({preventScroll: true}); });
-  close.addEventListener('click', () => dismiss());
-  next.addEventListener('click', () => { state = state === 1 ? 2 : 1; render(); });
-  before.addEventListener('click', () => { state = 2; render(); next.focus({preventScroll: true}); });
+  function showSkill(key) {
+    const skill = skills[key];
+    const card = cards.find(item => item.dataset.v2Skill === key);
+    if (!skill || !active()) return;
+    const src = card.dataset.v2SkillClip?.trim();
+    if (src) { startClip(src, skill.name + ' · ' + skill.ability, card); return; }
+    openProof('EXISTING AUTHENTIC SKILL STILL', skill.name + ' · ' + skill.ability,
+      'Historical still only. Updated skill video pending.');
+    card.setAttribute('aria-pressed', 'true');
+    proofImage.src = skill.still;
+    proofImage.alt = skill.name + ' · approved authentic VFX still, not the updated animation';
+    proofImage.hidden = false;
+    proofBody.textContent = 'Updated pre-release animation pending. The verified clip will play muted when this cat is selected.';
+  }
+  cards.forEach(card => {
+    card.addEventListener('click', () => showSkill(card.dataset.v2Skill));
+    card.addEventListener('keydown', event => {
+      if (!['Enter', ' '].includes(event.key)) return;
+      event.preventDefault(); event.stopPropagation(); showSkill(card.dataset.v2Skill);
+    });
+  });
+  function showEvent(step = 0) {
+    if (!active()) return;
+    openProof('FROM RANDOM EVENTS → BATTLE', 'Carried Battle Effect',
+      'Verified linked capture pending. Fish +1 and Material +1 are resources, not this battle effect.');
+    eventButton.setAttribute('aria-pressed', 'true');
+    const { v2EventChoice: choice, v2EventState: state, v2EventBattle: battle, v2EventCaption: caption } = proof.dataset;
+    if (choice && state && battle && caption) {
+      if (step === 2) { startClip(battle, caption, eventButton); return; }
+      proofTitle.textContent = step === 0 ? 'Event Choice' : 'Stored Support / Pressure';
+      proofImage.src = step === 0 ? choice : state;
+      proofImage.alt = proofTitle.textContent + ' · verified linked gameplay evidence';
+      proofImage.hidden = false;
+      proofCaption.textContent = caption;
+      const next = document.createElement('button');
+      next.type = 'button'; next.dataset.localSpace = '';
+      next.textContent = step === 0 ? 'Stored effect →' : 'Actual battle consequence →';
+      next.addEventListener('click', () => showEvent(step + 1));
+      proofBody.append(next);
+    } else {
+      proofBody.innerHTML = '<div class="v2-event-steps"><span>EVENT CHOICE</span><b>→</b><span>STORED SUPPORT / PRESSURE</span><b>→</b><span>ACTUAL BATTLE CONSEQUENCE</span></div>';
+    }
+  }
+  eventButton.addEventListener('click', () => showEvent());
+  get('v2ProofClose').addEventListener('click', showDefault);
+  function showAdvisor() {
+    if (!active()) return;
+    stopAll(); mode = 'advisor'; back.hidden = false;
+    advisor.hidden = false; advisorTrigger.setAttribute('aria-expanded', 'true');
+    loadImages(); get('advisorClose').focus({ preventScroll: true });
+  }
+  function toggleAnswer() {
+    const answer = advisorAfter.hidden;
+    advisorBefore.hidden = answer; advisorAfter.hidden = !answer;
+    advisorStep.textContent = answer ? '2 / 2' : '1 / 2';
+    advisorNext.textContent = answer ? 'Back to question' : 'Show answer →';
+    loadImages();
+  }
+  advisorTrigger.addEventListener('click', showAdvisor);
+  advisorNext.addEventListener('click', toggleAnswer);
+  advisorBefore.addEventListener('click', toggleAnswer);
+  get('advisorClose').addEventListener('click', () => { showDefault(); advisorTrigger.focus({ preventScroll: true }); });
+  back.addEventListener('click', () => { showDefault(); frame.focus({ preventScroll: true }); });
   document.addEventListener('keydown', event => {
-    if (state > 0 && ['Escape', 'ArrowRight', 'ArrowLeft'].includes(event.key)) {
-      event.preventDefault(); event.stopImmediatePropagation();
-      if (event.key === 'Escape') dismiss();
-      else if (!event.repeat) { state = event.key === 'ArrowRight' ? 2 : 1; render(); }
-    } else if (event.key === 'Escape' && !video.hidden) {
-      event.preventDefault(); event.stopImmediatePropagation(); stopReposition();
+    if (active() && event.key === 'Escape' && mode !== 'default') {
+      event.preventDefault(); event.stopImmediatePropagation(); showDefault(); frame.focus({ preventScroll: true });
     }
   }, true);
   window.addEventListener('presentation:viewchange', event => {
-    if (event.detail.id !== 'combat' || !event.detail.visible) { stopReposition(); dismiss(false); }
+    sceneVisible = event.detail.id === 'combat' && event.detail.visible;
+    if (sceneVisible) showDefault(); else { stopAll(); mode = 'default'; }
   });
-  document.addEventListener('visibilitychange', () => { if (document.hidden) stopReposition(); });
-  render();
+  document.addEventListener('visibilitychange', () => {
+    if (active()) showDefault(); else { stopAll(); mode = 'default'; }
+  });
+  if (sceneVisible) showDefault();
+  else stopAll();
 })();

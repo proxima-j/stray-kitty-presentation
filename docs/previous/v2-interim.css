@@ -1,0 +1,179 @@
+/* Approved V2 additions: scoped production rules only; no review camera, route or cat. */
+/* All four Home GROWS screenshots retain the original composition and framing. */
+#home-hub .home-media{position:relative}
+.v2-asset-label{position:absolute;left:7px;top:7px;z-index:3;padding:5px 8px;border-radius:6px;border:1px solid rgba(52,69,62,.6);background:rgba(244,230,199,.92);color:var(--accent);font:700 8px/1.25 var(--body);letter-spacing:.04em;max-width:90%;pointer-events:none}
+
+/* Reuse the GROWS 2x2 grid for the RESPONDS view; also keep the same
+   left title, vertical tabs, right content area, captions and gap. */
+#home-hub .home-content[data-home-mode="responds"]{
+ display:grid;grid-template-columns:minmax(260px,.27fr) minmax(0,.73fr);gap:3vw;align-items:center
+}
+#home-hub .home-content[data-home-mode="responds"] .home-copy{
+ position:relative;left:auto;top:auto;width:auto
+}
+#home-hub .home-content[data-home-mode="responds"] h2{
+ font-size:clamp(36px,3.1vw,56px);line-height:1.13
+}
+#home-hub .home-content[data-home-mode="responds"] .home-tabs{
+ flex-direction:column;flex-wrap:nowrap;align-items:flex-start;margin-top:28px
+}
+#home-hub .home-content[data-home-mode="responds"] .home-body{
+ position:static;inset:auto
+}
+#home-hub .home-content[data-home-mode="responds"] .home-view{
+ height:auto
+}
+#home-hub .v2-responds-gallery{
+ display:grid;position:static;height:auto;grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:24px;align-items:start
+}
+#home-hub .v2-responds-gallery figure{
+ position:static;width:auto;left:auto;right:auto;top:auto;bottom:auto
+}
+#home-hub .v2-responds-gallery .home-media video{display:block;width:100%;height:100%;object-fit:contain}
+#home-hub .v2-asset-placeholder{
+ background:repeating-linear-gradient(135deg,#e8e4d2,#e8e4d2 13px,#eeead9 13px,#eeead9 26px);
+ display:flex;align-items:center;justify-content:center;text-align:center;padding:14px
+}
+#home-hub .v2-asset-placeholder-content{display:flex;flex-direction:column;align-items:center;gap:9px}
+#home-hub .v2-asset-placeholder-content span{font:400 25px/1 var(--display);color:var(--accent)}
+#home-hub .v2-asset-placeholder-content strong{font:400 clamp(15px,1.15vw,20px)/1.2 var(--display)}
+#home-hub .v2-asset-placeholder-content small{font:700 9px/1.3 var(--body);color:var(--muted);letter-spacing:.065em}
+#home-hub .v2-responds-gallery .clip-toggle{z-index:4}
+#home-hub .home-view .home-media video[controls]{object-fit:contain}
+
+/* Progressive furniture captures: keep Stage 01 real and unaltered. Stages
+   02–04 show intentionally distinct PENDING slots, not fabricated furnishings. */
+#home-hub .home-media.v2-growth-pending{position:relative;isolation:isolate}
+#home-hub .v2-growth-pending .v2-stage-reference{
+ display:block;width:100%;height:100%;object-fit:contain;
+ filter:grayscale(.35) brightness(.88);opacity:.32
+}
+#home-hub .v2-growth-spec{
+ position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;
+ align-items:center;justify-content:center;gap:clamp(6px,.65vw,12px);
+ padding:clamp(12px,1.1vw,20px);text-align:center;
+ background:linear-gradient(135deg,rgba(244,230,199,.52),rgba(236,223,194,.84))
+}
+#home-hub .v2-growth-spec small{
+ color:var(--accent);font:700 clamp(9px,.72vw,11px)/1.3 var(--body);
+ letter-spacing:.075em
+}
+#home-hub .v2-growth-spec strong{
+ color:var(--ink);font:400 clamp(16px,1.5vw,25px)/1.15 var(--display)
+}
+#home-hub .v2-growth-spec span{
+ color:var(--muted);font:clamp(10px,.82vw,13px)/1.35 var(--body);max-width:260px
+}
+/* The original Combat columns, cards, label, and advisor overlay remain intact.
+   Only small click affordances and temporary demonstrations are added. */
+#combat .v2-event-proof-trigger{
+ border:0;background:transparent;padding:0;font:inherit;color:var(--accent);
+ cursor:pointer;text-decoration:underline;text-decoration-color:transparent;
+ text-underline-offset:4px
+}
+#combat .v2-event-proof-trigger span{font-size:11px;margin-left:5px}
+#combat .v2-event-proof-trigger:is(:hover,:focus-visible,[aria-pressed="true"]){text-decoration-color:var(--accent);outline-offset:4px}
+#combat .v2-selectable-profile{cursor:pointer;transition:background .12s,box-shadow .12s}
+#combat .v2-selectable-profile:is(:hover,:focus-visible,[aria-pressed="true"]){
+ background:#f0e2bd;box-shadow:0 0 0 2px var(--gold)
+}
+#combat .v2-selectable-profile:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+#combat .v2-selectable-profile::after{content:"▶";position:absolute;right:10px;top:7px;font:10px var(--body);color:var(--accent)}
+#combat .combat-main>.tabframe{position:relative}
+/* Discreet presenter-only way back: almost invisible until interacted with.
+   Keep a usable hit target and visible keyboard focus without a bright CTA. */
+#combat .v2-return-battlefield{
+ position:absolute;right:9px;top:0;z-index:8;min-height:29px;
+ border:0;border-radius:0;padding:5px 7px;background:transparent;
+ color:var(--muted);font:400 clamp(10px,.77vw,12px)/1.4 var(--body);
+ letter-spacing:.01em;opacity:.24;cursor:pointer;white-space:nowrap;
+ transition:opacity .14s ease,text-decoration-color .14s ease
+}
+#combat .v2-return-battlefield:hover{
+ opacity:.94;text-decoration:underline;text-underline-offset:3px
+}
+#combat .v2-return-battlefield:focus-visible{
+ opacity:1;outline:2px solid var(--accent);outline-offset:2px
+}
+
+/* Default battlefield slot: full native game frame, muted autoplay loop when
+   recorded media exists. The current original still remains the truthful fallback. */
+#combat .combat-shot .v2-default-battle-vfx{
+ position:absolute;inset:0;width:100%;height:100%;object-fit:contain;
+ background:var(--paper);z-index:1;display:block
+}
+#combat .combat-shot .battle-reposition{z-index:2}
+#combat .combat-shot .reposition-source{z-index:4}
+#combat .v2-default-vfx-status{
+ position:absolute;bottom:8px;left:8px;z-index:2;
+ border:1px solid rgba(52,69,62,.45);border-radius:6px;
+ background:rgba(244,230,199,.94);padding:6px 9px;
+ font:700 10px/1.3 var(--body);letter-spacing:.055em;color:var(--accent);
+ pointer-events:none
+}
+#combat .v2-battle-proof{
+ position:absolute;inset:0;z-index:3;background:rgba(244,230,199,.965);
+ border-radius:0 16px 16px 16px;padding:clamp(11px,1.4vw,21px);
+ display:flex;align-items:center;justify-content:center
+}
+#combat .v2-proof-close{
+ position:absolute;right:10px;top:9px;width:28px;height:28px;border:1px solid var(--ink);
+ border-radius:50%;background:var(--paper);font:20px/1 var(--body);cursor:pointer;z-index:1
+}
+#combat .v2-proof-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;text-align:center;width:100%;height:100%;min-height:0}
+#combat .v2-proof-kicker{font:700 9px/1.3 var(--body);letter-spacing:.09em;color:var(--accent)}
+#combat .v2-proof-inner h3{font:400 clamp(14px,1.35vw,22px)/1.2 var(--display);margin:0}
+#combat .v2-proof-inner img{height:min(44%,140px);width:85%;min-height:0;object-fit:contain;image-rendering:pixelated}
+#combat .v2-proof-inner small{font:10px/1.3 var(--body);color:var(--muted);max-width:90%}
+#combat .v2-proof-inner #v2ProofBody{font:11px/1.35 var(--body);color:var(--muted);max-width:90%}
+#combat #v2BattleProof[data-v2-event-state]:not([data-v2-event-state=""]) img{height:min(60%,170px);image-rendering:auto}
+#combat #v2BattleProof[data-v2-event-state]:not([data-v2-event-state=""]) small{font-size:12px}
+#combat #v2ProofBody button{padding:4px 10px;border:1px solid var(--ink);border-radius:999px;background:var(--paper);color:var(--ink);font:inherit;cursor:pointer}
+#combat .v2-event-steps{display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap}
+#combat .v2-event-steps span{border:1px dashed var(--accent);border-radius:9px;padding:7px;background:#eee1c4;font:10px/1.3 var(--body);color:var(--ink)}
+#combat .v2-event-steps b{color:var(--accent);font-size:14px}
+#observability .v2-dd-toolbar{
+ display:flex;align-items:center;gap:clamp(9px,1vw,16px);
+ min-width:0;flex:0 0 auto;flex-wrap:wrap
+}
+#observability .v2-dd-toolbar .dd-tabrow{
+ flex:1 1 auto;min-width:0;display:flex;flex-wrap:wrap;align-items:center
+}
+#observability .v2-dd-alert-banner{
+ display:flex;align-items:center;gap:9px;flex:0 0 auto;
+ min-height:37px;padding:6px 12px;
+ border:1px solid var(--accent);border-radius:999px;
+ background:rgba(207,166,106,.14);color:var(--ink);
+ text-decoration:none;transition:background .15s
+}
+#observability .v2-dd-alert-banner:is(:hover,:focus-visible){
+ background:rgba(207,166,106,.31);outline:2px solid var(--accent);outline-offset:2px
+}
+#observability .v2-dd-alert-bell{
+ display:grid;place-items:center;width:21px;height:21px;
+ flex:0 0 auto;border:1px solid var(--accent);border-radius:50%;
+ color:var(--accent);font:700 13px/1 var(--body)
+}
+#observability .v2-dd-alert-text{display:flex;flex-direction:column;gap:2px}
+#observability .v2-dd-alert-text strong{
+ font:700 10px/1.2 var(--body);color:var(--accent);letter-spacing:.07em;
+ white-space:nowrap
+}
+#observability .v2-dd-alert-text small{
+ font:10px/1.25 var(--body);color:var(--muted);white-space:nowrap
+}
+
+/* Only failed playback exposes this retry; never an additional VFX launcher. */
+#combat .v2-combat-retry{position:absolute;right:12px;bottom:12px;z-index:5;border:1px solid var(--ink);border-radius:999px;background:var(--paper);padding:8px 14px;cursor:pointer;font:12px/1.3 var(--body)}
+#observability .v2-dd-toolbar .dd-tabrow{flex:0 1 auto}
+#observability .v2-dd-alert-banner{cursor:pointer;text-align:left}
+@media(max-height:760px){
+ #home-hub .home-content[data-home-mode="responds"] h2{font-size:clamp(32px,2.8vw,44px)}
+ #home-hub .home-content[data-home-mode="responds"] .home-tabs{margin-top:18px}
+ #home-hub .v2-responds-gallery{gap:16px}
+}
+@media(prefers-reduced-motion:reduce){#combat .v2-selectable-profile,#observability .v2-dd-alert-banner{transition:none}}
+
+/* Home-only request fallback; retain genuine poster and the existing retry control. */
+#home-hub .home-media-error:not([hidden]){position:absolute;left:8px;right:44px;bottom:8px;z-index:4;padding:6px 8px;background:var(--cream,#f4e6c7);color:var(--ink,#34453e);border-radius:5px;font:11px/1.3 var(--body)}

@@ -1,13 +1,12 @@
 # V2 Part 2 handoff
 
-Current: **20-scene V2 — Home and Combat captures verified**, marker `20261110-v2-no-gameflow`. Home is Page 04 (`home-hub`); Combat is Page 10 (`combat`). The existing serialized GitHub Pages workflow publishes `docs/`; the successful Actions run and matching public `deployment.json` identify the deployed commit.
+Current is **21-scene V2 — Combat SFX and Datadog Alert**, marker `20261111-v2-combat-sfx-alert`. The successful Pages run and public `deployment.json` identify the deployed commit.
 
 ## Retained versions and scope
 
-- Current remains the default deck; no rotation for this focused media update.
-- Previous remains the frozen 23-scene source from `9e2cd416bde4268df0064eab90b09151f51e01db`, under `docs/previous/`, sharing existing assets once.
+- Previous is the outgoing verified 20-scene deck from `0bf1adb2427cc0109d92eafeff0f78020da63f1c`, sharing media with Current.
 - Permanent V1 branch `archive/presentation-v1-2026-11-10` stays at `0daa72fda8cd7ab9f1a8a99aed9f4eb537137461`.
-- Game Flow, Roadmap and standalone Alert remain removed from Current. No other page, game source, monitoring or infrastructure was modified by Part 2A.
+- The archived Alert scene follows Observability in Current.
 - Original 4200ms reversible engine, single Miaomiao/continuous route, full opening film and its user-started sound are unchanged.
 - Historical Part 1 integration: `e0dabbbf7a82272b3f45c846169dabe9da973fbf`; targeted Combat playback correction: `0f764237fe13540f547d3b1f9ae66202c0a4c422`; page-removal base: `2f5b7321c3bfb11e205b256a64fa21596a0715e6`.
 
@@ -31,12 +30,13 @@ Current: **20-scene V2 — Home and Combat captures verified**, marker `20261110
 | 14 | `kubernetes-deployment` | Kubernetes Deployment |
 | 15 | `gameplay-telemetry` | From Gameplay to Telemetry |
 | 16 | `observability` | Observability Across the Game |
-| 17 | `cross-team-collaboration` | Cross-Team Collaboration |
-| 18 | `design-test-rethink` | Design. Test. Rethink. |
-| 19 | `connected-world` | A Dynamic, Living World |
-| 20 | `closing-qa` | Q&A |
+| 17 | `detect-alert-recover` | Detect. Alert. Recover. |
+| 18 | `cross-team-collaboration` | Cross-Team Collaboration |
+| 19 | `design-test-rethink` | Design. Test. Rethink. |
+| 20 | `connected-world` | A Dynamic, Living World |
+| 21 | `closing-qa` | Q&A |
 
-Use `?page=<stable-scene-id>` for durable review links. Numeric pages are now 01–20. Game Flow was removed after the initial Part 1 release; return from the separate Chapter 5 demo to Visual Novel, now Page 03. Chapter 5 is a separately pre-opened live-game tab after Pitch, never a slide/iframe. The exact approved Pitch reminder and its art remain unchanged. Random Events is unchanged except numbering; its Fish +1/Material +1 are resource rewards, not direct battle modifiers.
+Use `?page=<stable-scene-id>` for durable review links. Numeric pages are 01–21. Return from the separate Chapter 5 demo to Visual Novel, Page 03. Chapter 5 is a separately pre-opened live-game tab after Pitch. The Random Events example awards Fish +1 and Material +1.
 
 ## Part 2A — Home Hub verified
 
@@ -67,9 +67,9 @@ Focused verification: both galleries have equal bounding boxes at1600×900 (960.
 | Production binding | Verified file under `docs/` | Captured evidence |
 | --- | --- | --- |
 | `#v2DefaultBattleVfx[data-v2-default-src]` | `assets/v2/combat/warehouse-team-burst-muted.mp4` | 9.07 s, uncropped Warehouse finale with overlapping boss sweep, team shield and claw attack |
-| Rongrong `data-v2-skill-clip` | `assets/v2/combat/rongrong-skill-muted.mp4` | 6.53 s, 100 energy, targeting, banner, cross damage and settle |
-| Banban `data-v2-skill-clip` | `assets/v2/combat/banban-skill-muted.mp4` | 10.57 s, 100 energy, banner, shield and expiry |
-| Diandian `data-v2-skill-clip` | `assets/v2/combat/diandian-tunnel-healing-muted.mp4` | 6 s in the Underground Tunnel, full cast and visible ally HP recovery. Rongrong uses Rainy Alley and Banban uses Midnight Market. |
+| Rongrong `data-v2-skill-clip` | `assets/v2/combat/rongrong-skill-sfx.mp4` | Rainy Alley, 100 energy, D8, cross VFX and Star Burst cue |
+| Banban `data-v2-skill-clip` and Activate Skills | `assets/v2/combat/banban-skill-sfx.mp4` | Midnight Market, 100 energy, shield and expiry with cast cue |
+| Diandian `data-v2-skill-clip` | `assets/v2/combat/diandian-skill-sfx.mp4` | Underground Tunnel, full cast, audible Healing Purr and ally HP recovery |
 | `#v2BattleProof[data-v2-event-choice]` | `assets/v2/events/carry-choice.webp` | Genuine crate search selection |
 | `#v2BattleProof[data-v2-event-state]` | `assets/v2/events/carry-state.webp` | Actual 3 + 4 = 7 partial result, Shadow Pressure +1 |
 | `#v2BattleProof[data-v2-event-battle]` | `assets/v2/events/carry-battle.mp4` | 9 s, actual start and first wave of the same rescue attempt; boss starts at 3,120 HP |
@@ -78,6 +78,6 @@ Focused verification: both galleries have equal bounding boxes at1600×900 (960.
 
 The dice-based node encounter `crate_event`, choice `search`, stores `shadowPressure: 1` after an unforced roll of 7. The next `alley_rescue` attempt in the same save uses high pressure (1.2× HP), producing the recorded 3,120 starting boss HP versus the 2,600 normal configuration. Material +2 is a separate inventory reward; the feeder-bowl example and its Random Events page remain unchanged.
 
-The existing controller plays only one muted battlefield video, resumes the default loop on completion or Return, and resets on scene exit. The authentic still covers loading or playback failure. Existing Reposition and Activate Skills clips, profiles, Local Fallback advisor and 24% Return styling remain intact. Focused checks at 1600×900 and 1366×768 covered the seven bindings, replay, event proof, each Return path, keyboard focus and forward/back lifecycle. No changes to Home, film, engine, Previous or V1.
+The controller starts the selected clip on the presenter’s activation and plays one clip at a time. Companion casts and Activate Skills play the recorded game audio. Warehouse, Reposition and event-to-battle clips play muted. End, Return and Escape restore the default loop. Scene exit and tab hiding reset playback. The recordings come from game main `1b7e5fba3ce2c93d5abf9c1325a70970c23d6b17`, which includes the cast cues from `0c2ac3b57f62a1400b66629ce8b46529589ecc1b` and follow-up SFX from `122459dc6e04b2c9a0eef42d79152af7cf495322`.
 
-Observability's four tabs and Slack evidence banner remain untouched. Historical Slack capture does not verify mobile delivery or automatic root-cause repair. No phone/emulator recording is needed.
+Page 17 restores the archived November 4 Alert and Recovery scene with the Slack and Datadog originals, the separate November 2 record, and Tokyo and Seoul health and payment endpoint checks. The screenshots document historical notifications and endpoint reachability. The Slack banner remains on Observability.
