@@ -2,11 +2,11 @@
   "current": {
     "entry": "./",
     "candidate_base_commit": "0bf1adb2427cc0109d92eafeff0f78020da63f1c",
-    "integration_commit": "e0dabbbf7a82272b3f45c846169dabe9da973fbf",
+    "integration_commit": "4e08bcf2ec538365cd059c4c9ed1bafe5b094c77",
     "build_marker": "20261111-v2-combat-sfx-alert",
     "description": "21-scene V2 with Combat cast sound and the restored V1 Datadog Alert scene.",
-    "publication_status": "CANDIDATE VERIFIED / PAGES VERIFICATION REQUIRED",
-    "verification_status": "FOCUSED CANDIDATE VERIFIED",
+    "publication_status": "PUBLISHED / BROWSER VERIFIED",
+    "verification_status": "LOCAL AND PUBLIC BROWSER VERIFIED",
     "local_verified_at": "2026-11-11T21:51:42.746985+08:00",
     "registry": [
       {
@@ -170,6 +170,12 @@
       "alert_archive_commit": "0daa72fda8cd7ab9f1a8a99aed9f4eb537137461",
       "alert_page": 17,
       "retained_silent_clips": "Previous and the shared asset library."
+    },
+    "publication_evidence": {
+      "source_commit": "4e08bcf2ec538365cd059c4c9ed1bafe5b094c77",
+      "pages_build": "https://github.com/proxima-j/stray-kitty-presentation/actions/runs/43033105409",
+      "checked_at": "2026-11-11T21:54:31.824050+08:00",
+      "notes": "Public Chromium tab output had audible signal at all three native cast cues and Activate Skills. Switching, Return, natural end, Escape, scene exit and re-entry passed. Warehouse and Reposition played muted. Public Alert evidence, payment check and Previous loaded."
     }
   },
   "previous": {
@@ -177,7 +183,7 @@
     "source_commit": "0bf1adb2427cc0109d92eafeff0f78020da63f1c",
     "build_marker": "20261110-v2-no-gameflow",
     "description": "Outgoing verified 20-scene V2 deck. Combat has silent skill clips and Observability retains its Slack banner.",
-    "publication_status": "VERIFIED OUTGOING CURRENT",
+    "publication_status": "PUBLISHED / BROWSER VERIFIED",
     "final_scene": {
       "id": "closing-qa",
       "page": 20,
@@ -186,7 +192,8 @@
     "publication_evidence": {
       "source_commit": "0bf1adb2427cc0109d92eafeff0f78020da63f1c",
       "pages_build": "https://github.com/proxima-j/stray-kitty-presentation/actions/runs/42998649321",
-      "url": "https://proxima-j.github.io/stray-kitty-presentation/previous/"
+      "url": "https://proxima-j.github.io/stray-kitty-presentation/previous/",
+      "snapshot_pages_build": "https://github.com/proxima-j/stray-kitty-presentation/actions/runs/43033105409"
     },
     "snapshot_note": "Independent runtime and styles from outgoing Current with shared media URLs rebased."
   },
