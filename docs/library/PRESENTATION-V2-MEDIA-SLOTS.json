@@ -57,12 +57,12 @@
       "status": "VERIFIED",
       "element_id": "v2DefaultBattleVfx",
       "binding": "data-v2-default-src",
-      "planned_path": "assets/v2/combat/general-battle-vfx-muted.mp4",
+      "planned_path": "assets/v2/combat/warehouse-team-burst-muted.mp4",
       "fallback": "assets/pages/09/battlefield-main.webp",
-      "requirement": "Verified capture: Continuous ×1 Market play, including Star Burst and Healing Purr banners, board effects and settle. Same camera throughout; ordinary wave progress resets at the loop.",
-      "path": "assets/v2/combat/general-battle-vfx-muted.mp4",
+      "requirement": "Verified capture: Continuous ×1 Warehouse finale take. The boss marks a full row for Shadow Sweep while Momo shields allies across the board and Tuanzi strikes multiple tiles. The sweep lands during the overlapping ally effects.",
+      "path": "assets/v2/combat/warehouse-team-burst-muted.mp4",
       "provenance": "COMBAT-PART2B-CAPTURE.json",
-      "verification": "Continuous ×1 Market play, including Star Burst and Healing Purr banners, board effects and settle. Same camera throughout; ordinary wave progress resets at the loop."
+      "verification": "Continuous ×1 Warehouse finale take. The boss marks a full row for Shadow Sweep while Momo shields allies across the board and Tuanzi strikes multiple tiles. The sweep lands during the overlapping ally effects."
     },
     {
       "id": "combat-skill-rongrong",
@@ -96,12 +96,12 @@
       "status": "VERIFIED",
       "selector": "[data-v2-skill=\"diandian\"]",
       "binding": "data-v2-skill-clip",
-      "planned_path": "assets/v2/combat/diandian-skill-muted.mp4",
+      "planned_path": "assets/v2/combat/diandian-tunnel-healing-muted.mp4",
       "fallback": "assets/pages/09/diandian-heal-vfx.webp",
-      "requirement": "Verified capture: 100/100 ready → select Healing Purr → named banner and healing effect → settle. Observed Rongrong HP 50→80 and Diandian 70→140. Configured heal: 80 HP, active companions only.",
-      "path": "assets/v2/combat/diandian-skill-muted.mp4",
+      "requirement": "Verified capture: Underground Tunnel, at ×1 speed. Diandian starts at 100/100 energy, casts Healing Purr, and restores active allies. Observed Diandian HP 114→140 and Banban HP 133→213 across the take.",
+      "path": "assets/v2/combat/diandian-tunnel-healing-muted.mp4",
       "provenance": "COMBAT-PART2B-CAPTURE.json",
-      "verification": "100/100 ready → select Healing Purr → named banner and healing effect → settle. Observed Rongrong HP 50→80 and Diandian 70→140. Configured heal: 80 HP, active companions only."
+      "verification": "Underground Tunnel, at ×1 speed. Diandian starts at 100/100 energy, casts Healing Purr, and restores active allies. Observed Diandian HP 114→140 and Banban HP 133→213 across the take."
     },
     {
       "id": "combat-event-choice",

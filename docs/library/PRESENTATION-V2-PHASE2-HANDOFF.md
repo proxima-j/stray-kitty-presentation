@@ -66,10 +66,10 @@ Focused verification: both galleries have equal bounding boxes at1600×900 (960.
 
 | Production binding | Verified file under `docs/` | Captured evidence |
 | --- | --- | --- |
-| `#v2DefaultBattleVfx[data-v2-default-src]` | `assets/v2/combat/general-battle-vfx-muted.mp4` | 8.4 s, uncropped Market battle with Star Burst and Healing Purr |
+| `#v2DefaultBattleVfx[data-v2-default-src]` | `assets/v2/combat/warehouse-team-burst-muted.mp4` | 9.07 s, uncropped Warehouse finale with overlapping boss sweep, team shield and claw attack |
 | Rongrong `data-v2-skill-clip` | `assets/v2/combat/rongrong-skill-muted.mp4` | 6.53 s, 100 energy, targeting, banner, cross damage and settle |
 | Banban `data-v2-skill-clip` | `assets/v2/combat/banban-skill-muted.mp4` | 10.57 s, 100 energy, banner, shield and expiry |
-| Diandian `data-v2-skill-clip` | `assets/v2/combat/diandian-skill-muted.mp4` | 5.97 s, 100 energy, banner, visible ally HP recovery and settle |
+| Diandian `data-v2-skill-clip` | `assets/v2/combat/diandian-tunnel-healing-muted.mp4` | 6 s in the Underground Tunnel, full cast and visible ally HP recovery. Rongrong uses Rainy Alley and Banban uses Midnight Market. |
 | `#v2BattleProof[data-v2-event-choice]` | `assets/v2/events/carry-choice.webp` | Genuine crate search selection |
 | `#v2BattleProof[data-v2-event-state]` | `assets/v2/events/carry-state.webp` | Actual 3 + 4 = 7 partial result, Shadow Pressure +1 |
 | `#v2BattleProof[data-v2-event-battle]` | `assets/v2/events/carry-battle.mp4` | 9 s, actual start and first wave of the same rescue attempt; boss starts at 3,120 HP |

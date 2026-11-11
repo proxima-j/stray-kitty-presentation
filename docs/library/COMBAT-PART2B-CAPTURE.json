@@ -47,16 +47,16 @@
       "web/src/modules/battle/chapter/config.ts"
     ]
   },
-  "local_masters": "Original game screenshots and timestamped browser frames retained outside Git. General take uses the original frame file times because a later optional input ended recording; both recorded casts and settle are intact.",
+  "local_masters": "Original game screenshots and timestamped browser frames retained outside Git. The Warehouse and Tunnel clips preserve actual frame times at normal gameplay speed.",
   "assets": [
     {
       "id": "combat-default",
-      "path": "assets/v2/combat/general-battle-vfx-muted.mp4",
+      "path": "assets/v2/combat/warehouse-team-burst-muted.mp4",
       "scene": "10 / combat",
       "binding": "#v2DefaultBattleVfx[data-v2-default-src]",
-      "source_take": "general-battle",
-      "checkpoint": "market.battle",
-      "battle_attempt": "6f1c0973b5385aae17e6ac4ab1a5078cc629a7e17dbc2759",
+      "source_take": "warehouse-team-burst",
+      "checkpoint": "finale.battle",
+      "battle_attempt": "b8b0416fb89995e56d66f51d7adf55e50bee583afd934b5d",
       "game_commit": "41ff1459beecc0acfc89d3d5b3fb22997c9ec874",
       "original_dimensions": [
         1600,
@@ -66,12 +66,12 @@
         1280,
         720
       ],
-      "duration_seconds": 8.4,
-      "original_sampled_frames": 100,
-      "bytes": 742929,
-      "description": "Continuous ×1 Market play, including Star Burst and Healing Purr banners, board effects and settle. Same camera throughout; ordinary wave progress resets at the loop.",
+      "duration_seconds": 9.066667,
+      "original_sampled_frames": 111,
+      "bytes": 796988,
+      "description": "Continuous ×1 Warehouse finale take. The boss marks a full row for Shadow Sweep while Momo shields allies across the board and Tuanzi strikes multiple tiles. The sweep lands during the overlapping ally effects.",
       "encoding": "Timestamped gameplay frames encoded H.264/yuv420p fast-start MP4 at 30 fps. Sampled approximately 11–15 fps; frame holds preserve real elapsed time, with no interpolation, retiming, crop or audio.",
-      "publication_clearance": "User authorized public posting of the project gameplay captures in Part 2B. The banner art appears only in the game footage."
+      "publication_clearance": "User approved publishing this exact gameplay preview."
     },
     {
       "id": "combat-skill-rongrong",
@@ -123,12 +123,12 @@
     },
     {
       "id": "combat-skill-diandian",
-      "path": "assets/v2/combat/diandian-skill-muted.mp4",
+      "path": "assets/v2/combat/diandian-tunnel-healing-muted.mp4",
       "scene": "10 / combat",
       "binding": "[data-v2-skill=\"diandian\"][data-v2-skill-clip]",
-      "source_take": "diandian-skill",
-      "checkpoint": "event:alley:crate_event",
-      "battle_attempt": "71e5f0f740f865a5cc38ab77e64310d768d387bda9fd4a4c",
+      "source_take": "tunnel-healing",
+      "checkpoint": "rescue.battle",
+      "battle_attempt": null,
       "game_commit": "41ff1459beecc0acfc89d3d5b3fb22997c9ec874",
       "original_dimensions": [
         1600,
@@ -138,12 +138,13 @@
         1280,
         720
       ],
-      "duration_seconds": 5.966667,
-      "original_sampled_frames": 79,
-      "bytes": 615677,
-      "description": "100/100 ready → select Healing Purr → named banner and healing effect → settle. Observed Rongrong HP 50→80 and Diandian 70→140. Configured heal: 80 HP, active companions only.",
+      "duration_seconds": 6.0,
+      "original_sampled_frames": 80,
+      "bytes": 365996,
+      "description": "Underground Tunnel, at ×1 speed. Diandian starts at 100/100 energy, casts Healing Purr, and restores active allies. Observed Diandian HP 114→140 and Banban HP 133→213 across the take.",
       "encoding": "Timestamped gameplay frames encoded H.264/yuv420p fast-start MP4 at 30 fps. Sampled approximately 11–15 fps; frame holds preserve real elapsed time, with no interpolation, retiming, crop or audio.",
-      "publication_clearance": "User authorized public posting of the project gameplay captures in Part 2B. The banner art appears only in the game footage."
+      "publication_clearance": "User approved publishing this exact gameplay preview.",
+      "attempt_note": "The Tunnel attempt ID was not retained when the capture save advanced to the Warehouse checkpoint."
     },
     {
       "id": "combat-event-choice",
