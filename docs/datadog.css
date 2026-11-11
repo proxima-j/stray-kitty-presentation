@@ -35,11 +35,21 @@
 .datadog-scope .dd-panel-heading strong{font:400 clamp(19px,1.55vw,27px)/1.15 var(--display)}
 .datadog-scope .dd-panel-heading .dd-pill{font-size:10px}
 .datadog-scope .dd-media-frame{flex:1 1 auto;min-height:0;position:relative;background:rgba(52,69,62,.08)}
-.datadog-scope .game-viewport{position:relative;aspect-ratio:16/9;max-height:100%;width:100%;margin:auto;overflow:hidden;border-radius:11px;background:#263d37}
+.datadog-scope .game-viewport{position:relative;container-type:size;aspect-ratio:16/9;max-height:100%;width:100%;margin:auto;overflow:hidden;border-radius:11px;background:#263d37}
 .datadog-scope .game-viewport video,.datadog-scope .game-viewport>img{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:contain;object-position:center}
-.datadog-scope .game-hitbox{position:absolute;left:35.1875%;top:71.333333%;width:29.625%;height:6.222222%;padding:0;border:0;border-radius:2px;background:transparent;cursor:pointer;z-index:4;font-size:0;color:transparent}
+/* Fit the 1600 × 900 capture to the viewport, including any letterboxing.
+   The screenshot's button is at (563, 642) and measures 474 × 56. */
+.datadog-scope .game-hitbox{
+ --capture-width:min(100cqw,calc(100cqh * 16 / 9));
+ --capture-height:calc(var(--capture-width) * 9 / 16);
+ position:absolute;z-index:4;
+ left:calc((100% - var(--capture-width)) / 2 + var(--capture-width) * 563 / 1600);
+ top:calc((100% - var(--capture-height)) / 2 + var(--capture-height) * 642 / 900);
+ width:calc(var(--capture-width) * 474 / 1600);
+ height:calc(var(--capture-height) * 56 / 900);
+ padding:0;border:0;border-radius:2px;background:transparent;cursor:pointer
+}
 .datadog-scope .game-hitbox:disabled{pointer-events:none;cursor:default}
-.datadog-scope .game-hitbox img{display:block;width:100%;height:100%}
 .datadog-scope .game-overlay{position:absolute;z-index:3;left:16px;top:14px;pointer-events:none;border:1px solid rgba(244,230,199,.45);background:rgba(24,40,33,.75);color:#f4e6c7;border-radius:999px;padding:7px 12px;font:400 11px/1.3 var(--body)}
 .datadog-scope .datadog-viewport{width:100%;aspect-ratio:1091/676;max-height:100%;position:relative;margin:auto;background:#f6f8f9;border-radius:11px;overflow:hidden;border:1px solid rgba(52,69,62,.13)}
 .datadog-scope .datadog-viewport img{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:contain}

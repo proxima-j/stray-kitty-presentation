@@ -59,22 +59,6 @@
       response.src = response.dataset.responseSrc;
       response.load();
     }
-    // The overlay is an exact crop of the green button in the 1600×900 still.
-    const sourceButton = { x: 563, y: 642, width: 474, height: 56 };
-    function alignGameButton() {
-      const { width, height } = idle.parentElement.getBoundingClientRect();
-      const scale = Math.min(width / 1600, height / 900);
-      const left = (width - 1600 * scale) / 2;
-      const top = (height - 900 * scale) / 2;
-      Object.assign(clickArea.style, {
-        left: `${left + sourceButton.x * scale}px`,
-        top: `${top + sourceButton.y * scale}px`,
-        width: `${sourceButton.width * scale}px`,
-        height: `${sourceButton.height * scale}px`
-      });
-    }
-    new ResizeObserver(alignGameButton).observe(idle.parentElement);
-    idle.addEventListener('load', alignGameButton);
     clickArea.addEventListener('keydown', event => {
       if (event.key === ' ' || event.key === 'Enter') event.stopPropagation();
     });
@@ -100,7 +84,6 @@
       idle.hidden = false;
       closeOverlay();
       setStep('idle');
-      alignGameButton();
     }
     function finish() {
       if (step !== 'response') return;
@@ -175,7 +158,6 @@
     });
     document.addEventListener('visibilitychange', syncResponse);
     setStep('idle');
-    alignGameButton();
   }
   const dashboard = document.getElementById('ddDashboardPreview');
   if (dashboard) {
