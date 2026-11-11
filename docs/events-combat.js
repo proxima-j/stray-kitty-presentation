@@ -33,7 +33,9 @@
     banban: { name: 'Banban', ability: 'Shield', still: 'assets/pages/09/guard-shield-vfx.webp' },
     diandian: { name: 'Diandian', ability: 'Healing Purr', still: 'assets/pages/09/diandian-heal-vfx.webp' }
   };
-  let sceneVisible = false, generation = 0, mode = 'default', bufferingTimer = 0;
+  // The deck may already be on Combat when this independently loaded script arrives.
+  let sceneVisible = document.getElementById('world').dataset.settledScene === combat.id;
+  let generation = 0, mode = 'default', bufferingTimer = 0;
   let selectedClip = null;
   const active = () => sceneVisible && !document.hidden;
   function loadImages() {
@@ -232,5 +234,6 @@
   document.addEventListener('visibilitychange', () => {
     if (active()) showDefault(); else { stopAll(); mode = 'default'; }
   });
-  stopAll();
+  if (sceneVisible) showDefault();
+  else stopAll();
 })();

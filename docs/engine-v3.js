@@ -195,6 +195,7 @@
     const viewKey = `${activeIndex}:${visible}`;
     if (viewKey !== lastViewKey) {
       lastViewKey = viewKey;
+      world.dataset.settledScene = visible ? scenes[activeIndex].id : '';
       window.dispatchEvent(new CustomEvent('presentation:viewchange', {
         detail: { id: scenes[activeIndex].id, page: scenes[activeIndex].dataset.page, visible }
       }));
