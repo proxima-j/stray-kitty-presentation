@@ -221,11 +221,7 @@
   get('advisorClose').addEventListener('click', () => { showDefault(); advisorTrigger.focus({ preventScroll: true }); });
   back.addEventListener('click', () => { showDefault(); frame.focus({ preventScroll: true }); });
   document.addEventListener('keydown', event => {
-    if (!active()) return;
-    if (mode === 'advisor' && ['ArrowRight', 'ArrowLeft'].includes(event.key)) {
-      event.preventDefault(); event.stopImmediatePropagation();
-      if (!event.repeat && (event.key === 'ArrowRight') === advisorAfter.hidden) toggleAnswer();
-    } else if (event.key === 'Escape' && mode !== 'default') {
+    if (active() && event.key === 'Escape' && mode !== 'default') {
       event.preventDefault(); event.stopImmediatePropagation(); showDefault(); frame.focus({ preventScroll: true });
     }
   }, true);
