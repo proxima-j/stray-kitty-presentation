@@ -41,7 +41,8 @@
   // Keyboard: one fixed-duration, reliably paced scene per press.
   let beatDurationMs = 4200;
   let keyboardMotion = null;
-  let pendingDirection = 0;
+  let lastAdvanceAt = -Infinity;
+  let lastAdvanceDirection = 0;
   let renderedProgress = 0;
   let previousDistance = 0;
   let lastFrameAt = 0;
@@ -207,7 +208,6 @@
     const dt = clamp(now - (lastFrameAt || now), 0, 48);
     lastFrameAt = now;
     const range = scrollRange();
-    let completed = false;
     if (keyboardMotion) {
       const elapsed = now - keyboardMotion.startedAt;
       const q = clamp(elapsed / keyboardMotion.duration);
@@ -219,7 +219,6 @@
         renderedProgress = keyboardMotion.to;
         keyboardMotion = null;
         document.documentElement.dataset.transitioning = 'false';
-        completed = true;
       }
     } else {
       const target = clamp(window.scrollY / range);
@@ -237,7 +236,6 @@
       }
     }
     updateView(renderedProgress, dt / 1000);
-    if (completed && pendingDirection) advance(pendingDirection);
     if (keyboardMotion || Math.abs(window.scrollY - renderedProgress * range) > scrollTolerancePx) {
       requestFrame();
     } else if (hero.classList.contains('walking')) {
@@ -257,7 +255,6 @@
     startMove(keyboardMotion.toIndex, true);
   }
   function startMove(destinationIndex, immediate = false) {
-    pendingDirection = 0;
     const toIndex = clamp(destinationIndex, 0, stops.length - 1);
     const from = renderedProgress;
     const to = stops[toIndex];
@@ -281,17 +278,19 @@
     requestFrame();
   }
   function advance(direction) {
-    if (keyboardMotion) {
-      // Buffer one deliberate tap; key repeats are filtered by the listener.
-      pendingDirection = direction;
-      return;
-    }
-    pendingDirection = 0;
+    if (keyboardMotion) return;
+    const now = performance.now();
+    // Immediate transitions, including reduced motion, still need a double-tap guard.
+    if (direction === lastAdvanceDirection && now - lastAdvanceAt < 400) return;
     const range = scrollRange();
     const index = direction > 0
       ? stops.findIndex(stop => (stop - renderedProgress) * range > scrollTolerancePx)
       : stops.findLastIndex(stop => (renderedProgress - stop) * range > scrollTolerancePx);
-    if (index !== -1) startMove(index);
+    if (index !== -1) {
+      lastAdvanceAt = now;
+      lastAdvanceDirection = direction;
+      startMove(index);
+    }
   }
   function onScroll() {
     if (keyboardMotion) {
@@ -299,7 +298,6 @@
       // away from the position written by the keyboard animation.
       if (Math.abs(window.scrollY - renderedProgress * scrollRange()) <= scrollTolerancePx) return;
       keyboardMotion = null;
-      pendingDirection = 0;
       document.documentElement.dataset.transitioning = 'false';
     }
     requestFrame();
@@ -339,8 +337,17 @@
   helpClose.addEventListener('click', () => showHelp(false));
   paceSelect.addEventListener('change', () => { beatDurationMs = Number(paceSelect.value); });
   document.addEventListener('keydown', event => {
+    if (event.key !== ' ' || !keyboardMotion || !helpPanel.hidden || event.ctrlKey || event.altKey || event.metaKey) return;
+    event.preventDefault();
+    event.stopPropagation();
+    if (!event.repeat) startMove(Math.round(cameraDistance(keyboardMotion.from)), true);
+  }, true);
+  document.addEventListener('keydown', event => {
     if (event.ctrlKey || event.altKey || event.metaKey || ['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement?.tagName)) return;
-    if (event.key === ' ' && document.activeElement?.closest('[data-local-space]')) return;
+    if (event.key === ' ' && helpPanel.hidden) {
+      if (!document.activeElement?.closest('button,[data-local-space]')) event.preventDefault();
+      return;
+    }
     if (event.key === 'Escape') {
       event.preventDefault();
       if (!helpPanel.hidden) showHelp(false);
@@ -351,7 +358,7 @@
       event.preventDefault(); showHelp(helpPanel.hidden); return;
     }
     if (!helpPanel.hidden) return;
-    if (event.key === 'ArrowRight' || event.key === ' ' || event.key === 'PageDown') {
+    if (event.key === 'ArrowRight' || event.key === 'PageDown') {
       event.preventDefault(); if (!event.repeat) advance(1);
     }
     if (event.key === 'ArrowLeft' || event.key === 'PageUp') {
