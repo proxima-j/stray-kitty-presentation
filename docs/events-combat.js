@@ -6,6 +6,7 @@
   const get = id => combat.querySelector('#' + id);
   const battlefield = combat.querySelector('.battlefield-image');
   const frame = get('v2BattlefieldFrame');
+  const shot = combat.querySelector('.combat-shot');
   const back = get('v2ReturnBattlefield');
   const defaultVideo = get('v2DefaultBattleVfx');
   const defaultStatus = get('v2DefaultVfxStatus');
@@ -37,12 +38,32 @@
   let sceneVisible = document.getElementById('world').dataset.settledScene === combat.id;
   let generation = 0, mode = 'default', bufferingTimer = 0;
   let selectedClip = null;
+  const skillFocus = {
+    rongrong: { scale: '1.7', x: '56%', y: '48%' },
+    banban: { scale: '1.7', x: '48%', y: '50%' },
+    diandian: { scale: '1.6', x: '50%', y: '53%' }
+  };
+  function setSkillZoom(key) {
+    const focus = skillFocus[key];
+    if (!focus) {
+      shot.removeAttribute('data-skill-zoom');
+      for (const prop of ['--v2-skill-scale', '--v2-skill-origin-x', '--v2-skill-origin-y']) {
+        shot.style.removeProperty(prop);
+      }
+      return;
+    }
+    shot.setAttribute('data-skill-zoom', key);
+    shot.style.setProperty('--v2-skill-scale', focus.scale);
+    shot.style.setProperty('--v2-skill-origin-x', focus.x);
+    shot.style.setProperty('--v2-skill-origin-y', focus.y);
+  }
   const active = () => sceneVisible && !document.hidden;
   function loadImages() {
     window.dispatchEvent(new CustomEvent('presentation:loadmedia', { detail: { id: 'combat' } }));
   }
   function stopAll() {
     generation++;
+    setSkillZoom(null);
     clearTimeout(bufferingTimer);
     for (const clip of [defaultVideo, video]) {
       clip.pause();
@@ -108,11 +129,12 @@
     defaultVideo.loop = true;
     play(defaultVideo, src, generation);
   }
-  function startClip(src, label, button = null, audible = false) {
+  function startClip(src, label, button = null, audible = false, zoomSkill = null) {
     if (!active() || !src) return;
     stopAll();
+    setSkillZoom(zoomSkill);
     mode = 'clip';
-    selectedClip = { src, label, button, audible };
+    selectedClip = { src, label, button, audible, zoomSkill };
     battlefield.hidden = true;
     back.hidden = false;
     status.hidden = false;
@@ -123,7 +145,7 @@
     play(video, src, generation, audible);
   }
   reposition.addEventListener('click', () => startClip(video.dataset.demoSrc, 'Reposition · separate take · 1×', reposition));
-  activate.addEventListener('click', () => startClip(activate.dataset.demoSrc, 'Banban · Shield', activate, true));
+  activate.addEventListener('click', () => startClip(activate.dataset.demoSrc, 'Banban · Shield', activate, true, 'banban'));
   video.addEventListener('ended', () => { if (mode === 'clip') showDefault(); });
   for (const clip of [video, defaultVideo]) {
     clip.addEventListener('error', () => playbackFailed(clip));
@@ -149,8 +171,8 @@
   retry.addEventListener('click', () => {
     if (mode === 'default') showDefault();
     else if (selectedClip) {
-      const { src, label, button, audible } = selectedClip;
-      startClip(src, label, button, audible);
+      const { src, label, button, audible, zoomSkill } = selectedClip;
+      startClip(src, label, button, audible, zoomSkill);
     }
   });
   function openProof(kicker, title, caption) {
@@ -169,7 +191,7 @@
     const card = cards.find(item => item.dataset.v2Skill === key);
     if (!skill || !active()) return;
     const src = card.dataset.v2SkillClip?.trim();
-    if (src) { startClip(src, skill.name + ' · ' + skill.ability, card, true); return; }
+    if (src) { startClip(src, skill.name + ' · ' + skill.ability, card, true, key); return; }
     openProof('EXISTING AUTHENTIC SKILL STILL', skill.name + ' · ' + skill.ability,
       'Historical still only. Updated skill video pending.');
     card.setAttribute('aria-pressed', 'true');
