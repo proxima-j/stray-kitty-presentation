@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="color-scheme" content="light">
-  <meta name="presentation-build" content="20261110-v2-no-gameflow">
-  <meta name="presentation-status" content="V2 — Home and Combat Captures Verified">
+  <meta name="presentation-build" content="20261111-v2-combat-sfx-alert">
+  <meta name="presentation-status" content="V2 — Combat SFX and Datadog Alert">
   <title>Stray Kitty — Presentation</title>
   <link rel="stylesheet" href="engine-v3.css">
   <link rel="stylesheet" href="library/tokens.css">
@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="pitch-poster.css?v=20261110-live-gameplay-loop">
   <link rel="stylesheet" href="level-design.css?v=20261109-level-design">
   <link rel="stylesheet" href="events-combat.css?v=20261109-integrated">
-  <link rel="preload" as="script" href="events-combat.js?v=20261111-warehouse-poster">
+  <link rel="preload" as="script" href="events-combat.js?v=20261111-sfx">
   <link rel="stylesheet" href="technical.css?v=20261109-full-pipeline">
   <link rel="stylesheet" href="teamwork.css?v=20261109-future-integrated1">
   <link rel="stylesheet" href="datadog.css?v=20261111-roll-dice">
@@ -26,7 +26,7 @@
 </head>
 <body>
 <div id="scrollSpace" class="scroll-space">
- <main id="stage" class="stage" aria-label="Stray Kitty presentation — Pages 01 through 20">
+ <main id="stage" class="stage" aria-label="Stray Kitty presentation — Pages 01 through 21">
   <div id="world" class="world">
    <svg id="roadDrawing" class="route-svg" aria-hidden="true"><defs><clipPath id="revealClip"><rect id="routeReveal" x="0" y="0" width="0" height="2000"/></clipPath></defs><path id="routeGhost" class="route-ghost" d=""/><path id="routeInk" class="route-ink" d="" clip-path="url(#revealClip)"/></svg>
    <section id="opening-film" class="scene scene-film" data-title="Opening Film" data-scene="0" data-page="01" aria-label="Page 01 — Full-screen film">
@@ -213,13 +213,14 @@
 </div></div></section>
    <section aria-label="Page 10 — Real-Time Tactical Tower Defense" class="scene" data-page="10" data-scene="9" data-title="Real-Time Tactical Tower Defense" id="combat"><div class="scene-camera"><div class="events-combat combat-review">
 <h2 data-at="0.04" data-build="text">Real-Time Tactical Tower Defense</h2>
+<p class="combat-storyline" data-at="0.085" data-build="text">Friends you meet along the journey become the companions you fight alongside.</p>
 <div class="combat-bridge" data-at="0.1" data-build="text">
 <span>FROM RANDOM EVENTS</span><span class="arrow-inline">→</span><button aria-controls="v2BattleProof" aria-pressed="false" class="v2-event-proof-trigger" data-local-space="" id="v2EventProofTrigger" type="button">BATTLE PRESSURE + SUPPORT <span aria-hidden="true">▶</span></button>
 </div>
 <div class="review-body">
 <div class="combat-board">
 <section aria-label="Battlefield and repositioning" class="combat-main" data-at="0.2" data-build="rise">
-<div class="tabframe" data-tab="BATTLEFIELD · REPOSITIONING IN ACTION" id="v2BattlefieldFrame" tabindex="-1">
+<div class="tabframe" data-tab="BATTLEFIELD · COMPANION ABILITIES" id="v2BattlefieldFrame" tabindex="-1">
 <button aria-label="Return to the main battlefield" class="v2-return-battlefield" data-local-space="" hidden="" id="v2ReturnBattlefield" type="button">↶ Return to Battlefield</button>
 <div class="combat-shot">
 <img alt="Opening frame of the Warehouse finale battle" class="battlefield-image" data-media-src="../assets/v2/combat/warehouse-team-burst-poster.webp"/>
@@ -240,23 +241,23 @@
 <button class="v2-combat-retry" data-local-space="" hidden="" id="v2CombatRetry" type="button">Retry clip</button></div>
 </div>
 <div aria-label="Combat mechanic labels" class="combat-steps">
-<button aria-controls="repositionVideo" aria-pressed="false" class="combat-step" data-local-space="" id="repositionTrigger" title="Play the real repositioning demonstration in the battlefield frame" type="button"><b>Reposition</b><small>Move cats during battle</small></button>
+<button aria-controls="repositionVideo" aria-pressed="false" class="combat-step" data-local-space="" id="repositionTrigger" title="Play the real repositioning demonstration in the battlefield frame" type="button"><b>Reposition</b><small>Move your team during battle</small></button>
 <div class="combat-step"><b>Build Energy</b><small>Abilities charge automatically</small></div>
-<button aria-controls="repositionVideo" aria-pressed="false" class="combat-step" data-demo-src="../assets/pages/09/skill-activation-closeup.mp4" data-local-space="" id="skillsTrigger" title="Play Banban's real Shield activation in the battlefield frame" type="button"><b>Activate Skills</b><small>Trigger each cat's ability</small></button>
+<button aria-controls="repositionVideo" aria-pressed="false" class="combat-step" data-demo-src="../assets/v2/combat/banban-skill-sfx.mp4" data-local-space="" id="skillsTrigger" title="Play Banban's real Shield activation in the battlefield frame" type="button"><b>Activate Skills</b><small>Choose when to use each ability</small></button>
 </div>
 </section>
 <section aria-label="Three companions and their authentic ability effects" class="combat-profiles" data-at="0.42" data-build="rise">
-<article aria-label="Play Rongrong’s recorded Star Burst, muted" aria-pressed="false" class="profile v2-selectable-profile" data-id="FRIEND 01" data-local-space="" data-v2-skill="rongrong" data-v2-skill-clip="../assets/v2/combat/rongrong-skill-muted.mp4" role="button" tabindex="0">
+<article aria-label="Play Rongrong’s recorded Star Burst with game sound" aria-pressed="false" class="profile v2-selectable-profile" data-id="FRIEND 01" data-local-space="" data-v2-skill="rongrong" data-v2-skill-clip="../assets/v2/combat/rongrong-skill-sfx.mp4" role="button" tabindex="0">
 <div class="profile-figure"><img alt="绒绒 / Rongrong original pixel-art figure" data-media-src="../assets/pages/09/caster-figure.webp" height="128" width="128"/></div>
-<div class="profile-details"><b>绒绒 / Rongrong</b><span class="ability">星绒绽放 — Star Burst</span><span class="profile-function">Cross-shaped area attack</span></div><div class="profile-vfx"><img alt="Rongrong's authentic purple star attack across cross-shaped impact cells" data-media-src="../assets/pages/09/caster-star-vfx.webp"/></div>
+<div class="profile-details"><b>绒绒 / Rongrong</b><span class="ability">星绒绽放 — Star Burst</span><span class="profile-function">Area attack</span></div><div class="profile-vfx"><img alt="Rongrong's authentic purple star attack across cross-shaped impact cells" data-media-src="../assets/pages/09/caster-star-vfx.webp"/></div>
 </article>
-<article aria-label="Play Banban’s recorded Shield, muted" aria-pressed="false" class="profile v2-selectable-profile" data-id="FRIEND 02" data-local-space="" data-v2-skill="banban" data-v2-skill-clip="../assets/v2/combat/banban-skill-muted.mp4" role="button" tabindex="0">
+<article aria-label="Play Banban’s recorded Shield with game sound" aria-pressed="false" class="profile v2-selectable-profile" data-id="FRIEND 02" data-local-space="" data-v2-skill="banban" data-v2-skill-clip="../assets/v2/combat/banban-skill-sfx.mp4" role="button" tabindex="0">
 <div class="profile-figure"><img alt="斑斑 / Banban original pixel-art figure" data-media-src="../assets/pages/09/guard-figure.webp" height="128" width="128"/></div>
-<div class="profile-details"><b>斑斑 / Banban</b><span class="ability">罐盖护盾 — Shield</span><span class="profile-function">Temporary self-shield</span></div><div class="profile-vfx"><img alt="Banban's genuine cyan shield release and original skill label" data-media-src="../assets/pages/09/guard-shield-vfx.webp"/></div>
+<div class="profile-details"><b>斑斑 / Banban</b><span class="ability">罐盖护盾 — Shield</span><span class="profile-function">Self-shield</span></div><div class="profile-vfx"><img alt="Banban's genuine cyan shield release and original skill label" data-media-src="../assets/pages/09/guard-shield-vfx.webp"/></div>
 </article>
-<article aria-label="Play Diandian’s Healing Purr in the Underground Tunnel, muted" aria-pressed="false" class="profile v2-selectable-profile" data-id="FRIEND 03" data-local-space="" data-v2-skill="diandian" data-v2-skill-clip="../assets/v2/combat/diandian-tunnel-healing-muted.mp4" role="button" tabindex="0">
+<article aria-label="Play Diandian’s Healing Purr in the Underground Tunnel with game sound" aria-pressed="false" class="profile v2-selectable-profile" data-id="FRIEND 03" data-local-space="" data-v2-skill="diandian" data-v2-skill-clip="../assets/v2/combat/diandian-skill-sfx.mp4" role="button" tabindex="0">
 <div class="profile-figure"><img alt="点点 / Diandian original pixel-art figure" data-media-src="../assets/pages/09/diandian-figure.webp" height="128" width="128"/></div>
-<div class="profile-details"><b>点点 / Diandian</b><span class="ability">安心呼噜 — Healing Purr</span><span class="profile-function">Heals active companions</span></div><div class="profile-vfx"><img alt="Diandian's genuine green Healing Purr effect on active companions" data-media-src="../assets/pages/09/diandian-heal-vfx.webp"/></div>
+<div class="profile-details"><b>点点 / Diandian</b><span class="ability">安心呼噜 — Healing Purr</span><span class="profile-function">Team healing</span></div><div class="profile-vfx"><img alt="Diandian's genuine green Healing Purr effect on active companions" data-media-src="../assets/pages/09/diandian-heal-vfx.webp"/></div>
 </article>
 <button aria-controls="advisorLayer" aria-expanded="false" class="advisor-trigger" data-local-space="" id="advisorTrigger" type="button">+ And one more friend…</button>
 </section>
@@ -559,8 +560,66 @@
  <div class="dd-footer"><span><span id="compositionHint">Operational Overview · service metrics, monitors and SLOs</span></span><span>Authentic section montage · Click any capture to inspect · Widget time overrides remain in the source.</span></div>
 
 </div></div></section>
-   <section id="cross-team-collaboration" class="scene teamwork-scope" data-scene="16" data-page="17" data-title="Cross-Team Collaboration" aria-label="Page 17 — Cross-Team Collaboration"><div class="scene-camera"><div class="review-page tw-review tw-walk">
- <div class="label"><span class="num">20</span>TEAMWORK / COLLABORATION</div>
+   <section id="detect-alert-recover" class="scene datadog-scope" data-scene="16" data-page="17" data-title="Detect, Alert, Recover" aria-label="Page 17 — Detect, Alert, Recover"><div class="scene-camera"><div class="dd-page" id="ddSyntheticPreview" aria-label="Datadog page 3 monitoring and alert review">
+ <div class="section-label"><span class="number-pill">17</span>TECHNICAL WALKTHROUGH / DATADOG</div>
+ <header data-build="text" data-at=".04" class="page-intro"><h1>Detect. Alert. Recover.</h1><p>A failed public check, a Slack alert—and a verified recovery.</p></header>
+
+ <div class="dd-alert-layout dd-hero dd-monitor-layout" data-build="rise" data-at=".20">
+  <section tabindex="0" class="dd-frame dd-timeline dd-alert-evidence" aria-label="Matching historical Datadog runs and Slack notifications">
+   <div class="dd-label">01 / REAL ALERT &amp; RECOVERY</div>
+   <div class="dd-evidence-header">
+     <h2>From failed check to recovery</h2>
+     <span class="dd-pill">NOV 4 · UTC+08</span>
+   </div>
+   <div class="dd-alert-proof">
+     <div class="dd-alert-steps" aria-label="Choose the alert or recovery evidence">
+      <button class="dd-alert-stage" type="button" data-alert-stage="alert" aria-pressed="true">
+       <span class="dd-proof-status"><span class="dd-proof-dot is-alert"></span><strong>22:36 · ALERT</strong></span>
+       <p>The public health check failed. Datadog notified Slack.</p>
+      </button>
+      <button class="dd-alert-stage" type="button" data-alert-stage="recovery" aria-pressed="false">
+       <span class="dd-proof-status"><span class="dd-proof-dot is-recovered"></span><strong>22:41 · RECOVERY</strong></span>
+       <p>The check passed again, and Slack received recovery.</p>
+      </button>
+     </div>
+     <div class="dd-evidence-visual">
+      <div class="dd-evidence-sources" role="tablist" aria-label="Choose the original evidence source">
+       <button class="dd-select" type="button" role="tab" data-alert-source="slack" aria-selected="true">Slack</button>
+       <button class="dd-select" type="button" role="tab" data-alert-source="datadog" aria-selected="false">Datadog</button>
+      </div>
+      <button id="ddEvidenceZoom" class="dd-evidence-zoom" type="button" aria-label="Enlarge Slack alert screenshot" aria-haspopup="dialog" aria-controls="ddAlertImageOverlay"><img id="ddEvidenceImage" data-media-src="../assets/datadog/page-03-alerts/slack-health-alert.png" alt="Original Slack alert for the Stray Kitty health check, November 4 at 22:36 UTC+08"></button>
+      <div id="ddEvidenceCaption" class="dd-evidence-caption">Original Slack message · click to enlarge</div>
+     </div>
+   </div>
+   <div class="dd-archived-source">
+     <div class="dd-archive-actions"><button class="dd-button" id="ddOpenArchive" type="button" aria-haspopup="dialog" aria-controls="ddArchiveOverlay">Separate Nov 2 test record ↗</button><a class="dd-link" target="_blank" rel="noopener" href="../assets/datadog/page-03-alerts/health-alert-cycle-provenance.json">Screenshot sources ↗</a></div>
+   </div>
+   <div class="dd-mobile-slot"><img data-media-src="../library/icons/phone-notification.svg" alt="" aria-hidden="true"><p>Slack alerts can reach teammates on their phones when mobile notifications are enabled.</p></div>
+  </section>
+  <section class="dd-frame dd-synth dd-monitor-synthetics" aria-label="External synthetic checks in Tokyo and Seoul">
+   <div class="dd-label">02 / EXTERNAL SYNTHETICS</div>
+   <div class="dd-synth-top">
+    <h2 id="ddSyntheticHeading">Can players reach the public game?</h2>
+    <div class="dd-tabrow" role="tablist" aria-label="Choose a public endpoint check">
+     <button class="dd-select" type="button" role="tab" data-check-tab="healthz" aria-controls="ddHealthz" aria-selected="true">Public health check</button>
+     <button class="dd-select" type="button" role="tab" data-check-tab="payment" aria-controls="ddPayment" aria-selected="false">Payment configuration</button>
+    </div>
+   </div>
+   <div id="ddHealthz" class="dd-synth-photo" data-check-panel="healthz" role="tabpanel">
+    <img data-media-src="../assets/datadog/page-03-alerts/synthetics-healthz.png" alt="Authentic Datadog HTTP health-check runs from Tokyo and Seoul, both passed on November 9, 2026"/>
+   </div>
+   <div id="ddPayment" class="dd-synth-photo" data-check-panel="payment" role="tabpanel" hidden>
+    <img data-src="../assets/datadog/page-03-alerts/synthetics-payment-config.png" alt="Authentic Datadog payment-configuration HTTP checks from Tokyo and Seoul, both passed on November 9, 2026"/>
+   </div>
+   <div class="dd-synth-label">Tokyo + Seoul · scheduled every five minutes · observed Nov 9, 2026</div>
+   <div class="dd-synth-label">HTTP 200 establishes endpoint reachability, not a full game or payment workflow.</div>
+  </section>
+ </div>
+ <div class="dd-footer"><span>Historical notifications: Nov 4, 2026 · captured Nov 9</span><span>Public endpoint images: genuine Datadog results</span></div>
+
+</div></div></section>
+   <section id="cross-team-collaboration" class="scene teamwork-scope" data-scene="17" data-page="18" data-title="Cross-Team Collaboration" aria-label="Page 18 — Cross-Team Collaboration"><div class="scene-camera"><div class="review-page tw-review tw-walk">
+ <div class="label"><span class="num">18</span>TEAMWORK / COLLABORATION</div>
  <h1 data-build="text" data-at=".04">Cross-Team Collaboration</h1>
  <p class="subtitle">A GitLab ticket travels through two connected workflows: task coordination and code delivery.</p>
  <div class="review-body tw-walk-body" data-build="rise" data-at=".16">
@@ -612,8 +671,8 @@
  </div>
 
 </div></div></section>
-   <section id="design-test-rethink" class="scene teamwork-scope" data-scene="17" data-page="18" data-title="Design. Test. Rethink." aria-label="Page 18 — Design. Test. Rethink."><div class="scene-camera"><div class="review-page tw-review tw-v2">
-<div class="label"><span class="num">21</span>TEAMWORK / ITERATION</div>
+   <section id="design-test-rethink" class="scene teamwork-scope" data-scene="18" data-page="19" data-title="Design. Test. Rethink." aria-label="Page 19 — Design. Test. Rethink."><div class="scene-camera"><div class="review-page tw-review tw-v2">
+<div class="label"><span class="num">19</span>TEAMWORK / ITERATION</div>
 <h1 data-build="text" data-at=".04">Design. Test. Rethink.</h1>
 <p class="subtitle">Ideas changed as actual gameplay, QA and cross-team discussion challenged our assumptions.</p>
 <div class="review-body" data-build="rise" data-at=".16">
@@ -660,8 +719,8 @@
  </div>
 </div>
 </div></div></section>
-   <section id="connected-world" class="scene teamwork-scope" data-scene="18" data-page="19" data-title="A Dynamic, Living World" aria-label="Page 19 — A Dynamic, Living World"><div class="scene-camera"><div class="review-page tw-review tw-future-vision">
- <div class="label"><span class="num">22</span>FUTURE DIRECTION · CLICK A SYSTEM</div>
+   <section id="connected-world" class="scene teamwork-scope" data-scene="19" data-page="20" data-title="A Dynamic, Living World" aria-label="Page 20 — A Dynamic, Living World"><div class="scene-camera"><div class="review-page tw-review tw-future-vision">
+ <div class="label"><span class="num">20</span>FUTURE DIRECTION · CLICK A SYSTEM</div>
  <h1 data-build="text" data-at=".04">A Dynamic, Living World</h1>
  <div class="review-body" data-build="rise" data-at=".16">
   <section class="tw-world" aria-label="Future interconnected Stray Kitty game architecture">
@@ -708,7 +767,7 @@
  </div>
 
 </div></div></section>
-   <section id="closing-qa" class="scene scene-qa" data-scene="19" data-page="20" data-title="Q &amp; A" aria-label="Page 20 — Q and A"><div class="scene-camera">
+   <section id="closing-qa" class="scene scene-qa" data-scene="20" data-page="21" data-title="Q &amp; A" aria-label="Page 21 — Q and A"><div class="scene-camera">
     <div class="qa-composition">
       <h1>Q &amp; A</h1>
       <img class="qa-poster" data-media-src="../assets/closing/stray-kitty-poster.webp" width="3344" height="1882" alt="The complete horizontal Stray Kitty poster supplied for the presentation">
@@ -755,9 +814,9 @@
 </div>
 </div>
 <script src="scene-content.js?v=20261109-on-demand-events"></script>
-<script async src="events-combat.js?v=20261111-warehouse-poster"></script>
+<script async src="events-combat.js?v=20261111-sfx"></script>
 <script src="uiux.js?v=20261109-adaptive-fit"></script>
-<script src="datadog.js?v=20261111-roll-dice"></script>
+<script src="datadog.js?v=20261111-alert"></script>
 <script src="teamwork.js?v=20261109-future-integrated1"></script>
 <script src="future-world.js?v=20261109-future-integrated1"></script>
 <script src="engine-v3.js?v=20261111-independent"></script>

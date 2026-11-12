@@ -2,8 +2,8 @@
    The actual v3 scene, cat, route, navigation, media loader and remaining pages stay unchanged. */
 #elevator-pitch .pitch-layout{
   top:6.7%;bottom:20%;left:7.4%;right:7.4%;
-  display:grid;grid-template-columns:minmax(0,1.19fr) minmax(0,.95fr);
-  gap:4.1vw;align-items:stretch;
+  display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1.34fr);
+  gap:1.7vw;align-items:stretch;
 }
 #elevator-pitch .pitch-text{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;min-width:0}
 #elevator-pitch .pitch-text .section-label{
@@ -22,10 +22,6 @@
 #elevator-pitch .pitch-text p{
   font:400 clamp(13px,1.2vw,20px)/1.45 var(--body);
   letter-spacing:-.015em;margin:0;max-width:47.5em;
-}
-#elevator-pitch .pitch-text .story{
-  font:400 clamp(12px,1.12vw,18.4px)/1.48 var(--body);
-  color:var(--muted);margin-top:clamp(11px,1.4vw,23px);
 }
 #elevator-pitch .pitch-text .closing{
   font:400 clamp(17px,1.57vw,26px)/1.32 var(--display);
@@ -46,7 +42,7 @@
   display:block;width:100%;height:100%;object-fit:contain;
 }
 #elevator-pitch .pitch-support-art{
-  width:100%;height:clamp(105px,13vw,208px);flex:none;
+  width:100%;height:clamp(84px,8.875vw,142px);flex:none;
   display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
   gap:clamp(12px,1.3vw,21px);align-items:stretch;
 }
@@ -68,20 +64,17 @@
 /* Preserve the approved smaller desktop layout without affecting other scenes. */
 @media(max-width:1080px){
   #elevator-pitch .pitch-layout{
-    left:6%;right:6%;gap:3vw;grid-template-columns:minmax(0,1.16fr) minmax(0,1fr);
+    left:6%;right:6%;
   }
   #elevator-pitch .pitch-text h1{font-size:5.2vw}
   #elevator-pitch .pitch-text p{font-size:1.15vw}
-  #elevator-pitch .pitch-text .story{font-size:1.08vw}
   #elevator-pitch .pitch-text .closing{font-size:1.53vw}
-  #elevator-pitch .pitch-support-art{height:12.5vw}
 }
 @media(max-height:780px){
   #elevator-pitch .pitch-layout{top:6.7%}
   #elevator-pitch .pitch-text h1{
     margin:clamp(14px,1.85vw,30px) 0 clamp(10px,1.35vw,21px);
   }
-  #elevator-pitch .pitch-text .story{margin-top:clamp(11px,1.4vw,23px)}
   #elevator-pitch .pitch-text .closing{margin-top:clamp(14px,1.72vw,27px)}
 }
 /* A quiet Page-02 presenter cue: live Chapter 5 follows the elevator pitch.

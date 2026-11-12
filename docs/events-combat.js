@@ -39,9 +39,9 @@
   let generation = 0, mode = 'default', bufferingTimer = 0;
   let selectedClip = null;
   const skillFocus = {
-    rongrong: { scale: '1.7', x: '56%', y: '48%' },
-    banban: { scale: '1.7', x: '48%', y: '50%' },
-    diandian: { scale: '1.6', x: '50%', y: '53%' }
+    rongrong: { scale: '2.1', x: '63%', y: '84%' },
+    banban: { scale: '2', x: '55%', y: '49%' },
+    diandian: { scale: '1.95', x: '34%', y: '63%' }
   };
   function setSkillZoom(key) {
     const focus = skillFocus[key];
@@ -146,7 +146,19 @@
   }
   reposition.addEventListener('click', () => startClip(video.dataset.demoSrc, 'Reposition · separate take · 1×', reposition));
   activate.addEventListener('click', () => startClip(activate.dataset.demoSrc, 'Banban · Shield', activate, true, 'banban'));
-  video.addEventListener('ended', () => { if (mode === 'clip') showDefault(); });
+  video.addEventListener('ended', () => {
+    if (mode !== 'clip' || !active() || video.hidden) return;
+    if (!selectedClip?.zoomSkill) {
+      showDefault();
+      return;
+    }
+    // The presenter hears the first pass. Native looping handles muted repeats.
+    selectedClip.audible = false;
+    video.setAttribute('aria-label', selectedClip.label + ' · recorded footage, muted loop');
+    video.loop = true;
+    video.currentTime = 0;
+    play(video, selectedClip.src, generation);
+  });
   for (const clip of [video, defaultVideo]) {
     clip.addEventListener('error', () => playbackFailed(clip));
     clip.addEventListener('waiting', () => {

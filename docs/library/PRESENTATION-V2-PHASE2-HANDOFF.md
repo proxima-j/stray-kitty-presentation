@@ -1,42 +1,38 @@
 # V2 Part 2 handoff
 
-Current is **21-scene V2 — Combat SFX and Datadog Alert**, marker `20261111-v2-combat-sfx-alert`. The successful Pages run and public `deployment.json` identify the deployed commit.
+Current is **18-scene V2 — Final Presentation**, marker `20261112-v2-final-refinement`. The Pages run and public `deployment.json` identify the deployed commit.
 
-## Retained versions and scope
+## Versions and live demos
 
-- Previous is the outgoing verified 20-scene deck from `0bf1adb2427cc0109d92eafeff0f78020da63f1c`, sharing media with Current.
-- Permanent V1 branch `archive/presentation-v1-2026-11-10` stays at `0daa72fda8cd7ab9f1a8a99aed9f4eb537137461`.
-- The archived Alert scene follows Observability in Current.
-- Original 4200ms reversible engine, single Miaomiao/continuous route, full opening film and its user-started sound are unchanged.
-- Historical Part 1 integration: `e0dabbbf7a82272b3f45c846169dabe9da973fbf`; targeted Combat playback correction: `0f764237fe13540f547d3b1f9ae66202c0a4c422`; page-removal base: `2f5b7321c3bfb11e205b256a64fa21596a0715e6`.
+- Previous preserves the outgoing 21-slide deck from `91bdebe31e6b60614a1ad51b8cf5a0ccf5f6dffd`, including Payment, From Gameplay to Telemetry and Detect. Alert. Recover.
+- Permanent V1 is on `archive/presentation-v1-2026-11-10` at `0daa72fda8cd7ab9f1a8a99aed9f4eb537137461`.
+- After Page 02, switch to the pre-opened Chapter 5 game tab for gameplay and the sandbox payment flow. Return to Page 03.
+- After Page 14, switch to the pre-opened Datadog tab. Return to Page 15.
 
 ## V2 registry
 
 | Page | Stable scene ID | Subject |
 | --- | --- | --- |
 | 01 | `opening-film` | Opening Film |
-| 02 | `elevator-pitch` | Elevator Pitch |
+| 02 | `elevator-pitch` | Elevator Pitch · Chapter 5 demo cue |
 | 03 | `visual-novel` | Visual Novel |
 | 04 | `home-hub` | Home Hub |
-| 05 | `payment` | Xsolla Sandbox Payment |
-| 06 | `four-maps` | Four Maps |
-| 07 | `vertical-design` | Three Connected Levels |
-| 08 | `greybox` | Greybox |
-| 09 | `random-events` | Random Events |
-| 10 | `combat` | Combat |
-| 11 | `dice-animations` | Dice Roll Animations |
-| 12 | `adaptive-interface` | Responsive & Translucent UI |
-| 13 | `technical-architecture` | Technical Architecture |
-| 14 | `kubernetes-deployment` | Kubernetes Deployment |
-| 15 | `gameplay-telemetry` | From Gameplay to Telemetry |
-| 16 | `observability` | Observability Across the Game |
-| 17 | `detect-alert-recover` | Detect. Alert. Recover. |
-| 18 | `cross-team-collaboration` | Cross-Team Collaboration |
-| 19 | `design-test-rethink` | Design. Test. Rethink. |
-| 20 | `connected-world` | A Dynamic, Living World |
-| 21 | `closing-qa` | Q&A |
+| 05 | `four-maps` | Four Maps |
+| 06 | `vertical-design` | Three Connected Levels |
+| 07 | `greybox` | Greybox |
+| 08 | `random-events` | Random Events |
+| 09 | `combat` | Combat · persistent ability close-ups |
+| 10 | `dice-animations` | Dice Roll Animations |
+| 11 | `adaptive-interface` | Responsive & Translucent UI |
+| 12 | `technical-architecture` | Technical Architecture |
+| 13 | `kubernetes-deployment` | Kubernetes Deployment |
+| 14 | `observability` | Observability Across the Game · live Datadog cue |
+| 15 | `cross-team-collaboration` | Cross-Team Collaboration |
+| 16 | `design-test-rethink` | Design. Test. Rethink. |
+| 17 | `connected-world` | A Dynamic, Living World |
+| 18 | `closing-qa` | Q & A |
 
-Use `?page=<stable-scene-id>` for durable review links. Numeric pages are 01–21. Return from the separate Chapter 5 demo to Visual Novel, Page 03. Chapter 5 is a separately pre-opened live-game tab after Pitch. The Random Events example awards Fish +1 and Material +1.
+Use `?page=<stable-scene-id>` for durable review links. Numeric pages are 01–18.
 
 ## Part 2A — Home Hub verified
 
@@ -78,6 +74,6 @@ Focused verification: both galleries have equal bounding boxes at1600×900 (960.
 
 The dice-based node encounter `crate_event`, choice `search`, stores `shadowPressure: 1` after an unforced roll of 7. The next `alley_rescue` attempt in the same save uses high pressure (1.2× HP), producing the recorded 3,120 starting boss HP versus the 2,600 normal configuration. Material +2 is a separate inventory reward; the feeder-bowl example and its Random Events page remain unchanged.
 
-The controller starts the selected clip on the presenter’s activation and plays one clip at a time. Companion casts and Activate Skills play the recorded game audio. Warehouse, Reposition and event-to-battle clips play muted. End, Return and Escape restore the default loop. Scene exit and tab hiding reset playback. The recordings come from game main `1b7e5fba3ce2c93d5abf9c1325a70970c23d6b17`, which includes the cast cues from `0c2ac3b57f62a1400b66629ce8b46529589ecc1b` and follow-up SFX from `122459dc6e04b2c9a0eef42d79152af7cf495322`.
+The controller starts the selected clip on the presenter’s activation and plays one clip at a time. Companion casts and Activate Skills play game audio once and repeat muted while the selected close-up stays open. Warehouse, Reposition and event-to-battle clips play muted. Return and Escape restore the default loop. Unzoomed clips also return when they end. Scene exit and tab hiding reset playback. The recordings come from game main `1b7e5fba3ce2c93d5abf9c1325a70970c23d6b17`, which includes the cast cues from `0c2ac3b57f62a1400b66629ce8b46529589ecc1b` and follow-up SFX from `122459dc6e04b2c9a0eef42d79152af7cf495322`.
 
-Page 17 restores the archived November 4 Alert and Recovery scene with the Slack and Datadog originals, the separate November 2 record, and Tokyo and Seoul health and payment endpoint checks. The screenshots document historical notifications and endpoint reachability. The Slack banner remains on Observability.
+The archived Alert scene and its evidence remain in Previous and permanent V1. Current Page 14 presents the four existing dashboard tabs and cues the live Datadog demo.

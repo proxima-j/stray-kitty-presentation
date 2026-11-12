@@ -1270,22 +1270,22 @@
     {
       "id": "datadog.collection.synthetics-healthz",
       "source": "../assets/datadog/page-03-alerts/synthetics-healthz.png",
-      "use": "Current Page 17 / Detect. Alert. Recover.",
+      "use": "Previous Page 17 / Detect. Alert. Recover.",
       "status": "INTEGRATED / CLEARED FOR PUBLICATION",
       "origin": "https://us5.datadoghq.com/synthetics/details/nu2-fet-6dn?from_user=false&refresh_mode=sliding&selectedEventId=summary&tab=test-runs&from_ts=1794203489120&to_ts=1794207089120&live=true",
       "permission": "User authorized curated project gameplay and Datadog evidence publication; account/player/session identifiers removed.",
       "provenance": "../assets/datadog/capture-manifest.json",
-      "integrated_in": "../index.html?page=detect-alert-recover"
+      "integrated_in": "../previous/index.html?page=detect-alert-recover"
     },
     {
       "id": "datadog.collection.synthetics-payment-config",
       "source": "../assets/datadog/page-03-alerts/synthetics-payment-config.png",
-      "use": "Current Page 17 / Detect. Alert. Recover.",
+      "use": "Previous Page 17 / Detect. Alert. Recover.",
       "status": "INTEGRATED / CLEARED FOR PUBLICATION",
       "origin": "https://us5.datadoghq.com/synthetics/details/m5a-scg-gq6?from_user=false&refresh_mode=sliding&selectedEventId=summary&tab=test-runs&from_ts=1794203522015&to_ts=1794207122015&live=true",
       "permission": "User authorized curated project gameplay and Datadog evidence publication; account/player/session identifiers removed.",
       "provenance": "../assets/datadog/capture-manifest.json",
-      "integrated_in": "../index.html?page=detect-alert-recover"
+      "integrated_in": "../previous/index.html?page=detect-alert-recover"
     },
     {
       "id": "datadog.collection.event-source-recording",
@@ -1809,7 +1809,7 @@
     {
       "id": "datadog.collection.slack-health-alert",
       "source": "../assets/datadog/page-03-alerts/slack-health-alert.png",
-      "use": "Current Page 17 / Detect. Alert. Recover.",
+      "use": "Previous Page 17 / Detect. Alert. Recover.",
       "status": "INTEGRATED / CLEARED FOR PUBLICATION",
       "metadata": {
         "source_url": "https://bjxsollaschool.slack.com/archives/C0C0S9KAWUE/p1793803004626329",
@@ -1822,12 +1822,12 @@
         "publication": "User explicitly requested the project Datadog and Slack screenshots beside the explanation in the existing public Page 3 preview.",
         "provenance": "page-03-alerts/health-alert-cycle-provenance.json"
       },
-      "integrated_in": "../index.html?page=detect-alert-recover"
+      "integrated_in": "../previous/index.html?page=detect-alert-recover"
     },
     {
       "id": "datadog.collection.slack-health-recovery",
       "source": "../assets/datadog/page-03-alerts/slack-health-recovery.png",
-      "use": "Current Page 17 / Detect. Alert. Recover.",
+      "use": "Previous Page 17 / Detect. Alert. Recover.",
       "status": "INTEGRATED / CLEARED FOR PUBLICATION",
       "metadata": {
         "source_url": "https://bjxsollaschool.slack.com/archives/C0C0S9KAWUE/p1793803302935099",
@@ -1840,12 +1840,12 @@
         "publication": "User explicitly requested the project Datadog and Slack screenshots beside the explanation in the existing public Page 3 preview.",
         "provenance": "page-03-alerts/health-alert-cycle-provenance.json"
       },
-      "integrated_in": "../index.html?page=detect-alert-recover"
+      "integrated_in": "../previous/index.html?page=detect-alert-recover"
     },
     {
       "id": "datadog.collection.datadog-health-failed",
       "source": "../assets/datadog/page-03-alerts/datadog-health-failed.png",
-      "use": "Current Page 17 / Detect. Alert. Recover.",
+      "use": "Previous Page 17 / Detect. Alert. Recover.",
       "status": "INTEGRATED / CLEARED FOR PUBLICATION",
       "metadata": {
         "source_url": "https://us5.datadoghq.com/synthetics/details/nu2-fet-6dn/result/183503211253861456",
@@ -1858,12 +1858,12 @@
         "publication": "User explicitly requested the project Datadog and Slack screenshots beside the explanation in the existing public Page 3 preview.",
         "provenance": "page-03-alerts/health-alert-cycle-provenance.json"
       },
-      "integrated_in": "../index.html?page=detect-alert-recover"
+      "integrated_in": "../previous/index.html?page=detect-alert-recover"
     },
     {
       "id": "datadog.collection.datadog-health-passed",
       "source": "../assets/datadog/page-03-alerts/datadog-health-passed.png",
-      "use": "Current Page 17 / Detect. Alert. Recover.",
+      "use": "Previous Page 17 / Detect. Alert. Recover.",
       "status": "INTEGRATED / CLEARED FOR PUBLICATION",
       "metadata": {
         "source_url": "https://us5.datadoghq.com/synthetics/details/nu2-fet-6dn/result/1917610770815308180",
@@ -1876,7 +1876,7 @@
         "publication": "User explicitly requested the project Datadog and Slack screenshots beside the explanation in the existing public Page 3 preview.",
         "provenance": "page-03-alerts/health-alert-cycle-provenance.json"
       },
-      "integrated_in": "../index.html?page=detect-alert-recover"
+      "integrated_in": "../previous/index.html?page=detect-alert-recover"
     },
     {
       "id": "datadog.web.event-idle-still-web",
@@ -2604,7 +2604,7 @@
       "id": "combat.v2.default",
       "source": "../assets/v2/combat/warehouse-team-burst-muted.mp4",
       "origin": "Continuous ×1 Warehouse finale take. The boss marks a full row for Shadow Sweep while Momo shields allies across the board and Tuanzi strikes multiple tiles. The sweep lands during the overlapping ally effects.",
-      "use": "Current Page 10 / Combat",
+      "use": "Current Page 09 / Combat",
       "status": "APPROVED / INTEGRATED",
       "review_status": "VERIFIED",
       "integrated_in": "../index.html?page=combat",
@@ -2634,7 +2634,7 @@
       "id": "combat.v2.default-poster",
       "source": "../assets/v2/combat/warehouse-team-burst-poster.webp",
       "origin": "First frame of the approved Warehouse finale clip warehouse-team-burst-muted.mp4, scaled to 960 × 540 without cropping.",
-      "use": "Current Page 10 / Combat",
+      "use": "Current Page 09 / Combat",
       "status": "APPROVED / INTEGRATED",
       "integrated_in": "../index.html?page=combat",
       "binding": ".battlefield-image and #v2DefaultBattleVfx[data-media-poster]",
@@ -2736,7 +2736,7 @@
       "id": "combat.v2.event-choice",
       "source": "../assets/v2/events/carry-choice.webp",
       "origin": "Actual choice card with search selected.",
-      "use": "Current Page 10 / Combat",
+      "use": "Current Page 09 / Combat",
       "status": "APPROVED / INTEGRATED",
       "review_status": "VERIFIED",
       "integrated_in": "../index.html?page=combat",
@@ -2770,7 +2770,7 @@
       "id": "combat.v2.event-state",
       "source": "../assets/v2/events/carry-state.webp",
       "origin": "Actual 3+4=7 partial result; Material +2 and Shadow Pressure +1 remain distinct.",
-      "use": "Current Page 10 / Combat",
+      "use": "Current Page 09 / Combat",
       "status": "APPROVED / INTEGRATED",
       "review_status": "VERIFIED",
       "integrated_in": "../index.html?page=combat",
@@ -2804,7 +2804,7 @@
       "id": "combat.v2.event-battle",
       "source": "../assets/v2/events/carry-battle.mp4",
       "origin": "Same rescue attempt starts with 3,120 boss HP versus 2,600 configured at normal pressure; Start Defense input and first wave visible.",
-      "use": "Current Page 10 / Combat",
+      "use": "Current Page 09 / Combat",
       "status": "APPROVED / INTEGRATED",
       "review_status": "VERIFIED",
       "integrated_in": "../index.html?page=combat",
@@ -2834,7 +2834,7 @@
       "id": "combat.v2.skill-rongrong-sfx",
       "source": "../assets/v2/combat/rongrong-skill-sfx.mp4",
       "origin": "Continuous isolated game-tab A/V capture from 1b7e5fba3ce2c93d5abf9c1325a70970c23d6b17. Rainy Alley, 100 energy, D8, accepted cast and banner. The configured five-cell cross lights four playable cells at this board edge. The unforced 3 + 3 roll carried Shadow Pressure +1 as before. This cast occurs in Wave 2, versus Wave 4 in the earlier take.",
-      "use": "Current Page 10 / Combat",
+      "use": "Current Page 09 / Combat",
       "status": "APPROVED / INTEGRATED",
       "integrated_in": "../index.html?page=combat",
       "binding": "[data-v2-skill=\"rongrong\"][data-v2-skill-clip]",
@@ -2855,7 +2855,7 @@
       "id": "combat.v2.skill-banban-sfx",
       "source": "../assets/v2/combat/banban-skill-sfx.mp4",
       "origin": "Continuous isolated game-tab A/V capture from 1b7e5fba3ce2c93d5abf9c1325a70970c23d6b17. Midnight Market, 100 energy, 60 extra shield for up to eight battle seconds. The take includes the banner, visible shield and expiry. Both the companion card and Activate Skills use this recording.",
-      "use": "Current Page 10 / Combat",
+      "use": "Current Page 09 / Combat",
       "status": "APPROVED / INTEGRATED",
       "integrated_in": "../index.html?page=combat",
       "binding": "[data-v2-skill=\"banban\"][data-v2-skill-clip]; #skillsTrigger[data-demo-src]",
@@ -2876,7 +2876,7 @@
       "id": "combat.v2.skill-diandian-sfx",
       "source": "../assets/v2/combat/diandian-skill-sfx.mp4",
       "origin": "Continuous isolated game-tab A/V capture from 1b7e5fba3ce2c93d5abf9c1325a70970c23d6b17. Underground Tunnel, 100 energy. The take reproduces Diandian HP 114 → 140 and Banban HP 133 → 213 across the cast.",
-      "use": "Current Page 10 / Combat",
+      "use": "Current Page 09 / Combat",
       "status": "APPROVED / INTEGRATED",
       "integrated_in": "../index.html?page=combat",
       "binding": "[data-v2-skill=\"diandian\"][data-v2-skill-clip]",
@@ -2895,9 +2895,9 @@
     }
   ],
   "current_presentation": {
-    "label": "V2 — Combat SFX and Datadog Alert",
-    "build_marker": "20261111-v2-combat-sfx-alert",
-    "scene_count": 21,
+    "label": "V2 — Final Presentation",
+    "build_marker": "20261112-v2-final-refinement",
+    "scene_count": 18,
     "registry": [
       {
         "page": "01",
@@ -2921,86 +2921,71 @@
       },
       {
         "page": "05",
-        "id": "payment",
-        "title": "Payment"
-      },
-      {
-        "page": "06",
         "id": "four-maps",
         "title": "Four Maps"
       },
       {
-        "page": "07",
+        "page": "06",
         "id": "vertical-design",
         "title": "Three Connected Levels"
       },
       {
-        "page": "08",
+        "page": "07",
         "id": "greybox",
         "title": "Greybox"
       },
       {
-        "page": "09",
+        "page": "08",
         "id": "random-events",
         "title": "Random Events"
       },
       {
-        "page": "10",
+        "page": "09",
         "id": "combat",
         "title": "Real-Time Tactical Tower Defense"
       },
       {
-        "page": "11",
+        "page": "10",
         "id": "dice-animations",
         "title": "Dice Roll Animations"
       },
       {
-        "page": "12",
+        "page": "11",
         "id": "adaptive-interface",
         "title": "Responsive & Translucent UI"
       },
       {
-        "page": "13",
+        "page": "12",
         "id": "technical-architecture",
         "title": "Technical Architecture"
       },
       {
-        "page": "14",
+        "page": "13",
         "id": "kubernetes-deployment",
         "title": "Kubernetes Deployment"
       },
       {
-        "page": "15",
-        "id": "gameplay-telemetry",
-        "title": "From Gameplay to Telemetry"
-      },
-      {
-        "page": "16",
+        "page": "14",
         "id": "observability",
         "title": "Observability Across the Game"
       },
       {
-        "page": "17",
-        "id": "detect-alert-recover",
-        "title": "Detect. Alert. Recover."
-      },
-      {
-        "page": "18",
+        "page": "15",
         "id": "cross-team-collaboration",
         "title": "Cross-Team Collaboration"
       },
       {
-        "page": "19",
+        "page": "16",
         "id": "design-test-rethink",
         "title": "Design. Test. Rethink."
       },
       {
-        "page": "20",
+        "page": "17",
         "id": "connected-world",
         "title": "A Dynamic, Living World"
       },
       {
-        "page": "21",
+        "page": "18",
         "id": "closing-qa",
         "title": "Q & A"
       }
@@ -3008,6 +2993,6 @@
     "media_status": "COMBAT SFX AND V1 ALERT INTEGRATED",
     "pending_bindings": "PRESENTATION-V2-MEDIA-SLOTS.json",
     "handoff": "PRESENTATION-V2-PHASE2-HANDOFF.md",
-    "note": "21 scenes. Companion casts play authentic game audio on activation, and the archived Datadog Alert is Page 17. Previous retains the outgoing 20-scene deck."
+    "note": "18 scenes with the enlarged Pitch poster, persistent Combat close-ups and two live-demo cues."
   }
 }

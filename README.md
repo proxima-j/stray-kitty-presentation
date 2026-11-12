@@ -14,17 +14,15 @@ Markdown-only changes remain immediately available on GitHub and do not trigger 
 
 | Version | Preview | Verified source |
 | --- | --- | --- |
-| Current | https://proxima-j.github.io/stray-kitty-presentation/ | **V2 — Combat SFX and Datadog Alert**, 21 scenes, marker `20261111-v2-combat-sfx-alert` |
-| Previous | https://proxima-j.github.io/stray-kitty-presentation/previous/ | Outgoing verified 20-scene deck `0bf1adb2427cc0109d92eafeff0f78020da63f1c` |
+| Current | https://proxima-j.github.io/stray-kitty-presentation/ | **V2 — Final Presentation**, 18 scenes, marker `20261112-v2-final-refinement` |
+| Previous | https://proxima-j.github.io/stray-kitty-presentation/previous/ | Outgoing 21-scene deck `91bdebe31e6b60614a1ad51b8cf5a0ccf5f6dffd` |
 
-Current supports `?page=01` through `?page=21`. Previous supports `?page=01` through `?page=20`. In Current, Observability (16) leads into the restored V1 **Detect. Alert. Recover.** (17), then Collaboration, Iteration, Future and Q&A (21). Stable scene IDs are preferred. [V2 Part 2 handoff](docs/library/PRESENTATION-V2-PHASE2-HANDOFF.md) · [Version metadata](docs/versions.json) · [Pages deployments](https://github.com/proxima-j/stray-kitty-presentation/actions/workflows/pages.yml).
+Current supports `?page=01` through `?page=18`. Page 02 cues the live Chapter 5 game demo and sandbox payment flow. Page 14 cues the live Datadog demo after the four dashboard tabs. Previous retains Payment, From Gameplay to Telemetry and Detect. Alert. Recover. [Final slide order and presenter handoff](docs/library/PRESENTATION-V2-PHASE2-HANDOFF.md) · [Version metadata](docs/versions.json) · [Pages deployments](https://github.com/proxima-j/stray-kitty-presentation/actions/workflows/pages.yml).
 
-The unchanged Pitch reminder introduces a separately pre-opened Chapter 5 game tab. V2 integrates Home's matching 2×2 galleries, three clickable Combat companions with authentic fallback stills, original Reposition/Activate Skills clips, scoped single-video lifecycle and subtle Return, Local Fallback advisor, and a standalone Slack evidence banner beside Observability's four tabs. Home Part2A now integrates three genuine cumulative furniture captures and a reused authentic skylight-repair clip; the approved composition and existing interaction clips are unchanged. [Capture provenance](docs/library/HOME-PART2A-CAPTURE.json) discloses the isolated QA staging and exact game builds.
-
-Page 10 plays genuine in-game cast sound when the presenter selects a companion or Activate Skills. The Warehouse loop, Reposition and event-to-battle footage play muted. Older integration sections below are historical checkpoints. [Capture provenance](docs/library/COMBAT-PART2B-CAPTURE.json) · [Media bindings](docs/library/PRESENTATION-V2-MEDIA-SLOTS.json).
+Page 09 plays genuine cast audio on the first pass after companion selection or Activate Skills. The close-up stays open and loops muted. The Warehouse loop, Reposition and event-to-battle footage play muted. [Capture provenance](docs/library/COMBAT-PART2B-CAPTURE.json) · [Media bindings](docs/library/PRESENTATION-V2-MEDIA-SLOTS.json).
 
 - `docs/index.html`, `docs/engine-v3.*`, `docs/presentation.css`, `docs/level-design.css`, `docs/scene-content.js`, `docs/library/`: Current source and reusable components.
-- `docs/previous/`: Outgoing twenty-page HTML, styles and scripts, with shared asset URLs rebased and silent cast clips retained.
+- `docs/previous/`: Outgoing twenty-one-slide runtime and styles with shared asset URLs rebased.
 - `docs/assets/`: One shared copy of the full opening film, poster, character, fonts/license and approved illustrations.
 - `reference/forward-story-v3/script.js` and `style.css`: Untouched original animation source, rather than a third runnable sample deck.
 

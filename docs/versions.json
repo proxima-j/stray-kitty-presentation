@@ -1,13 +1,12 @@
 {
   "current": {
     "entry": "./",
-    "candidate_base_commit": "0bf1adb2427cc0109d92eafeff0f78020da63f1c",
-    "integration_commit": "4e08bcf2ec538365cd059c4c9ed1bafe5b094c77",
-    "build_marker": "20261111-v2-combat-sfx-alert",
-    "description": "21-scene V2 with Combat cast sound and the restored V1 Datadog Alert scene.",
-    "publication_status": "PUBLISHED / BROWSER VERIFIED",
-    "verification_status": "LOCAL AND PUBLIC BROWSER VERIFIED",
-    "local_verified_at": "2026-11-11T21:51:42.746985+08:00",
+    "candidate_base_commit": "91bdebe31e6b60614a1ad51b8cf5a0ccf5f6dffd",
+    "build_marker": "20261112-v2-final-refinement",
+    "description": "18-scene V2 with Option B Pitch, looping Combat close-ups and two presenter-led live demos.",
+    "publication_status": "CANDIDATE VERIFIED / SEE LIVE DEPLOYMENT STAMP",
+    "verification_status": "FOCUSED CANDIDATE VERIFIED",
+    "local_verified_at": "2026-11-12T22:14:47.960893+08:00",
     "registry": [
       {
         "page": "01",
@@ -31,97 +30,85 @@
       },
       {
         "page": "05",
-        "id": "payment",
-        "title": "Payment"
-      },
-      {
-        "page": "06",
         "id": "four-maps",
         "title": "Four Maps"
       },
       {
-        "page": "07",
+        "page": "06",
         "id": "vertical-design",
         "title": "Three Connected Levels"
       },
       {
-        "page": "08",
+        "page": "07",
         "id": "greybox",
         "title": "Greybox"
       },
       {
-        "page": "09",
+        "page": "08",
         "id": "random-events",
         "title": "Random Events"
       },
       {
-        "page": "10",
+        "page": "09",
         "id": "combat",
         "title": "Real-Time Tactical Tower Defense"
       },
       {
-        "page": "11",
+        "page": "10",
         "id": "dice-animations",
         "title": "Dice Roll Animations"
       },
       {
-        "page": "12",
+        "page": "11",
         "id": "adaptive-interface",
         "title": "Responsive & Translucent UI"
       },
       {
-        "page": "13",
+        "page": "12",
         "id": "technical-architecture",
         "title": "Technical Architecture"
       },
       {
-        "page": "14",
+        "page": "13",
         "id": "kubernetes-deployment",
         "title": "Kubernetes Deployment"
       },
       {
-        "page": "15",
-        "id": "gameplay-telemetry",
-        "title": "From Gameplay to Telemetry"
-      },
-      {
-        "page": "16",
+        "page": "14",
         "id": "observability",
         "title": "Observability Across the Game"
       },
       {
-        "page": "17",
-        "id": "detect-alert-recover",
-        "title": "Detect. Alert. Recover."
-      },
-      {
-        "page": "18",
+        "page": "15",
         "id": "cross-team-collaboration",
         "title": "Cross-Team Collaboration"
       },
       {
-        "page": "19",
+        "page": "16",
         "id": "design-test-rethink",
         "title": "Design. Test. Rethink."
       },
       {
-        "page": "20",
+        "page": "17",
         "id": "connected-world",
         "title": "A Dynamic, Living World"
       },
       {
-        "page": "21",
+        "page": "18",
         "id": "closing-qa",
         "title": "Q & A"
       }
     ],
     "removed_from_v2": [
       "roadmap",
-      "game-flow"
+      "game-flow",
+      "payment",
+      "gameplay-telemetry",
+      "detect-alert-recover"
     ],
     "final_scene": {
       "id": "closing-qa",
-      "page": 21,
+      "page": 18,
       "after": "connected-world"
     },
     "media_status": "AUTHENTIC COMBAT CAST AUDIO AND HISTORICAL ALERT EVIDENCE",
@@ -129,11 +116,11 @@
     "handoff": "library/PRESENTATION-V2-PHASE2-HANDOFF.md",
     "media_inventory": "library/PRESENTATION-V2-MEDIA-SLOTS.json",
     "public_preview": "https://proxima-j.github.io/stray-kitty-presentation/",
-    "publication_gate": "Matching deployment.json and public Combat audio, Alert and Previous smoke checks.",
-    "outgoing_current_source": "0bf1adb2427cc0109d92eafeff0f78020da63f1c",
+    "publication_gate": "Successful Pages run and matching public deployment.json. Check Current and Previous in a browser.",
+    "outgoing_current_source": "91bdebe31e6b60614a1ad51b8cf5a0ccf5f6dffd",
     "playback_failure_verification": "One private invalid-media probe passed: failed clip hidden, authentic still visible, muted Retry exposed, Return restored clean default. No game/infrastructure/network fault injection; probe not published.",
     "part1_verification_notes": "Focused real-browser checks at 1600x900 and 1366x768: all 21 direct scene links; identical Home mode geometry and muted playback/pause; Combat three still selections, genuine Reposition/Activate Skills, evidence-pending bridge, advisor Local Fallback, 24% idle transparent Return and keyboard-focus affordance, one active video, completion/reset/scene exit/re-entry; original Slack image and four dashboards; native Pitch-to-Game Flow forward/back, opening full film unmuted on user Play and manual Skip. No console warnings/errors observed. Static local asset references resolve. 18 retained scenes unchanged except numbering; engine and generic media player byte-identical.",
-    "verification_notes": "Private candidate at 1600 × 900 and 1366 × 768. Measured tab audio at the cast cues, verified clip switching, Return, end, Escape, and scene exit and re-entry. Verified original Alert and Recovery evidence, image enlargement, archive, both Synthetics tabs, and the restored navigation order.",
+    "verification_notes": "At 1600 × 900 and 1366 × 768, Page 02 showed the full poster and both illustrations. Rendered QR decoder found two codes at 1600 × 900 and one at 1366 × 768. Combat first-play tab audio and muted native loops passed, as did transitions and the four Observability tabs.",
     "combat_controller_source_commit": "0f764237fe13540f547d3b1f9ae66202c0a4c422",
     "gameflow_removal": {
       "base_commit": "2f5b7321c3bfb11e205b256a64fa21596a0715e6",
@@ -171,34 +158,67 @@
       "alert_page": 17,
       "retained_silent_clips": "Previous and the shared asset library."
     },
-    "publication_evidence": {
-      "source_commit": "4e08bcf2ec538365cd059c4c9ed1bafe5b094c77",
-      "pages_build": "https://github.com/proxima-j/stray-kitty-presentation/actions/runs/43033105409",
-      "checked_at": "2026-11-11T21:54:31.824050+08:00",
-      "notes": "Public Chromium tab output had audible signal at all three native cast cues and Activate Skills. Switching, Return, natural end, Escape, scene exit and re-entry passed. Warehouse and Reposition played muted. Public Alert evidence, payment check and Previous loaded."
+    "final_refinement": {
+      "live_demos": [
+        {
+          "after": "elevator-pitch",
+          "demo": "Chapter 5 live gameplay, including sandbox payment"
+        },
+        {
+          "after": "observability",
+          "demo": "Live Datadog"
+        }
+      ],
+      "poster_widths_px": {
+        "1600x900": [
+          572.5,
+          810.2
+        ],
+        "1366x768": [
+          488.2,
+          691.2
+        ]
+      },
+      "combat_focus": {
+        "rongrong": [
+          2.1,
+          "63%",
+          "84%"
+        ],
+        "banban": [
+          2,
+          "55%",
+          "49%"
+        ],
+        "diandian": [
+          1.95,
+          "34%",
+          "63%"
+        ]
+      },
+      "publication_stamp": "https://proxima-j.github.io/stray-kitty-presentation/deployment.json"
     }
   },
   "previous": {
     "entry": "previous/",
-    "source_commit": "0bf1adb2427cc0109d92eafeff0f78020da63f1c",
-    "build_marker": "20261110-v2-no-gameflow",
-    "description": "Outgoing verified 20-scene V2 deck. Combat has silent skill clips and Observability retains its Slack banner.",
-    "publication_status": "PUBLISHED / BROWSER VERIFIED",
+    "source_commit": "91bdebe31e6b60614a1ad51b8cf5a0ccf5f6dffd",
+    "build_marker": "20261111-v2-combat-sfx-alert",
+    "description": "Outgoing verified 21-slide deck with Combat sound, Payment, Gameplay to Telemetry and the restored Alert scene.",
+    "publication_status": "VERIFIED OUTGOING CURRENT",
     "final_scene": {
       "id": "closing-qa",
-      "page": 20,
+      "page": 21,
       "after": "connected-world"
     },
     "publication_evidence": {
-      "source_commit": "0bf1adb2427cc0109d92eafeff0f78020da63f1c",
-      "pages_build": "https://github.com/proxima-j/stray-kitty-presentation/actions/runs/42998649321",
-      "url": "https://proxima-j.github.io/stray-kitty-presentation/previous/",
-      "snapshot_pages_build": "https://github.com/proxima-j/stray-kitty-presentation/actions/runs/43033105409"
+      "source_commit": "91bdebe31e6b60614a1ad51b8cf5a0ccf5f6dffd",
+      "pages_build": "https://github.com/proxima-j/stray-kitty-presentation/actions/runs/43231174648",
+      "url": "https://proxima-j.github.io/stray-kitty-presentation/previous/"
     },
-    "snapshot_note": "Independent runtime and styles from outgoing Current with shared media URLs rebased."
+    "snapshot_note": "Outgoing Current styles and runtime with rebased shared asset URLs."
   },
   "shared_assets": "assets/",
-  "retention": "Current 21-scene V2 and Previous 20-scene V2 share assets. Permanent V1 is preserved separately.",
+  "retention": "Current has 18 scenes and Previous has 21. Permanent V1 is preserved separately.",
   "v1_archive": {
     "branch": "archive/presentation-v1-2026-11-10",
     "source_commit": "0daa72fda8cd7ab9f1a8a99aed9f4eb537137461",

@@ -241,7 +241,6 @@
   function loadComposition(){
     if(requested)return;requested=true;
     fetch('../assets/datadog/composition-review/sections.json').then(r=>{if(!r.ok)throw new Error('Missing section inventory');return r.json();}).then(value=>{
-      for(const content of Object.values(value))for(const section of content.sections)section.src=section.src.replace('../assets/','../assets/');
       data=value;render();const first=root.querySelector('[data-dashboard-tab="'+(new URLSearchParams(location.search).get('tab')||'overview')+'"]');if(first)first.click();
     }).catch(error=>{requested=false;document.getElementById('compositionHint').textContent='Dashboard captures could not load. Select this page again to retry.';console.error(error);});
   }
@@ -252,7 +251,7 @@
 (() => {
   'use strict';
   const open = document.getElementById('ddOpenArchive');
-  if (!open) return; // Alert scene is retained in Previous/V1, not V2.
+  if (!open) return;
   const close = document.getElementById('ddCloseArchive');
   const overlay = document.getElementById('ddArchiveOverlay');
   const record = document.getElementById('ddArchiveRecord');

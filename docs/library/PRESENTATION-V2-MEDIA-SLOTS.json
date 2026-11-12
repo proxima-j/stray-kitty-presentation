@@ -1,7 +1,7 @@
 {
-  "build_marker": "20261111-v2-combat-sfx-alert",
+  "build_marker": "20261112-v2-final-refinement",
   "status": "COMBAT SFX VERIFIED",
-  "note": "Three companion recordings capture game-tab video and native cast audio together. Paths relative to docs/.",
+  "note": "Combat companion clips keep first-play cast audio and muted automatic loops. Paths relative to docs/.",
   "slots": [
     {
       "id": "home-growth-02",
