@@ -98,3 +98,23 @@
 }
 
 .events-combat{height:100%;font-family:var(--body)}
+
+/* Page 10: story-connected companions, with the same authentic skill footage. */
+#combat .combat-storyline{
+  position:absolute;left:7.4%;right:7.4%;top:14.2%;margin:0;
+  font:400 clamp(16px,1.35vw,22px)/1.32 var(--display);
+  letter-spacing:-.018em;color:var(--accent);
+}
+#combat .combat-bridge{top:19.2%}
+#combat .combat-review .review-body{top:25.5%;bottom:18%}
+
+/* Zoom only the selected skill clip. Background and other media stay full frame. */
+#combat .combat-shot[data-skill-zoom] .battle-reposition{
+  transform:scale(var(--v2-skill-scale,1.7));
+  transform-origin:var(--v2-skill-origin-x,50%) var(--v2-skill-origin-y,50%);
+}
+@media(max-height:780px){
+  #combat .combat-storyline{top:14.3%;font-size:clamp(14px,1.28vw,18px)}
+  #combat .combat-bridge{top:19.3%}
+  #combat .combat-review .review-body{top:25%;bottom:17%}
+}
