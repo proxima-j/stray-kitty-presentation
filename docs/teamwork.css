@@ -23,6 +23,16 @@
 .teamwork-scope .tw-walk .review-body{margin-top:clamp(14px,2.2vh,24px);max-width:1380px}
 .teamwork-scope .tw-walk-intro{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:11px}
 .teamwork-scope .tw-phase-counter{font:400 19px/1.1 'Faculty Glyphic',Georgia,serif;color:#b56e55}
+#cross-team-collaboration .tw-phase-status{
+  --phase-gap:clamp(8px,1vw,16px);
+  display:flex;align-items:center;gap:var(--phase-gap);flex:none;white-space:nowrap;
+}
+#cross-team-collaboration .tw-ai-acknowledgment{
+  font:600 clamp(12px,1.1vw,18px)/1.15 Arial,sans-serif;color:#a5624e;
+}
+#cross-team-collaboration .tw-phase-status .tw-phase-counter{
+  padding-inline-start:var(--phase-gap);border-inline-start:1px solid rgba(165,98,78,.3);
+}
 .teamwork-scope .tw-gitlab-map{border:1.5px solid #34453e;border-radius:15px;overflow:hidden;background:#f7eedb}
 .teamwork-scope .tw-track{display:grid;grid-template-columns:220px minmax(0,1fr);gap:15px;align-items:stretch;padding:13px 17px}
 .teamwork-scope .tw-track-code{background:#ebeadd}
