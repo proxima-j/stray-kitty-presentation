@@ -37,6 +37,7 @@
   const tabs = [...home.querySelectorAll('[data-home-view]')];
   const views = [...home.querySelectorAll('.home-view')];
   const clips = [...document.querySelectorAll('video[data-scene-video]')];
+  const qaPoster = document.querySelector('#closing-qa video.qa-poster');
   let activeView = { id: '', visible: false };
   const manualPause = new WeakSet();
   const pendingPlay = new WeakSet();
@@ -58,6 +59,24 @@
     return activeView.visible && video.closest('.scene').id === activeView.id &&
       !video.closest('[hidden]') && !document.hidden && !manualPause.has(video);
   }
+  function syncQaPoster() {
+    if (!qaPoster) return;
+    const play = shouldPlay(qaPoster);
+    qaPoster.autoplay = play;
+    if (!play) {
+      qaPoster.pause();
+      return;
+    }
+    if (!qaPoster.hasAttribute('src')) qaPoster.src = qaPoster.dataset.mediaSrc;
+    qaPoster.play().then(() => {
+      if (!shouldPlay(qaPoster)) qaPoster.pause();
+    }).catch(() => {});
+  }
+  qaPoster?.addEventListener('error', () => {
+    // Reset the failed media so its assigned poster can display again.
+    qaPoster.removeAttribute('src');
+    qaPoster.load();
+  });
   function updateButton(video) {
     const button = video.parentElement.querySelector('.clip-toggle');
     const playing = !video.paused;
@@ -119,8 +138,12 @@
     activeView = event.detail;
     loadSceneImages(document.getElementById(activeView.id));
     syncClips();
+    syncQaPoster();
   });
-  document.addEventListener('visibilitychange', syncClips);
+  document.addEventListener('visibilitychange', () => {
+    syncClips();
+    syncQaPoster();
+  });
 
   const dialog = document.getElementById('screenshotDialog');
   const enlarged = document.getElementById('enlargedScreenshot');

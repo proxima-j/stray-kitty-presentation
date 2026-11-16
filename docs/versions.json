@@ -109,7 +109,8 @@
     "final_scene": {
       "id": "closing-qa",
       "page": 18,
-      "after": "connected-world"
+      "after": "connected-world",
+      "motion_poster": "assets/closing/qa-motion-poster.mp4"
     },
     "media_status": "AUTHENTIC COMBAT CAST AUDIO AND HISTORICAL ALERT EVIDENCE",
     "pending_slots": [],

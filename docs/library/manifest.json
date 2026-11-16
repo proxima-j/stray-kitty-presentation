@@ -2204,7 +2204,7 @@
       "id": "closing.poster.original",
       "source": "../assets/closing/stray-kitty-poster.png",
       "creator": "User-supplied Stray Kitty project poster; no generated or substituted art",
-      "use": "Approved Current Page 02 elevator-pitch poster and final Page 20 Q&A; complete supplied artwork preserved",
+      "use": "Current Page 02 Elevator Pitch poster, Current Page 18 Q&A fallback, and Previous closing poster",
       "status": "USER-SUPPLIED / PUBLICATION EXPLICITLY AUTHORIZED",
       "permission": "User requested this exact file be committed and published in the public presentation repository on November 9, 2026. No broader ownership or license assertion.",
       "metadata": {
@@ -2240,6 +2240,23 @@
       "bytes": 1915278,
       "origin": "../assets/closing/stray-kitty-poster.png",
       "encoding": "Lossless WebP; decoded RGB pixels verified identical. No crop, resizing, artwork change or embedded metadata."
+    },
+    {
+      "id": "closing.poster.motion",
+      "source": "../assets/closing/qa-motion-poster.mp4",
+      "creator": "User-supplied Stray Kitty animated poster",
+      "use": "Current Page 18 Q&A",
+      "status": "USER-SUPPLIED / PUBLICATION EXPLICITLY AUTHORIZED",
+      "permission": "User requested publication in the public presentation repository on November 16, 2026.",
+      "metadata": {
+        "source_filename": "2026-11-16_175047_531.mp4",
+        "width": 1280,
+        "height": 720,
+        "duration_seconds": 20,
+        "fps": 24
+      },
+      "bytes": 12938234,
+      "encoding": "Original H.264/yuv420p video stream remuxed with faststart. Audio removed."
     },
     {
       "id": "home.v2.growth.02",
