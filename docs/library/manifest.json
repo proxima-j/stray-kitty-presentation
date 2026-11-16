@@ -202,6 +202,24 @@
       "origin": "User-selected complete opening film; authorized for this public presentation"
     },
     {
+      "id": "film.opening.20261116",
+      "source": "../assets/Stray-Kitty-Trailer-20261116-web.mp4",
+      "origin": "Exact copy of the user-supplied final trailer, 2026-11-16_202025_145.mp4",
+      "use": "Current Page 01 Opening Film",
+      "status": "USER-SUPPLIED / PUBLICATION EXPLICITLY AUTHORIZED",
+      "permission": "User authorized use in the public GitHub Pages deck on 2026-11-16",
+      "metadata": {
+        "width": 1280,
+        "height": 720,
+        "fps": 30,
+        "duration_seconds": 93.366667,
+        "bytes": 41832641,
+        "video_codec": "H.264 High, yuv420p",
+        "audio_codec": "AAC-LC, stereo, 48000 Hz",
+        "fast_start": true
+      }
+    },
+    {
       "id": "level.maps.old-huang",
       "source": "../assets/level-design/four-maps/p05-alley-old-huang.mp4",
       "origin": "New current-local-build capture; real E interaction opens alley_dog_friend",
