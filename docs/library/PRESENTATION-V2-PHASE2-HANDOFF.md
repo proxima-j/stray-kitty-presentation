@@ -34,6 +34,10 @@ Current is **18-scene V2 — Final Presentation**, marker `20261112-v2-final-ref
 
 Use `?page=<stable-scene-id>` for durable review links. Numeric pages are 01–18.
 
+Pages 12 and 13 cover MySQL 8.4 after the November 12 cutover. The Game API and paymentd share one database. Page 13 shows the configured four-Pod stack, with the TLS and MySQL claims as active persistence. The November 6 GitLab screenshot illustrates the historical CI/CD workflow. [Cutover finalization](https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/jobs/32367).
+
+Page 01 uses the November 16 trailer, `assets/Stray-Kitty-Trailer-20261116-web.mp4`, with sound on manual playback. Page 18 uses `assets/closing/qa-motion-poster.mp4`, which loops silently while the slide is active.
+
 ## Part 2A — Home Hub verified
 
 [Live Home](https://proxima-j.github.io/stray-kitty-presentation/?page=home-hub). Detailed capture/source/placement records: [HOME-PART2A-CAPTURE.json](HOME-PART2A-CAPTURE.json). All four principal binaries exist and are registered in `manifest.json` and the media slots inventory.

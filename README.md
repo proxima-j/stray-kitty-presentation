@@ -19,11 +19,13 @@ Markdown-only changes remain immediately available on GitHub and do not trigger 
 
 Current supports `?page=01` through `?page=18`. Page 02 cues the live Chapter 5 game demo and sandbox payment flow. Page 14 cues the live Datadog demo after the four dashboard tabs. Previous retains Payment, From Gameplay to Telemetry and Detect. Alert. Recover. [Final slide order and presenter handoff](docs/library/PRESENTATION-V2-PHASE2-HANDOFF.md) · [Version metadata](docs/versions.json) · [Pages deployments](https://github.com/proxima-j/stray-kitty-presentation/actions/workflows/pages.yml).
 
+Current Pages 12 and 13 reflect the MySQL 8.4 cutover completed November 12, 2026. Game API and paymentd share one MySQL database. The Kubernetes diagram shows the configured four-Pod game stack and its active TLS and MySQL volumes. The November 6 screenshot remains historical CI/CD evidence. [Cutover finalization](https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/jobs/32367).
+
 Page 09 plays genuine cast audio on the first pass after companion selection or Activate Skills. The close-up stays open and loops muted. The Warehouse loop, Reposition and event-to-battle footage play muted. [Capture provenance](docs/library/COMBAT-PART2B-CAPTURE.json) · [Media bindings](docs/library/PRESENTATION-V2-MEDIA-SLOTS.json).
 
 - `docs/index.html`, `docs/engine-v3.*`, `docs/presentation.css`, `docs/level-design.css`, `docs/scene-content.js`, `docs/library/`: Current source and reusable components.
 - `docs/previous/`: Outgoing twenty-one-slide runtime and styles with shared asset URLs rebased.
-- `docs/assets/`: One shared copy of the full opening film, poster, character, fonts/license and approved illustrations.
+- `docs/assets/`: Current and historical opening films, shared poster, character, fonts/license and approved illustrations.
 - `reference/forward-story-v3/script.js` and `style.css`: Untouched original animation source, rather than a third runnable sample deck.
 
 The obsolete four-scene v3 sample page, one-file packer and demo-only screenshots/excerpt were removed from the working tree. They remain in normal Git history. Current's HTML, styles, animation code, content, film and illustrations were not changed by this cleanup.
@@ -57,7 +59,7 @@ python -m http.server 8080 --directory docs
 
 Open `http://localhost:8080/` or `http://localhost:8080/previous/`. In Current, Right advances and Left goes back. Press Space during a move to return to the slide you started from, or Escape to finish the move. Arrow presses during a transition are ignored. The wheel scrubs, Home and End jump, and `?` opens the controls. The default arrow beat is 4.2 seconds. Reduced motion switches slides immediately.
 
-The complete 60.5-second opening film plays with sound using Play film; Skip/Continue advances manually. Current serves a 1920×1080 H.264/AAC web derivative (13.4 MB; original 65.1 MB retained). The film downloads only after Play. Current attaches image/poster/SVG URLs on scene/view entry and loads hidden dialogue states on demand; only active clips receive video sources. This avoids downloading the rest of the deck behind the visible slide. Page 02 artwork uses pixel-identical lossless WebP; screenshots use high-quality WebP previews sized for their frames, with full-resolution originals retained. Short clips use smaller H.264 fast-start copies with their original complete content, frame rate and timing. The four map clips total 1.4 MB instead of 5.9 MB. [Derivative inventory](docs/library/WEB-MEDIA.json) records sources and sizes. Full-image dialogs and Previous keep their originals. This delivery-only maintenance does not rotate decks or change the v3 engine, styles or composition. Offline-release packaging remains deferred.
+Current's November 16 opening trailer runs for 93.37 seconds at 1280×720 with H.264 video and its original stereo AAC soundtrack. It downloads only after Play film, and Skip/Continue advances manually. Previous still uses the earlier 60.5-second film. Current attaches image, poster and SVG URLs on scene or view entry and loads hidden dialogue states on demand. Only active clips receive video sources. Page 02 artwork uses pixel-identical lossless WebP, and screenshots use high-quality WebP previews with full-resolution originals retained. The four map clips total 1.4 MB instead of 5.9 MB. [Derivative inventory](docs/library/WEB-MEDIA.json) records sources and sizes.
 
 ## Collaboration and assets
 

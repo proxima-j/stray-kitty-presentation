@@ -113,6 +113,14 @@
       "motion_poster": "assets/closing/qa-motion-poster.mp4"
     },
     "opening_film": "assets/Stray-Kitty-Trailer-20261116-web.mp4",
+    "mysql_architecture": {
+      "pages": ["technical-architecture", "kubernetes-deployment"],
+      "game_source_commit": "864b580d40fef561ee147c4adb9c67fd5efbce38",
+      "game_rollout_commit": "7d522b738054f21e6e63111cd210a3ee203e8cf7",
+      "cutover_date": "2026-11-12",
+      "cutover_finalization": "https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/jobs/32367",
+      "historical_pipeline": "https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/pipelines/7813"
+    },
     "media_status": "AUTHENTIC COMBAT CAST AUDIO AND HISTORICAL ALERT EVIDENCE",
     "pending_slots": [],
     "handoff": "library/PRESENTATION-V2-PHASE2-HANDOFF.md",

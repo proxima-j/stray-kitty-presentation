@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="level-design.css?v=20261109-level-design">
   <link rel="stylesheet" href="events-combat.css?v=20261112-final">
   <link rel="preload" as="script" href="events-combat.js?v=20261112-final">
-  <link rel="stylesheet" href="technical.css?v=20261109-full-pipeline">
+  <link rel="stylesheet" href="technical.css?v=20261116-mysql">
   <link rel="stylesheet" href="teamwork.css?v=20261113-ai-acknowledgment">
   <link rel="stylesheet" href="datadog.css?v=20261111-roll-dice">
   <link rel="stylesheet" href="uiux.css?v=20261109-adaptive-fit">
@@ -336,14 +336,14 @@
 </div>
 <span aria-hidden="true" class="double-direction">↕</span>
 <div class="layer">
-<h2>Game Repository — JSON State</h2>
-<p>Progression, inventory, rewards, flags and command receipts</p>
+<h2>MySQL 8.4 — Persistent Data</h2>
+<p>Accounts, sessions, player progress, inventory and payment records</p>
 </div>
 </section>
 <section aria-label="Connected services" class="connected-services" data-at=".48" data-build="rise">
 <h3>CONNECTED SERVICES</h3>
 <div class="service-grid">
-<div class="service"><strong>Xsolla</strong><span>Payment service</span></div>
+<div class="service"><strong>Xsolla</strong><span>Sandbox checkout through paymentd</span></div>
 <div class="service"><strong>AI Advisor</strong><span>Contextual answers</span></div>
 <div class="service"><strong>Datadog</strong><span>RUM · APM · Logs · Alerts</span></div>
 </div>
@@ -366,10 +366,10 @@
 <h1>Kubernetes Deployment</h1>
 <p class="subtitle">How Kubernetes makes the game accessible online and preserves player data</p>
 </header>
-<section aria-label="Configured application Pod and persistent storage topology" class="cluster" data-at=".18" data-build="rise">
+<section aria-label="Configured game stack and active persistent storage" class="cluster" data-at=".18" data-build="rise">
 <div class="cluster-top">
 <span class="cluster-tag">PUBLIC INTERNET → FRONTEND LOADBALANCER</span>
-<span class="cluster-meta">1 replica per Deployment · Recreate strategy</span>
+<span class="cluster-meta">1 replica per workload</span>
 </div>
 <div class="application-grid">
 <div aria-label="Frontend application Kubernetes resources" class="component">
@@ -383,14 +383,14 @@
 <span class="pod-tag">POD · 2 CONTAINERS</span>
 <div class="container-list"><span class="container-chip">nginx</span><span class="container-chip">certbot sidecar</span></div>
 </div>
+<div class="workload-service">Public LoadBalancer</div>
 </section>
 <div aria-hidden="true" class="volume-link"><span class="volume-line"></span><small>mount</small></div>
 <div aria-label="certificate state persistent volume claim" class="storage">
 <strong>TLS PVC</strong>
-<span>1Gi · RWO · certificate state</span>
+<span>1 GiB · RWO</span>
 </div>
 </div>
-<div aria-hidden="true" class="connector"><span>→</span><small>game requests</small></div>
 <div aria-label="Game API application Kubernetes resources" class="component">
 <section aria-label="Game API Deployment with one Pod" class="deployment-shell">
 <div class="deployment-heading">
@@ -402,14 +402,10 @@
 <span class="pod-tag">POD · 1 CONTAINER</span>
 <div class="container-list"><span class="container-chip">Go game</span></div>
 </div>
+<div class="workload-service">ClusterIP</div>
 </section>
-<div aria-hidden="true" class="volume-link"><span class="volume-line"></span><small>mount</small></div>
-<div aria-label="save data persistent volume claim" class="storage">
-<strong>Game PVC</strong>
-<span>1Gi · RWO · save data</span>
+<div class="database-link" aria-label="Game API connects to MySQL"><span aria-hidden="true">↘</span> MySQL</div>
 </div>
-</div>
-<div aria-hidden="true" class="connector"><span>→</span><small>payments</small></div>
 <div aria-label="Payment application Kubernetes resources" class="component">
 <section aria-label="Payment Deployment with one Pod" class="deployment-shell">
 <div class="deployment-heading">
@@ -421,23 +417,39 @@
 <span class="pod-tag">POD · 1 CONTAINER</span>
 <div class="container-list"><span class="container-chip">paymentd</span></div>
 </div>
+<div class="workload-service">ClusterIP</div>
+</section>
+<div class="database-link" aria-label="Payment connects to MySQL"><span aria-hidden="true">↘</span> MySQL</div>
+</div>
+<div aria-label="MySQL Kubernetes resources" class="component">
+<section aria-label="MySQL StatefulSet with one Pod" class="deployment-shell">
+<div class="deployment-heading">
+<span class="component-number">04</span>
+<h2>MySQL 8.4</h2>
+<span class="replica-label">STATEFULSET · 1 REPLICA</span>
+</div>
+<div class="pod-shell">
+<span class="pod-tag">POD · 1 CONTAINER</span>
+<div class="container-list"><span class="container-chip">MySQL</span></div>
+</div>
+<div class="workload-service">ClusterIP · 3306</div>
 </section>
 <div aria-hidden="true" class="volume-link"><span class="volume-line"></span><small>mount</small></div>
-<div aria-label="payment ledger persistent volume claim" class="storage">
-<strong>Payment PVC</strong>
-<span>1Gi · RWO · payment ledger</span>
+<div aria-label="MySQL data persistent volume claim" class="storage">
+<strong>MySQL Data PVC</strong>
+<span>5 GiB · RWO</span>
 </div>
 </div>
 </div>
 <div class="cluster-bottom">
 <div class="agent"><strong>Datadog Agent</strong><span>Separately managed Deployment + ClusterIP Service</span></div>
-<div class="cluster-foot">Application target: 3 Deployments · 3 Pods · 4 containers · 3 Services · 3 PVCs<br/>Distinct PVC per application Pod · No cross-Pod PVC sharing</div>
+<div class="cluster-foot">3 Deployments + 1 StatefulSet · 4 Pods · 5 containers · 4 Services</div>
 </div>
 </section>
 <section aria-label="Dated November 6 pipeline 7813 deployment record" class="evidence" data-at=".70" data-build="rise">
 <div class="evidence-copy">
-<h3>DEPLOYED ONLINE</h3>
-<strong>Verified November 6, 2026</strong>
+<h3>HISTORICAL DEPLOYMENT RECORD</h3>
+<strong>CI/CD Pipeline · November 6, 2026</strong>
 <p>All five pipeline jobs passed, including deployment.</p>
 <span><a href="https://school-gitlab.xsolla.dev/haozhe_wang/stray-kitty/-/pipelines/7813" target="_blank" rel="noopener">GitLab pipeline #7813 · main branch</a></span>
 </div>

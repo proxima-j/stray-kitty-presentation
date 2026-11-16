@@ -191,7 +191,7 @@
 #kubernetes-deployment .cluster-meta{font:400 12px/1.4 var(--body);color:var(--ink);padding:5px 12px;border:1px solid var(--line);border-radius:999px}
 #kubernetes-deployment .application-grid{
   flex:1 1 auto;min-height:0;
-  display:grid;grid-template-columns:minmax(0,1fr) 43px minmax(0,1fr) 43px minmax(0,1fr);
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
   align-items:stretch;gap:clamp(7px,1.1vw,19px);
 }
 #kubernetes-deployment .component{display:flex;flex-direction:column;min-width:0;min-height:0}
@@ -201,8 +201,6 @@
 #kubernetes-deployment .pod-count{font:400 clamp(10px,.9vw,13px)/1.2 var(--body);color:var(--muted);text-align:right}
 #kubernetes-deployment .node-card h2{font:400 clamp(23px,2.05vw,35px)/1.12 var(--display);letter-spacing:-.035em;margin:0}
 #kubernetes-deployment .node-card p{font:400 clamp(13px,1.1vw,18px)/1.35 var(--body);color:var(--muted);margin:0}
-#kubernetes-deployment .connector{align-self:center;justify-self:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;color:var(--accent);font:400 27px/1 Arial,sans-serif}
-#kubernetes-deployment .connector small{font:400 11px/1.2 var(--body);color:var(--muted);white-space:nowrap}
 #kubernetes-deployment .storage{display:flex;align-items:center;justify-content:center;text-align:center;gap:10px;flex:0 0 auto;min-height:47px;margin-top:10px;padding:9px 12px;border:1px dashed var(--line);border-radius:12px;background:rgba(207,166,106,.1)}
 #kubernetes-deployment .storage strong{font:400 clamp(12px,1vw,16px)/1.25 var(--display);color:var(--ink)}
 #kubernetes-deployment .storage span{font:400 clamp(10px,.82vw,13px)/1.4 var(--body);color:var(--muted)}
@@ -210,7 +208,7 @@
 #kubernetes-deployment .agent{display:flex;align-items:center;gap:13px;font:400 13px/1.4 var(--body)}
 #kubernetes-deployment .agent strong{font:400 16px/1.25 var(--display)}
 #kubernetes-deployment .agent span{color:var(--muted)}
-#kubernetes-deployment .cluster-foot{font:400 11px/1.5 var(--body);color:var(--muted);text-align:right}
+#kubernetes-deployment .cluster-foot{font:400 12px/1.5 var(--body);color:var(--muted);text-align:right}
 #kubernetes-deployment .evidence{flex:0 0 auto;border-top:1px solid var(--line);padding-top:12px}
 #kubernetes-deployment .evidence-head{display:flex;align-items:baseline;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:10px}
 #kubernetes-deployment .evidence h3{margin:0;font:400 12px/1.4 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
@@ -229,18 +227,15 @@
 #kubernetes-deployment .evidence-head{margin-bottom:7px}
 }
 @media(max-width:1100px){
-#kubernetes-deployment .application-grid{grid-template-columns:minmax(0,1fr) 25px minmax(0,1fr) 25px minmax(0,1fr);gap:7px}
-#kubernetes-deployment .connector{font-size:21px}
-#kubernetes-deployment .connector small{font-size:9px}
+#kubernetes-deployment .application-grid{gap:7px}
 #kubernetes-deployment .node-card{padding:13px 12px}
 #kubernetes-deployment .node-card h2{font-size:clamp(18px,2.25vw,28px)}
 #kubernetes-deployment .cluster-bottom{align-items:flex-start}
 }
 @media(max-width:675px){
 #kubernetes-deployment .k8s-preview{height:auto;min-height:100svh;overflow:visible}
-#kubernetes-deployment .application-grid{grid-template-columns:1fr;grid-template-rows:auto 24px auto 24px auto}
+#kubernetes-deployment .application-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 #kubernetes-deployment .component{min-height:170px}
-#kubernetes-deployment .connector{transform:rotate(90deg)}
 #kubernetes-deployment .node-card{min-height:135px}
 #kubernetes-deployment .cluster-foot{text-align:left}
 }
@@ -368,7 +363,23 @@
 #kubernetes-deployment .container-chip{padding:7px 10px}
 #kubernetes-deployment .volume-link{flex-basis:20px}
 #kubernetes-deployment .volume-line{height:18px}
-#kubernetes-deployment .storage{min-height:38px;padding:6px}
+#kubernetes-deployment .storage{min-height:56px;padding:6px}
+#kubernetes-deployment .workload-service{
+  text-align:center;
+  font:400 clamp(11px,.95vw,15px)/1.2 var(--body);
+  color:var(--muted);
+}
+#kubernetes-deployment .database-link{
+  flex:0 0 76px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  padding-top:20px;
+  color:var(--ink);
+  font:400 clamp(14px,1.1vw,18px)/1.2 var(--display);
+}
+#kubernetes-deployment .database-link span{color:var(--accent)}
 #kubernetes-deployment .cluster-bottom{padding-top:7px}
 #kubernetes-deployment .evidence{gap:18px;padding-top:9px}
 #kubernetes-deployment .evidence-copy{gap:4px}
@@ -387,6 +398,10 @@
 /* Explicit stacking keeps appended transformed scenes visible in Chrome. */
 #technical-architecture,#kubernetes-deployment{z-index:2}
 
+/* At rest, drop the outer perspective so Chrome paints and hit-tests the slide. */
+#world[data-settled-scene="technical-architecture"] > #technical-architecture,
+#world[data-settled-scene="kubernetes-deployment"] > #kubernetes-deployment{perspective:none}
+
 @media(max-height:810px){
  #technical-architecture .tech-page{gap:9px}
  #technical-architecture .service{min-height:58px;padding:7px 10px;gap:5px}
@@ -398,7 +413,7 @@
  #kubernetes-deployment .subtitle{margin-top:4px}
  #kubernetes-deployment .cluster{padding:10px 17px;gap:8px}
  #kubernetes-deployment .cluster-meta{font-size:11px;padding:4px 10px}
- #kubernetes-deployment .cluster-foot{font-size:10px;line-height:1.35}
+ #kubernetes-deployment .cluster-foot{line-height:1.35}
  #kubernetes-deployment .evidence{padding-top:7px}
  #kubernetes-deployment .evidence-copy{gap:3px}
  #kubernetes-deployment .evidence-copy strong{font-size:20px}
